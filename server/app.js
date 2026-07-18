@@ -9,6 +9,7 @@ const { nodePage } = require('./views/node');
 const { docketPage, documentsPage, verifyPage, methodologyPage } = require('./views/pages');
 const { comparePage } = require('./views/compare');
 const { storyPage } = require('./views/story');
+const { vendorsPage } = require('./views/vendors');
 
 const app = express();
 app.disable('x-powered-by');
@@ -24,6 +25,7 @@ app.get('/line/:id', (req, res) => {
 });
 
 app.get('/story', (req, res) => res.send(storyPage(load())));
+app.get('/vendors', (req, res) => res.send(vendorsPage(load())));
 
 app.get('/compare/:id', (req, res) => {
   const data = load();

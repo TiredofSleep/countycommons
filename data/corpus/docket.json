@@ -130,20 +130,26 @@
       "status": "in_progress",
       "stamped": {
         "date": "2026-07-18",
-        "revealed": "Found the repository: the county's official minutes and ordinances are searchable at documents.cisarkansas.com (linked from the quorum court page). All 11 justices of the peace are now named in the platform's config, straight from the county site."
+        "revealed": "Archived: all 38 quorum court minutes documents for 2024–2026 (regular sessions, budget committee, personnel committee, special sessions) pulled from the county's document portal into inbox/minutes/ — including the budget committee meetings that wrote the 2026 budget. They are scanned images without a text layer, so an OCR pass is queued before they can be searched and ingested."
       },
       "research_notes": [
-        "Next concrete step: bulk-retrieve 2025–2026 ordinances and minutes from the portal (it is a search UI, so this is a browse-and-download session), then wire minutes ingestion for amendment detection."
+        "3 of 41 listed documents failed to download (portal file errors) — note which sessions are missing after OCR triage.",
+        "The portal's keyword search covers document titles only, not contents — a search for 'asphalt' returns one ordinance from 1977. Full-text answers require the OCR pass.",
+        "The quorum court meets the second Monday of each month — now in the platform's calendar config."
       ]
     },
     {
       "num": 10,
       "title": "County check register (layer three)",
       "detail": "Which vendor got which check. Public under Arkansas FOIA; not posted. The floor beneath the floor.",
-      "status": "open",
-      "stamped": null,
+      "status": "in_progress",
+      "stamped": {
+        "date": "2026-07-18",
+        "revealed": "The 'Who gets paid' page is live at /vendors with every payee a public document has named so far — Pioneer Civil Construction ($1.58M landfill closure), Total Assessment Solutions ($825,840 reappraisal), Southern Bancorp (county's lender), the 2021 road-bond holders ($8.46M principal, ~$1.08M interest through 2036, repaid by a pledged 0.5% sales tax), and the Valor→Pafford ambulance contract saga (news lead). The asphalt, fuel, and gravel suppliers remain unnamed in any posted document — and the page now carries a ready-to-send Arkansas FOIA request for the check register and bid tabulations."
+      },
       "research_notes": [
-        "Confirmed offline-only: no county check register or vendor-payment data surfaced anywhere online. This one is a FOIA request by design."
+        "The audits also surfaced a reverse trail: gas and oil companies reimbursed the county's road fund $715,948 in 2023.",
+        "Sending the FOIA letter is a human step — any Arkansas citizen can; the template is on the /vendors page."
       ]
     }
   ]

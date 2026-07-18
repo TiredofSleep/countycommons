@@ -1,0 +1,89 @@
+{
+  "intro": "The budget says the county buys $990,000 of asphalt, $403,000 of fuel, and $400,000 of gravel a year — but not from whom. Appropriations (layer one) authorize spending; only claims, bid records, and the check register (layer three) name who gets paid. This page holds every payee a public document has named so far, and the exact records request that would complete the picture. Naming a vendor documents a transaction; it accuses no one of anything.",
+  "named": [
+    {
+      "who": "Pioneer Civil Construction, LLC",
+      "what": "Closure of the west area and pond improvements at the county landfill",
+      "amount": 1583218,
+      "when": "Contract dated February 10, 2023",
+      "source": { "doc": "clark-legaudit-2022", "page": 32 },
+      "status": "sourced",
+      "note": "Disclosed as a subsequent event in the FY2022 audit."
+    },
+    {
+      "who": "Total Assessment Solutions Corporation",
+      "what": "County-wide property reappraisal — 60 monthly payments of $13,764",
+      "amount": 825840,
+      "when": "October 2020 contract, payments 2021–2025",
+      "source": { "doc": "clark-legaudit-2022", "page": 30 },
+      "status": "sourced",
+      "note": "$316,572 still owed as of the FY2023 audit. Reappraisal is what sets the assessed values your millage applies to."
+    },
+    {
+      "who": "Southern Bancorp Bank",
+      "what": "Lender on the county's financed equipment purchases and lines of credit (multiple notes, 2018–2023)",
+      "amount": null,
+      "when": "Ongoing",
+      "source": { "doc": "clark-legaudit-2023", "page": 19 },
+      "status": "sourced",
+      "note": "Interest on county debt is income to the lender. Outstanding direct borrowings were $142,053 at the end of 2023."
+    },
+    {
+      "who": "Holders of the 2021 Sales & Use Tax Bonds",
+      "what": "The county pledged a 0.5% sales tax to repay $8,460,000 in road bonds — the Clark County Truck Bypass and related road work. Interest of roughly $1.08M is payable to bondholders through June 2036 at 1.125–2.00%.",
+      "amount": 8460000,
+      "when": "Issued October 5, 2021; payable through 2036",
+      "source": { "doc": "clark-legaudit-2023", "page": 19 },
+      "status": "sourced",
+      "note": "Individual bondholders are not named in county records; the bond trustee's identity is in the bond documents (not yet in this corpus)."
+    },
+    {
+      "who": "Health Department remodel contractor (unnamed)",
+      "what": "Health Department remodel and addition — completed May 2024",
+      "amount": 172167,
+      "when": "Balance at end of 2022",
+      "source": { "doc": "clark-legaudit-2022", "page": 30 },
+      "status": "partial",
+      "note": "The audit names the project and the amount, but not the contractor. The contract award is in quorum court records."
+    },
+    {
+      "who": "Valor EMS → Pafford EMS",
+      "what": "The county's 911 ambulance service contract — a running dispute in 2026. Local reporting says Valor lost roughly $500,000 as provider before the county and Pafford reached terms in April 2026.",
+      "amount": null,
+      "when": "2025–2026",
+      "source": null,
+      "status": "dead_end",
+      "note": "News lead (the Arkadelphian), not yet a corpus document. The contracts themselves are county records — in the archived minutes awaiting OCR, or by request."
+    },
+    {
+      "who": "Gas and oil companies (they pay the county)",
+      "what": "Road fund revenue of $715,948 in 'gas and oil company reimbursements' — money flowing TO the county, typically for road use and damage",
+      "amount": 715948,
+      "when": "2023",
+      "source": { "doc": "clark-legaudit-2023", "page": 12 },
+      "status": "sourced",
+      "note": "The reverse trail: which companies reimburse, under what agreements, is also check-register detail."
+    }
+  ],
+  "unnamed_pools": [
+    { "line": "Asphalt", "amount": 990000, "node": "road-asphalt" },
+    { "line": "Fuel, oil & lubricants", "amount": 403000, "node": "road-fuel" },
+    { "line": "Gravel, dirt & sand", "amount": 400000, "node": "road-gravel" },
+    { "line": "Road professional services", "amount": 350000, "node": "road-prof-svcs" },
+    { "line": "Jail maintenance contracts", "amount": 351000, "node": "jail-maint" },
+    { "line": "Prisoner food", "amount": 168000, "node": "gf-prisoner-food" },
+    { "line": "Sanitation professional services & engineering", "amount": 325000, "node": "san-other" },
+    { "line": "EDCCC incentives", "amount": 1844538, "node": "edccc" }
+  ],
+  "how_it_becomes_knowable": [
+    "Arkansas county purchasing law (Ark. Code Ann. Title 14, Chapter 22) requires competitive bids for larger purchases. Bid tabulations — who bid, who won, at what price — are public records held by the county.",
+    "Every payment the county makes appears in the county claims records and check register, kept by the county clerk and treasurer. Public under the Arkansas FOIA; not posted online.",
+    "The quorum court's own minutes record contract approvals. All 38 minutes documents from 2024–2026 are now archived in this corpus — they are scanned images, and an OCR pass is queued to make them searchable.",
+    "Arkansas courts have applied the FOIA to private entities substantially supported by public funds — the principle that makes records of publicly funded economic development activity requestable."
+  ],
+  "foia": {
+    "law": "Arkansas Freedom of Information Act, Ark. Code Ann. § 25-19-101 et seq. Any Arkansas citizen may request; no reason needed; response generally due within three (3) business days.",
+    "custodian": "Clark County Clerk, 401 Clay Street, Arkadelphia, AR 71923",
+    "template": "Dear Records Custodian,\n\nUnder the Arkansas Freedom of Information Act (Ark. Code Ann. § 25-19-101 et seq.), I request copies of the following public records:\n\n1. The county check register (or claims register) for calendar year 2025 and 2026 to date, showing payee, date, amount, and fund/account for each disbursement.\n\n2. Bid tabulations and award records for county purchases of asphalt, fuel, and gravel for 2025 and 2026, including the invitations to bid, bids received, and awards made.\n\n3. The current contract for 911 ambulance service, and any incentive or grant agreements funded from the EDCCC sales tax fund (3407) in 2024–2026.\n\nI request these in electronic form if available. If any portion is exempt, please release the remainder and cite the exemption for what is withheld. If costs will exceed $25, please contact me before proceeding.\n\nThank you,\n[name]\n[address]\n[phone or email]"
+  }
+}
