@@ -8,8 +8,8 @@ const { layout } = require('./layout');
 function auditsPage(data) {
   const { county, documents, auditFindings } = data;
   const chip = v => v === 'clean'
-    ? '<span class="chip c-ok">✓ clean</span>'
-    : '<span class="chip c-part">◐ clean (machine-read)</span>';
+    ? '<span class="chip c-ok">✓ no findings reported</span>'
+    : '<span class="chip c-part">◐ no findings surfaced in machine read</span>';
 
   const rows = auditFindings.verdicts.map(v => {
     const doc = v.source ? documents.documents.find(d => d.id === v.source.doc) : null;
@@ -24,8 +24,8 @@ function auditsPage(data) {
 
   const body = `
 <header class="page">
-  <div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · what the auditors flagged</div>
-  <h1>Is anything actually wrong?</h1>
+  <div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · quoted from the reports</div>
+  <h1>What the auditors reported</h1>
   <div class="src">${esc(auditFindings.intro)}</div>
 </header>
 

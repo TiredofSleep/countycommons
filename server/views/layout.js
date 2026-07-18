@@ -6,6 +6,7 @@ const { esc } = require('../lib/corpus');
 const NAV = [
   ['/story', 'Start here'],
   ['/', 'Money trail'],
+  ['/issues', 'Open questions'],
   ['/vendors', 'Who gets paid'],
   ['/audits', 'Audit verdicts'],
   ['/docket', 'Docket'],

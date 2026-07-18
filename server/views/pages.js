@@ -133,7 +133,7 @@ Every number on this site says which layer it comes from, because mixing them up
 <section>
 <h3>What this site never does</h3>
 <p>It never editorializes, never advocates, and never guesses. A dead end means "not yet ingested and navigable" — never "hidden." Where a number could be misread without context (like the county's $45,921 fire pass-through, which is only one slice of how fire departments are funded), the caveat is attached to the number itself.</p>
-<p>And it never investigates people. This site maps where public money goes, as public documents draw the map. Naming a payee documents a transaction, not a suspicion. Where the map has a missing piece, the site asks for that piece — openly, from the records that hold it — and publishes whatever the answer turns out to be, including when the answer is "everything is in order." Several trails on this site ended exactly that way, and those pages say so.</p>
+<p>And it never investigates people, and never renders verdicts — in either direction. This site maps where public money goes, as public documents draw the map. Naming a payee documents a transaction, not a suspicion. Where the map has a missing piece, the site asks for that piece — openly, from the records that hold it — and publishes what the record shows, whatever it shows. The trail and where it stops: that is the entire product.</p>
 </section>
 
 <section>

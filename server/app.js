@@ -20,6 +20,8 @@ const { storyPage } = require('./views/story');
 const { vendorsPage } = require('./views/vendors');
 const { auditsPage } = require('./views/audits');
 const { spendingPage } = require('./views/spending');
+const { issuesPage, issuePage } = require('./views/issues');
+const { castVote } = require('./vote');
 
 const app = express();
 app.disable('x-powered-by');
@@ -134,8 +136,37 @@ app.get('/documents', (req, res) => res.send(documentsPage(load())));
 app.get('/verify', (req, res) => res.send(verifyPage(load())));
 app.get('/methodology', (req, res) => res.send(methodologyPage(load())));
 
+// ---- issues: Tier 0 sentiment polling (the M2 seed) ----
+function participantOf(req) { return cookies(req).cc_participant || null; }
+
+app.get('/issues', (req, res) => res.send(issuesPage(load())));
+
+app.get('/issues/:id', (req, res) => {
+  const data = load();
+  const draft = data.issueDrafts.drafts.find(d => d.id === req.params.id && d.status === 'open-tier0');
+  if (!draft) return res.status(404).send(notFound(data, 'No open question with that id.'));
+  const voted = req.query.voted && ['yes', 'no', 'skip'].includes(req.query.voted) ? req.query.voted : null;
+  res.send(issuePage(data, draft, participantOf(req), voted));
+});
+
+app.post('/issues/:id/vote', express.urlencoded({ extended: false }), (req, res) => {
+  const data = load();
+  const draft = data.issueDrafts.drafts.find(d => d.id === req.params.id && d.status === 'open-tier0');
+  if (!draft) return res.status(404).send(notFound(data, 'No open question with that id.'));
+  const value = (req.body && req.body.value) || '';
+  if (!['yes', 'no', 'skip'].includes(value)) return res.redirect(`/issues/${draft.id}`);
+  let participant = participantOf(req);
+  if (!participant) {
+    participant = crypto.randomBytes(12).toString('hex');
+    res.setHeader('Set-Cookie',
+      `cc_participant=${participant}; Path=/; Max-Age=${60 * 60 * 24 * 365}; HttpOnly; SameSite=Lax`);
+  }
+  castVote(participant, draft.id, value, 'web');
+  res.redirect(`/issues/${draft.id}?voted=${value}`);
+});
+
 // Reserved for later milestones — honest about it rather than 404.
-for (const route of ['/issues', '/results', '/ask']) {
+for (const route of ['/results', '/ask']) {
   app.get(route, (req, res) => {
     const data = load();
     res.status(404).send(notFound(data,
