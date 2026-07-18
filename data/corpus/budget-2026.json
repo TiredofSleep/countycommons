@@ -10,215 +10,2057 @@
   },
   "nodes": [
     {
-      "id": "general-fund", "parent": null, "section": "appropriations",
-      "name": "General Fund", "code": "1000", "amount": 6829201,
-      "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null },
-      "status": "sourced", "docket_ref": null, "children_complete": true,
+      "id": "general-fund",
+      "parent": null,
+      "section": "appropriations",
+      "name": "General Fund",
+      "code": "1000",
+      "amount": 6829201,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": true,
       "note": "Projected revenue $8,000,703 · 90% statutory cap $7,200,632 · appropriated $6,829,201 · cushion left $371,431. All 27 department totals sourced; line-item pages ingested for some, pending for others."
     },
-    { "id": "gf-sheriff", "parent": "general-fund", "section": "appropriations", "name": "Sheriff", "code": "0400", "amount": 2118755, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "partial", "docket_ref": 7, "children_complete": false,
-      "note": "Department total sourced; line-item page not yet ingested. Salary schedule IS ingested: line deputies $43,398–$46,498 · sergeants $45,648–$50,927 · investigators $45,015–$51,257 · chief deputy $63,591. This is the deputy-pay-parity baseline; the comparison to neighboring counties is Docket #6." },
-    { "id": "gf-jail", "parent": "general-fund", "section": "appropriations", "name": "Jail", "code": "0418", "amount": 676423, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "partial", "docket_ref": 7, "children_complete": false,
-      "note": "Total sourced; line detail pending. Jailers on salary schedule: $36,338–$37,338; administrator $43,285. See also the Jail Maintenance and Jail Construction funds." },
-    { "id": "gf-prisoner-food", "parent": "general-fund", "section": "appropriations", "name": "Prisoner food", "code": "0420", "amount": 168000, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "gf-assessor", "parent": "general-fund", "section": "appropriations", "name": "Assessor", "code": "0105", "amount": 560131, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "partial", "docket_ref": 7, "children_complete": false, "note": "Total sourced; line detail pending." },
-    { "id": "gf-district-court", "parent": "general-fund", "section": "appropriations", "name": "District Court", "code": "0409", "amount": 477600, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "partial", "docket_ref": 7, "children_complete": false, "note": "Total sourced; line detail pending. Court staff on salary schedule: clerk $46,000, deputies $34,725–$40,905." },
-    { "id": "gf-courthouse-maint", "parent": "general-fund", "section": "appropriations", "name": "Courthouse Maintenance", "code": "0108", "amount": 416460, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": true, "note": null },
-    { "id": "chm-personal", "parent": "gf-courthouse-maint", "section": "appropriations", "name": "Personal services", "code": null, "amount": 85160, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": true, "note": null },
-    { "id": "chm-salaries", "parent": "chm-personal", "section": "appropriations", "name": "Salaries", "code": null, "amount": 31380, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "chm-workers-comp", "parent": "chm-personal", "section": "appropriations", "name": "Workers' comp (county-wide)", "code": null, "amount": 30000, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "chm-health-retire", "parent": "chm-personal", "section": "appropriations", "name": "Health ins. + retirement + FICA", "code": null, "amount": 17650, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "chm-cobra-life", "parent": "chm-personal", "section": "appropriations", "name": "COBRA + life", "code": null, "amount": 6130, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "chm-supplies", "parent": "gf-courthouse-maint", "section": "appropriations", "name": "Supplies", "code": null, "amount": 36000, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": true, "note": null },
-    { "id": "chm-maint-contracts", "parent": "chm-supplies", "section": "appropriations", "name": "Maintenance & service contracts", "code": null, "amount": 16500, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "chm-janitorial", "parent": "chm-supplies", "section": "appropriations", "name": "Janitorial + general + repair", "code": null, "amount": 19500, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "chm-other", "parent": "gf-courthouse-maint", "section": "appropriations", "name": "Other services & charges", "code": null, "amount": 295300, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": true, "note": null },
-    { "id": "chm-property-maint", "parent": "chm-other", "section": "appropriations", "name": "Property maintenance", "code": null, "amount": 100000, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "chm-fire-ins", "parent": "chm-other", "section": "appropriations", "name": "Fire & extended coverage ins.", "code": null, "amount": 66500, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "chm-fleet", "parent": "chm-other", "section": "appropriations", "name": "Fleet liability", "code": null, "amount": 30000, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "chm-utilities", "parent": "chm-other", "section": "appropriations", "name": "Utilities (elec/gas/water)", "code": null, "amount": 31000, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "chm-bonds-misc", "parent": "chm-other", "section": "appropriations", "name": "Bonds, audit, internet, prof. svcs, misc", "code": null, "amount": 67800, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "gf-prosecutor", "parent": "general-fund", "section": "appropriations", "name": "Prosecuting Attorney", "code": "0416", "amount": 372374, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "partial", "docket_ref": 7, "children_complete": false, "note": "Total sourced; line detail pending. Coordinator salaries $34,660–$44,581 on schedule." },
-    { "id": "gf-county-clerk", "parent": "general-fund", "section": "appropriations", "name": "County Clerk", "code": "0101", "amount": 314622, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": true, "note": null },
-    { "id": "cclerk-personal", "parent": "gf-county-clerk", "section": "appropriations", "name": "Personal services", "code": null, "amount": 262047, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "cclerk-supplies", "parent": "gf-county-clerk", "section": "appropriations", "name": "Supplies", "code": null, "amount": 32350, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "cclerk-other", "parent": "gf-county-clerk", "section": "appropriations", "name": "Other services", "code": null, "amount": 18075, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "cclerk-capital", "parent": "gf-county-clerk", "section": "appropriations", "name": "Capital outlay", "code": null, "amount": 2150, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "gf-circuit-clerk", "parent": "general-fund", "section": "appropriations", "name": "Circuit Clerk", "code": "0102", "amount": 306550, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "gf-juvenile", "parent": "general-fund", "section": "appropriations", "name": "Juvenile", "code": "0414", "amount": 177917, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "partial", "docket_ref": 7, "children_complete": false, "note": "Total sourced; line detail pending." },
-    { "id": "gf-treasurer", "parent": "general-fund", "section": "appropriations", "name": "Treasurer", "code": "0103", "amount": 177591, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "gf-county-judge", "parent": "general-fund", "section": "appropriations", "name": "County Judge", "code": "0100", "amount": 168446, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": true, "note": "One complete path to the floor, as a demonstrator of what full ingestion looks like." },
-    { "id": "cj-personal", "parent": "gf-county-judge", "section": "appropriations", "name": "Personal services", "code": null, "amount": 132026, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": true, "note": null },
-    { "id": "cj-salaries-ft", "parent": "cj-personal", "section": "appropriations", "name": "Salaries, full time", "code": null, "amount": 80126, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "cj-salaries-pt", "parent": "cj-personal", "section": "appropriations", "name": "Salaries, part time", "code": null, "amount": 16000, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "cj-health", "parent": "cj-personal", "section": "appropriations", "name": "Health insurance match", "code": null, "amount": 15600, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "cj-retirement", "parent": "cj-personal", "section": "appropriations", "name": "Retirement", "code": null, "amount": 12300, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "cj-ss-match", "parent": "cj-personal", "section": "appropriations", "name": "Social Security match", "code": null, "amount": 7400, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "cj-unemp-life", "parent": "cj-personal", "section": "appropriations", "name": "Unemployment + life ins.", "code": null, "amount": 600, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "cj-other", "parent": "gf-county-judge", "section": "appropriations", "name": "Other services & charges", "code": null, "amount": 29920, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": true, "note": null },
-    { "id": "cj-software", "parent": "cj-other", "section": "appropriations", "name": "Computer software & support", "code": null, "amount": 10000, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "cj-dues", "parent": "cj-other", "section": "appropriations", "name": "Dues & memberships", "code": null, "amount": 8500, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "cj-phone-travel", "parent": "cj-other", "section": "appropriations", "name": "Phone, travel, meals, misc.", "code": null, "amount": 11420, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "cj-supplies", "parent": "gf-county-judge", "section": "appropriations", "name": "Supplies", "code": null, "amount": 6500, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "gf-quorum-court", "parent": "general-fund", "section": "appropriations", "name": "Quorum Court", "code": "0107", "amount": 158100, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": "11 justices of the peace at $300 per meeting, plus health insurance and operations." },
-    { "id": "gf-oem", "parent": "general-fund", "section": "appropriations", "name": "OEM (emergency management)", "code": "0500", "amount": 148995, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "partial", "docket_ref": 7, "children_complete": false, "note": "Total sourced; line detail pending." },
-    { "id": "gf-circuit-judge", "parent": "general-fund", "section": "appropriations", "name": "Circuit Judge", "code": "0401", "amount": 131010, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "partial", "docket_ref": 7, "children_complete": false, "note": "Total sourced; line detail pending." },
-    { "id": "gf-election", "parent": "general-fund", "section": "appropriations", "name": "Election Commission", "code": "0109", "amount": 109200, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": "Up from $33,750 in 2025 — election year. Extra help alone: $5,000 → $45,000. Elections cost real money." },
-    { "id": "gf-extension", "parent": "general-fund", "section": "appropriations", "name": "Extension Office", "code": "0801", "amount": 78532, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "partial", "docket_ref": 7, "children_complete": false, "note": "Total sourced; line detail pending." },
-    { "id": "gf-coroner", "parent": "general-fund", "section": "appropriations", "name": "Coroner", "code": "0419", "amount": 76780, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "partial", "docket_ref": 7, "children_complete": false, "note": "Total sourced; line detail pending." },
-    { "id": "gf-health", "parent": "general-fund", "section": "appropriations", "name": "Health Department", "code": "0300", "amount": 48900, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "partial", "docket_ref": 7, "children_complete": false, "note": "Total sourced; line detail pending." },
-    { "id": "gf-court-complex", "parent": "general-fund", "section": "appropriations", "name": "Court Complex Building", "code": "0423", "amount": 44400, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "gf-collector", "parent": "general-fund", "section": "appropriations", "name": "Collector", "code": "0104", "amount": 39500, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "gf-veterans", "parent": "general-fund", "section": "appropriations", "name": "Veterans Services", "code": "0800", "amount": 26390, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "partial", "docket_ref": 7, "children_complete": false, "note": "Total sourced; line detail pending." },
-    { "id": "gf-gia-social", "parent": "general-fund", "section": "appropriations", "name": "Grants-in-aid — social services (Conservation District)", "code": "0803", "amount": 11500, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "gf-late-fee", "parent": "general-fund", "section": "appropriations", "name": "Assessor's Late Fee", "code": null, "amount": 10700, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "gf-rental", "parent": "general-fund", "section": "appropriations", "name": "Rental Property", "code": null, "amount": 6000, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "gf-board-eq", "parent": "general-fund", "section": "appropriations", "name": "Board of Equalization", "code": null, "amount": 3075, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "gf-paupers", "parent": "general-fund", "section": "appropriations", "name": "Paupers & Welfare", "code": null, "amount": 1250, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-
     {
-      "id": "road-fund", "parent": null, "section": "appropriations",
-      "name": "Road Fund", "code": "2000", "amount": 6038258,
-      "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null },
-      "status": "sourced", "docket_ref": null, "children_complete": true,
+      "id": "gf-sheriff",
+      "parent": "general-fund",
+      "section": "appropriations",
+      "name": "Sheriff",
+      "code": "0400",
+      "amount": 2118755,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "partial",
+      "docket_ref": 7,
+      "children_complete": false,
+      "note": "Department total sourced; line-item page not yet ingested. Salary schedule IS ingested: line deputies $43,398–$46,498 · sergeants $45,648–$50,927 · investigators $45,015–$51,257 · chief deputy $63,591. This is the deputy-pay-parity baseline; the comparison to neighboring counties is Docket #6."
+    },
+    {
+      "id": "gf-jail",
+      "parent": "general-fund",
+      "section": "appropriations",
+      "name": "Jail",
+      "code": "0418",
+      "amount": 676423,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "partial",
+      "docket_ref": 7,
+      "children_complete": false,
+      "note": "Total sourced; line detail pending. Jailers on salary schedule: $36,338–$37,338; administrator $43,285. See also the Jail Maintenance and Jail Construction funds."
+    },
+    {
+      "id": "gf-prisoner-food",
+      "parent": "general-fund",
+      "section": "appropriations",
+      "name": "Prisoner food",
+      "code": "0420",
+      "amount": 168000,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-assessor",
+      "parent": "general-fund",
+      "section": "appropriations",
+      "name": "Assessor",
+      "code": "0105",
+      "amount": 560131,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "partial",
+      "docket_ref": 7,
+      "children_complete": false,
+      "note": "Total sourced; line detail pending."
+    },
+    {
+      "id": "gf-district-court",
+      "parent": "general-fund",
+      "section": "appropriations",
+      "name": "District Court",
+      "code": "0409",
+      "amount": 477600,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "partial",
+      "docket_ref": 7,
+      "children_complete": false,
+      "note": "Total sourced; line detail pending. Court staff on salary schedule: clerk $46,000, deputies $34,725–$40,905."
+    },
+    {
+      "id": "gf-courthouse-maint",
+      "parent": "general-fund",
+      "section": "appropriations",
+      "name": "Courthouse Maintenance",
+      "code": "0108",
+      "amount": 416460,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": true,
+      "note": null
+    },
+    {
+      "id": "chm-personal",
+      "parent": "gf-courthouse-maint",
+      "section": "appropriations",
+      "name": "Personal services",
+      "code": null,
+      "amount": 85160,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 15
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": true,
+      "note": null
+    },
+    {
+      "id": "chm-salaries",
+      "parent": "chm-personal",
+      "section": "appropriations",
+      "name": "Salaries",
+      "code": null,
+      "amount": 31380,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 15
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "chm-workers-comp",
+      "parent": "chm-personal",
+      "section": "appropriations",
+      "name": "Workers' comp (county-wide)",
+      "code": null,
+      "amount": 30000,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "chm-health-retire",
+      "parent": "chm-personal",
+      "section": "appropriations",
+      "name": "Health ins. + retirement + FICA",
+      "code": null,
+      "amount": 17650,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "chm-cobra-life",
+      "parent": "chm-personal",
+      "section": "appropriations",
+      "name": "COBRA + life",
+      "code": null,
+      "amount": 6130,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "chm-supplies",
+      "parent": "gf-courthouse-maint",
+      "section": "appropriations",
+      "name": "Supplies",
+      "code": null,
+      "amount": 36000,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": true,
+      "note": null
+    },
+    {
+      "id": "chm-maint-contracts",
+      "parent": "chm-supplies",
+      "section": "appropriations",
+      "name": "Maintenance & service contracts",
+      "code": null,
+      "amount": 16500,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "chm-janitorial",
+      "parent": "chm-supplies",
+      "section": "appropriations",
+      "name": "Janitorial + general + repair",
+      "code": null,
+      "amount": 19500,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 15
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "chm-other",
+      "parent": "gf-courthouse-maint",
+      "section": "appropriations",
+      "name": "Other services & charges",
+      "code": null,
+      "amount": 295300,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 15
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": true,
+      "note": null
+    },
+    {
+      "id": "chm-property-maint",
+      "parent": "chm-other",
+      "section": "appropriations",
+      "name": "Property maintenance",
+      "code": null,
+      "amount": 100000,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "chm-fire-ins",
+      "parent": "chm-other",
+      "section": "appropriations",
+      "name": "Fire & extended coverage ins.",
+      "code": null,
+      "amount": 66500,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 15
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "chm-fleet",
+      "parent": "chm-other",
+      "section": "appropriations",
+      "name": "Fleet liability",
+      "code": null,
+      "amount": 30000,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "chm-utilities",
+      "parent": "chm-other",
+      "section": "appropriations",
+      "name": "Utilities (elec/gas/water)",
+      "code": null,
+      "amount": 31000,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "chm-bonds-misc",
+      "parent": "chm-other",
+      "section": "appropriations",
+      "name": "Bonds, audit, internet, prof. svcs, misc",
+      "code": null,
+      "amount": 67800,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-prosecutor",
+      "parent": "general-fund",
+      "section": "appropriations",
+      "name": "Prosecuting Attorney",
+      "code": "0416",
+      "amount": 372374,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "partial",
+      "docket_ref": 7,
+      "children_complete": false,
+      "note": "Total sourced; line detail pending. Coordinator salaries $34,660–$44,581 on schedule."
+    },
+    {
+      "id": "gf-county-clerk",
+      "parent": "general-fund",
+      "section": "appropriations",
+      "name": "County Clerk",
+      "code": "0101",
+      "amount": 314622,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": true,
+      "note": null
+    },
+    {
+      "id": "cclerk-personal",
+      "parent": "gf-county-clerk",
+      "section": "appropriations",
+      "name": "Personal services",
+      "code": null,
+      "amount": 262047,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 45
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "cclerk-supplies",
+      "parent": "gf-county-clerk",
+      "section": "appropriations",
+      "name": "Supplies",
+      "code": null,
+      "amount": 32350,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 45
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "cclerk-other",
+      "parent": "gf-county-clerk",
+      "section": "appropriations",
+      "name": "Other services",
+      "code": null,
+      "amount": 18075,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 45
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "cclerk-capital",
+      "parent": "gf-county-clerk",
+      "section": "appropriations",
+      "name": "Capital outlay",
+      "code": null,
+      "amount": 2150,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-circuit-clerk",
+      "parent": "general-fund",
+      "section": "appropriations",
+      "name": "Circuit Clerk",
+      "code": "0102",
+      "amount": 306550,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-juvenile",
+      "parent": "general-fund",
+      "section": "appropriations",
+      "name": "Juvenile",
+      "code": "0414",
+      "amount": 177917,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "partial",
+      "docket_ref": 7,
+      "children_complete": false,
+      "note": "Total sourced; line detail pending."
+    },
+    {
+      "id": "gf-treasurer",
+      "parent": "general-fund",
+      "section": "appropriations",
+      "name": "Treasurer",
+      "code": "0103",
+      "amount": 177591,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-county-judge",
+      "parent": "general-fund",
+      "section": "appropriations",
+      "name": "County Judge",
+      "code": "0100",
+      "amount": 168446,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": true,
+      "note": "One complete path to the floor, as a demonstrator of what full ingestion looks like."
+    },
+    {
+      "id": "cj-personal",
+      "parent": "gf-county-judge",
+      "section": "appropriations",
+      "name": "Personal services",
+      "code": null,
+      "amount": 132026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 14
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": true,
+      "note": null
+    },
+    {
+      "id": "cj-salaries-ft",
+      "parent": "cj-personal",
+      "section": "appropriations",
+      "name": "Salaries, full time",
+      "code": null,
+      "amount": 80126,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 14
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "cj-salaries-pt",
+      "parent": "cj-personal",
+      "section": "appropriations",
+      "name": "Salaries, part time",
+      "code": null,
+      "amount": 16000,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "cj-health",
+      "parent": "cj-personal",
+      "section": "appropriations",
+      "name": "Health insurance match",
+      "code": null,
+      "amount": 15600,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "cj-retirement",
+      "parent": "cj-personal",
+      "section": "appropriations",
+      "name": "Retirement",
+      "code": null,
+      "amount": 12300,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 14
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "cj-ss-match",
+      "parent": "cj-personal",
+      "section": "appropriations",
+      "name": "Social Security match",
+      "code": null,
+      "amount": 7400,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "cj-unemp-life",
+      "parent": "cj-personal",
+      "section": "appropriations",
+      "name": "Unemployment + life ins.",
+      "code": null,
+      "amount": 600,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "cj-other",
+      "parent": "gf-county-judge",
+      "section": "appropriations",
+      "name": "Other services & charges",
+      "code": null,
+      "amount": 29920,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 14
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": true,
+      "note": null
+    },
+    {
+      "id": "cj-software",
+      "parent": "cj-other",
+      "section": "appropriations",
+      "name": "Computer software & support",
+      "code": null,
+      "amount": 10000,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "cj-dues",
+      "parent": "cj-other",
+      "section": "appropriations",
+      "name": "Dues & memberships",
+      "code": null,
+      "amount": 8500,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "cj-phone-travel",
+      "parent": "cj-other",
+      "section": "appropriations",
+      "name": "Phone, travel, meals, misc.",
+      "code": null,
+      "amount": 11420,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "cj-supplies",
+      "parent": "gf-county-judge",
+      "section": "appropriations",
+      "name": "Supplies",
+      "code": null,
+      "amount": 6500,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-quorum-court",
+      "parent": "general-fund",
+      "section": "appropriations",
+      "name": "Quorum Court",
+      "code": "0107",
+      "amount": 158100,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": "11 justices of the peace at $300 per meeting, plus health insurance and operations."
+    },
+    {
+      "id": "gf-oem",
+      "parent": "general-fund",
+      "section": "appropriations",
+      "name": "OEM (emergency management)",
+      "code": "0500",
+      "amount": 148995,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "partial",
+      "docket_ref": 7,
+      "children_complete": false,
+      "note": "Total sourced; line detail pending."
+    },
+    {
+      "id": "gf-circuit-judge",
+      "parent": "general-fund",
+      "section": "appropriations",
+      "name": "Circuit Judge",
+      "code": "0401",
+      "amount": 131010,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "partial",
+      "docket_ref": 7,
+      "children_complete": false,
+      "note": "Total sourced; line detail pending."
+    },
+    {
+      "id": "gf-election",
+      "parent": "general-fund",
+      "section": "appropriations",
+      "name": "Election Commission",
+      "code": "0109",
+      "amount": 109200,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": "Up from $33,750 in 2025 — election year. Extra help alone: $5,000 → $45,000. Elections cost real money."
+    },
+    {
+      "id": "gf-extension",
+      "parent": "general-fund",
+      "section": "appropriations",
+      "name": "Extension Office",
+      "code": "0801",
+      "amount": 78532,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "partial",
+      "docket_ref": 7,
+      "children_complete": false,
+      "note": "Total sourced; line detail pending."
+    },
+    {
+      "id": "gf-coroner",
+      "parent": "general-fund",
+      "section": "appropriations",
+      "name": "Coroner",
+      "code": "0419",
+      "amount": 76780,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "partial",
+      "docket_ref": 7,
+      "children_complete": false,
+      "note": "Total sourced; line detail pending."
+    },
+    {
+      "id": "gf-health",
+      "parent": "general-fund",
+      "section": "appropriations",
+      "name": "Health Department",
+      "code": "0300",
+      "amount": 48900,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "partial",
+      "docket_ref": 7,
+      "children_complete": false,
+      "note": "Total sourced; line detail pending."
+    },
+    {
+      "id": "gf-court-complex",
+      "parent": "general-fund",
+      "section": "appropriations",
+      "name": "Court Complex Building",
+      "code": "0423",
+      "amount": 44400,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-collector",
+      "parent": "general-fund",
+      "section": "appropriations",
+      "name": "Collector",
+      "code": "0104",
+      "amount": 39500,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-veterans",
+      "parent": "general-fund",
+      "section": "appropriations",
+      "name": "Veterans Services",
+      "code": "0800",
+      "amount": 26390,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "partial",
+      "docket_ref": 7,
+      "children_complete": false,
+      "note": "Total sourced; line detail pending."
+    },
+    {
+      "id": "gf-gia-social",
+      "parent": "general-fund",
+      "section": "appropriations",
+      "name": "Grants-in-aid — social services (Conservation District)",
+      "code": "0803",
+      "amount": 11500,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-late-fee",
+      "parent": "general-fund",
+      "section": "appropriations",
+      "name": "Assessor's Late Fee",
+      "code": null,
+      "amount": 10700,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-rental",
+      "parent": "general-fund",
+      "section": "appropriations",
+      "name": "Rental Property",
+      "code": null,
+      "amount": 6000,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-board-eq",
+      "parent": "general-fund",
+      "section": "appropriations",
+      "name": "Board of Equalization",
+      "code": null,
+      "amount": 3075,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-paupers",
+      "parent": "general-fund",
+      "section": "appropriations",
+      "name": "Paupers & Welfare",
+      "code": null,
+      "amount": 1250,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "road-fund",
+      "parent": null,
+      "section": "appropriations",
+      "name": "Road Fund",
+      "code": "2000",
+      "amount": 6038258,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": true,
       "note": "Projected revenue $6,863,221; appropriated $6,038,258."
     },
-    { "id": "road-supplies", "parent": "road-fund", "section": "appropriations", "name": "Supplies", "code": null, "amount": 2548700, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": true, "note": null },
-    { "id": "road-asphalt", "parent": "road-supplies", "section": "appropriations", "name": "Asphalt", "code": null, "amount": 990000, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "road-fuel", "parent": "road-supplies", "section": "appropriations", "name": "Fuel, oil & lubricants", "code": null, "amount": 403000, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "road-gravel", "parent": "road-supplies", "section": "appropriations", "name": "Gravel, dirt & sand", "code": null, "amount": 400000, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "road-parts", "parent": "road-supplies", "section": "appropriations", "name": "Parts & repairs", "code": null, "amount": 300000, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "road-culvert", "parent": "road-supplies", "section": "appropriations", "name": "Culvert & pipe", "code": null, "amount": 150000, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "road-tires-misc", "parent": "road-supplies", "section": "appropriations", "name": "Tires, bridges & steel, concrete, other", "code": null, "amount": 305700, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "road-personal", "parent": "road-fund", "section": "appropriations", "name": "Personal services (26 positions)", "code": null, "amount": 2109758, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": "Truck drivers $33,288–$51,692, operators $37,788–$60,043 on the salary schedule." },
-    { "id": "road-other", "parent": "road-fund", "section": "appropriations", "name": "Other services & charges", "code": null, "amount": 538800, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": true, "note": null },
-    { "id": "road-prof-svcs", "parent": "road-other", "section": "appropriations", "name": "Other professional services", "code": null, "amount": 350000, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "road-ins-util", "parent": "road-other", "section": "appropriations", "name": "Insurance, utilities, rent, misc.", "code": null, "amount": 188800, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "road-capital", "parent": "road-fund", "section": "appropriations", "name": "Capital outlay (equipment, vehicles, hwy projects)", "code": null, "amount": 720000, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "road-debt", "parent": "road-fund", "section": "appropriations", "name": "Debt service", "code": null, "amount": 121000, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-
     {
-      "id": "sanitation", "parent": null, "section": "appropriations",
-      "name": "Sanitation / Solid Waste", "code": "3009", "amount": 1899263,
-      "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null },
-      "status": "sourced", "docket_ref": null, "children_complete": true,
+      "id": "road-supplies",
+      "parent": "road-fund",
+      "section": "appropriations",
+      "name": "Supplies",
+      "code": null,
+      "amount": 2548700,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": true,
+      "note": null
+    },
+    {
+      "id": "road-asphalt",
+      "parent": "road-supplies",
+      "section": "appropriations",
+      "name": "Asphalt",
+      "code": null,
+      "amount": 990000,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 32
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "road-fuel",
+      "parent": "road-supplies",
+      "section": "appropriations",
+      "name": "Fuel, oil & lubricants",
+      "code": null,
+      "amount": 403000,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 32
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "road-gravel",
+      "parent": "road-supplies",
+      "section": "appropriations",
+      "name": "Gravel, dirt & sand",
+      "code": null,
+      "amount": 400000,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 32
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "road-parts",
+      "parent": "road-supplies",
+      "section": "appropriations",
+      "name": "Parts & repairs",
+      "code": null,
+      "amount": 300000,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "road-culvert",
+      "parent": "road-supplies",
+      "section": "appropriations",
+      "name": "Culvert & pipe",
+      "code": null,
+      "amount": 150000,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "road-tires-misc",
+      "parent": "road-supplies",
+      "section": "appropriations",
+      "name": "Tires, bridges & steel, concrete, other",
+      "code": null,
+      "amount": 305700,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "road-personal",
+      "parent": "road-fund",
+      "section": "appropriations",
+      "name": "Personal services (26 positions)",
+      "code": null,
+      "amount": 2109758,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": "Truck drivers $33,288–$51,692, operators $37,788–$60,043 on the salary schedule."
+    },
+    {
+      "id": "road-other",
+      "parent": "road-fund",
+      "section": "appropriations",
+      "name": "Other services & charges",
+      "code": null,
+      "amount": 538800,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": true,
+      "note": null
+    },
+    {
+      "id": "road-prof-svcs",
+      "parent": "road-other",
+      "section": "appropriations",
+      "name": "Other professional services",
+      "code": null,
+      "amount": 350000,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 33
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "road-ins-util",
+      "parent": "road-other",
+      "section": "appropriations",
+      "name": "Insurance, utilities, rent, misc.",
+      "code": null,
+      "amount": 188800,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "road-capital",
+      "parent": "road-fund",
+      "section": "appropriations",
+      "name": "Capital outlay (equipment, vehicles, hwy projects)",
+      "code": null,
+      "amount": 720000,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "road-debt",
+      "parent": "road-fund",
+      "section": "appropriations",
+      "name": "Debt service",
+      "code": null,
+      "amount": 121000,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "sanitation",
+      "parent": null,
+      "section": "appropriations",
+      "name": "Sanitation / Solid Waste",
+      "code": "3009",
+      "amount": 1899263,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": true,
       "note": "Projected revenue $3,067,887; appropriated $1,899,263; ~$862K unappropriated."
     },
-    { "id": "san-other", "parent": "sanitation", "section": "appropriations", "name": "Other services", "code": null, "amount": 746375, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": "Includes waste disposal $250K, engineering $150K, professional services $175K." },
-    { "id": "san-personal", "parent": "sanitation", "section": "appropriations", "name": "Personal services", "code": null, "amount": 501188, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "san-debt", "parent": "sanitation", "section": "appropriations", "name": "Debt service", "code": null, "amount": 362000, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "san-capital", "parent": "sanitation", "section": "appropriations", "name": "Capital outlay", "code": null, "amount": 185000, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "san-supplies", "parent": "sanitation", "section": "appropriations", "name": "Supplies", "code": null, "amount": 104700, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-
     {
-      "id": "edccc", "parent": null, "section": "appropriations",
-      "name": "Economic Development (EDCCC) sales tax", "code": "3407", "amount": 1844538,
-      "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null },
-      "status": "dead_end", "docket_ref": 5, "children_complete": false,
+      "id": "san-other",
+      "parent": "sanitation",
+      "section": "appropriations",
+      "name": "Other services",
+      "code": null,
+      "amount": 746375,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": "Includes waste disposal $250K, engineering $150K, professional services $175K."
+    },
+    {
+      "id": "san-personal",
+      "parent": "sanitation",
+      "section": "appropriations",
+      "name": "Personal services",
+      "code": null,
+      "amount": 501188,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "san-debt",
+      "parent": "sanitation",
+      "section": "appropriations",
+      "name": "Debt service",
+      "code": null,
+      "amount": 362000,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "san-capital",
+      "parent": "sanitation",
+      "section": "appropriations",
+      "name": "Capital outlay",
+      "code": null,
+      "amount": 185000,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "san-supplies",
+      "parent": "sanitation",
+      "section": "appropriations",
+      "name": "Supplies",
+      "code": null,
+      "amount": 104700,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "edccc",
+      "parent": null,
+      "section": "appropriations",
+      "name": "Economic Development (EDCCC) sales tax",
+      "code": "3407",
+      "amount": 1844538,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "dead_end",
+      "docket_ref": 5,
+      "children_complete": false,
       "note": "The amount is sourced — a single ordinance line reading \"INCENTIVES: $1,844,538\" — larger than the jail, the library, or the county's entire fire pass-through. Who receives it, under what agreements, with what performance terms, is not in this document. That trail is Docket #5."
     },
-
     {
-      "id": "e911", "parent": null, "section": "appropriations",
-      "name": "9-1-1 (PSAP + reserve)", "code": "3020 · 3409", "amount": 1087970,
-      "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null },
-      "status": "sourced", "docket_ref": null, "children_complete": true,
+      "id": "e911",
+      "parent": null,
+      "section": "appropriations",
+      "name": "9-1-1 (PSAP + reserve)",
+      "code": "3020 · 3409",
+      "amount": 1087970,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": true,
       "note": "A further ~$1.01M sits unappropriated in the 9-1-1 reserve fund."
     },
-    { "id": "e911-personal", "parent": "e911", "section": "appropriations", "name": "PSAP personal services (10 dispatchers)", "code": null, "amount": 788288, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": "Dispatcher/matron positions $38,795–$55,935; director $45,398." },
-    { "id": "e911-supplies", "parent": "e911", "section": "appropriations", "name": "PSAP supplies + other", "code": null, "amount": 181907, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "e911-reserve", "parent": "e911", "section": "appropriations", "name": "Reserve fund (equip. $75K + supplies)", "code": null, "amount": 117775, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-
     {
-      "id": "jail-funds", "parent": null, "section": "appropriations",
-      "name": "Jail funds (maintenance + 2005 construction)", "code": "3405 · 3404", "amount": 663891,
-      "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null },
-      "status": "sourced", "docket_ref": null, "children_complete": true, "note": null
+      "id": "e911-personal",
+      "parent": "e911",
+      "section": "appropriations",
+      "name": "PSAP personal services (10 dispatchers)",
+      "code": null,
+      "amount": 788288,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": "Dispatcher/matron positions $38,795–$55,935; director $45,398."
     },
-    { "id": "jail-maint", "parent": "jail-funds", "section": "appropriations", "name": "Jail maintenance", "code": "3405", "amount": 393750, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": "Contracts alone are $351K of this." },
-    { "id": "jail-construction", "parent": "jail-funds", "section": "appropriations", "name": "Jail construction 2005", "code": "3404", "amount": 270141, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-
-    { "id": "motor-fuel", "parent": null, "section": "appropriations", "name": "Add'l motor fuel tax → asphalt", "code": "2003", "amount": 556749, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "arpa", "parent": null, "section": "appropriations", "name": "ARPA revenue replacement", "code": "1006", "amount": 471142, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-
     {
-      "id": "library", "parent": null, "section": "appropriations",
-      "name": "County Library", "code": "3008", "amount": 469288,
-      "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null },
-      "status": "sourced", "docket_ref": 8, "children_complete": false,
+      "id": "e911-supplies",
+      "parent": "e911",
+      "section": "appropriations",
+      "name": "PSAP supplies + other",
+      "code": null,
+      "amount": 181907,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "e911-reserve",
+      "parent": "e911",
+      "section": "appropriations",
+      "name": "Reserve fund (equip. $75K + supplies)",
+      "code": null,
+      "amount": 117775,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "jail-funds",
+      "parent": null,
+      "section": "appropriations",
+      "name": "Jail funds (maintenance + 2005 construction)",
+      "code": "3405 · 3404",
+      "amount": 663891,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": true,
+      "note": null
+    },
+    {
+      "id": "jail-maint",
+      "parent": "jail-funds",
+      "section": "appropriations",
+      "name": "Jail maintenance",
+      "code": "3405",
+      "amount": 393750,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": "Contracts alone are $351K of this."
+    },
+    {
+      "id": "jail-construction",
+      "parent": "jail-funds",
+      "section": "appropriations",
+      "name": "Jail construction 2005",
+      "code": "3404",
+      "amount": 270141,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "motor-fuel",
+      "parent": null,
+      "section": "appropriations",
+      "name": "Add'l motor fuel tax → asphalt",
+      "code": "2003",
+      "amount": 556749,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "arpa",
+      "parent": null,
+      "section": "appropriations",
+      "name": "ARPA revenue replacement",
+      "code": "1006",
+      "amount": 471142,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "library",
+      "parent": null,
+      "section": "appropriations",
+      "name": "County Library",
+      "code": "3008",
+      "amount": 469288,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": 8,
+      "children_complete": false,
       "note": "Appropriated $469K of a $1.28M revenue projection; ~$687K unappropriated, plus the Margie Lou Ballew bequest fund holding ~$196K untouched. What restricts those balances is part of Docket #8."
     },
-
     {
-      "id": "automation-funds", "parent": null, "section": "appropriations",
-      "name": "Automation & cost funds (clerks, treasurer, collector, courts, recorder)", "code": null, "amount": 610378,
-      "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null },
-      "status": "partial", "docket_ref": 7, "children_complete": true,
+      "id": "automation-funds",
+      "parent": null,
+      "section": "appropriations",
+      "name": "Automation & cost funds (clerks, treasurer, collector, courts, recorder)",
+      "code": null,
+      "amount": 610378,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "partial",
+      "docket_ref": 7,
+      "children_complete": true,
       "note": "Fee-funded office accounts."
     },
-    { "id": "auto-collector", "parent": "automation-funds", "section": "appropriations", "name": "Collector's Automation", "code": "3001", "amount": 257289, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "auto-recorder", "parent": "automation-funds", "section": "appropriations", "name": "Recorder's Cost", "code": "3006", "amount": 234239, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "auto-others", "parent": "automation-funds", "section": "appropriations", "name": "Treasurer, district court & smaller automation accounts", "code": null, "amount": 118850, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "ambiguous", "docket_ref": 7, "children_complete": false,
-      "note": "Derived, not transcribed: this is the remainder of the $610,378 automation-fund group after the Collector ($257,289) and Recorder ($234,239) lines. It covers roughly Treasurer ~$34K, District Court ~$25K, and smaller accounts. Exact line items pending ingestion of the ordinance's fund pages — Docket #7." },
-
     {
-      "id": "fire-passthrough", "parent": null, "section": "appropriations",
-      "name": "Fire — county sales-tax pass-through", "code": "1802", "amount": 45921,
-      "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null },
-      "status": "dead_end", "docket_ref": 4, "children_complete": false,
+      "id": "auto-collector",
+      "parent": "automation-funds",
+      "section": "appropriations",
+      "name": "Collector's Automation",
+      "code": "3001",
+      "amount": 257289,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "auto-recorder",
+      "parent": "automation-funds",
+      "section": "appropriations",
+      "name": "Recorder's Cost",
+      "code": "3006",
+      "amount": 234239,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "auto-others",
+      "parent": "automation-funds",
+      "section": "appropriations",
+      "name": "Treasurer, district court & smaller automation accounts",
+      "code": null,
+      "amount": 118850,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "ambiguous",
+      "docket_ref": 7,
+      "children_complete": false,
+      "note": "Derived, not transcribed: this is the remainder of the $610,378 automation-fund group after the Collector ($257,289) and Recorder ($234,239) lines. It covers roughly Treasurer ~$34K, District Court ~$25K, and smaller accounts. Exact line items pending ingestion of the ordinance's fund pages — Docket #7."
+    },
+    {
+      "id": "fire-passthrough",
+      "parent": null,
+      "section": "appropriations",
+      "name": "Fire — county sales-tax pass-through",
+      "code": "1802",
+      "amount": 45921,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "dead_end",
+      "docket_ref": 4,
+      "children_complete": false,
       "note": "The amount is sourced, but this is only the county's slice of fire funding. Rural Arkansas fire departments are typically funded primarily through fire protection districts' own millage and dues, plus city budgets — the county pass-through is a slice, not the whole picture. The full fire map (district budgets + dues + city FD + this line) does not yet exist in public, navigable form. That is Docket #4, and it is a prerequisite for framing any fire-funding question honestly."
     },
-
     {
-      "id": "other-funds", "parent": null, "section": "appropriations",
-      "name": "All other funds (defender, victim-witness, marina, trails, grants, courts, misc.)", "code": null, "amount": 869631,
-      "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null },
-      "status": "ambiguous", "docket_ref": 7, "children_complete": true,
+      "id": "other-funds",
+      "parent": null,
+      "section": "appropriations",
+      "name": "All other funds (defender, victim-witness, marina, trails, grants, courts, misc.)",
+      "code": null,
+      "amount": 869631,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "ambiguous",
+      "docket_ref": 7,
+      "children_complete": true,
       "note": "Derived, not transcribed: this is the computed remainder between the ordinance's stated grand total ($21,386,230) and the funds itemized above. An earlier working estimate showed ~$769K here excluding the Public Defender fund; the ordinance's own fund pages will settle the exact split. Itemization pending — Docket #7."
     },
-    { "id": "public-defender", "parent": "other-funds", "section": "appropriations", "name": "Public Defender", "code": "3026", "amount": 98590, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": "Projected revenue $310,421; appropriated $98,590." },
-    { "id": "other-funds-residual", "parent": "other-funds", "section": "appropriations", "name": "~20 smaller special funds (victim-witness, marina, trails, grants, courts, misc.)", "code": null, "amount": 771041, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "ambiguous", "docket_ref": 7, "children_complete": false,
-      "note": "Derived, not transcribed: the grand-total remainder after every itemized fund and the Public Defender. Fund-by-fund itemization pending — Docket #7." },
-
     {
-      "id": "projected-revenues", "parent": null, "section": "revenue",
-      "name": "Projected revenues by fund", "code": null, "amount": null,
-      "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null },
-      "status": "partial", "docket_ref": 7, "children_complete": false,
+      "id": "public-defender",
+      "parent": "other-funds",
+      "section": "appropriations",
+      "name": "Public Defender",
+      "code": "3026",
+      "amount": 98590,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": "Projected revenue $310,421; appropriated $98,590."
+    },
+    {
+      "id": "other-funds-residual",
+      "parent": "other-funds",
+      "section": "appropriations",
+      "name": "~20 smaller special funds (victim-witness, marina, trails, grants, courts, misc.)",
+      "code": null,
+      "amount": 771041,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "ambiguous",
+      "docket_ref": 7,
+      "children_complete": false,
+      "note": "Derived, not transcribed: the grand-total remainder after every itemized fund and the Public Defender. Fund-by-fund itemization pending — Docket #7."
+    },
+    {
+      "id": "projected-revenues",
+      "parent": null,
+      "section": "revenue",
+      "name": "Projected revenues by fund",
+      "code": null,
+      "amount": null,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "partial",
+      "docket_ref": 7,
+      "children_complete": false,
       "note": "The ordinance states projected revenue per fund — the 17 major funds below total ~$29.2M, and ~20 smaller funds bring the projection to roughly $29.9M (itemization pending, Docket #7). What the ordinance does not state is where each fund's revenue originates — that is the millage sheet, sales tax inventory, and treasurer's reports (Dockets #3 and #8)."
     },
-    { "id": "rev-general", "parent": "projected-revenues", "section": "revenue", "name": "General Fund", "code": "1000", "amount": 8000703, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "rev-road", "parent": "projected-revenues", "section": "revenue", "name": "Road Fund", "code": "2000", "amount": 6863221, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "rev-sanitation", "parent": "projected-revenues", "section": "revenue", "name": "Sanitation / Solid Waste", "code": "3009", "amount": 3067887, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "rev-edccc", "parent": "projected-revenues", "section": "revenue", "name": "EDCCC Tax Fund", "code": "3407", "amount": 1844538, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "rev-reserve", "parent": "projected-revenues", "section": "revenue", "name": "General Reserve", "code": "1001", "amount": 1695369, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": "$0 appropriated; ~$1.53M held unappropriated." },
-    { "id": "rev-library", "parent": "projected-revenues", "section": "revenue", "name": "County Library", "code": "3008", "amount": 1284951, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "rev-911-reserve", "parent": "projected-revenues", "section": "revenue", "name": "9-1-1 Reserve", "code": "3409", "amount": 1256731, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "rev-psap", "parent": "projected-revenues", "section": "revenue", "name": "Emergency 911 PSAP", "code": "3020", "amount": 1080738, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "rev-jail-maint", "parent": "projected-revenues", "section": "revenue", "name": "Jail Maintenance", "code": "3405", "amount": 769594, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "rev-collector-auto", "parent": "projected-revenues", "section": "revenue", "name": "Collector's Automation", "code": "3001", "amount": 687931, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "rev-motor-fuel", "parent": "projected-revenues", "section": "revenue", "name": "Add'l Motor Fuel Tax", "code": "2003", "amount": 618610, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "rev-landfill", "parent": "projected-revenues", "section": "revenue", "name": "Landfill Investments", "code": "3402", "amount": 520308, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": "$0 appropriated; ~$468K held." },
-    { "id": "rev-arpa", "parent": "projected-revenues", "section": "revenue", "name": "ARPA Revenue Replacement", "code": "1006", "amount": 471142, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "rev-recorder", "parent": "projected-revenues", "section": "revenue", "name": "Recorder's Cost", "code": "3006", "amount": 371376, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "rev-defender", "parent": "projected-revenues", "section": "revenue", "name": "Public Defender", "code": "3026", "amount": 310421, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "rev-jail-constr", "parent": "projected-revenues", "section": "revenue", "name": "Jail Construction 2005", "code": "3404", "amount": 304266, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-    { "id": "rev-fire", "parent": "projected-revenues", "section": "revenue", "name": "Various Fire Departments (sales tax)", "code": "1802", "amount": 45921, "layer": "appropriation", "source": { "doc": "ord-2025-21", "page": null }, "status": "sourced", "docket_ref": null, "children_complete": false, "note": null },
-
-    { "id": "millage-rates", "parent": null, "section": "revenue", "name": "Property tax — millage rates", "code": null, "amount": null, "layer": "appropriation", "source": null, "status": "dead_end", "docket_ref": 3, "children_complete": false,
-      "note": "Which mills fund the county, roads, and library — and what one mill costs a $100,000 home — requires the millage rate sheet from the Assessor/Collector. Not yet ingested." },
-    { "id": "sales-taxes", "parent": null, "section": "revenue", "name": "Sales taxes", "code": null, "amount": null, "layer": "appropriation", "source": null, "status": "dead_end", "docket_ref": 3, "children_complete": false,
-      "note": "At least two dedicated sales taxes are visible from the spending side (EDCCC economic development; Various Fire Departments fund). Rates, sunset dates, and enacting ordinances not yet ingested." },
-    { "id": "turnback-fees", "parent": null, "section": "revenue", "name": "State turnback, fees, fines, grants", "code": null, "amount": null, "layer": "appropriation", "source": null, "status": "dead_end", "docket_ref": 8, "children_complete": false,
-      "note": "Highway turnback, court fees and fines, automation fees, and grant revenue are implied by the fund names but not itemized in the ordinance. Treasurer's reports and the legislative audit carry this detail." },
-
-    { "id": "city-arkadelphia", "parent": null, "section": "adjacent", "name": "City of Arkadelphia", "code": null, "amount": null, "layer": "appropriation", "source": null, "status": "dead_end", "docket_ref": 1, "children_complete": false,
-      "note": "Budget not posted online. Obtain at city hall." },
-    { "id": "schools", "parent": null, "section": "adjacent", "name": "Arkadelphia Public Schools (+ Gurdon)", "code": null, "amount": null, "layer": "appropriation", "source": null, "status": "dead_end", "docket_ref": 2, "children_complete": false,
-      "note": "School millage is the largest line on most residents' property tax bills — and not yet in the corpus." },
-    { "id": "fire-districts", "parent": null, "section": "adjacent", "name": "Fire protection districts", "code": null, "amount": null, "layer": "appropriation", "source": null, "status": "dead_end", "docket_ref": 4, "children_complete": false,
-      "note": "District budgets, dues, and millage are separate records from the county ordinance." },
-    { "id": "other-towns", "parent": null, "section": "adjacent", "name": "Caddo Valley, Gurdon & other towns", "code": null, "amount": null, "layer": "appropriation", "source": null, "status": "dead_end", "docket_ref": 1, "children_complete": false,
-      "note": "Municipal budgets, as available." }
+    {
+      "id": "rev-general",
+      "parent": "projected-revenues",
+      "section": "revenue",
+      "name": "General Fund",
+      "code": "1000",
+      "amount": 8000703,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 1
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "rev-road",
+      "parent": "projected-revenues",
+      "section": "revenue",
+      "name": "Road Fund",
+      "code": "2000",
+      "amount": 6863221,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 3
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "rev-sanitation",
+      "parent": "projected-revenues",
+      "section": "revenue",
+      "name": "Sanitation / Solid Waste",
+      "code": "3009",
+      "amount": 3067887,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "rev-edccc",
+      "parent": "projected-revenues",
+      "section": "revenue",
+      "name": "EDCCC Tax Fund",
+      "code": "3407",
+      "amount": 1844538,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "rev-reserve",
+      "parent": "projected-revenues",
+      "section": "revenue",
+      "name": "General Reserve",
+      "code": "1001",
+      "amount": 1695369,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 2
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": "$0 appropriated; ~$1.53M held unappropriated."
+    },
+    {
+      "id": "rev-library",
+      "parent": "projected-revenues",
+      "section": "revenue",
+      "name": "County Library",
+      "code": "3008",
+      "amount": 1284951,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 4
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "rev-911-reserve",
+      "parent": "projected-revenues",
+      "section": "revenue",
+      "name": "9-1-1 Reserve",
+      "code": "3409",
+      "amount": 1256731,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 8
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "rev-psap",
+      "parent": "projected-revenues",
+      "section": "revenue",
+      "name": "Emergency 911 PSAP",
+      "code": "3020",
+      "amount": 1080738,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 6
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "rev-jail-maint",
+      "parent": "projected-revenues",
+      "section": "revenue",
+      "name": "Jail Maintenance",
+      "code": "3405",
+      "amount": 769594,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 7
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "rev-collector-auto",
+      "parent": "projected-revenues",
+      "section": "revenue",
+      "name": "Collector's Automation",
+      "code": "3001",
+      "amount": 687931,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 3
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "rev-motor-fuel",
+      "parent": "projected-revenues",
+      "section": "revenue",
+      "name": "Add'l Motor Fuel Tax",
+      "code": "2003",
+      "amount": 618610,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 3
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "rev-landfill",
+      "parent": "projected-revenues",
+      "section": "revenue",
+      "name": "Landfill Investments",
+      "code": "3402",
+      "amount": 520308,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 7
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": "$0 appropriated; ~$468K held."
+    },
+    {
+      "id": "rev-arpa",
+      "parent": "projected-revenues",
+      "section": "revenue",
+      "name": "ARPA Revenue Replacement",
+      "code": "1006",
+      "amount": 471142,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "rev-recorder",
+      "parent": "projected-revenues",
+      "section": "revenue",
+      "name": "Recorder's Cost",
+      "code": "3006",
+      "amount": 371376,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 4
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "rev-defender",
+      "parent": "projected-revenues",
+      "section": "revenue",
+      "name": "Public Defender",
+      "code": "3026",
+      "amount": 310421,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 6
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "rev-jail-constr",
+      "parent": "projected-revenues",
+      "section": "revenue",
+      "name": "Jail Construction 2005",
+      "code": "3404",
+      "amount": 304266,
+      "layer": "appropriation",
+      "source": {
+        "doc": "clark-budget-packet-2026",
+        "page": 7
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "rev-fire",
+      "parent": "projected-revenues",
+      "section": "revenue",
+      "name": "Various Fire Departments (sales tax)",
+      "code": "1802",
+      "amount": 45921,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-2025-21",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "millage-rates",
+      "parent": null,
+      "section": "revenue",
+      "name": "Property tax — millage rates",
+      "code": null,
+      "amount": null,
+      "layer": "appropriation",
+      "source": null,
+      "status": "dead_end",
+      "docket_ref": 3,
+      "children_complete": false,
+      "note": "Which mills fund the county, roads, and library — and what one mill costs a $100,000 home — requires the millage rate sheet from the Assessor/Collector. Not yet ingested."
+    },
+    {
+      "id": "sales-taxes",
+      "parent": null,
+      "section": "revenue",
+      "name": "Sales taxes",
+      "code": null,
+      "amount": null,
+      "layer": "appropriation",
+      "source": null,
+      "status": "dead_end",
+      "docket_ref": 3,
+      "children_complete": false,
+      "note": "At least two dedicated sales taxes are visible from the spending side (EDCCC economic development; Various Fire Departments fund). Rates, sunset dates, and enacting ordinances not yet ingested."
+    },
+    {
+      "id": "turnback-fees",
+      "parent": null,
+      "section": "revenue",
+      "name": "State turnback, fees, fines, grants",
+      "code": null,
+      "amount": null,
+      "layer": "appropriation",
+      "source": null,
+      "status": "dead_end",
+      "docket_ref": 8,
+      "children_complete": false,
+      "note": "Highway turnback, court fees and fines, automation fees, and grant revenue are implied by the fund names but not itemized in the ordinance. Treasurer's reports and the legislative audit carry this detail."
+    },
+    {
+      "id": "city-arkadelphia",
+      "parent": null,
+      "section": "adjacent",
+      "name": "City of Arkadelphia",
+      "code": null,
+      "amount": null,
+      "layer": "appropriation",
+      "source": null,
+      "status": "dead_end",
+      "docket_ref": 1,
+      "children_complete": false,
+      "note": "Budget not posted online. Obtain at city hall."
+    },
+    {
+      "id": "schools",
+      "parent": null,
+      "section": "adjacent",
+      "name": "Arkadelphia Public Schools (+ Gurdon)",
+      "code": null,
+      "amount": null,
+      "layer": "appropriation",
+      "source": null,
+      "status": "dead_end",
+      "docket_ref": 2,
+      "children_complete": false,
+      "note": "School millage is the largest line on most residents' property tax bills — and not yet in the corpus."
+    },
+    {
+      "id": "fire-districts",
+      "parent": null,
+      "section": "adjacent",
+      "name": "Fire protection districts",
+      "code": null,
+      "amount": null,
+      "layer": "appropriation",
+      "source": null,
+      "status": "dead_end",
+      "docket_ref": 4,
+      "children_complete": false,
+      "note": "District budgets, dues, and millage are separate records from the county ordinance."
+    },
+    {
+      "id": "other-towns",
+      "parent": null,
+      "section": "adjacent",
+      "name": "Caddo Valley, Gurdon & other towns",
+      "code": null,
+      "amount": null,
+      "layer": "appropriation",
+      "source": null,
+      "status": "dead_end",
+      "docket_ref": 1,
+      "children_complete": false,
+      "note": "Municipal budgets, as available."
+    }
   ]
 }
