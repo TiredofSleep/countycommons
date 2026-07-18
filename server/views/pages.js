@@ -50,6 +50,7 @@ function documentsPage(data) {
       <dt>Integrity</dt><dd>${d.sha256 ? `SHA-256 <span class="code">${esc(d.sha256)}</span>` : 'Source PDF not yet stored in this corpus — no file hash yet. The hand transcription is the current basis (see status).'}</dd>
       <dt>Status</dt><dd>${esc(d.status)} — ${esc(d.status_note)}</dd>
       <dt>Cited by</dt><dd>${counts[d.id] || 0} lines in the money trail</dd>
+      ${d.local_file ? `<dt>Stored copy</dt><dd><a href="/files/${esc(d.local_file.replace(/^inbox\//, ''))}">Read the archived PDF</a>${d.size_bytes ? ` (${(d.size_bytes / 1048576).toFixed(1)} MB)` : ''} — this is the exact file the SHA-256 above fingerprints.</dd>` : ''}
       ${d.source_url ? `<dt>Origin</dt><dd><a href="${esc(d.source_url)}" rel="noopener">${esc(d.source_url)}</a></dd>` : ''}
     </dl>
   </div>

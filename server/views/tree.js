@@ -75,16 +75,7 @@ ${roots('appropriations').map(n => renderNode(n, ctx, 0)).join('')}
 <section>
 <h2>Beside the county <span class="sub">— separate governments, separate ledgers</span></h2>
 ${roots('adjacent').map(n => renderNode(n, ctx, 0)).join('')}
-</section>
-
-<script>
-document.querySelectorAll('.bar button').forEach(function(b){
-  b.addEventListener('click',function(){
-    var open=b.dataset.act==='open';
-    document.querySelectorAll('details.node').forEach(function(d){d.open=open;});
-  });
-});
-</script>`;
+</section>`;
 
   return layout({ title: budget.meta.title, current: '/', body, county });
 }
