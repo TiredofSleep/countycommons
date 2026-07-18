@@ -233,6 +233,22 @@ const META = [
     source_note: 'Prior-year millage book, for change detection against the 2025 edition.',
     status: 'stored', status_note: STORED, amends: null, docket_ref: 3
   },
+  // ---- Base-pay threshold ordinances (annual practice since at least 2016) ----
+  ...[
+    ['2025-22', 'ordinances/ord-2025-22-base-pay.pdf', 2026, '2025/1278', 'Sets 2026 starting pay per Attachment A: Sheriff Deputy base $43,398 · Criminal Investigator $44,515 · Jailer $35,838 · Dispatcher $38,795 · operators/drivers $35,288 — plus certificate pay ($600), SGT pay ($750), and holiday pay formulas. Adopted December 8, 2025; sponsor Justice Johns.'],
+    ['2025-02', 'ordinances/ord-2025-02-base-pay.pdf', 2025, '25/1198', '2025 starting pay: Sheriff Deputy base $41,398 · Jailer $33,838 · Dispatcher $36,795.'],
+    ['2024-17', 'ordinances/ord-2024-17-base-pay.pdf', 2025, '2024/1191', 'Base pay threshold adopted December 2024.'],
+    ['2022-09', 'ordinances/ord-2022-09-base-pay.pdf', 2023, '2022/1034', '2023 starting pay: Sheriff Deputy base $34,398.'],
+    ['2021-27', 'ordinances/ord-2021-27-base-pay.pdf', 2022, '2021/1018', '2022 starting pay: Sheriff Deputy base $32,898.'],
+    ['2016-10', 'ordinances/ord-2016-10-base-pay.pdf', 2017, '2016/463', 'Base pay threshold adopted December 2016 — the earliest in the portal.']
+  ].map(([num, file, year, s3, note]) => ({
+    id: `ord-${num}-base-pay`, file,
+    title: `Ordinance ${num} — base pay threshold for new full-time county employees (${year})`,
+    jurisdiction: 'clark-county', layer: 'appropriation', year,
+    source_url: `https://s3-us-west-2.amazonaws.com/cisclark/quorumcourt/${s3}.PDF`,
+    source_note: note,
+    status: 'stored', status_note: 'Downloaded from the county document portal; OCR text in data/review/.', amends: null, docket_ref: 6
+  })),
   // ---- Clark historical budgets ----
   ...[
     [2018, '/assets/pdf/2018/Clark_County_Budget_2018.pdf'],

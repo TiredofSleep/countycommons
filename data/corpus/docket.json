@@ -95,7 +95,8 @@
         "revealed": "The side-by-side table is live at /compare/deputy-pay, built from each county's own filed documents. Headline: Garland County's 2026 patrol deputies are listed at $57,418–$58,540 (65 positions) versus Clark's $43,398–$46,498 — and Garland's own 2024 survey showed ~$42,770, meaning they raised deputy pay roughly $15,000 in two years. Nevada pays $32,400 flat; Pike's 2024 figure was $43,202. Ouachita pools deputies into one line (not per-deputy comparable); Hot Spring's filings are scans awaiting OCR."
       },
       "research_notes": [
-        "Remaining: an OCR pass on the Hot Spring and Pike 2026 filings (stored as image-only scans), which would complete all five neighbors at 2026 rates."
+        "Remaining: an OCR pass on the Hot Spring and Pike 2026 filings (stored as image-only scans), which would complete all five neighbors at 2026 rates.",
+        "New (2026-07-18): the county's own base-pay ordinances (2016–2025, all stored and OCR'd) show deputy starting pay rose 32% in four years — $32,898 in 2022 to $43,398 in 2026. The comparison page now carries the trajectory alongside the gap: the court has been raising pay steadily; Garland moved further, faster. Two deputy slots were pending applicants when Ordinance 2025-22 passed."
       ]
     },
     {
@@ -133,8 +134,9 @@
         "revealed": "Archived: all 38 quorum court minutes documents for 2024–2026 (regular sessions, budget committee, personnel committee, special sessions) pulled from the county's document portal into inbox/minutes/ — including the budget committee meetings that wrote the 2026 budget. They are scanned images without a text layer, so an OCR pass is queued before they can be searched and ingested."
       },
       "research_notes": [
-        "3 of 41 listed documents failed to download (portal file errors) — note which sessions are missing after OCR triage.",
-        "The portal's keyword search covers document titles only, not contents — a search for 'asphalt' returns one ordinance from 1977. Full-text answers require the OCR pass.",
+        "OCR complete (2026-07-18): 35 of 38 minutes now machine-readable after fixing a scan-decoding bug (1-bit images sheared by row padding; pipeline/lib-ocr.js corrects it). 3 files failed to download from the portal.",
+        "What the readable minutes document: the full 2025–26 ambulance saga (RFQs from Valor and Pafford → public comment with both owners speaking → Valor awarded → contract stalls in review → Valor closes, staff move to Pafford → county pivots to a Pafford contract), EDCCC quarterly reports delivered to the court by CEO Shelley Short, EDCCC board appointments made by the court, county property purchases, and every budget-season vote.",
+        "Equally important — what is NOT in the minutes: no asphalt, fuel, or gravel bid awards appear in any quorum court session. Commodity purchasing runs through the county judge's office, which means the check register FOIA (Docket #10) is the only path to those vendor names.",
         "The quorum court meets the second Monday of each month — now in the platform's calendar config."
       ]
     },
