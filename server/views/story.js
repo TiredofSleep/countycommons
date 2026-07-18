@@ -34,13 +34,14 @@ function storyPage(data) {
 <p>Property tax works in "mills." One mill on a $100,000 home costs about <b>$20 a year</b> (homes are taxed on 20% of their value here). Inside Arkadelphia city limits the total is <a href="/line/millage-rates">59.75 mills — roughly $1,195 a year</a> before the homestead credit.</p>
 <p>Where those mills go may surprise you:</p>
 <p>· <b>Schools take 8 of every 10 property tax dollars.</b> The Arkadelphia district levies 47.65 mills; Gurdon levies 43. This is the biggest line on your bill, and it just got bigger: the district added <b>3 new bond mills</b> this year, and it has <a href="/line/schools">$35 million in bonds</a> to pay off.</p>
-<p>· <b>The county takes 7.1 mills</b> — and inside that, one mill each goes to the <a href="/line/library">library</a>, the hospital, and the college. Three institutions, quietly funded on your bill.</p>
+<p>· <b>The county takes 7.1 mills</b> — and inside that, one mill each goes to the <a href="/line/library">library</a>, the hospital, and the college. Three institutions, quietly funded on your bill — and the hospital and college money never appears in the county budget at all (<a href="/docket#i11">Docket #11</a>).</p>
 <p>· <b>The city takes 5.</b></p>
 <p>· <b>Fire protection takes zero.</b> There is no fire millage in this county. Rural fire departments run on voluntary dues and a <a href="/line/fire-passthrough">$45,921 county pass-through</a> — which is why the fire funding question (<a href="/docket#i4">Docket #4</a>) matters.</p>
 </section>
 
 <section>
 <h2>3 · What we found by digging <span class="sub">— the headlines so far</span></h2>
+<p class="src">How does all this compare to neighboring counties, and which categories deserve a closer look? <a href="/compare/spending">The spending comparison</a> holds that whole analysis.</p>
 <p><b>Clark County deputies earn about $14,000 less than Garland County deputies.</b> Clark's line deputies are paid $43,398–$46,498. Garland County lists its 2026 patrol deputies at $57,418–$58,540 — and two years ago Garland paid about what Clark pays now. Nevada County pays $32,400. The full side-by-side, with every caveat, is at <a href="/compare/deputy-pay">the deputy pay comparison</a>.</p>
 <p><b>The economic development money has no public paper trail.</b> The EDCCC receives $1.84 million a year from a dedicated sales tax, owns a 991-acre industrial mega-site, and files no public financial reports at all — it is not in the IRS charity file. Local news also reports the county owes the state about $1.3 million in sales-tax rebate repayments. The paper trail runs through meeting minutes we have located but not yet pulled (<a href="/docket#i9">Docket #9</a>).</p>
 <p><b>The city's budget is not public, but its report card is.</b> Arkadelphia has never posted its budget online. Its audited books are online, though: in 2024 the city took in $18.2 million and spent $13.2 million in its general fund. Details: <a href="/line/city-arkadelphia">the city's page</a>.</p>

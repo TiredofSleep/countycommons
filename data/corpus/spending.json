@@ -1,0 +1,61 @@
+{
+  "intro": "How does Clark County's spending compare to its neighbors — and which categories deserve a closer look? Comparisons here are per resident, from each county's own filed 2026 budget. They are ballpark by nature: Arkansas counties structure funds differently (Ouachita runs its sheriff out of a jail fund; Garland has a dedicated detention sales tax), so treat these as the start of questions, not the end of them.",
+  "populations": { "clark": 21000, "garland": 100000, "ouachita": 22000 },
+  "headline_rows": [
+    {
+      "label": "General Fund (courthouse government, law enforcement, courts)",
+      "clark": 6829201, "garland": 24645565, "ouachita": null,
+      "note": "Clark spends more per resident than Garland — the small-county scale penalty: one sheriff, one clerk's office, one courthouse divide across five times fewer people. Ouachita's general fund total is not yet summed from its department-level filing."
+    },
+    {
+      "label": "Sheriff's office",
+      "clark": 2118755, "garland": 9120047, "ouachita": null,
+      "note": "Nearly identical spend rates per resident — yet Garland pays deputies about $14,000 more. Same dollars, less salary: scale again. Ouachita's sheriff budget sits inside its Jail Operating fund and is not line-comparable."
+    }
+  ],
+  "twin_rows": [
+    { "label": "County Judge's office", "clark": 168446, "ouachita": 194833, "flag": false },
+    { "label": "County Clerk", "clark": 314622, "ouachita": 407144, "flag": false },
+    { "label": "Assessor", "clark": 560131, "ouachita": 581947, "flag": false },
+    { "label": "Courthouse maintenance", "clark": 416460, "ouachita": 254009, "flag": true }
+  ],
+  "twin_note": "Ouachita County (~22,000 people, Camden) is Clark's closest size twin. Most office budgets land in the same ballpark — evidence that Clark's administrative structure is normal for its size, not bloated. The one line running well above the twin: courthouse maintenance, flagged below.",
+  "outliers": [
+    {
+      "title": "EDCCC incentives — $1.84M/yr",
+      "body": "$88 per resident per year — four times the library, forty times the health department — appropriated as a single word with no public recipient list.",
+      "link": "/line/edccc", "docket": 5
+    },
+    {
+      "title": "The hospital and college mills — ~$700K/yr outside the budget entirely",
+      "body": "The state millage book shows 1 mill each levied county-wide for the hospital and the college. At the county's ~$346M assessed value (derived from the FY2023 audit's debt-limit figure), that is roughly $346,000 a year each — flowing to those institutions without ever appearing in the county's appropriation ordinance. Possibly entirely proper; documented nowhere we can navigate.",
+      "link": "/line/millage-rates", "docket": 11
+    },
+    {
+      "title": "The library spends about a third of what it collects",
+      "body": "~$1.28M projected revenue, $469K appropriated, ~$883K sitting unappropriated (including a $196K bequest). A building fund? A policy? No document in the corpus says.",
+      "link": "/line/library", "docket": 8
+    },
+    {
+      "title": "The 911 reserve holds $1.01M idle",
+      "body": "While dispatcher staffing and pay are live issues in the same system, the reserve fund appropriates $118K of a $1.26M balance.",
+      "link": "/line/e911", "docket": 8
+    },
+    {
+      "title": "The road-bond sales tax may raise far more than the debt costs",
+      "body": "A 0.5% sales tax is pledged to the Truck Bypass bonds. A half-cent countywide plausibly raises ~$1.8M/yr; debt service ran ~$341K in 2022. Where the difference goes — early redemption, roads, accumulation — is in the bond ordinance, not yet in this corpus.",
+      "link": "/vendors", "docket": 3
+    },
+    {
+      "title": "About $1M/yr of vague pool lines",
+      "body": "Road \"other professional services\" ($350K), jail \"contracts\" ($351K), sanitation engineering and professional services ($325K) — single lines, no stated recipients. Check-register territory.",
+      "link": "/vendors", "docket": 10
+    },
+    {
+      "title": "Courthouse maintenance runs ~$162K above the twin county",
+      "body": "$416K vs Ouachita's $254K. The gap sits mostly in a $100K property-maintenance pool and $66.5K of insurance — explainable, but unexplained.",
+      "link": "/line/gf-courthouse-maint", "docket": 7
+    }
+  ],
+  "summary": "The honest arithmetic: roads, public safety, and sanitation — direct service — are about two-thirds of everything the county spends. The pattern in the remaining third is not diversion; it is visibility. Roughly $4M a year moves with weak public documentation (EDCCC, the hospital and college mills, vague pools, fee funds), and roughly $4M more sits idle in reserves — some of it required by the state's 90% rule, some of it unexplained. Every item above is a question with a document that answers it, and the docket tracks each one."
+}

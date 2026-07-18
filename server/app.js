@@ -19,6 +19,7 @@ const { comparePage } = require('./views/compare');
 const { storyPage } = require('./views/story');
 const { vendorsPage } = require('./views/vendors');
 const { auditsPage } = require('./views/audits');
+const { spendingPage } = require('./views/spending');
 
 const app = express();
 app.disable('x-powered-by');
@@ -118,6 +119,8 @@ app.get('/line/:id', (req, res) => {
 app.get('/story', (req, res) => res.send(storyPage(load())));
 app.get('/vendors', (req, res) => res.send(vendorsPage(load())));
 app.get('/audits', (req, res) => res.send(auditsPage(load())));
+
+app.get('/compare/spending', (req, res) => res.send(spendingPage(load())));
 
 app.get('/compare/:id', (req, res) => {
   const data = load();
