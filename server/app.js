@@ -8,6 +8,7 @@ const { treePage } = require('./views/tree');
 const { nodePage } = require('./views/node');
 const { docketPage, documentsPage, verifyPage, methodologyPage } = require('./views/pages');
 const { comparePage } = require('./views/compare');
+const { storyPage } = require('./views/story');
 
 const app = express();
 app.disable('x-powered-by');
@@ -21,6 +22,8 @@ app.get('/line/:id', (req, res) => {
   if (!node) return res.status(404).send(notFound(data, 'No line with that id exists in the corpus.'));
   res.send(nodePage(data, node));
 });
+
+app.get('/story', (req, res) => res.send(storyPage(load())));
 
 app.get('/compare/:id', (req, res) => {
   const data = load();
