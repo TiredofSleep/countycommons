@@ -8,6 +8,7 @@ const fs = require('fs');
 const path = require('path');
 const { PDFParse } = require('pdf-parse');
 const { createWorker } = require('tesseract.js');
+const { ocrReadyPng } = require('./lib-ocr');
 
 const ROOT = path.join(__dirname, '..');
 const REVIEW = path.join(ROOT, 'data', 'review');
@@ -27,9 +28,8 @@ async function main() {
   let out = '';
   for (const pg of pages) {
     for (const im of (pg.images || [])) {
-      const b64 = im.dataUrl || null;
-      if (!b64) continue;
-      const { data } = await worker.recognize(b64);
+      if (!im.dataUrl) continue;
+      const { data } = await worker.recognize(ocrReadyPng(im));
       out += `\n===== page ${pg.pageNumber} =====\n${data.text}\n`;
       process.stdout.write(`  p${pg.pageNumber} done (${data.text.length} chars)\n`);
     }
