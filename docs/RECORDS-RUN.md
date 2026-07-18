@@ -19,6 +19,12 @@ Priority order by payoff:
   actual base-pay amounts table.
 - [ ] **Sales-tax enacting ordinances** (EDCCC tax, fire tax, 0.5% road bond
   tax) and the DFA notice on the $1.3M rebate repayment (Docket #3).
+- [ ] **EDCCC quarterly report handouts** given to the quorum court (last 8
+  quarters — Shelley Short's reports, with handouts and slides, are in the
+  minutes record). These became county records when they hit the clerk's
+  table, and they may contain the recipient detail the fund's single
+  "INCENTIVES" line never shows (Docket #5). Likely the easiest big unlock
+  on this whole list.
 - [ ] Ask casually: which quorum court district is your home/shop in? (One
   phone call's worth of civic navigation for the story page.)
 
