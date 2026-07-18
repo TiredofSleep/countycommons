@@ -7,6 +7,7 @@ const NAV = [
   ['/story', 'Start here'],
   ['/', 'Money trail'],
   ['/vendors', 'Who gets paid'],
+  ['/audits', 'Audit verdicts'],
   ['/docket', 'Docket'],
   ['/documents', 'Documents'],
   ['/verify', 'Verification'],
