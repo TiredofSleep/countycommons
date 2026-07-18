@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clark County 2026 — The Money Trail</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F2F5EE; --card:#FAFBF7; --rule:#C9D6C4; --rule-soft:#DDE6D8;
+  --ink:#1E2A32; --ink-soft:#4A5B64; --accent:#23557A;
+  --sourced:#1F7A3D; --sourced-bg:#E3F0E6;
+  --partial:#9A6C0B; --partial-bg:#F6EED8;
+  --dead:#B3362B; --dead-bg:#F6E2DF;
+  --mono:'IBM Plex Mono',ui-monospace,'SF Mono',Consolas,monospace;
+  --sans:'Archivo',system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5;
+  background-image:repeating-linear-gradient(to bottom,transparent 0 27px,rgba(101,140,95,.06) 27px 28px);}
+.wrap{max-width:880px;margin:0 auto;padding:20px 14px 80px}
+/* ---------- header ---------- */
+header{border:2px solid var(--ink);background:var(--card);padding:18px 18px 14px;margin-bottom:14px;position:relative}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+h1{font-family:var(--mono);font-weight:600;font-size:clamp(20px,4.5vw,30px);letter-spacing:-.01em;margin:4px 0 2px}
+.total{font-family:var(--mono);font-size:clamp(28px,7vw,44px);font-weight:600;letter-spacing:-.02em;margin:8px 0 2px;font-variant-numeric:tabular-nums}
+.src{font-size:12.5px;color:var(--ink-soft);max-width:60ch}
+.stamp{position:absolute;top:14px;right:14px;transform:rotate(6deg);border:2px solid var(--sourced);color:var(--sourced);
+  font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.12em;padding:4px 8px;text-transform:uppercase;background:var(--sourced-bg)}
+@media(max-width:560px){.stamp{position:static;display:inline-block;transform:rotate(-2deg);margin-top:8px}}
+/* ---------- legend + controls ---------- */
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 16px}
+.chip{font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  padding:2px 7px;border-radius:2px;border:1.5px solid;white-space:nowrap}
+.c-ok{color:var(--sourced);border-color:var(--sourced);background:var(--sourced-bg)}
+.c-part{color:var(--partial);border-color:var(--partial);background:var(--partial-bg)}
+.c-dead{color:var(--dead);border-color:var(--dead);background:var(--dead-bg)}
+.bar button{margin-left:auto;font-family:var(--mono);font-size:11px;letter-spacing:.05em;padding:5px 10px;
+  background:var(--card);border:1.5px solid var(--ink);color:var(--ink);cursor:pointer}
+.bar button+button{margin-left:0}
+.bar button:hover{background:var(--ink);color:var(--paper)}
+/* ---------- tree ---------- */
+details{border-left:2px solid var(--rule);margin:0 0 2px 0;background:transparent}
+details details{margin-left:14px}
+summary{list-style:none;cursor:pointer;display:flex;align-items:baseline;gap:8px;padding:7px 6px 7px 10px;flex-wrap:wrap}
+summary::-webkit-details-marker{display:none}
+summary:hover{background:rgba(35,85,122,.06)}
+summary:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.tw{display:inline-block;font-family:var(--mono);color:var(--accent);font-size:11px;width:12px;flex:none;transition:transform .12s}
+details[open] > summary .tw{transform:rotate(90deg)}
+.leaf .tw{visibility:hidden}
+.nm{font-weight:500;min-width:0}
+.code{font-family:var(--mono);font-size:11px;color:var(--ink-soft)}
+.lead{flex:1;border-bottom:1.5px dotted var(--rule);min-width:24px;transform:translateY(-4px)}
+.amt{font-family:var(--mono);font-variant-numeric:tabular-nums;font-weight:500;white-space:nowrap}
+.pct{font-family:var(--mono);font-size:10.5px;color:var(--ink-soft);white-space:nowrap}
+.leaf{display:flex;align-items:baseline;gap:8px;padding:5px 6px 5px 22px;border-left:2px solid var(--rule-soft);font-size:13.5px;flex-wrap:wrap}
+.note{font-size:12px;color:var(--ink-soft);padding:4px 6px 8px 22px;max-width:64ch}
+.iref{font-family:var(--mono);font-size:10.5px;font-weight:600;color:var(--dead);text-decoration:none;border-bottom:1.5px solid var(--dead)}
+.iref:hover{background:var(--dead-bg)}
+section{margin:26px 0}
+h2{font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;border-bottom:2px solid var(--ink);
+  padding-bottom:6px;margin-bottom:10px;display:flex;gap:10px;align-items:baseline}
+h2 .sub{font-family:var(--sans);font-size:12px;letter-spacing:0;text-transform:none;color:var(--ink-soft);font-weight:400}
+/* ---------- docket ---------- */
+.issue{border:1.5px solid var(--ink);background:var(--card);margin-bottom:10px;padding:12px 14px;display:flex;gap:12px;align-items:flex-start;flex-wrap:wrap;scroll-margin-top:20px}
+.inum{font-family:var(--mono);font-weight:600;font-size:15px;flex:none}
+.ibody{flex:1;min-width:220px}
+.ibody b{font-weight:600}
+.ibody p{font-size:12.5px;color:var(--ink-soft);margin-top:2px}
+.ist{flex:none;transform:rotate(-3deg)}
+.done{border-color:var(--sourced);background:var(--sourced-bg)}
+footer{margin-top:34px;font-size:12px;color:var(--ink-soft);border-top:1.5px solid var(--rule);padding-top:12px;max-width:70ch}
+@media (prefers-reduced-motion:reduce){.tw{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Clark County, Arkansas · Appropriation Ordinance 2025-21</div>
+  <h1>The Money Trail — 2026</h1>
+  <div class="total">$21,386,230</div>
+  <div class="src">Total appropriated across ~40 county funds for calendar year 2026, as adopted by the Quorum Court. Click any line to follow the money down. Where the trail goes dark, it becomes a numbered issue in the docket below.</div>
+  <div class="stamp">Ordinance ingested ✓</div>
+</header>
+
+<div class="bar">
+  <span class="chip c-ok">✓ Sourced</span>
+  <span class="chip c-part">◐ Partial</span>
+  <span class="chip c-dead">✖ Dead end → issue</span>
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=true)">Expand all</button>
+  <button onclick="document.querySelectorAll('details').forEach(d=>d.open=false)">Collapse all</button>
+</div>
+
+<!-- ================= REVENUE ================= -->
+<section>
+<h2>Where it comes from <span class="sub">— the thinner half of the record</span></h2>
+
+<details>
+<summary><span class="tw">▶</span><span class="nm">Projected revenues by fund</span><span class="lead"></span><span class="amt">$29.9M projected</span><span class="chip c-ok">✓</span></summary>
+<div class="note">The ordinance states projected revenue per fund (General $8.00M · Road $6.86M · Sanitation $3.07M · EDCCC $1.84M · Reserve $1.70M · Library $1.28M · 9-1-1 funds $2.34M · ~30 more). What it does <b>not</b> state is where each fund's revenue originates.</div>
+</details>
+
+<details>
+<summary><span class="tw">▶</span><span class="nm">Property tax — millage rates</span><span class="lead"></span><span class="chip c-dead">✖</span></summary>
+<div class="note">Which mills fund the county, roads, and library — and what one mill costs a $100,000 home — requires the millage rate sheet from the Assessor/Collector. <a class="iref" href="#i3">→ Issue #3</a></div>
+</details>
+
+<details>
+<summary><span class="tw">▶</span><span class="nm">Sales taxes</span><span class="lead"></span><span class="chip c-dead">✖</span></summary>
+<div class="note">At least two dedicated sales taxes are visible from the spending side (EDCCC economic development; Various Fire Departments fund). Rates, sunset dates, and enacting ordinances not yet ingested. <a class="iref" href="#i3">→ Issue #3</a></div>
+</details>
+
+<details>
+<summary><span class="tw">▶</span><span class="nm">State turnback, fees, fines, grants</span><span class="lead"></span><span class="chip c-dead">✖</span></summary>
+<div class="note">Highway turnback, court fees and fines, automation fees, and grant revenue are implied by the fund names but not itemized in the ordinance. Treasurer's reports and the legislative audit carry this detail. <a class="iref" href="#i8">→ Issue #8</a></div>
+</details>
+</section>
+
+<!-- ================= APPROPRIATIONS ================= -->
+<section>
+<h2>Where it goes <span class="sub">— $21,386,230 appropriated</span></h2>
+
+<!-- GENERAL FUND -->
+<details open>
+<summary><span class="tw">▶</span><span class="nm">General Fund</span><span class="code">1000</span><span class="lead"></span><span class="amt">$6,829,201</span><span class="pct">32%</span><span class="chip c-ok">✓</span></summary>
+<div class="note">Projected revenue $8,000,703 · 90% statutory cap $7,200,632 · appropriated $6,829,201 · cushion left $371,431. All 27 department totals sourced; line-item pages ingested for some, pending for others.</div>
+
+  <details>
+  <summary><span class="tw">▶</span><span class="nm">Sheriff</span><span class="code">0400</span><span class="lead"></span><span class="amt">$2,118,755</span><span class="pct">31% of GF</span><span class="chip c-part">◐</span></summary>
+  <div class="note">Department total sourced. Line-item page not yet ingested (<a class="iref" href="#i7">→ Issue #7</a>). Salary schedule <b>is</b> ingested ✓: line deputies $43,398–$46,498 · sergeants $45,648–$50,927 · investigators $45,015–$51,257 · chief deputy $63,591. This is the deputy-pay-parity baseline; the comparison to neighboring counties is <a class="iref" href="#i6">→ Issue #6</a>.</div>
+  </details>
+
+  <details>
+  <summary><span class="tw">▶</span><span class="nm">Jail</span><span class="code">0418</span><span class="lead"></span><span class="amt">$676,423</span><span class="chip c-part">◐</span></summary>
+  <div class="note">Total sourced; line detail pending (<a class="iref" href="#i7">→ #7</a>). Jailers on salary schedule: $36,338–$37,338; administrator $43,285. See also Jail Maintenance and Jail Construction funds below.</div>
+  </details>
+
+  <div class="leaf"><span class="tw"></span><span class="nm">Prisoner food</span><span class="code">0420</span><span class="lead"></span><span class="amt">$168,000</span><span class="chip c-ok">✓</span></div>
+
+  <details>
+  <summary><span class="tw">▶</span><span class="nm">Assessor</span><span class="code">0105</span><span class="lead"></span><span class="amt">$560,131</span><span class="chip c-part">◐</span></summary>
+  <div class="note">Total sourced; line detail pending (<a class="iref" href="#i7">→ #7</a>).</div>
+  </details>
+
+  <details>
+  <summary><span class="tw">▶</span><span class="nm">District Court</span><span class="code">0409</span><span class="lead"></span><span class="amt">$477,600</span><span class="chip c-part">◐</span></summary>
+  <div class="note">Total sourced; line detail pending (<a class="iref" href="#i7">→ #7</a>). Court staff on salary schedule: clerk $46,000, deputies $34,725–$40,905.</div>
+  </details>
+
+  <details>
+  <summary><span class="tw">▶</span><span class="nm">Courthouse Maintenance</span><span class="code">0108</span><span class="lead"></span><span class="amt">$416,460</span><span class="chip c-ok">✓</span></summary>
+    <details>
+    <summary><span class="tw">▶</span><span class="nm">Personal services</span><span class="lead"></span><span class="amt">$85,160</span><span class="chip c-ok">✓</span></summary>
+      <div class="leaf"><span class="tw"></span><span class="nm">Salaries</span><span class="lead"></span><span class="amt">$31,380</span></div>
+      <div class="leaf"><span class="tw"></span><span class="nm">Workers' comp (county-wide)</span><span class="lead"></span><span class="amt">$30,000</span></div>
+      <div class="leaf"><span class="tw"></span><span class="nm">Health ins. + retirement + FICA</span><span class="lead"></span><span class="amt">$17,650</span></div>
+      <div class="leaf"><span class="tw"></span><span class="nm">COBRA + life</span><span class="lead"></span><span class="amt">$6,130</span></div>
+    </details>
+    <details>
+    <summary><span class="tw">▶</span><span class="nm">Supplies</span><span class="lead"></span><span class="amt">$36,000</span><span class="chip c-ok">✓</span></summary>
+      <div class="leaf"><span class="tw"></span><span class="nm">Maintenance &amp; service contracts</span><span class="lead"></span><span class="amt">$16,500</span></div>
+      <div class="leaf"><span class="tw"></span><span class="nm">Janitorial + general + repair</span><span class="lead"></span><span class="amt">$19,500</span></div>
+    </details>
+    <details>
+    <summary><span class="tw">▶</span><span class="nm">Other services &amp; charges</span><span class="lead"></span><span class="amt">$295,300</span><span class="chip c-ok">✓</span></summary>
+      <div class="leaf"><span class="tw"></span><span class="nm">Property maintenance</span><span class="lead"></span><span class="amt">$100,000</span></div>
+      <div class="leaf"><span class="tw"></span><span class="nm">Fire &amp; extended coverage ins.</span><span class="lead"></span><span class="amt">$66,500</span></div>
+      <div class="leaf"><span class="tw"></span><span class="nm">Fleet liability</span><span class="lead"></span><span class="amt">$30,000</span></div>
+      <div class="leaf"><span class="tw"></span><span class="nm">Utilities (elec/gas/water)</span><span class="lead"></span><span class="amt">$31,000</span></div>
+      <div class="leaf"><span class="tw"></span><span class="nm">Bonds, audit, internet, prof. svcs, misc</span><span class="lead"></span><span class="amt">$67,800</span></div>
+    </details>
+  </details>
+
+  <details>
+  <summary><span class="tw">▶</span><span class="nm">Prosecuting Attorney</span><span class="code">0416</span><span class="lead"></span><span class="amt">$372,374</span><span class="chip c-part">◐</span></summary>
+  <div class="note">Total sourced; line detail pending (<a class="iref" href="#i7">→ #7</a>). Coordinator salaries $34,660–$44,581 on schedule.</div>
+  </details>
+
+  <details>
+  <summary><span class="tw">▶</span><span class="nm">County Clerk</span><span class="code">0101</span><span class="lead"></span><span class="amt">$314,622</span><span class="chip c-ok">✓</span></summary>
+    <div class="leaf"><span class="tw"></span><span class="nm">Personal services</span><span class="lead"></span><span class="amt">$262,047</span></div>
+    <div class="leaf"><span class="tw"></span><span class="nm">Supplies</span><span class="lead"></span><span class="amt">$32,350</span></div>
+    <div class="leaf"><span class="tw"></span><span class="nm">Other services</span><span class="lead"></span><span class="amt">$18,075</span></div>
+    <div class="leaf"><span class="tw"></span><span class="nm">Capital outlay</span><span class="lead"></span><span class="amt">$2,150</span></div>
+  </details>
+
+  <div class="leaf"><span class="tw"></span><span class="nm">Circuit Clerk</span><span class="code">0102</span><span class="lead"></span><span class="amt">$306,550</span><span class="chip c-ok">✓</span></div>
+  <div class="leaf"><span class="tw"></span><span class="nm">Juvenile</span><span class="code">0414</span><span class="lead"></span><span class="amt">$177,917</span><span class="chip c-part">◐</span></div>
+  <div class="leaf"><span class="tw"></span><span class="nm">Treasurer</span><span class="code">0103</span><span class="lead"></span><span class="amt">$177,591</span><span class="chip c-ok">✓</span></div>
+
+  <details>
+  <summary><span class="tw">▶</span><span class="nm">County Judge</span><span class="code">0100</span><span class="lead"></span><span class="amt">$168,446</span><span class="chip c-ok">✓</span></summary>
+  <div class="note">One complete path to the floor, as a demonstrator:</div>
+    <details open>
+    <summary><span class="tw">▶</span><span class="nm">Personal services</span><span class="lead"></span><span class="amt">$132,026</span><span class="chip c-ok">✓</span></summary>
+      <div class="leaf"><span class="tw"></span><span class="nm">Salaries, full time</span><span class="lead"></span><span class="amt">$80,126</span></div>
+      <div class="leaf"><span class="tw"></span><span class="nm">Salaries, part time</span><span class="lead"></span><span class="amt">$16,000</span></div>
+      <div class="leaf"><span class="tw"></span><span class="nm">Health insurance match</span><span class="lead"></span><span class="amt">$15,600</span></div>
+      <div class="leaf"><span class="tw"></span><span class="nm">Retirement</span><span class="lead"></span><span class="amt">$12,300</span></div>
+      <div class="leaf"><span class="tw"></span><span class="nm">Social Security match</span><span class="lead"></span><span class="amt">$7,400</span></div>
+      <div class="leaf"><span class="tw"></span><span class="nm">Unemployment + life ins.</span><span class="lead"></span><span class="amt">$600</span></div>
+    </details>
+    <details>
+    <summary><span class="tw">▶</span><span class="nm">Other services &amp; charges</span><span class="lead"></span><span class="amt">$29,920</span><span class="chip c-ok">✓</span></summary>
+      <div class="leaf"><span class="tw"></span><span class="nm">Computer software &amp; support</span><span class="lead"></span><span class="amt">$10,000</span></div>
+      <div class="leaf"><span class="tw"></span><span class="nm">Dues &amp; memberships</span><span class="lead"></span><span class="amt">$8,500</span></div>
+      <div class="leaf"><span class="tw"></span><span class="nm">Phone, travel, meals, misc.</span><span class="lead"></span><span class="amt">$11,420</span></div>
+    </details>
+    <div class="leaf"><span class="tw"></span><span class="nm">Supplies</span><span class="lead"></span><span class="amt">$6,500</span></div>
+  </details>
+
+  <div class="leaf"><span class="tw"></span><span class="nm">Quorum Court (11 JPs @ $300/meeting + ins.)</span><span class="code">0107</span><span class="lead"></span><span class="amt">$158,100</span><span class="chip c-ok">✓</span></div>
+  <div class="leaf"><span class="tw"></span><span class="nm">OEM</span><span class="code">0500</span><span class="lead"></span><span class="amt">$148,995</span><span class="chip c-part">◐</span></div>
+  <div class="leaf"><span class="tw"></span><span class="nm">Circuit Judge</span><span class="code">0401</span><span class="lead"></span><span class="amt">$131,010</span><span class="chip c-part">◐</span></div>
+
+  <details>
+  <summary><span class="tw">▶</span><span class="nm">Election Commission</span><span class="code">0109</span><span class="lead"></span><span class="amt">$109,200</span><span class="chip c-ok">✓</span></summary>
+  <div class="note">Up from $33,750 in 2025 — election year. Extra help alone: $5,000 → $45,000.</div>
+  </details>
+
+  <div class="leaf"><span class="tw"></span><span class="nm">Extension Office</span><span class="code">0801</span><span class="lead"></span><span class="amt">$78,532</span><span class="chip c-part">◐</span></div>
+  <div class="leaf"><span class="tw"></span><span class="nm">Coroner</span><span class="code">0419</span><span class="lead"></span><span class="amt">$76,780</span><span class="chip c-part">◐</span></div>
+  <div class="leaf"><span class="tw"></span><span class="nm">Health Department</span><span class="code">0300</span><span class="lead"></span><span class="amt">$48,900</span><span class="chip c-part">◐</span></div>
+  <div class="leaf"><span class="tw"></span><span class="nm">Court Complex Building</span><span class="code">0423</span><span class="lead"></span><span class="amt">$44,400</span><span class="chip c-ok">✓</span></div>
+  <div class="leaf"><span class="tw"></span><span class="nm">Collector</span><span class="code">0104</span><span class="lead"></span><span class="amt">$39,500</span><span class="chip c-ok">✓</span></div>
+  <div class="leaf"><span class="tw"></span><span class="nm">Veterans Services</span><span class="code">0800</span><span class="lead"></span><span class="amt">$26,390</span><span class="chip c-part">◐</span></div>
+  <div class="leaf"><span class="tw"></span><span class="nm">Grants-in-aid — social services (Conservation District)</span><span class="code">0803</span><span class="lead"></span><span class="amt">$11,500</span><span class="chip c-ok">✓</span></div>
+  <div class="leaf"><span class="tw"></span><span class="nm">Late fee, rental, Board of Eq., paupers</span><span class="lead"></span><span class="amt">$21,025</span><span class="chip c-ok">✓</span></div>
+</details>
+
+<!-- ROAD -->
+<details>
+<summary><span class="tw">▶</span><span class="nm">Road Fund</span><span class="code">2000</span><span class="lead"></span><span class="amt">$6,038,258</span><span class="pct">28%</span><span class="chip c-ok">✓</span></summary>
+  <details>
+  <summary><span class="tw">▶</span><span class="nm">Supplies</span><span class="lead"></span><span class="amt">$2,548,700</span><span class="chip c-ok">✓</span></summary>
+    <div class="leaf"><span class="tw"></span><span class="nm">Asphalt</span><span class="lead"></span><span class="amt">$990,000</span></div>
+    <div class="leaf"><span class="tw"></span><span class="nm">Fuel, oil &amp; lubricants</span><span class="lead"></span><span class="amt">$403,000</span></div>
+    <div class="leaf"><span class="tw"></span><span class="nm">Gravel, dirt &amp; sand</span><span class="lead"></span><span class="amt">$400,000</span></div>
+    <div class="leaf"><span class="tw"></span><span class="nm">Parts &amp; repairs</span><span class="lead"></span><span class="amt">$300,000</span></div>
+    <div class="leaf"><span class="tw"></span><span class="nm">Culvert &amp; pipe</span><span class="lead"></span><span class="amt">$150,000</span></div>
+    <div class="leaf"><span class="tw"></span><span class="nm">Tires, bridges &amp; steel, concrete, other</span><span class="lead"></span><span class="amt">$305,700</span></div>
+  </details>
+  <div class="leaf"><span class="tw"></span><span class="nm">Personal services (26 positions)</span><span class="lead"></span><span class="amt">$2,109,758</span><span class="chip c-ok">✓</span></div>
+  <details>
+  <summary><span class="tw">▶</span><span class="nm">Other services &amp; charges</span><span class="lead"></span><span class="amt">$538,800</span><span class="chip c-ok">✓</span></summary>
+    <div class="leaf"><span class="tw"></span><span class="nm">Other professional services</span><span class="lead"></span><span class="amt">$350,000</span></div>
+    <div class="leaf"><span class="tw"></span><span class="nm">Insurance, utilities, rent, misc.</span><span class="lead"></span><span class="amt">$188,800</span></div>
+  </details>
+  <div class="leaf"><span class="tw"></span><span class="nm">Capital outlay (equipment, vehicles, hwy projects)</span><span class="lead"></span><span class="amt">$720,000</span><span class="chip c-ok">✓</span></div>
+  <div class="leaf"><span class="tw"></span><span class="nm">Debt service</span><span class="lead"></span><span class="amt">$121,000</span><span class="chip c-ok">✓</span></div>
+</details>
+
+<!-- SANITATION -->
+<details>
+<summary><span class="tw">▶</span><span class="nm">Sanitation / Solid Waste</span><span class="code">3009</span><span class="lead"></span><span class="amt">$1,899,263</span><span class="pct">9%</span><span class="chip c-ok">✓</span></summary>
+  <div class="leaf"><span class="tw"></span><span class="nm">Other services (incl. waste disposal $250K, engineering $150K, prof. svcs $175K)</span><span class="lead"></span><span class="amt">$746,375</span></div>
+  <div class="leaf"><span class="tw"></span><span class="nm">Personal services</span><span class="lead"></span><span class="amt">$501,188</span></div>
+  <div class="leaf"><span class="tw"></span><span class="nm">Debt service</span><span class="lead"></span><span class="amt">$362,000</span></div>
+  <div class="leaf"><span class="tw"></span><span class="nm">Capital outlay</span><span class="lead"></span><span class="amt">$185,000</span></div>
+  <div class="leaf"><span class="tw"></span><span class="nm">Supplies</span><span class="lead"></span><span class="amt">$104,700</span></div>
+</details>
+
+<!-- EDCCC -->
+<details>
+<summary><span class="tw">▶</span><span class="nm">Economic Development (EDCCC) sales tax</span><span class="code">3407</span><span class="lead"></span><span class="amt">$1,844,538</span><span class="pct">9%</span><span class="chip c-dead">✖</span></summary>
+<div class="note">A single ordinance line — "INCENTIVES: $1,844,538" — larger than the jail, the library, or the county's entire fire pass-through. <b>Who receives it, under what agreements, with what performance terms, is not in this document.</b> <a class="iref" href="#i5">→ Issue #5</a></div>
+</details>
+
+<!-- 911 -->
+<details>
+<summary><span class="tw">▶</span><span class="nm">9-1-1 (PSAP + reserve)</span><span class="code">3020 · 3409</span><span class="lead"></span><span class="amt">$1,087,970</span><span class="chip c-ok">✓</span></summary>
+  <div class="leaf"><span class="tw"></span><span class="nm">PSAP personal services (10 dispatchers, $38.8–55.9K)</span><span class="lead"></span><span class="amt">$788,288</span></div>
+  <div class="leaf"><span class="tw"></span><span class="nm">PSAP supplies + other</span><span class="lead"></span><span class="amt">$181,907</span></div>
+  <div class="leaf"><span class="tw"></span><span class="nm">Reserve fund (equip. $75K + supplies)</span><span class="lead"></span><span class="amt">$117,775</span></div>
+  <div class="note">A further ~$1.01M sits unappropriated in the 9-1-1 reserve.</div>
+</details>
+
+<!-- remaining funds -->
+<details>
+<summary><span class="tw">▶</span><span class="nm">Jail funds (maintenance + 2005 construction)</span><span class="lead"></span><span class="amt">$663,891</span><span class="chip c-ok">✓</span></summary>
+  <div class="leaf"><span class="tw"></span><span class="nm">Jail maintenance (contracts $351K)</span><span class="lead"></span><span class="amt">$393,750</span></div>
+  <div class="leaf"><span class="tw"></span><span class="nm">Jail construction 2005</span><span class="lead"></span><span class="amt">$270,141</span></div>
+</details>
+
+<div class="leaf"><span class="tw"></span><span class="nm">Add'l motor fuel tax → asphalt</span><span class="code">2003</span><span class="lead"></span><span class="amt">$556,749</span><span class="chip c-ok">✓</span></div>
+<div class="leaf"><span class="tw"></span><span class="nm">ARPA revenue replacement</span><span class="code">1006</span><span class="lead"></span><span class="amt">$471,142</span><span class="chip c-ok">✓</span></div>
+
+<details>
+<summary><span class="tw">▶</span><span class="nm">County Library</span><span class="code">3008</span><span class="lead"></span><span class="amt">$469,288</span><span class="chip c-ok">✓</span></summary>
+<div class="note">Appropriated $469K of a $1.28M revenue projection; ~$687K unappropriated, plus the Margie Lou Ballew bequest fund holding ~$196K untouched. Restrictions on these balances → part of <a class="iref" href="#i8">Issue #8</a>.</div>
+</details>
+
+<details>
+<summary><span class="tw">▶</span><span class="nm">Automation &amp; cost funds (clerks, treasurer, collector, courts, recorder)</span><span class="lead"></span><span class="amt">$610,378</span><span class="chip c-ok">✓</span></summary>
+<div class="note">Fee-funded office accounts: Collector $257K · Recorder $234K · Treasurer $34K · District Court $25K · others small.</div>
+</details>
+
+<details>
+<summary><span class="tw">▶</span><span class="nm">Fire — county sales-tax pass-through</span><span class="code">1802</span><span class="lead"></span><span class="amt">$45,921</span><span class="chip c-dead">✖</span></summary>
+<div class="note">This is only the county's slice of fire funding. Fire protection districts' own budgets, dues, millage, and city FD budgets are separate records — the full fire map does not exist yet in public, navigable form. <a class="iref" href="#i4">→ Issue #4</a></div>
+</details>
+
+<div class="leaf"><span class="tw"></span><span class="nm">All other funds (defender, victim-witness, marina, trails, grants, courts, misc.)</span><span class="lead"></span><span class="amt">~$769,000</span><span class="chip c-ok">✓</span></div>
+</section>
+
+<!-- ================= JURISDICTIONS ================= -->
+<section>
+<h2>Beside the county <span class="sub">— separate governments, separate ledgers</span></h2>
+<details><summary><span class="tw">▶</span><span class="nm">City of Arkadelphia</span><span class="lead"></span><span class="chip c-dead">✖</span></summary>
+<div class="note">Budget not posted online. Obtain at city hall. <a class="iref" href="#i1">→ Issue #1</a></div></details>
+<details><summary><span class="tw">▶</span><span class="nm">Arkadelphia Public Schools (+ Gurdon)</span><span class="lead"></span><span class="chip c-dead">✖</span></summary>
+<div class="note">School millage is the largest line on most residents' property tax bills — and not yet in the corpus. <a class="iref" href="#i2">→ Issue #2</a></div></details>
+<details><summary><span class="tw">▶</span><span class="nm">Fire protection districts</span><span class="lead"></span><span class="chip c-dead">✖</span></summary>
+<div class="note"><a class="iref" href="#i4">→ Issue #4</a></div></details>
+<details><summary><span class="tw">▶</span><span class="nm">Caddo Valley, Gurdon &amp; other towns</span><span class="lead"></span><span class="chip c-dead">✖</span></summary>
+<div class="note">Municipal budgets, as available. Folded into <a class="iref" href="#i1">Issue #1</a>.</div></details>
+</section>
+
+<!-- ================= DOCKET ================= -->
+<section>
+<h2>First Issues Docket <span class="sub">— every dead end becomes a numbered pursuit; results get posted and stamped</span></h2>
+
+<div class="issue done" id="i0">
+  <div class="inum">#0</div>
+  <div class="ibody"><b>Obtain the county's 2026 appropriation ordinance.</b>
+  <p>Found on clarkcountyar.gov and the state transparency portal. Ingested; it is the tree above.</p></div>
+  <div class="ist"><span class="chip c-ok">✓ Complete</span></div>
+</div>
+
+<div class="issue" id="i1"><div class="inum">#1</div>
+  <div class="ibody"><b>City of Arkadelphia budget.</b><p>Not posted online. Request at city hall — likely a counter visit and the city manager conversation.</p></div>
+  <div class="ist"><span class="chip c-dead">Open</span></div></div>
+
+<div class="issue" id="i2"><div class="inum">#2</div>
+  <div class="ibody"><b>School district budgets &amp; millage breakdown.</b><p>Arkadelphia Public Schools + Gurdon. District offices and ADE financial reports.</p></div>
+  <div class="ist"><span class="chip c-dead">Open</span></div></div>
+
+<div class="issue" id="i3"><div class="inum">#3</div>
+  <div class="ibody"><b>Millage rate sheet &amp; sales tax inventory.</b><p>The revenue side of the whole tree: every mill, every dedicated sales tax, what each costs a $100,000 home. Assessor/Collector.</p></div>
+  <div class="ist"><span class="chip c-dead">Open</span></div></div>
+
+<div class="issue" id="i4"><div class="inum">#4</div>
+  <div class="ibody"><b>The complete fire funding map.</b><p>District budgets + dues + millage + city FD + the county's $45,921 pass-through. Prerequisite for framing the fire chief's founding question honestly.</p></div>
+  <div class="ist"><span class="chip c-dead">Open</span></div></div>
+
+<div class="issue" id="i5"><div class="inum">#5</div>
+  <div class="ibody"><b>EDCCC incentives — who receives the $1.84M?</b><p>Recipient list, agreements, performance terms. EDCCC records and quorum court minutes; FOIA if needed.</p></div>
+  <div class="ist"><span class="chip c-dead">Open</span></div></div>
+
+<div class="issue" id="i6"><div class="inum">#6</div>
+  <div class="ibody"><b>Neighboring county salary schedules.</b><p>Garland, Hot Spring, Nevada, Pike, Ouachita — same ordinance type. The deputy-pay-parity comparison table.</p></div>
+  <div class="ist"><span class="chip c-dead">Open</span></div></div>
+
+<div class="issue" id="i7"><div class="inum">#7</div>
+  <div class="ibody"><b>Remaining line-item pages of the county ordinance.</b><p>Sheriff, Jail, Assessor, District Court, Prosecutor, Juvenile, OEM, Coroner, Health, Circuit Judge, Extension, Veterans. The pages exist in the filed document; finish the ingestion.</p></div>
+  <div class="ist"><span class="chip c-part">In progress</span></div></div>
+
+<div class="issue" id="i8"><div class="inum">#8</div>
+  <div class="ibody"><b>Legislative audit reports &amp; treasurer's reports.</b><p>arklegaudit.gov. Layer two of the money trail: what was actually spent vs. appropriated, findings, fund restrictions on the ~$3.9M in unappropriated balances.</p></div>
+  <div class="ist"><span class="chip c-dead">Open</span></div></div>
+
+<div class="issue" id="i9"><div class="inum">#9</div>
+  <div class="ibody"><b>Quorum court minutes &amp; 2026 amendments.</b><p>Ordinance amendments change this tree mid-year. Minutes feed outcome tracking.</p></div>
+  <div class="ist"><span class="chip c-dead">Open</span></div></div>
+
+<div class="issue" id="i10"><div class="inum">#10</div>
+  <div class="ibody"><b>County check register (layer three).</b><p>Which vendor got which check. Public under Arkansas FOIA; not posted. The floor beneath the floor.</p></div>
+  <div class="ist"><span class="chip c-dead">Open</span></div></div>
+</section>
+
+<footer>
+Source: Clark County Appropriation Ordinance 2025-21 (adopted for CY2026), retrieved from the county site and the Arkansas transparency portal. Figures transcribed from the filed scan; totals are the ordinance's own. Status marks describe this corpus, not the county's records — a dead end here means "not yet ingested and navigable," not "hidden." Population figures (~21,000) from the U.S. Census. Built as corpus document #1 of the Clark Commons budget engine.
+</footer>
+</div>
+</body>
+</html>

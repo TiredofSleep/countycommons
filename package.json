@@ -1,0 +1,16 @@
+{
+  "name": "clark-commons",
+  "version": "0.1.0",
+  "description": "Civic coordination and budget-transparency platform for Clark County, Arkansas. Free, open, anti-extractive.",
+  "license": "MIT",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server/app.js",
+    "verify": "node pipeline/verify.js",
+    "ingest": "node pipeline/ingest.js"
+  },
+  "dependencies": {
+    "express": "^4.19.0"
+  }
+}

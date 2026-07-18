@@ -1,0 +1,79 @@
+{
+  "name": "Clark County",
+  "state": "Arkansas",
+  "slug": "clark-county-ar",
+  "population": 21000,
+  "population_source": "U.S. Census estimate",
+  "platform_name": "Clark Commons",
+  "sponsor_line": "AI assistance sponsored by Ozark Cleaners",
+  "jurisdictions": [
+    {
+      "id": "clark-county",
+      "name": "Clark County",
+      "kind": "county",
+      "governing_body": "Quorum Court (11 justices of the peace)",
+      "executive": "County Judge",
+      "website": "https://www.clarkcountyar.gov"
+    },
+    {
+      "id": "arkadelphia",
+      "name": "City of Arkadelphia",
+      "kind": "city",
+      "governing_body": "City Board of Directors",
+      "executive": "City Manager",
+      "website": null
+    },
+    {
+      "id": "arkadelphia-schools",
+      "name": "Arkadelphia Public Schools",
+      "kind": "school-district",
+      "governing_body": "School Board",
+      "executive": "Superintendent",
+      "website": null
+    },
+    {
+      "id": "gurdon",
+      "name": "City of Gurdon",
+      "kind": "city",
+      "governing_body": "City Council",
+      "executive": "Mayor",
+      "website": null
+    },
+    {
+      "id": "caddo-valley",
+      "name": "Town of Caddo Valley",
+      "kind": "town",
+      "governing_body": "Town Council",
+      "executive": "Mayor",
+      "website": null
+    }
+  ],
+  "peer_counties": ["Nevada", "Hot Spring", "Pike", "Ouachita", "Garland"],
+  "officials": [
+    { "office": "County Judge", "name": "Troy Tucker", "term_expires": "2026-12-31" },
+    { "office": "Sheriff and Collector", "name": "Jason Watson", "term_expires": null },
+    { "office": "District Judge", "name": "Randy Hill", "term_expires": null }
+  ],
+  "calendar": {
+    "budget_adoption_window": { "start_month": 10, "end_month": 12, "note": "Quorum court typically adopts next-year appropriations in the last quarter." },
+    "meetings": [
+      { "body": "Quorum Court", "schedule": "monthly", "note": "Confirm current meeting day with county clerk." },
+      { "body": "Arkadelphia City Board", "schedule": "monthly", "note": "Confirm current meeting day with city hall." }
+    ],
+    "election_blackouts": [
+      {
+        "note": "County election year 2026. Bright lines: no candidate issues, no active-ballot-measure issues, no named-individual conduct issues. Windows to be pinned with legal advice before the voting layer (M2) opens.",
+        "start": null,
+        "end": null
+      }
+    ]
+  },
+  "data_sources": [
+    { "id": "county-site", "name": "Clark County official site", "url": "https://www.clarkcountyar.gov", "holds": ["appropriation ordinances", "county clerk records"] },
+    { "id": "ar-transparency", "name": "Arkansas transparency portal", "url": "https://transparency.arkansas.gov", "holds": ["filed county budgets"] },
+    { "id": "ark-leg-audit", "name": "Arkansas Legislative Audit", "url": "https://www.arklegaudit.gov", "holds": ["annual county and city audit reports"] },
+    { "id": "ade-finance", "name": "Arkansas Dept. of Education financial reports", "url": "https://dese.ade.arkansas.gov", "holds": ["school district budgets and millage"] }
+  ],
+  "currency_year": 2026,
+  "reading_level_target": "6th-8th grade"
+}
