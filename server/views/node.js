@@ -87,6 +87,9 @@ function nodePage(data, node) {
 
 ${node.note ? `<section><h3>Note on this line</h3><p>${esc(node.note)}</p></section>` : ''}
 
+${(data.comparisons.comparisons || []).filter(c => c.related_nodes.includes(node.id)).map(c =>
+    `<section><h3>Side-by-side</h3><p><a href="/compare/${esc(c.id)}">${esc(c.title)}</a> — built from the filed documents of ${c.rows.length} counties.</p></section>`).join('')}
+
 ${kids.length ? `<section><h3>What's inside this number</h3>
 <table class="plain"><thead><tr><th>Line</th><th>Amount</th><th>Status</th></tr></thead><tbody>${kidRows}</tbody></table>
 ${node.children_complete ? '' : '<p class="src">This list is not yet complete — more lines exist in the source document than have been ingested.</p>'}

@@ -16,6 +16,10 @@ function load() {
   try {
     verification = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'verification.json'), 'utf8'));
   } catch (e) { /* verifier not run yet; site says so */ }
+  let comparisons = { comparisons: [] };
+  try {
+    comparisons = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'comparisons.json'), 'utf8'));
+  } catch (e) { /* none yet */ }
 
   const byId = new Map(budget.nodes.map(n => [n.id, n]));
   const childrenOf = new Map();
@@ -29,7 +33,7 @@ function load() {
   if (verification) {
     for (const c of verification.checks) verifyByNode.set(c.node, c);
   }
-  return { budget, docket, documents, county, verification, byId, childrenOf, verifyByNode };
+  return { budget, docket, documents, county, verification, comparisons, byId, childrenOf, verifyByNode };
 }
 
 function esc(s) {

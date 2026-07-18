@@ -7,6 +7,7 @@ const { load } = require('./lib/corpus');
 const { treePage } = require('./views/tree');
 const { nodePage } = require('./views/node');
 const { docketPage, documentsPage, verifyPage, methodologyPage } = require('./views/pages');
+const { comparePage } = require('./views/compare');
 
 const app = express();
 app.disable('x-powered-by');
@@ -19,6 +20,13 @@ app.get('/line/:id', (req, res) => {
   const node = data.byId.get(req.params.id);
   if (!node) return res.status(404).send(notFound(data, 'No line with that id exists in the corpus.'));
   res.send(nodePage(data, node));
+});
+
+app.get('/compare/:id', (req, res) => {
+  const data = load();
+  const cmp = data.comparisons.comparisons.find(c => c.id === req.params.id);
+  if (!cmp) return res.status(404).send(notFound(data, 'No comparison with that id exists.'));
+  res.send(comparePage(data, cmp));
 });
 
 app.get('/docket', (req, res) => res.send(docketPage(load())));
