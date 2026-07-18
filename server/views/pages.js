@@ -15,6 +15,7 @@ function docketPage(data) {
   <div class="ibody"><b>${esc(i.title)}.</b>
     <p>${esc(i.detail)}</p>
     ${i.stamped ? `<div class="revealed"><b>${esc(i.stamped.date)} — what this revealed:</b> ${esc(i.stamped.revealed)}</div>` : ''}
+    ${i.research_notes ? `<div style="margin-top:6px">${i.research_notes.map(n => `<p style="font-size:12.5px;color:var(--ink-soft);margin:3px 0">· ${esc(n)}</p>`).join('')}</div>` : ''}
   </div>
   <div class="ist">${chipFor(i.status)}</div>
 </div>`).join('');

@@ -78,11 +78,10 @@ for (const n of nodes) {
     checks.push({ node: n.id, name: n.name, kind: 'reference', ok: false, expected: null, computed: null,
       detail: `References document "${n.source.doc}", which is not in the registry.` });
   }
-  if (n.status !== 'dead_end' && n.amount === null && (childrenOf.get(n.id) || []).length === 0) {
-    if (n.id !== 'projected-revenues') {
-      checks.push({ node: n.id, name: n.name, kind: 'reference', ok: false, expected: null, computed: null,
-        detail: 'Has no amount, no children, and is not a dead end — unrenderable.' });
-    }
+  if (n.status !== 'dead_end' && n.amount === null && (childrenOf.get(n.id) || []).length === 0
+      && !n.source && !n.note) {
+    checks.push({ node: n.id, name: n.name, kind: 'reference', ok: false, expected: null, computed: null,
+      detail: 'Has no amount, no children, no source, and no note — nothing to render or cite.' });
   }
 }
 

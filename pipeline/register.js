@@ -143,6 +143,96 @@ const META = [
     source_note: 'Statewide salary survey filing — direct comparison material for the deputy-pay question.',
     status: 'stored', status_note: STORED, amends: null, docket_ref: 6
   })),
+  // ---- Audits: county, city, schools (layer two — actuals) ----
+  {
+    id: 'clark-legaudit-2022', file: 'audit-LOCO01022.pdf',
+    title: 'Clark County — Financial and Compliance Report, year ended December 31, 2022 (Arkansas Legislative Audit)',
+    jurisdiction: 'clark-county', layer: 'actual', year: 2022,
+    source_url: 'https://www.arklegaudit.gov/downloadReport.php?id=LOCO01022',
+    source_note: 'Layer two: audited county actuals.',
+    status: 'stored', status_note: STORED, amends: null, docket_ref: 8
+  },
+  {
+    id: 'clark-legaudit-2023', file: 'audit-LOCO01023.pdf',
+    title: 'Clark County — Financial and Compliance Report, year ended December 31, 2023 (Arkansas Legislative Audit)',
+    jurisdiction: 'clark-county', layer: 'actual', year: 2023,
+    source_url: 'https://www.arklegaudit.gov/downloadReport.php?id=LOCO01023',
+    source_note: 'Layer two: audited county actuals. The most recent published county audit; FY2024 not yet released.',
+    status: 'stored', status_note: STORED, amends: null, docket_ref: 8
+  },
+  {
+    id: 'arkadelphia-audit-2022', file: 'audit-LOM100222.pdf',
+    title: 'City of Arkadelphia — Regulatory Basis Financial Statements, December 31, 2022 (Arkansas Legislative Audit)',
+    jurisdiction: 'arkadelphia', layer: 'actual', year: 2022,
+    source_url: 'https://www.arklegaudit.gov/downloadReport.php?id=LOM100222',
+    source_note: 'Audited city actuals — the city budget itself is not posted online, but these are.',
+    status: 'stored', status_note: STORED, amends: null, docket_ref: 1
+  },
+  {
+    id: 'arkadelphia-audit-2023', file: 'audit-LOM100223.pdf',
+    title: 'City of Arkadelphia — Regulatory Basis Financial Statements, December 31, 2023 (Arkansas Legislative Audit)',
+    jurisdiction: 'arkadelphia', layer: 'actual', year: 2023,
+    source_url: 'https://www.arklegaudit.gov/downloadReport.php?id=LOM100223',
+    source_note: 'Audited city actuals.',
+    status: 'stored', status_note: STORED, amends: null, docket_ref: 1
+  },
+  {
+    id: 'arkadelphia-audit-2024', file: 'audit-LOM100224.pdf',
+    title: 'City of Arkadelphia — Regulatory Basis Financial Statements, December 31, 2024 (Arkansas Legislative Audit)',
+    jurisdiction: 'arkadelphia', layer: 'actual', year: 2024,
+    source_url: 'https://arklegaudit.gov/downloadReport.php?id=LOM100224',
+    source_note: 'Newest audited city actuals: FY2024 general fund revenues $18.2M, expenditures $13.2M, year-end fund balance $2.3M (regulatory basis).',
+    status: 'stored', status_note: STORED, amends: null, docket_ref: 1
+  },
+  {
+    id: 'arkadelphia-water-sewer-audit-2023', file: 'audit-LOSM00823.pdf',
+    title: 'Arkadelphia Water and Sewer System — audit, year ended December 31, 2023',
+    jurisdiction: 'arkadelphia', layer: 'actual', year: 2023,
+    source_url: 'https://arklegaudit.gov/downloadReport.php?id=LOSM00823',
+    source_note: 'The utility side of city finances, audited separately.',
+    status: 'stored', status_note: STORED, amends: null, docket_ref: 1
+  },
+  {
+    id: 'arkadelphia-schools-audit-2024', file: 'audit-EDSD04624-arkadelphia-schools.pdf',
+    title: 'Arkadelphia School District No. 1 — audit, year ended June 30, 2024 (Arkansas Legislative Audit)',
+    jurisdiction: 'arkadelphia-schools', layer: 'actual', year: 2024,
+    source_url: 'https://www.arklegaudit.gov/downloadReport.php?id=EDSD04624',
+    source_note: 'Audited district financials. The district has pledged property taxes against $35,050,000 in bonds issued 2021–2022.',
+    status: 'stored', status_note: STORED, amends: null, docket_ref: 2
+  },
+  {
+    id: 'gurdon-schools-audit-2024', file: 'audit-EDSD04724-gurdon-schools.pdf',
+    title: 'Gurdon School District No. 60 — audit, year ended June 30, 2024 (Arkansas Legislative Audit)',
+    jurisdiction: 'gurdon', layer: 'actual', year: 2024,
+    source_url: 'https://www.arklegaudit.gov/downloadReport.php?id=EDSD04724',
+    source_note: 'Audited district financials; no findings reported.',
+    status: 'stored', status_note: STORED, amends: null, docket_ref: 2
+  },
+  // ---- Millage: the revenue side (reference layer) ----
+  {
+    id: 'dese-millage-2024', file: 'dese-millage-report-2024.pdf',
+    title: 'DESE 2024 Millage Report — school millage statewide (final, for 2025 collections)',
+    jurisdiction: 'clark-county', layer: 'reference', year: 2024,
+    source_url: 'https://dese-admin.ade.arkansas.gov/Files/Millage_Report_2024_Includes_Rollback_FAS.pdf',
+    source_note: 'School millage by district: Arkadelphia 44.65 (27.00 M&O + 17.65 debt), Gurdon 43.00 (25.00 + 18.00).',
+    status: 'stored', status_note: STORED, amends: null, docket_ref: 3
+  },
+  {
+    id: 'acd-millage-2025', file: 'acd-millage-2025-for-2026.pdf',
+    title: 'State of Arkansas 2025 Millage Report (2026 collections) — Assessment Coordination Division',
+    jurisdiction: 'clark-county', layer: 'reference', year: 2025,
+    source_url: 'https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf',
+    source_note: 'The whole millage picture for Clark County on one page (p.15): county 7.1 mills (incl. road 3.0, library 1.0, hospital 1.0, college 1.0), Arkadelphia city 5.0, Gurdon 5.4, school districts 41–47.65.',
+    status: 'stored', status_note: STORED, amends: null, docket_ref: 3
+  },
+  {
+    id: 'acd-millage-2024', file: 'acd-millage-2024-for-2025.pdf',
+    title: 'State of Arkansas 2024 Millage Report (2025 collections) — Assessment Coordination Division',
+    jurisdiction: 'clark-county', layer: 'reference', year: 2024,
+    source_url: 'https://www.dfa.arkansas.gov/wp-content/uploads/2024-millage-2025-collections.pdf',
+    source_note: 'Prior-year millage book, for change detection against the 2025 edition.',
+    status: 'stored', status_note: STORED, amends: null, docket_ref: 3
+  },
   // ---- Clark historical budgets ----
   ...[
     [2018, '/assets/pdf/2018/Clark_County_Budget_2018.pdf'],

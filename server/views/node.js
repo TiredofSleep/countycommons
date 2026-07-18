@@ -4,7 +4,8 @@ const { layout } = require('./layout');
 const LAYERS = {
   appropriation: 'Layer one: what the quorum court authorized to be spent. What was actually spent is layer two (audit and treasurer reports); which vendor got which check is layer three (check register).',
   actual: 'Layer two: what was actually spent, from audit and treasurer reports.',
-  transaction: 'Layer three: transaction-level detail — which vendor got which check.'
+  transaction: 'Layer three: transaction-level detail — which vendor got which check.',
+  reference: 'Reference material: state publications and directories that explain the numbers (millage books, salary surveys) rather than authorize or record spending.'
 };
 
 function ancestors(node, byId) {

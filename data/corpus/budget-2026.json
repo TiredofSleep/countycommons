@@ -1971,12 +1971,15 @@
       "name": "Property tax — millage rates",
       "code": null,
       "amount": null,
-      "layer": "appropriation",
-      "source": null,
-      "status": "dead_end",
+      "layer": "reference",
+      "source": {
+        "doc": "acd-millage-2025",
+        "page": 15
+      },
+      "status": "partial",
       "docket_ref": 3,
       "children_complete": false,
-      "note": "Which mills fund the county, roads, and library — and what one mill costs a $100,000 home — requires the millage rate sheet from the Assessor/Collector. Not yet ingested."
+      "note": "Now sourced from the state's 2025 millage book (for 2026 collections). County: 7.1 mills — road 3.0, library 1.0, hospital 1.0, college 1.0, plus small general/misc mills that split differently for city and rural residents (exact column mapping still being confirmed against the book's layout). City of Arkadelphia adds 5.0; Gurdon 5.4. Schools are the big share: Arkadelphia district 47.65, Gurdon 43.0. Total inside Arkadelphia city limits: 59.75 mills. A $100,000 home is assessed at 20% ($20,000), so one mill costs about $20 a year — 59.75 mills is roughly $1,195 before the homestead credit. Notable: the Arkadelphia school rate rose from 44.65 in the 2024 book to 47.65 in the 2025 book — 3.0 new bond mills."
     },
     {
       "id": "sales-taxes",
@@ -1990,7 +1993,7 @@
       "status": "dead_end",
       "docket_ref": 3,
       "children_complete": false,
-      "note": "At least two dedicated sales taxes are visible from the spending side (EDCCC economic development; Various Fire Departments fund). Rates, sunset dates, and enacting ordinances not yet ingested."
+      "note": "At least two dedicated sales taxes are visible from the spending side (EDCCC economic development; Various Fire Departments fund). Rates, sunset dates, and enacting ordinances not yet ingested. This got more urgent in July 2026: local reporting says the county owes the state roughly $1.3 million in sales-tax rebate repayments — a news lead, not yet a document in this corpus. The enacting ordinances live in the county's online ordinance archive (Docket #9)."
     },
     {
       "id": "turnback-fees",
@@ -2013,12 +2016,15 @@
       "name": "City of Arkadelphia",
       "code": null,
       "amount": null,
-      "layer": "appropriation",
-      "source": null,
-      "status": "dead_end",
+      "layer": "actual",
+      "source": {
+        "doc": "arkadelphia-audit-2024",
+        "page": null
+      },
+      "status": "partial",
       "docket_ref": 1,
       "children_complete": false,
-      "note": "Budget not posted online. Obtain at city hall."
+      "note": "The city's budget document is still not posted online — but its audited financials are, and they are now in the document library (FY2022–FY2024, plus the water & sewer system audit). FY2024, regulatory basis: general fund revenues $18.2M, expenditures $13.2M, year-end fund balance $2.3M. Budget line items and salaries remain a city hall records request."
     },
     {
       "id": "schools",
@@ -2027,12 +2033,15 @@
       "name": "Arkadelphia Public Schools (+ Gurdon)",
       "code": null,
       "amount": null,
-      "layer": "appropriation",
-      "source": null,
-      "status": "dead_end",
+      "layer": "actual",
+      "source": {
+        "doc": "arkadelphia-schools-audit-2024",
+        "page": null
+      },
+      "status": "partial",
       "docket_ref": 2,
       "children_complete": false,
-      "note": "School millage is the largest line on most residents' property tax bills — and not yet in the corpus."
+      "note": "School millage IS the largest line on most residents' tax bills, and it is now sourced: Arkadelphia district 47.65 mills (25.0 M&O + 2.0 other M&O + 17.65 bond + 3.0 other bond), Gurdon 43.0. Both districts' FY2024 audits are in the document library; the Arkadelphia district has pledged property taxes against $35.05M in bonds issued 2021–2022. District budget detail is the remaining gap."
     },
     {
       "id": "fire-districts",
@@ -2041,12 +2050,15 @@
       "name": "Fire protection districts",
       "code": null,
       "amount": null,
-      "layer": "appropriation",
-      "source": null,
-      "status": "dead_end",
+      "layer": "reference",
+      "source": {
+        "doc": "acd-millage-2025",
+        "page": 15
+      },
+      "status": "partial",
       "docket_ref": 4,
       "children_complete": false,
-      "note": "District budgets, dues, and millage are separate records from the county ordinance."
+      "note": "The funding structure is now mapped: Clark County levies no fire millage (the state millage book shows none in the county breakdown), so rural departments run on dues, donations, and the county's $45,921 sales-tax pass-through, while the Arkadelphia FD is funded inside the city's budget. Departments identified so far: Arkadelphia FD, East Clark County Rural VFD, Okolona VFD, Whelen Springs VFD, and the Clark County Fire Association, a small 501(c)(3) that files only postcard returns. What remains offline: each department's dues schedule and finances — still the counter-visit half of Docket #4."
     },
     {
       "id": "other-towns",
