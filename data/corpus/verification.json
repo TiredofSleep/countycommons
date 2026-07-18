@@ -1,0 +1,174 @@
+{
+  "run_at": "2026-07-18T16:04:18.917Z",
+  "corpus_year": 2026,
+  "grand_total": 21386230,
+  "summary": {
+    "total_checks": 18,
+    "passed": 18,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "node": "general-fund",
+      "name": "General Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 6829201,
+      "computed": 6829201,
+      "detail": "27 children sum to the parent total exactly."
+    },
+    {
+      "node": "gf-courthouse-maint",
+      "name": "Courthouse Maintenance",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 416460,
+      "computed": 416460,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "chm-personal",
+      "name": "Personal services",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 85160,
+      "computed": 85160,
+      "detail": "4 children sum to the parent total exactly."
+    },
+    {
+      "node": "chm-supplies",
+      "name": "Supplies",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 36000,
+      "computed": 36000,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "chm-other",
+      "name": "Other services & charges",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 295300,
+      "computed": 295300,
+      "detail": "5 children sum to the parent total exactly."
+    },
+    {
+      "node": "gf-county-clerk",
+      "name": "County Clerk",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 314622,
+      "computed": 314622,
+      "detail": "4 children sum to the parent total exactly."
+    },
+    {
+      "node": "gf-county-judge",
+      "name": "County Judge",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 168446,
+      "computed": 168446,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "cj-personal",
+      "name": "Personal services",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 132026,
+      "computed": 132026,
+      "detail": "6 children sum to the parent total exactly."
+    },
+    {
+      "node": "cj-other",
+      "name": "Other services & charges",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 29920,
+      "computed": 29920,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "road-fund",
+      "name": "Road Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 6038258,
+      "computed": 6038258,
+      "detail": "5 children sum to the parent total exactly."
+    },
+    {
+      "node": "road-supplies",
+      "name": "Supplies",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 2548700,
+      "computed": 2548700,
+      "detail": "6 children sum to the parent total exactly."
+    },
+    {
+      "node": "road-other",
+      "name": "Other services & charges",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 538800,
+      "computed": 538800,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "sanitation",
+      "name": "Sanitation / Solid Waste",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 1899263,
+      "computed": 1899263,
+      "detail": "5 children sum to the parent total exactly."
+    },
+    {
+      "node": "e911",
+      "name": "9-1-1 (PSAP + reserve)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 1087970,
+      "computed": 1087970,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "jail-funds",
+      "name": "Jail funds (maintenance + 2005 construction)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 663891,
+      "computed": 663891,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "automation-funds",
+      "name": "Automation & cost funds (clerks, treasurer, collector, courts, recorder)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 610378,
+      "computed": 610378,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "other-funds",
+      "name": "All other funds (defender, victim-witness, marina, trails, grants, courts, misc.)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 869631,
+      "computed": 869631,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "__grand_total__",
+      "name": "Ordinance grand total",
+      "kind": "grand-total",
+      "ok": true,
+      "expected": 21386230,
+      "computed": 21386230,
+      "detail": "12 top-level funds sum to the ordinance's stated total exactly."
+    }
+  ]
+}
