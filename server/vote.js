@@ -8,6 +8,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const chain = require('./lib/chain');
 
 const STORE = path.join(__dirname, '..', 'data', 'civic-votes.json');
 const VALUES = new Set(['yes', 'no', 'skip']);
@@ -26,6 +27,8 @@ function castVote(participant, issue, value, channel) {
   const tmp = STORE + '.tmp';
   fs.writeFileSync(tmp, JSON.stringify(store, null, 2));
   fs.renameSync(tmp, STORE);
+  // Every state change enters the hash-chained activity log (SECURITY §13).
+  chain.append('vote', { issue, participant, value, channel });
   return store.votes[issue][participant];
 }
 

@@ -475,3 +475,57 @@ The Help Finder's conversational form: "my electric is about to be cut off" gets
 ### 21.5 Build placement
 
 The interactive layer slots into **M1** (Analyst + Navigator ship with the budget engine — they're the same corpus wearing a conversational interface) and **M3** (Shaper ships with the issue pipeline). Code lives in `server/ai/` — `ask.js`, `shape.js`, `navigate.js`, `guardrails.js` — with every call writing to the public cost log. The batch pipeline remains the foundation: pre-processing is what makes "full AI support" cost less per month than the shop's coffee budget.
+
+## 22. The Tech Excuse — Pre-empted, Not Argued
+
+The most likely official response to any of this is some form of *"the county doesn't have the technology for that."* Sometimes it will be true, sometimes it will be the polite word for "no." Either way, the platform's answer is structural, not rhetorical:
+
+**1. The county needs zero new technology to participate.** This is already designed in and should be said early and often: packets arrive as printed one-pagers. Digests exist on paper. The quorum court can use Clark Commons the way it uses any constituent letter — by reading it. The paper-first channel architecture isn't just accessibility for residents; it is the pre-emptive answer to institutional tech incapacity. Nobody at the courthouse has to install, learn, log into, or maintain anything.
+
+**2. If they want digital, it already exists — free, no strings.** The budget explorer is a standing offer: the county is welcome to link it from their own site, or not. No contract, no vendor relationship, no ask. Same posture as the free POS: the gift is delivered working, and the recipient's only decision is whether to use it.
+
+**3. CustomPOS is the provenance proof, deployed in one sentence.** When the capability question comes up — and it will — the entire answer is: *"It's built with the same tools that run the dry cleaners."* That sentence does all the work: it's verifiable (officials have stood at that counter), local, modest, and quietly devastating to the impossibility claim. It is a statement of provenance, not a pitch.
+
+**Tone rule (bright line):** the funny version — *a dry cleaner in Arkadelphia has better software than the courthouse* — is never said publicly, by the platform or its founder. It's true, it would land, and it would convert the partner posture into an adversarial one in a single news cycle. The artifacts are allowed to imply it silently; nobody says it out loud.
+
+**Honest framing of why the gap exists:** the county isn't incapable — they posted the budget PDF, they run financial software. Navigable transparency simply isn't anyone's *job* there, and unstaffed work doesn't happen. The platform's framing is therefore generous and accurate: *"This wasn't anyone's job, so we did it."* Not their failure; just not their function. That framing survives being quoted.
+
+**Discipline rule:** no county-facing software gets built on spec. If a specific office someday asks for a specific small tool (a records-request tracker for the clerk, say), the kernel-plus-config pattern makes it cheap to consider *then* — as a scoped favor with a defined end, per the build-till-capable discipline. Until asked, the demonstration stack is the demonstration: the POS running two stores, the explorer running the budget, and the packets arriving on paper.
+
+## 23. The Trust Ladder — Security as the Price of Institutional Adoption
+
+Governments cannot move into visibility infrastructure without trusting it, and government trust is not won by assurance — it is accumulated by verifiability, time, and a plan for failure. The design principle: **at every rung, the county risks only what that rung requires, and can verify everything it risks.**
+
+### 23.1 The ladder (each rung needs different trust, and earns it differently)
+
+- **Rung 1 — officials read packets.** Trust required: the counts are honest. Earned by: published methodology, tier labels, ranges under 20, citations to their own documents. Zero technical trust needed — it's paper.
+- **Rung 2 — the county links the explorer.** Trust required: the site won't embarrass them. Earned by: the correction log's track record, charter discipline, months of the site simply being accurate.
+- **Rung 3 — an official cites results in a decision.** This is the real bar, and it's political, not technical: *can I cite this and survive the challenge from whoever disagrees with me?* Earned by: methodology that holds up under hostile reading, tier honesty (never claiming more verification than exists), and a neutrality record with no exceptions. Every design choice that resists gotcha framing is a deposit toward this rung.
+- **Rung 4 — offices contribute** (documents handed over, Official Questions asked). Earned by: rungs 1–3 plus a history of contributors being treated well — Brinkley closing Issue #1 and being publicly stamped as the official who did it is the template.
+- **Rung 5 — a government runs the software itself.** Only here does formal security posture become the whole question — and this rung is *years away by design*, may never come, and shouldn't be chased. Note also: official adoption changes the legal regime (records retention, FOIA applicability, procurement) — staying independent infrastructure that officials *cite*, rather than official infrastructure they must *govern*, is the correct posture for the foreseeable future.
+
+### 23.2 The security story (already mostly true; make it explicit)
+
+The platform's honest security argument is **smallness plus verifiability**, which beats enterprise theater at county scale:
+
+- **Minimal attack surface:** one VPS, SQLite, server-rendered HTML, minimal JS, no accounts for officials, no county systems touched, no data ingested from government except documents that are already public. You cannot breach a connection that doesn't exist.
+- **Minimal blast radius:** the only sensitive store is identity.db (contacts + verification tier), physically separate, encrypted, joined only in memory by tally.js. Worst-case breach discloses *who participates* — never how anyone voted, because per-person vote history crossing stores is never persisted. Say this plainly in the threat model: what an attacker could get, and what they structurally cannot.
+- **Open source as the audit:** every line readable. For a county-scale decision, "read the code yourself" outperforms a vendor's compliance letter.
+- **Add the hygiene that makes it credible:** a published threat-model page (plain language), security.txt + responsible-disclosure policy, dependency minimalism as policy, nightly off-site encrypted backups (already in ops rhythm), and a pre-published breach-notification commitment. Institutions trust systems that plan for their own failure — the security equivalent of the corrections log.
+
+### 23.3 The local verification move
+
+Arkadelphia contains **two universities.** Invite Henderson State's (and/or Ouachita's) computer science faculty and students to audit the platform — as coursework, publicly, findings published either way. This converts security from a claim into a community activity, produces local experts who can vouch to local officials in person, and costs nothing but openness. A county judge doesn't read penetration reports; he does trust "the professor at Henderson looked at it, and his students tried to break it all semester."
+
+### 23.4 How institutional trust actually accumulates
+
+Boring reliability over time — the docket stamping, corrections published, election-season restraint observed, the cost log ticking nightly. Skin in the game — the sponsor's own books open, the operator known and findable at the counter (accountability has a street address; no vendor offers that). Failure protocols pre-published, so the first mistake confirms the system works rather than discrediting it. Precedent — the first citing official is the hard one; every one after inherits the first one's survival. And the terminal state of the game: the county trusts the platform when *not* trusting it has become the awkward position — when residents simply use it, its record is clean, and skepticism starts to require an explanation.
+
+## 24. Disclosure Is a Choice — the On-the-Record Tier
+
+Secret-ballot dogma comes from elections; this platform is structured public comment, and public comment has never been secret — petitions carry names, quorum-court comment is by name, a signed letter outweighs an anonymous one. So the platform treats **publicity and verification as separate axes**: verification is the system knowing a participant is real; publicity is the neighbors knowing their position. Each participant chooses both.
+
+- **Private-verified remains a full citizen of the system** (Tier 2/3 with position undisclosed). This is not a concession — it protects the *accuracy of the count*. Under forced disclosure only the comfortable speak: the renter whose landlord holds office, the county employee voting on county pay (a jailer's honest view of the sheriff's budget, published by name, is a career event in either direction). Losing those voices doesn't make results braver; it makes them wrong.
+- **On the Record is the opt-in top rung:** the participant's name is publicly attached to their position — the digital signature on the petition. Displayed as its own count, never inferable for anyone who didn't opt in.
+- **Result display gains the named column:** *"212 verified residents said yes — 37 on the record, by name."* Costly signal, freely chosen, and officials may weight it exactly as they've always weighted signed letters over anonymous ones.
+- **Choice is per-issue, revocable until issue close, and never defaulted on.** The deanonymization protections elsewhere in the architecture (ranges, coarsened public logs) exist to honor the *private* choices; On-the-Record participants have, by definition, nothing there to protect — their names render proudly.

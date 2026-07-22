@@ -85,6 +85,21 @@ for (const n of nodes) {
   }
 }
 
+// 4. Activity-log chain verification (SECURITY.md §13/§14 — wired into the
+// same gate as the arithmetic: a broken chain fails the build).
+try {
+  const { verifyChain } = require('../server/lib/chain');
+  const v = verifyChain();
+  checks.push({ node: '__activity_chain__', name: 'Activity log hash chain', kind: 'chain',
+    ok: v.ok, expected: null, computed: null,
+    detail: v.ok
+      ? `Chain verified: ${v.length} entries${v.head ? ', head ' + v.head.slice(0, 16) + '…' : ' (empty)'}`
+      : `CHAIN BROKEN: ${v.error} — integrity incident per SECURITY.md §10.` });
+} catch (e) {
+  checks.push({ node: '__activity_chain__', name: 'Activity log hash chain', kind: 'chain',
+    ok: false, expected: null, computed: null, detail: 'Chain verifier failed to run: ' + e.message });
+}
+
 const failed = checks.filter(c => !c.ok);
 const report = {
   run_at: new Date().toISOString(),

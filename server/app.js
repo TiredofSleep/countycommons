@@ -136,6 +136,23 @@ app.get('/documents', (req, res) => res.send(documentsPage(load())));
 app.get('/verify', (req, res) => res.send(verifyPage(load())));
 app.get('/methodology', (req, res) => res.send(methodologyPage(load())));
 
+// Charter documents rendered as public pages (SECURITY.md §14; NEVER.md).
+const { mdToHtml } = require('./lib/md');
+function charterPage(file, current, description) {
+  return (req, res) => {
+    const data = load();
+    const { layout } = require('./views/layout');
+    const md = fs.readFileSync(path.join(__dirname, '..', file), 'utf8');
+    res.send(layout({
+      title: `${file.replace('.md', '')} — ${data.county.platform_name}`,
+      current, county: data.county, description,
+      body: `<div style="max-width:72ch">${mdToHtml(md)}</div>`
+    }));
+  };
+}
+app.get('/security', charterPage('SECURITY.md', null, 'The platform\'s public threat model and integrity protocols, including the hash-chained activity log anyone can verify.'));
+app.get('/never', charterPage('NEVER.md', null, 'What this project will never do — written down before anyone was watching, on purpose.'));
+
 // ---- issues: Tier 0 sentiment polling (the M2 seed) ----
 function participantOf(req) { return cookies(req).cc_participant || null; }
 
