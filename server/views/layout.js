@@ -4,7 +4,8 @@ const { esc } = require('../lib/corpus');
 // enhancement script are served from this box. Works with JS disabled.
 
 const NAV = [
-  ['/story', 'Start here'],
+  ['/story', 'Our story'],
+  ['/guide', 'Start here'],
   ['/', 'Money trail'],
   ['/issues', 'Open questions'],
   ['/vendors', 'Who gets paid'],

@@ -79,7 +79,7 @@ ${results}
 
 <section>
 <h2>Disclosures <span class="sub">— the platform holds itself to its own standard</span></h2>
-<p class="src">This question was submitted by the platform's founder, a Clark County business owner; the raw submission and the wording history are logged in the platform's public repository. The platform is funded by a local business; its operating costs will be published monthly. Bright lines that apply to every question here: no candidate questions, no active-ballot-measure questions, no questions about named individuals' conduct.</p>
+<p class="src">This question was submitted by the platform's founder, who owns Ozark Cleaners — the platform's sponsor; the raw submission and the wording history are logged in the platform's public repository. That double relationship is disclosed here on purpose. Bright lines that apply to every question here: no candidate questions, no active-ballot-measure questions, no questions about named individuals' conduct.</p>
 </section>`;
 
   return layout({

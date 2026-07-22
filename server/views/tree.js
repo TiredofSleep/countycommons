@@ -52,7 +52,7 @@ function treePage(data) {
   <div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · Appropriation Ordinance 2025-21</div>
   <h1>${esc(budget.meta.title)}</h1>
   <div class="total"><a class="amt" href="/verify" title="See the arithmetic check">${money(budget.meta.grand_total)}</a></div>
-  <div class="src">${esc(budget.meta.grand_total_note)} Click any number to see exactly where it comes from. Where the trail goes dark, it becomes a numbered issue in the <a href="/docket">docket</a>. New here? <a href="/story">Start with the plain-words tour</a>.</div>
+  <div class="src">${esc(budget.meta.grand_total_note)} Click any number to see exactly where it comes from. Where the trail goes dark, it becomes a numbered issue in the <a href="/docket">docket</a>. New here? <a href="/story">Read our story</a> or <a href="/guide">take the plain-words tour</a>.</div>
   ${vStamp}
 </header>
 

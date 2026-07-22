@@ -118,7 +118,39 @@ app.get('/line/:id', (req, res) => {
   res.send(nodePage(data, node));
 });
 
-app.get('/story', (req, res) => res.send(storyPage(load())));
+// /story renders THE-STORY.md — canonical front-door copy per the handoff —
+// followed by the claims ledger: every promise in the story is either live
+// or tracked to the milestone that makes it true. The plain-words guide
+// lives at /guide.
+app.get('/story', (req, res) => {
+  const data = load();
+  const { layout } = require('./views/layout');
+  const { mdToHtml } = require('./lib/md');
+  const md = fs.readFileSync(path.join(__dirname, '..', 'THE-STORY.md'), 'utf8')
+    .split('\n').slice(4).join('\n'); // drop the internal header block above the first ---
+  const ledger = `
+<section style="margin-top:26px">
+<h2>The claims ledger <span class="sub">— every promise above, tracked honestly</span></h2>
+<table class="plain"><thead><tr><th>Promise</th><th>Status</th></tr></thead><tbody>
+<tr><td>A budget you can walk, cited to source pages, arithmetic checked</td><td><span class="chip c-ok">✓ live</span> — <a href="/">the money trail</a>, <a href="/verify">the receipt</a></td></tr>
+<tr><td>Open questions with plain yes/no answers</td><td><span class="chip c-ok">✓ live</span> — <a href="/issues">question № 1 is open</a> (anonymous tier)</td></tr>
+<tr><td>Verify residency, or put your name on the record</td><td><span class="chip c-part">◐ coming</span> — ships with the verification tiers (M2/M5)</td></tr>
+<tr><td>Works by text on any phone</td><td><span class="chip c-part">◐ coming</span> — the text channel is milestone M3</td></tr>
+<tr><td>Help finding help</td><td><span class="chip c-part">◐ coming</span> — ships with the AI layer (M1)</td></tr>
+<tr><td>AI that answers budget questions, costs posted nightly</td><td><span class="chip c-part">◐ coming</span> — same milestone; the cost log starts with the first AI call</td></tr>
+<tr><td>Ozark's own books posted monthly</td><td><span class="chip c-part">◐ coming</span> — Open Books v1 is in build at the shop</td></tr>
+<tr><td>The full list of nevers, published</td><td><span class="chip c-ok">✓ live</span> — <a href="/never">read it</a>, and <a href="/security">how this is secured</a></td></tr>
+<tr><td>Corrections published, not buried</td><td><span class="chip c-ok">✓ live</span> — the <a href="/docket">docket</a> and activity log are the running record; a dedicated corrections page lands before the gate comes down</td></tr>
+</tbody></table>
+</section>`;
+  res.send(layout({
+    title: `Our story — ${data.county.platform_name}`, current: '/story', county: data.county,
+    description: 'Where your money goes, who built this, and why — the front door, written for neighbors.',
+    body: `<div style="max-width:72ch">${mdToHtml(md)}</div>${ledger}`
+  }));
+});
+
+app.get('/guide', (req, res) => res.send(storyPage(load())));
 app.get('/vendors', (req, res) => res.send(vendorsPage(load())));
 app.get('/audits', (req, res) => res.send(auditsPage(load())));
 
