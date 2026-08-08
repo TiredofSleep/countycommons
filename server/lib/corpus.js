@@ -32,6 +32,10 @@ function load() {
   try {
     spending = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'spending.json'), 'utf8'));
   } catch (e) { /* none yet */ }
+  let stance = null;
+  try {
+    stance = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'stance.json'), 'utf8'));
+  } catch (e) { /* none yet */ }
   let issueDrafts = { drafts: [] };
   try {
     issueDrafts = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'issue-drafts.json'), 'utf8'));
@@ -49,7 +53,7 @@ function load() {
   if (verification) {
     for (const c of verification.checks) verifyByNode.set(c.node, c);
   }
-  return { budget, docket, documents, county, verification, comparisons, vendors, auditFindings, spending, issueDrafts, byId, childrenOf, verifyByNode };
+  return { budget, docket, documents, county, verification, comparisons, vendors, auditFindings, spending, stance, issueDrafts, byId, childrenOf, verifyByNode };
 }
 
 function esc(s) {

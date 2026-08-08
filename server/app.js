@@ -151,6 +151,11 @@ app.get('/story', (req, res) => {
 });
 
 app.get('/guide', (req, res) => res.send(storyPage(load())));
+
+const { stancePage } = require('./views/stance');
+const { participatePage } = require('./views/participate');
+app.get('/stance', (req, res) => res.send(stancePage(load())));
+app.get('/participate', (req, res) => res.send(participatePage(load())));
 app.get('/vendors', (req, res) => res.send(vendorsPage(load())));
 app.get('/audits', (req, res) => res.send(auditsPage(load())));
 
