@@ -31,7 +31,7 @@ function layout({ title, current, body, county, description }) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
-<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/style.css?v=3">
 <link rel="icon" href="/favicon.svg">
 <script src="/app.js" defer></script>
 </head>

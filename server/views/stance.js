@@ -37,6 +37,30 @@ ${defs}
 ${tenets}
 
 <section>
+<h2>The tradition we stand in <span class="sub">— three thinkers who did the homework</span></h2>
+${(stance.tradition || []).map(t => `
+<div class="issue" style="display:block">
+  <b>${esc(t.thinker)}</b>
+  <p style="font-size:13.5px;margin:6px 0 4px">${esc(t.idea)}</p>
+  <p class="src">Source: <a href="${esc(t.source.url)}" rel="noopener">${esc(t.source.label)}</a></p>
+</div>`).join('')}
+</section>
+
+<section>
+<h2>The honest counterarguments <span class="sub">— a stance that hides its objections is a pitch</span></h2>
+${(stance.counterarguments || []).map(c => `
+<div class="issue" style="display:block">
+  <b>"${esc(c.objection)}"</b>
+  <p style="font-size:13.5px;margin:6px 0 0">${esc(c.answer)}</p>
+</div>`).join('')}
+</section>
+
+<section>
+<h2>The evidence library <span class="sub">— every precedent, in depth</span></h2>
+<p>Each case behind this stance has its own page — what happened, what the evidence shows, what it teaches this county, and the honest caveat: <a href="/cases">where this has been tried</a>.</p>
+</section>
+
+<section>
 <h2>The whole stance in one breath</h2>
 <p><b>${esc(stance.closing)}</b></p>
 </section>`;

@@ -155,6 +155,15 @@ app.get('/guide', (req, res) => res.send(storyPage(load())));
 const { stancePage } = require('./views/stance');
 const { participatePage } = require('./views/participate');
 app.get('/stance', (req, res) => res.send(stancePage(load())));
+
+const { casesPage, casePage } = require('./views/cases');
+app.get('/cases', (req, res) => res.send(casesPage(load())));
+app.get('/cases/:id', (req, res) => {
+  const data = load();
+  const c = data.cases.cases.find(x => x.id === req.params.id);
+  if (!c) return res.status(404).send(notFound(data, 'No case study with that id.'));
+  res.send(casePage(data, c));
+});
 app.get('/participate', (req, res) => res.send(participatePage(load())));
 app.get('/vendors', (req, res) => res.send(vendorsPage(load())));
 app.get('/audits', (req, res) => res.send(auditsPage(load())));
