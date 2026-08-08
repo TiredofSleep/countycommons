@@ -14,6 +14,15 @@
     "express": "^4.19.0",
     "pdf-parse": "^2.4.5",
     "pngjs": "^7.0.0",
+    "qrcode": "^1.5.4",
     "tesseract.js": "^7.0.0"
+  },
+  "dependencyNotes": {
+    "_policy": "SECURITY.md §11: every package justified here; prefer stdlib and boring choices.",
+    "express": "the server; boring by design",
+    "pdf-parse": "corpus ingestion — text and scan-image extraction from county PDFs",
+    "pngjs": "pure-JS PNG decode for the 1bpp de-shear fix (pipeline/lib-ocr.js)",
+    "qrcode": "pure-JS QR SVG generation for shareable question links; no native deps, no network",
+    "tesseract.js": "WASM OCR for scanned minutes and ordinances; no system install"
   }
 }

@@ -202,7 +202,26 @@ app.get('/never', charterPage('NEVER.md', null, 'What this project will never do
 // ---- issues: Tier 0 sentiment polling (the M2 seed) ----
 function participantOf(req) { return cookies(req).cc_participant || null; }
 
-app.get('/issues', (req, res) => res.send(issuesPage(load())));
+app.get('/issues', (req, res) => res.send(issuesPage(load(), req.query.submitted === '1')));
+
+app.post('/issues/submit', express.urlencoded({ extended: false }), (req, res) => {
+  const q = (req.body && req.body.question || '').trim();
+  if (!q) return res.redirect('/issues#ask');
+  const { submit } = require('./submissions');
+  submit({ question: q, name: (req.body.name || '').trim() || null, contact: (req.body.contact || '').trim() || null });
+  res.redirect('/issues?submitted=1#ask');
+});
+
+app.get('/issues/:id/qr.svg', (req, res) => {
+  const data = load();
+  const draft = data.issueDrafts.drafts.find(d => d.id === req.params.id && d.status === 'open-tier0');
+  if (!draft) return res.status(404).type('text').send('not found');
+  const url = `${req.protocol}://${req.headers.host}/issues/${draft.id}`;
+  require('qrcode').toString(url, { type: 'svg', margin: 1, width: 280 }, (err, svg) => {
+    if (err) return res.status(500).type('text').send('qr error');
+    res.type('image/svg+xml').set('Cache-Control', 'public, max-age=86400').send(svg);
+  });
+});
 
 app.get('/issues/:id', (req, res) => {
   const data = load();

@@ -1,7 +1,7 @@
 {
-  "anchored_at": "2026-07-22T03:20:09.365Z",
-  "chain_length": 4,
-  "head_hash": "c6deec11d0c3744b062465ebe22b905867bc92f77a1b583c86f59123bc83b2e5",
+  "anchored_at": "2026-08-08T21:12:56.215Z",
+  "chain_length": 6,
+  "head_hash": "3c6df3b444589afeb21948af6af141769fe9311a50dc9cfbe6fbdd96f16c00d8",
   "note": "Public anchor of the append-only activity log. The internal log is hash-chained with full fidelity; this export is coarsened to daily buckets with the under-20 floor so integrity transparency never deanonymizes anyone (SECURITY.md §13.5). Anyone can verify: the chain begins at the genesis entry; any rewrite breaks every hash after it.",
   "daily": {
     "2026-07-22": {
@@ -14,6 +14,13 @@
       "votes_by_issue": {
         "contract-transparency": "under 20"
       }
+    },
+    "2026-08-08": {
+      "events": {
+        "question-submitted": 1,
+        "correction": 1
+      },
+      "votes_by_issue": {}
     }
   }
 }
