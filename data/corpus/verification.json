@@ -1,10 +1,10 @@
 {
-  "run_at": "2026-08-08T21:12:39.170Z",
+  "run_at": "2026-08-08T21:30:11.300Z",
   "corpus_year": 2026,
   "grand_total": 21386230,
   "summary": {
-    "total_checks": 19,
-    "passed": 19,
+    "total_checks": 23,
+    "passed": 23,
     "failed": 0
   },
   "checks": [
@@ -177,7 +177,43 @@
       "ok": true,
       "expected": null,
       "computed": null,
-      "detail": "Chain verified: 5 entries, head c699ff0aeec07a9d…"
+      "detail": "Chain verified: 6 entries, head 3c6df3b444589afe…"
+    },
+    {
+      "node": "__recount__",
+      "name": "Votes: no unlogged writes",
+      "kind": "recount",
+      "ok": true,
+      "expected": null,
+      "computed": null,
+      "detail": "0 store votes all present in the chain"
+    },
+    {
+      "node": "__recount__",
+      "name": "Votes: final values match chain",
+      "kind": "recount",
+      "ok": true,
+      "expected": null,
+      "computed": null,
+      "detail": "every store value equals its last chain event"
+    },
+    {
+      "node": "__recount__",
+      "name": "Votes: chain↔store orphans explained",
+      "kind": "recount",
+      "ok": true,
+      "expected": null,
+      "computed": null,
+      "detail": "no chain votes missing from the store (corrections accounted for)"
+    },
+    {
+      "node": "__recount__",
+      "name": "Submissions: no unlogged writes",
+      "kind": "recount",
+      "ok": true,
+      "expected": null,
+      "computed": null,
+      "detail": "0 submissions all chained"
     }
   ]
 }

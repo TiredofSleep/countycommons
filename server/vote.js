@@ -20,6 +20,12 @@ function loadStore() {
 
 function castVote(participant, issue, value, channel) {
   if (!VALUES.has(value)) throw new Error('invalid vote value');
+  // Chain FIRST, store second — the deliberate inverse of the POS doctrine
+  // ("archiving must never break a save"). In a civic system the log is the
+  // product: if the chain cannot record a vote, the vote must not happen.
+  // If the store write fails after the chain append, the recount observer
+  // (pipeline/recount.js) surfaces the orphan as an incident.
+  chain.append('vote', { issue, participant, value, channel });
   const store = loadStore();
   if (!store.votes[issue]) store.votes[issue] = {};
   // Last write wins until close; every vote channel-tagged.
@@ -27,8 +33,6 @@ function castVote(participant, issue, value, channel) {
   const tmp = STORE + '.tmp';
   fs.writeFileSync(tmp, JSON.stringify(store, null, 2));
   fs.renameSync(tmp, STORE);
-  // Every state change enters the hash-chained activity log (SECURITY §13).
-  chain.append('vote', { issue, participant, value, channel });
   return store.votes[issue][participant];
 }
 

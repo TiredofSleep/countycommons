@@ -30,11 +30,12 @@ function submit({ question, name, contact }) {
     contact: contact ? String(contact).slice(0, 200) : null,
     status: 'received'
   };
+  // Chain first, store second (integrity-first; see vote.js for the doctrine).
+  chain.append('question-submitted', { id: entry.id });
   store.submissions.push(entry);
   const tmp = STORE + '.tmp';
   fs.writeFileSync(tmp, JSON.stringify(store, null, 2));
   fs.renameSync(tmp, STORE);
-  chain.append('question-submitted', { id: entry.id });
   return entry;
 }
 

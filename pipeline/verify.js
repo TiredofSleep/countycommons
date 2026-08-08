@@ -100,6 +100,19 @@ try {
     ok: false, expected: null, computed: null, detail: 'Chain verifier failed to run: ' + e.message });
 }
 
+// 5. The recount — diff-observe the mutable stores against the chain
+// (OzarkPOS observer pattern: nothing can forget to log, nothing can opt out).
+try {
+  const { recount } = require('./recount');
+  for (const r of recount()) {
+    checks.push({ node: '__recount__', name: r.name, kind: 'recount',
+      ok: r.ok, expected: null, computed: null, detail: r.detail });
+  }
+} catch (e) {
+  checks.push({ node: '__recount__', name: 'Store↔chain recount', kind: 'recount',
+    ok: false, expected: null, computed: null, detail: 'Recount failed to run: ' + e.message });
+}
+
 const failed = checks.filter(c => !c.ok);
 const report = {
   run_at: new Date().toISOString(),
