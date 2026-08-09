@@ -60,6 +60,8 @@ Every standard started as one place doing it differently. Public budgets used to
 
 We don't know if that happens. It's not up to us. Our job was to prove it's possible, affordable, and survivable — in one county, run by a dry cleaner, for less than the shop's coffee budget.
 
+And the biggest goal was always the simplest one — one this county has had all along: we work together, and we have something to show for ourselves. The gym that filled to cheer the Promise. Two universities grown up across the street from each other. The pantries that feed neighbors every week, quietly. None of that is new here. It's just moving into collaborative technology and finer transparency — the same neighbors, with better tools and brighter light.
+
 The rest is up to whoever's watching.
 
 **Go look.**
