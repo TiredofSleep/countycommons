@@ -157,6 +157,8 @@ const { participatePage } = require('./views/participate');
 app.get('/stance', (req, res) => res.send(stancePage(load())));
 
 const { casesPage, casePage } = require('./views/cases');
+const { researchPage } = require('./views/research');
+app.get('/research', (req, res) => res.send(researchPage(load())));
 app.get('/cases', (req, res) => res.send(casesPage(load())));
 app.get('/cases/:id', (req, res) => {
   const data = load();

@@ -57,7 +57,7 @@ ${(stance.counterarguments || []).map(c => `
 
 <section>
 <h2>The evidence library <span class="sub">— every precedent, in depth</span></h2>
-<p>Each case behind this stance has its own page — what happened, what the evidence shows, what it teaches this county, and the honest caveat: <a href="/cases">where this has been tried</a>.</p>
+<p>Each case behind this stance has its own page — what happened, what the evidence shows, what it teaches this county, and the honest caveat: <a href="/cases">where this has been tried</a>. And the complete bibliography — every citation, claim by claim, weak spots stated — is <a href="/research">the research shelf</a>.</p>
 </section>
 
 <section>

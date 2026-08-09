@@ -48,6 +48,10 @@ function load() {
   try {
     calendar = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'calendar.json'), 'utf8'));
   } catch (e) { /* none yet */ }
+  let research = null;
+  try {
+    research = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'research.json'), 'utf8'));
+  } catch (e) { /* none yet */ }
   let issueDrafts = { drafts: [] };
   try {
     issueDrafts = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'issue-drafts.json'), 'utf8'));
@@ -65,7 +69,7 @@ function load() {
   if (verification) {
     for (const c of verification.checks) verifyByNode.set(c.node, c);
   }
-  return { budget, docket, documents, county, verification, comparisons, vendors, auditFindings, spending, stance, cases, help, calendar, issueDrafts, byId, childrenOf, verifyByNode };
+  return { budget, docket, documents, county, verification, comparisons, vendors, auditFindings, spending, stance, cases, help, calendar, research, issueDrafts, byId, childrenOf, verifyByNode };
 }
 
 function esc(s) {
