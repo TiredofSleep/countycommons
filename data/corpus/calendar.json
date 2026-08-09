@@ -1,0 +1,41 @@
+{
+  "intro": "Every public meeting where this county's decisions get made — computed live, sourced like everything else here. These rooms are open to you, and most of them are nearly empty. Showing up counts double when almost nobody does.",
+  "recurring": [
+    {
+      "id": "quorum-court",
+      "name": "Clark County Quorum Court — regular session",
+      "rule": { "nth": [2], "weekday": 1 },
+      "time": "5:30 pm",
+      "place": "District Courtroom, Clark County Courthouse, 401 Clay St, Arkadelphia",
+      "note": "The eleven justices who vote the county budget. Public; residents are routinely given time to speak. Special sessions and committee meetings are additional — watch the county's notices.",
+      "source": "Time and room from the court's own 2025–26 minutes, archived in our document library.",
+      "verified": true,
+      "decides": "county money"
+    },
+    {
+      "id": "city-board",
+      "name": "Arkadelphia Board of Directors",
+      "rule": { "nth": [1, 3], "weekday": 2 },
+      "time": "5:30 pm",
+      "place": "Town Hall Boardroom, Arkadelphia",
+      "note": "The board that adopts the city budget the public has never seen posted. Meetings are open.",
+      "source": "Schedule per the city's own meeting announcements at arkadelphia.gov.",
+      "verified": true,
+      "decides": "city money"
+    }
+  ],
+  "unverified": [
+    {
+      "name": "Arkadelphia School Board · Gurdon School Board",
+      "note": "Schedules being verified against the districts' own postings — listed the moment they're confirmed. Board meetings are public; millage is the biggest line on your tax bill."
+    }
+  ],
+  "seasonal": {
+    "months": [7, 8, 9, 10, 11],
+    "banner": "Budget season: between now and December, the quorum court writes next year's county budget. Anything you want changed in the numbers gets said in these meetings — or waits a year."
+  },
+  "community": {
+    "invite": "Community events belong here too — recycling drives, cleanups, blood drives, anything neighbors do together. Send it through the question box with the date and place, and it gets listed after a quick review. Listings are free and stay free.",
+    "listings": []
+  }
+}

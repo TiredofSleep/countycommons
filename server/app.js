@@ -168,6 +168,9 @@ app.get('/participate', (req, res) => res.send(participatePage(load())));
 
 const { helpPage } = require('./views/help');
 app.get('/help', (req, res) => res.send(helpPage(load())));
+
+const { calendarPage } = require('./views/calendar');
+app.get('/calendar', (req, res) => res.send(calendarPage(load())));
 app.get('/vendors', (req, res) => res.send(vendorsPage(load())));
 app.get('/audits', (req, res) => res.send(auditsPage(load())));
 

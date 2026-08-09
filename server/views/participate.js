@@ -36,7 +36,7 @@ function participatePage(data) {
 
 ${qcStr ? `<div class="issue" style="display:block;border-color:var(--sourced);background:var(--sourced-bg)">
   <b>This month in Clark County:</b>
-  <p style="font-size:13.5px;margin:6px 0 0">The quorum court's next regular session is <b>${esc(qcStr)}</b> at the courthouse — public, and you can speak.${budgetSeason ? ' <b>It is budget season:</b> the 2027 budget is being written between now and December. What gets said at these meetings lands in next year’s numbers.' : ''} One question is <a href="/issues">open for your answer</a> right now.</p>
+  <p style="font-size:13.5px;margin:6px 0 0">The quorum court's next regular session is <b>${esc(qcStr)}</b> at the courthouse — public, and you can speak.${budgetSeason ? ' <b>It is budget season:</b> the 2027 budget is being written between now and December. What gets said at these meetings lands in next year’s numbers.' : ''} One question is <a href="/issues">open for your answer</a> right now. Full schedule: <a href="/calendar">the calendar</a>.</p>
 </div>` : ''}
 
 <section>
