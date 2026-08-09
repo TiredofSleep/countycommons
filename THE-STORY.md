@@ -52,6 +52,8 @@ Because opacity is a test, and too much fails in the dark — everywhere, always
 
 We can't fix that everywhere. We can sweep one county, in public, and show our own corners while we do it.
 
+And because the most important thing any of us can do is say the truth out loud. That's the whole site. The truth, out loud, with receipts.
+
 ## What it could become
 
 Every standard started as one place doing it differently. Public budgets used to be locked drawers; now they're PDFs. Maybe next they're something you can walk through on your phone, in every county, with your answer counted honestly at the end — and maybe businesses that show their books become normal, and closed ones start drawing the question.
