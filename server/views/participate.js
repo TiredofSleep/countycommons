@@ -5,8 +5,21 @@ const { layout } = require('./layout');
 // their governments, from fifteen seconds to a records request. Built from
 // the same config and corpus as everything else — navigation, not advocacy.
 
+// Next second-Monday quorum court session, computed honestly at render time.
+function nextSecondMonday(from) {
+  for (let add = 0; add < 62; add++) {
+    const d = new Date(from.getFullYear(), from.getMonth(), from.getDate() + add);
+    if (d.getDay() === 1 && d.getDate() >= 8 && d.getDate() <= 14) return d;
+  }
+  return null;
+}
+
 function participatePage(data) {
   const { county } = data;
+  const now = new Date();
+  const qc = nextSecondMonday(now);
+  const qcStr = qc ? qc.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' }) : null;
+  const budgetSeason = now.getMonth() >= 7; // Aug–Dec: requests and adoption
   const jps = county.quorum_court.justices;
   const jpRows = [];
   for (let i = 0; i < jps.length; i += 2) {
@@ -20,6 +33,11 @@ function participatePage(data) {
   <h1>Take part in your government</h1>
   <div class="src">Every way to be involved, from fifteen seconds to a records request. None of it requires an account, an app, or anyone's permission — these are rights you already have. This page just makes them navigable.</div>
 </header>
+
+${qcStr ? `<div class="issue" style="display:block;border-color:var(--sourced);background:var(--sourced-bg)">
+  <b>This month in Clark County:</b>
+  <p style="font-size:13.5px;margin:6px 0 0">The quorum court's next regular session is <b>${esc(qcStr)}</b> at the courthouse — public, and you can speak.${budgetSeason ? ' <b>It is budget season:</b> the 2027 budget is being written between now and December. What gets said at these meetings lands in next year’s numbers.' : ''} One question is <a href="/issues">open for your answer</a> right now.</p>
+</div>` : ''}
 
 <section>
 <h2>1 · Be counted <span class="sub">— fifteen seconds</span></h2>
