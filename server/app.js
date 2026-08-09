@@ -109,7 +109,9 @@ app.use((req, res, next) => {
 app.use('/files', express.static(path.join(__dirname, '..', 'inbox'), { maxAge: '1d', index: false }));
 
 // ---- pages ----
-app.get('/', (req, res) => res.send(treePage(load())));
+const { homePage } = require('./views/home');
+app.get('/', (req, res) => res.send(homePage(load())));
+app.get('/budget', (req, res) => res.send(treePage(load())));
 
 app.get('/line/:id', (req, res) => {
   const data = load();
@@ -132,7 +134,7 @@ app.get('/story', (req, res) => {
 <section style="margin-top:26px">
 <h2>The claims ledger <span class="sub">— every promise above, tracked honestly</span></h2>
 <table class="plain"><thead><tr><th>Promise</th><th>Status</th></tr></thead><tbody>
-<tr><td>A budget you can walk, cited to source pages, arithmetic checked</td><td><span class="chip c-ok">✓ live</span> — <a href="/">the money trail</a>, <a href="/verify">the receipt</a></td></tr>
+<tr><td>A budget you can walk, cited to source pages, arithmetic checked</td><td><span class="chip c-ok">✓ live</span> — <a href="/budget">the money trail</a>, <a href="/verify">the receipt</a></td></tr>
 <tr><td>Open questions with plain yes/no answers</td><td><span class="chip c-ok">✓ live</span> — <a href="/issues">question № 1 is open</a> (anonymous tier)</td></tr>
 <tr><td>Verify residency, or put your name on the record</td><td><span class="chip c-part">◐ coming</span> — ships with the verification tiers (M2/M5)</td></tr>
 <tr><td>Works by text on any phone</td><td><span class="chip c-part">◐ coming</span> — the text channel is milestone M3</td></tr>
@@ -273,7 +275,7 @@ app.use((err, req, res, next) => {
   res.status(500).type('html').send(`<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
 <title>Something broke</title><link rel="stylesheet" href="/style.css"></head><body><div class="wrap">
 <header class="page"><h1>Something broke on our end</h1>
-<div class="src">The error is logged and nothing you did caused it. <a href="/">Back to the money trail</a>.</div>
+<div class="src">The error is logged and nothing you did caused it. <a href="/">Back home</a>.</div>
 </header></div></body></html>`);
 });
 
@@ -281,7 +283,7 @@ function notFound(data, msg) {
   const { layout } = require('./views/layout');
   return layout({
     title: `Not here — ${data.county.platform_name}`, current: null, county: data.county,
-    body: `<header class="page"><h1>Not here</h1><div class="src">${msg} <a href="/">Back to the money trail</a>.</div></header>`
+    body: `<header class="page"><h1>Not here</h1><div class="src">${msg} <a href="/">Back home</a>.</div></header>`
   });
 }
 

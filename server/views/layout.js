@@ -4,19 +4,14 @@ const { esc } = require('../lib/corpus');
 // enhancement script are served from this box. Works with JS disabled.
 
 const NAV = [
+  ['/', 'Home'],
   ['/help', 'Find help'],
-  ['/story', 'Our story'],
-  ['/guide', 'Start here'],
-  ['/', 'Money trail'],
+  ['/budget', 'Money trail'],
   ['/issues', 'Open questions'],
   ['/calendar', 'Calendar'],
   ['/participate', 'Get involved'],
-  ['/vendors', 'Who gets paid'],
-  ['/audits', 'Audit verdicts'],
   ['/docket', 'Docket'],
-  ['/documents', 'Documents'],
-  ['/verify', 'Verification'],
-  ['/methodology', 'Methodology']
+  ['/story', 'Our story']
 ];
 
 function layout({ title, current, body, county, description }) {
@@ -44,7 +39,7 @@ ${body}
 <footer>
 ${esc(county.platform_name)} is a free civic transparency project for ${esc(county.name)}, ${esc(county.state)}.
 It computes and cites; it never takes sides. A dead end means "not yet ingested and navigable," never "hidden."
-<a href="/methodology">How every number is sourced</a> · <a href="/stance">where we stand</a> · <a href="/never">what we will never do</a> · <a href="/security">how this is secured</a>. ${esc(county.sponsor_line)}.${corrections}
+<a href="/methodology">How every number is sourced</a> · <a href="/documents">the documents</a> · <a href="/verify">the receipt</a> · <a href="/vendors">who gets paid</a> · <a href="/audits">what the auditors reported</a> · <a href="/stance">where we stand</a> · <a href="/never">what we will never do</a> · <a href="/security">how this is secured</a> · <a href="/guide">the plain-words tour</a>. ${esc(county.sponsor_line)}.${corrections}
 </footer>
 </div>
 </body>

@@ -25,7 +25,7 @@ function docketPage(data) {
 <header class="page">
   <div class="eyebrow">${esc(county.name)}, ${esc(county.state)}</div>
   <h1>First Issues Docket</h1>
-  <div class="src">Every dead end in the <a href="/">money trail</a> becomes a numbered pursuit here. When a document is obtained and ingested, the issue gets stamped with the date and what it revealed. ${done} of ${docket.issues.length} complete.</div>
+  <div class="src">Every dead end in the <a href="/budget">money trail</a> becomes a numbered pursuit here. When a document is obtained and ingested, the issue gets stamped with the date and what it revealed. ${done} of ${docket.issues.length} complete.</div>
 </header>
 ${items}`;
   return layout({ title: `First Issues Docket — ${county.platform_name}`, current: '/docket', body, county });
@@ -89,7 +89,7 @@ function verifyPage(data) {
   <div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · run ${esc(verification.run_at)}</div>
   <h1>Does the tree add up?</h1>
   <div class="total">${verification.summary.passed}/${verification.summary.total_checks} ${ok ? '✓' : '— checks failing'}</div>
-  <div class="src">Budgets are self-auditing: line items must sum to category totals, categories to departments, departments to funds, funds to the ordinance's own grand total of ${money(budget.meta.grand_total)} — to the dollar, no rounding. This page is the arithmetic receipt for the whole <a href="/">money trail</a>. Any line that cannot be checked yet says so on its own citation page.</div>
+  <div class="src">Budgets are self-auditing: line items must sum to category totals, categories to departments, departments to funds, funds to the ordinance's own grand total of ${money(budget.meta.grand_total)} — to the dollar, no rounding. This page is the arithmetic receipt for the whole <a href="/budget">money trail</a>. Any line that cannot be checked yet says so on its own citation page.</div>
   ${ok ? '<div class="stamp">Cross-foots ✓</div>' : ''}
 </header>
 <table class="plain">

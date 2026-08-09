@@ -55,7 +55,7 @@ ${qcStr ? `<div class="issue" style="display:block;border-color:var(--sourced);b
 <section>
 <h2>3 · Show up <span class="sub">— the calendar is the strategy</span></h2>
 <p><b>The quorum court meets the second Monday of every month</b> at the courthouse, and its meetings are public. The budget is written October through December — a concern raised in the fall lands in next year's budget; the same concern in spring waits a year. Budget committee and special sessions are public too, and their minutes are in <a href="/documents">our archive</a>.</p>
-<p><b>You can speak.</b> The court routinely votes to hear residents — the minutes show speakers getting three minutes each on contested questions. Come with one point, sourced if you can; the <a href="/">money trail</a> exists so you can cite the same documents the court has.</p>
+<p><b>You can speak.</b> The court routinely votes to hear residents — the minutes show speakers getting three minutes each on contested questions. Come with one point, sourced if you can; the <a href="/budget">money trail</a> exists so you can cite the same documents the court has.</p>
 </section>
 
 <section>

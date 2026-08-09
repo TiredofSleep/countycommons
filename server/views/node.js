@@ -23,7 +23,7 @@ function nodePage(data, node) {
   const issue = node.docket_ref !== null ? docket.issues.find(i => i.num === node.docket_ref) : null;
   const parent = node.parent ? byId.get(node.parent) : null;
 
-  const crumb = [`<a href="/">Money trail</a>`]
+  const crumb = [`<a href="/budget">Money trail</a>`]
     .concat(ancestors(node, byId).map(a => `<a href="/line/${esc(a.id)}">${esc(a.name)}</a>`))
     .join(' → ');
 
