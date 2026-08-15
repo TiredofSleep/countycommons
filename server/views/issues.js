@@ -99,6 +99,7 @@ ${t.connections ? `<p class="src">Who's answering, self-reported (not verified):
 
 <section>
 <h2>Answer <span class="sub">— no account needed; one voice per browser; changeable until close</span></h2>
+${registeredFields.length ? `<p class="src" style="color:var(--sourced)"><b>You're on the record ✓</b> — on file with your answers (never published): <b>${registeredFields.map(esc).join(', ')}</b>. Your answer here counts as a registered voice.</p>` : ''}
 <form method="POST" action="/issues/${esc(draft.id)}/vote" style="display:flex;flex-direction:column;gap:12px;max-width:580px;margin:10px 0">
 
   <fieldset style="border:1.5px solid var(--ink);background:var(--card);padding:12px 14px;margin:0">
@@ -112,7 +113,7 @@ ${t.connections ? `<p class="src">Who's answering, self-reported (not verified):
 ${mine && !justVoted ? `<p class="src">Your current answer: <b>${esc(mine.value.toUpperCase())}</b>.</p>` : ''}
 
 <details id="register" class="envelope" style="border:1.5px dashed var(--ink);padding:10px 14px;max-width:580px"${justVoted || justRegistered ? ' open' : ''}>
-  <summary style="cursor:pointer;font-family:var(--mono);font-size:13px;font-weight:600">Add yourself to the record — optional, as much or as little as you like</summary>
+  <summary style="cursor:pointer;font-family:var(--mono);font-size:13px;font-weight:600">${registeredFields.length ? "You're on the record ✓ — open to update your file" : 'Add yourself to the record — optional, as much or as little as you like'}</summary>
   <p class="src" style="margin:10px 0 0">A registered answer is the kind an official can't wave off. Every field is optional — leave what you like.</p>
   ${registrationForm({ county, action: `/issues/${esc(draft.id)}/register`, registeredFields, justRegistered })}
 </details>
