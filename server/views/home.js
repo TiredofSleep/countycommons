@@ -101,7 +101,7 @@ ${stamps.map(s => `
 <h2>Put yourself on the record <span class="sub">— optional, as much or as little as you like</span></h2>
 <p style="max-width:60ch">Anyone can answer questions here with no account at all. Registering is what turns your answer into the kind an official can't wave off — a count backed by real, reachable people. Every field is optional.</p>
 <div class="envelope" style="border:1.5px dashed var(--ink);padding:14px 16px 16px;max-width:580px">
-${registrationForm({ county, action: '/register', registeredFields, justRegistered })}
+${registrationForm({ county, action: '/register', registeredFields, justRegistered, voteHref: openQs.length ? `/issues/${esc(openQs[0].id)}` : '/issues' })}
 </div>
 </section>
 
