@@ -1,15 +1,16 @@
 {
-  "anchored_at": "2026-08-15T16:29:03.071Z",
-  "chain_length": 4,
-  "head_hash": "7abcea3dfa2dc8a1153b30acd2835f296728310201691a48d41f90853f7d682e",
+  "anchored_at": "2026-08-15T16:46:58.961Z",
+  "chain_length": 9,
+  "head_hash": "38cf117014bc5574e9bd07959639cda4c1c47e4e862310e4f58721023dd958b9",
   "note": "Public anchor of the append-only activity log. The internal log is hash-chained with full fidelity; this export is coarsened to daily buckets with the under-20 floor so integrity transparency never deanonymizes anyone (SECURITY.md §13.5). Anyone can verify: the chain begins at the genesis entry; any rewrite breaks every hash after it.",
   "daily": {
     "2026-08-15": {
       "events": {
         "genesis": 1,
         "issue-open": 1,
-        "vote": 1,
-        "registration": 1
+        "vote": 3,
+        "registration": 3,
+        "correction": 1
       },
       "votes_by_issue": {
         "contract-transparency": "under 20"
