@@ -110,6 +110,15 @@ app.use((req, res, next) => {
   res.status(401).send(gatePage(null, req.originalUrl));
 });
 
+// Downgrade any pre-existing persistent participant cookie to session scope:
+// re-issuing it without Max-Age makes the browser forget it when the window
+// closes — the nothing-follows-you-home rule, applied retroactively.
+app.use((req, res, next) => {
+  const p = participantOf(req);
+  if (p) res.setHeader('Set-Cookie', `cc_participant=${p}; Path=/; HttpOnly; SameSite=Lax`);
+  next();
+});
+
 // ---- the document archive (behind the gate) ----
 // Every stored source document, served from our hashed archive.
 app.use('/files', express.static(path.join(__dirname, '..', 'inbox'), { maxAge: '1d', index: false }));

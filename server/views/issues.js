@@ -1,6 +1,7 @@
 const { esc } = require('../lib/corpus');
 const { layout } = require('./layout');
-const { tally, myVote } = require('../vote');
+const { myVote } = require('../vote');
+const { tally } = require('../tally');
 const { registrationForm } = require('./register-box');
 const { rulesButton, rulesDialog } = require('./rules');
 
@@ -20,7 +21,7 @@ function issuesPage(data, submitted) {
     return `
 <div class="issue" style="display:block">
   <b><a href="/issues/${esc(d.id)}">${esc(d.final_wording || d.neutral_framing)}</a></b>
-  <p class="src">Opened ${esc(d.opened)} · ${t.below_floor ? `fewer than ${t.floor} responses so far` : `${t.total} responses`} · open sentiment (Tier 0) · <a href="/issues/${esc(d.id)}#share">share it</a></p>
+  <p class="src">Opened ${esc(d.opened)} · ${t.total} response${t.total === 1 ? '' : 's'} · open sentiment (Tier 0) · <a href="/issues/${esc(d.id)}#share">share it</a></p>
 </div>`;
   }).join('');
 
@@ -64,14 +65,12 @@ function issuePage(data, draft, participant, justVoted, registeredFields = [], j
   const t = tally(draft.id);
   const mine = participant ? myVote(participant, draft.id) : null;
 
-  const results = t.below_floor
-    ? `<p class="src">Fewer than ${t.floor} responses so far. Exact counts display once ${t.floor} is reached — the same small-town privacy floor every result on this platform will use.</p>`
-    : `<table class="plain"><thead><tr><th>Answer</th><th>Count</th></tr></thead><tbody>
+  const results = `<table class="plain"><thead><tr><th>Answer</th><th>Count</th></tr></thead><tbody>
 <tr><td>Yes</td><td class="num">${t.counts.yes}</td></tr>
 <tr><td>No</td><td class="num">${t.counts.no}</td></tr>
 <tr><td>Skip</td><td class="num">${t.counts.skip}</td></tr>
 </tbody></table>
-<p class="src">${t.total} total · all Tier 0 (open sentiment) · all via web</p>
+<p class="src">${t.total} total · all Tier 0 (open sentiment) · all via web · updates instantly${t.duplicates_removed ? ` · ${t.duplicates_removed} double vote${t.duplicates_removed === 1 ? '' : 's'} cleared by registered email or phone` : ''}</p>
 ${t.connections ? `<p class="src">Who's answering, self-reported (not verified): ${t.connections.resident} live in ${esc(county.name)} · ${t.connections['works-here']} work here · ${t.connections['family-here']} have family here · ${t.connections.elsewhere + t.connections.unsaid} other or unsaid</p>` : ''}`;
 
   const btn = (v, label) => `<button type="submit" name="value" value="${v}"
@@ -110,6 +109,7 @@ ${registeredFields.length ? `<p class="src" style="color:var(--sourced)"><b>You'
   </fieldset>
 
   <div style="display:flex;gap:10px;flex-wrap:wrap">${btn('yes', 'YES')} ${btn('no', 'NO')} ${btn('skip', 'SKIP')}</div>
+  <p class="src" style="margin:0">One person, one voice — please vote once. Registered votes that share an email or phone are automatically collapsed to the newest one at count time.</p>
 </form>
 ${mine && !justVoted ? `<p class="src">Your current answer: <b>${esc(mine.value.toUpperCase())}</b>.</p>` : ''}
 
@@ -140,7 +140,7 @@ ${results}
       <button type="button" data-share-title="A question for Clark County" data-share-url="https://countycommons.us/issues/${esc(draft.id)}" style="font-family:var(--mono);font-size:12px;padding:7px 12px;border:1.5px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer">Share…</button>
     </div>
     <p class="src"><b>During early access:</b> the site asks for a door code — send it along with the link (you know it if you're reading this). When they enter it, the door opens onto this exact page.</p>
-    <p class="src">The traction rule: at 100 responses, the result gets printed and hand-delivered to the relevant body, and the delivery is stamped on the <a href="/docket">docket</a>. ${t.below_floor ? `This question is at fewer than ${t.floor} — every share moves it.` : `${t.total} of 100 and counting.`}</p>
+    <p class="src">The traction rule: at 100 responses, the result gets printed and hand-delivered to the relevant body, and the delivery is stamped on the <a href="/docket">docket</a>. ${t.total} of 100 and counting — every share moves it.</p>
   </div>
 </div>
 </section>

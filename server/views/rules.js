@@ -15,9 +15,9 @@ function rulesDialog(county) {
   <div class="eyebrow">${esc(county.platform_name)} · the counting room</div>
   <h2 id="rules-title" style="margin-top:2px">Rules of engagement</h2>
   <ul style="padding-left:18px;display:flex;flex-direction:column;gap:7px;font-size:14px;margin:10px 0">
-    <li><b>One voice per sitting.</b> No account needed. You can change your answer any time while your window stays open — your last answer is the one that counts.</li>
+    <li><b>One person, one voice — please vote once.</b> No account needed; you can change your answer any time while your window stays open, and your last answer is the one that counts. Registered votes that share an email or phone collapse to the newest automatically, and the count says how many were cleared.</li>
     <li><b>Everyone can answer.</b> The resident question is self-reported and always labeled that way. Verification tiers come later; every count will always show how verified it is.</li>
-    <li><b>Counts stay behind a privacy floor.</b> Below 20 responses, exact numbers don't display — in a small town, small counts can identify people.</li>
+    <li><b>Counts update instantly.</b> Tier 0 answers are anonymous, so exact counts identify no one and display from the very first vote. When the verified tiers arrive, small verified counts will render as ranges — in a small town, a small named count can identify people.</li>
     <li><b>Registration is optional</b> — as much or as little as you like. It has one use, stated in full where you enter it: kept private, never published, shown to a county or city official only to verify a count is real people, on request. Never sold, never anything else. Removable any time.</li>
     <li><b>Nothing follows you home.</b> The moment your browser window closes, this device forgets who was here — on purpose, so a shared or public computer never shows the next person your answers. Answers already counted stay counted; registered details stay safe on our server.</li>
     <li><b>These counts are unofficial.</b> Not an election, not a referendum, not a petition. Their only weight is that the counting is published and checkable.</li>

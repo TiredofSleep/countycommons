@@ -41,32 +41,12 @@ function castVote(participant, issue, value, channel, connection) {
   return store.votes[issue][participant];
 }
 
-// Aggregates only. Below the privacy floor, exact counts are withheld and a
-// range renders instead — the same rule the full platform will apply per tier.
-const FLOOR = 20;
-
-function tally(issue) {
-  const store = loadStore();
-  const votes = Object.values(store.votes[issue] || {});
-  const counts = { yes: 0, no: 0, skip: 0 };
-  const connections = { resident: 0, 'works-here': 0, 'family-here': 0, elsewhere: 0, unsaid: 0 };
-  for (const v of votes) {
-    counts[v.value]++;
-    connections[connections[v.connection] !== undefined ? v.connection : 'unsaid']++;
-  }
-  const total = votes.length;
-  return {
-    total,
-    floor: FLOOR,
-    below_floor: total < FLOOR,
-    counts: total < FLOOR ? null : counts,
-    connections: total < FLOOR ? null : connections
-  };
-}
+// Tallying lives in server/tally.js — the one module allowed to join votes
+// with registrations (in memory, at tally time) to clear double votes.
 
 function myVote(participant, issue) {
   const store = loadStore();
   return (store.votes[issue] || {})[participant] || null;
 }
 
-module.exports = { castVote, tally, myVote };
+module.exports = { castVote, myVote };

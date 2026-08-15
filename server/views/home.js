@@ -1,6 +1,6 @@
 const { esc, money } = require('../lib/corpus');
 const { layout } = require('./layout');
-const { tally } = require('../vote');
+const { tally } = require('../tally');
 const { registrationForm } = require('./register-box');
 const { rulesButton, rulesDialog } = require('./rules');
 
