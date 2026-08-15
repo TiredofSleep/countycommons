@@ -29,7 +29,7 @@ function issuesPage(data, submitted) {
 <header class="page">
   <div class="eyebrow">${esc(county.name)}, ${esc(county.state)}</div>
   <h1>Open questions</h1>
-  <div class="src"><b>This is the county's counting room — where what residents want becomes a number with receipts.</b> Questions put to residents, answered by residents: no account needed, one voice per browser, changeable until close. Today's counts are open sentiment; the verification tiers that make a number impossible to wave off arrive with the full voting layer — and every count, always, shows exactly how verified it is. That honesty is what makes the number powerful.</div>
+  <div class="src"><b>This is the county's counting room — where what residents want becomes a number with receipts.</b> Questions put to residents, answered by residents: no account needed, one voice per sitting, changeable while your window stays open — and nothing follows you home from a shared computer. Today's counts are open sentiment; the verification tiers that make a number impossible to wave off arrive with the full voting layer — and every count, always, shows exactly how verified it is. That honesty is what makes the number powerful.</div>
 </header>
 ${items || '<p class="src">No questions are open right now.</p>'}
 
@@ -99,7 +99,7 @@ ${t.connections ? `<p class="src">Who's answering, self-reported (not verified):
 </header>
 
 <section>
-<h2>Answer <span class="sub">— no account needed; one voice per browser; changeable until close</span> ${rulesButton()}</h2>
+<h2>Answer <span class="sub">— no account needed; one voice per sitting; changeable while your window is open</span> ${rulesButton()}</h2>
 ${registeredFields.length ? `<p class="src" style="color:var(--sourced)"><b>You're on the record ✓</b> — on file with your answers (never published): <b>${registeredFields.map(esc).join(', ')}</b>. Your answer here counts as a registered voice.</p>` : ''}
 <form method="POST" action="/issues/${esc(draft.id)}/vote" style="display:flex;flex-direction:column;gap:12px;max-width:580px;margin:10px 0">
 

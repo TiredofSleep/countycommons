@@ -245,15 +245,20 @@ app.get('/issues/:id/qr.svg', (req, res) => {
   });
 });
 
-// One participant token per browser, created on first participation of any
+// One participant token per SITTING, created on first participation of any
 // kind (vote or registration) — the same token keys both stores, which is
 // what lets tally-time verification join them in memory later (M5).
+// Deliberately a session cookie (no Max-Age): the moment the browser window
+// closes, this device forgets who was here — nothing personal persists on a
+// shared computer. The trade, stated in the public rules: one voice per
+// sitting, and cross-session dedup waits for the verification tiers, where
+// it belongs.
 function ensureParticipant(req, res) {
   let participant = participantOf(req);
   if (!participant) {
     participant = crypto.randomBytes(12).toString('hex');
     res.setHeader('Set-Cookie',
-      `cc_participant=${participant}; Path=/; Max-Age=${60 * 60 * 24 * 365}; HttpOnly; SameSite=Lax`);
+      `cc_participant=${participant}; Path=/; HttpOnly; SameSite=Lax`);
   }
   return participant;
 }
