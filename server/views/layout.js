@@ -39,7 +39,7 @@ ${body}
 <footer>
 ${esc(county.platform_name)} is a free civic transparency project for ${esc(county.name)}, ${esc(county.state)}.
 It computes and cites; it never takes sides. A dead end means "not yet ingested and navigable," never "hidden."
-<a href="/methodology">How every number is sourced</a> · <a href="/documents">the documents</a> · <a href="/verify">the receipt</a> · <a href="/vendors">who gets paid</a> · <a href="/audits">what the auditors reported</a> · <a href="/stance">where we stand</a> · <a href="/never">what we will never do</a> · <a href="/security">how this is secured</a> · <a href="/guide">the plain-words tour</a>. ${esc(county.sponsor_line)}.${corrections}
+<a href="/methodology">How every number is sourced</a> · <a href="/documents">the documents</a> · <a href="/verify">the receipt</a> · <a href="/vendors">who gets paid</a> · <a href="/audits">what the auditors reported</a> · <a href="/stance">where we stand</a> · <a href="/cases">the precedents</a> · <a href="/research">the research shelf</a> · <a href="/never">what we will never do</a> · <a href="/security">how this is secured</a> · <a href="/guide">the plain-words tour</a>. ${esc(county.sponsor_line)}.${corrections}
 </footer>
 </div>
 </body>

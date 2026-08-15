@@ -193,7 +193,7 @@ app.get('/compare/:id', (req, res) => {
 });
 
 app.get('/docket', (req, res) => res.send(docketPage(load())));
-app.get('/documents', (req, res) => res.send(documentsPage(load())));
+app.get('/documents', (req, res) => res.send(documentsPage(load(), req.query.q)));
 app.get('/verify', (req, res) => res.send(verifyPage(load())));
 app.get('/methodology', (req, res) => res.send(methodologyPage(load())));
 

@@ -32,13 +32,57 @@ ${items}`;
 }
 
 // ---------- Documents ----------
-function documentsPage(data) {
+const fs = require('fs');
+const path = require('path');
+
+// Full-text search over the OCR'd archive (minutes, ordinances) — the review
+// text files are small; a linear scan is instant at this scale.
+function searchOcrTexts(q) {
+  const dir = path.join(__dirname, '..', '..', 'data', 'review');
+  const out = [];
+  let files = [];
+  try { files = fs.readdirSync(dir).filter(f => f.endsWith('-ocr.txt')); } catch (e) { return out; }
+  const needle = q.toLowerCase();
+  for (const f of files) {
+    try {
+      const text = fs.readFileSync(path.join(dir, f), 'utf8');
+      const idx = text.toLowerCase().indexOf(needle);
+      if (idx === -1) continue;
+      const snippet = text.slice(Math.max(0, idx - 70), idx + q.length + 90).replace(/\s+/g, ' ').trim();
+      const base = f.replace('-ocr.txt', '');
+      out.push({ base, snippet, count: text.toLowerCase().split(needle).length - 1 });
+    } catch (e) { /* skip unreadable */ }
+  }
+  return out.sort((a, b) => b.count - a.count).slice(0, 12);
+}
+
+function documentsPage(data, q) {
   const { documents, county, budget } = data;
   const counts = {};
   for (const n of budget.nodes) {
     if (n.source) counts[n.source.doc] = (counts[n.source.doc] || 0) + 1;
   }
-  const rows = documents.documents.map(d => `
+
+  q = (q || '').trim().slice(0, 100);
+  let docs = documents.documents;
+  if (q) {
+    const needle = q.toLowerCase();
+    docs = docs.filter(d =>
+      [d.title, d.jurisdiction, d.source_note, d.status, d.layer, d.id, String(d.year)]
+        .join(' ').toLowerCase().includes(needle));
+  }
+
+  // Group by jurisdiction for scannability.
+  const groups = {};
+  for (const d of docs) (groups[d.jurisdiction] = groups[d.jurisdiction] || []).push(d);
+  const groupOrder = Object.keys(groups).sort((a, b) =>
+    (a === county.slug || a === 'clark-county' ? -1 : b === 'clark-county' ? 1 : a.localeCompare(b)));
+
+  const ocrHits = q ? searchOcrTexts(q) : [];
+  const byBase = new Map(documents.documents.filter(d => d.local_file)
+    .map(d => [d.local_file.split('/').pop().replace(/\.pdf$/i, ''), d]));
+
+  const rows = d => `
 <div class="issue" id="${esc(d.id)}">
   <div class="ibody">
     <b>${esc(d.title)}</b>
@@ -54,16 +98,48 @@ function documentsPage(data) {
       ${d.source_url ? `<dt>Origin</dt><dd><a href="${esc(d.source_url)}" rel="noopener">${esc(d.source_url)}</a></dd>` : ''}
     </dl>
   </div>
-</div>`).join('');
+</div>`;
+
+  const groupsHtml = groupOrder.map(g => `
+<section>
+<h2>${esc(g)} <span class="sub">— ${groups[g].length} document${groups[g].length > 1 ? 's' : ''}</span></h2>
+${groups[g].map(rows).join('')}
+</section>`).join('');
+
+  const ocrHtml = ocrHits.length ? `
+<section>
+<h2>Found inside the pages <span class="sub">— full-text matches in the OCR'd archive</span></h2>
+${ocrHits.map(h => {
+    const doc = byBase.get(h.base);
+    const label = doc ? doc.title : h.base.replace(/^qc-/, 'Quorum court minutes ').replace(/-/g, ' ');
+    const link = doc && doc.local_file ? `/files/${esc(doc.local_file.replace(/^inbox\//, ''))}` : (h.base.startsWith('qc-') ? `/files/minutes/${esc(h.base)}.pdf` : null);
+    return `<div class="issue" style="display:block">
+  <b>${doc ? `<a href="#${esc(doc.id)}">${esc(label)}</a>` : esc(label)}</b> <span class="code">${h.count} match${h.count > 1 ? 'es' : ''}</span>
+  <p class="src">…${esc(h.snippet)}…</p>
+  ${link ? `<p class="src"><a href="${link}">Read the archived PDF</a> · machine-read text; verify against the scan before citing.</p>` : ''}
+</div>`;
+  }).join('')}
+</section>` : (q ? '<p class="src">No full-text matches inside the OCR\'d archive for that search.</p>' : '');
 
   const body = `
 <header class="page">
   <div class="eyebrow">${esc(county.name)}, ${esc(county.state)}</div>
   <h1>Document library</h1>
-  <div class="src">Every document behind the numbers. Nothing on this site is asserted without a document; when a document is missing, the site says so and the gap goes on the <a href="/docket">docket</a>.</div>
+  <div class="src">Every document behind the numbers — ${documents.documents.length} filed, hashed, and archived. Search covers titles, jurisdictions, years, and the full machine-read text of the minutes and ordinances. When a document is missing, the gap goes on the <a href="/docket">docket</a>.</div>
+  <form method="GET" action="/documents" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+    <input type="search" name="q" value="${esc(q)}" placeholder="Search: ambulance, asphalt, salary, EDCCC, millage…"
+      style="font-size:14px;padding:9px 12px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink);flex:1;min-width:220px">
+    <button type="submit" style="font-family:var(--mono);font-size:13px;padding:9px 16px;background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);cursor:pointer">Search</button>
+    ${q ? '<a href="/documents" style="align-self:center;font-size:12.5px">clear</a>' : ''}
+  </form>
+  ${q ? `<p class="src" style="margin-top:8px">${docs.length} document${docs.length === 1 ? '' : 's'} match "${esc(q)}"${ocrHits.length ? ` · ${ocrHits.length} full-text hit${ocrHits.length > 1 ? 's' : ''} inside the pages` : ''}.</p>` : ''}
 </header>
-${rows}`;
-  return layout({ title: `Document library — ${county.platform_name}`, current: '/documents', body, county });
+${ocrHtml}
+${groupsHtml || '<p class="src">No documents match — try fewer words.</p>'}`;
+  return layout({
+    title: `Document library — ${county.platform_name}`, current: '/documents', body, county,
+    description: 'Every document behind the numbers — searchable by title, year, jurisdiction, and the full text of the OCR\'d minutes and ordinances.'
+  });
 }
 
 // ---------- Verification report ----------
