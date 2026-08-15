@@ -127,9 +127,12 @@ app.use('/files', express.static(path.join(__dirname, '..', 'inbox'), { maxAge: 
 const { homePage } = require('./views/home');
 app.get('/', (req, res) => {
   const participant = participantOf(req);
-  res.send(homePage(load(), {
+  const data = load();
+  const open = (data.issueDrafts.drafts || []).filter(d => d.status === 'open-tier0');
+  res.send(homePage(data, {
     registeredFields: participant ? require('./identity').fieldsOf(participant) : [],
-    justRegistered: req.query.registered === '1'
+    justRegistered: req.query.registered === '1',
+    announceChecked: !!(participant && open.length && require('./signatures').mySignature(participant, open[0].id))
   }));
 });
 app.get('/budget', (req, res) => res.send(treePage(load())));
@@ -302,26 +305,33 @@ app.post('/issues/:id/register', express.urlencoded({ extended: false }), (req, 
   if (!draft) return res.status(404).send(notFound(data, 'No open question with that id.'));
   const participant = ensureParticipant(req, res);
   const saved = identity.register(participant, req.body || {});
-  res.redirect(`/issues/${draft.id}${saved ? '?registered=1' : ''}#register`);
+  const sigState = applyAnnouncement(participant, draft.id, req.body);
+  res.redirect(`/issues/${draft.id}?${saved ? 'registered=1&' : ''}${sigState ? `sign=${sigState}` : ''}#${sigState === 'ok' || sigState === 'removed' ? 'sign' : 'register'}`);
 });
 
-app.post('/issues/:id/sign', express.urlencoded({ extended: false }), (req, res) => {
-  const data = load();
-  const draft = data.issueDrafts.drafts.find(d => d.id === req.params.id && d.status === 'open-tier0');
-  if (!draft) return res.status(404).send(notFound(data, 'No open question with that id.'));
-  const participant = participantOf(req);
-  const { myVote } = require('./vote');
-  const vote = participant ? myVote(participant, draft.id) : null;
-  // A signature signs an answer — no answer yet means vote first.
-  if (!vote) return res.redirect(`/issues/${draft.id}?sign=novote#sign`);
-  const { sign } = require('./signatures');
-  const saved = sign(participant, draft.id, vote.value, req.body && req.body.sig_name, req.body && req.body.sig_city);
-  res.redirect(`/issues/${draft.id}${saved ? '?sign=ok' : '?sign=noname'}#sign`);
-});
+// The announce box, resolved: checked + a vote + a registered name → the
+// name, town, and answer go on the question page; unchecked with an existing
+// announcement → it comes down. States: ok, removed, novote, noname, null.
+function applyAnnouncement(participant, issueId, body) {
+  const on = !!(body && body.announce);
+  const sigs = require('./signatures');
+  if (!on) return sigs.mySignature(participant, issueId) && sigs.unsign(participant, issueId) ? 'removed' : null;
+  const vote = require('./vote').myVote(participant, issueId);
+  if (!vote) return 'novote';
+  const vals = identity.publicValuesOf(participant);
+  if (!vals.name) return 'noname';
+  sigs.sign(participant, issueId, vote.value, vals.name, vals.city);
+  return 'ok';
+}
 
 app.post('/register', express.urlencoded({ extended: false }), (req, res) => {
   const participant = ensureParticipant(req, res);
   const saved = identity.register(participant, req.body || {});
+  const open = (load().issueDrafts.drafts || []).filter(d => d.status === 'open-tier0');
+  const sigState = open.length ? applyAnnouncement(participant, open[0].id, req.body) : null;
+  // An announcement outcome belongs on the page where the name appears (or
+  // where the missing step is) — send them there to see it.
+  if (sigState) return res.redirect(`/issues/${open[0].id}?${saved ? 'registered=1&' : ''}sign=${sigState}#sign`);
   res.redirect(`/${saved ? '?registered=1' : ''}#register`);
 });
 

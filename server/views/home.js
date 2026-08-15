@@ -24,7 +24,7 @@ function nextMeeting(calendar) {
 }
 
 function homePage(data, opts = {}) {
-  const { registeredFields = [], justRegistered = false } = opts;
+  const { registeredFields = [], justRegistered = false, announceChecked = false } = opts;
   const { county, budget, documents, verification, docket, calendar, issueDrafts } = data;
   const openQs = (issueDrafts.drafts || []).filter(d => d.status === 'open-tier0');
   const nm = nextMeeting(calendar);
@@ -101,7 +101,7 @@ ${stamps.map(s => `
 <h2>Put yourself on the record <span class="sub">— optional, as much or as little as you like</span> ${rulesButton()}</h2>
 <p style="max-width:60ch">Anyone can answer questions here with no account at all. Registering is what turns your answer into the kind an official can't wave off — a count backed by real, reachable people. Every field is optional.</p>
 <div class="envelope" style="border:1.5px dashed var(--ink);padding:14px 16px 16px;max-width:580px">
-${registrationForm({ county, action: '/register', registeredFields, justRegistered, voteHref: openQs.length ? `/issues/${esc(openQs[0].id)}` : '/issues' })}
+${registrationForm({ county, action: '/register', registeredFields, justRegistered, voteHref: openQs.length ? `/issues/${esc(openQs[0].id)}` : '/issues', announce: { show: openQs.length > 0, checked: announceChecked } })}
 </div>
 ${rulesDialog(county)}
 </section>

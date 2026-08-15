@@ -48,4 +48,19 @@ function mySignature(participant, issue) {
   return loadStore().signatures.find(s => s.issue === issue && s.participant === participant) || null;
 }
 
-module.exports = { sign, listFor, mySignature };
+// Unchecking the announce box takes the name off the page — and like every
+// write, the removal is chained first, so the public record shows a
+// signature existed and was withdrawn, without keeping the name in the store.
+function unsign(participant, issue) {
+  const sig = mySignature(participant, issue);
+  if (!sig) return false;
+  chain.append('signature-removed', { id: sig.id, issue, participant });
+  const store = loadStore();
+  store.signatures = store.signatures.filter(s => s.id !== sig.id);
+  const tmp = STORE + '.tmp';
+  fs.writeFileSync(tmp, JSON.stringify(store, null, 2));
+  fs.renameSync(tmp, STORE);
+  return true;
+}
+
+module.exports = { sign, listFor, mySignature, unsign };

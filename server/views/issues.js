@@ -119,7 +119,7 @@ ${mine && !justVoted ? `<p class="src">Your current answer: <b>${esc(mine.value.
 <details id="register" class="envelope" style="border:1.5px dashed var(--ink);padding:10px 14px;max-width:580px"${justVoted || justRegistered ? ' open' : ''}>
   <summary style="cursor:pointer;font-family:var(--mono);font-size:13px;font-weight:600">${registeredFields.length ? "You're on the record ✓ — open to update your file" : 'Add yourself to the record — optional, as much or as little as you like'}</summary>
   <p class="src" style="margin:10px 0 0">A registered answer is the kind an official can't wave off. Every field is optional — leave what you like.</p>
-  ${registrationForm({ county, action: `/issues/${esc(draft.id)}/register`, registeredFields, justRegistered })}
+  ${registrationForm({ county, action: `/issues/${esc(draft.id)}/register`, registeredFields, justRegistered, announce: { show: true, checked: !!mySig } })}
 </details>
 ${rulesDialog(county)}
 </section>
@@ -134,19 +134,11 @@ ${results}
 <section id="sign">
 <h2>Signed publicly <span class="sub">— the loud version: optional, always</span></h2>
 <p class="src" style="max-width:60ch">The count above is anonymous and stays that way. Signing is the separate, louder act — your name and your answer, on the page, like a petition on a counter. ${mine ? '' : 'Answer the question first, then sign it if you want to be heard by name.'}</p>
-${signState === 'ok' ? `<p class="src" style="color:var(--sourced)"><b>Signed ✓</b> — your name is on the page below.</p>` : ''}
-${signState === 'novote' ? `<p class="src" style="color:var(--dead)"><b>Answer first, then sign</b> — a signature signs your answer, and you haven't cast one this sitting.</p>` : ''}
-${signState === 'noname' ? `<p class="src" style="color:var(--dead)"><b>A signature needs a name.</b></p>` : ''}
-${mine ? `
-<form method="POST" action="/issues/${esc(draft.id)}/sign" style="display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;max-width:580px">
-  <label style="font-size:13.5px;flex:2;min-width:180px">Name
-    <input name="sig_name" required maxlength="80" value="${mySig ? esc(mySig.name) : ''}" placeholder="as you'd sign a petition" style="font-family:var(--mono);font-size:14px;padding:7px 9px;border:1.5px solid var(--ink);background:var(--paper);color:var(--ink);width:100%;box-sizing:border-box;margin-top:4px">
-  </label>
-  <label style="font-size:13.5px;flex:1;min-width:120px">Town <span class="src">(optional)</span>
-    <input name="sig_city" maxlength="60" value="${mySig ? esc(mySig.city || '') : ''}" placeholder="Arkadelphia" style="font-family:var(--mono);font-size:14px;padding:7px 9px;border:1.5px solid var(--ink);background:var(--paper);color:var(--ink);width:100%;box-sizing:border-box;margin-top:4px">
-  </label>
-  <button type="submit" style="font-family:var(--mono);font-size:13px;padding:9px 16px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);cursor:pointer">${mySig ? 'Update my signature' : `Sign my ${esc((mine.value || '').toUpperCase())} publicly`}</button>
-</form>` : ''}
+${signState === 'ok' ? `<p class="src" style="color:var(--sourced)"><b>Announced ✓</b> — your name is on the page below. Uncheck the announce box any time to take it down.</p>` : ''}
+${signState === 'removed' ? `<p class="src" style="color:var(--sourced)"><b>Announcement taken down</b> — your name is off the page. The withdrawal is on the public log, without the name.</p>` : ''}
+${signState === 'novote' ? `<p class="src" style="color:var(--dead)"><b>Answer first</b> — an announcement announces your answer, and you haven't cast one this sitting. Vote above, then check the box again.</p>` : ''}
+${signState === 'noname' ? `<p class="src" style="color:var(--dead)"><b>An announcement needs a name</b> — add at least a name in the envelope above, keep the box checked, and register again.</p>` : ''}
+${mine ? `<p class="src" style="max-width:60ch">To put your name here, check <b>Announce me publicly</b> in the envelope above — registering and announcing are one motion.</p>` : ''}
 ${sigs.length ? `
 <div style="margin-top:14px;border:1.5px solid var(--ink);background:var(--card);padding:12px 14px;max-width:580px">
   <div class="eyebrow" style="margin-bottom:6px">${sigs.length} public signature${sigs.length === 1 ? '' : 's'} · self-signed, unverified</div>

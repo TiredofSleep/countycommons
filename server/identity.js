@@ -50,4 +50,16 @@ function fieldsOf(participant) {
   } catch (e) { return []; }
 }
 
-module.exports = { register, fieldsOf };
+// The ONE sanctioned crossing from the identity store to public content:
+// when a voter checks the announce box, their registered name and city
+// become their public signature. Explicit consent, field-limited — name and
+// city only, never email, phone, or zip — and revocable by unchecking.
+function publicValuesOf(participant) {
+  try {
+    const store = JSON.parse(fs.readFileSync(STORE, 'utf8'));
+    const r = store.registrations[participant] || {};
+    return { name: r.name || '', city: r.city || '' };
+  } catch (e) { return { name: '', city: '' }; }
+}
+
+module.exports = { register, fieldsOf, publicValuesOf };

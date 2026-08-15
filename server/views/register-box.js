@@ -13,7 +13,12 @@ const field = (name, label, ph, type) => `
     style="font-family:var(--mono);font-size:14px;padding:7px 9px;border:1.5px solid var(--ink);background:var(--paper);color:var(--ink);width:100%;box-sizing:border-box;margin-top:4px">
 </label>`;
 
-function registrationForm({ county, action, registeredFields = [], justRegistered = false, voteHref = null }) {
+function registrationForm({ county, action, registeredFields = [], justRegistered = false, voteHref = null, announce = null }) {
+  const announceBox = announce && announce.show ? `
+<label style="display:flex;gap:8px;align-items:baseline;font-size:13.5px;cursor:pointer;border:1.5px solid var(--ink);padding:9px 11px;background:var(--paper)">
+  <input type="checkbox" name="announce"${announce.checked ? ' checked' : ''}>
+  <span><b>Announce me publicly</b> — put my name, town, and answer on the question page, petition-style. The loud version, always your choice; uncheck any time to take it down. Self-signed and unverified until the verification tiers.</span>
+</label>` : '';
   const onFile = registeredFields.length
     ? `<p class="src" style="margin:8px 0 0">On file with your answers (never published): <b>${registeredFields.map(esc).join(', ')}</b>. Fill a field to update it, or email us to remove everything.</p>`
     : '';
@@ -33,9 +38,10 @@ ${justRegistered ? `<p class="src" style="color:var(--sourced)"><b>You're on the
   ${field('phone', 'Phone', '870-555-0100', 'tel')}
   ${field('city', 'City or town', 'Arkadelphia, Gurdon, Caddo Valley…')}
   ${field('zip', 'ZIP', '71923')}
+  ${announceBox}
   ${buttons}
 </form>
-<p class="src" style="margin:12px 0 0;max-width:60ch"><b>The only use of this information, in full:</b> it stays in a private file on our server, separate from the votes, and is never published anywhere. If a county or city official asks to verify that a count is real people, registrant details can be shown to that official — that request-and-verify is the entire use. Never sold, never given to anyone else, never used for marketing. Remove yours any time: ${county.contact_email ? `<a href="mailto:${esc(county.contact_email)}">${esc(county.contact_email)}</a>` : 'see the footer'}.</p>
+<p class="src" style="margin:12px 0 0;max-width:60ch"><b>The only use of this information, in full:</b> it stays in a private file on our server, separate from the votes, and is never published anywhere — with one exception that is always yours to choose: the announce box puts your name, town, and answer on the question page, until you uncheck it. If a county or city official asks to verify that a count is real people, registrant details can be shown to that official — that request-and-verify is the entire use. Never sold, never given to anyone else, never used for marketing. Remove yours any time: ${county.contact_email ? `<a href="mailto:${esc(county.contact_email)}">${esc(county.contact_email)}</a>` : 'see the footer'}.</p>
 ${onFile}`;
 }
 
