@@ -46,8 +46,8 @@ function homePage(data, opts = {}) {
   const body = `
 <header class="page" style="text-align:left">
   <div class="eyebrow">${esc(county.platform_name)} · countycommons.us · ${esc(county.name)}, ${esc(county.state)}</div>
-  <h1 style="font-size:clamp(24px,5.2vw,38px);max-width:22ch;text-wrap:balance">Power in verified local numbers.</h1>
-  <p style="font-size:clamp(15px,2.6vw,19px);max-width:56ch;margin:10px 0 4px">It's your money — <b>${money(budget.meta.grand_total)} a year</b>. See it to the receipt. Weigh in on it. Turn what this county wants into <b>a number nobody can wave off</b>.</p>
+  <h1 style="font-size:clamp(22px,4.6vw,36px);max-width:30ch;text-wrap:balance">A home for community collaboration, expression, and funding — the checkable middle layer government sites don't build.</h1>
+  <p style="font-size:clamp(15px,2.6vw,19px);max-width:56ch;margin:10px 0 4px"><b>Power in verified local numbers.</b> It's your money — <b>${money(budget.meta.grand_total)} a year</b>. See it to the receipt. Weigh in on it. Turn what this county wants into <b>a number nobody can wave off</b>.</p>
   <p style="font-family:var(--mono);font-size:clamp(12px,2vw,14px);letter-spacing:.04em;margin:10px 0 2px"><b>SEE THE MONEY · ASK THE QUESTION · CHECK THE COUNT</b></p>
   <p class="src" style="max-width:60ch">Every dollar cited to its source document. Every voice counted honestly by tier. Every claim checkable by anyone — including this one.</p>
   ${vOk ? `<div class="stamp">Verified ✓ ${verification.summary.passed}/${verification.summary.total_checks}</div>` : ''}
@@ -107,7 +107,7 @@ ${registrationForm({ county, action: '/register', registeredFields, justRegister
 
 <section>
 <h2>Why you can trust it <span class="sub">— you don't have to; you can check</span></h2>
-<p style="max-width:66ch">First, know what this is: <b>an independent, citizen-built project — not a government website</b>. Nothing here is official; the county's own site is <a href="https://www.clarkcountyar.gov" rel="noopener">clarkcountyar.gov</a>. What this platform adds is the checkable middle layer government sites don't build — a home for community collaboration and expression, and, as it grows, for funding the projects this county decides it wants.</p>
+<p style="max-width:66ch">First, know what this is: <b>an independent, citizen-built project — not a government website</b>. Nothing here is official; the county's own site is <a href="https://www.clarkcountyar.gov" rel="noopener">clarkcountyar.gov</a>. This platform is the layer in between: where the county's money becomes navigable, its questions get counted, and — as it grows — the projects it decides it wants find their footing.</p>
 <p style="max-width:66ch">This platform renders no verdicts and takes no sides. Every number links to its source document. The arithmetic <a href="/verify">re-adds itself in public</a>. The activity log is <a href="/security">hash-chained and anchored</a> where we can't rewrite it. The code is <a href="https://github.com/TiredofSleep/countycommons" rel="noopener">public to the last line</a>. And the standard pointed at us first: <a href="/story">our story</a>, <a href="/stance">our stance</a>, <a href="/never">our nevers</a>.</p>
 </section>`;
 
