@@ -107,7 +107,7 @@ ${registrationForm({ county, action: '/register', registeredFields, justRegister
 
 <section>
 <h2>Why you can trust it <span class="sub">— you don't have to; you can check</span></h2>
-<p style="max-width:66ch">First, know what this is: <b>an independent, citizen-built project — not a government website</b>. Nothing here is official; the county's own site is <a href="https://www.clarkcountyar.gov" rel="noopener">clarkcountyar.gov</a>. What this platform adds is the checkable middle layer government sites don't build.</p>
+<p style="max-width:66ch">First, know what this is: <b>an independent, citizen-built project — not a government website</b>. Nothing here is official; the county's own site is <a href="https://www.clarkcountyar.gov" rel="noopener">clarkcountyar.gov</a>. What this platform adds is the checkable middle layer government sites don't build — a home for community collaboration and expression, and, as it grows, for funding the projects this county decides it wants.</p>
 <p style="max-width:66ch">This platform renders no verdicts and takes no sides. Every number links to its source document. The arithmetic <a href="/verify">re-adds itself in public</a>. The activity log is <a href="/security">hash-chained and anchored</a> where we can't rewrite it. The code is <a href="https://github.com/TiredofSleep/countycommons" rel="noopener">public to the last line</a>. And the standard pointed at us first: <a href="/story">our story</a>, <a href="/stance">our stance</a>, <a href="/never">our nevers</a>.</p>
 </section>`;
 
