@@ -43,11 +43,11 @@ function homePage(data) {
 
   const body = `
 <header class="page" style="text-align:left">
-  <div class="eyebrow">countycommons.us · ${esc(county.name)}, ${esc(county.state)} · free, open, checkable</div>
-  <h1 style="font-size:clamp(26px,6vw,40px)">${esc(county.platform_name)}</h1>
-  <p style="font-size:clamp(15px,2.5vw,18px);max-width:56ch;margin:8px 0 2px"><b>See the money. Ask the question. Check the count.</b></p>
-  <p style="font-size:clamp(14px,2.2vw,16px);max-width:58ch;margin:6px 0 2px">It's your money — ${money(budget.meta.grand_total)} of it a year. This is where ${esc(county.name)} watches it, weighs in on it, and turns what residents want into <b>a verified number nobody can wave off</b>.</p>
-  <p class="src" style="max-width:60ch">Every public dollar mapped to the document it came from. Every voice counted honestly by tier. Every claim checkable by anyone — including this one.</p>
+  <div class="eyebrow">${esc(county.platform_name)} · countycommons.us · ${esc(county.name)}, ${esc(county.state)}</div>
+  <h1 style="font-size:clamp(24px,5.2vw,38px);max-width:22ch;text-wrap:balance">Power in verified local numbers.</h1>
+  <p style="font-size:clamp(15px,2.6vw,19px);max-width:56ch;margin:10px 0 4px">It's your money — <b>${money(budget.meta.grand_total)} a year</b>. See it to the receipt. Weigh in on it. Turn what this county wants into <b>a number nobody can wave off</b>.</p>
+  <p style="font-family:var(--mono);font-size:clamp(12px,2vw,14px);letter-spacing:.04em;margin:10px 0 2px"><b>SEE THE MONEY · ASK THE QUESTION · CHECK THE COUNT</b></p>
+  <p class="src" style="max-width:60ch">Every dollar cited to its source document. Every voice counted honestly by tier. Every claim checkable by anyone — including this one.</p>
   ${vOk ? `<div class="stamp">Verified ✓ ${verification.summary.passed}/${verification.summary.total_checks}</div>` : ''}
 </header>
 
