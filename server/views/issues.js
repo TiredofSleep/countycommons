@@ -102,7 +102,13 @@ ${results}
 <div style="display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap">
   <img src="/issues/${esc(draft.id)}/qr.svg" alt="QR code linking to this question" width="140" height="140" style="border:1.5px solid var(--ink);background:#fff;padding:6px;flex:none">
   <div style="flex:1;min-width:220px">
-    <p style="margin-top:0">Point a phone camera at the code, or copy the link. Print it, tape it to the counter, put it in the church bulletin — the question works anywhere a neighbor can scan or tap.</p>
+    <p style="margin-top:0">Send a neighbor straight to this question — they land right here, answer in fifteen seconds, done. Text it, post it, print the code for the counter or the church bulletin.</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:8px 0">
+      <span class="code" id="share-url" style="border:1.5px solid var(--rule);background:var(--card);padding:7px 10px;font-size:12px;user-select:all">countycommons.us/issues/${esc(draft.id)}</span>
+      <button type="button" data-copy="https://countycommons.us/issues/${esc(draft.id)}" style="font-family:var(--mono);font-size:12px;padding:7px 12px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink);cursor:pointer">Copy link</button>
+      <button type="button" data-share-title="A question for Clark County" data-share-url="https://countycommons.us/issues/${esc(draft.id)}" style="font-family:var(--mono);font-size:12px;padding:7px 12px;border:1.5px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer">Share…</button>
+    </div>
+    <p class="src"><b>During early access:</b> the site asks for a door code — send it along with the link (you know it if you're reading this). When they enter it, the door opens onto this exact page.</p>
     <p class="src">The traction rule: at 100 responses, the result gets printed and hand-delivered to the relevant body, and the delivery is stamped on the <a href="/docket">docket</a>. ${t.below_floor ? `This question is at fewer than ${t.floor} — every share moves it.` : `${t.total} of 100 and counting.`}</p>
   </div>
 </div>

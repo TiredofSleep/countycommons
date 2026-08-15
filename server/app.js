@@ -65,7 +65,8 @@ function cookies(req) {
   return out;
 }
 
-function gatePage(msg) {
+function gatePage(msg, next) {
+  const dest = (next && next.startsWith('/') && !next.startsWith('//')) ? next : '/';
   return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Clark Commons — early access</title>
@@ -79,29 +80,33 @@ function gatePage(msg) {
   <form method="POST" action="/gate" style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
     <input type="password" name="password" autofocus required aria-label="Site password"
       style="font-family:var(--mono);font-size:15px;padding:8px 10px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink);flex:1;min-width:160px">
-    <input type="hidden" name="next" value="/">
+    <input type="hidden" name="next" value="${esc(dest)}">
     <button type="submit" style="font-family:var(--mono);font-size:13px;padding:8px 14px;background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);cursor:pointer">Enter</button>
   </form>
 </header></div></body></html>`;
 }
 
-app.get('/gate', (req, res) => res.send(gatePage(null)));
+app.get('/gate', (req, res) => res.send(gatePage(null, req.query.next || '/')));
 app.post('/gate', express.urlencoded({ extended: false }), (req, res) => {
   const pw = sitePassword();
   const given = (req.body && req.body.password) || '';
+  const next = (req.body && req.body.next) || '/';
+  const dest = (next.startsWith('/') && !next.startsWith('//')) ? next : '/';
   if (pw && given === pw) {
     res.setHeader('Set-Cookie',
       `cc_gate=${gateToken(pw)}; Path=/; Max-Age=${60 * 60 * 24 * 30}; HttpOnly; SameSite=Lax`);
-    return res.redirect('/');
+    return res.redirect(dest);
   }
-  res.status(401).send(gatePage('That password did not match.'));
+  res.status(401).send(gatePage('That password did not match.', dest));
 });
 
 app.use((req, res, next) => {
   const pw = sitePassword();
   if (!pw) return next();
   if (cookies(req).cc_gate === gateToken(pw)) return next();
-  res.status(401).send(gatePage(null));
+  // A shared link lands here first: remember where they were headed, so the
+  // door opens onto the page they were sent — not the lobby.
+  res.status(401).send(gatePage(null, req.originalUrl));
 });
 
 // ---- the document archive (behind the gate) ----
