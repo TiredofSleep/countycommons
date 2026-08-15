@@ -116,7 +116,13 @@ app.use('/files', express.static(path.join(__dirname, '..', 'inbox'), { maxAge: 
 
 // ---- pages ----
 const { homePage } = require('./views/home');
-app.get('/', (req, res) => res.send(homePage(load())));
+app.get('/', (req, res) => {
+  const participant = participantOf(req);
+  res.send(homePage(load(), {
+    registeredFields: participant ? require('./identity').fieldsOf(participant) : [],
+    justRegistered: req.query.registered === '1'
+  }));
+});
 app.get('/budget', (req, res) => res.send(treePage(load())));
 
 app.get('/line/:id', (req, res) => {
@@ -239,12 +245,29 @@ app.get('/issues/:id/qr.svg', (req, res) => {
   });
 });
 
+// One participant token per browser, created on first participation of any
+// kind (vote or registration) — the same token keys both stores, which is
+// what lets tally-time verification join them in memory later (M5).
+function ensureParticipant(req, res) {
+  let participant = participantOf(req);
+  if (!participant) {
+    participant = crypto.randomBytes(12).toString('hex');
+    res.setHeader('Set-Cookie',
+      `cc_participant=${participant}; Path=/; Max-Age=${60 * 60 * 24 * 365}; HttpOnly; SameSite=Lax`);
+  }
+  return participant;
+}
+
+const identity = require('./identity');
+
 app.get('/issues/:id', (req, res) => {
   const data = load();
   const draft = data.issueDrafts.drafts.find(d => d.id === req.params.id && d.status === 'open-tier0');
   if (!draft) return res.status(404).send(notFound(data, 'No open question with that id.'));
   const voted = req.query.voted && ['yes', 'no', 'skip'].includes(req.query.voted) ? req.query.voted : null;
-  res.send(issuePage(data, draft, participantOf(req), voted));
+  const participant = participantOf(req);
+  res.send(issuePage(data, draft, participant, voted,
+    participant ? identity.fieldsOf(participant) : [], req.query.registered === '1'));
 });
 
 app.post('/issues/:id/vote', express.urlencoded({ extended: false }), (req, res) => {
@@ -253,14 +276,24 @@ app.post('/issues/:id/vote', express.urlencoded({ extended: false }), (req, res)
   if (!draft) return res.status(404).send(notFound(data, 'No open question with that id.'));
   const value = (req.body && req.body.value) || '';
   if (!['yes', 'no', 'skip'].includes(value)) return res.redirect(`/issues/${draft.id}`);
-  let participant = participantOf(req);
-  if (!participant) {
-    participant = crypto.randomBytes(12).toString('hex');
-    res.setHeader('Set-Cookie',
-      `cc_participant=${participant}; Path=/; Max-Age=${60 * 60 * 24 * 365}; HttpOnly; SameSite=Lax`);
-  }
-  castVote(participant, draft.id, value, 'web');
-  res.redirect(`/issues/${draft.id}?voted=${value}`);
+  const participant = ensureParticipant(req, res);
+  castVote(participant, draft.id, value, 'web', (req.body && req.body.connection) || '');
+  res.redirect(`/issues/${draft.id}?voted=${value}#register`);
+});
+
+app.post('/issues/:id/register', express.urlencoded({ extended: false }), (req, res) => {
+  const data = load();
+  const draft = data.issueDrafts.drafts.find(d => d.id === req.params.id && d.status === 'open-tier0');
+  if (!draft) return res.status(404).send(notFound(data, 'No open question with that id.'));
+  const participant = ensureParticipant(req, res);
+  const saved = identity.register(participant, req.body || {});
+  res.redirect(`/issues/${draft.id}${saved ? '?registered=1' : ''}#register`);
+});
+
+app.post('/register', express.urlencoded({ extended: false }), (req, res) => {
+  const participant = ensureParticipant(req, res);
+  const saved = identity.register(participant, req.body || {});
+  res.redirect(`/${saved ? '?registered=1' : ''}#register`);
 });
 
 // ---- support drop-box ----

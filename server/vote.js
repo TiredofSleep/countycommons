@@ -12,24 +12,29 @@ const chain = require('./lib/chain');
 
 const STORE = path.join(__dirname, '..', 'data', 'civic-votes.json');
 const VALUES = new Set(['yes', 'no', 'skip']);
+// Self-reported connection to the county, asked first on every vote.
+// Everyone can answer — the count just says who's who. Not verified;
+// always labeled that way. Verification tiers replace this at M5.
+const CONNECTIONS = new Set(['resident', 'works-here', 'family-here', 'elsewhere']);
 
 function loadStore() {
   try { return JSON.parse(fs.readFileSync(STORE, 'utf8')); }
   catch (e) { return { votes: {} }; }
 }
 
-function castVote(participant, issue, value, channel) {
+function castVote(participant, issue, value, channel, connection) {
   if (!VALUES.has(value)) throw new Error('invalid vote value');
+  const conn = CONNECTIONS.has(connection) ? connection : 'unsaid';
   // Chain FIRST, store second — the deliberate inverse of the POS doctrine
   // ("archiving must never break a save"). In a civic system the log is the
   // product: if the chain cannot record a vote, the vote must not happen.
   // If the store write fails after the chain append, the recount observer
   // (pipeline/recount.js) surfaces the orphan as an incident.
-  chain.append('vote', { issue, participant, value, channel });
+  chain.append('vote', { issue, participant, value, channel, connection: conn });
   const store = loadStore();
   if (!store.votes[issue]) store.votes[issue] = {};
   // Last write wins until close; every vote channel-tagged.
-  store.votes[issue][participant] = { value, channel, cast_at: new Date().toISOString() };
+  store.votes[issue][participant] = { value, channel, connection: conn, cast_at: new Date().toISOString() };
   const tmp = STORE + '.tmp';
   fs.writeFileSync(tmp, JSON.stringify(store, null, 2));
   fs.renameSync(tmp, STORE);
@@ -44,13 +49,18 @@ function tally(issue) {
   const store = loadStore();
   const votes = Object.values(store.votes[issue] || {});
   const counts = { yes: 0, no: 0, skip: 0 };
-  for (const v of votes) counts[v.value]++;
+  const connections = { resident: 0, 'works-here': 0, 'family-here': 0, elsewhere: 0, unsaid: 0 };
+  for (const v of votes) {
+    counts[v.value]++;
+    connections[connections[v.connection] !== undefined ? v.connection : 'unsaid']++;
+  }
   const total = votes.length;
   return {
     total,
     floor: FLOOR,
     below_floor: total < FLOOR,
-    counts: total < FLOOR ? null : counts
+    counts: total < FLOOR ? null : counts,
+    connections: total < FLOOR ? null : connections
   };
 }
 

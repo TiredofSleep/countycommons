@@ -99,3 +99,12 @@ footer{margin-top:34px;font-size:12px;color:var(--ink-soft);border-top:1.5px sol
   h2{letter-spacing:.08em}
   button,a.chip{min-height:32px}
 }
+
+/* The registrant's envelope — the classified-file wink, kept very quiet:
+   a breath of manila and a small private-file stamp. */
+.envelope{position:relative;background:var(--card);
+  background-image:linear-gradient(rgba(181,146,76,.07),rgba(181,146,76,.07))}
+.envelope::after{content:"PRIVATE · REGISTRANT FILE";position:absolute;top:8px;right:10px;transform:rotate(2.5deg);
+  font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.12em;color:var(--dead);opacity:.38;
+  border:1px solid var(--dead);padding:2px 6px;pointer-events:none;text-transform:uppercase}
+@media (max-width:560px){.envelope::after{content:"PRIVATE";right:8px}}

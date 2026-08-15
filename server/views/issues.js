@@ -1,6 +1,7 @@
 const { esc } = require('../lib/corpus');
 const { layout } = require('./layout');
 const { tally, myVote } = require('../vote');
+const { registrationForm } = require('./register-box');
 
 // The voice layer's front door, Tier 0 edition. The platform computes and
 // cites; the question is the residents' to answer. No verdicts here either —
@@ -57,7 +58,7 @@ ${submitted ? `<p style="color:var(--sourced)"><b>Received.</b> Your question is
   return layout({ title: `Open questions — ${county.platform_name}`, current: '/issues', body, county });
 }
 
-function issuePage(data, draft, participant, justVoted) {
+function issuePage(data, draft, participant, justVoted, registeredFields = [], justRegistered = false) {
   const { county } = data;
   const t = tally(draft.id);
   const mine = participant ? myVote(participant, draft.id) : null;
@@ -69,26 +70,52 @@ function issuePage(data, draft, participant, justVoted) {
 <tr><td>No</td><td class="num">${t.counts.no}</td></tr>
 <tr><td>Skip</td><td class="num">${t.counts.skip}</td></tr>
 </tbody></table>
-<p class="src">${t.total} total · all Tier 0 (open sentiment) · all via web</p>`;
+<p class="src">${t.total} total · all Tier 0 (open sentiment) · all via web</p>
+${t.connections ? `<p class="src">Who's answering, self-reported (not verified): ${t.connections.resident} live in ${esc(county.name)} · ${t.connections['works-here']} work here · ${t.connections['family-here']} have family here · ${t.connections.elsewhere + t.connections.unsaid} other or unsaid</p>` : ''}`;
 
   const btn = (v, label) => `<button type="submit" name="value" value="${v}"
     style="font-family:var(--mono);font-size:14px;padding:10px 22px;cursor:pointer;border:2px solid var(--ink);
     background:${mine && mine.value === v ? 'var(--ink)' : 'var(--card)'};color:${mine && mine.value === v ? 'var(--paper)' : 'var(--ink)'}">${label}</button>`;
+
+  const CONN_OPTS = [
+    ['resident', `I live in ${county.name}`],
+    ['works-here', `I work in ${county.name}, live elsewhere`],
+    ['family-here', `Family of mine lives in ${county.name}`],
+    ['elsewhere', 'None of those — just weighing in']
+  ];
+  const connRadios = CONN_OPTS.map(([v, label]) => `
+    <label style="display:flex;gap:8px;align-items:baseline;font-size:14.5px;cursor:pointer">
+      <input type="radio" name="connection" value="${v}"${mine && mine.connection === v ? ' checked' : ''}> ${esc(label)}
+    </label>`).join('');
+
 
   const body = `
 <div class="crumb"><a href="/issues">Open questions</a></div>
 <header class="page">
   <div class="eyebrow">${esc(county.name)} · open question · Tier 0 sentiment · opened ${esc(draft.opened)}</div>
   <h1 style="font-size:clamp(18px,3.5vw,26px)">${esc(draft.final_wording)}</h1>
-  ${justVoted ? `<p class="src" style="color:var(--sourced)"><b>Got it — you answered ${esc(justVoted.toUpperCase())}.</b> You can change your answer any time until the question closes.</p>` : ''}
+  ${justVoted ? `<p class="src" style="color:var(--sourced)"><b>Got it — you answered ${esc(justVoted.toUpperCase())}.</b> You can change your answer any time until the question closes. One more step makes it count for more: <a href="#register">add yourself to the record</a> below.</p>` : ''}
 </header>
 
 <section>
 <h2>Answer <span class="sub">— no account needed; one voice per browser; changeable until close</span></h2>
-<form method="POST" action="/issues/${esc(draft.id)}/vote" style="display:flex;gap:10px;flex-wrap:wrap;margin:10px 0">
-  ${btn('yes', 'YES')} ${btn('no', 'NO')} ${btn('skip', 'SKIP')}
+<form method="POST" action="/issues/${esc(draft.id)}/vote" style="display:flex;flex-direction:column;gap:12px;max-width:580px;margin:10px 0">
+
+  <fieldset style="border:1.5px solid var(--ink);background:var(--card);padding:12px 14px;margin:0">
+    <legend style="font-family:var(--mono);font-size:13px;font-weight:600;padding:0 8px">First — are you a ${esc(county.name)} resident?</legend>
+    <p class="src" style="margin:0 0 8px">Everyone can answer. This just lets the count say who's who — self-reported, and always labeled that way.</p>
+    <div style="display:flex;flex-direction:column;gap:6px">${connRadios}</div>
+  </fieldset>
+
+  <div style="display:flex;gap:10px;flex-wrap:wrap">${btn('yes', 'YES')} ${btn('no', 'NO')} ${btn('skip', 'SKIP')}</div>
 </form>
 ${mine && !justVoted ? `<p class="src">Your current answer: <b>${esc(mine.value.toUpperCase())}</b>.</p>` : ''}
+
+<details id="register" class="envelope" style="border:1.5px dashed var(--ink);padding:10px 14px;max-width:580px"${justVoted || justRegistered ? ' open' : ''}>
+  <summary style="cursor:pointer;font-family:var(--mono);font-size:13px;font-weight:600">Add yourself to the record — optional, as much or as little as you like</summary>
+  <p class="src" style="margin:10px 0 0">A registered answer is the kind an official can't wave off. Every field is optional — leave what you like.</p>
+  ${registrationForm({ county, action: `/issues/${esc(draft.id)}/register`, registeredFields, justRegistered })}
+</details>
 </section>
 
 <section>

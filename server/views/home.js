@@ -1,6 +1,7 @@
 const { esc, money } = require('../lib/corpus');
 const { layout } = require('./layout');
 const { tally } = require('../vote');
+const { registrationForm } = require('./register-box');
 
 // The front door. Institutional, live, and calm: every number on this page
 // is computed fresh from the corpus at render time — the establishment feel
@@ -21,7 +22,8 @@ function nextMeeting(calendar) {
   return null;
 }
 
-function homePage(data) {
+function homePage(data, opts = {}) {
+  const { registeredFields = [], justRegistered = false } = opts;
   const { county, budget, documents, verification, docket, calendar, issueDrafts } = data;
   const openQs = (issueDrafts.drafts || []).filter(d => d.status === 'open-tier0');
   const nm = nextMeeting(calendar);
@@ -49,6 +51,10 @@ function homePage(data) {
   <p style="font-family:var(--mono);font-size:clamp(12px,2vw,14px);letter-spacing:.04em;margin:10px 0 2px"><b>SEE THE MONEY · ASK THE QUESTION · CHECK THE COUNT</b></p>
   <p class="src" style="max-width:60ch">Every dollar cited to its source document. Every voice counted honestly by tier. Every claim checkable by anyone — including this one.</p>
   ${vOk ? `<div class="stamp">Verified ✓ ${verification.summary.passed}/${verification.summary.total_checks}</div>` : ''}
+  <div style="display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 2px">
+    <a href="${openQs.length ? `/issues/${esc(openQs[0].id)}` : '/issues'}" style="font-family:var(--mono);font-size:14px;font-weight:600;padding:12px 20px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);text-decoration:none">Answer the open question →</a>
+    <a href="#register" style="font-family:var(--mono);font-size:14px;font-weight:600;padding:12px 20px;background:var(--card);color:var(--ink);border:2px solid var(--ink);text-decoration:none">Put yourself on the record</a>
+  </div>
 </header>
 
 <div style="display:flex;gap:10px;flex-wrap:wrap;margin:14px 0">
@@ -66,6 +72,13 @@ function homePage(data) {
   ${door('Be counted', openQs.length ? `"${(openQs[0].final_wording || '').slice(0, 90)}…" — answer in fifteen seconds, change your mind until it closes.` : 'Questions put to residents, answered by residents.', '/issues', 'Answer the question')}
   ${door('Show up', nm ? `${nm.ev.name.split('—')[0].trim()} meets ${nm.date.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}, ${nm.ev.time}. Public — and you can speak.` : 'Every public meeting, computed live.', '/calendar', 'See the calendar')}
 </div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
+  ${door('The pursuit ledger', 'Every gap in the record, named and numbered — and stamped in public when it gets filled. Watch the record complete itself.', '/docket', 'See the docket')}
+  ${door('The document shelf', `${documents.documents.length} public documents — budgets, audits, minutes, ordinances — hashed, archived, and searchable down to the words inside the pages.`, '/documents', 'Search the documents')}
+  ${door('Why this exists', 'The story, the creed, and a ledger of every claim this platform makes about itself — each one checkable.', '/story', 'Read the story')}
+  ${door('Make it travel', 'Share a question with a neighbor, put a QR code on a corkboard, bring this to your church or your shop. Traction is the product.', '/participate', 'Get involved')}
+</div>
+<p class="src" style="margin-top:10px">More rooms: <a href="/vendors">who gets paid</a> · <a href="/audits">what the auditors reported</a> · <a href="/compare/spending">how ${esc(county.name)} compares</a> · <a href="/cases">the precedents</a> · <a href="/research">the research shelf</a> · <a href="/stance">where we stand</a> · <a href="/verify">the receipt</a> · <a href="/security">how it's secured</a> · <a href="/guide">the plain-words tour</a>.</p>
 </section>
 
 <section>
@@ -82,6 +95,14 @@ ${stamps.map(s => `
   <p class="src" style="margin-top:4px">${esc(s.stamped.revealed.length > 220 ? s.stamped.revealed.slice(0, 217) + '…' : s.stamped.revealed)}</p>
 </div>`).join('')}
 <p class="src">The full pursuit ledger — every gap named, every completion dated: <a href="/docket">the docket</a>.</p>
+</section>
+
+<section id="register">
+<h2>Put yourself on the record <span class="sub">— optional, as much or as little as you like</span></h2>
+<p style="max-width:60ch">Anyone can answer questions here with no account at all. Registering is what turns your answer into the kind an official can't wave off — a count backed by real, reachable people. Every field is optional.</p>
+<div class="envelope" style="border:1.5px dashed var(--ink);padding:14px 16px 16px;max-width:580px">
+${registrationForm({ county, action: '/register', registeredFields, justRegistered })}
+</div>
 </section>
 
 <section>
