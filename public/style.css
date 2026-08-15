@@ -108,3 +108,10 @@ footer{margin-top:34px;font-size:12px;color:var(--ink-soft);border-top:1.5px sol
   font-family:var(--mono);font-size:9.5px;font-weight:600;letter-spacing:.12em;color:var(--dead);opacity:.38;
   border:1px solid var(--dead);padding:2px 6px;pointer-events:none;text-transform:uppercase}
 @media (max-width:560px){.envelope::after{content:"PRIVATE";right:8px}}
+
+/* Rules-of-engagement popup. With JS it's a real <dialog> modal; without JS
+   the same element opens via :target — the rules are never behind a script. */
+dialog.rules{border:2px solid var(--ink);background:var(--card);color:var(--ink);max-width:560px;width:calc(100vw - 40px);padding:18px 20px;box-sizing:border-box}
+dialog.rules::backdrop{background:rgba(30,42,50,.55)}
+dialog.rules:target{display:block;position:fixed;top:6vh;left:50%;transform:translateX(-50%);z-index:60;max-height:86vh;overflow-y:auto;box-shadow:0 8px 40px rgba(30,42,50,.35)}
+dialog.rules:target .rules-close-fallback{display:inline-block !important;margin-top:6px}

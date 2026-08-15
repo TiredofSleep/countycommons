@@ -21,3 +21,11 @@ document.querySelectorAll('button[data-share-url]').forEach(function (b) {
     navigator.share({ title: b.dataset.shareTitle, url: b.dataset.shareUrl }).catch(function () {});
   });
 });
+
+// Rules-of-engagement popup: upgrade the :target fallback to a real modal.
+document.querySelectorAll('[data-dialog]').forEach(function (b) {
+  b.addEventListener('click', function (e) {
+    var d = document.getElementById(b.dataset.dialog);
+    if (d && d.showModal) { e.preventDefault(); if (!d.open) d.showModal(); }
+  });
+});

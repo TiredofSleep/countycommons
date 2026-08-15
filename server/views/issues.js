@@ -2,6 +2,7 @@ const { esc } = require('../lib/corpus');
 const { layout } = require('./layout');
 const { tally, myVote } = require('../vote');
 const { registrationForm } = require('./register-box');
+const { rulesButton, rulesDialog } = require('./rules');
 
 // The voice layer's front door, Tier 0 edition. The platform computes and
 // cites; the question is the residents' to answer. No verdicts here either —
@@ -98,7 +99,7 @@ ${t.connections ? `<p class="src">Who's answering, self-reported (not verified):
 </header>
 
 <section>
-<h2>Answer <span class="sub">— no account needed; one voice per browser; changeable until close</span></h2>
+<h2>Answer <span class="sub">— no account needed; one voice per browser; changeable until close</span> ${rulesButton()}</h2>
 ${registeredFields.length ? `<p class="src" style="color:var(--sourced)"><b>You're on the record ✓</b> — on file with your answers (never published): <b>${registeredFields.map(esc).join(', ')}</b>. Your answer here counts as a registered voice.</p>` : ''}
 <form method="POST" action="/issues/${esc(draft.id)}/vote" style="display:flex;flex-direction:column;gap:12px;max-width:580px;margin:10px 0">
 
@@ -117,6 +118,7 @@ ${mine && !justVoted ? `<p class="src">Your current answer: <b>${esc(mine.value.
   <p class="src" style="margin:10px 0 0">A registered answer is the kind an official can't wave off. Every field is optional — leave what you like.</p>
   ${registrationForm({ county, action: `/issues/${esc(draft.id)}/register`, registeredFields, justRegistered })}
 </details>
+${rulesDialog(county)}
 </section>
 
 <section>
