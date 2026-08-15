@@ -52,9 +52,8 @@ function homePage(data, opts = {}) {
   <p style="font-family:var(--mono);font-size:clamp(12px,2vw,14px);letter-spacing:.04em;margin:10px 0 2px"><b>SEE THE MONEY · ASK THE QUESTION · CHECK THE COUNT</b></p>
   <p class="src" style="max-width:60ch">Every dollar cited to its source document. Every voice counted honestly by tier. Every claim checkable by anyone — including this one.</p>
   ${vOk ? `<div class="stamp">Verified ✓ ${verification.summary.passed}/${verification.summary.total_checks}</div>` : ''}
-  <div style="display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 2px">
-    <a href="${openQs.length ? `/issues/${esc(openQs[0].id)}` : '/issues'}" style="font-family:var(--mono);font-size:14px;font-weight:600;padding:12px 20px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);text-decoration:none">Answer the open question →</a>
-    <a href="#register" style="font-family:var(--mono);font-size:14px;font-weight:600;padding:12px 20px;background:var(--card);color:var(--ink);border:2px solid var(--ink);text-decoration:none">Put yourself on the record</a>
+  <div style="margin:16px 0 2px">
+    <a href="${openQs.length ? `/issues/${esc(openQs[0].id)}` : '/issues'}" style="display:inline-block;font-family:var(--mono);font-size:clamp(15px,2.4vw,18px);font-weight:600;padding:16px 26px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);text-decoration:none;text-wrap:balance">Put yourself on the record — answer the open question${openQs.length === 1 ? '' : 's'} →</a>
   </div>
 </header>
 
