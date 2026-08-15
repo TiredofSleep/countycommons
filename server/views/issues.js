@@ -139,12 +139,19 @@ ${signState === 'removed' ? `<p class="src" style="color:var(--sourced)"><b>Anno
 ${signState === 'novote' ? `<p class="src" style="color:var(--dead)"><b>Answer first</b> — an announcement announces your answer, and you haven't cast one this sitting. Vote above, then check the box again.</p>` : ''}
 ${signState === 'noname' ? `<p class="src" style="color:var(--dead)"><b>An announcement needs a name</b> — add at least a name in the envelope above, keep the box checked, and register again.</p>` : ''}
 ${mine ? `<p class="src" style="max-width:60ch">To put your name here, check <b>Announce me publicly</b> in the envelope above — registering and announcing are one motion.</p>` : ''}
-${sigs.length ? `
+${sigs.length ? (() => {
+  const sigLine = s => `<p style="margin:4px 0;font-size:14px"><b>${esc(s.name)}</b>${s.city ? `, ${esc(s.city)}` : ''} — <span style="font-family:var(--mono);font-weight:600">${esc((s.value || '').toUpperCase())}</span> <span class="src">${esc(String(s.ts).slice(0, 10))}</span></p>`;
+  return `
 <div style="margin-top:14px;border:1.5px solid var(--ink);background:var(--card);padding:12px 14px;max-width:580px">
   <div class="eyebrow" style="margin-bottom:6px">${sigs.length} public signature${sigs.length === 1 ? '' : 's'} · self-signed, unverified</div>
-  ${sigs.slice(0, 50).map(s => `<p style="margin:4px 0;font-size:14px"><b>${esc(s.name)}</b>${s.city ? `, ${esc(s.city)}` : ''} — <span style="font-family:var(--mono);font-weight:600">${esc((s.value || '').toUpperCase())}</span> <span class="src">${esc(String(s.ts).slice(0, 10))}</span></p>`).join('')}
-  ${sigs.length > 50 ? `<p class="src">…and ${sigs.length - 50} more.</p>` : ''}
-</div>` : ''}
+  ${sigs.slice(0, 10).map(sigLine).join('')}
+  ${sigs.length > 10 ? `
+  <details style="margin-top:8px">
+    <summary class="src" style="cursor:pointer;font-family:var(--mono)"><b>Show all ${sigs.length} signatures</b> — ${sigs.length - 10} more</summary>
+    ${sigs.slice(10).map(sigLine).join('')}
+  </details>` : ''}
+</div>`;
+})() : ''}
 <p class="src" style="margin-top:10px;max-width:60ch">Signatures are self-given and unverified until the verification tiers arrive. If a signature misuses your name, ${county.contact_email ? `email <a href="mailto:${esc(county.contact_email)}">${esc(county.contact_email)}</a>` : 'email us (see the footer)'} and we will remove it — removals are logged on the public record like everything else.</p>
 </section>
 
