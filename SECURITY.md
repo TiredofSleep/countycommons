@@ -17,7 +17,7 @@ Implementable protocols for the build. Strategy lives in CLARK-COMMONS.md §23 (
 - Two physical database files; only `tally.js` opens both; joins happen in memory; joined rows are never written to disk, cache, or logs.
 - Public rendering is aggregate-only with tier counts under 20 shown as ranges — the inference-attack floor.
 - One `castVote()` gate for all channels; no channel bypasses validation.
-- The worst-case breach statement (put it on the public threat-model page verbatim): *an attacker who takes the whole server learns who participates and what the public already sees — never how any person voted, because that join does not exist at rest.*
+- The worst-case breach statement (put it on the public threat-model page verbatim): *an attacker who takes the whole server learns who participates and what is already public. For anyone who voted anonymously, it cannot learn how they voted — no name is attached to their answer anywhere, and the append-only activity log carries no name-to-vote link at all. For anyone who chose to register (so their vote could be de-duplicated by contact) or to sign publicly, their name can be linked to their answers — that link is the price of those two opt-in features, which is exactly why the identity store is the encrypted crown jewel, kept minimal, separate, and never joined to votes except in memory at tally time.*
 
 ## 3. Secrets and encryption
 

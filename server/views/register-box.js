@@ -41,7 +41,7 @@ ${justRegistered ? `<p class="src" style="color:var(--sourced)"><b>You're on the
   ${announceBox}
   ${buttons}
 </form>
-<p class="src" style="margin:12px 0 0;max-width:60ch"><b>The only use of this information, in full:</b> it stays in a private file on our server, separate from the votes, and is never published anywhere — with one exception that is always yours to choose: the announce box puts your name, town, and answer on the question page, until you uncheck it. If a county or city official asks to verify that a count is real people, registrant details can be shown to that official — that request-and-verify is the entire use. Never sold, never given to anyone else, never used for marketing. Remove yours any time: ${county.contact_email ? `<a href="mailto:${esc(county.contact_email)}">${esc(county.contact_email)}</a>` : 'see the footer'}.</p>
+<p class="src" style="margin:12px 0 0;max-width:60ch"><b>The only use of this information, in full:</b> it stays in a private file on our server, separate from the votes, and is never published anywhere — with one exception that is always yours to choose: the announce box puts your name, town, and answer on the question page, until you uncheck it. The one other use — the reason registration exists — is to let a count be verified as real people the way a petition's signatures can be checked: if an official questions whether a result is genuine, we can confirm the registrations behind it are real, and only that. Never sold, never handed to anyone for any other purpose, never used for marketing. Remove yours any time: ${county.contact_email ? `<a href="mailto:${esc(county.contact_email)}">${esc(county.contact_email)}</a>` : 'see the footer'}.</p>
 ${onFile}`;
 }
 

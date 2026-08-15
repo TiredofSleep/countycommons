@@ -51,7 +51,7 @@ function homePage(data, opts = {}) {
   <p style="font-size:clamp(15px,2.6vw,19px);max-width:56ch;margin:10px 0 4px"><b>Power in verified local numbers.</b> It's your money — <b>${money(budget.meta.grand_total)} a year</b>. See it to the receipt. Weigh in on it. Turn what this county wants into <b>a number nobody can wave off</b>.</p>
   <p style="font-family:var(--mono);font-size:clamp(12px,2vw,14px);letter-spacing:.04em;margin:10px 0 2px"><b>SEE THE MONEY · ASK THE QUESTION · CHECK THE COUNT</b></p>
   <p class="src" style="max-width:60ch">Every dollar cited to its source document. Every voice counted honestly by tier. Every claim checkable by anyone — including this one.</p>
-  ${vOk ? `<div class="stamp">Verified ✓ ${verification.summary.passed}/${verification.summary.total_checks}</div>` : ''}
+  ${vOk ? `<a href="/verify" style="text-decoration:none"><div class="stamp" title="Every branch of the budget re-adds to its stated total">${verification.summary.passed}/${verification.summary.total_checks} budget checks pass ✓</div></a>` : ''}
   <div style="margin:16px 0 2px">
     <a href="${openQs.length ? `/issues/${esc(openQs[0].id)}` : '/issues'}" style="display:inline-block;font-family:var(--mono);font-size:clamp(15px,2.4vw,18px);font-weight:600;padding:16px 26px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);text-decoration:none;text-wrap:balance">Put yourself on the record — answer the open question${openQs.length === 1 ? '' : 's'} →</a>
   </div>
@@ -74,7 +74,7 @@ function homePage(data, opts = {}) {
 </div>
 <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
   ${door('The pursuit ledger', 'Every gap in the record, named and numbered — and stamped in public when it gets filled. Watch the record complete itself.', '/docket', 'See the docket')}
-  ${door('The document shelf', `${documents.documents.length} public documents — budgets, audits, minutes, ordinances — hashed, archived, and searchable down to the words inside the pages.`, '/documents', 'Search the documents')}
+  ${door('The document shelf', `${documents.documents.length} public documents — budgets, audits, minutes, ordinances — hashed, archived, and, where the scans are machine-readable, searchable to the words inside.`, '/documents', 'Search the documents')}
   ${door('Why this exists', 'The story, the creed, and a ledger of every claim this platform makes about itself — each one checkable.', '/story', 'Read the story')}
   ${door('Make it travel', 'Share a question with a neighbor, put a QR code on a corkboard, bring this to your church or your shop. Traction is the product.', '/participate', 'Get involved')}
 </div>
@@ -83,8 +83,8 @@ function homePage(data, opts = {}) {
 
 <section>
 <h2>The power of a verified number <span class="sub">— why counting here counts</span></h2>
-<p style="max-width:66ch">A town hall shout is one voice. A social media storm is noise with no names. But <b>"214 verified ${esc(county.name)} residents said yes"</b> is a fact — checkable, tiered, arithmetic-audited — and a fact like that changes what's possible: an official can <i>cite</i> it and survive the argument; a skeptic can inspect it and find only math. That's the whole trade this platform offers on your shared funds: your voice, made heavy enough to sit on a courthouse desk.</p>
-<p style="max-width:66ch">The machinery is deliberate: anonymous answers count as open sentiment, verified residents count as the number officials cite, and — coming with the verification tiers — putting your name on the record counts like signing a petition. At <b>100 responses, any question's result gets printed and hand-delivered to the body that decides</b>, with the delivery stamped publicly. The UK Parliament made thresholds like this law; here, the platform binds itself — and the full <a href="/cases">library of precedents</a>, from town meetings to Taiwan, shows this working everywhere it's been tried honestly. What officials do with a number they can't dispute becomes part of the record either way.</p>
+<p style="max-width:66ch">A town hall shout is one voice. A social media storm is noise with no names. But a line like <b>"214 verified ${esc(county.name)} residents said yes"</b> — once the verification tiers are live — is a different kind of thing: checkable, tiered, arithmetic-audited, the kind of fact an official can <i>cite</i> and survive the argument, and a skeptic can inspect and find only math. That's the trade this platform is built toward on your shared funds: your voice, made heavy enough to sit on a courthouse desk. <span class="src">(That 214 is an illustration of the mechanism, not today's count — the live tally is on every question page.)</span></p>
+<p style="max-width:66ch">The machinery is deliberate: anonymous answers count as open sentiment, verified residents count as the number officials cite, and — coming with the verification tiers — putting your name on the record counts like signing a petition. At <b>100 responses, any question's result gets printed and hand-delivered to the body that decides</b>, with the delivery stamped publicly. The UK Parliament set response thresholds like this in its rules; here, the platform binds itself — and the full <a href="/cases">library of precedents</a>, from town meetings to Taiwan, shows this working where it's been tried, and fraying where it's been neglected. What officials do with a number they can't dispute becomes part of the record either way.</p>
 </section>
 
 <section>

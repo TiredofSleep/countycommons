@@ -9,9 +9,9 @@
 const fs = require('fs');
 const path = require('path');
 const { verifyChain, readAll } = require('../server/lib/chain');
+const { FLOOR } = require('../server/tally');
 
 const OUT = path.join(__dirname, '..', 'data', 'corpus', 'activity-anchor.json');
-const FLOOR = 20;
 
 const v = verifyChain();
 if (!v.ok) {

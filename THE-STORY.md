@@ -32,7 +32,7 @@ Three things, all free:
 
 **A budget you can walk.** Every fund, every department, every line — clickable, in plain language, cited to the source page. Where the trail runs out (and it does), we say so and list it as an open question we're chasing. When we get the answer, we post it and stamp it done. You can watch the record get more complete in public.
 
-**A way to be counted.** Clear yes-or-no questions about local priorities — deputy pay, roads, buildings, whatever this county is actually deciding. You choose how much of yourself to attach: answer anonymously, verify you're a real Clark County resident, or put your name on the record like signing a petition. The more you attach, the more your answer weighs — and that's shown honestly. "212 verified residents said yes — 37 by name" means exactly what it says, and officials can check the math.
+**A way to be counted.** Clear yes-or-no questions about local priorities — deputy pay, roads, buildings, whatever this county is actually deciding. You choose how much of yourself to attach: answer anonymously, verify you're a real Clark County resident, or put your name on the record like signing a petition. The more you attach, the more your answer weighs — and that's shown honestly. Picture a result that reads "212 verified residents said yes — 37 by name": once the verification tiers are live, that means exactly what it says, and officials can check the math. (Today the count is open sentiment, labeled as such — the live tally is on every question page.)
 
 **Help finding help.** If you're in a hard spot — the light bill, food, housing — one question gets you the two or three real local options with phone numbers and hours. Works on any phone, including by text. No forms, no runaround.
 

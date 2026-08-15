@@ -24,9 +24,22 @@ function entryHash(e) {
 }
 
 function readAll() {
-  try {
-    return fs.readFileSync(LOG, 'utf8').split('\n').filter(Boolean).map(l => JSON.parse(l));
-  } catch (e) { return []; }
+  let text;
+  try { text = fs.readFileSync(LOG, 'utf8'); }
+  catch (e) { return []; }
+  // Parse line-by-line and keep the valid PREFIX. A single truncated final
+  // line (a crash mid-append) must never collapse the whole chain to empty —
+  // that would let the next append fork a fresh genesis and orphan history.
+  // verifyChain() still catches any deeper tampering.
+  const out = [];
+  for (const line of text.split('\n')) {
+    if (!line) continue;
+    let e;
+    try { e = JSON.parse(line); }
+    catch (err) { break; }
+    out.push(e);
+  }
+  return out;
 }
 
 function head() {

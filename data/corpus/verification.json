@@ -1,10 +1,10 @@
 {
-  "run_at": "2026-08-15T15:53:11.489Z",
+  "run_at": "2026-08-15T18:06:02.538Z",
   "corpus_year": 2026,
   "grand_total": 21386230,
   "summary": {
-    "total_checks": 23,
-    "passed": 23,
+    "total_checks": 24,
+    "passed": 24,
     "failed": 0
   },
   "checks": [
@@ -177,7 +177,7 @@
       "ok": true,
       "expected": null,
       "computed": null,
-      "detail": "Chain verified: 8 entries, head 22a44b574ef4fd68…"
+      "detail": "Chain verified: 57 entries, head 9d1fb01752f48b43…"
     },
     {
       "node": "__recount__",
@@ -186,7 +186,7 @@
       "ok": true,
       "expected": null,
       "computed": null,
-      "detail": "1 store votes all present in the chain"
+      "detail": "32 store votes all present in the chain"
     },
     {
       "node": "__recount__",
@@ -213,7 +213,16 @@
       "ok": true,
       "expected": null,
       "computed": null,
-      "detail": "0 submissions all chained"
+      "detail": "1 submissions all chained"
+    },
+    {
+      "node": "__recount__",
+      "name": "Signatures: no unlogged writes",
+      "kind": "recount",
+      "ok": true,
+      "expected": null,
+      "computed": null,
+      "detail": "1 public signatures all chained"
     }
   ]
 }

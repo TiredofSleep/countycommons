@@ -25,6 +25,12 @@ const { castVote } = require('./vote');
 
 const app = express();
 app.disable('x-powered-by');
+// Caddy is the single reverse proxy in front of us; trust exactly one hop so
+// req.ip reflects the real client for the per-IP write throttle.
+app.set('trust proxy', 1);
+const { throttle } = require('./lib/throttle');
+const writeLimit = throttle({ windowMs: 60000, max: 30 }); // votes/registrations
+const heavyLimit = throttle({ windowMs: 60000, max: 8 });  // submissions/feedback
 
 // ---- site password (soft launch) ----
 function sitePassword() {
@@ -66,7 +72,7 @@ function cookies(req) {
 }
 
 function gatePage(msg, next) {
-  const dest = (next && next.startsWith('/') && !next.startsWith('//')) ? next : '/';
+  const dest = (next && next.startsWith('/') && !next.startsWith('//') && !next.includes('\\')) ? next : '/';
   return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Clark Commons — early access</title>
@@ -92,7 +98,7 @@ app.post('/gate', express.urlencoded({ extended: false }), (req, res) => {
   const pw = sitePassword();
   const given = (req.body && req.body.password) || '';
   const next = (req.body && req.body.next) || '/';
-  const dest = (next.startsWith('/') && !next.startsWith('//')) ? next : '/';
+  const dest = (next.startsWith('/') && !next.startsWith('//') && !next.includes('\\')) ? next : '/';
   if (pw && given === pw) {
     res.setHeader('Set-Cookie',
       `cc_gate=${gateToken(pw)}; Path=/; Max-Age=${60 * 60 * 24 * 30}; HttpOnly; SameSite=Lax`);
@@ -234,11 +240,19 @@ app.get('/security', charterPage('SECURITY.md', null, 'The platform\'s public th
 app.get('/never', charterPage('NEVER.md', null, 'What this project will never do — written down before anyone was watching, on purpose.'));
 
 // ---- issues: Tier 0 sentiment polling (the M2 seed) ----
-function participantOf(req) { return cookies(req).cc_participant || null; }
+// The participant token is a 24-hex string we minted (randomBytes(12)). Read
+// it back STRICTLY: anything else — a forged cookie, "__proto__", "constructor"
+// — is rejected to null so it can never become an object key in the stores
+// (prototype-pollution guard). ensureParticipant then mints a fresh valid one.
+const TOKEN_RE = /^[a-f0-9]{24}$/;
+function participantOf(req) {
+  const t = cookies(req).cc_participant || '';
+  return TOKEN_RE.test(t) ? t : null;
+}
 
 app.get('/issues', (req, res) => res.send(issuesPage(load(), req.query.submitted === '1')));
 
-app.post('/issues/submit', express.urlencoded({ extended: false }), (req, res) => {
+app.post('/issues/submit', heavyLimit, express.urlencoded({ extended: false }), (req, res) => {
   const q = (req.body && req.body.question || '').trim();
   if (!q) return res.redirect('/issues#ask');
   const { submit } = require('./submissions');
@@ -288,7 +302,7 @@ app.get('/issues/:id', (req, res) => {
     req.query.sign || null));
 });
 
-app.post('/issues/:id/vote', express.urlencoded({ extended: false }), (req, res) => {
+app.post('/issues/:id/vote', writeLimit, express.urlencoded({ extended: false }), (req, res) => {
   const data = load();
   const draft = data.issueDrafts.drafts.find(d => d.id === req.params.id && d.status === 'open-tier0');
   if (!draft) return res.status(404).send(notFound(data, 'No open question with that id.'));
@@ -296,10 +310,13 @@ app.post('/issues/:id/vote', express.urlencoded({ extended: false }), (req, res)
   if (!['yes', 'no', 'skip'].includes(value)) return res.redirect(`/issues/${draft.id}`);
   const participant = ensureParticipant(req, res);
   castVote(participant, draft.id, value, 'web', (req.body && req.body.connection) || '');
+  // Keep any public signature in sync — a petition line must show the
+  // signer's CURRENT answer, never the one they later changed away from.
+  require('./signatures').reflectVote(participant, draft.id, value);
   res.redirect(`/issues/${draft.id}?voted=${value}#register`);
 });
 
-app.post('/issues/:id/register', express.urlencoded({ extended: false }), (req, res) => {
+app.post('/issues/:id/register', writeLimit, express.urlencoded({ extended: false }), (req, res) => {
   const data = load();
   const draft = data.issueDrafts.drafts.find(d => d.id === req.params.id && d.status === 'open-tier0');
   if (!draft) return res.status(404).send(notFound(data, 'No open question with that id.'));
@@ -324,7 +341,7 @@ function applyAnnouncement(participant, issueId, body) {
   return 'ok';
 }
 
-app.post('/register', express.urlencoded({ extended: false }), (req, res) => {
+app.post('/register', writeLimit, express.urlencoded({ extended: false }), (req, res) => {
   const participant = ensureParticipant(req, res);
   const saved = identity.register(participant, req.body || {});
   const open = (load().issueDrafts.drafts || []).filter(d => d.status === 'open-tier0');
@@ -355,7 +372,7 @@ const fbUpload = multer({
   limits: { fileSize: 8 * 1024 * 1024, files: 1, fields: 6 },
   fileFilter: (req, file, cb) => cb(null, Boolean(FB_TYPES[file.mimetype]))
 });
-const safePath = p => (typeof p === 'string' && p.startsWith('/') && !p.startsWith('//')) ? p : '';
+const safePath = p => (typeof p === 'string' && p.startsWith('/') && !p.startsWith('//') && !p.includes('\\')) ? p : '';
 
 app.get('/feedback', (req, res) => {
   let from = safePath(req.query.from || '');
@@ -363,7 +380,7 @@ app.get('/feedback', (req, res) => {
   res.send(feedbackPage(load().county, { from }));
 });
 
-app.post('/feedback', (req, res) => {
+app.post('/feedback', heavyLimit, (req, res) => {
   fbUpload.single('screenshot')(req, res, (err) => {
     const county = load().county;
     const b = req.body || {};
