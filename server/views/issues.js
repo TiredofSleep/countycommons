@@ -27,7 +27,7 @@ function issuesPage(data, submitted) {
 <header class="page">
   <div class="eyebrow">${esc(county.name)}, ${esc(county.state)}</div>
   <h1>Open questions</h1>
-  <div class="src">Questions put to residents, answered by residents. No account needed, one voice per browser, changeable until close. Counts are open sentiment — the verification tiers that make results citable arrive with the full voting layer, and every count will always show its tier.</div>
+  <div class="src"><b>This is the county's counting room — where what residents want becomes a number with receipts.</b> Questions put to residents, answered by residents: no account needed, one voice per browser, changeable until close. Today's counts are open sentiment; the verification tiers that make a number impossible to wave off arrive with the full voting layer — and every count, always, shows exactly how verified it is. That honesty is what makes the number powerful.</div>
 </header>
 ${items || '<p class="src">No questions are open right now.</p>'}
 

@@ -46,7 +46,8 @@ function homePage(data) {
   <div class="eyebrow">countycommons.us · ${esc(county.name)}, ${esc(county.state)} · free, open, checkable</div>
   <h1 style="font-size:clamp(26px,6vw,40px)">${esc(county.platform_name)}</h1>
   <p style="font-size:clamp(15px,2.5vw,18px);max-width:56ch;margin:8px 0 2px"><b>See the money. Ask the question. Check the count.</b></p>
-  <p class="src" style="max-width:60ch">A civic commons for ${esc(county.name)}: every public dollar mapped to the document it came from, every resident voice counted honestly by tier, and every claim on this site verifiable by anyone — including this one.</p>
+  <p style="font-size:clamp(14px,2.2vw,16px);max-width:58ch;margin:6px 0 2px">It's your money — ${money(budget.meta.grand_total)} of it a year. This is where ${esc(county.name)} watches it, weighs in on it, and turns what residents want into <b>a verified number nobody can wave off</b>.</p>
+  <p class="src" style="max-width:60ch">Every public dollar mapped to the document it came from. Every voice counted honestly by tier. Every claim checkable by anyone — including this one.</p>
   ${vOk ? `<div class="stamp">Verified ✓ ${verification.summary.passed}/${verification.summary.total_checks}</div>` : ''}
 </header>
 
@@ -65,6 +66,12 @@ function homePage(data) {
   ${door('Be counted', openQs.length ? `"${(openQs[0].final_wording || '').slice(0, 90)}…" — answer in fifteen seconds, change your mind until it closes.` : 'Questions put to residents, answered by residents.', '/issues', 'Answer the question')}
   ${door('Show up', nm ? `${nm.ev.name.split('—')[0].trim()} meets ${nm.date.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}, ${nm.ev.time}. Public — and you can speak.` : 'Every public meeting, computed live.', '/calendar', 'See the calendar')}
 </div>
+</section>
+
+<section>
+<h2>The power of a verified number <span class="sub">— why counting here counts</span></h2>
+<p style="max-width:66ch">A town hall shout is one voice. A social media storm is noise with no names. But <b>"214 verified ${esc(county.name)} residents said yes"</b> is a fact — checkable, tiered, arithmetic-audited — and a fact like that changes what's possible: an official can <i>cite</i> it and survive the argument; a skeptic can inspect it and find only math. That's the whole trade this platform offers on your shared funds: your voice, made heavy enough to sit on a courthouse desk.</p>
+<p style="max-width:66ch">The machinery is deliberate: anonymous answers count as open sentiment, verified residents count as the number officials cite, and — coming with the verification tiers — putting your name on the record counts like signing a petition. At <b>100 responses, any question's result gets printed and hand-delivered to the body that decides</b>, with the delivery stamped publicly. The UK Parliament made thresholds like this law; here, the platform binds itself. What officials do with a number they can't dispute becomes part of the record either way.</p>
 </section>
 
 <section>
