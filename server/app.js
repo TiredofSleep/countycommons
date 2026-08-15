@@ -281,7 +281,8 @@ app.get('/issues/:id', (req, res) => {
   const voted = req.query.voted && ['yes', 'no', 'skip'].includes(req.query.voted) ? req.query.voted : null;
   const participant = participantOf(req);
   res.send(issuePage(data, draft, participant, voted,
-    participant ? identity.fieldsOf(participant) : [], req.query.registered === '1'));
+    participant ? identity.fieldsOf(participant) : [], req.query.registered === '1',
+    req.query.sign || null));
 });
 
 app.post('/issues/:id/vote', express.urlencoded({ extended: false }), (req, res) => {
@@ -302,6 +303,20 @@ app.post('/issues/:id/register', express.urlencoded({ extended: false }), (req, 
   const participant = ensureParticipant(req, res);
   const saved = identity.register(participant, req.body || {});
   res.redirect(`/issues/${draft.id}${saved ? '?registered=1' : ''}#register`);
+});
+
+app.post('/issues/:id/sign', express.urlencoded({ extended: false }), (req, res) => {
+  const data = load();
+  const draft = data.issueDrafts.drafts.find(d => d.id === req.params.id && d.status === 'open-tier0');
+  if (!draft) return res.status(404).send(notFound(data, 'No open question with that id.'));
+  const participant = participantOf(req);
+  const { myVote } = require('./vote');
+  const vote = participant ? myVote(participant, draft.id) : null;
+  // A signature signs an answer — no answer yet means vote first.
+  if (!vote) return res.redirect(`/issues/${draft.id}?sign=novote#sign`);
+  const { sign } = require('./signatures');
+  const saved = sign(participant, draft.id, vote.value, req.body && req.body.sig_name, req.body && req.body.sig_city);
+  res.redirect(`/issues/${draft.id}${saved ? '?sign=ok' : '?sign=noname'}#sign`);
 });
 
 app.post('/register', express.urlencoded({ extended: false }), (req, res) => {

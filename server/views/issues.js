@@ -60,10 +60,13 @@ ${submitted ? `<p style="color:var(--sourced)"><b>Received.</b> Your question is
   return layout({ title: `Open questions — ${county.platform_name}`, current: '/issues', body, county });
 }
 
-function issuePage(data, draft, participant, justVoted, registeredFields = [], justRegistered = false) {
+function issuePage(data, draft, participant, justVoted, registeredFields = [], justRegistered = false, signState = null) {
   const { county } = data;
   const t = tally(draft.id);
   const mine = participant ? myVote(participant, draft.id) : null;
+  const { listFor, mySignature } = require('../signatures');
+  const sigs = listFor(draft.id);
+  const mySig = participant ? mySignature(participant, draft.id) : null;
 
   const results = `<table class="plain"><thead><tr><th>Answer</th><th>Count</th></tr></thead><tbody>
 <tr><td>Yes</td><td class="num">${t.counts.yes}</td></tr>
@@ -126,6 +129,31 @@ ${rulesDialog(county)}
 ${results}
 <p class="src">Tier 0 means open sentiment: it shows how visitors lean, and it is never cited as verified resident opinion. Phone, residency, and voter verification tiers arrive with the full voting layer — and results will always display every tier's count separately.</p>
 <p class="src">These counts are unofficial: gathered by an independent community platform, not by any government. This is not an election, a referendum, or a legal petition — its only weight is that the counting is published and checkable.</p>
+</section>
+
+<section id="sign">
+<h2>Signed publicly <span class="sub">— the loud version: optional, always</span></h2>
+<p class="src" style="max-width:60ch">The count above is anonymous and stays that way. Signing is the separate, louder act — your name and your answer, on the page, like a petition on a counter. ${mine ? '' : 'Answer the question first, then sign it if you want to be heard by name.'}</p>
+${signState === 'ok' ? `<p class="src" style="color:var(--sourced)"><b>Signed ✓</b> — your name is on the page below.</p>` : ''}
+${signState === 'novote' ? `<p class="src" style="color:var(--dead)"><b>Answer first, then sign</b> — a signature signs your answer, and you haven't cast one this sitting.</p>` : ''}
+${signState === 'noname' ? `<p class="src" style="color:var(--dead)"><b>A signature needs a name.</b></p>` : ''}
+${mine ? `
+<form method="POST" action="/issues/${esc(draft.id)}/sign" style="display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;max-width:580px">
+  <label style="font-size:13.5px;flex:2;min-width:180px">Name
+    <input name="sig_name" required maxlength="80" value="${mySig ? esc(mySig.name) : ''}" placeholder="as you'd sign a petition" style="font-family:var(--mono);font-size:14px;padding:7px 9px;border:1.5px solid var(--ink);background:var(--paper);color:var(--ink);width:100%;box-sizing:border-box;margin-top:4px">
+  </label>
+  <label style="font-size:13.5px;flex:1;min-width:120px">Town <span class="src">(optional)</span>
+    <input name="sig_city" maxlength="60" value="${mySig ? esc(mySig.city || '') : ''}" placeholder="Arkadelphia" style="font-family:var(--mono);font-size:14px;padding:7px 9px;border:1.5px solid var(--ink);background:var(--paper);color:var(--ink);width:100%;box-sizing:border-box;margin-top:4px">
+  </label>
+  <button type="submit" style="font-family:var(--mono);font-size:13px;padding:9px 16px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);cursor:pointer">${mySig ? 'Update my signature' : `Sign my ${esc((mine.value || '').toUpperCase())} publicly`}</button>
+</form>` : ''}
+${sigs.length ? `
+<div style="margin-top:14px;border:1.5px solid var(--ink);background:var(--card);padding:12px 14px;max-width:580px">
+  <div class="eyebrow" style="margin-bottom:6px">${sigs.length} public signature${sigs.length === 1 ? '' : 's'} · self-signed, unverified</div>
+  ${sigs.slice(0, 50).map(s => `<p style="margin:4px 0;font-size:14px"><b>${esc(s.name)}</b>${s.city ? `, ${esc(s.city)}` : ''} — <span style="font-family:var(--mono);font-weight:600">${esc((s.value || '').toUpperCase())}</span> <span class="src">${esc(String(s.ts).slice(0, 10))}</span></p>`).join('')}
+  ${sigs.length > 50 ? `<p class="src">…and ${sigs.length - 50} more.</p>` : ''}
+</div>` : ''}
+<p class="src" style="margin-top:10px;max-width:60ch">Signatures are self-given and unverified until the verification tiers arrive. If a signature misuses your name, ${county.contact_email ? `email <a href="mailto:${esc(county.contact_email)}">${esc(county.contact_email)}</a>` : 'email us (see the footer)'} and we will remove it — removals are logged on the public record like everything else.</p>
 </section>
 
 <section id="share">

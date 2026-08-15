@@ -77,6 +77,14 @@ function recount() {
     detail: missingSubs === 0 ? `${(subsStore.submissions || []).length} submissions all chained`
       : `CRITICAL: ${missingSubs} submission(s) missing from the chain` });
 
+  // 4. Every public signature must have its chain event.
+  const sigStore = loadJson('data/civic-signatures.json', { signatures: [] });
+  const chainSigs = new Set(chain.filter(e => e.type === 'signature').map(e => e.data.id));
+  const missingSigs = (sigStore.signatures || []).filter(s => !chainSigs.has(s.id)).length;
+  results.push({ name: 'Signatures: no unlogged writes', ok: missingSigs === 0,
+    detail: missingSigs === 0 ? `${(sigStore.signatures || []).length} public signatures all chained`
+      : `CRITICAL: ${missingSigs} signature(s) missing from the chain` });
+
   return results;
 }
 
