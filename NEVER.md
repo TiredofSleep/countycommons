@@ -12,7 +12,9 @@
 
 ## Data and persons
 
-**Ledgers get lit; persons stay dark.** Institutional and business transparency is the mission; individual human beings keep their privacy. No feature will ever publish an identifiable person's wages, purchases, debts, votes, or finances. Aggregation floors are code, not settings.
+**Ledgers get lit; persons stay dark.** Institutional and business transparency is the mission; individual human beings keep their privacy. No feature will ever publish an identifiable person's wages, purchases, debts, votes, or finances **without that person choosing it for themselves.** The platform never discloses your answer; you may choose to sign it publicly, petition-style, and un-choose it at any time. What is forbidden forever is the platform — or anyone else — publishing a person's data over their head. Aggregation floors are code, not settings.
+
+*(Amendment, added when the public-signature feature shipped, per this file's own rule that changes be written down in public with the reasoning shown: the original line read "…debts, votes, or finances." The qualifier was added because residents asked to be able to sign their own answers by name, like a petition. The distinction that matters and that we hold to is direction and consent — the light points at ledgers and institutions, and points at a person only when that person turns it on themselves.)*
 
 **Transparency is voluntary for humans, structural for institutions.** Open Books will never default to public, never be a condition of using the software, and never become a tool for anyone to demand another person's disclosure — an employer of a worker, a landlord of a tenant. The direction of the light matters: it points at ledgers and institutions, never down at people.
 

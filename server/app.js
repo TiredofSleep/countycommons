@@ -20,7 +20,8 @@ const { storyPage } = require('./views/story');
 const { vendorsPage } = require('./views/vendors');
 const { auditsPage } = require('./views/audits');
 const { spendingPage } = require('./views/spending');
-const { issuesPage, issuePage } = require('./views/issues');
+const issueViews = require('./views/issues');
+const { issuesPage, issuePage } = issueViews;
 const { castVote } = require('./vote');
 
 const app = express();
@@ -297,7 +298,8 @@ app.get('/issues/:id', (req, res) => {
   if (!draft) return res.status(404).send(notFound(data, 'No open question with that id.'));
   const voted = req.query.voted && ['yes', 'no', 'skip'].includes(req.query.voted) ? req.query.voted : null;
   const participant = participantOf(req);
-  res.send(issuePage(data, draft, participant, voted,
+  const render = req.query.vf === '1' ? issueViews.voteFirstIssuePage : issuePage;
+  res.send(render(data, draft, participant, voted,
     participant ? identity.fieldsOf(participant) : [], req.query.registered === '1',
     req.query.sign || null));
 });

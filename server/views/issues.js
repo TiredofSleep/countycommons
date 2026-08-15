@@ -129,6 +129,7 @@ ${rulesDialog(county)}
 ${results}
 <p class="src">Tier 0 means open sentiment: it shows how visitors lean, and it is never cited as verified resident opinion. Phone, residency, and voter verification tiers arrive with the full voting layer — and results will always display every tier's count separately.</p>
 <p class="src">These counts are unofficial: gathered by an independent community platform, not by any government. This is not an election, a referendum, or a legal petition — its only weight is that the counting is published and checkable.</p>
+<p class="src"><b>Plainly:</b> because a Tier 0 answer takes no verification, a determined person can pad this number — that is exactly the weakness the verification tiers (phone, residency, voter-file) are built to close. Until then, treat these as open sentiment, never proof, and weigh the public signatures — real names, by choice — more heavily than the raw count.</p>
 </section>
 
 <section id="sign">
@@ -188,4 +189,104 @@ ${sigs.length ? (() => {
   });
 }
 
-module.exports = { issuesPage, issuePage, openIssues };
+// ---- PREVIEW: the "vote-first" layout ----------------------------------
+// A mockup for comparison, reached at /issues/:id?vf=1. The vote comes first
+// and biggest, with nothing asked; who-you-are and your name are optional
+// steps AFTER, framed as "make it count for more." This is the arrangement
+// the low-tech and busy-parent readers asked for. It reuses every real
+// endpoint, so it actually works — it is a live A/B, not a picture.
+function voteFirstIssuePage(data, draft, participant, justVoted, registeredFields = [], justRegistered = false, signState = null) {
+  const { county } = data;
+  const t = tally(draft.id);
+  const mine = participant ? myVote(participant, draft.id) : null;
+  const { listFor, mySignature } = require('../signatures');
+  const sigs = listFor(draft.id);
+  const mySig = participant ? mySignature(participant, draft.id) : null;
+
+  const results = `<table class="plain"><thead><tr><th>Answer</th><th>Count</th></tr></thead><tbody>
+<tr><td>Yes</td><td class="num">${t.counts.yes}</td></tr>
+<tr><td>No</td><td class="num">${t.counts.no}</td></tr>
+<tr><td>Skip</td><td class="num">${t.counts.skip}</td></tr>
+</tbody></table>
+<p class="src">${t.total} total · Tier 0 open sentiment · updates instantly${t.duplicates_removed ? ` · ${t.duplicates_removed} double${t.duplicates_removed === 1 ? '' : 's'} cleared` : ''}</p>
+${t.connections ? `<p class="src">Self-reported: ${t.connections.resident} live in ${esc(county.name)} · ${t.connections['works-here']} work here · ${t.connections['family-here']} have family here · ${t.connections.elsewhere + t.connections.unsaid} other/unsaid</p>` : ''}`;
+
+  const bigBtn = (v, label) => `<button type="submit" name="value" value="${v}"
+    style="font-family:var(--mono);font-size:clamp(17px,3.4vw,22px);font-weight:600;padding:18px 10px;cursor:pointer;border:2px solid var(--ink);flex:1;min-width:90px;
+    background:${mine && mine.value === v ? 'var(--ink)' : 'var(--card)'};color:${mine && mine.value === v ? 'var(--paper)' : 'var(--ink)'}">${label}</button>`;
+
+  const CONN_OPTS = [
+    ['resident', `I live in ${county.name}`],
+    ['works-here', `I work in ${county.name}, live elsewhere`],
+    ['family-here', `Family of mine lives in ${county.name}`],
+    ['elsewhere', 'None of those — just weighing in']
+  ];
+  const connRadios = CONN_OPTS.map(([v, label]) => `
+    <label style="display:flex;gap:8px;align-items:baseline;font-size:14.5px;cursor:pointer">
+      <input type="radio" name="connection" value="${v}"${mine && mine.connection === v ? ' checked' : ''}> ${esc(label)}
+    </label>`).join('');
+
+  const sigLine = s => `<p style="margin:4px 0;font-size:14px"><b>${esc(s.name)}</b>${s.city ? `, ${esc(s.city)}` : ''} — <span style="font-family:var(--mono);font-weight:600">${esc((s.value || '').toUpperCase())}</span> <span class="src">${esc(String(s.ts).slice(0, 10))}</span></p>`;
+  const sigList = sigs.length ? `
+<div style="margin-top:12px;border:1.5px solid var(--ink);background:var(--card);padding:12px 14px;max-width:580px">
+  <div class="eyebrow" style="margin-bottom:6px">${sigs.length} public signature${sigs.length === 1 ? '' : 's'} · self-signed, unverified</div>
+  ${sigs.slice(0, 10).map(sigLine).join('')}
+  ${sigs.length > 10 ? `<details style="margin-top:8px"><summary class="src" style="cursor:pointer;font-family:var(--mono)"><b>Show all ${sigs.length}</b> — ${sigs.length - 10} more</summary>${sigs.slice(10).map(sigLine).join('')}</details>` : ''}
+</div>` : '';
+
+  const body = `
+<div class="crumb"><a href="/issues">Open questions</a></div>
+<div style="border:1.5px dashed var(--accent);background:var(--card);padding:9px 12px;margin-bottom:12px;font-size:13px">
+  <b>Preview — the "vote-first" layout.</b> The vote is first and nothing is asked up front; who-you-are and your name are optional steps after. Compare with the <a href="/issues/${esc(draft.id)}">current layout →</a>
+</div>
+
+<header class="page">
+  <div class="eyebrow">${esc(county.name)} · open question · Tier 0 sentiment</div>
+  <h1 style="font-size:clamp(18px,3.5vw,26px)">${esc(draft.final_wording)}</h1>
+  ${justVoted ? `<div class="stamp" style="position:static;display:inline-block;transform:none;margin-top:10px">Counted ✓ — you answered ${esc(justVoted.toUpperCase())}</div>` : ''}
+</header>
+
+<section>
+<h2>Your answer <span class="sub">— fifteen seconds, no account, nothing asked</span> ${rulesButton()}</h2>
+<form method="POST" action="/issues/${esc(draft.id)}/vote" style="margin:12px 0;max-width:520px">
+  <div style="display:flex;gap:10px;flex-wrap:wrap">${bigBtn('yes', 'YES')} ${bigBtn('no', 'NO')} ${bigBtn('skip', 'SKIP')}</div>
+</form>
+${mine ? `<p class="src">Your current answer: <b>${esc(mine.value.toUpperCase())}</b> — change it anytime; your last answer counts.</p>` : `<p class="src">Tap an answer. You can change it anytime while your window is open.</p>`}
+${results}
+${rulesDialog(county)}
+</section>
+
+<section id="register">
+<h2>Make it count for more <span class="sub">— optional, always</span></h2>
+${signState === 'ok' ? `<p class="src" style="color:var(--sourced)"><b>Announced ✓</b> — your name is on the page below. Uncheck to take it down.</p>` : ''}
+${signState === 'removed' ? `<p class="src" style="color:var(--sourced)"><b>Announcement taken down.</b></p>` : ''}
+${signState === 'noname' ? `<p class="src" style="color:var(--dead)"><b>An announcement needs a name</b> — add one below and keep the box checked.</p>` : ''}
+<p style="max-width:60ch">Your answer is <b>already counted</b>, anonymously. If you want it to weigh more, tell us who's answering — and, if you like, put your name on it like a petition. All optional.</p>
+${mine ? `
+<form method="POST" action="/issues/${esc(draft.id)}/vote" style="border:1.5px solid var(--ink);background:var(--card);padding:12px 14px;max-width:580px;margin:10px 0">
+  <input type="hidden" name="value" value="${esc(mine.value)}">
+  <div style="font-family:var(--mono);font-size:13px;font-weight:600;margin-bottom:8px">Are you a ${esc(county.name)} resident? <span class="src" style="font-weight:400">(self-reported)</span></div>
+  <div style="display:flex;flex-direction:column;gap:6px">${connRadios}</div>
+  <button type="submit" style="margin-top:10px;font-family:var(--mono);font-size:13px;padding:8px 16px;background:var(--card);color:var(--ink);border:1.5px solid var(--ink);cursor:pointer">Save who's answering</button>
+</form>` : `<p class="src">Answer the question above first — then this opens up.</p>`}
+<details id="sign" class="envelope" style="border:1.5px dashed var(--ink);padding:10px 14px;max-width:580px"${signState === 'ok' || justRegistered ? ' open' : ''}>
+  <summary style="cursor:pointer;font-family:var(--mono);font-size:13px;font-weight:600">${registeredFields.length ? "You're on the record ✓ — open to update or sign" : 'Put your name on it — optional, petition-style'}</summary>
+  <p class="src" style="margin:10px 0 0">A registered answer is the kind an official can't wave off. Every field is optional.</p>
+  ${registrationForm({ county, action: `/issues/${esc(draft.id)}/register`, registeredFields, justRegistered, announce: { show: true, checked: !!mySig } })}
+</details>
+${sigList}
+</section>
+
+<section>
+<h2>The context <span class="sub">— why this question exists</span></h2>
+<p>This platform traced every public dollar it could. Most of the trail is documented; parts stop short of a receipt. This question asks whether that should change — not whether anyone did anything wrong. <a href="/issues/${esc(draft.id)}">See the full current page →</a></p>
+</section>`;
+
+  return layout({
+    title: `${draft.final_wording.slice(0, 50)}… (vote-first preview) — ${county.platform_name}`,
+    current: '/issues', body, county,
+    description: 'Preview of a vote-first question layout for Clark County.'
+  });
+}
+
+module.exports = { issuesPage, issuePage, voteFirstIssuePage, openIssues };
