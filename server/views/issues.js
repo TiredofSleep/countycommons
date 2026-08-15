@@ -95,6 +95,7 @@ ${mine && !justVoted ? `<p class="src">Your current answer: <b>${esc(mine.value.
 <h2>The count so far <span class="sub">— aggregate only, always</span></h2>
 ${results}
 <p class="src">Tier 0 means open sentiment: it shows how visitors lean, and it is never cited as verified resident opinion. Phone, residency, and voter verification tiers arrive with the full voting layer — and results will always display every tier's count separately.</p>
+<p class="src">These counts are unofficial: gathered by an independent community platform, not by any government. This is not an election, a referendum, or a legal petition — its only weight is that the counting is published and checkable.</p>
 </section>
 
 <section id="share">

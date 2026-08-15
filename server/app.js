@@ -76,6 +76,7 @@ function gatePage(msg, next) {
   <div class="eyebrow">Clark Commons · Clark County, Arkansas</div>
   <h1>Early access</h1>
   <p class="src">This site is in a quiet launch. If someone gave you the password, enter it once and you're in.</p>
+  <p class="src">Clark Commons is an independent community project — <b>not a government website</b>. The official Clark County site is <a href="https://www.clarkcountyar.gov" rel="noopener">clarkcountyar.gov</a>.</p>
   ${msg ? `<p class="src" style="color:var(--dead)">${esc(msg)}</p>` : ''}
   <form method="POST" action="/gate" style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
     <input type="password" name="password" autofocus required aria-label="Site password"
