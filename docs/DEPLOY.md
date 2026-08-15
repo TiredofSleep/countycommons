@@ -73,6 +73,24 @@ server (gitignored); its public witness travels the OTHER way — run
 `node pipeline/anchor.js` on the box, scp `activity-anchor.json` down,
 commit and push it. Anchor after any notable activity, at least weekly.
 
+## Reading support messages
+
+The /feedback drop-box saves notes and screenshots as private files in
+`data/feedback/` on the server (gitignored, never served over HTTP).
+Read them:
+
+```bash
+ssh -i ~/.ssh/countycommons root@134.209.120.2 'cd /opt/countycommons && node pipeline/feedback.js'
+```
+
+Pull a screenshot down to look at it:
+
+```bash
+scp -i ~/.ssh/countycommons root@134.209.120.2:/opt/countycommons/data/feedback/FILENAME .
+```
+
+After a note is handled, archive or delete its pair of files on the box.
+
 ## Pre-public-launch checklist
 
 - [ ] Set `contact_email` in config/county.json (corrections line appears in

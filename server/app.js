@@ -263,6 +263,64 @@ app.post('/issues/:id/vote', express.urlencoded({ extended: false }), (req, res)
   res.redirect(`/issues/${draft.id}?voted=${value}`);
 });
 
+// ---- support drop-box ----
+// Notes and screenshots land as private files in data/feedback/ (gitignored,
+// never served, never published). Read on the box: node pipeline/feedback.js
+const multer = require('multer');
+const { feedbackPage } = require('./views/feedback');
+const FEEDBACK_DIR = path.join(__dirname, '..', 'data', 'feedback');
+fs.mkdirSync(FEEDBACK_DIR, { recursive: true });
+const FB_TYPES = { 'image/png': '.png', 'image/jpeg': '.jpg', 'image/webp': '.webp', 'image/gif': '.gif' };
+const fbId = (req) => {
+  if (!req.fbId) req.fbId = new Date().toISOString().slice(0, 19).replace(/[T:]/g, '-') + '-' + crypto.randomBytes(3).toString('hex');
+  return req.fbId;
+};
+const fbUpload = multer({
+  storage: multer.diskStorage({
+    destination: FEEDBACK_DIR,
+    filename: (req, file, cb) => cb(null, fbId(req) + FB_TYPES[file.mimetype])
+  }),
+  limits: { fileSize: 8 * 1024 * 1024, files: 1, fields: 6 },
+  fileFilter: (req, file, cb) => cb(null, Boolean(FB_TYPES[file.mimetype]))
+});
+const safePath = p => (typeof p === 'string' && p.startsWith('/') && !p.startsWith('//')) ? p : '';
+
+app.get('/feedback', (req, res) => {
+  let from = safePath(req.query.from || '');
+  if (!from) { try { from = safePath(new URL(req.headers.referer).pathname); } catch (e) { /* no referer */ } }
+  res.send(feedbackPage(load().county, { from }));
+});
+
+app.post('/feedback', (req, res) => {
+  fbUpload.single('screenshot')(req, res, (err) => {
+    const county = load().county;
+    const b = req.body || {};
+    if (err) {
+      return res.status(400).send(feedbackPage(county, {
+        error: 'That image did not go through (8 MB max; PNG, JPG, WebP, or GIF). Your note was not saved — please try again.',
+        from: safePath(b.page)
+      }));
+    }
+    if ((b.website || '').trim()) return res.send(feedbackPage(county, { sent: '/' }));
+    const message = (b.message || '').trim().slice(0, 5000);
+    if (!message) {
+      if (req.file) { try { fs.unlinkSync(req.file.path); } catch (e) { /* already gone */ } }
+      return res.status(400).send(feedbackPage(county, { error: 'The message was empty — tell us what happened.', from: safePath(b.page) }));
+    }
+    const id = fbId(req);
+    const rec = {
+      id, ts: new Date().toISOString(),
+      page: (b.page || '').trim().slice(0, 300),
+      message,
+      contact: (b.contact || '').trim().slice(0, 200),
+      ua: (req.headers['user-agent'] || '').slice(0, 300),
+      screenshot: req.file ? req.file.filename : null
+    };
+    fs.writeFileSync(path.join(FEEDBACK_DIR, id + '.json'), JSON.stringify(rec, null, 2));
+    res.send(feedbackPage(county, { sent: safePath(rec.page) || '/' }));
+  });
+});
+
 // Reserved for later milestones — honest about it rather than 404.
 for (const route of ['/results', '/ask']) {
   app.get(route, (req, res) => {
@@ -281,7 +339,7 @@ app.use((err, req, res, next) => {
   res.status(500).type('html').send(`<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
 <title>Something broke</title><link rel="stylesheet" href="/style.css"></head><body><div class="wrap">
 <header class="page"><h1>Something broke on our end</h1>
-<div class="src">The error is logged and nothing you did caused it. <a href="/">Back home</a>.</div>
+<div class="src">The error is logged and nothing you did caused it. <a href="/feedback">Tell us what you were doing</a> and we'll fix it faster. <a href="/">Back home</a>.</div>
 </header></div></body></html>`);
 });
 

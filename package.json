@@ -8,10 +8,12 @@
   "scripts": {
     "start": "node server/app.js",
     "verify": "node pipeline/verify.js",
-    "ingest": "node pipeline/ingest.js"
+    "ingest": "node pipeline/ingest.js",
+    "feedback": "node pipeline/feedback.js"
   },
   "dependencies": {
     "express": "^4.19.0",
+    "multer": "^2.2.0",
     "pdf-parse": "^2.4.5",
     "pngjs": "^7.0.0",
     "qrcode": "^1.5.4",
@@ -20,6 +22,7 @@
   "dependencyNotes": {
     "_policy": "SECURITY.md §11: every package justified here; prefer stdlib and boring choices.",
     "express": "the server; boring by design",
+    "multer": "screenshot uploads for the /feedback drop-box; standard Express middleware, files stay on our disk",
     "pdf-parse": "corpus ingestion — text and scan-image extraction from county PDFs",
     "pngjs": "pure-JS PNG decode for the 1bpp de-shear fix (pipeline/lib-ocr.js)",
     "qrcode": "pure-JS QR SVG generation for shareable question links; no native deps, no network",
