@@ -57,12 +57,21 @@ Point the domain's A record at the VPS IP; Caddy fetches certificates itself.
 The corpus only changes when files change, so deployment is file sync:
 
 ```bash
-rsync -av --exclude node_modules --exclude .git ./ vps:/opt/clark-commons/
-ssh vps 'cd /opt/clark-commons && node pipeline/verify.js && sudo systemctl restart clark-commons'
+# The live flow (as actually deployed): updates travel through the public repo.
+git push
+ssh -i ~/.ssh/countycommons root@134.209.120.2 \
+  'cd /opt/countycommons \
+   && git checkout -- data/corpus/verification.json data/corpus/activity-anchor.json \
+   && git pull && node pipeline/verify.js && systemctl restart countycommons'
 ```
 
 The verifier runs before restart on purpose — a corpus that doesn't
-cross-foot should never go live.
+cross-foot should never go live. The two `git checkout` files are
+server-regenerated artifacts; discard the server's copies before pulling
+or the pull refuses. The production activity chain lives only on the
+server (gitignored); its public witness travels the OTHER way — run
+`node pipeline/anchor.js` on the box, scp `activity-anchor.json` down,
+commit and push it. Anchor after any notable activity, at least weekly.
 
 ## Pre-public-launch checklist
 
