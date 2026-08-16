@@ -32,11 +32,19 @@ route passes it to `load()`.
    source PDFs in an inbox and run the pipeline pointed at that dir.
 4. **DNS**: nothing to do — a wildcard `*.countycommons.us` A record already
    points every subdomain at the box.
-5. **TLS**: nothing to do — Caddy gets the cert on the first request, gated by
-   `/tls-check`, which reads `tenants.json` and now recognizes the new host.
+5. **Caddy**: add the new host to the one site line in `/etc/caddy/Caddyfile`
+   (see below) and `systemctl reload caddy` — Caddy fetches its cert via
+   HTTP-01 in seconds. One line, no DNS.
 6. Deploy (git pull + restart). The subdomain starts serving.
 
-No code change. No Caddy edit. No DNS edit. That is the seam working.
+No code change. No DNS edit. One Caddy line. That is the seam working.
+
+> Note: on-demand TLS (which would drop even the Caddy line) was tried first
+> but a wildcard **site block** made Caddy attempt a wildcard certificate,
+> which needs a DNS-01 challenge we don't run — it jammed issuance for the
+> real hosts. Explicit per-host names issue reliably. The `/tls-check`
+> endpoint and `isKnownHost()` remain in the code so on-demand can be
+> switched back on later with a DNS-01 provider configured.
 
 ## Still per-county TODO before a real second launch
 
@@ -59,21 +67,14 @@ gitignored, so Clark's live data is untouched by adding a tenant):
 
 - **DNS** (SiteGround): `@` A → droplet IP; `*` A → droplet IP (wildcard
   covers every county subdomain and www).
-- **Caddy** (`/etc/caddy/Caddyfile` on the box):
+- **Caddy** (`/etc/caddy/Caddyfile` on the box) — one site line, every county
+  host named explicitly; add the next county to the same comma-separated list:
   ```
-  {
-      on_demand_tls { ask http://localhost:3000/tls-check }
-  }
   countycommons.us, www.countycommons.us, clarkar.countycommons.us {
       reverse_proxy localhost:3000
       encode gzip
   }
-  *.countycommons.us {
-      tls { on_demand }
-      reverse_proxy localhost:3000
-      encode gzip
-  }
   ```
-  The named hosts get certs the normal way; any other county subdomain gets
-  one on demand, gated by `/tls-check` so the box can't be tricked into
-  minting certs for hosts we don't serve.
+  Each named host gets its cert via HTTP-01 on reload. The app itself does the
+  apex/www → flagship redirect and the unknown-subdomain page; Caddy just
+  terminates TLS and proxies.
