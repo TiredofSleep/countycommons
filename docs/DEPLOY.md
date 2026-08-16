@@ -58,11 +58,17 @@ The corpus only changes when files change, so deployment is file sync:
 
 ```bash
 # The live flow (as actually deployed): updates travel through the public repo.
+# The box's only local changes are server-generated artifacts (every county's
+# verification.json, the activity anchor, package-lock), so discard them all
+# before pulling — then re-run the verifier for each county.
 git push
 ssh -i ~/.ssh/countycommons root@134.209.120.2 \
   'cd /opt/countycommons \
-   && git checkout -- data/corpus/verification.json data/corpus/activity-anchor.json \
-   && git pull && node pipeline/verify.js && systemctl restart countycommons'
+   && git checkout -- . \
+   && git pull \
+   && node pipeline/verify.js \
+   && node pipeline/verify.js data/corpus-garlandar \
+   && systemctl restart countycommons'
 ```
 
 The verifier runs before restart on purpose — a corpus that doesn't
