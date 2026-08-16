@@ -4,10 +4,23 @@
 const fs = require('fs');
 const path = require('path');
 
-const CORPUS_DIR = path.join(__dirname, '..', '..', 'data', 'corpus');
-const CONFIG_PATH = path.join(__dirname, '..', '..', 'config', 'county.json');
+const ROOT = path.join(__dirname, '..', '..');
+const TENANTS_PATH = path.join(ROOT, 'config', 'tenants.json');
 
-function load() {
+// Resolve which county's files to read from the tenant key set by the
+// host-routing middleware. Falls back to the default county, so load() with
+// no argument keeps serving the flagship (Clark) exactly as before.
+function tenantPaths(tenantKey) {
+  let reg;
+  try { reg = JSON.parse(fs.readFileSync(TENANTS_PATH, 'utf8')); }
+  catch (e) { return { corpusDir: path.join(ROOT, 'data', 'corpus'), configPath: path.join(ROOT, 'config', 'county.json') }; }
+  const key = (tenantKey && reg.tenants[tenantKey]) ? tenantKey : reg.default;
+  const t = reg.tenants[key];
+  return { corpusDir: path.join(ROOT, t.corpusDir), configPath: path.join(ROOT, t.configPath) };
+}
+
+function load(tenantKey) {
+  const { corpusDir: CORPUS_DIR, configPath: CONFIG_PATH } = tenantPaths(tenantKey);
   const budget = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'budget-2026.json'), 'utf8'));
   const docket = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'docket.json'), 'utf8'));
   const documents = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'documents.json'), 'utf8'));

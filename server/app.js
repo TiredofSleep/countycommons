@@ -32,6 +32,39 @@ const { throttle } = require('./lib/throttle');
 const writeLimit = throttle({ windowMs: 60000, max: 30 }); // votes/registrations
 const heavyLimit = throttle({ windowMs: 60000, max: 8 });  // submissions/feedback
 
+// ---- multi-county host routing (CLAUDE.md rule 7, made physical) ----
+const tenant = require('./lib/tenant');
+
+// Caddy queries this before it mints an on-demand TLS certificate for a host,
+// so the box only gets certs for counties we actually serve. Ungated on
+// purpose (registered before the site-password gate): it must answer Caddy.
+app.get('/tls-check', (req, res) =>
+  tenant.isKnownHost(req.query.domain || '') ? res.status(200).send('ok') : res.status(404).send('no'));
+
+function comingSoonPage(sub) {
+  const s = esc(String(sub || '').slice(0, 40));
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>County Commons — not live yet</title><link rel="stylesheet" href="/style.css"><link rel="icon" href="/favicon.svg">
+<meta name="robots" content="noindex"></head><body><div class="wrap">
+<header class="page" style="max-width:560px;margin:10vh auto 0">
+  <div class="eyebrow">County Commons</div>
+  <h1>“${s}” isn't live yet</h1>
+  <p class="src">County Commons is a free civic-transparency platform, county by county. This one hasn't been set up yet — no budget has been ingested and no questions are open here.</p>
+  <p class="src">The first county is live now: <a href="https://clarkar.countycommons.us">Clark County, Arkansas</a>. If you'd like to bring your county on, that's exactly what this project is for.</p>
+</header></div></body></html>`;
+}
+
+// Route every request to its county by the Host header. Bare apex and www go
+// to the flagship; an unknown subdomain gets the honest "not live yet" page.
+app.use((req, res, next) => {
+  const r = tenant.resolveHost(req.headers.host);
+  if (r.action === 'redirect') return res.redirect(301, `https://${r.to}${req.originalUrl}`);
+  if (r.action === 'unknown') return res.status(404).send(comingSoonPage(r.sub));
+  req.tenantKey = r.key;
+  next();
+});
+
 // ---- site password (soft launch) ----
 function sitePassword() {
   if (process.env.SITE_PASSWORD) return process.env.SITE_PASSWORD;
@@ -133,7 +166,7 @@ app.use('/files', express.static(path.join(__dirname, '..', 'inbox'), { maxAge: 
 const { homePage } = require('./views/home');
 app.get('/', (req, res) => {
   const participant = participantOf(req);
-  const data = load();
+  const data = load(req.tenantKey);
   const open = (data.issueDrafts.drafts || []).filter(d => d.status === 'open-tier0');
   res.send(homePage(data, {
     registeredFields: participant ? require('./identity').fieldsOf(participant) : [],
@@ -141,10 +174,10 @@ app.get('/', (req, res) => {
     announceChecked: !!(participant && open.length && require('./signatures').mySignature(participant, open[0].id))
   }));
 });
-app.get('/budget', (req, res) => res.send(treePage(load())));
+app.get('/budget', (req, res) => res.send(treePage(load(req.tenantKey))));
 
 app.get('/line/:id', (req, res) => {
-  const data = load();
+  const data = load(req.tenantKey);
   const node = data.byId.get(req.params.id);
   if (!node) return res.status(404).send(notFound(data, 'No line with that id exists in the corpus.'));
   res.send(nodePage(data, node));
@@ -155,7 +188,7 @@ app.get('/line/:id', (req, res) => {
 // or tracked to the milestone that makes it true. The plain-words guide
 // lives at /guide.
 app.get('/story', (req, res) => {
-  const data = load();
+  const data = load(req.tenantKey);
   const { layout } = require('./views/layout');
   const { mdToHtml } = require('./lib/md');
   const md = fs.readFileSync(path.join(__dirname, '..', 'THE-STORY.md'), 'utf8')
@@ -182,51 +215,51 @@ app.get('/story', (req, res) => {
   }));
 });
 
-app.get('/guide', (req, res) => res.send(storyPage(load())));
+app.get('/guide', (req, res) => res.send(storyPage(load(req.tenantKey))));
 
 const { stancePage } = require('./views/stance');
 const { participatePage } = require('./views/participate');
-app.get('/stance', (req, res) => res.send(stancePage(load())));
+app.get('/stance', (req, res) => res.send(stancePage(load(req.tenantKey))));
 
 const { casesPage, casePage } = require('./views/cases');
 const { researchPage } = require('./views/research');
-app.get('/research', (req, res) => res.send(researchPage(load())));
-app.get('/cases', (req, res) => res.send(casesPage(load())));
+app.get('/research', (req, res) => res.send(researchPage(load(req.tenantKey))));
+app.get('/cases', (req, res) => res.send(casesPage(load(req.tenantKey))));
 app.get('/cases/:id', (req, res) => {
-  const data = load();
+  const data = load(req.tenantKey);
   const c = data.cases.cases.find(x => x.id === req.params.id);
   if (!c) return res.status(404).send(notFound(data, 'No case study with that id.'));
   res.send(casePage(data, c));
 });
-app.get('/participate', (req, res) => res.send(participatePage(load())));
+app.get('/participate', (req, res) => res.send(participatePage(load(req.tenantKey))));
 
 const { helpPage } = require('./views/help');
-app.get('/help', (req, res) => res.send(helpPage(load())));
+app.get('/help', (req, res) => res.send(helpPage(load(req.tenantKey))));
 
 const { calendarPage } = require('./views/calendar');
-app.get('/calendar', (req, res) => res.send(calendarPage(load())));
-app.get('/vendors', (req, res) => res.send(vendorsPage(load())));
-app.get('/audits', (req, res) => res.send(auditsPage(load())));
+app.get('/calendar', (req, res) => res.send(calendarPage(load(req.tenantKey))));
+app.get('/vendors', (req, res) => res.send(vendorsPage(load(req.tenantKey))));
+app.get('/audits', (req, res) => res.send(auditsPage(load(req.tenantKey))));
 
-app.get('/compare/spending', (req, res) => res.send(spendingPage(load())));
+app.get('/compare/spending', (req, res) => res.send(spendingPage(load(req.tenantKey))));
 
 app.get('/compare/:id', (req, res) => {
-  const data = load();
+  const data = load(req.tenantKey);
   const cmp = data.comparisons.comparisons.find(c => c.id === req.params.id);
   if (!cmp) return res.status(404).send(notFound(data, 'No comparison with that id exists.'));
   res.send(comparePage(data, cmp));
 });
 
-app.get('/docket', (req, res) => res.send(docketPage(load())));
-app.get('/documents', (req, res) => res.send(documentsPage(load(), req.query.q)));
-app.get('/verify', (req, res) => res.send(verifyPage(load())));
-app.get('/methodology', (req, res) => res.send(methodologyPage(load())));
+app.get('/docket', (req, res) => res.send(docketPage(load(req.tenantKey))));
+app.get('/documents', (req, res) => res.send(documentsPage(load(req.tenantKey), req.query.q)));
+app.get('/verify', (req, res) => res.send(verifyPage(load(req.tenantKey))));
+app.get('/methodology', (req, res) => res.send(methodologyPage(load(req.tenantKey))));
 
 // Charter documents rendered as public pages (SECURITY.md §14; NEVER.md).
 const { mdToHtml } = require('./lib/md');
 function charterPage(file, current, description) {
   return (req, res) => {
-    const data = load();
+    const data = load(req.tenantKey);
     const { layout } = require('./views/layout');
     const md = fs.readFileSync(path.join(__dirname, '..', file), 'utf8');
     res.send(layout({
@@ -250,7 +283,7 @@ function participantOf(req) {
   return TOKEN_RE.test(t) ? t : null;
 }
 
-app.get('/issues', (req, res) => res.send(issuesPage(load(), req.query.submitted === '1')));
+app.get('/issues', (req, res) => res.send(issuesPage(load(req.tenantKey), req.query.submitted === '1')));
 
 app.post('/issues/submit', heavyLimit, express.urlencoded({ extended: false }), (req, res) => {
   const q = (req.body && req.body.question || '').trim();
@@ -261,7 +294,7 @@ app.post('/issues/submit', heavyLimit, express.urlencoded({ extended: false }), 
 });
 
 app.get('/issues/:id/qr.svg', (req, res) => {
-  const data = load();
+  const data = load(req.tenantKey);
   const draft = data.issueDrafts.drafts.find(d => d.id === req.params.id && d.status === 'open-tier0');
   if (!draft) return res.status(404).type('text').send('not found');
   const url = `${req.protocol}://${req.headers.host}/issues/${draft.id}`;
@@ -292,7 +325,7 @@ function ensureParticipant(req, res) {
 const identity = require('./identity');
 
 app.get('/issues/:id', (req, res) => {
-  const data = load();
+  const data = load(req.tenantKey);
   const draft = data.issueDrafts.drafts.find(d => d.id === req.params.id && d.status === 'open-tier0');
   if (!draft) return res.status(404).send(notFound(data, 'No open question with that id.'));
   const voted = req.query.voted && ['yes', 'no', 'skip'].includes(req.query.voted) ? req.query.voted : null;
@@ -303,7 +336,7 @@ app.get('/issues/:id', (req, res) => {
 });
 
 app.post('/issues/:id/vote', writeLimit, express.urlencoded({ extended: false }), (req, res) => {
-  const data = load();
+  const data = load(req.tenantKey);
   const draft = data.issueDrafts.drafts.find(d => d.id === req.params.id && d.status === 'open-tier0');
   if (!draft) return res.status(404).send(notFound(data, 'No open question with that id.'));
   const value = (req.body && req.body.value) || '';
@@ -317,7 +350,7 @@ app.post('/issues/:id/vote', writeLimit, express.urlencoded({ extended: false })
 });
 
 app.post('/issues/:id/register', writeLimit, express.urlencoded({ extended: false }), (req, res) => {
-  const data = load();
+  const data = load(req.tenantKey);
   const draft = data.issueDrafts.drafts.find(d => d.id === req.params.id && d.status === 'open-tier0');
   if (!draft) return res.status(404).send(notFound(data, 'No open question with that id.'));
   const participant = ensureParticipant(req, res);
@@ -344,7 +377,7 @@ function applyAnnouncement(participant, issueId, body) {
 app.post('/register', writeLimit, express.urlencoded({ extended: false }), (req, res) => {
   const participant = ensureParticipant(req, res);
   const saved = identity.register(participant, req.body || {});
-  const open = (load().issueDrafts.drafts || []).filter(d => d.status === 'open-tier0');
+  const open = (load(req.tenantKey).issueDrafts.drafts || []).filter(d => d.status === 'open-tier0');
   const sigState = open.length ? applyAnnouncement(participant, open[0].id, req.body) : null;
   // An announcement outcome belongs on the page where the name appears (or
   // where the missing step is) — send them there to see it.
@@ -377,12 +410,12 @@ const safePath = p => (typeof p === 'string' && p.startsWith('/') && !p.startsWi
 app.get('/feedback', (req, res) => {
   let from = safePath(req.query.from || '');
   if (!from) { try { from = safePath(new URL(req.headers.referer).pathname); } catch (e) { /* no referer */ } }
-  res.send(feedbackPage(load().county, { from }));
+  res.send(feedbackPage(load(req.tenantKey).county, { from }));
 });
 
 app.post('/feedback', heavyLimit, (req, res) => {
   fbUpload.single('screenshot')(req, res, (err) => {
-    const county = load().county;
+    const county = load(req.tenantKey).county;
     const b = req.body || {};
     if (err) {
       return res.status(400).send(feedbackPage(county, {
@@ -413,13 +446,13 @@ app.post('/feedback', heavyLimit, (req, res) => {
 // Reserved for later milestones — honest about it rather than 404.
 for (const route of ['/results', '/ask']) {
   app.get(route, (req, res) => {
-    const data = load();
+    const data = load(req.tenantKey);
     res.status(404).send(notFound(data,
       'This part of the platform is not built yet. The budget engine comes first; issues, results, and Q&A follow.'));
   });
 }
 
-app.use((req, res) => res.status(404).send(notFound(load(), 'That page does not exist.')));
+app.use((req, res) => res.status(404).send(notFound(load(req.tenantKey), 'That page does not exist.')));
 
 // Errors never leak internals; the corpus is checked by the verifier, so a
 // failure here is an operations problem, not a reader problem.
