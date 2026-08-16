@@ -82,7 +82,15 @@ function load(tenantKey) {
   if (verification) {
     for (const c of verification.checks) verifyByNode.set(c.node, c);
   }
-  return { budget, docket, documents, county, verification, comparisons, vendors, auditFindings, spending, stance, cases, help, calendar, research, issueDrafts, byId, childrenOf, verifyByNode };
+  const data = { budget, docket, documents, county, verification, comparisons, vendors, auditFindings, spending, stance, cases, help, calendar, research, issueDrafts, byId, childrenOf, verifyByNode };
+  // Lay this county's writable overlay (a local host's edits) on top of the
+  // git-seeded corpus. Only whitelisted sections merge (see overlay.js); the
+  // bones are never touched. Resolve to the default county when unkeyed.
+  let reg;
+  try { reg = JSON.parse(fs.readFileSync(TENANTS_PATH, 'utf8')); } catch (e) { reg = null; }
+  const okey = (tenantKey && reg && reg.tenants[tenantKey]) ? tenantKey : (reg ? reg.default : null);
+  try { require('./overlay').apply(data, okey); } catch (e) { data.copy = data.copy || {}; }
+  return data;
 }
 
 function esc(s) {

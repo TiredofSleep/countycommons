@@ -65,14 +65,12 @@ app.use((req, res, next) => {
   next();
 });
 
-// ---- site password (soft launch) ----
-function sitePassword() {
-  if (process.env.SITE_PASSWORD) return process.env.SITE_PASSWORD;
-  try {
-    return fs.readFileSync(path.join(__dirname, '..', 'config', 'site-password'), 'utf8').trim() || null;
-  } catch (e) { return null; }
+// ---- access: PIN router (view + admin), per county ----
+const access = require('./lib/access');
+const { registry: tenantRegistry } = tenant;
+function hostFor(tenantKey) {
+  try { return tenantRegistry().tenants[tenantKey].host; } catch (e) { return null; }
 }
-const gateToken = pw => crypto.createHash('sha256').update('clark-commons-gate:' + pw).digest('hex').slice(0, 32);
 
 // ---- headers ----
 app.use((req, res, next) => {
@@ -88,7 +86,7 @@ app.use((req, res, next) => {
 app.get('/health', (req, res) => res.type('text').send('ok'));
 app.get('/robots.txt', (req, res) => {
   // While the gate is up, ask crawlers to stay out. Open site = crawl away.
-  res.type('text').send(sitePassword() ? 'User-agent: *\nDisallow: /\n' : 'User-agent: *\nAllow: /\n');
+  res.type('text').send(access.gateConfigured() ? 'User-agent: *\nDisallow: /\n' : 'User-agent: *\nAllow: /\n');
 });
 
 // Static assets are public (styles for the gate page; no data in them).
@@ -104,21 +102,27 @@ function cookies(req) {
   return out;
 }
 
+function safeDest(next) {
+  return (next && next.startsWith('/') && !next.startsWith('//') && !next.includes('\\')) ? next : '/';
+}
+
+// The front door: type a PIN, it takes you to your county. A 4-digit view PIN
+// opens the public site; an 8-char admin code opens the admin for that county.
 function gatePage(msg, next) {
-  const dest = (next && next.startsWith('/') && !next.startsWith('//') && !next.includes('\\')) ? next : '/';
+  const dest = safeDest(next);
   return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clark Commons — early access</title>
-<link rel="stylesheet" href="/style.css"><link rel="icon" href="/favicon.svg">
+<title>County Commons — enter your PIN</title>
+<link rel="stylesheet" href="/style.css?v=5"><link rel="icon" href="/favicon.svg">
 <meta name="robots" content="noindex"></head><body><div class="wrap">
 <header class="page" style="max-width:480px;margin:10vh auto 0">
-  <div class="eyebrow">Clark Commons · Clark County, Arkansas</div>
-  <h1>Early access</h1>
-  <p class="src">This site is in a quiet launch. If someone gave you the password, enter it once and you're in.</p>
-  <p class="src">Clark Commons is an independent community project — <b>not a government website</b>. The official Clark County site is <a href="https://www.clarkcountyar.gov" rel="noopener">clarkcountyar.gov</a>.</p>
+  <div class="eyebrow">County Commons</div>
+  <h1>Enter your PIN</h1>
+  <p class="src">Type the PIN for your county and you're in. A resident PIN opens your county's site; a host code opens its admin.</p>
+  <p class="src">County Commons is an independent community project — <b>not a government website</b>.</p>
   ${msg ? `<p class="src" style="color:var(--dead)">${esc(msg)}</p>` : ''}
   <form method="POST" action="/gate" style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
-    <input type="password" name="password" autofocus required aria-label="Site password"
+    <input type="password" name="pin" autofocus required aria-label="County PIN" autocomplete="off"
       style="font-family:var(--mono);font-size:15px;padding:8px 10px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink);flex:1;min-width:160px">
     <input type="hidden" name="next" value="${esc(dest)}">
     <button type="submit" style="font-family:var(--mono);font-size:13px;padding:8px 14px;background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);cursor:pointer">Enter</button>
@@ -127,27 +131,48 @@ function gatePage(msg, next) {
 }
 
 app.get('/gate', (req, res) => res.send(gatePage(null, req.query.next || '/')));
-app.post('/gate', express.urlencoded({ extended: false }), (req, res) => {
-  const pw = sitePassword();
-  const given = (req.body && req.body.password) || '';
-  const next = (req.body && req.body.next) || '/';
-  const dest = (next.startsWith('/') && !next.startsWith('//') && !next.includes('\\')) ? next : '/';
-  if (pw && given === pw) {
-    res.setHeader('Set-Cookie',
-      `cc_gate=${gateToken(pw)}; Path=/; Max-Age=${60 * 60 * 24 * 30}; HttpOnly; SameSite=Lax`);
-    return res.redirect(dest);
+app.post('/gate', writeLimit, express.urlencoded({ extended: false }), (req, res) => {
+  const ip = req.ip || 'unknown';
+  const lock = access.lockState(ip);
+  if (lock.locked) {
+    const mins = Math.ceil((lock.until - Date.now()) / 60000);
+    return res.status(429).send(gatePage(`Too many attempts. Try again in about ${mins} minute${mins === 1 ? '' : 's'}.`, safeDest(req.body && req.body.next)));
   }
-  res.status(401).send(gatePage('That password did not match.', dest));
+  const given = (req.body && req.body.pin) || '';
+  const dest = safeDest(req.body && req.body.next);
+  const hit = access.lookupPin(given);
+  if (!hit) {
+    access.noteFailure(ip);
+    return res.status(401).send(gatePage('That PIN did not match.', dest));
+  }
+  access.noteSuccess(ip);
+  res.setHeader('Set-Cookie',
+    `cc_access=${access.cookieValue(hit.tenant, hit.role, hit.name || '')}; Path=/; Max-Age=${60 * 60 * 24 * 30}; HttpOnly; SameSite=Lax`);
+  // The PIN decides the county. If we're not on that county's host, send them
+  // there; otherwise open the site (admins land on the admin dashboard).
+  const wantHost = hostFor(hit.tenant);
+  const hereHost = tenant.resolveHost(req.headers.host);
+  const landing = hit.role === 'admin' ? '/admin' : dest;
+  if (wantHost && hereHost.action === 'serve' && hereHost.key !== hit.tenant) {
+    return res.redirect(`https://${wantHost}${landing}`);
+  }
+  res.redirect(landing);
 });
 
+// The gate. Open when no PINs are configured. Otherwise a valid access cookie
+// whose county matches this host lets you through; anything else sees the PIN.
 app.use((req, res, next) => {
-  const pw = sitePassword();
-  if (!pw) return next();
-  if (cookies(req).cc_gate === gateToken(pw)) return next();
-  // A shared link lands here first: remember where they were headed, so the
-  // door opens onto the page they were sent — not the lobby.
+  if (!access.gateConfigured()) return next();
+  const acc = access.verifyCookie(cookies(req).cc_access);
+  if (acc && acc.tenant === req.tenantKey) { req.access = acc; return next(); }
   res.status(401).send(gatePage(null, req.originalUrl));
 });
+
+// Admin guard: for /admin routes, require an admin cookie for THIS county.
+function requireAdmin(req, res, next) {
+  if (req.access && req.access.role === 'admin') return next();
+  res.status(403).send(gatePage('That area needs a host code for this county.', '/admin'));
+}
 
 // Downgrade any pre-existing persistent participant cookie to session scope:
 // re-issuing it without Max-Age makes the browser forget it when the window
@@ -385,6 +410,61 @@ app.post('/register', writeLimit, express.urlencoded({ extended: false }), (req,
   res.redirect(`/${saved ? '?registered=1' : ''}#register`);
 });
 
+// ---- county admin (host code; edits scoped to this county's overlay) ----
+// Every route is guarded by requireAdmin, writes only to req.access.tenant's
+// overlay, and chains an admin-edit event by the host's name. See COUNTY-CODE.md.
+const overlay = require('./lib/overlay');
+const chain = require('./lib/chain');
+const { adminDashboard, adminCalendar } = require('./views/admin');
+
+function logAdminEdit(req, section) {
+  try { chain.append('admin-edit', { tenant: req.access.tenant, by: req.access.name || 'host', section }); }
+  catch (e) { /* chain optional in dev */ }
+}
+
+app.get('/admin', requireAdmin, (req, res) =>
+  res.send(adminDashboard(load(req.tenantKey), req.access.name)));
+
+app.get('/admin/calendar', requireAdmin, (req, res) =>
+  res.send(adminCalendar(load(req.tenantKey), { saved: req.query.saved === '1' })));
+
+app.post('/admin/calendar/intro', requireAdmin, express.urlencoded({ extended: false }), (req, res) => {
+  const intro = String((req.body && req.body.intro) || '').slice(0, 600);
+  overlay.setSection(req.access.tenant, 'calendar_intro', intro);
+  logAdminEdit(req, 'calendar intro');
+  res.redirect('/admin/calendar?saved=1');
+});
+
+app.post('/admin/calendar/event/add', requireAdmin, express.urlencoded({ extended: false }), (req, res) => {
+  const b = req.body || {};
+  const name = String(b.name || '').trim().slice(0, 120);
+  if (!name) return res.redirect('/admin/calendar');
+  const ev = {
+    name,
+    date: String(b.date || '').trim().slice(0, 80),
+    place: String(b.place || '').trim().slice(0, 120),
+    note: String(b.note || '').trim().slice(0, 240)
+  };
+  const cur = overlay.read(req.access.tenant).calendar_community
+    || ((load(req.tenantKey).calendar.community || {}).listings) || [];
+  const next = cur.concat([ev]).slice(0, 100);
+  overlay.setSection(req.access.tenant, 'calendar_community', next);
+  logAdminEdit(req, 'added community event');
+  res.redirect('/admin/calendar?saved=1');
+});
+
+app.post('/admin/calendar/event/remove', requireAdmin, express.urlencoded({ extended: false }), (req, res) => {
+  const i = parseInt((req.body && req.body.index), 10);
+  const cur = overlay.read(req.access.tenant).calendar_community
+    || ((load(req.tenantKey).calendar.community || {}).listings) || [];
+  if (Number.isInteger(i) && i >= 0 && i < cur.length) {
+    cur.splice(i, 1);
+    overlay.setSection(req.access.tenant, 'calendar_community', cur);
+    logAdminEdit(req, 'removed community event');
+  }
+  res.redirect('/admin/calendar?saved=1');
+});
+
 // ---- support drop-box ----
 // Notes and screenshots land as private files in data/feedback/ (gitignored,
 // never served, never published). Read on the box: node pipeline/feedback.js
@@ -474,4 +554,4 @@ function notFound(data, msg) {
 }
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Clark Commons listening on http://localhost:${PORT}${sitePassword() ? ' (gated)' : ' (open)'}`));
+app.listen(PORT, () => console.log(`County Commons listening on http://localhost:${PORT}${access.gateConfigured() ? ' (PIN-gated)' : ' (open)'}`));
