@@ -1,24 +1,604 @@
 {
   "meta": {
-    "grand_total": 0,
+    "grand_total": 113176330.55,
     "year": 2026,
-    "note": "No appropriation document has been ingested for Garland County yet — the trail starts here."
+    "ordinance": "O-25-25",
+    "note": "Garland County 2026 budget, all funds, from Appropriation Ordinance O-25-25 adopted Dec 8, 2025. Projected all-funds revenue was $155,262,187.90; 72.89% was budgeted."
   },
   "nodes": [
     {
-      "id": "root",
+      "id": "gf-general",
       "parent": null,
-      "name": "Garland County — county budget",
+      "section": "appropriations",
+      "name": "General Fund",
       "code": null,
-      "amount": 0,
+      "amount": 25873537.77,
       "year": 2026,
       "layer": "appropriation",
       "source": {
-        "doc": null,
+        "doc": "ord-o-25-25",
         "page": null
       },
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\" The Garland County appropriation ordinance is the first document to pull."
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": true,
+      "note": "The county's main operating fund, broken out by department below, from the 2026 appropriation ordinance."
+    },
+    {
+      "id": "road",
+      "parent": null,
+      "section": "appropriations",
+      "name": "County Road Fund",
+      "code": null,
+      "amount": 13552088.42,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "partial",
+      "docket_ref": 2,
+      "children_complete": false,
+      "note": "Total sourced from the ordinance; the department-level breakdown is not yet ingested."
+    },
+    {
+      "id": "road-bridge",
+      "parent": null,
+      "section": "appropriations",
+      "name": "County Road & Bridge Improvement",
+      "code": null,
+      "amount": 16000000,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": 2,
+      "children_complete": false,
+      "note": "A single $16,000,000 appropriation line for road and bridge improvement in the 2026 ordinance."
+    },
+    {
+      "id": "jail",
+      "parent": null,
+      "section": "appropriations",
+      "name": "Detention Facility Fund (Jail)",
+      "code": null,
+      "amount": 13213991.66,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "partial",
+      "docket_ref": 1,
+      "children_complete": false,
+      "note": "Total sourced from the ordinance; of this, Personal Services is $9,155,391.30. The full line-item breakdown is not yet ingested."
+    },
+    {
+      "id": "other-funds",
+      "parent": null,
+      "section": "appropriations",
+      "name": "All other funds — not yet itemized",
+      "code": null,
+      "amount": 44536712.7,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "ambiguous",
+      "docket_ref": 3,
+      "children_complete": false,
+      "note": "Derived: the ordinance's all-funds total of $113,176,330.55 minus the four funds itemized above. Real appropriated money (grants, solid waste, special revenue, and more) whose individual funds are not yet ingested — a dead end, never hidden."
+    },
+    {
+      "id": "gf-county-judge",
+      "parent": "gf-general",
+      "section": "department",
+      "name": "County Judge",
+      "code": null,
+      "amount": 294433.41,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-county-clerk",
+      "parent": "gf-general",
+      "section": "department",
+      "name": "County Clerk",
+      "code": null,
+      "amount": 586711.59,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-circuit-clerk",
+      "parent": "gf-general",
+      "section": "department",
+      "name": "Circuit Clerk",
+      "code": null,
+      "amount": 514469.28,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-treasurer",
+      "parent": "gf-general",
+      "section": "department",
+      "name": "Treasurer",
+      "code": null,
+      "amount": 232170.71,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-tax-collector",
+      "parent": "gf-general",
+      "section": "department",
+      "name": "Tax Collector",
+      "code": null,
+      "amount": 654610.17,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-assessor",
+      "parent": "gf-general",
+      "section": "department",
+      "name": "Assessor",
+      "code": null,
+      "amount": 1588892.1,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-equalization-board",
+      "parent": "gf-general",
+      "section": "department",
+      "name": "Equalization Board",
+      "code": null,
+      "amount": 33347.86,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-quorum-court",
+      "parent": "gf-general",
+      "section": "department",
+      "name": "Quorum Court",
+      "code": null,
+      "amount": 208022.78,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-county-general-services",
+      "parent": "gf-general",
+      "section": "department",
+      "name": "County General Services",
+      "code": null,
+      "amount": 1064017.25,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-election-commission",
+      "parent": "gf-general",
+      "section": "department",
+      "name": "Election Commission",
+      "code": null,
+      "amount": 547512.85,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-financial-management",
+      "parent": "gf-general",
+      "section": "department",
+      "name": "Financial Management",
+      "code": null,
+      "amount": 553076.88,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-computer-is",
+      "parent": "gf-general",
+      "section": "department",
+      "name": "Computer/IS",
+      "code": null,
+      "amount": 548100,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-grant-in-aid",
+      "parent": "gf-general",
+      "section": "department",
+      "name": "Grant In Aid",
+      "code": null,
+      "amount": 1450525.5,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-county-attorney",
+      "parent": "gf-general",
+      "section": "department",
+      "name": "County Attorney",
+      "code": null,
+      "amount": 387014.94,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-health-department",
+      "parent": "gf-general",
+      "section": "department",
+      "name": "Health Department",
+      "code": null,
+      "amount": 71393.3,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-sheriff",
+      "parent": "gf-general",
+      "section": "department",
+      "name": "Sheriff",
+      "code": null,
+      "amount": 9120047.4,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-circuit-court-division-i",
+      "parent": "gf-general",
+      "section": "department",
+      "name": "Circuit Court Division I",
+      "code": null,
+      "amount": 122389.87,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-circuit-court-division-ii",
+      "parent": "gf-general",
+      "section": "department",
+      "name": "Circuit Court Division II",
+      "code": null,
+      "amount": 1148119.6,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-circuit-court-division-iii",
+      "parent": "gf-general",
+      "section": "department",
+      "name": "Circuit Court Division III",
+      "code": null,
+      "amount": 101866.25,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-circuit-court-division-iv",
+      "parent": "gf-general",
+      "section": "department",
+      "name": "Circuit Court Division IV",
+      "code": null,
+      "amount": 125872.24,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-prosecuting-attorney",
+      "parent": "gf-general",
+      "section": "department",
+      "name": "Prosecuting Attorney",
+      "code": null,
+      "amount": 1018977.14,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-coroner",
+      "parent": "gf-general",
+      "section": "department",
+      "name": "Coroner",
+      "code": null,
+      "amount": 348350.9,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-district-court-juvenile-court-bu",
+      "parent": "gf-general",
+      "section": "department",
+      "name": "District Court/Juvenile Court Building",
+      "code": null,
+      "amount": 167405.78,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-juvenile-housing-transport",
+      "parent": "gf-general",
+      "section": "department",
+      "name": "Juvenile Housing & Transport",
+      "code": null,
+      "amount": 742373,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-dept-of-emergency-management",
+      "parent": "gf-general",
+      "section": "department",
+      "name": "Dept. of Emergency Management",
+      "code": null,
+      "amount": 305888.26,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-veteran-services",
+      "parent": "gf-general",
+      "section": "department",
+      "name": "Veteran Services",
+      "code": null,
+      "amount": 88390.99,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-cooperative-extension-services",
+      "parent": "gf-general",
+      "section": "department",
+      "name": "Cooperative Extension Services",
+      "code": null,
+      "amount": 98260,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "gf-county-general-transfers",
+      "parent": "gf-general",
+      "section": "department",
+      "name": "County General Transfers",
+      "code": null,
+      "amount": 3751297.72,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
     }
   ]
 }

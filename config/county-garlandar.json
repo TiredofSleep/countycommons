@@ -2,8 +2,8 @@
   "name": "Garland County",
   "state": "Arkansas",
   "slug": "garland-county-ar",
-  "population": 100000,
-  "population_source": "U.S. Census estimate (to be pinned)",
+  "population": 100180,
+  "population_source": "2020 U.S. Census (Wikipedia; confirm against Census QuickFacts before publishing)",
   "platform_name": "Garland Commons",
   "sponsor_line": "A County Commons site — free, open, and independent",
   "contact_email": "brayden.ozark@gmail.com",
@@ -25,14 +25,149 @@
       "website": "https://www.cityhs.net"
     }
   ],
-  "peer_counties": ["Clark", "Hot Spring", "Saline", "Montgomery", "Pike"],
-  "officials": [],
-  "quorum_court": { "source": "to be ingested from the county's own records", "justices": [] },
+  "peer_counties": [
+    "Clark",
+    "Hot Spring",
+    "Saline",
+    "Montgomery",
+    "Pike"
+  ],
+  "officials": [
+    {
+      "office": "County Judge",
+      "name": "Darryl Mahoney",
+      "term_expires": null,
+      "source": "arcounties.org/counties/garland"
+    },
+    {
+      "office": "Sheriff",
+      "name": "Mike McCormick",
+      "term_expires": null,
+      "source": "arcounties.org/counties/garland"
+    },
+    {
+      "office": "County Clerk",
+      "name": "Sarah Smith",
+      "term_expires": null,
+      "source": "garlandcounty.org/249; signs Ordinance O-25-25"
+    },
+    {
+      "office": "Circuit Clerk",
+      "name": "Kristie Womble-Hughes",
+      "term_expires": null,
+      "source": "arcounties.org/counties/garland"
+    },
+    {
+      "office": "Treasurer",
+      "name": "Vivian Thomas",
+      "term_expires": null,
+      "source": "arcounties.org/counties/garland"
+    },
+    {
+      "office": "Tax Collector",
+      "name": "Rebecca Dodd-Talbert",
+      "term_expires": null,
+      "source": "portal.arkansas.gov/counties/garland; garlandcounty.org/172"
+    },
+    {
+      "office": "Assessor",
+      "name": "Shannon Sharp",
+      "term_expires": null,
+      "source": "portal.arkansas.gov/counties/garland; garlandcounty.org/149"
+    },
+    {
+      "office": "Coroner",
+      "name": "Jayson Neighbors",
+      "term_expires": null,
+      "source": "arcounties.org/counties/garland"
+    },
+    {
+      "office": "City Manager, Hot Springs",
+      "name": "Bill Burrough",
+      "term_expires": null,
+      "source": "hotspringsar.gov/139"
+    }
+  ],
+  "quorum_court": {
+    "source": "garlandcounty.org/280 (Justices of the Peace), retrieved 2026-08-16",
+    "justices": [
+      {
+        "district": 1,
+        "name": "Micah Braughton"
+      },
+      {
+        "district": 2,
+        "name": "Thomas Anderson"
+      },
+      {
+        "district": 3,
+        "name": "Susan Garner Jones"
+      },
+      {
+        "district": 4,
+        "name": "Jimmy Young"
+      },
+      {
+        "district": 5,
+        "name": "Ralf Bailes"
+      },
+      {
+        "district": 6,
+        "name": "Ben Hooten"
+      },
+      {
+        "district": 7,
+        "name": "Dayton Myers"
+      },
+      {
+        "district": 8,
+        "name": "Alan Floyd"
+      },
+      {
+        "district": 9,
+        "name": "Dr. Brian Peters"
+      },
+      {
+        "district": 10,
+        "name": "Debbie McGrew"
+      },
+      {
+        "district": 11,
+        "name": "Ronald \"Nub\" Hunter"
+      },
+      {
+        "district": 12,
+        "name": "Jeremy Brown"
+      },
+      {
+        "district": 13,
+        "name": "Ralph Edds"
+      }
+    ]
+  },
   "records_portals": [
-    { "id": "county-site", "name": "Garland County official site", "url": "https://www.garlandcounty.org" }
+    {
+      "id": "county-site",
+      "name": "Garland County official site",
+      "url": "https://www.garlandcounty.org"
+    },
+    {
+      "id": "ord-2026",
+      "name": "2026 Appropriation Ordinance O-25-25",
+      "url": "https://www.garlandcounty.org/ArchiveCenter/ViewFile/Item/1210"
+    },
+    {
+      "id": "audits",
+      "name": "Garland County audit reports",
+      "url": "https://www.garlandcounty.org/498/Garland-County-Audit-Reports"
+    }
   ],
   "calendar": {
-    "budget_adoption_window": { "start_month": 10, "end_month": 12, "note": "Quorum court typically adopts next-year appropriations in the last quarter." },
+    "budget_adoption_window": {
+      "start_month": 10,
+      "end_month": 12,
+      "note": "Quorum court typically adopts next-year appropriations in the last quarter."
+    },
     "meetings": [],
     "election_blackouts": [
       {
@@ -43,9 +178,31 @@
     ]
   },
   "data_sources": [
-    { "id": "county-site", "name": "Garland County official site", "url": "https://www.garlandcounty.org", "holds": ["appropriation ordinances", "county clerk records"] },
-    { "id": "ar-transparency", "name": "Arkansas transparency portal", "url": "https://transparency.arkansas.gov", "holds": ["filed county budgets"] },
-    { "id": "ark-leg-audit", "name": "Arkansas Legislative Audit", "url": "https://www.arklegaudit.gov", "holds": ["annual county and city audit reports"] }
+    {
+      "id": "county-site",
+      "name": "Garland County official site",
+      "url": "https://www.garlandcounty.org",
+      "holds": [
+        "appropriation ordinances",
+        "county clerk records"
+      ]
+    },
+    {
+      "id": "ar-transparency",
+      "name": "Arkansas transparency portal",
+      "url": "https://transparency.arkansas.gov",
+      "holds": [
+        "filed county budgets"
+      ]
+    },
+    {
+      "id": "ark-leg-audit",
+      "name": "Arkansas Legislative Audit",
+      "url": "https://www.arklegaudit.gov",
+      "holds": [
+        "annual county and city audit reports"
+      ]
+    }
   ],
   "currency_year": 2026,
   "reading_level_target": "6th-8th grade"

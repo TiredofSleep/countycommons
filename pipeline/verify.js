@@ -10,8 +10,15 @@
 const fs = require('fs');
 const path = require('path');
 
-const CORPUS_DIR = path.join(__dirname, '..', 'data', 'corpus');
+// Optional first arg selects a county's corpus dir (relative to repo root),
+// e.g. `node pipeline/verify.js data/corpus-garlandar`. Defaults to Clark.
+const CORPUS_DIR = process.argv[2]
+  ? path.join(__dirname, '..', process.argv[2])
+  : path.join(__dirname, '..', 'data', 'corpus');
 const corpus = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'budget-2026.json'), 'utf8'));
+// Cross-foot in integer cents so figures with cents compare exactly despite
+// binary-float rounding.
+const eq = (a, b) => Math.round(a * 100) === Math.round(b * 100);
 
 const nodes = corpus.nodes;
 const byId = new Map(nodes.map(n => [n.id, n]));
@@ -47,9 +54,9 @@ for (const n of nodes) {
     continue;
   }
   const sum = kids.reduce((a, k) => a + k.amount, 0);
-  checks.push({ node: n.id, name: n.name, kind: 'children-sum', ok: sum === n.amount,
+  checks.push({ node: n.id, name: n.name, kind: 'children-sum', ok: eq(sum, n.amount),
     expected: n.amount, computed: sum,
-    detail: sum === n.amount
+    detail: eq(sum, n.amount)
       ? `${kids.length} children sum to the parent total exactly.`
       : `Children sum to $${sum.toLocaleString('en-US')}, off by $${(sum - n.amount).toLocaleString('en-US')}.` });
 }
@@ -58,9 +65,9 @@ for (const n of nodes) {
 const topFunds = nodes.filter(n => n.parent === null && n.section === 'appropriations');
 const grandSum = topFunds.reduce((a, n) => a + (n.amount || 0), 0);
 checks.push({ node: '__grand_total__', name: 'Ordinance grand total', kind: 'grand-total',
-  ok: grandSum === corpus.meta.grand_total,
+  ok: eq(grandSum, corpus.meta.grand_total),
   expected: corpus.meta.grand_total, computed: grandSum,
-  detail: grandSum === corpus.meta.grand_total
+  detail: eq(grandSum, corpus.meta.grand_total)
     ? `${topFunds.length} top-level funds sum to the ordinance's stated total exactly.`
     : `Top-level funds sum to $${grandSum.toLocaleString('en-US')}, off by $${(grandSum - corpus.meta.grand_total).toLocaleString('en-US')}.` });
 

@@ -1,12 +1,41 @@
 {
-  "intro": "Every public meeting where Garland County's decisions get made — listed and sourced as they're confirmed. These rooms are open to you.",
-  "recurring": [],
-  "unverified": [
+  "intro": "Every public meeting where Garland County's decisions get made — sourced like everything else here. These rooms are open to you, and most are nearly empty. Showing up counts double when almost nobody does.",
+  "recurring": [
     {
-      "name": "Garland County Quorum Court · Hot Springs Board of Directors",
-      "note": "Meeting schedules are being confirmed against the bodies' own postings — listed the moment they're sourced."
+      "id": "quorum-court",
+      "name": "Garland County Quorum Court — regular session",
+      "rule": {
+        "nth": [
+          2
+        ],
+        "weekday": 1
+      },
+      "time": "6:00 pm",
+      "place": "Garland County Courthouse, 501 Ouachita Ave, Hot Springs",
+      "note": "The thirteen justices of the peace who vote the county budget. Public; residents may speak. (An unofficial search result named the Armory at 200 Woodbine; the county's own Quorum Court page and Arkansas 211 both list the Courthouse — confirm the room before you go.)",
+      "source": "Garland County Quorum Court page (garlandcounty.org/243) and Arkansas 211.",
+      "verified": true,
+      "decides": "county money"
+    },
+    {
+      "id": "hs-board",
+      "name": "Hot Springs Board of Directors",
+      "rule": {
+        "nth": [
+          1,
+          3
+        ],
+        "weekday": 2
+      },
+      "time": "6:00 pm",
+      "place": "City Hall, 133 Convention Blvd, Hot Springs",
+      "note": "The seven-member board that adopts the city budget. City-manager government (City Manager Bill Burrough). Meetings are open.",
+      "source": "City of Hot Springs Board page (hotspringsar.gov/223) and dated agendas.",
+      "verified": true,
+      "decides": "city money"
     }
   ],
+  "unverified": [],
   "seasonal": {
     "months": [
       10,
