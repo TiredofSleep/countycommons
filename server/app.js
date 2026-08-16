@@ -279,6 +279,12 @@ app.get('/audits', (req, res) => res.send(auditsPage(load(req.tenantKey))));
 
 app.get('/compare/spending', (req, res) => res.send(spendingPage(load(req.tenantKey))));
 
+// Cross-county comparison, per resident, by function, with AR/US benchmarks.
+// Registered before /compare/:id so it isn't caught as a comparison id.
+const { compute: computeCountyCompare } = require('./lib/countycompare');
+const { compareCountiesPage } = require('./views/comparecounties');
+app.get('/compare/counties', (req, res) => res.send(compareCountiesPage(load(req.tenantKey), computeCountyCompare())));
+
 app.get('/compare/:id', (req, res) => {
   const data = load(req.tenantKey);
   const cmp = data.comparisons.comparisons.find(c => c.id === req.params.id);
