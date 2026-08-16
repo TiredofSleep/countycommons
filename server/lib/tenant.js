@@ -15,9 +15,27 @@ const fs = require('fs');
 const path = require('path');
 
 const REGISTRY_PATH = path.join(__dirname, '..', '..', 'config', 'tenants.json');
+// Owner-created counties live here (gitignored) so they never fight a deploy.
+const LOCAL_PATH = path.join(__dirname, '..', '..', 'config', 'tenants.local.json');
 
 function registry() {
-  return JSON.parse(fs.readFileSync(REGISTRY_PATH, 'utf8'));
+  const base = JSON.parse(fs.readFileSync(REGISTRY_PATH, 'utf8'));
+  try {
+    const local = JSON.parse(fs.readFileSync(LOCAL_PATH, 'utf8'));
+    base.tenants = Object.assign({}, base.tenants, local.tenants || {});
+  } catch (e) { /* no owner-added counties yet */ }
+  return base;
+}
+
+// Append/replace an owner-created county in the gitignored local registry.
+function addLocalTenant(key, entry) {
+  let local = { tenants: {} };
+  try { local = JSON.parse(fs.readFileSync(LOCAL_PATH, 'utf8')); } catch (e) { /* first one */ }
+  local.tenants = local.tenants || {};
+  local.tenants[key] = entry;
+  const tmp = LOCAL_PATH + '.tmp';
+  fs.writeFileSync(tmp, JSON.stringify(local, null, 2));
+  fs.renameSync(tmp, LOCAL_PATH);
 }
 
 // Bare host (no port), lowercased.
@@ -67,4 +85,4 @@ function tenantName(key) {
   return (reg.tenants[key] || {}).name || null;
 }
 
-module.exports = { resolveHost, isKnownHost, tenantName, registry };
+module.exports = { resolveHost, isKnownHost, tenantName, registry, addLocalTenant };

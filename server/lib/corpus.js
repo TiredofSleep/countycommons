@@ -10,17 +10,34 @@ const TENANTS_PATH = path.join(ROOT, 'config', 'tenants.json');
 // Resolve which county's files to read from the tenant key set by the
 // host-routing middleware. Falls back to the default county, so load() with
 // no argument keeps serving the flagship (Clark) exactly as before.
+function reg() {
+  try { return require('./tenant').registry(); }
+  catch (e) { return { default: 'clarkar', tenants: { clarkar: { corpusDir: 'data/corpus', configPath: 'config/county.json' } } }; }
+}
+
 function tenantPaths(tenantKey) {
-  let reg;
-  try { reg = JSON.parse(fs.readFileSync(TENANTS_PATH, 'utf8')); }
-  catch (e) { return { corpusDir: path.join(ROOT, 'data', 'corpus'), configPath: path.join(ROOT, 'config', 'county.json') }; }
-  const key = (tenantKey && reg.tenants[tenantKey]) ? tenantKey : reg.default;
-  const t = reg.tenants[key];
-  return { corpusDir: path.join(ROOT, t.corpusDir), configPath: path.join(ROOT, t.configPath) };
+  const r = reg();
+  const key = (tenantKey && r.tenants[tenantKey]) ? tenantKey : r.default;
+  const t = r.tenants[key];
+  const def = r.tenants[r.default];
+  return {
+    corpusDir: path.join(ROOT, t.corpusDir), configPath: path.join(ROOT, t.configPath),
+    defaultCorpusDir: path.join(ROOT, def.corpusDir)
+  };
 }
 
 function load(tenantKey) {
-  const { corpusDir: CORPUS_DIR, configPath: CONFIG_PATH } = tenantPaths(tenantKey);
+  const { corpusDir: CORPUS_DIR, configPath: CONFIG_PATH, defaultCorpusDir: DEF_CORPUS } = tenantPaths(tenantKey);
+  // Shared platform doctrine (same on every county) falls back to the default
+  // county's copy when a new county hasn't got its own — so doctrine pages
+  // render for a freshly-created county with no corpus of its own yet.
+  const sharedRead = (name) => {
+    try { return JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, name), 'utf8')); }
+    catch (e) {
+      try { return JSON.parse(fs.readFileSync(path.join(DEF_CORPUS, name), 'utf8')); }
+      catch (e2) { return null; }
+    }
+  };
   const budget = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'budget-2026.json'), 'utf8'));
   const docket = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'docket.json'), 'utf8'));
   const documents = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'documents.json'), 'utf8'));
@@ -45,14 +62,11 @@ function load(tenantKey) {
   try {
     spending = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'spending.json'), 'utf8'));
   } catch (e) { /* none yet */ }
-  let stance = null;
-  try {
-    stance = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'stance.json'), 'utf8'));
-  } catch (e) { /* none yet */ }
-  let cases = null;
-  try {
-    cases = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'cases.json'), 'utf8'));
-  } catch (e) { /* none yet */ }
+  // Shared platform doctrine — identical across counties; a new county inherits
+  // the default county's copy until it has its own.
+  const stance = sharedRead('stance.json');
+  const cases = sharedRead('cases.json');
+  const research = sharedRead('research.json');
   let help = null;
   try {
     help = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'help.json'), 'utf8'));
@@ -60,10 +74,6 @@ function load(tenantKey) {
   let calendar = null;
   try {
     calendar = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'calendar.json'), 'utf8'));
-  } catch (e) { /* none yet */ }
-  let research = null;
-  try {
-    research = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'research.json'), 'utf8'));
   } catch (e) { /* none yet */ }
   let issueDrafts = { drafts: [] };
   try {
@@ -86,9 +96,8 @@ function load(tenantKey) {
   // Lay this county's writable overlay (a local host's edits) on top of the
   // git-seeded corpus. Only whitelisted sections merge (see overlay.js); the
   // bones are never touched. Resolve to the default county when unkeyed.
-  let reg;
-  try { reg = JSON.parse(fs.readFileSync(TENANTS_PATH, 'utf8')); } catch (e) { reg = null; }
-  const okey = (tenantKey && reg && reg.tenants[tenantKey]) ? tenantKey : (reg ? reg.default : null);
+  const r = reg();
+  const okey = (tenantKey && r.tenants[tenantKey]) ? tenantKey : r.default;
   try { require('./overlay').apply(data, okey); } catch (e) { data.copy = data.copy || {}; }
   return data;
 }

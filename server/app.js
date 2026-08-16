@@ -150,11 +150,14 @@ app.post('/gate', writeLimit, express.urlencoded({ extended: false }), (req, res
     `cc_access=${access.cookieValue(hit.tenant, hit.role, hit.name || '')}; Path=/; Max-Age=${60 * 60 * 24 * 30}; HttpOnly; SameSite=Lax`);
   // The PIN decides the county. If we're not on that county's host, send them
   // there; otherwise open the site (admins land on the admin dashboard).
-  const wantHost = hostFor(hit.tenant);
-  const hereHost = tenant.resolveHost(req.headers.host);
-  const landing = hit.role === 'admin' ? '/admin' : dest;
-  if (wantHost && hereHost.action === 'serve' && hereHost.key !== hit.tenant) {
-    return res.redirect(`https://${wantHost}${landing}`);
+  const landing = hit.role === 'owner' ? '/owner' : (hit.role === 'admin' ? '/admin' : dest);
+  // The owner is county-agnostic; view/admin get taken to their county's host.
+  if (hit.role !== 'owner') {
+    const wantHost = hostFor(hit.tenant);
+    const hereHost = tenant.resolveHost(req.headers.host);
+    if (wantHost && hereHost.action === 'serve' && hereHost.key !== hit.tenant) {
+      return res.redirect(`https://${wantHost}${landing}`);
+    }
   }
   res.redirect(landing);
 });
@@ -164,14 +167,22 @@ app.post('/gate', writeLimit, express.urlencoded({ extended: false }), (req, res
 app.use((req, res, next) => {
   if (!access.gateConfigured()) return next();
   const acc = access.verifyCookie(cookies(req).cc_access);
-  if (acc && acc.tenant === req.tenantKey) { req.access = acc; return next(); }
+  // Owner passes on any county host; view/admin must match this county.
+  if (acc && (acc.role === 'owner' || acc.tenant === req.tenantKey)) { req.access = acc; return next(); }
   res.status(401).send(gatePage(null, req.originalUrl));
 });
 
 // Admin guard: for /admin routes, require an admin cookie for THIS county.
+// The owner may act as admin anywhere.
 function requireAdmin(req, res, next) {
-  if (req.access && req.access.role === 'admin') return next();
+  if (req.access && (req.access.role === 'admin' || req.access.role === 'owner')) return next();
   res.status(403).send(gatePage('That area needs a host code for this county.', '/admin'));
+}
+
+// Owner guard: for /owner routes, require the owner credential.
+function requireOwner(req, res, next) {
+  if (req.access && req.access.role === 'owner') return next();
+  res.status(403).send(gatePage('That area needs the owner code.', '/owner'));
 }
 
 // Downgrade any pre-existing persistent participant cookie to session scope:
@@ -408,6 +419,50 @@ app.post('/register', writeLimit, express.urlencoded({ extended: false }), (req,
   // where the missing step is) — send them there to see it.
   if (sigState) return res.redirect(`/issues/${open[0].id}?${saved ? 'registered=1&' : ''}sign=${sigState}#sign`);
   res.redirect(`/${saved ? '?registered=1' : ''}#register`);
+});
+
+// ---- owner console (owner code; create counties, mint PINs) ----
+const { ownerConsole } = require('./views/owner');
+const { createCounty } = require('./lib/scaffold');
+
+function ownerData(reg) {
+  const pinsByTenant = {};
+  for (const key of Object.keys(reg.tenants)) pinsByTenant[key] = access.pinsForTenant(key);
+  return { reg, pinsByTenant };
+}
+function logOwner(req, what) {
+  try { require('./lib/chain').append('owner-action', { by: req.access.name || 'owner', what }); }
+  catch (e) { /* optional */ }
+}
+
+app.get('/owner', requireOwner, (req, res) => {
+  const { reg, pinsByTenant } = ownerData(tenant.registry());
+  const opts = {};
+  if (req.query.created) { try { opts.created = JSON.parse(Buffer.from(req.query.created, 'base64').toString('utf8')); } catch (e) {} }
+  if (req.query.minted) { try { opts.minted = JSON.parse(Buffer.from(req.query.minted, 'base64').toString('utf8')); } catch (e) {} }
+  if (req.query.error) opts.error = String(req.query.error).slice(0, 200);
+  res.send(ownerConsole(reg, pinsByTenant, opts));
+});
+
+app.post('/owner/pins/mint', requireOwner, express.urlencoded({ extended: false }), (req, res) => {
+  const t = String((req.body && req.body.tenant) || '');
+  if (!tenant.registry().tenants[t]) return res.redirect('/owner?error=' + encodeURIComponent('Unknown county.'));
+  const minted = access.mintFor(t, String((req.body && req.body.name) || '').trim().slice(0, 80));
+  logOwner(req, `rotated PINs for ${t}`);
+  res.redirect('/owner?minted=' + Buffer.from(JSON.stringify({ tenant: t, view: minted.view, admin: minted.admin })).toString('base64'));
+});
+
+app.post('/owner/county/create', requireOwner, express.urlencoded({ extended: false }), (req, res) => {
+  const b = req.body || {};
+  try {
+    const c = createCounty({ key: b.key, name: b.name, state: b.state, sub: b.sub, platformName: b.platformName });
+    const minted = access.mintFor(c.key, String(b.hostName || '').trim().slice(0, 80));
+    logOwner(req, `created county ${c.key}`);
+    const payload = { name: b.name + ', ' + b.state, host: c.host, view: minted.view, admin: minted.admin };
+    res.redirect('/owner?created=' + Buffer.from(JSON.stringify(payload)).toString('base64'));
+  } catch (e) {
+    res.redirect('/owner?error=' + encodeURIComponent(e.message || 'Could not create the county.'));
+  }
 });
 
 // ---- county admin (host code; edits scoped to this county's overlay) ----

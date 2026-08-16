@@ -29,7 +29,7 @@ function homePage(data, opts = {}) {
   const openQs = (issueDrafts.drafts || []).filter(d => d.status === 'open-tier0');
   const nm = nextMeeting(calendar);
   const stamps = docket.issues.filter(i => i.stamped).slice(-3).reverse();
-  const vOk = verification && verification.summary.failed === 0;
+  const vOk = verification && verification.summary.failed === 0 && verification.summary.total_checks > 0;
 
   const stat = (value, label, href) => `
 <a href="${href}" style="text-decoration:none;color:var(--ink);flex:1;min-width:140px;border:1.5px solid var(--ink);background:var(--card);padding:12px 14px;display:block">

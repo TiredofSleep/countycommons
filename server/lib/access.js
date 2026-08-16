@@ -80,7 +80,7 @@ function verifyCookie(val) {
   const parts = String(val || '').split('.');
   if (parts.length !== 4) return null;
   const [tenant, role, nameB64, sig] = parts;
-  if (role !== 'view' && role !== 'admin') return null;
+  if (role !== 'view' && role !== 'admin' && role !== 'owner') return null;
   const name = unb64(nameB64);
   const expect = token(tenant, role, name);
   const a = Buffer.from(sig), b = Buffer.from(expect);
@@ -108,7 +108,50 @@ function noteFailure(ip) {
 }
 function noteSuccess(ip) { fails.delete(ip); }
 
+// --- owner-only: minting and rotating a county's PINs (writes pins.json) ---
+function writeRegistry(r) {
+  const tmp = PINS_PATH + '.tmp';
+  fs.writeFileSync(tmp, JSON.stringify(r, null, 2));
+  fs.renameSync(tmp, PINS_PATH);
+  _cache = null; _mtime = 0;
+}
+function baseRegistry() {
+  const r = registry();
+  if (r && r.pins) return JSON.parse(JSON.stringify(r));
+  return { secret: crypto.randomBytes(16).toString('hex'), pins: {} };
+}
+function genView(existing) {
+  let p; do { p = String(crypto.randomInt(1000, 10000)); } while (existing.has(p));
+  return p;
+}
+function genAdmin(existing) {
+  const alpha = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';
+  let p; do { p = ''; for (let i = 0; i < 8; i++) p += alpha[crypto.randomInt(0, alpha.length)]; } while (existing.has(p));
+  return p;
+}
+// Mint fresh view + admin PINs for a county, replacing any it already had.
+function mintFor(tenant, name) {
+  const r = baseRegistry();
+  for (const p of Object.keys(r.pins)) {
+    if (r.pins[p].tenant === tenant && (r.pins[p].role === 'view' || r.pins[p].role === 'admin')) delete r.pins[p];
+  }
+  const existing = new Set(Object.keys(r.pins));
+  const view = genView(existing); existing.add(view);
+  const admin = genAdmin(existing);
+  r.pins[view] = { tenant, role: 'view' };
+  r.pins[admin] = { tenant, role: 'admin', name: name || 'Host' };
+  writeRegistry(r);
+  return { view, admin };
+}
+// What PINs a county currently has (owner console displays these).
+function pinsForTenant(tenant) {
+  const r = registry(); const out = {};
+  if (r) for (const [p, e] of Object.entries(r.pins)) if (e.tenant === tenant) out[e.role] = { pin: p, name: e.name };
+  return out;
+}
+
 module.exports = {
   gateConfigured, lookupPin, cookieValue, verifyCookie,
-  lockState, noteFailure, noteSuccess, defaultTenant
+  lockState, noteFailure, noteSuccess, defaultTenant,
+  mintFor, pinsForTenant
 };
