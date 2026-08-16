@@ -106,4 +106,14 @@ function visibleFor(tenant, state) {
     || (q.scope === 'local' && q.tenant === tenant));
 }
 
-module.exports = { ask, support, setStatus, remove, visibleFor, PROMOTE_AT };
+function get(id) { return load().questions.find(x => x.id === id) || null; }
+// Local resident questions for one county (what a host may moderate).
+function forTenantLocal(tenant) {
+  return load().questions.filter(q => q.scope === 'local' && q.tenant === tenant);
+}
+// Every resident question (what the owner may moderate), newest first.
+function all() {
+  return load().questions.slice().sort((a, b) => String(b.created_ts).localeCompare(String(a.created_ts)));
+}
+
+module.exports = { ask, support, setStatus, remove, visibleFor, get, forTenantLocal, all, PROMOTE_AT };

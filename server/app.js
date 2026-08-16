@@ -464,8 +464,25 @@ app.get('/owner', requireOwner, (req, res) => {
   if (req.query.created) { try { opts.created = JSON.parse(Buffer.from(req.query.created, 'base64').toString('utf8')); } catch (e) {} }
   if (req.query.minted) { try { opts.minted = JSON.parse(Buffer.from(req.query.minted, 'base64').toString('utf8')); } catch (e) {} }
   if (req.query.error) opts.error = String(req.query.error).slice(0, 200);
-  res.send(ownerConsole(reg, pinsByTenant, opts));
+  res.send(ownerConsole(reg, pinsByTenant, require('./questions').all(), opts));
 });
+
+// Owner moderates any resident question (any scope).
+function ownerModerate(action, verb) {
+  return (req, res) => {
+    const Q = require('./questions');
+    const id = (req.body && req.body.id) || '';
+    if (Q.get(id)) {
+      if (action === 'remove') Q.remove(id);
+      else Q.setStatus(id, action === 'open' ? 'open-tier0' : 'closed');
+      logOwner(req, `${verb} question ${id}`);
+    }
+    res.redirect('/owner');
+  };
+}
+app.post('/owner/questions/open', requireOwner, express.urlencoded({ extended: false }), ownerModerate('open', 'opened'));
+app.post('/owner/questions/close', requireOwner, express.urlencoded({ extended: false }), ownerModerate('close', 'closed'));
+app.post('/owner/questions/remove', requireOwner, express.urlencoded({ extended: false }), ownerModerate('remove', 'removed'));
 
 app.post('/owner/pins/mint', requireOwner, express.urlencoded({ extended: false }), (req, res) => {
   const t = String((req.body && req.body.tenant) || '');
@@ -548,7 +565,28 @@ app.post('/admin/calendar/event/remove', requireAdmin, express.urlencoded({ exte
 // --- admin: questions (the republic-alongside frame is enforced here) ---
 app.get('/admin/questions', requireAdmin, (req, res) =>
   res.send(adminQuestions(load(req.tenantKey), overlay.read(req.access.tenant).questions || [],
-    { opened: req.query.opened === '1', closed: req.query.closed === '1', blocked: req.query.blocked || null })));
+    require('./questions').forTenantLocal(req.access.tenant),
+    { opened: req.query.opened === '1', closed: req.query.closed === '1', blocked: req.query.blocked || null, moderated: req.query.moderated || null })));
+
+// Host moderates a LOCAL resident question for THIS county only. State and
+// national questions span counties and are the owner's to moderate — the
+// ownership check below refuses anything that isn't this county's local one.
+function moderateResident(action, verb) {
+  return (req, res) => {
+    const Q = require('./questions');
+    const id = (req.body && req.body.id) || '';
+    const item = Q.get(id);
+    if (item && item.scope === 'local' && item.tenant === req.access.tenant) {
+      if (action === 'remove') Q.remove(id);
+      else Q.setStatus(id, action === 'open' ? 'open-tier0' : 'closed');
+      logAdminEdit(req, `${verb} a resident question`);
+    }
+    res.redirect('/admin/questions?moderated=' + verb);
+  };
+}
+app.post('/admin/questions/resident/open', requireAdmin, express.urlencoded({ extended: false }), moderateResident('open', 'opened'));
+app.post('/admin/questions/resident/close', requireAdmin, express.urlencoded({ extended: false }), moderateResident('close', 'closed'));
+app.post('/admin/questions/resident/remove', requireAdmin, express.urlencoded({ extended: false }), moderateResident('remove', 'removed'));
 
 app.post('/admin/questions/open', requireAdmin, express.urlencoded({ extended: false }), (req, res) => {
   const wording = String((req.body && req.body.wording) || '').trim().slice(0, 300);

@@ -105,11 +105,38 @@ ${listings.length ? listings.map((e, i) => `
   return shell(county, 'Calendar', body);
 }
 
-function adminQuestions(data, hostQuestions, opts = {}) {
+// One moderation row: wording, status, and the actions allowed by status.
+// actionBase is '/admin/questions/resident' (host) or '/owner/questions' (owner).
+function modRow(q, actionBase, promoteAt, extraBadge) {
+  const btn = (action, label, danger) => `<form method="POST" action="${actionBase}/${action}" style="display:inline;margin-left:6px"><input type="hidden" name="id" value="${esc(q.id)}"><button type="submit" style="font-family:var(--mono);font-size:12px;padding:5px 10px;border:1.5px solid ${danger ? 'var(--dead)' : 'var(--ink)'};color:${danger ? 'var(--dead)' : 'var(--ink)'};background:var(--card);cursor:pointer">${label}</button></form>`;
+  const n = (q.supporters || []).length;
+  const state = q.status === 'proposed'
+    ? `<span class="chip c-part">proposed</span> ${n}/${promoteAt} supporters`
+    : (q.status === 'open-tier0' ? '<span class="chip c-ok">live</span>' : '<span class="chip">closed</span>');
+  const actions = q.status === 'proposed' ? btn('open', 'Open now') + btn('remove', 'Remove', true)
+    : (q.status === 'open-tier0' ? btn('close', 'Close') + btn('remove', 'Remove', true)
+    : btn('remove', 'Remove', true));
+  return `
+<div class="issue" style="display:block">
+  <b>${esc(q.final_wording)}</b> ${extraBadge || ''}
+  <p class="src" style="margin:4px 0 6px">${state}${q.status === 'open-tier0' ? ` · <a href="/issues/${esc(q.id)}">view</a>` : ''}</p>
+  <div>${actions}</div>
+</div>`;
+}
+
+function adminQuestions(data, hostQuestions, residentQuestions, opts = {}) {
   const { county } = data;
+  const { PROMOTE_AT } = require('../questions');
+  residentQuestions = residentQuestions || [];
   const field = 'font-family:var(--mono);font-size:14px;padding:8px 10px;border:1.5px solid var(--ink);background:var(--paper);color:var(--ink);width:100%;box-sizing:border-box';
   const open = hostQuestions.filter(q => q.status === 'open-tier0');
   const closed = hostQuestions.filter(q => q.status !== 'open-tier0');
+  const resSection = `
+<section>
+<h2>Questions your residents asked <span class="sub">— ${residentQuestions.length} local</span></h2>
+<p class="src" style="max-width:64ch">Residents propose county questions; at ${PROMOTE_AT} supporters they open on their own. You can open one early, close a live one, or remove one that shouldn't be here. Candidate, ballot-measure, and named-conduct questions are already refused automatically. State and national questions are moderated by the platform owner, not here.</p>
+${residentQuestions.length ? residentQuestions.map(q => modRow(q, '/admin/questions/resident', PROMOTE_AT)).join('') : '<p class="src">No resident-asked questions in your county yet.</p>'}
+</section>`;
 
   const body = `
 <header class="page">
@@ -121,9 +148,11 @@ ${republicFrame()}
 ${opts.opened ? `<p class="src" style="color:var(--sourced)"><b>Question opened ✓</b> — live on <a href="/issues">Open questions</a> now.</p>` : ''}
 ${opts.closed ? `<p class="src" style="color:var(--sourced)"><b>Question closed.</b></p>` : ''}
 ${opts.blocked ? `<div class="issue" style="display:block;border-color:var(--dead)"><b style="color:var(--dead)">That question can't be opened.</b><p class="src" style="margin:6px 0 0">A charter bright line was matched (${esc(opts.blocked)}). County Commons never runs questions about candidates, active ballot measures, or a named person's conduct — those belong to elections and the courts, not to an advisory poll. Reword it to ask about a policy or a dollar, not a person or a race.</p></div>` : ''}
+${opts.moderated ? `<p class="src" style="color:var(--sourced)"><b>Done ✓</b> — the resident question was ${esc(opts.moderated)}.</p>` : ''}
+${resSection}
 
 <section>
-<h2>Open now <span class="sub">— ${open.length}</span></h2>
+<h2>Questions you opened <span class="sub">— ${open.length}</span></h2>
 ${open.length ? open.map(q => `
 <div class="issue" style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start">
   <div><b>${esc(q.final_wording)}</b><p class="src" style="margin:4px 0 0">opened ${esc(q.opened)} · <a href="/issues/${esc(q.id)}">view</a></p></div>
@@ -217,4 +246,4 @@ ${opts.saved ? `<p class="src" style="color:var(--sourced)"><b>Saved ✓</b> —
   return shell(county, 'Page copy', body);
 }
 
-module.exports = { adminDashboard, adminCalendar, adminQuestions, adminHelp, adminCopy };
+module.exports = { adminDashboard, adminCalendar, adminQuestions, adminHelp, adminCopy, modRow };

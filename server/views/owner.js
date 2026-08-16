@@ -1,5 +1,7 @@
 const { esc } = require('../lib/corpus');
 const { layout } = require('./layout');
+const { modRow } = require('./admin');
+const { PROMOTE_AT } = require('../questions');
 
 // The owner console — the top of the pyramid. Create a county, mint or rotate
 // its PINs, see them all at a glance. Owner-only (requireOwner). Every action
@@ -19,7 +21,14 @@ function pinRow(label, val, mono) {
   return `<div style="display:flex;gap:8px;align-items:baseline"><span class="src" style="min-width:96px">${esc(label)}</span><span class="code" style="border:1.5px solid var(--rule);background:var(--card);padding:5px 9px;font-size:13px;user-select:all${mono ? ';font-weight:600' : ''}">${esc(val)}</span></div>`;
 }
 
-function ownerConsole(reg, pinsByTenant, opts = {}) {
+function ownerScopeBadge(q) {
+  if (q.scope === 'national') return '<span class="chip c-ok">National</span>';
+  if (q.scope === 'state') return `<span class="chip c-part">State · ${esc(q.state || '')}</span>`;
+  return `<span class="chip">Local · ${esc(q.tenant || '')}</span>`;
+}
+
+function ownerConsole(reg, pinsByTenant, residentQuestions, opts = {}) {
+  residentQuestions = residentQuestions || [];
   const tenants = Object.entries(reg.tenants);
   const field = 'font-family:var(--mono);font-size:14px;padding:8px 10px;border:1.5px solid var(--ink);background:var(--paper);color:var(--ink);width:100%;box-sizing:border-box';
 
@@ -70,6 +79,12 @@ ${created}${minted}${err}
 <section>
 <h2>Counties <span class="sub">— ${tenants.length}</span></h2>
 ${rows}
+</section>
+
+<section>
+<h2>Resident questions across the network <span class="sub">— ${residentQuestions.length}</span></h2>
+<p class="src" style="max-width:64ch">Every question residents proposed, at any level. Candidate, ballot-measure, and named-conduct questions are refused automatically before they reach here. County hosts moderate their own local ones; state and national questions are yours to open, close, or remove.</p>
+${residentQuestions.length ? residentQuestions.map(q => modRow(q, '/owner/questions', PROMOTE_AT, ownerScopeBadge(q))).join('') : '<p class="src">No resident questions yet.</p>'}
 </section>
 
 <section>
