@@ -51,13 +51,15 @@ function resolveHost(rawHost) {
 }
 
 // Is this host one we should get a TLS certificate for? Gates Caddy's
-// on-demand TLS so the box can't be tricked into minting certs for arbitrary
-// names. Known tenant subdomains, the apex, and www all qualify.
+// on-demand TLS so the box can't be tricked into minting certs for names
+// outside our namespace. Any host under the base domain qualifies — the apex,
+// www, live county subdomains, AND not-yet-live ones (so their honest
+// "coming soon" page can be served over HTTPS). Hosts outside the namespace
+// (someone pointing their own domain at our IP) are refused.
 function isKnownHost(rawHost) {
-  const reg = registry();
+  const base = registry().baseDomain;
   const host = hostOnly(rawHost);
-  if (host === reg.baseDomain || host === 'www.' + reg.baseDomain) return true;
-  return Object.values(reg.tenants).some(t => t.host === host);
+  return host === base || host === 'www.' + base || host.endsWith('.' + base);
 }
 
 function tenantName(key) {
