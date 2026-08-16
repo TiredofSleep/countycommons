@@ -13,48 +13,81 @@ function openIssues(data) {
   return (data.issueDrafts.drafts || []).filter(d => d.status === 'open-tier0');
 }
 
-function issuesPage(data, submitted) {
+// The level a question speaks to, and the body it signals. Base/overlay
+// (host) questions carry no scope → they're local to the county.
+function scopeBadge(q, county) {
+  if (q.scope === 'national') return '<span class="chip c-ok">National</span>';
+  if (q.scope === 'state') return `<span class="chip c-part">State · ${esc(q.state || county.state)}</span>`;
+  return `<span class="chip">Local · ${esc(county.name)}</span>`;
+}
+function scopeBody(scope, county) {
+  if (scope === 'national') return 'the U.S. Congress';
+  if (scope === 'state') return `the ${esc(county.state)} Legislature`;
+  return 'your county — the quorum court, city board, or school board';
+}
+
+function issuesPage(data, opts) {
+  opts = opts || {};
   const { county } = data;
-  const { queueCount } = require('../submissions');
+  const { PROMOTE_AT } = require('../questions');
   const items = openIssues(data).map(d => {
     const t = tally(d.id);
     return `
 <div class="issue" style="display:block">
-  <b><a href="/issues/${esc(d.id)}">${esc(d.final_wording || d.neutral_framing)}</a></b>
+  <b><a href="/issues/${esc(d.id)}">${esc(d.final_wording || d.neutral_framing)}</a></b> ${scopeBadge(d, county)}
   <p class="src">Opened ${esc(d.opened)} · ${t.total} response${t.total === 1 ? '' : 's'} · open sentiment (Tier 0) · <a href="/issues/${esc(d.id)}#share">share it</a></p>
 </div>`;
   }).join('');
 
-  const queued = queueCount();
+  const proposals = (data.proposals || []).slice().sort((a, b) => (b.supporters || []).length - (a.supporters || []).length);
+  const propItems = proposals.map(p => {
+    const n = (p.supporters || []).length;
+    return `
+<div class="issue" style="display:block">
+  <b>${esc(p.final_wording)}</b> ${scopeBadge(p, county)}
+  <p class="src">${n} of ${PROMOTE_AT} supporters — ${PROMOTE_AT - n > 0 ? `${PROMOTE_AT - n} more puts it to a live vote` : 'ready to open'}. Signals ${scopeBody(p.scope, county)}.</p>
+  <form method="POST" action="/issues/${esc(p.id)}/support" style="margin:6px 0 0"><button type="submit" class="chip c-ok" style="cursor:pointer;border:1.5px solid var(--sourced);background:var(--sourced-bg)">Support this →</button></form>
+</div>`;
+  }).join('');
+
+  const opt = (v, label) => `<option value="${v}">${esc(label)}</option>`;
   const body = `
 <header class="page">
   <div class="eyebrow">${esc(county.name)}, ${esc(county.state)}</div>
   <h1>Open questions</h1>
-  <div class="src"><b>This is the county's counting room — where what residents want becomes a number with receipts.</b> Questions put to residents, answered by residents: no account needed, one voice per sitting, changeable while your window stays open — and nothing follows you home from a shared computer. Today's counts are open sentiment; the verification tiers that make a number impossible to wave off arrive with the full voting layer — and every count, always, shows exactly how verified it is. That honesty is what makes the number powerful.</div>
+  <div class="src"><b>The counting room — where what residents want becomes a number with receipts.</b> Questions can be asked at three levels: your county, your state, or the nation. Each one is advisory signal carried to the body that decides — the quorum court or city board, the ${esc(county.state)} Legislature, or Congress. It informs the government we have; it never replaces it. No account needed, one voice per sitting, changeable while your window stays open.</div>
 </header>
-${items || '<p class="src">No questions are open right now.</p>'}
+${items || '<p class="src">No questions are open right now — ask the first one below.</p>'}
+
+<section id="ask">
+<h2>Ask a question <span class="sub">— county, state, or national</span></h2>
+${opts.asked ? `<p style="color:var(--sourced)"><b>Proposed ✓</b> — your question is up for support below. When it reaches ${PROMOTE_AT} supporters, it opens for a live vote.</p>` : ''}
+${opts.blocked ? `<div class="issue" style="display:block;border-color:var(--dead)"><b style="color:var(--dead)">That question can't be asked.</b><p class="src" style="margin:6px 0 0">A charter bright line was matched (${esc(opts.blocked)}). County Commons never runs questions about candidates, active ballot measures, or a named person's conduct — those belong to elections and the courts. Ask about a policy or a dollar, not a person or a race.</p></div>` : ''}
+<p>Ask it in your own words. It's checked against the <a href="/never">bright lines</a>, then goes up for support; at ${PROMOTE_AT} supporters it opens for the whole level to answer.</p>
+<form method="POST" action="/issues/ask" style="display:flex;flex-direction:column;gap:8px;max-width:60ch">
+  <textarea name="wording" required maxlength="300" rows="3" placeholder="Should every government dollar be publicly traceable to the receipt?"
+    style="font-family:var(--sans);font-size:14px;padding:10px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink)"></textarea>
+  <label style="font-size:13.5px">Level
+    <select name="scope" style="font-family:var(--mono);font-size:14px;padding:7px 9px;border:1.5px solid var(--ink);background:var(--paper);color:var(--ink);margin-top:4px;display:block">
+      ${opt('local', `My county — ${county.name}`)}
+      ${opt('state', `My state — ${county.state}`)}
+      ${opt('national', 'National — the whole country')}
+    </select>
+  </label>
+  <textarea name="context" maxlength="600" rows="2" placeholder="Context (optional) — why it matters. No verdicts."
+    style="font-family:var(--sans);font-size:13px;padding:8px;border:1.5px solid var(--rule);background:var(--card);color:var(--ink)"></textarea>
+  <button type="submit" style="font-family:var(--mono);font-size:13px;padding:10px 18px;background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);cursor:pointer;align-self:flex-start">Propose the question</button>
+</form>
+</section>
+
+${proposals.length ? `<section id="proposed">
+<h2>Proposed — support to put them to a vote <span class="sub">— ${proposals.length}</span></h2>
+${propItems}
+</section>` : ''}
 
 <section>
 <h2>The traction rule <span class="sub">— what enough responses guarantees</span></h2>
-<p>Borrowed from the UK Parliament's petition site, where 10,000 signatures obligates a government response: <b>when a question here reaches 100 responses, we print the result packet and hand-deliver it to the relevant body</b> — quorum court, city board, or school board — and stamp the delivery publicly on the docket. Officials aren't obligated to act. They are guaranteed to receive — and what they do next becomes part of the public record either way.</p>
-</section>
-
-<section id="ask">
-<h2>Ask your own question <span class="sub">— the front door is open</span></h2>
-${submitted ? `<p style="color:var(--sourced)"><b>Received.</b> Your question is in the review queue${queued > 1 ? ` with ${queued - 1} other${queued > 2 ? 's' : ''}` : ''}. Every question is checked against the platform's bright lines (no candidates, no ballot measures, no named individuals), offered a neutral wording you approve, and then opened — with your raw words and the final wording both logged.</p>` : `
-<p>Anything Clark County decides is fair game — money, roads, buildings, services. Your question goes through wording review (you keep the final say), gets checked against the <a href="/never">bright lines</a>, and opens for the whole county to answer.</p>
-<form method="POST" action="/issues/submit" style="display:flex;flex-direction:column;gap:8px;max-width:60ch">
-  <textarea name="question" required maxlength="1000" rows="3" placeholder="What should the county be working on? Ask it in your own words — polishing is our job, the position stays yours."
-    style="font-family:var(--sans);font-size:14px;padding:10px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink)"></textarea>
-  <div style="display:flex;gap:8px;flex-wrap:wrap">
-    <input type="text" name="name" maxlength="120" placeholder="Name (optional)"
-      style="font-size:13px;padding:8px;border:1.5px solid var(--rule);background:var(--card);color:var(--ink);flex:1;min-width:140px">
-    <input type="text" name="contact" maxlength="200" placeholder="Phone or email (optional — only to follow up)"
-      style="font-size:13px;padding:8px;border:1.5px solid var(--rule);background:var(--card);color:var(--ink);flex:2;min-width:180px">
-  </div>
-  <button type="submit" style="font-family:var(--mono);font-size:13px;padding:10px 18px;background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);cursor:pointer;align-self:flex-start">Submit for review</button>
-  <p class="src">Contact info is optional, used only to follow up on your question, and never published. ${queued > 0 ? `${queued} question${queued > 1 ? 's' : ''} currently in review.` : ''}</p>
-</form>`}
+<p>Borrowed from the UK Parliament's petition site, where 10,000 signatures obligates a government response: <b>when a live question reaches 100 responses, we print the result packet and hand-deliver it to the body that decides</b> — for a county question the quorum court, city board, or school board; for a state question the ${esc(county.state)} legislative delegation; for a national one the district's members of Congress — and stamp the delivery publicly. Officials aren't obligated to act. They are guaranteed to receive — and what they do next becomes part of the record either way.</p>
 </section>`;
 
   return layout({ title: `Open questions — ${county.platform_name}`, current: '/issues', body, county });
@@ -97,6 +130,7 @@ ${t.connections ? `<p class="src">Who's answering, self-reported (not verified):
 <header class="page">
   <div class="eyebrow">${esc(county.name)} · open question · Tier 0 sentiment · opened ${esc(draft.opened)}</div>
   <h1 style="font-size:clamp(18px,3.5vw,26px)">${esc(draft.final_wording)}</h1>
+  <p style="margin:6px 0 0">${scopeBadge(draft, county)} <span class="src">— advisory signal to ${scopeBody(draft.scope, county)}.</span></p>
   ${justVoted ? `<div class="stamp" style="position:static;display:inline-block;transform:none;margin-top:10px">Counted ✓ — you answered ${esc(justVoted.toUpperCase())}</div>` : ''}
 </header>
 

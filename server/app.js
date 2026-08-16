@@ -319,7 +319,30 @@ function participantOf(req) {
   return TOKEN_RE.test(t) ? t : null;
 }
 
-app.get('/issues', (req, res) => res.send(issuesPage(load(req.tenantKey), req.query.submitted === '1')));
+app.get('/issues', (req, res) => res.send(issuesPage(load(req.tenantKey), {
+  asked: req.query.asked === '1', blocked: req.query.blocked || null, submitted: req.query.submitted === '1'
+})));
+
+// A resident proposes a question at a level (county / state / national).
+app.post('/issues/ask', writeLimit, express.urlencoded({ extended: false }), (req, res) => {
+  const participant = ensureParticipant(req, res);
+  const data = load(req.tenantKey);
+  const scope = (req.body && req.body.scope) || 'local';
+  const r = require('./questions').ask({
+    scope, state: data.county && data.county.state, tenant: req.tenantKey,
+    wording: req.body && req.body.wording, context: req.body && req.body.context, participant
+  });
+  if (r.error === 'bright-line') return res.redirect('/issues?blocked=' + encodeURIComponent((r.flags || []).join(', ')) + '#ask');
+  if (r.error) return res.redirect('/issues#ask');
+  res.redirect('/issues?asked=1#proposed');
+});
+
+// Support a proposal; it auto-opens for a live vote at the threshold.
+app.post('/issues/:id/support', writeLimit, express.urlencoded({ extended: false }), (req, res) => {
+  const participant = ensureParticipant(req, res);
+  require('./questions').support(participant, req.params.id);
+  res.redirect('/issues#proposed');
+});
 
 app.post('/issues/submit', heavyLimit, express.urlencoded({ extended: false }), (req, res) => {
   const q = (req.body && req.body.question || '').trim();

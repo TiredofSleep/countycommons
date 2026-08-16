@@ -99,6 +99,14 @@ function load(tenantKey) {
   const r = reg();
   const okey = (tenantKey && r.tenants[tenantKey]) ? tenantKey : r.default;
   try { require('./overlay').apply(data, okey); } catch (e) { data.copy = data.copy || {}; }
+  // Resident-created questions (local/state/national) visible to this county:
+  // open ones join the votable drafts; proposals surface for support.
+  try {
+    const vis = require('../questions').visibleFor(okey, data.county && data.county.state);
+    data.issueDrafts = data.issueDrafts || { drafts: [] };
+    data.issueDrafts.drafts = (data.issueDrafts.drafts || []).concat(vis.filter(x => x.status === 'open-tier0'));
+    data.proposals = vis.filter(x => x.status === 'proposed');
+  } catch (e) { data.proposals = data.proposals || []; }
   return data;
 }
 

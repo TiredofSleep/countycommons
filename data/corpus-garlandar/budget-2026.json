@@ -37,10 +37,10 @@
         "doc": "ord-o-25-25",
         "page": null
       },
-      "status": "partial",
+      "status": "sourced",
       "docket_ref": 2,
-      "children_complete": false,
-      "note": "Total sourced from the ordinance; the department-level breakdown is not yet ingested."
+      "children_complete": true,
+      "note": "Broken out below by category, from the 2026 appropriation ordinance. Road materials fall under Supplies, which is why that line is the largest."
     },
     {
       "id": "road-bridge",
@@ -73,10 +73,10 @@
         "doc": "ord-o-25-25",
         "page": null
       },
-      "status": "partial",
+      "status": "sourced",
       "docket_ref": 1,
-      "children_complete": false,
-      "note": "Total sourced from the ordinance; of this, Personal Services is $9,155,391.30. The full line-item breakdown is not yet ingested."
+      "children_complete": true,
+      "note": "Broken out below by category, from the 2026 appropriation ordinance. (A separate $282,000 Detention Facility Reserve sub-fund is not part of this total.)"
     },
     {
       "id": "other-funds",
@@ -589,6 +589,186 @@
       "name": "County General Transfers",
       "code": null,
       "amount": 3751297.72,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "jail-personal-services",
+      "parent": "jail",
+      "section": "category",
+      "name": "Personal Services",
+      "code": null,
+      "amount": 9155391.3,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "jail-supplies",
+      "parent": "jail",
+      "section": "category",
+      "name": "Supplies",
+      "code": null,
+      "amount": 1120306,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "jail-other-services",
+      "parent": "jail",
+      "section": "category",
+      "name": "Other Services and Charges",
+      "code": null,
+      "amount": 2759231.67,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "jail-capital-assets",
+      "parent": "jail",
+      "section": "category",
+      "name": "Capital Assets",
+      "code": null,
+      "amount": 109400,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "jail-transfers-out",
+      "parent": "jail",
+      "section": "category",
+      "name": "Transfers Out",
+      "code": null,
+      "amount": 69662.69,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "road-personal-services",
+      "parent": "road",
+      "section": "category",
+      "name": "Personal Services",
+      "code": null,
+      "amount": 3626605.49,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "road-supplies",
+      "parent": "road",
+      "section": "category",
+      "name": "Supplies",
+      "code": null,
+      "amount": 7622203,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "road-other-services",
+      "parent": "road",
+      "section": "category",
+      "name": "Other Services and Charges",
+      "code": null,
+      "amount": 1763279.93,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "road-capital-assets",
+      "parent": "road",
+      "section": "category",
+      "name": "Capital Assets",
+      "code": null,
+      "amount": 490000,
+      "year": 2026,
+      "layer": "appropriation",
+      "source": {
+        "doc": "ord-o-25-25",
+        "page": null
+      },
+      "status": "sourced",
+      "docket_ref": null,
+      "children_complete": false,
+      "note": null
+    },
+    {
+      "id": "road-transfers-out",
+      "parent": "road",
+      "section": "category",
+      "name": "Transfers Out",
+      "code": null,
+      "amount": 50000,
       "year": 2026,
       "layer": "appropriation",
       "source": {

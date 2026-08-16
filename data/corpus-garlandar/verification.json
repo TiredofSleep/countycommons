@@ -1,10 +1,10 @@
 {
-  "run_at": "2026-08-16T18:40:59.760Z",
+  "run_at": "2026-08-16T19:06:23.151Z",
   "corpus_year": 2026,
   "grand_total": 113176330.55,
   "summary": {
-    "total_checks": 8,
-    "passed": 8,
+    "total_checks": 10,
+    "passed": 10,
     "failed": 0
   },
   "checks": [
@@ -16,6 +16,24 @@
       "expected": 25873537.77,
       "computed": 25873537.770000003,
       "detail": "28 children sum to the parent total exactly."
+    },
+    {
+      "node": "road",
+      "name": "County Road Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 13552088.42,
+      "computed": 13552088.42,
+      "detail": "5 children sum to the parent total exactly."
+    },
+    {
+      "node": "jail",
+      "name": "Detention Facility Fund (Jail)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 13213991.66,
+      "computed": 13213991.66,
+      "detail": "5 children sum to the parent total exactly."
     },
     {
       "node": "__grand_total__",
@@ -33,7 +51,7 @@
       "ok": true,
       "expected": null,
       "computed": null,
-      "detail": "Chain verified: 76 entries, head 9adbb96034d90f0d…"
+      "detail": "Chain verified: 82 entries, head 560598e85ded8a0d…"
     },
     {
       "node": "__recount__",
