@@ -1,10 +1,10 @@
 {
-  "run_at": "2026-08-16T19:06:23.151Z",
+  "run_at": "2026-08-16T22:23:51.990Z",
   "corpus_year": 2026,
   "grand_total": 113176330.55,
   "summary": {
-    "total_checks": 10,
-    "passed": 10,
+    "total_checks": 12,
+    "passed": 12,
     "failed": 0
   },
   "checks": [
@@ -36,6 +36,24 @@
       "detail": "5 children sum to the parent total exactly."
     },
     {
+      "node": "city-hs",
+      "name": "City of Hot Springs — 2026 budget",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 178516016,
+      "computed": 178516016,
+      "detail": "21 children sum to the parent total exactly."
+    },
+    {
+      "node": "city-hs-gf",
+      "name": "General Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 39842600,
+      "computed": 39842600,
+      "detail": "15 children sum to the parent total exactly."
+    },
+    {
       "node": "__grand_total__",
       "name": "Ordinance grand total",
       "kind": "grand-total",
@@ -51,7 +69,7 @@
       "ok": true,
       "expected": null,
       "computed": null,
-      "detail": "Chain verified: 82 entries, head 560598e85ded8a0d…"
+      "detail": "Chain verified: 90 entries, head 810721fca416c21b…"
     },
     {
       "node": "__recount__",
