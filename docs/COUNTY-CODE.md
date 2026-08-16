@@ -11,9 +11,15 @@ without breaking the shared skeleton or each other.
 main repo, by the owner, with review. A county host cannot edit these, and no
 admin feature may weaken them:
 
+- **Alongside the republic, not instead of it.** Every question is advisory
+  signal carried to the elected body that decides — it informs officials; it
+  never binds or replaces them. A host runs polls that feed the government we
+  already have; the platform is not a parallel government. This frame shows on
+  every admin screen and cannot be edited away.
 - **The charter bright lines** — no candidate questions, no active-ballot-measure
   questions, no questions about named individuals' conduct; election blackout
-  windows. Enforced in code (`server/submissions.js` screen), not just policy.
+  windows. Enforced in code (`server/submissions.js` screen, applied to host-
+  opened questions too), not just policy.
 - **No verdicts, ever** — the platform shows the trail and where it stops; it
   never editorializes or concludes, in either direction.
 - **Vote integrity** — one `castVote()` gate for every channel; dedupe by

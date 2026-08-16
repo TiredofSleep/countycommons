@@ -60,6 +60,21 @@ function apply(data, tenant) {
     data.calendar.community = data.calendar.community || {};
     data.calendar.community.listings = o.calendar_community;
   }
+  // Host-created questions, appended to any git-seeded drafts. They flow
+  // through the SAME one-vote gate, tally, and charter screen as every other
+  // question — the frame (advisory signal to the elected body) is a bone.
+  if (Array.isArray(o.questions) && o.questions.length) {
+    data.issueDrafts = data.issueDrafts || { drafts: [] };
+    data.issueDrafts.drafts = (data.issueDrafts.drafts || []).concat(o.questions);
+  }
+  // Host-added Help Finder listings, appended as an extra category.
+  if (Array.isArray(o.help_local) && o.help_local.length && data.help) {
+    data.help = JSON.parse(JSON.stringify(data.help));
+    data.help.categories = (data.help.categories || []).concat([{
+      id: 'local-added', title: 'Added by your county host',
+      resources: o.help_local
+    }]);
+  }
   // Free-text copy overrides, looked up by views as data.copy['home.hero'] etc.
   data.copy = o.copy || {};
   return data;

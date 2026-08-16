@@ -415,7 +415,8 @@ app.post('/register', writeLimit, express.urlencoded({ extended: false }), (req,
 // overlay, and chains an admin-edit event by the host's name. See COUNTY-CODE.md.
 const overlay = require('./lib/overlay');
 const chain = require('./lib/chain');
-const { adminDashboard, adminCalendar } = require('./views/admin');
+const { adminDashboard, adminCalendar, adminQuestions, adminHelp } = require('./views/admin');
+const submissions = require('./submissions');
 
 function logAdminEdit(req, section) {
   try { chain.append('admin-edit', { tenant: req.access.tenant, by: req.access.name || 'host', section }); }
@@ -463,6 +464,72 @@ app.post('/admin/calendar/event/remove', requireAdmin, express.urlencoded({ exte
     logAdminEdit(req, 'removed community event');
   }
   res.redirect('/admin/calendar?saved=1');
+});
+
+// --- admin: questions (the republic-alongside frame is enforced here) ---
+app.get('/admin/questions', requireAdmin, (req, res) =>
+  res.send(adminQuestions(load(req.tenantKey), overlay.read(req.access.tenant).questions || [],
+    { opened: req.query.opened === '1', closed: req.query.closed === '1', blocked: req.query.blocked || null })));
+
+app.post('/admin/questions/open', requireAdmin, express.urlencoded({ extended: false }), (req, res) => {
+  const wording = String((req.body && req.body.wording) || '').trim().slice(0, 300);
+  if (!wording) return res.redirect('/admin/questions');
+  // The charter bright lines are a bone: no candidates, no ballot measures, no
+  // named-individual conduct. A host cannot open a question that trips them.
+  const flags = submissions.screen(wording);
+  if (flags.length) return res.redirect('/admin/questions?blocked=' + encodeURIComponent(flags.join(', ')));
+  const slug = wording.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40)
+    || 'question';
+  const id = `${slug}-${crypto.randomBytes(2).toString('hex')}`;
+  const q = {
+    id, final_wording: wording, opened: new Date().toISOString().slice(0, 10),
+    status: 'open-tier0', created_by: req.access.name || 'host',
+    context: String((req.body && req.body.context) || '').trim().slice(0, 600) || null
+  };
+  const cur = overlay.read(req.access.tenant).questions || [];
+  overlay.setSection(req.access.tenant, 'questions', cur.concat([q]).slice(0, 200));
+  logAdminEdit(req, 'opened a question');
+  res.redirect('/admin/questions?opened=1');
+});
+
+app.post('/admin/questions/close', requireAdmin, express.urlencoded({ extended: false }), (req, res) => {
+  const id = String((req.body && req.body.id) || '');
+  const cur = overlay.read(req.access.tenant).questions || [];
+  const q = cur.find(x => x.id === id);
+  if (q) { q.status = 'closed'; overlay.setSection(req.access.tenant, 'questions', cur); logAdminEdit(req, 'closed a question'); }
+  res.redirect('/admin/questions?closed=1');
+});
+
+// --- admin: Help Finder listings ---
+app.get('/admin/help', requireAdmin, (req, res) =>
+  res.send(adminHelp(load(req.tenantKey), overlay.read(req.access.tenant).help_local || [], { saved: req.query.saved === '1' })));
+
+app.post('/admin/help/add', requireAdmin, express.urlencoded({ extended: false }), (req, res) => {
+  const b = req.body || {};
+  const name = String(b.name || '').trim().slice(0, 120);
+  if (!name) return res.redirect('/admin/help');
+  const r = {
+    name,
+    what: String(b.what || '').trim().slice(0, 160),
+    phone: String(b.phone || '').trim().slice(0, 40),
+    hours: String(b.hours || '').trim().slice(0, 120),
+    address: String(b.address || '').trim().slice(0, 160)
+  };
+  const cur = overlay.read(req.access.tenant).help_local || [];
+  overlay.setSection(req.access.tenant, 'help_local', cur.concat([r]).slice(0, 200));
+  logAdminEdit(req, 'added a help listing');
+  res.redirect('/admin/help?saved=1');
+});
+
+app.post('/admin/help/remove', requireAdmin, express.urlencoded({ extended: false }), (req, res) => {
+  const i = parseInt((req.body && req.body.index), 10);
+  const cur = overlay.read(req.access.tenant).help_local || [];
+  if (Number.isInteger(i) && i >= 0 && i < cur.length) {
+    cur.splice(i, 1);
+    overlay.setSection(req.access.tenant, 'help_local', cur);
+    logAdminEdit(req, 'removed a help listing');
+  }
+  res.redirect('/admin/help?saved=1');
 });
 
 // ---- support drop-box ----

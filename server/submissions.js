@@ -71,4 +71,4 @@ function queueCount() {
   return loadStore().submissions.filter(s => s.status === 'received').length;
 }
 
-module.exports = { submit, queueCount };
+module.exports = { submit, queueCount, screen };
