@@ -13,7 +13,18 @@ The seam is `config/tenants.json` + `server/lib/tenant.js`. The corpus loader
 host-routing middleware in `server/app.js` sets `req.tenantKey`; every page
 route passes it to `load()`.
 
-## Onboarding county #2 (the whole checklist)
+## Onboarding a county — the easy way (owner console)
+
+Sign in at `/owner` with the owner code and use **Create a county**: it
+scaffolds the config + a minimal starter corpus, registers the county in the
+gitignored local registry, and mints its resident PIN + host code — all from
+the web. Then do the one box step it prints: add the new host to the Caddy
+site line and `systemctl reload caddy` (for the TLS cert). Ingest the real
+budget documents through the pipeline when they're in hand.
+
+The manual, file-by-file version below is the fallback / reference.
+
+## Onboarding county #2 (the manual checklist)
 
 1. **Add a tenant block** to `config/tenants.json`:
    ```json
