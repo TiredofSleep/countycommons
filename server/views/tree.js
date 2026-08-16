@@ -47,12 +47,23 @@ function treePage(data) {
   const legend = Object.values(STATUS).map(s =>
     `<span class="chip ${s.cls}">${s.mark} ${esc(s.label)}</span>`).join('');
 
+  // Generic across counties: pull the document label, title, and note from
+  // the corpus meta, with sensible fallbacks so any county renders.
+  const docLabel = budget.meta.document || (budget.meta.ordinance ? `Appropriation Ordinance ${budget.meta.ordinance}` : '');
+  const title = budget.meta.title || `${county.name} — the money trail`;
+  const gtNote = budget.meta.grand_total_note || budget.meta.note || '';
+  const section = (heading, sub, s) => {
+    const r = roots(s);
+    if (!r.length) return '';
+    return `<section><h2>${heading} <span class="sub">${sub}</span></h2>${r.map(n => renderNode(n, ctx, 0)).join('')}</section>`;
+  };
+
   const body = `
 <header class="page">
-  <div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · Appropriation Ordinance 2025-21</div>
-  <h1>${esc(budget.meta.title)}</h1>
+  <div class="eyebrow">${esc(county.name)}, ${esc(county.state)}${docLabel ? ' · ' + esc(docLabel) : ''}</div>
+  <h1>${esc(title)}</h1>
   <div class="total"><a class="amt" href="/verify" title="See the arithmetic check">${money(budget.meta.grand_total)}</a></div>
-  <div class="src">${esc(budget.meta.grand_total_note)} Click any number to see exactly where it comes from. Where the trail goes dark, it becomes a numbered issue in the <a href="/docket">docket</a>. New here? <a href="/story">Read our story</a> or <a href="/guide">take the plain-words tour</a>.</div>
+  <div class="src">${esc(gtNote)} Click any number to see exactly where it comes from. Where the trail goes dark, it becomes a numbered issue in the <a href="/docket">docket</a>. New here? <a href="/story">Read our story</a> or <a href="/guide">take the plain-words tour</a>.</div>
   ${vStamp}
 </header>
 
@@ -62,22 +73,11 @@ function treePage(data) {
   <button type="button" data-act="close">Collapse all</button>
 </div>
 
-<section>
-<h2>Where it comes from <span class="sub">— the thinner half of the record</span></h2>
-${roots('revenue').map(n => renderNode(n, ctx, 0)).join('')}
-</section>
+${section('Where it comes from', '— the thinner half of the record', 'revenue')}
+${section('Where it goes', `— ${money(budget.meta.grand_total)} appropriated`, 'appropriations')}
+${section('Beside the county', '— separate governments, separate ledgers', 'adjacent')}`;
 
-<section>
-<h2>Where it goes <span class="sub">— ${money(budget.meta.grand_total)} appropriated</span></h2>
-${roots('appropriations').map(n => renderNode(n, ctx, 0)).join('')}
-</section>
-
-<section>
-<h2>Beside the county <span class="sub">— separate governments, separate ledgers</span></h2>
-${roots('adjacent').map(n => renderNode(n, ctx, 0)).join('')}
-</section>`;
-
-  return layout({ title: budget.meta.title, current: '/', body, county });
+  return layout({ title, current: '/', body, county });
 }
 
 module.exports = { treePage };
