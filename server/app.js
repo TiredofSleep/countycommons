@@ -415,8 +415,9 @@ app.post('/register', writeLimit, express.urlencoded({ extended: false }), (req,
 // overlay, and chains an admin-edit event by the host's name. See COUNTY-CODE.md.
 const overlay = require('./lib/overlay');
 const chain = require('./lib/chain');
-const { adminDashboard, adminCalendar, adminQuestions, adminHelp } = require('./views/admin');
+const { adminDashboard, adminCalendar, adminQuestions, adminHelp, adminCopy } = require('./views/admin');
 const submissions = require('./submissions');
+const { COPY_SLOTS } = require('./lib/copyslots');
 
 function logAdminEdit(req, section) {
   try { chain.append('admin-edit', { tenant: req.access.tenant, by: req.access.name || 'host', section }); }
@@ -498,6 +499,23 @@ app.post('/admin/questions/close', requireAdmin, express.urlencoded({ extended: 
   const q = cur.find(x => x.id === id);
   if (q) { q.status = 'closed'; overlay.setSection(req.access.tenant, 'questions', cur); logAdminEdit(req, 'closed a question'); }
   res.redirect('/admin/questions?closed=1');
+});
+
+// --- admin: page copy (per-county headline / front-page wording) ---
+app.get('/admin/copy', requireAdmin, (req, res) =>
+  res.send(adminCopy(load(req.tenantKey), overlay.read(req.access.tenant).copy || {}, { saved: req.query.saved === '1' })));
+
+app.post('/admin/copy', requireAdmin, express.urlencoded({ extended: false }), (req, res) => {
+  const b = req.body || {};
+  const next = {};
+  for (const s of COPY_SLOTS) {
+    const v = String(b[s.key] || '').trim().slice(0, 400);
+    // Store only real overrides; blank or exactly-the-default reverts to shared.
+    if (v && v !== s.default) next[s.key] = v;
+  }
+  overlay.setSection(req.access.tenant, 'copy', next);
+  logAdminEdit(req, 'page copy');
+  res.redirect('/admin/copy?saved=1');
 });
 
 // --- admin: Help Finder listings ---

@@ -1,5 +1,6 @@
 const { esc } = require('../lib/corpus');
 const { layout } = require('./layout');
+const { COPY_SLOTS, PLACEHOLDERS } = require('../lib/copyslots');
 
 // The county admin — where a local host runs their own county. Guarded by
 // requireAdmin (an 8-char host code for THIS county). Every save is scoped to
@@ -48,7 +49,7 @@ ${republicFrame()}
   ${tile('/admin/questions', 'Questions', 'Open and close the questions residents vote on. Advisory signal to the body that decides.', true)}
   ${tile('/admin/calendar', 'Calendar & community events', 'Add local events, edit the calendar intro. Meeting times come from the sourced record.', true)}
   ${tile('/admin/help', 'Help Finder', 'Add local assistance listings — food, rent, utilities, benefits.', true)}
-  ${tile('#', 'Page copy', 'Reword the headline and section text for your county.', false)}
+  ${tile('/admin/copy', 'Page copy', 'Reword your county headline and front-page lines. The disclaimers and the frame stay fixed.', true)}
 </div>
 <p class="src" style="margin-top:12px">More capabilities are being added — each follows the same pattern (see the ground rules). Tell us what your county needs next.</p>
 </section>
@@ -181,4 +182,39 @@ ${hostListings.length ? hostListings.map((r, i) => `
   return shell(county, 'Help Finder', body);
 }
 
-module.exports = { adminDashboard, adminCalendar, adminQuestions, adminHelp };
+function adminCopy(data, overrides, opts = {}) {
+  const { county } = data;
+  const field = 'font-family:var(--mono);font-size:14px;padding:8px 10px;border:1.5px solid var(--ink);background:var(--paper);color:var(--ink);width:100%;box-sizing:border-box';
+  const rows = COPY_SLOTS.map(s => {
+    const cur = (overrides[s.key] !== undefined && overrides[s.key] !== '') ? overrides[s.key] : s.default;
+    const isCustom = overrides[s.key] !== undefined && overrides[s.key] !== '';
+    return `
+<label style="display:block;margin:0 0 14px;max-width:660px">
+  <span style="font-size:13.5px;font-weight:500">${esc(s.label)}</span>${isCustom ? ' <span class="chip c-ok">your wording</span>' : ' <span class="chip">default</span>'}
+  <textarea name="${esc(s.key)}" rows="2" maxlength="400" style="${field};margin-top:4px">${esc(cur)}</textarea>
+</label>`;
+  }).join('');
+
+  const body = `
+<header class="page">
+  <div class="eyebrow">${esc(county.name)} · host admin · page copy</div>
+  <h1>Page copy</h1>
+  <div class="src">Reword your county's headline and front-page lines. Leave a box blank to fall back to the shared default. You can use placeholders that stay live: ${PLACEHOLDERS.map(p => `<code class="code">${esc(p)}</code>`).join(' ')}.</div>
+</header>
+${opts.saved ? `<p class="src" style="color:var(--sourced)"><b>Saved ✓</b> — live on your county's <a href="/">home page</a> now.</p>` : ''}
+
+<section>
+<form method="POST" action="/admin/copy">
+  ${rows}
+  <button type="submit" style="font-family:var(--mono);font-size:13px;padding:9px 16px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);cursor:pointer">Save copy</button>
+</form>
+</section>
+
+<section>
+<h2>What you can't reword <span class="sub">— the frame</span></h2>
+<p class="src">The "not a government website" line, the republic-alongside frame, how every number cites its source, and the methodology stay the same on every county — they're what make the whole thing trustworthy. Your words go on the headline and the pitch; the guarantees stay fixed.</p>
+</section>`;
+  return shell(county, 'Page copy', body);
+}
+
+module.exports = { adminDashboard, adminCalendar, adminQuestions, adminHelp, adminCopy };

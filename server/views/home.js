@@ -1,4 +1,4 @@
-const { esc, money } = require('../lib/corpus');
+const { esc, money, copyText } = require('../lib/corpus');
 const { layout } = require('./layout');
 const { tally } = require('../tally');
 const { registrationForm } = require('./register-box');
@@ -46,10 +46,10 @@ function homePage(data, opts = {}) {
 
   const body = `
 <header class="page" style="text-align:left">
-  <div class="eyebrow">${esc(county.platform_name)} · countycommons.us · ${esc(county.name)}, ${esc(county.state)}</div>
-  <h1 style="font-size:clamp(22px,4.6vw,36px);max-width:30ch;text-wrap:balance">A home for community collaboration, expression, and funding — the checkable middle layer government sites don't build.</h1>
-  <p style="font-size:clamp(15px,2.6vw,19px);max-width:56ch;margin:10px 0 4px"><b>Power in verified local numbers.</b> It's your money — <b>${money(budget.meta.grand_total)} a year</b>. See it to the receipt. Weigh in on it. Turn what this county wants into <b>a number nobody can wave off</b>.</p>
-  <p style="font-family:var(--mono);font-size:clamp(12px,2vw,14px);letter-spacing:.04em;margin:10px 0 2px"><b>SEE THE MONEY · ASK THE QUESTION · CHECK THE COUNT</b></p>
+  <div class="eyebrow">${copyText(data, 'home.eyebrow')}</div>
+  <h1 style="font-size:clamp(22px,4.6vw,36px);max-width:30ch;text-wrap:balance">${copyText(data, 'home.headline')}</h1>
+  <p style="font-size:clamp(15px,2.6vw,19px);max-width:56ch;margin:10px 0 4px">${copyText(data, 'home.subhead')}</p>
+  <p style="font-family:var(--mono);font-size:clamp(12px,2vw,14px);letter-spacing:.04em;margin:10px 0 2px"><b>${copyText(data, 'home.strip')}</b></p>
   <p class="src" style="max-width:60ch">Every dollar cited to its source document. Every voice counted honestly by tier. Every claim checkable by anyone — including this one.</p>
   ${vOk ? `<a href="/verify" style="text-decoration:none"><div class="stamp" title="Every branch of the budget re-adds to its stated total">${verification.summary.passed}/${verification.summary.total_checks} budget checks pass ✓</div></a>` : ''}
   <div style="margin:16px 0 2px">

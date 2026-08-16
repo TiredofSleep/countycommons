@@ -98,6 +98,26 @@ function esc(s) {
     .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 
+// Per-county copy: a host's overlay override for a slot, else its default.
+// Placeholders stay live; the result is always escaped, so host text can never
+// inject markup. Defaults live in lib/copyslots.js.
+const { COPY_SLOTS } = require('./copyslots');
+const SLOT_DEFAULT = Object.fromEntries(COPY_SLOTS.map(s => [s.key, s.default]));
+function fillPlaceholders(v, data) {
+  const total = (data.budget && data.budget.meta) ? '$' + data.budget.meta.grand_total.toLocaleString('en-US') : '';
+  return String(v)
+    .replace(/\{total\}/g, total)
+    .replace(/\{county\}/g, (data.county && data.county.name) || '')
+    .replace(/\{state\}/g, (data.county && data.county.state) || '')
+    .replace(/\{platform\}/g, (data.county && data.county.platform_name) || '')
+    .replace(/\{docs\}/g, data.documents ? String(data.documents.documents.length) : '');
+}
+function copyText(data, key) {
+  const ov = data.copy && data.copy[key];
+  const raw = (ov !== undefined && ov !== null && ov !== '') ? ov : (SLOT_DEFAULT[key] || '');
+  return esc(fillPlaceholders(raw, data));
+}
+
 function money(n) {
   if (n === null || n === undefined) return '—';
   return '$' + n.toLocaleString('en-US');
@@ -119,4 +139,4 @@ const STATUS = {
     plain: 'No document for this exists in the corpus yet. Dead end means "not yet ingested and navigable" — never "hidden."' }
 };
 
-module.exports = { load, esc, money, pct, STATUS };
+module.exports = { load, esc, money, pct, STATUS, copyText };
