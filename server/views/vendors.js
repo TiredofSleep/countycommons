@@ -71,7 +71,7 @@ ${vendors.how_it_becomes_knowable.map(h => `<p class="src">· ${esc(h)}</p>`).jo
 <h2>The records request, ready to send <span class="sub">— any Arkansas citizen can send this</span></h2>
 <p class="src">${esc(vendors.foia.law)} Custodian: ${esc(vendors.foia.custodian)}.</p>
 <div class="card"><pre style="white-space:pre-wrap;font-family:var(--mono);font-size:12.5px;margin:0">${esc(vendors.foia.template)}</pre></div>
-<p class="src">When the responsive records arrive, they go in the corpus like everything else — cited, hashed, and navigable. This request is <a href="/docket#i10">Docket #10</a>.</p>
+<p class="src">When the responsive records arrive, they go in the corpus like everything else — cited, hashed, and navigable. The open requests are tracked on <a href="/docket">the docket</a>.</p>
 </section>`;
 
   return layout({ title: `Who gets paid — ${county.platform_name}`, current: '/vendors', body, county });
