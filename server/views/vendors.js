@@ -8,6 +8,18 @@ const { layout } = require('./layout');
 function vendorsPage(data) {
   const { county, documents, vendors } = data;
 
+  // A county whose layer-three trail hasn't been ingested yet: honest empty
+  // state, not a crash. A dead end means "not yet ingested," never "hidden."
+  if (!vendors || !vendors.named) {
+    return layout({
+      title: `Who gets paid — ${county.platform_name}`, current: '/vendors', county,
+      body: `<header class="page"><div class="eyebrow">${esc(county.name)}, ${esc(county.state)}</div>
+<h1>Who gets paid</h1>
+<div class="src">This page names the companies and people that public documents show receiving ${esc(county.name)} money — and marks the pools where no document names a payee yet. For ${esc(county.name)}, this layer isn't ingested yet: the budget shows the funds on the <a href="/budget">money trail</a>, but the checks, contracts, and bid awards that name the actual payees are the next pull — from quorum court minutes, bid records, and the check register. Not hidden; not yet navigable.</div></header>`,
+      description: `${county.name}: who receives public money, as documents name them.`
+    });
+  }
+
   const namedRows = vendors.named.map(v => {
     const s = STATUS[v.status];
     const doc = v.source ? documents.documents.find(d => d.id === v.source.doc) : null;
