@@ -144,4 +144,4 @@ if (failed.length > 0) {
   console.error(`\n${failed.length} check(s) failed. The site will label these; fix the corpus or label the ambiguity.`);
   process.exit(1);
 }
-console.log('\nThe tree cross-foots. Report written to data/corpus/verification.json');
+console.log(`\nThe tree cross-foots. Report written to ${path.relative(path.join(__dirname, '..'), path.join(CORPUS_DIR, 'verification.json')).replace(/\\/g, '/')}`);

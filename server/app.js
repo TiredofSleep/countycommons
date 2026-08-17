@@ -72,6 +72,18 @@ function hostFor(tenantKey) {
   try { return tenantRegistry().tenants[tenantKey].host; } catch (e) { return null; }
 }
 
+// The access cookie is scoped to the PARENT domain, so one PIN opens the whole
+// network: a resident who's been let in anywhere can walk every county's public
+// pages (the "navigate other counties and the whole site" rule). Omit Domain in
+// local dev, where there's no dotted base to share across. The per-sitting
+// participant/vote cookie stays host-only on purpose — nothing follows you home.
+function accessCookieDomain(req) {
+  let base = null;
+  try { base = tenantRegistry().baseDomain; } catch (e) { /* dev */ }
+  const host = String(req.headers.host || '').toLowerCase().split(':')[0];
+  return (base && (host === base || host.endsWith('.' + base))) ? `; Domain=.${base}` : '';
+}
+
 // ---- headers ----
 app.use((req, res, next) => {
   res.set({
@@ -147,7 +159,7 @@ app.post('/gate', writeLimit, express.urlencoded({ extended: false }), (req, res
   }
   access.noteSuccess(ip);
   res.setHeader('Set-Cookie',
-    `cc_access=${access.cookieValue(hit.tenant, hit.role, hit.name || '')}; Path=/; Max-Age=${60 * 60 * 24 * 30}; HttpOnly; SameSite=Lax`);
+    `cc_access=${access.cookieValue(hit.tenant, hit.role, hit.name || '')}; Path=/; Max-Age=${60 * 60 * 24 * 30}; HttpOnly; SameSite=Lax${accessCookieDomain(req)}`);
   // The PIN decides the county. If we're not on that county's host, send them
   // there; otherwise open the site (admins land on the admin dashboard).
   const landing = hit.role === 'owner' ? '/owner' : (hit.role === 'admin' ? '/admin' : dest);
@@ -162,20 +174,25 @@ app.post('/gate', writeLimit, express.urlencoded({ extended: false }), (req, res
   res.redirect(landing);
 });
 
-// The gate. Open when no PINs are configured. Otherwise a valid access cookie
-// whose county matches this host lets you through; anything else sees the PIN.
+// The gate. Open when no PINs are configured. Otherwise ANY valid access cookie
+// lets you through, on ANY county — one PIN is a key to the whole network, so a
+// resident let in anywhere can navigate every county and the whole site. The
+// cookie still records which county+role you entered as; that scoping is
+// enforced where it matters (editing), not at the view gate.
 app.use((req, res, next) => {
   if (!access.gateConfigured()) return next();
   const acc = access.verifyCookie(cookies(req).cc_access);
-  // Owner passes on any county host; view/admin must match this county.
-  if (acc && (acc.role === 'owner' || acc.tenant === req.tenantKey)) { req.access = acc; return next(); }
+  if (acc) { req.access = acc; return next(); }
   res.status(401).send(gatePage(null, req.originalUrl));
 });
 
 // Admin guard: for /admin routes, require an admin cookie for THIS county.
-// The owner may act as admin anywhere.
+// Now that the view gate admits any resident to any county, the county scope of
+// a host's edit rights is enforced HERE — an admin code edits only its own
+// county. The owner may act as admin anywhere.
 function requireAdmin(req, res, next) {
-  if (req.access && (req.access.role === 'admin' || req.access.role === 'owner')) return next();
+  if (req.access && (req.access.role === 'owner' ||
+      (req.access.role === 'admin' && req.access.tenant === req.tenantKey))) return next();
   res.status(403).send(gatePage('That area needs a host code for this county.', '/admin'));
 }
 
@@ -284,6 +301,12 @@ app.get('/compare/spending', (req, res) => res.send(spendingPage(load(req.tenant
 const { compute: computeCountyCompare } = require('./lib/countycompare');
 const { compareCountiesPage } = require('./views/comparecounties');
 app.get('/compare/counties', (req, res) => res.send(compareCountiesPage(load(req.tenantKey), computeCountyCompare())));
+
+// The county directory: every county on the network, live or awaiting a host.
+// Reachable once you're inside — this is how a resident navigates the whole
+// site, not just their own county.
+const { countiesPage } = require('./views/counties');
+app.get('/counties', (req, res) => res.send(countiesPage(load(req.tenantKey), tenant.registry())));
 
 app.get('/compare/:id', (req, res) => {
   const data = load(req.tenantKey);
