@@ -35,6 +35,11 @@ const heavyLimit = throttle({ windowMs: 60000, max: 8 });  // submissions/feedba
 // ---- multi-county host routing (CLAUDE.md rule 7, made physical) ----
 const tenant = require('./lib/tenant');
 
+// Privacy-preserving traffic counter: page views per county per day, no IPs,
+// no cookies, no per-person data. Aggregate-only, publishable (see /traffic).
+const traffic = require('./lib/traffic');
+traffic.start();
+
 // Caddy queries this before it mints an on-demand TLS certificate for a host,
 // so the box only gets certs for counties we actually serve. Ungated on
 // purpose (registered before the site-password gate): it must answer Caddy.
@@ -211,6 +216,17 @@ app.use((req, res, next) => {
   next();
 });
 
+// Count the page view — a county and a day, nothing else. Only extensionless
+// GET pages (not assets, not /files downloads); the gate's own pages are served
+// before this point, so gate bounces aren't counted, only real reads.
+app.use((req, res, next) => {
+  if (req.method === 'GET' && req.tenantKey
+      && !req.path.startsWith('/files') && !/\.[a-z0-9]+$/i.test(req.path)) {
+    traffic.note(req.tenantKey);
+  }
+  next();
+});
+
 // ---- the document archive (behind the gate) ----
 // Every stored source document, served from our hashed archive.
 app.use('/files', express.static(path.join(__dirname, '..', 'inbox'), { maxAge: '1d', index: false }));
@@ -334,6 +350,10 @@ function charterPage(file, current, description) {
     }));
   };
 }
+// The traffic log — published on purpose (aggregate-only; no IPs, no cookies).
+const { trafficPage } = require('./views/traffic');
+app.get('/traffic', (req, res) => res.send(trafficPage(load(req.tenantKey), traffic.summary(), tenant.registry())));
+
 app.get('/security', charterPage('SECURITY.md', null, 'The platform\'s public threat model and integrity protocols, including the hash-chained activity log anyone can verify.'));
 app.get('/never', charterPage('NEVER.md', null, 'What this project will never do — written down before anyone was watching, on purpose.'));
 
