@@ -47,7 +47,7 @@ ${body}
 <br><br>
 ${esc(county.platform_name)} is a free civic transparency project for ${esc(county.name)}, ${esc(county.state)}.
 It computes and cites; it never takes sides. A dead end means "not yet ingested and navigable," never "hidden."
-<a href="/methodology">How every number is sourced</a> · <a href="/documents">the documents</a> · <a href="/verify">the receipt</a> · <a href="/vendors">who gets paid</a> · <a href="/audits">what the auditors reported</a> · <a href="/counties">every county</a> · <a href="/compare/counties">how counties compare</a> · <a href="/stance">where we stand</a> · <a href="/cases">the precedents</a> · <a href="/research">the research shelf</a> · <a href="/never">what we will never do</a> · <a href="/traffic">the traffic log</a> · <a href="/security">how this is secured</a> · <a href="/guide">the plain-words tour</a> · <a href="/feedback">report a problem</a>. ${esc(county.sponsor_line)}.${corrections}
+<a href="/methodology">How every number is sourced</a> · <a href="/documents">the documents</a> · <a href="/verify">the receipt</a> · <a href="/vendors">who gets paid</a> · <a href="/audits">what the auditors reported</a> · <a href="/counties">every county</a> · <a href="/compare/counties">how counties compare</a> · <a href="/stance">where we stand</a> · <a href="/cases">the precedents</a> · <a href="/research">the research shelf</a> · <a href="/kindred">kindred work</a> · <a href="/never">what we will never do</a> · <a href="/traffic">the traffic log</a> · <a href="/security">how this is secured</a> · <a href="/guide">the plain-words tour</a> · <a href="/feedback">report a problem</a>. ${esc(county.sponsor_line)}.${corrections}
 </footer>
 </div>
 </body>

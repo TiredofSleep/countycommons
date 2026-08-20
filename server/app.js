@@ -302,6 +302,11 @@ app.get('/cases/:id', (req, res) => {
 });
 app.get('/participate', (req, res) => res.send(participatePage(load(req.tenantKey))));
 
+// Kindred work: nonpartisan groups that teach the how of self-government.
+// Platform doctrine, identical on every county (reads config/kindred.json).
+const { kindredPage } = require('./views/kindred');
+app.get('/kindred', (req, res) => res.send(kindredPage(load(req.tenantKey))));
+
 const { helpPage } = require('./views/help');
 app.get('/help', (req, res) => res.send(helpPage(load(req.tenantKey))));
 
