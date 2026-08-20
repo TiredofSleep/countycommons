@@ -1,0 +1,38 @@
+{
+  "name": "Middlesex County",
+  "state": "Massachusetts",
+  "slug": "middlesexma",
+  "seat": "No county seat — county government abolished 1997 (Cambridge and Lowell were the historic shire towns)",
+  "population": 1632002,
+  "population_source": "2020 U.S. Census (most populous county in Massachusetts and New England)",
+  "platform_name": "Middlesex Commons",
+  "sponsor_line": "A free, independent civic-transparency project",
+  "contact_email": "brayden.ozark@gmail.com",
+  "jurisdictions": [
+    { "id": "middlesex-sheriff", "name": "Middlesex Sheriff's Office", "kind": "county-agency", "governing_body": "Commonwealth of Massachusetts (state-funded)", "executive": "Sheriff", "website": "https://www.middlesexsheriff.org" },
+    { "id": "middlesex-north-deeds", "name": "Middlesex North Registry of Deeds (Lowell)", "kind": "county-agency", "executive": "Register of Deeds", "website": "https://www.lowelldeeds.com" },
+    { "id": "middlesex-south-deeds", "name": "Middlesex South Registry of Deeds (Cambridge)", "kind": "county-agency", "executive": "Register of Deeds", "website": "https://www.masslandrecords.com/middlesexsouth/" },
+    { "id": "middlesex-da", "name": "Middlesex District Attorney's Office", "kind": "county-agency", "executive": "District Attorney", "website": "https://www.middlesexda.com" }
+  ],
+  "peer_counties": [],
+  "officials": [],
+  "quorum_court": { "source": "Massachusetts abolished Middlesex County government in 1997; there is no county council or quorum court.", "justices": [] },
+  "records_portals": [
+    { "id": "cthru", "name": "CTHRU — Massachusetts statewide financial transparency", "url": "https://cthru.data.mass.gov" },
+    { "id": "mass-budget", "name": "Massachusetts state budget", "url": "https://www.mass.gov/budget" }
+  ],
+  "calendar": {
+    "budget_adoption_window": { "start_month": 1, "end_month": 6, "note": "The Commonwealth's fiscal year begins July 1; the state budget (which funds the Sheriff) is written in the spring." },
+    "meetings": [],
+    "election_blackouts": [
+      { "note": "Bright lines: no candidate issues, no active-ballot-measure issues, no named-individual conduct issues. Windows to be pinned with local guidance before the voting layer opens.", "start": null, "end": null }
+    ]
+  },
+  "data_sources": [
+    { "id": "mass-budget", "name": "Massachusetts state budget", "url": "https://www.mass.gov/budget", "holds": ["Sheriff's office appropriation (line item ~8910)"] },
+    { "id": "cthru", "name": "CTHRU statewide transparency portal", "url": "https://cthru.data.mass.gov", "holds": ["state payroll and spending, including sheriff's offices"] },
+    { "id": "middlesex-sheriff", "name": "Middlesex Sheriff's Office", "url": "https://www.middlesexsheriff.org", "holds": ["annual reports"] }
+  ],
+  "currency_year": 2026,
+  "reading_level_target": "6th-8th grade"
+}
