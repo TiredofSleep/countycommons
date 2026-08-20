@@ -36,6 +36,18 @@ function layout({ title, current, body, county, description }) {
     .filter(j => j.website)
     .map(j => `${esc(j.name)}: <a href="${esc(j.website)}" rel="noopener">${esc(j.website.replace(/^https?:\/\/(www\.)?/, ''))}</a>`)
     .join(' · ');
+  // The call to action, on every page — the whole site funnels here. Suppressed
+  // where it would be redundant (the priorities board itself) or out of place
+  // (the host/owner consoles).
+  const noCta = ['/priorities', '/admin', '/owner'].includes(current);
+  const ctaBand = noCta ? '' : `
+<aside style="border:2px solid var(--ink);background:var(--card);padding:16px 18px;margin:26px 0 0;display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:space-between">
+  <div style="min-width:220px;flex:1">
+    <div style="font-family:var(--mono);font-weight:600;font-size:15px">Ready to be heard?</div>
+    <div class="src" style="margin-top:3px;max-width:52ch">Say what your community should prioritize — in ${esc(county.name)}, in your state, or nationally — and rally your neighbors behind it. Free, and no account needed.</div>
+  </div>
+  <a href="/priorities" style="font-family:var(--mono);font-size:15px;font-weight:600;padding:14px 22px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);text-decoration:none;white-space:nowrap">Raise your voice →</a>
+</aside>`;
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,6 +63,7 @@ function layout({ title, current, body, county, description }) {
 <div class="wrap">
 <nav class="site" aria-label="Site">${nav}</nav>
 ${body}
+${ctaBand}
 <footer>
 <b>${esc(county.platform_name)} is an independent, citizen-built project. It is not a government website</b> and has no affiliation with, or endorsement from, ${esc(county.name)}, its cities, or any government body.${officialLinks ? ` Official government sites — ${officialLinks}.` : ''}
 <br><br>
