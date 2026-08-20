@@ -11,11 +11,11 @@ const COPY_SLOTS = [
   { key: 'home.eyebrow', label: 'Top line (eyebrow)',
     default: '{platform} · countycommons.us · {county}, {state}' },
   { key: 'home.headline', label: 'Headline',
-    default: "A home for community collaboration, expression, and funding — the checkable middle layer government sites don't build." },
+    default: "Rally your community to shape what government does — from the town budget to state and national law." },
   { key: 'home.subhead', label: 'Sub-headline',
-    default: "Power in verified local numbers. It's your money — {total} a year. See it to the receipt. Weigh in on it. Turn what this county wants into a number nobody can wave off." },
-  { key: 'home.strip', label: 'Three-verb strip',
-    default: 'SEE THE MONEY · ASK THE QUESTION · CHECK THE COUNT' }
+    default: "An open, standing petition with receipts. See where the money really goes, say what should change — in {county}, in your state, or in Congress — rally your neighbors behind it, and we carry it to the people who decide and track what they do. Free, nonpartisan, and checkable to the last number." },
+  { key: 'home.strip', label: 'Verb strip',
+    default: 'SEE IT · SAY IT · RALLY YOUR NEIGHBORS · HOLD THEM TO IT' }
 ];
 
 // Available placeholders, shown to the host in the editor.

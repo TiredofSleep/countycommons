@@ -44,6 +44,14 @@ function homePage(data, opts = {}) {
   <span class="chip c-ok">${esc(cta)} →</span>
 </a>`;
 
+  const step = (n, title, text, href, cta) => `
+<a href="${href}" style="text-decoration:none;color:var(--ink);flex:1;min-width:200px;border:2px solid var(--ink);background:var(--card);padding:14px;display:block">
+  <div class="eyebrow" style="color:var(--accent)">Step ${n}</div>
+  <div style="font-family:var(--mono);font-weight:600;font-size:15px;margin-top:2px">${esc(title)}</div>
+  <p style="font-size:13px;color:var(--ink-soft);margin:6px 0 8px">${esc(text)}</p>
+  <span class="chip c-ok">${esc(cta)} →</span>
+</a>`;
+
   const body = `
 <header class="page" style="text-align:left">
   <div class="eyebrow">${copyText(data, 'home.eyebrow')}</div>
@@ -52,8 +60,9 @@ function homePage(data, opts = {}) {
   <p style="font-family:var(--mono);font-size:clamp(12px,2vw,14px);letter-spacing:.04em;margin:10px 0 2px"><b>${copyText(data, 'home.strip')}</b></p>
   <p class="src" style="max-width:60ch">Every dollar cited to its source document. Every voice counted honestly by tier. Every claim checkable by anyone — including this one.</p>
   ${vOk ? `<a href="/verify" style="text-decoration:none"><div class="stamp" title="Every branch of the budget re-adds to its stated total">${verification.summary.passed}/${verification.summary.total_checks} budget checks pass ✓</div></a>` : ''}
-  <div style="margin:16px 0 2px">
-    <a href="${openQs.length ? `/issues/${esc(openQs[0].id)}` : '/issues'}" style="display:inline-block;font-family:var(--mono);font-size:clamp(15px,2.4vw,18px);font-weight:600;padding:16px 26px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);text-decoration:none;text-wrap:balance">Put yourself on the record — answer the open question${openQs.length === 1 ? '' : 's'} →</a>
+  <div style="margin:16px 0 2px;display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+    <a href="/priorities" style="display:inline-block;font-family:var(--mono);font-size:clamp(15px,2.4vw,18px);font-weight:600;padding:16px 26px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);text-decoration:none;text-wrap:balance">Raise your voice — put a priority on the record →</a>
+    ${openQs.length ? `<a href="/issues/${esc(openQs[0].id)}" style="font-family:var(--mono);font-size:14px;font-weight:600;padding:14px 18px;border:2px solid var(--ink);color:var(--ink);text-decoration:none">or answer the open question →</a>` : ''}
   </div>
 </header>
 
@@ -63,6 +72,17 @@ function homePage(data, opts = {}) {
   ${stat(nm ? nm.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : '—', nm ? 'next public meeting' : 'calendar', '/calendar')}
   ${stat(String(openQs.length), openQs.length === 1 ? 'question open now' : 'questions open now', '/issues')}
 </div>
+
+<section>
+<h2>This is your petition <span class="sub">— open-ended, and with receipts</span></h2>
+<p style="max-width:66ch">Not a one-off signature that disappears into an inbox. A standing place where a community can <b>see what government is doing, say what should change, rally behind it, and hold the outcome to the light</b> — on your town, in your state, and nationally. Every step is public and checkable, and nobody's voice is for sale.</p>
+<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px">
+  ${step('1', 'See it', 'Walk the budget from the total down to the line — every number cited to its source document.', '/budget', 'The money trail')}
+  ${step('2', 'Say it', 'Post what to prioritize — or take a fresh look at — and why. For your town, your state, or the nation.', '/priorities', 'Set a priority')}
+  ${step('3', 'Rally', 'Neighbors back what they share, so the strongest-felt priorities rise to the top on their own.', '/priorities', 'Back what matters')}
+  ${step('4', 'Hold them to it', 'At the threshold it\'s carried to the officials who decide — and we track, in public, what they actually do.', '/outcomes', 'What came of it')}
+</div>
+</section>
 
 <section>
 <h2>Start where you are <span class="sub">— four doors, no account, no app</span></h2>
@@ -113,9 +133,9 @@ ${rulesDialog(county)}
 </section>`;
 
   return layout({
-    title: `${county.platform_name} — see the money, ask the question, check the count`,
+    title: `${county.platform_name} — rally your community to shape what government does`,
     current: '/', body, county,
-    description: `${county.name}'s civic commons: every public dollar mapped to its source, every voice counted honestly, everything checkable — including us.`
+    description: `${county.name}'s open, nonpartisan petition with receipts: see where public money goes, say what should change — locally, in your state, or nationally — rally your neighbors, and track what officials do.`
   });
 }
 
