@@ -68,8 +68,8 @@ function treePage(data, opts) {
   ${vStamp}
 </header>
 
-${o.pbOpen ? `<div class="issue" style="display:block;border-left:3px solid var(--accent)">
-  <b>Now split it yourself.</b> <span class="src">You've seen where the money goes — take the county's discretionary fund and divide it your way, then see the people's budget beside the one the county adopted. <a href="/yourbudget">Open “Your budget”</a>.</span>
+${budget.meta.grand_total > 0 ? `<div class="issue" style="display:block;border-left:3px solid var(--accent)">
+  <b>Now you've seen it — say what matters.</b> <span class="src">You don't write the budget; the people you elected do. But this is the record they answer to. Tell them what to lean into, or what to take a fresh look at, and why. <a href="/priorities">Set the priorities</a>.</span>
 </div>` : ''}
 
 <div class="bar">

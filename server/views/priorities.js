@@ -1,0 +1,113 @@
+const { esc } = require('../lib/corpus');
+const { layout } = require('./layout');
+
+// The community-priorities board. Residents say what to lean into or take a
+// fresh look at, and why; others back what they share; the list ranks itself
+// into a clear signal for the people whose job is the budget. Voice, not a
+// rival ledger — see server/priorities.js and docs/PARTICIPATORY-BUDGETING.md.
+
+const KIND = {
+  prioritize: { label: 'Prioritize', cls: 'c-ok', mark: '▲', prompt: 'Lean into this' },
+  reconsider: { label: 'Take a fresh look', cls: 'c-amb', mark: '⁈', prompt: 'Is this worth it?' }
+};
+
+function govBody(county) {
+  const j = (county.jurisdictions || []).find(x => x.kind === 'county') || (county.jurisdictions || [])[0];
+  return (j && j.governing_body) || 'quorum court';
+}
+
+function prioritiesPage(data, items, opts) {
+  const o = opts || {};
+  const { county } = data;
+  const body_name = govBody(county);
+
+  // Budget areas for the optional "what part of the county?" link — grounds a
+  // priority in what people can actually see on the money trail.
+  const areas = (data.budget.nodes || []).filter(n => n.parent === null && n.section === 'appropriations');
+  const areaName = id => { const n = data.byId.get(id); return n ? n.name : null; };
+
+  const proposeForm = `
+<form method="POST" action="/priorities/propose" style="margin-top:8px">
+  ${o.blocked ? `<p class="src" style="color:var(--dead)"><b>That can't go up as written.</b> This platform never hosts questions about candidates, active ballot measures, or a named person's conduct (${esc(o.blocked)}). Say it about the work or the dollars, not a person, and it's welcome.</p>` : ''}
+  <fieldset style="border:1.5px solid var(--rule);padding:12px;margin:0 0 10px">
+    <legend class="src" style="padding:0 6px">What kind of ask is this?</legend>
+    <label style="display:block;margin:4px 0"><input type="radio" name="kind" value="prioritize" checked> <b>Prioritize it</b> — I want the county to lean into this.</label>
+    <label style="display:block;margin:4px 0"><input type="radio" name="kind" value="reconsider"> <b>Take a fresh look</b> — I want them to weigh whether this is still worth it.</label>
+  </fieldset>
+  <label class="src" for="p-title">In a line, what is it?</label>
+  <input id="p-title" name="title" required maxlength="120" placeholder="e.g. Keep the county roads graded out past Gum Springs"
+    style="width:100%;font-size:15px;padding:8px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink);margin:4px 0 10px">
+  <label class="src" for="p-why">Why does it matter? <span style="opacity:.7">— this is the part the county actually needs</span></label>
+  <textarea id="p-why" name="why" required maxlength="600" rows="3" placeholder="Say it plainly. What happens if they do — or don't?"
+    style="width:100%;font-size:15px;padding:8px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink);margin:4px 0 10px"></textarea>
+  ${areas.length ? `<label class="src" for="p-node">Which part of the county? <span style="opacity:.7">(optional — ties it to the money trail)</span></label>
+  <select id="p-node" name="node_ref" style="width:100%;font-size:15px;padding:8px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink);margin:4px 0 10px">
+    <option value="">— not tied to one line —</option>
+    ${areas.map(a => `<option value="${esc(a.id)}">${esc(a.name)}</option>`).join('')}
+  </select>` : ''}
+  <button type="submit" style="font-family:var(--mono);font-size:14px;padding:9px 16px;background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);cursor:pointer">Post it</button>
+</form>`;
+
+  const card = (p) => {
+    const k = KIND[p.kind] || KIND.prioritize;
+    const area = p.node_ref ? areaName(p.node_ref) : null;
+    const others = p.reasons.filter((r, i) => !(p.kind && i < 0)).slice(0, 3); // up to 3 supporter reasons
+    return `
+<div class="issue" style="display:block">
+  <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline">
+    <b style="font-size:16px">${esc(p.title)}</b>
+    <span class="chip ${k.cls}" style="white-space:nowrap">${k.mark} ${esc(k.label)}</span>
+  </div>
+  <p class="src" style="margin:6px 0 2px">${esc(p.why)}</p>
+  ${area ? `<p class="src" style="margin:2px 0">On the money trail: <a href="/line/${esc(p.node_ref)}">${esc(area)}</a>.</p>` : ''}
+  <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center;margin-top:8px">
+    <span class="src"><b>${p.support}</b> ${p.support === 1 ? 'person is' : 'people are'} behind this${o.mine && o.mine.has(p.id) ? ' — <span style="color:var(--sourced)">including you</span>' : ''}</span>
+    ${o.mine && o.mine.has(p.id) ? '' : `<details style="margin:0">
+      <summary style="cursor:pointer;font-size:13px;color:var(--accent)">I'm with this →</summary>
+      <form method="POST" action="/priorities/${esc(p.id)}/support" style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;align-items:flex-start">
+        <input name="why" maxlength="400" placeholder="add your reason (optional)"
+          style="flex:1;min-width:200px;font-size:14px;padding:7px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink)">
+        <button type="submit" style="font-family:var(--mono);font-size:13px;padding:7px 12px;background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);cursor:pointer">Back it</button>
+      </form>
+    </details>`}
+  </div>
+  ${others.length ? `<div style="margin-top:8px;border-top:1px solid var(--rule);padding-top:6px">${others.map(r => `<p class="src" style="margin:3px 0">“${esc(r)}”</p>`).join('')}</div>` : ''}
+</div>`;
+  };
+
+  const list = items.length
+    ? items.map(card).join('')
+    : `<p class="src">No priorities yet. Be the first — and it helps to <a href="/budget">see what's already here</a> before you say what to lift up or question.</p>`;
+
+  const body = `
+<header class="page">
+  <div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · the community's voice</div>
+  <h1>What should the county prioritize?</h1>
+  <div class="src">We don't write the budget — we elected people to do that. This is where the community says what it wants them to weigh: what to lean into, or what to take a fresh look at, and <b>why</b>. Back the ones you share; the list ranks itself. It starts with seeing what's here — <a href="/budget">the money trail</a> shows where the money goes today.</div>
+</header>
+
+<div class="issue" style="display:block;border-left:3px solid var(--accent)">
+  <div class="eyebrow" style="color:var(--accent)">how this works</div>
+  <p class="src" style="margin:4px 0 0">Post what you want prioritized — or questioned — and why. Others back what they agree with, so the strongest-felt priorities rise to the top on their own. This ranked list is the community's voice to the <b>${esc(body_name)}</b>. Their job is to fit it into the budget they were elected to write; ours is to make it impossible to miss — and, once outcomes are tracked, to show whether they did.</p>
+</div>
+
+${o.proposed ? `<div class="issue" style="display:block;border-color:var(--sourced);background:var(--sourced-bg)"><b>Posted.</b> <span class="src">It's on the board below, and you're its first backer. Share it — this works when neighbors pile onto what they share.</span></div>` : ''}
+${o.supported ? `<div class="issue" style="display:block;border-color:var(--sourced);background:var(--sourced-bg)"><b>You're on record.</b> <span class="src">Your backing is counted; your name is not shown.</span></div>` : ''}
+
+<section>
+<h2>Add a priority</h2>
+${proposeForm}
+</section>
+
+<section>
+<h2>The community's priorities <span class="sub">— most-backed first</span></h2>
+${list}
+</section>`;
+
+  return layout({
+    title: `Priorities — ${county.platform_name}`, current: '/priorities', body, county,
+    description: `What ${county.name} residents want the county to prioritize — or take a fresh look at — and why. Voice to the people who write the budget, ranked by how many share it.`
+  });
+}
+
+module.exports = { prioritiesPage };

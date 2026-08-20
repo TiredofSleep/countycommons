@@ -532,6 +532,37 @@ app.post('/yourbudget/:id', writeLimit, express.urlencoded({ extended: false }),
   res.redirect('/yourbudget?placed=1');
 });
 
+// ---- community priorities (voice to the budget-writers; server/priorities.js) ----
+const priorities = require('./priorities');
+const { prioritiesPage } = require('./views/priorities');
+
+app.get('/priorities', (req, res) => {
+  const data = load(req.tenantKey);
+  const items = priorities.listFor(req.tenantKey);
+  const participant = participantOf(req);
+  res.send(prioritiesPage(data, items, {
+    proposed: req.query.proposed === '1',
+    supported: req.query.supported === '1',
+    blocked: req.query.blocked || null,
+    mine: priorities.supportedBy(participant, req.tenantKey)
+  }));
+});
+
+app.post('/priorities/propose', writeLimit, express.urlencoded({ extended: false }), (req, res) => {
+  const participant = ensureParticipant(req, res);
+  const b = req.body || {};
+  const r = priorities.propose({ tenant: req.tenantKey, kind: b.kind, title: b.title, why: b.why, node_ref: b.node_ref, participant, county: load(req.tenantKey).county });
+  if (r.error === 'bright-line') return res.redirect('/priorities?blocked=' + encodeURIComponent((r.flags || []).join(', ')));
+  if (r.error) return res.redirect('/priorities');
+  res.redirect('/priorities?proposed=1');
+});
+
+app.post('/priorities/:id/support', writeLimit, express.urlencoded({ extended: false }), (req, res) => {
+  const participant = ensureParticipant(req, res);
+  priorities.support(participant, req.params.id, (req.body && req.body.why) || '');
+  res.redirect('/priorities?supported=1');
+});
+
 // ---- owner console (owner code; create counties, mint PINs) ----
 const { ownerConsole } = require('./views/owner');
 const { createCounty } = require('./lib/scaffold');

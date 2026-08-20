@@ -25,7 +25,7 @@ function loadStore() {
 // auto-rejects — a person still decides — but the risk is surfaced by code, so
 // a candidate/ballot-measure/conduct question can't slip through unnoticed.
 const BRIGHT_LINES = [
-  { flag: 'possible-candidate', re: /\b(candidate|vote for|elect|re-?elect|running for|for (sheriff|judge|mayor|office))\b/i },
+  { flag: 'possible-candidate', re: /\b(candidate|vote for|vote against|unseat|defeat|elect|re-?elect|running for|(for|against) (sheriff|judge|mayor|office))\b/i },
   { flag: 'possible-ballot-measure', re: /\b(ballot measure|referendum|initiative|proposition|on the ballot|millage vote|bond issue)\b/i },
   { flag: 'possible-named-conduct', re: /\b(corrupt|crook|resign|fired|stole|lying|incompetent|should be removed)\b/i }
 ];
