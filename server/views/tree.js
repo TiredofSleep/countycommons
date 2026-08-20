@@ -32,8 +32,9 @@ function renderNode(node, ctx, depth) {
   return `<details class="node"${open}><summary>${row}</summary>${note}${kids.map(k => renderNode(k, ctx, depth + 1)).join('')}</details>`;
 }
 
-function treePage(data) {
+function treePage(data, opts) {
   const { budget, county, verification, childrenOf } = data;
+  const o = opts || {};
   const roots = s => budget.nodes.filter(n => n.parent === null && n.section === s);
   const ctx = { childrenOf, grandTotal: budget.meta.grand_total };
 
@@ -66,6 +67,10 @@ function treePage(data) {
   <div class="src">${esc(gtNote)} Click any number to see exactly where it comes from. Where the trail goes dark, it becomes a numbered issue in the <a href="/docket">docket</a>. New here? <a href="/story">Read our story</a> or <a href="/guide">take the plain-words tour</a>.</div>
   ${vStamp}
 </header>
+
+${o.pbOpen ? `<div class="issue" style="display:block;border-left:3px solid var(--accent)">
+  <b>Now split it yourself.</b> <span class="src">You've seen where the money goes — take the county's discretionary fund and divide it your way, then see the people's budget beside the one the county adopted. <a href="/yourbudget">Open “Your budget”</a>.</span>
+</div>` : ''}
 
 <div class="bar">
   ${legend}

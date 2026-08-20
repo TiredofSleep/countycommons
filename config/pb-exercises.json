@@ -1,0 +1,28 @@
+{
+  "note": "Participatory-budgeting exercises. Advisory only — a signal to the county, never binding money. Options group real budget-tree node ids; adopted amounts are computed live from the corpus so they never drift. Prototype: one exercise on Clark's discretionary General Fund, which the quorum court really does re-split each year.",
+  "exercises": [
+    {
+      "id": "clark-gf-2026",
+      "tenant": "clarkar",
+      "status": "open",
+      "scope": "local",
+      "opened": "2026-08-19",
+      "title": "Split the county's General Fund",
+      "pot_label": "the 2026 General Fund",
+      "pot_amount": 6829201,
+      "pot_node": "general-fund",
+      "pot_source": { "doc": "ord-2025-21", "note": "2026 appropriation ordinance, General Fund total" },
+      "tokens": 10,
+      "intro": "The General Fund is the county's discretionary money — about $6.8 million the quorum court splits among departments every year. Unlike road or library money, which the law ties to its purpose, this is the pot where the county actually chooses. So here's the real question: if the split were yours, where would the weight go? Place your ten tokens, then see your choices next to what the county actually budgeted.",
+      "caveat": "This is a signal, not a law. It does not move a dollar — the quorum court sets the budget. It also leaves out the restricted funds (road taxes, the library millage, 9-1-1, economic-development sales tax), which by law can only go to their own purpose. This exercise is only the part the county is free to choose: the General Fund.",
+      "options": [
+        { "id": "sheriff", "label": "Sheriff's patrol", "what": "Road deputies, investigations, and dispatch.", "node_ref": ["gf-sheriff"] },
+        { "id": "jail", "label": "Jail & inmate care", "what": "Running the county jail and feeding inmates.", "node_ref": ["gf-jail", "gf-prisoner-food"] },
+        { "id": "courts", "label": "Courts & prosecution", "what": "District and circuit courts, the prosecutor, and juvenile services.", "node_ref": ["gf-district-court", "gf-prosecutor", "gf-circuit-judge", "gf-juvenile", "gf-court-complex"] },
+        { "id": "offices", "label": "County offices, records & elections", "what": "Assessor, collector, treasurer, clerks, and the election commission.", "node_ref": ["gf-assessor", "gf-collector", "gf-treasurer", "gf-board-eq", "gf-late-fee", "gf-county-clerk", "gf-circuit-clerk", "gf-election"] },
+        { "id": "buildings", "label": "Buildings & administration", "what": "Courthouse upkeep, the county judge's office, and the quorum court.", "node_ref": ["gf-courthouse-maint", "gf-county-judge", "gf-quorum-court", "gf-rental"] },
+        { "id": "services", "label": "Health, safety & other services", "what": "Emergency management, coroner, health, extension, veterans, and welfare.", "node_ref": ["gf-oem", "gf-coroner", "gf-health", "gf-extension", "gf-veterans", "gf-gia-social", "gf-paupers"] }
+      ]
+    }
+  ]
+}

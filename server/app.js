@@ -243,7 +243,7 @@ app.get('/', (req, res) => {
     announceChecked: !!(participant && open.length && require('./signatures').mySignature(participant, open[0].id))
   }));
 });
-app.get('/budget', (req, res) => res.send(treePage(load(req.tenantKey))));
+app.get('/budget', (req, res) => res.send(treePage(load(req.tenantKey), { pbOpen: !!require('./pb').openExerciseFor(req.tenantKey) })));
 
 app.get('/line/:id', (req, res) => {
   const data = load(req.tenantKey);
@@ -497,6 +497,39 @@ app.post('/register', writeLimit, express.urlencoded({ extended: false }), (req,
   // where the missing step is) — send them there to see it.
   if (sigState) return res.redirect(`/issues/${open[0].id}?${saved ? 'registered=1&' : ''}sign=${sigState}#sign`);
   res.redirect(`/${saved ? '?registered=1' : ''}#register`);
+});
+
+// ---- participatory budgeting (advisory allocation; docs/PARTICIPATORY-BUDGETING.md) ----
+const pb = require('./pb');
+const { pbPage, pbEmptyPage } = require('./views/pb');
+
+app.get('/yourbudget', (req, res) => {
+  const data = load(req.tenantKey);
+  const ex = pb.openExerciseFor(req.tenantKey);
+  if (!ex) return res.send(pbEmptyPage(data));
+  const participant = participantOf(req);
+  const myAlloc = participant ? pb.myAllocation(participant, ex.id) : null;
+  res.send(pbPage(data, ex, participant, myAlloc, pb.tallyPB(ex), {
+    submitted: req.query.placed === '1',
+    error: req.query.error === 'sum' ? `Your tokens must add up to exactly ${ex.tokens}. Nothing was saved — try again.` : null
+  }));
+});
+
+// One allocation gate. Options come in as t_<optionId> fields; the tradeoff
+// constraint (sum === tokens) is enforced in pb.castAllocation, not here.
+app.post('/yourbudget/:id', writeLimit, express.urlencoded({ extended: false }), (req, res) => {
+  const ex = pb.getExercise(req.params.id);
+  if (!ex || ex.tenant !== req.tenantKey || ex.status !== 'open') return res.redirect('/yourbudget');
+  const participant = ensureParticipant(req, res);
+  const allocation = {};
+  for (const op of ex.options) allocation[op.id] = parseInt((req.body && req.body['t_' + op.id]) || '0', 10) || 0;
+  try {
+    pb.castAllocation(participant, ex.id, allocation, 'web');
+  } catch (e) {
+    if (e.code === 'BAD_SUM') return res.redirect('/yourbudget?error=sum');
+    throw e;
+  }
+  res.redirect('/yourbudget?placed=1');
 });
 
 // ---- owner console (owner code; create counties, mint PINs) ----
