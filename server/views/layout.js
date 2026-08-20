@@ -19,7 +19,14 @@ const NAV = [
 ];
 
 function layout({ title, current, body, county, description }) {
-  const nav = NAV.map(([href, label]) =>
+  // Counties with a municipalities layer (e.g. Middlesex, MA, where county
+  // government was abolished) get a "Cities & towns" item after the money trail.
+  const navItems = NAV.slice();
+  if (county && county.has_municipalities) {
+    const i = navItems.findIndex(([h]) => h === '/budget');
+    navItems.splice(i + 1, 0, ['/places', 'Cities & towns']);
+  }
+  const nav = navItems.map(([href, label]) =>
     `<a href="${href}"${href === current ? ' aria-current="page"' : ''}>${esc(label)}</a>`).join('');
   const desc = description || `${county.name}'s public money, made navigable — every number cited to its source document, every gap named.`;
   const corrections = county.contact_email

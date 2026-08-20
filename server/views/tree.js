@@ -68,6 +68,9 @@ function treePage(data, opts) {
   ${vStamp}
 </header>
 
+${o.hasPlaces ? `<div class="issue" style="display:block;border-left:3px solid var(--accent)">
+  <b>The real money is in your city or town.</b> <span class="src">With no county government here, the budgets that shape daily life — schools, police, roads, trash — are municipal. <a href="/places">Browse every city and town →</a>, and walk the ones we've ingested line by line.</span>
+</div>` : ''}
 ${budget.meta.grand_total > 0 ? `<div class="issue" style="display:block;border-left:3px solid var(--accent)">
   <b>Now you've seen it — say what matters.</b> <span class="src">You don't write the budget; the people you elected do. But this is the record they answer to. Tell them what to lean into, or what to take a fresh look at, and why. <a href="/priorities">Set the priorities</a>.</span>
 </div>` : ''}

@@ -243,7 +243,27 @@ app.get('/', (req, res) => {
     announceChecked: !!(participant && open.length && require('./signatures').mySignature(participant, open[0].id))
   }));
 });
-app.get('/budget', (req, res) => res.send(treePage(load(req.tenantKey), { pbOpen: !!require('./pb').openExerciseFor(req.tenantKey) })));
+const places = require('./lib/places');
+const { placesPage, cityBudgetPage } = require('./views/places');
+app.get('/budget', (req, res) => res.send(treePage(load(req.tenantKey), {
+  pbOpen: !!require('./pb').openExerciseFor(req.tenantKey),
+  hasPlaces: !!places.placesFor(req.tenantKey)
+})));
+
+// Municipalities layer — where county government was abolished, the real money
+// is in the cities and towns. Index + per-city sourced budgets.
+app.get('/places', (req, res) => {
+  const data = load(req.tenantKey);
+  const idx = places.placesFor(req.tenantKey);
+  if (!idx) return res.status(404).send(notFound(data, 'No cities-and-towns index for this county yet.'));
+  res.send(placesPage(data, idx));
+});
+app.get('/places/:slug', (req, res) => {
+  const data = load(req.tenantKey);
+  const city = places.cityBudget(req.tenantKey, req.params.slug);
+  if (!city) return res.status(404).send(notFound(data, 'No budget has been ingested for that city yet — see the index.'));
+  res.send(cityBudgetPage(data, city));
+});
 
 app.get('/line/:id', (req, res) => {
   const data = load(req.tenantKey);
