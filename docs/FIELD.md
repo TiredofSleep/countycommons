@@ -51,6 +51,44 @@ None of this is a claim to be better people. It is a claim about a specific
 architecture: provenance-first, privacy-preserving, channel-equal, county-scaled.
 That combination is genuinely rare, and it is the thing to protect.
 
+## The rallying gap
+
+The map above asks "who makes government legible." A second sweep asked a
+different question — "who helps a community actually push" — and it turned up a
+field that splits four ways, each stopping short of the same place. This is the
+axis the platform is really built on: not a transparency site with participation
+bolted on, but an open, standing petition with the receipts underneath it.
+
+| The rally / petition field | Examples | Where it stops short |
+|---|---|---|
+| Mass petition hosts | Change.org, iPetitions, GoPetition, MoveOn, Care2 | National and shallow — sign-and-forget, no local budget underneath, no record of whether anyone acted. Several are openly partisan or monetize the signer's data. |
+| Contact-your-representative | Resistbot, 5 Calls, Democracy.io | One message to (usually) a federal office. No shared community signal, no local layer, and the best-known ones ship pre-written partisan scripts. |
+| Mobilization software | Quorum, Capitol Canary, New/Mode, Action Network, NGP VAN | Built for organizations, not residents — a citizen can't use them at all; the ones with real reach are party-aligned campaign infrastructure. |
+| Government participation platforms | Go Vocal, Decidim, CONSUL, Your Priorities, Polis | Genuinely strong tools — but a government has to adopt and host them. They're a consultation the state runs, not a standing petition the community owns. |
+
+Put the four failure modes together and a position falls out that none of them
+occupy: **transparency + rallying that runs local to national + accountability
+tracking + nonpartisan + grounded in the actual money.** The petition tools rally
+but show nothing and prove nothing; the transparency tools show everything and
+rally no one; the participation platforms are powerful but top-down, waiting on a
+government to switch them on. A community-owned petition that starts from a
+sourced budget, lets neighbors rank what matters, carries it to the officials at
+whatever level, and then records in public what they did — that specific
+combination we did not find anywhere in the sweep.
+
+Three honest caveats, so this reads as a map and not a boast:
+
+- **Reach is theirs, not ours.** Change.org counts hundreds of millions of users;
+  our organic traffic is still near zero. An unoccupied position is worth nothing
+  until people stand on it.
+- **Unproven at the one thing that matters.** The loop — signal a body actually
+  cites and acts on — has not closed yet, in any county. The architecture is
+  ready; the proof isn't.
+- **Nonpartisan rallying is hard to hold.** The tools with the most energy got it
+  by picking a side. Staying a neutral container while still moving people is the
+  harder path, and the one most likely to fray under pressure. It is also the
+  only path the charter allows.
+
 ## The honest gaps, ranked by fit
 
 Ranked by how cleanly each fits the charter ("direct participation _alongside_
