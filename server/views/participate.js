@@ -74,6 +74,11 @@ ${qcStr ? `<div class="issue" style="display:block;border-color:var(--sourced);b
 </section>
 
 <section>
+<h2>7 · Widen the toolkit <span class="sub">— beyond this county</span></h2>
+<p>Changing a law — local, state, or federal — has a how-to, and other groups teach it for free: how to track a bill, get a public record, run a citizens' panel, or put a measure on the ballot. We've gathered the nonpartisan ones, verified and linked by method, not by cause. <a href="/kindred">See the kindred work</a>.</p>
+</section>
+
+<section>
 <h2>Why we believe this works <span class="sub">— the evidence</span></h2>
 <p>Participation is old, proven, and it grows the people who practice it — that's not a slogan, it's a research finding. <a href="/stance">Our full stance, with sources</a>.</p>
 </section>`;
