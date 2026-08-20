@@ -123,4 +123,12 @@ function listFor(tenant) {
     .sort((a, b) => b.support - a.support || String(b.created_at).localeCompare(String(a.created_at)));
 }
 
-module.exports = { propose, support, get, setStatus, remove, mySupport, supportedBy, listFor };
+// Every open priority across the network — the owner's backstop view.
+function listAll() {
+  return Object.values(load().priorities)
+    .filter(p => p.status === 'open')
+    .map(p => ({ id: p.id, tenant: p.tenant, kind: p.kind, title: p.title, why: p.why, created_at: p.created_at, support: Object.keys(p.supporters || {}).length }))
+    .sort((a, b) => String(b.created_at).localeCompare(String(a.created_at)));
+}
+
+module.exports = { propose, support, get, setStatus, remove, mySupport, supportedBy, listFor, listAll };

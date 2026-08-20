@@ -583,7 +583,14 @@ app.get('/owner', requireOwner, (req, res) => {
   if (req.query.created) { try { opts.created = JSON.parse(Buffer.from(req.query.created, 'base64').toString('utf8')); } catch (e) {} }
   if (req.query.minted) { try { opts.minted = JSON.parse(Buffer.from(req.query.minted, 'base64').toString('utf8')); } catch (e) {} }
   if (req.query.error) opts.error = String(req.query.error).slice(0, 200);
-  res.send(ownerConsole(reg, pinsByTenant, require('./questions').all(), opts));
+  res.send(ownerConsole(reg, pinsByTenant, require('./questions').all(), priorities.listAll(), opts));
+});
+
+// Owner is the network-wide backstop: remove any community priority, any county.
+app.post('/owner/priorities/remove', requireOwner, express.urlencoded({ extended: false }), (req, res) => {
+  const id = (req.body && req.body.id) || '';
+  if (priorities.get(id)) { priorities.remove(id); logOwner(req, `removed community priority ${id}`); }
+  res.redirect('/owner');
 });
 
 // Owner moderates any resident question (any scope).
@@ -629,7 +636,7 @@ app.post('/owner/county/create', requireOwner, express.urlencoded({ extended: fa
 // overlay, and chains an admin-edit event by the host's name. See COUNTY-CODE.md.
 const overlay = require('./lib/overlay');
 const chain = require('./lib/chain');
-const { adminDashboard, adminCalendar, adminQuestions, adminHelp, adminCopy } = require('./views/admin');
+const { adminDashboard, adminCalendar, adminQuestions, adminPriorities, adminHelp, adminCopy } = require('./views/admin');
 const submissions = require('./submissions');
 const { COPY_SLOTS } = require('./lib/copyslots');
 
@@ -643,6 +650,19 @@ app.get('/admin', requireAdmin, (req, res) =>
 
 app.get('/admin/calendar', requireAdmin, (req, res) =>
   res.send(adminCalendar(load(req.tenantKey), { saved: req.query.saved === '1' })));
+
+// Host moderates community priorities for THIS county only. Bright-line screening
+// refuses the worst at the door; this is the takedown for anything else.
+app.get('/admin/priorities', requireAdmin, (req, res) =>
+  res.send(adminPriorities(load(req.tenantKey), priorities.listFor(req.access.tenant), { removed: req.query.removed === '1' })));
+
+app.post('/admin/priorities/remove', requireAdmin, express.urlencoded({ extended: false }), (req, res) => {
+  const id = (req.body && req.body.id) || '';
+  const p = priorities.get(id);
+  // Ownership check: a host can only remove a priority in their own county.
+  if (p && p.tenant === req.access.tenant) { priorities.remove(id); logAdminEdit(req, 'removed a community priority'); }
+  res.redirect('/admin/priorities?removed=1');
+});
 
 app.post('/admin/calendar/intro', requireAdmin, express.urlencoded({ extended: false }), (req, res) => {
   const intro = String((req.body && req.body.intro) || '').slice(0, 600);

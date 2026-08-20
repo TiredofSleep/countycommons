@@ -47,6 +47,7 @@ ${republicFrame()}
 <h2>What you can edit</h2>
 <div style="display:flex;gap:10px;flex-wrap:wrap">
   ${tile('/admin/questions', 'Questions', 'Open and close the questions residents vote on. Advisory signal to the body that decides.', true)}
+  ${tile('/admin/priorities', 'Community priorities', 'Review what residents posted to prioritize, and remove anything that shouldn\'t be here.', true)}
   ${tile('/admin/calendar', 'Calendar & community events', 'Add local events, edit the calendar intro. Meeting times come from the sourced record.', true)}
   ${tile('/admin/help', 'Help Finder', 'Add local assistance listings — food, rent, utilities, benefits.', true)}
   ${tile('/admin/copy', 'Page copy', 'Reword your county headline and front-page lines. The disclaimers and the frame stay fixed.', true)}
@@ -177,6 +178,39 @@ ${closed.length ? `<section><h2>Closed <span class="sub">— ${closed.length}</s
   return shell(county, 'Questions', body);
 }
 
+// Community-priorities moderation — the host's backstop. Bright-line screening
+// already refuses candidates, ballot measures, and named officials at the door;
+// this is for anything that slips the screen or simply shouldn't be on the board.
+function adminPriorities(data, items, opts = {}) {
+  const { county } = data;
+  const KIND = { prioritize: ['Prioritize', 'c-ok'], reconsider: ['Take a fresh look', 'c-amb'] };
+  const row = (p) => {
+    const k = KIND[p.kind] || KIND.prioritize;
+    return `
+<div class="issue" style="display:block">
+  <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline">
+    <b>${esc(p.title)}</b><span class="chip ${k[1]}">${esc(k[0])}</span>
+  </div>
+  <p class="src" style="margin:4px 0 6px">${esc(p.why)}</p>
+  <p class="src" style="margin:0 0 8px"><b>${p.support}</b> backing · <a href="/priorities">view on the board</a></p>
+  <form method="POST" action="/admin/priorities/remove" style="display:inline"><input type="hidden" name="id" value="${esc(p.id)}"><button type="submit" style="font-family:var(--mono);font-size:12px;padding:5px 10px;border:1.5px solid var(--dead);color:var(--dead);background:var(--card);cursor:pointer">Remove</button></form>
+</div>`;
+  };
+  const body = `
+<header class="page">
+  <div class="eyebrow">${esc(county.name)} · host admin · priorities</div>
+  <h1>Community priorities</h1>
+  <div class="src">What residents posted for ${esc(county.name)} to lean into or take a fresh look at. Candidate, ballot-measure, and named-official posts are refused automatically — this is your backstop for anything that slips the screen or shouldn't be here. Every removal is stamped in the public record by your name.</div>
+</header>
+${republicFrame()}
+${opts.removed ? `<p class="src" style="color:var(--sourced)"><b>Removed ✓</b> — it's off the board.</p>` : ''}
+<section>
+<h2>On the board <span class="sub">— ${items.length}</span></h2>
+${items.length ? items.map(row).join('') : '<p class="src">No community priorities posted in your county yet.</p>'}
+</section>`;
+  return shell(county, 'Priorities', body);
+}
+
 function adminHelp(data, hostListings, opts = {}) {
   const { county } = data;
   const field = 'font-family:var(--mono);font-size:14px;padding:8px 10px;border:1.5px solid var(--ink);background:var(--paper);color:var(--ink);width:100%;box-sizing:border-box';
@@ -246,4 +280,4 @@ ${opts.saved ? `<p class="src" style="color:var(--sourced)"><b>Saved ✓</b> —
   return shell(county, 'Page copy', body);
 }
 
-module.exports = { adminDashboard, adminCalendar, adminQuestions, adminHelp, adminCopy, modRow };
+module.exports = { adminDashboard, adminCalendar, adminQuestions, adminPriorities, adminHelp, adminCopy, modRow };

@@ -27,8 +27,9 @@ function ownerScopeBadge(q) {
   return `<span class="chip">Local · ${esc(q.tenant || '')}</span>`;
 }
 
-function ownerConsole(reg, pinsByTenant, residentQuestions, opts = {}) {
+function ownerConsole(reg, pinsByTenant, residentQuestions, allPriorities, opts = {}) {
   residentQuestions = residentQuestions || [];
+  allPriorities = allPriorities || [];
   const tenants = Object.entries(reg.tenants);
   const field = 'font-family:var(--mono);font-size:14px;padding:8px 10px;border:1.5px solid var(--ink);background:var(--paper);color:var(--ink);width:100%;box-sizing:border-box';
 
@@ -85,6 +86,17 @@ ${rows}
 <h2>Resident questions across the network <span class="sub">— ${residentQuestions.length}</span></h2>
 <p class="src" style="max-width:64ch">Every question residents proposed, at any level. Candidate, ballot-measure, and named-conduct questions are refused automatically before they reach here. County hosts moderate their own local ones; state and national questions are yours to open, close, or remove.</p>
 ${residentQuestions.length ? residentQuestions.map(q => modRow(q, '/owner/questions', PROMOTE_AT, ownerScopeBadge(q))).join('') : '<p class="src">No resident questions yet.</p>'}
+</section>
+
+<section>
+<h2>Community priorities across the network <span class="sub">— ${allPriorities.length}</span></h2>
+<p class="src" style="max-width:64ch">Every priority residents posted, any county. Candidate, ballot-measure, and named-official posts are refused automatically. Hosts moderate their own county; this is your backstop for all of them.</p>
+${allPriorities.length ? allPriorities.map(p => `
+<div class="issue" style="display:block">
+  <b>${esc(p.title)}</b> <span class="chip ${p.kind === 'reconsider' ? 'c-amb' : 'c-ok'}">${p.kind === 'reconsider' ? 'fresh look' : 'prioritize'}</span> <span class="src">· ${esc(p.tenant)} · ${p.support} backing</span>
+  <p class="src" style="margin:4px 0 6px">${esc(p.why)}</p>
+  <form method="POST" action="/owner/priorities/remove" style="display:inline"><input type="hidden" name="id" value="${esc(p.id)}"><button type="submit" style="font-family:var(--mono);font-size:12px;padding:5px 10px;border:1.5px solid var(--dead);color:var(--dead);background:var(--card);cursor:pointer">Remove</button></form>
+</div>`).join('') : '<p class="src">No community priorities yet.</p>'}
 </section>
 
 <section>
