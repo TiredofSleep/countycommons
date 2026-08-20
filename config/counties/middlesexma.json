@@ -15,8 +15,14 @@
     { "id": "middlesex-da", "name": "Middlesex District Attorney's Office", "kind": "county-agency", "executive": "District Attorney", "website": "https://www.middlesexda.com" }
   ],
   "peer_counties": [],
-  "officials": [],
-  "quorum_court": { "source": "Massachusetts abolished Middlesex County government in 1997; there is no county council or quorum court.", "justices": [] },
+  "officials": [
+    { "office": "Sheriff", "name": "Peter J. Koutoujian", "term_expires": null, "note": "In office since January 2011; runs the Middlesex Jail & House of Correction in Billerica. Funded by the Commonwealth.", "source": "middlesexsheriff.org; mass.gov/info-details/overview-of-the-middlesex-sheriffs-office" },
+    { "office": "District Attorney", "name": "Marian T. Ryan", "term_expires": null, "note": "Middlesex DA since 2013 (a countywide-elected office that predates and survived the 1997 abolition).", "source": "middlesexda.com" },
+    { "office": "Register of Deeds, Middlesex North (Lowell)", "name": "Karen M. Cassella", "term_expires": null, "note": "Took office January 2025, succeeding Richard P. Howe Jr. (register 1995–2024).", "source": "massrods.com/middlesexnorth" },
+    { "office": "Register of Deeds, Middlesex South (Cambridge)", "name": "Maria C. Curtatone", "term_expires": null, "note": "Sworn in January 2013.", "source": "massrods.com/middlesexsouth" },
+    { "office": "Register of Probate", "name": "Tara E. DeCristofaro", "term_expires": null, "note": "Countywide-elected; the Probate & Family Court is a unit of the state Trial Court, with sessions in Cambridge and Lowell.", "source": "Middlesex Probate and Family Court" }
+  ],
+  "quorum_court": { "source": "Massachusetts abolished Middlesex County government in 1997 (Chapter 48 of the Acts of 1997). There is no county council, board of commissioners, or county executive. The only remaining countywide-elected offices are the Sheriff, District Attorney, Register of Probate, Clerk of Courts, and the two Registers of Deeds — none a general-purpose governing body.", "justices": [] },
   "records_portals": [
     { "id": "cthru", "name": "CTHRU — Massachusetts statewide financial transparency", "url": "https://cthru.data.mass.gov" },
     { "id": "mass-budget", "name": "Massachusetts state budget", "url": "https://www.mass.gov/budget" }

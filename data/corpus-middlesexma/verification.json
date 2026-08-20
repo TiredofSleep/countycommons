@@ -1,13 +1,22 @@
 {
-  "run_at": "2026-08-20T04:12:19.143Z",
+  "run_at": "2026-08-20T04:20:10.428Z",
   "corpus_year": 2026,
   "grand_total": 0,
   "summary": {
-    "total_checks": 7,
-    "passed": 7,
+    "total_checks": 8,
+    "passed": 8,
     "failed": 0
   },
   "checks": [
+    {
+      "node": "sheriff",
+      "name": "Middlesex Sheriff's Office",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 79416165,
+      "computed": 79416165,
+      "detail": "2 children sum to the parent total exactly."
+    },
     {
       "node": "__grand_total__",
       "name": "Ordinance grand total",

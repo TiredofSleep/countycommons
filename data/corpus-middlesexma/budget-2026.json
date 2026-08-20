@@ -4,7 +4,7 @@
     "title": "Middlesex County — the money that remains",
     "grand_total": 0,
     "year": 2026,
-    "note": "Massachusetts abolished Middlesex County government in 1997. There is no county budget, no county council, and no county judge. The county-level public money that remains flows two ways — the Middlesex Sheriff's Office, funded by the Commonwealth through the state budget, and the Registries of Deeds, funded by recording fees. The budgets that shape daily life here — police, schools, roads, trash — are set by the cities and towns and by the state, not by the county. This page shows the county-level money that still exists; everything else is a dead end here only until it's ingested from the city, town, and state sources."
+    "note": "Massachusetts abolished Middlesex County government in 1997 (Chapter 48 of the Acts of 1997, approved July 11, 1997) — the county was in fiscal crisis, and its debts and functions were absorbed by the Commonwealth. There is no county budget, no county council, and no county judge. The county-level public money that remains flows two ways: the Middlesex Sheriff's Office, funded by the state, and the Registries of Deeds, funded by recording fees. The budgets that actually shape daily life here — police, schools, roads, trash — are set by the 54 cities and towns and by the state. This page shows the county-level money that still exists; the city layer (Cambridge, Lowell, and more) is being ingested next."
   },
   "nodes": [
     {
@@ -19,22 +19,53 @@
       "source": null,
       "docket_ref": null,
       "status": "dead_end",
-      "note": "There is no county appropriation. Middlesex County government was abolished on July 11, 1997; its functions passed to the Commonwealth of Massachusetts. A dead end means \"not yet ingested and navigable\" — here it means the thing itself no longer exists at the county level, which is the honest answer."
+      "note": "There is no county appropriation. Middlesex County government was abolished on July 11, 1997; its functions passed to the Commonwealth of Massachusetts. Here a dead end means the thing itself no longer exists at the county level — the honest answer, not a gap in our records."
     },
+
     {
       "id": "sheriff",
       "parent": null,
-      "name": "Middlesex Sheriff's Office (state-funded)",
-      "code": null,
-      "amount": null,
+      "name": "Middlesex Sheriff's Office",
+      "code": "8910",
+      "amount": 79416165,
       "year": 2026,
       "layer": "appropriation",
       "section": "adjacent",
-      "source": null,
+      "source": { "doc": "mass-budget-fy26-sheriff", "page": null },
+      "docket_ref": null,
+      "children_complete": true,
+      "status": "sourced",
+      "note": "The one real county-level budget in Middlesex. The Sheriff's Office runs the Middlesex Jail & House of Correction in Billerica and is funded by the Commonwealth through the state budget, not by any county tax — the 4th-largest of Massachusetts's 14 sheriff's offices. Figures are FY2026 enacted (a hair below FY2025's $79,423,908). A separate federal grant, line 8910-0174, adds money outside the state total."
+    },
+    {
+      "id": "sheriff-ops",
+      "parent": "sheriff",
+      "name": "Sheriff's Department — operations",
+      "code": "8910-0107",
+      "amount": 77418880,
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "adjacent",
+      "source": { "doc": "mass-budget-fy26-sheriff", "page": null },
+      "docket_ref": null,
+      "status": "sourced",
+      "note": "The main operating appropriation for the Middlesex Sheriff's Department, FY2026 enacted."
+    },
+    {
+      "id": "sheriff-other",
+      "parent": "sheriff",
+      "name": "Retained-revenue & specialized-unit lines",
+      "code": "8910 (0450 / 1100 / 1101)",
+      "amount": 1997285,
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "adjacent",
+      "source": { "doc": "mass-budget-fy26-sheriff", "page": null },
       "docket_ref": null,
       "status": "partial",
-      "note": "The Sheriff's Office runs the county jail and house of correction and is funded by the Commonwealth through the annual state budget (line item around 8910). The exact appropriation will be ingested from the Massachusetts state budget and CTHRU — the one real county-level budget number for Middlesex."
+      "note": "The FY2026 total minus the operations line — the Mental Health Stabilization Unit (8910-1101), Community Programs retained revenue (8910-0450), and Prison Industries retained revenue (8910-1100). In FY2025 these were $1,822,285, $100,000, and $75,000; shown here as their FY2026 combined total pending the line-by-line FY2026 split."
     },
+
     {
       "id": "registries",
       "parent": null,
@@ -45,9 +76,9 @@
       "layer": "appropriation",
       "section": "adjacent",
       "source": null,
-      "docket_ref": null,
+      "docket_ref": 3,
       "status": "partial",
-      "note": "The Middlesex North (Lowell) and South (Cambridge) Registries of Deeds record property transactions and are funded by the fees they collect. Their revenue and operating figures will be ingested from the Commonwealth's records."
+      "note": "The Middlesex North (Lowell) and South (Cambridge) Registries of Deeds record property transactions and run on the fees they collect. Their revenue and operating figures are the next county-level pull — from the Registries and the state Comptroller."
     }
   ]
 }
