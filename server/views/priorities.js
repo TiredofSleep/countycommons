@@ -16,10 +16,58 @@ function govBody(county) {
   return (j && j.governing_body) || 'quorum court';
 }
 
+// The accountability loop, made visible. A priority's phase and the honest
+// count of days it has waited — the silence is the pressure.
+const PHASE = {
+  raised:    { label: 'Raised by residents', cls: 'c-part', mark: '•' },
+  delivered: { label: 'Carried to the county', cls: 'c-amb', mark: '→' },
+  answered:  { label: 'Answered', cls: 'c-amb', mark: '↩' },
+  acted:     { label: 'Acted on', cls: 'c-ok', mark: '✓' }
+};
+function daysSince(d) {
+  const then = new Date(String(d) + 'T00:00:00Z');
+  if (isNaN(then)) return 0;
+  return Math.max(0, Math.floor((Date.now() - then.getTime()) / 86400000));
+}
+function srcLink(ev) {
+  if (!ev || !ev.source) return '';
+  return ev.source.url
+    ? ` <a href="${esc(ev.source.url)}" rel="noopener">source: ${esc(ev.source.label || 'link')}</a>`
+    : ` <span class="src">(source: ${esc(ev.source.label)})</span>`;
+}
+function phaseBadge(phase) {
+  const ph = PHASE[phase] || PHASE.raised;
+  return `<span class="chip ${ph.cls}" style="white-space:nowrap">${ph.mark} ${esc(ph.label)}</span>`;
+}
+// One-line current status under a card: the newest event, or the waiting count.
+function statusLine(p) {
+  const last = (p.timeline && p.timeline.length) ? p.timeline[p.timeline.length - 1] : null;
+  if (p.phase === 'acted' && last) {
+    return `<p class="src" style="margin:6px 0 0;color:var(--sourced)"><b>✓ Acted on${last.at ? ` (${esc(last.at)})` : ''}:</b> ${esc(last.note)}${srcLink(last)}</p>`;
+  }
+  if ((p.phase === 'delivered' || p.phase === 'answered') && last) {
+    const d = daysSince(last.at);
+    const wait = p.phase === 'delivered' ? ` · <b>${d}</b> day${d === 1 ? '' : 's'} awaiting an answer` : '';
+    return `<p class="src" style="margin:6px 0 0;color:var(--accent)">${PHASE[p.phase].mark} <b>${esc(PHASE[p.phase].label)}${last.at ? ` (${esc(last.at)})` : ''}:</b> ${esc(last.note)}${srcLink(last)}${wait}</p>`;
+  }
+  return '';
+}
+// The full trail, newest last — for the outcomes page.
+function trailHtml(p) {
+  if (!p.timeline || !p.timeline.length) return '<p class="src" style="margin:4px 0 0">Raised by residents — not yet carried to the county.</p>';
+  return `<div style="margin:6px 0 0;border-left:2px solid var(--rule);padding-left:12px">${
+    p.timeline.map(ev => {
+      const ph = PHASE[ev.stage] || {};
+      return `<p class="src" style="margin:4px 0"><b>${esc(ev.at || '')} · ${esc(ph.label || ev.stage)}</b>${ev.note ? ' — ' + esc(ev.note) : ''}${srcLink(ev)}${ev.by ? ` <span style="opacity:.7">— recorded by ${esc(ev.by)}</span>` : ''}</p>`;
+    }).join('')
+  }</div>`;
+}
+
 function prioritiesPage(data, items, opts) {
   const o = opts || {};
   const { county } = data;
   const body_name = govBody(county);
+  const threshold = county.delivery_threshold || null;
 
   // Budget areas for the optional "what part of the county?" link — grounds a
   // priority in what people can actually see on the money trail.
@@ -56,10 +104,14 @@ function prioritiesPage(data, items, opts) {
 <div class="issue" style="display:block">
   <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline">
     <b style="font-size:16px">${esc(p.title)}</b>
-    <span class="chip ${k.cls}" style="white-space:nowrap">${k.mark} ${esc(k.label)}</span>
+    <span style="white-space:nowrap"><span class="chip ${k.cls}">${k.mark} ${esc(k.label)}</span> ${phaseBadge(p.phase)}</span>
   </div>
   <p class="src" style="margin:6px 0 2px">${esc(p.why)}</p>
   ${area ? `<p class="src" style="margin:2px 0">On the money trail: <a href="/line/${esc(p.node_ref)}">${esc(area)}</a>.</p>` : ''}
+  ${statusLine(p)}
+  ${threshold && p.phase === 'raised' ? (p.support >= threshold
+    ? `<p class="src" style="margin:6px 0 0;color:var(--sourced)">✓ <b>${threshold} reached</b> — ready to carry to the county's officials.</p>`
+    : `<p class="src" style="margin:6px 0 0"><b>${p.support}</b> of <b>${threshold}</b> — at ${threshold} residents, this is carried to the officials. <span style="opacity:.75">(counts are unverified for now; they become verified residents when the tiers ship)</span></p>`) : ''}
   <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center;margin-top:8px">
     <span class="src"><b>${p.support}</b> ${p.support === 1 ? 'person is' : 'people are'} behind this${o.mine && o.mine.has(p.id) ? ' — <span style="color:var(--sourced)">including you</span>' : ''}</span>
     ${o.mine && o.mine.has(p.id) ? '' : `<details style="margin:0">
@@ -88,7 +140,7 @@ function prioritiesPage(data, items, opts) {
 
 <div class="issue" style="display:block;border-left:3px solid var(--accent)">
   <div class="eyebrow" style="color:var(--accent)">how this works</div>
-  <p class="src" style="margin:4px 0 0">Post what you want prioritized — or questioned — and why. Others back what they agree with, so the strongest-felt priorities rise to the top on their own. This ranked list is the community's voice to the <b>${esc(body_name)}</b>. Their job is to fit it into the budget they were elected to write; ours is to make it impossible to miss — and, once outcomes are tracked, to show whether they did.</p>
+  <p class="src" style="margin:4px 0 0">Post what you want prioritized — or questioned — and why. Others back what they agree with, so the strongest-felt priorities rise to the top on their own.${threshold ? ` When one reaches <b>${threshold}</b> residents, it's formally carried to the <b>${esc(body_name)}</b> — the officials you elected to write the budget.` : ` The strongest are carried to the <b>${esc(body_name)}</b>.`} Their job is to fit it in; ours is to make it impossible to miss — and to track <a href="/outcomes">what came of it</a>.</p>
 </div>
 
 ${o.proposed ? `<div class="issue" style="display:block;border-color:var(--sourced);background:var(--sourced-bg)"><b>Posted.</b> <span class="src">It's on the board below, and you're its first backer. Share it — this works when neighbors pile onto what they share.</span></div>` : ''}
@@ -110,4 +162,4 @@ ${list}
   });
 }
 
-module.exports = { prioritiesPage };
+module.exports = { prioritiesPage, PHASE, phaseBadge, statusLine, trailHtml, daysSince, srcLink, govBody };

@@ -9,6 +9,7 @@ const NAV = [
   ['/help', 'Find help'],
   ['/budget', 'Money trail'],
   ['/priorities', 'Priorities'],
+  ['/outcomes', 'What came of it'],
   ['/issues', 'Open questions'],
   ['/calendar', 'Calendar'],
   ['/participate', 'Get involved'],

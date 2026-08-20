@@ -563,6 +563,10 @@ app.post('/priorities/:id/support', writeLimit, express.urlencoded({ extended: f
   res.redirect('/priorities?supported=1');
 });
 
+// The accountability loop, in public: what the county did with each priority.
+const { outcomesPage } = require('./views/outcomes');
+app.get('/outcomes', (req, res) => res.send(outcomesPage(load(req.tenantKey), priorities.listFor(req.tenantKey))));
+
 // ---- owner console (owner code; create counties, mint PINs) ----
 const { ownerConsole } = require('./views/owner');
 const { createCounty } = require('./lib/scaffold');
@@ -654,7 +658,8 @@ app.get('/admin/calendar', requireAdmin, (req, res) =>
 // Host moderates community priorities for THIS county only. Bright-line screening
 // refuses the worst at the door; this is the takedown for anything else.
 app.get('/admin/priorities', requireAdmin, (req, res) =>
-  res.send(adminPriorities(load(req.tenantKey), priorities.listFor(req.access.tenant), { removed: req.query.removed === '1' })));
+  res.send(adminPriorities(load(req.tenantKey), priorities.listFor(req.access.tenant),
+    { removed: req.query.removed === '1', recorded: req.query.recorded === '1' })));
 
 app.post('/admin/priorities/remove', requireAdmin, express.urlencoded({ extended: false }), (req, res) => {
   const id = (req.body && req.body.id) || '';
@@ -662,6 +667,27 @@ app.post('/admin/priorities/remove', requireAdmin, express.urlencoded({ extended
   // Ownership check: a host can only remove a priority in their own county.
   if (p && p.tenant === req.access.tenant) { priorities.remove(id); logAdminEdit(req, 'removed a community priority'); }
   res.redirect('/admin/priorities?removed=1');
+});
+
+// Record an accountability-loop step (delivered / answered / acted), cited.
+app.post('/admin/priorities/outcome', requireAdmin, express.urlencoded({ extended: false }), (req, res) => {
+  const b = req.body || {};
+  const p = priorities.get(b.id || '');
+  if (p && p.tenant === req.access.tenant) {
+    priorities.addOutcome(b.id, {
+      stage: b.stage, at: b.at, note: b.note,
+      source: { url: b.source_url, label: b.source_label }, by: req.access.name || 'host'
+    });
+    logAdminEdit(req, `recorded a priority outcome (${String(b.stage || '').slice(0, 20)})`);
+  }
+  res.redirect('/admin/priorities?recorded=1');
+});
+
+app.post('/admin/priorities/outcome/undo', requireAdmin, express.urlencoded({ extended: false }), (req, res) => {
+  const id = (req.body && req.body.id) || '';
+  const p = priorities.get(id);
+  if (p && p.tenant === req.access.tenant) { priorities.undoOutcome(id); logAdminEdit(req, 'undid a priority outcome'); }
+  res.redirect('/admin/priorities');
 });
 
 app.post('/admin/calendar/intro', requireAdmin, express.urlencoded({ extended: false }), (req, res) => {

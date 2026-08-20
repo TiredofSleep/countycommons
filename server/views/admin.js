@@ -178,32 +178,72 @@ ${closed.length ? `<section><h2>Closed <span class="sub">— ${closed.length}</s
   return shell(county, 'Questions', body);
 }
 
-// Community-priorities moderation — the host's backstop. Bright-line screening
-// already refuses candidates, ballot measures, and named officials at the door;
-// this is for anything that slips the screen or simply shouldn't be on the board.
+// Community-priorities control surface for the host: moderate (remove),
+// record the accountability trail (delivered → answered → acted, cited), and —
+// when a priority reaches the delivery threshold — a one-click prepared notice
+// to the officials. Bright-line screening already refuses candidates, ballot
+// measures, and named officials at the door; this is everything after.
 function adminPriorities(data, items, opts = {}) {
   const { county } = data;
+  const { PHASE } = require('./priorities');
+  const threshold = county.delivery_threshold || null;
+  const officials = (county.officials || []).filter(o => o.email).map(o => o.email);
   const KIND = { prioritize: ['Prioritize', 'c-ok'], reconsider: ['Take a fresh look', 'c-amb'] };
+  const field = 'font-family:var(--mono);font-size:13px;padding:7px 9px;border:1.5px solid var(--ink);background:var(--paper);color:var(--ink);width:100%;box-sizing:border-box';
+  const smallBtn = (color) => `font-family:var(--mono);font-size:12px;padding:5px 10px;border:1.5px solid ${color};color:${color};background:var(--card);cursor:pointer`;
+
+  const stageOpts = [['delivered', 'Carried to the county'], ['answered', 'Answered by an official / the body'], ['acted', 'Acted on — something happened']]
+    .map(([v, l]) => `<option value="${v}">${esc(l)}</option>`).join('');
+
+  const trail = (p) => (p.timeline && p.timeline.length)
+    ? `<div style="border-left:2px solid var(--rule);padding-left:10px;margin:6px 0">${p.timeline.map(ev =>
+        `<p class="src" style="margin:3px 0"><b>${esc(ev.at || '')} · ${esc((PHASE[ev.stage] || {}).label || ev.stage)}</b>${ev.note ? ' — ' + esc(ev.note) : ''}${ev.source ? (ev.source.url ? ` <a href="${esc(ev.source.url)}" rel="noopener">source</a>` : ` (source: ${esc(ev.source.label)})`) : ''}</p>`).join('')}</div>`
+    : '';
+
   const row = (p) => {
     const k = KIND[p.kind] || KIND.prioritize;
+    const ph = PHASE[p.phase] || PHASE.raised;
+    const ready = threshold && p.phase === 'raised' && p.support >= threshold;
+    const body = `${p.title}\n\n${p.why}\n\nBacked by ${p.support} residents of ${county.name} via ${county.platform_name}. This is an advisory signal from residents — not a binding vote. The county writes the budget; this is the community asking you to weigh it.`;
+    const mailto = officials.length
+      ? `mailto:${officials.join(',')}?subject=${encodeURIComponent('Community priority from ' + county.name + ' residents')}&body=${encodeURIComponent(body)}`
+      : '';
     return `
-<div class="issue" style="display:block">
+<div class="issue" style="display:block${ready ? ';border-left:3px solid var(--sourced)' : ''}">
   <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline">
-    <b>${esc(p.title)}</b><span class="chip ${k[1]}">${esc(k[0])}</span>
+    <b>${esc(p.title)}</b><span><span class="chip ${k[1]}">${esc(k[0])}</span> <span class="chip ${ph.cls}">${ph.mark} ${esc(ph.label)}</span></span>
   </div>
   <p class="src" style="margin:4px 0 6px">${esc(p.why)}</p>
-  <p class="src" style="margin:0 0 8px"><b>${p.support}</b> backing · <a href="/priorities">view on the board</a></p>
-  <form method="POST" action="/admin/priorities/remove" style="display:inline"><input type="hidden" name="id" value="${esc(p.id)}"><button type="submit" style="font-family:var(--mono);font-size:12px;padding:5px 10px;border:1.5px solid var(--dead);color:var(--dead);background:var(--card);cursor:pointer">Remove</button></form>
+  <p class="src" style="margin:0 0 4px"><b>${p.support}</b> backing${threshold ? (p.support >= threshold ? ' · <b style="color:var(--sourced)">threshold reached</b>' : ` · ${threshold - p.support} more to reach ${threshold}`) : ''} · <a href="/priorities">on the board</a></p>
+  ${ready ? `<p class="src" style="color:var(--sourced);margin:4px 0"><b>Ready to carry to the county.</b> ${mailto ? `<a href="${mailto}">Open a prepared email to the officials →</a>, send it, then` : 'Notify the officials, then'} record it below as "Carried to the county."</p>` : ''}
+  ${trail(p)}
+  <details style="margin:8px 0 0"><summary style="cursor:pointer;font-size:13px;color:var(--accent)">Record what happened</summary>
+    <form method="POST" action="/admin/priorities/outcome" style="margin-top:8px;display:flex;flex-direction:column;gap:8px;max-width:560px">
+      <input type="hidden" name="id" value="${esc(p.id)}">
+      <label class="src">Step<select name="stage" style="${field};margin-top:3px">${stageOpts}</select></label>
+      <label class="src">Date<input name="at" type="date" style="${field};margin-top:3px"></label>
+      <label class="src">What happened<input name="note" maxlength="400" required placeholder="e.g. Presented at the Sept 8 quorum court meeting" style="${field};margin-top:3px"></label>
+      <label class="src">Source link — minutes, agenda, news (best)<input name="source_url" maxlength="300" placeholder="https://…" style="${field};margin-top:3px"></label>
+      <label class="src">…or a plain source reference<input name="source_label" maxlength="120" placeholder="Sept 2026 quorum court minutes, p.4" style="${field};margin-top:3px"></label>
+      <button type="submit" style="font-family:var(--mono);font-size:13px;padding:8px 14px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);cursor:pointer;align-self:flex-start">Record it</button>
+    </form>
+    ${p.timeline && p.timeline.length ? `<form method="POST" action="/admin/priorities/outcome/undo" style="margin-top:6px"><input type="hidden" name="id" value="${esc(p.id)}"><button type="submit" style="${smallBtn('var(--ink-soft)')}">Undo last step</button></form>` : ''}
+  </details>
+  <div style="margin-top:8px"><form method="POST" action="/admin/priorities/remove" style="display:inline"><input type="hidden" name="id" value="${esc(p.id)}"><button type="submit" style="${smallBtn('var(--dead)')}">Remove from board</button></form></div>
 </div>`;
   };
+
+  const ready = threshold ? items.filter(p => p.phase === 'raised' && p.support >= threshold) : [];
   const body = `
 <header class="page">
   <div class="eyebrow">${esc(county.name)} · host admin · priorities</div>
   <h1>Community priorities</h1>
-  <div class="src">What residents posted for ${esc(county.name)} to lean into or take a fresh look at. Candidate, ballot-measure, and named-official posts are refused automatically — this is your backstop for anything that slips the screen or shouldn't be here. Every removal is stamped in the public record by your name.</div>
+  <div class="src">What residents posted for ${esc(county.name)} to lean into or take a fresh look at — and your control surface for the accountability loop. ${threshold ? `At <b>${threshold}</b> backers a priority is ready to carry to the officials; you send it and record each step here.` : 'Record what the county does with each one here.'} Candidate, ballot-measure, and named-official posts are refused automatically. Every action is stamped in the public record by your name.</div>
 </header>
 ${republicFrame()}
 ${opts.removed ? `<p class="src" style="color:var(--sourced)"><b>Removed ✓</b> — it's off the board.</p>` : ''}
+${opts.recorded ? `<p class="src" style="color:var(--sourced)"><b>Recorded ✓</b> — it's on <a href="/outcomes">the outcomes page</a> now, cited and dated.</p>` : ''}
+${ready.length ? `<div class="issue" style="display:block;border-color:var(--sourced)"><b style="color:var(--sourced)">${ready.length} ready to carry to the county</b><p class="src" style="margin:4px 0 0">These passed ${threshold} backers. Send them to the officials, then record it below.</p></div>` : ''}
 <section>
 <h2>On the board <span class="sub">— ${items.length}</span></h2>
 ${items.length ? items.map(row).join('') : '<p class="src">No community priorities posted in your county yet.</p>'}

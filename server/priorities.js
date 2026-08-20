@@ -94,6 +94,52 @@ function support(participant, id, why) {
   return p;
 }
 
+// The accountability loop. A priority moves: raised (residents post it) →
+// delivered (someone carries it to the body that decides) → answered (an
+// official/body responds) → acted (something actually happens). Each step is a
+// dated, CITED event recorded by the host — the platform never invents an
+// outcome, it records what officials did with a source, like every number here.
+// The honest teeth: when a delivered ask sits unanswered, the days are shown.
+const STAGES = new Set(['delivered', 'answered', 'acted']);
+
+function phaseOf(p) {
+  return (p.timeline && p.timeline.length) ? p.timeline[p.timeline.length - 1].stage : 'raised';
+}
+
+function addOutcome(id, { stage, at, note, source, by }) {
+  if (!STAGES.has(stage)) return { error: 'bad-stage' };
+  const s = load();
+  const p = s.priorities[id];
+  if (!p || p.status !== 'open') return { error: 'not-found' };
+  p.timeline = p.timeline || [];
+  const ev = {
+    stage,
+    at: (String(at || '').match(/^\d{4}-\d{2}-\d{2}$/) ? at : new Date().toISOString().slice(0, 10)),
+    note: String(note || '').trim().slice(0, 400),
+    by: String(by || '').slice(0, 80) || null
+  };
+  const url = String((source && source.url) || '').trim().slice(0, 300);
+  const label = String((source && source.label) || '').trim().slice(0, 120);
+  // A cited source is the whole point — a link, or at least a plain reference.
+  if (url && /^https?:\/\//.test(url)) ev.source = { url, label: label || url.replace(/^https?:\/\/(www\.)?/, '') };
+  else if (label) ev.source = { label };
+  p.timeline.push(ev);
+  chain.append('priority-outcome', { id, stage });
+  save(s);
+  return { ok: true };
+}
+
+// Undo the most recent outcome event (mis-entry). Host/owner only.
+function undoOutcome(id) {
+  const s = load();
+  const p = s.priorities[id];
+  if (!p || !p.timeline || !p.timeline.length) return { error: 'nothing' };
+  p.timeline.pop();
+  chain.append('priority-outcome-undo', { id });
+  save(s);
+  return { ok: true };
+}
+
 function get(id) { return load().priorities[id] || null; }
 function setStatus(id, status) { const s = load(); if (s.priorities[id]) { s.priorities[id].status = status; save(s); } }
 function remove(id) { const s = load(); if (s.priorities[id]) { delete s.priorities[id]; save(s); } }
@@ -118,7 +164,8 @@ function listFor(tenant) {
     .map(p => ({
       id: p.id, kind: p.kind, title: p.title, why: p.why, node_ref: p.node_ref, created_at: p.created_at,
       support: Object.keys(p.supporters || {}).length,
-      reasons: Object.values(p.supporters || {}).filter(x => x.why).map(x => x.why)
+      reasons: Object.values(p.supporters || {}).filter(x => x.why).map(x => x.why),
+      timeline: p.timeline || [], phase: phaseOf(p)
     }))
     .sort((a, b) => b.support - a.support || String(b.created_at).localeCompare(String(a.created_at)));
 }
@@ -127,8 +174,8 @@ function listFor(tenant) {
 function listAll() {
   return Object.values(load().priorities)
     .filter(p => p.status === 'open')
-    .map(p => ({ id: p.id, tenant: p.tenant, kind: p.kind, title: p.title, why: p.why, created_at: p.created_at, support: Object.keys(p.supporters || {}).length }))
+    .map(p => ({ id: p.id, tenant: p.tenant, kind: p.kind, title: p.title, why: p.why, created_at: p.created_at, support: Object.keys(p.supporters || {}).length, phase: phaseOf(p), timeline: p.timeline || [] }))
     .sort((a, b) => String(b.created_at).localeCompare(String(a.created_at)));
 }
 
-module.exports = { propose, support, get, setStatus, remove, mySupport, supportedBy, listFor, listAll };
+module.exports = { propose, support, addOutcome, undoOutcome, phaseOf, get, setStatus, remove, mySupport, supportedBy, listFor, listAll };
