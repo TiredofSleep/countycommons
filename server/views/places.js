@@ -52,16 +52,29 @@ function cityBudgetPage(data, city) {
   const { county } = data;
   const m = city.meta;
   const depts = (city.departments || []).slice().sort((a, b) => b.amount - a.amount);
-  const gf = m.general_fund || depts.reduce((a, d) => a + d.amount, 0);
+  // The headline total the departments foot to — a city may report on a
+  // General-Fund basis (Cambridge) or an all-funds basis (Lowell); each city
+  // file names its own basis so we never mix them or mislabel.
+  const total = m.total || m.general_fund || depts.reduce((a, d) => a + d.amount, 0);
+  const totalLabel = m.total_label || 'General Fund';
   const max = depts.reduce((a, d) => Math.max(a, d.amount), 1);
   const check = depts.reduce((a, d) => a + d.amount, 0);
-  const foots = Math.round(check) === Math.round(gf);
+  const foots = Math.round(check) === Math.round(total);
+  const hasOther = depts.some(d => /^Other\b/.test(d.name));
+
+  const fundsChips = (m.funds && m.funds.length)
+    ? m.funds.map(f => `<span class="src">${esc(f.label)} <b>${cap(f.amount)}</b></span>`).join(' · ')
+    : [
+        `General Fund <b>${cap(m.general_fund)}</b>`,
+        m.water_fund ? `Water (enterprise) ${cap(m.water_fund)}` : '',
+        m.capital ? `Capital ${cap(m.capital)}` : ''
+      ].filter(Boolean).map(s => `<span class="src">${s}</span>`).join(' · ');
 
   const bar = (d) => `
 <div class="issue" style="display:block">
   <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline">
     <b>${esc(d.name)}</b>
-    <span style="white-space:nowrap"><a class="amt" href="${esc(m.source.url)}" rel="noopener" title="${esc(m.source.title)}${m.source.page ? ', ' + m.source.page : ''}">${cap(d.amount)}</a> <span class="src">· ${pctOf(d.amount, gf)}%</span></span>
+    <span style="white-space:nowrap"><a class="amt" href="${esc(m.source.url)}" rel="noopener" title="${esc(m.source.title)}${m.source.page ? ', ' + m.source.page : ''}">${cap(d.amount)}</a> <span class="src">· ${pctOf(d.amount, total)}%</span></span>
   </div>
   ${d.what ? `<p class="src" style="margin:4px 0 6px">${esc(d.what)}</p>` : ''}
   <div style="background:var(--rule);border-radius:2px;height:9px;overflow:hidden"><div style="width:${pctOf(d.amount, max).toFixed(1)}%;height:100%;background:var(--accent)"></div></div>
@@ -73,20 +86,18 @@ function cityBudgetPage(data, city) {
 <header class="page">
   <div class="eyebrow">${esc(m.city)}, ${esc(county.state)} · ${esc(m.fiscal_year)} adopted budget${m.kind ? ' · ' + esc(m.kind) : ''}</div>
   <h1>${esc(m.city)} — the money trail</h1>
-  <div class="total"><a class="amt" href="${esc(m.source.url)}" rel="noopener">${cap(gf)}</a></div>
-  <div class="src">${esc(m.note || '')} Click any number to open the source. ${foots ? '<b>The departments add up to the General Fund total exactly.</b>' : ''}</div>
+  <div class="total"><a class="amt" href="${esc(m.source.url)}" rel="noopener">${cap(total)}</a></div>
+  <div class="src">${esc(m.note || '')} Click any number to open the source. ${foots ? `<b>The pieces add up to the ${esc(totalLabel)} total exactly.</b>` : ''}</div>
   <div class="crumb" style="margin-top:8px"><a href="/places">← all Middlesex cities & towns</a> · <a href="/budget">the county page</a></div>
 </header>
 
 <div class="bar" style="gap:14px;flex-wrap:wrap">
-  <span class="src">General Fund <b>${cap(m.general_fund)}</b></span>
-  ${m.water_fund ? `<span class="src">· Water (enterprise) ${cap(m.water_fund)}</span>` : ''}
-  ${m.capital ? `<span class="src">· Capital ${cap(m.capital)}</span>` : ''}
+  ${fundsChips}
   ${m.population ? `<span class="src">· ${m.population.toLocaleString('en-US')} residents (2020)</span>` : ''}
 </div>
 
 <section>
-<h2>Where the General Fund goes <span class="sub">— ${esc(m.fiscal_year)}, by department</span></h2>
+<h2>Where the money goes <span class="sub">— ${esc(m.fiscal_year)}, ${esc(totalLabel)}</span></h2>
 ${depts.map(bar).join('')}
 </section>
 
@@ -97,12 +108,12 @@ ${(m.facts && m.facts.length) ? `<section>
 
 <section>
 <h2>Where these numbers come from</h2>
-<p class="src">Every figure is from the <a href="${esc(m.source.url)}" rel="noopener">${esc(m.source.title)}</a>${m.source.page ? ` (${esc(m.source.page)})` : ''}${m.adopted ? `, adopted ${esc(m.adopted)}` : ''}. ${m.source.portal ? `${esc(m.city)} also runs an <a href="${esc(m.source.portal)}" rel="noopener">interactive open-budget portal</a>. ` : ''}This is ${esc(m.city)}'s own budget — set by ${esc(m.governing_body || 'the city')}, not by the county (which no longer governs). The "Other" line is the General Fund total minus the departments shown, so the tree still adds up to the dollar.</p>
+<p class="src">Every figure is from the <a href="${esc(m.source.url)}" rel="noopener">${esc(m.source.title)}</a>${m.source.page ? ` (${esc(m.source.page)})` : ''}${m.adopted ? `, adopted ${esc(m.adopted)}` : ''}. ${m.source.portal ? `${esc(m.city)} also runs an <a href="${esc(m.source.portal)}" rel="noopener">interactive open-budget portal</a>. ` : ''}This is ${esc(m.city)}'s own budget — set by ${esc(m.governing_body || 'the city')}, not by the county (which no longer governs).${hasOther ? ' The "Other" line is the total minus the pieces shown, so the tree still adds up to the dollar.' : ''}</p>
 </section>`;
 
   return layout({
     title: `${m.city} budget — ${county.platform_name}`, current: '/places', body, county,
-    description: `${m.city}, ${county.state}'s ${m.fiscal_year} adopted budget, department by department — every figure sourced to the adopted budget book.`
+    description: `${m.city}, ${county.state}'s ${m.fiscal_year} adopted budget, by department — every figure sourced to the adopted budget book.`
   });
 }
 
