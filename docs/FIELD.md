@@ -1,14 +1,15 @@
 # Where County Commons sits in the field
 
 An honest map of the civic-democracy field and where this platform stands in it.
-Written to keep us clear-eyed: to name what we do better than anyone, what we
-only sketch, and what we leave to others on purpose. The companion public page
-is `/kindred` (the organizations themselves, linked by method not by cause).
+Written to keep us clear-eyed: to name what we do well, what we only sketch, and
+what we leave to others on purpose. The companion public page is `/kindred` (the
+organizations themselves, linked by method not by cause).
 
-The one-line verdict: **on transparency we are a proper synthesis of the field
-and, at county-budget depth, ahead of it. On voice and deliberation we are early
-by design. We are a genuine _integrator_ — the fusion is the innovation — but we
-are not yet a synthesis of the deliberation half of the field.**
+The one-line verdict: **on transparency we do the county-budget work about as
+thoroughly as we've seen anywhere. On voice and deliberation we are early, by
+design. The uncommon part is the fusion — provenance, privacy, and four-channel
+access in one county-scaled stack — but we are not yet a synthesis of the
+deliberation half of the field.**
 
 ## The field, by function
 
@@ -18,7 +19,7 @@ honest way to answer "are we a synthesis?"
 
 | Function | Who does it best | Where we stand |
 |---|---|---|
-| County money/budget transparency | (no one at this depth) | **Exceeds.** Every dollar cited to a source page, cross-footed as a publication gate, vendors traced, audits mined, gaps named. |
+| County money/budget transparency | (few go to this depth) | **As deep as we've found.** Every dollar cited to a source page, cross-footed as a publication gate, vendors traced, audits mined, gaps named. |
 | Legislation & records | Open States, GovTrack, MuckRock, RCFP | **Synthesis by reference.** We link them and ship our own FOIA kit; we do not track bills. A deep vertical, not a broad horizontal. |
 | Opinion-gathering / consensus | Polis, Consider.it | **Thin.** Yes/no polling + resident-proposed questions. No consensus-mapping, no free-text weighing yet. |
 | Participatory budgeting | Decidim, CONSUL | **Absent — the sharpest gap.** We show the budget; we don't let residents allocate it. We already hold the data this needs. |
@@ -26,10 +27,10 @@ honest way to answer "are we a synthesis?"
 | Elections / candidates | Ballotpedia | **Excluded by charter.** A bright line, on purpose. |
 | Method education / how-to | NCSL, Ballotpedia, state offices | **Synthesis by reference** (`/kindred`) plus our own records kit. |
 
-## Where we are more than a synthesis
+## What's uncommon here
 
-Most of those organizations do one thing. Our actual contribution is the fusion,
-plus a handful of properties the field rarely has:
+Most of those organizations do one thing well. What's less common is doing them
+together, with a handful of properties the field rarely combines:
 
 - **Provenance on every number** — clickable to source page and file hash. Most
   transparency sites cite nothing at that grain; we treat an uncited number as a
@@ -86,10 +87,10 @@ of refusals:
 
 ## Strategic read
 
-We have built the transparency half to a standard the field does not match at the
-county level, and wrapped it in an accessibility-and-privacy architecture that is
-rarer still. The deliberation half is intentionally early. If "synthesis of the
-field" is the goal, the frontier is exactly there — and participatory budgeting
-is the first step onto it, because it is the one place where our strongest asset
-(the sourced budget) and the field's strongest unclaimed method (constrained
-collective allocation) are the same object.
+The transparency half is built out and thorough at the county level, wrapped in
+an accessibility-and-privacy architecture that isn't common. The deliberation
+half is intentionally early. If "synthesis of the field" is the goal, the
+frontier is exactly there — and participatory budgeting is the first step onto
+it, because it is the one place where our strongest asset (the sourced budget)
+and the field's strongest unclaimed method (constrained collective allocation)
+are the same object.
