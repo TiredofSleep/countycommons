@@ -58,8 +58,8 @@ the republic," compute-but-never-advocate, no verdicts):
 1. **Participatory budgeting** — the highest-leverage additive move. We already
    have the budget tree; letting residents allocate a pot across it, under a
    real tradeoff constraint, turns a wishlist poll into a considered signal. Fits
-   the charter cleanly: it is advice to the quorum court, not binding money. Full
-   design in [`PARTICIPATORY-BUDGETING.md`](PARTICIPATORY-BUDGETING.md).
+   the charter cleanly: it is advice to the quorum court, not binding money. The
+   full design sketch lives in the code repository (`docs/PARTICIPATORY-BUDGETING.md`).
 2. **Consensus-mapping (Polis-style)** — already on the roadmap (M7). Turns
    "42% yes" into "here is _where_ people actually agree," which is more useful
    and less divisive. Evaluate embedding open-source Polis before building our own.

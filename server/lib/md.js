@@ -1,6 +1,7 @@
-// Minimal markdown → HTML for rendering the charter documents (SECURITY.md,
-// NEVER.md) as public pages. Headings, bold, italics, links, lists,
-// blockquotes, hr, paragraphs. Everything escaped first; no raw HTML passes.
+// Minimal markdown → HTML for rendering the charter/strategy documents
+// (SECURITY.md, NEVER.md, FIELD.md) as public pages. Headings, bold, italics,
+// code, links, lists, blockquotes, hr, GFM tables, paragraphs. Everything
+// escaped first; no raw HTML passes.
 
 const { esc } = require('./corpus');
 
@@ -13,7 +14,19 @@ function inline(s) {
       /^(https?:\/\/|\/)/.test(u) ? `<a href="${u}" rel="noopener">${t}</a>` : t);
 }
 
+// A GFM table separator row: | --- | :--: | --- |  (dashes required).
+function isTableSep(line) {
+  return /-/.test(line) && /^\s*\|?\s*:?-+:?\s*(\|\s*:?-+:?\s*)*\|?\s*$/.test(line);
+}
+function tableCells(line) {
+  let s = line.trim();
+  if (s.startsWith('|')) s = s.slice(1);
+  if (s.endsWith('|')) s = s.slice(0, -1);
+  return s.split('|').map(c => c.trim());
+}
+
 function mdToHtml(md) {
+  const lines = md.split('\n');
   const out = [];
   let list = false, para = [];
   const flush = () => {
@@ -21,8 +34,27 @@ function mdToHtml(md) {
   };
   const closeList = () => { if (list) { out.push('</ul>'); list = false; } };
 
-  for (const raw of md.split('\n')) {
-    const line = raw.trimEnd();
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trimEnd();
+
+    // GFM table: a header row of cells, then a separator row, then body rows.
+    // Wrapped in an overflow-x container so wide tables scroll on phones.
+    if (line.includes('|') && i + 1 < lines.length && isTableSep(lines[i + 1])) {
+      flush(); closeList();
+      const head = tableCells(line);
+      const rows = [];
+      let j = i + 2;
+      while (j < lines.length && lines[j].includes('|') && lines[j].trim() !== '') {
+        rows.push(tableCells(lines[j])); j++;
+      }
+      out.push('<div style="overflow-x:auto"><table class="plain"><thead><tr>' +
+        head.map(h => `<th>${inline(h)}</th>`).join('') + '</tr></thead><tbody>' +
+        rows.map(r => `<tr>${r.map(c => `<td>${inline(c)}</td>`).join('')}</tr>`).join('') +
+        '</tbody></table></div>');
+      i = j - 1;
+      continue;
+    }
+
     if (/^---+$/.test(line.trim())) { flush(); closeList(); out.push('<hr style="border:none;border-top:1.5px solid var(--rule);margin:18px 0">'); continue; }
     const h = line.match(/^(#{1,4})\s+(.*)/);
     if (h) {

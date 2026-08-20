@@ -349,7 +349,7 @@ function charterPage(file, current, description) {
     const { layout } = require('./views/layout');
     const md = fs.readFileSync(path.join(__dirname, '..', file), 'utf8');
     res.send(layout({
-      title: `${file.replace('.md', '')} — ${data.county.platform_name}`,
+      title: `${path.basename(file).replace('.md', '')} — ${data.county.platform_name}`,
       current, county: data.county, description,
       body: `<div style="max-width:72ch">${mdToHtml(md)}</div>`
     }));
@@ -361,6 +361,7 @@ app.get('/traffic', (req, res) => res.send(trafficPage(load(req.tenantKey), traf
 
 app.get('/security', charterPage('SECURITY.md', null, 'The platform\'s public threat model and integrity protocols, including the hash-chained activity log anyone can verify.'));
 app.get('/never', charterPage('NEVER.md', null, 'What this project will never do — written down before anyone was watching, on purpose.'));
+app.get('/field', charterPage('docs/FIELD.md', '/field', 'An honest map of where this platform sits among civic-democracy organizations — where it leads, where it is early by design, and what it refuses to become.'));
 
 // ---- issues: Tier 0 sentiment polling (the M2 seed) ----
 // The participant token is a 24-hex string we minted (randomBytes(12)). Read
