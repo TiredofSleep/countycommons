@@ -1,0 +1,75 @@
+{
+  "run_at": "2026-08-21T23:09:54.959Z",
+  "corpus_year": 2026,
+  "grand_total": 9606627411,
+  "summary": {
+    "total_checks": 7,
+    "passed": 7,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "node": "__grand_total__",
+      "name": "Ordinance grand total",
+      "kind": "grand-total",
+      "ok": true,
+      "expected": 9606627411,
+      "computed": 9606627411,
+      "detail": "11 top-level funds sum to the ordinance's stated total exactly."
+    },
+    {
+      "node": "__activity_chain__",
+      "name": "Activity log hash chain",
+      "kind": "chain",
+      "ok": true,
+      "expected": null,
+      "computed": null,
+      "detail": "Chain verified: 130 entries, head 716fd1d6dfbacce6…"
+    },
+    {
+      "node": "__recount__",
+      "name": "Votes: no unlogged writes",
+      "kind": "recount",
+      "ok": true,
+      "expected": null,
+      "computed": null,
+      "detail": "35 store votes all present in the chain"
+    },
+    {
+      "node": "__recount__",
+      "name": "Votes: final values match chain",
+      "kind": "recount",
+      "ok": true,
+      "expected": null,
+      "computed": null,
+      "detail": "every store value equals its last chain event"
+    },
+    {
+      "node": "__recount__",
+      "name": "Votes: chain↔store orphans explained",
+      "kind": "recount",
+      "ok": true,
+      "expected": null,
+      "computed": null,
+      "detail": "no chain votes missing from the store (corrections accounted for)"
+    },
+    {
+      "node": "__recount__",
+      "name": "Submissions: no unlogged writes",
+      "kind": "recount",
+      "ok": true,
+      "expected": null,
+      "computed": null,
+      "detail": "0 submissions all chained"
+    },
+    {
+      "node": "__recount__",
+      "name": "Signatures: no unlogged writes",
+      "kind": "recount",
+      "ok": true,
+      "expected": null,
+      "computed": null,
+      "detail": "0 public signatures all chained"
+    }
+  ]
+}

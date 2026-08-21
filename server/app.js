@@ -102,8 +102,9 @@ app.use((req, res, next) => {
 // ---- always-open utility routes ----
 app.get('/health', (req, res) => res.type('text').send('ok'));
 app.get('/robots.txt', (req, res) => {
-  // While the gate is up, ask crawlers to stay out. Open site = crawl away.
-  res.type('text').send(access.gateConfigured() ? 'User-agent: *\nDisallow: /\n' : 'User-agent: *\nAllow: /\n');
+  // Public launch: the site is open (the front door is a public county selector),
+  // so crawlers are welcome. Admin/owner areas sit behind codes regardless.
+  res.type('text').send('User-agent: *\nAllow: /\nDisallow: /admin\nDisallow: /owner\n');
 });
 
 // Static assets are public (styles for the gate page; no data in them).
@@ -123,29 +124,57 @@ function safeDest(next) {
   return (next && next.startsWith('/') && !next.startsWith('//') && !next.includes('\\')) ? next : '/';
 }
 
-// The front door: type a PIN, it takes you to your county. A 4-digit view PIN
-// opens the public site; an 8-char admin code opens the admin for that county.
+// The front door: a plain "select your county or city" page. Pick a place and
+// you're in — no PIN needed to read (the site is public). Hosts enter a code to
+// edit their own county. A quick access code (1525) also opens the whole network.
+const directory = require('./lib/directory');
 function gatePage(msg, next) {
   const dest = safeDest(next);
+  const groups = directory.byState();
+  const list = groups.map(g => `
+  <div style="margin:14px 0 0">
+    <div class="eyebrow" style="margin:0 0 4px">${esc(g.state)}</div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px">
+      ${g.places.map(p => `<a href="/enter?to=${encodeURIComponent(p.key)}" style="text-decoration:none;font-size:14px;padding:7px 12px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink)">${esc(p.name)}</a>`).join('')}
+    </div>
+  </div>`).join('');
   return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>County Commons — enter your PIN</title>
-<link rel="stylesheet" href="/style.css?v=5"><link rel="icon" href="/favicon.svg">
-<meta name="robots" content="noindex"></head><body><div class="wrap">
-<header class="page" style="max-width:480px;margin:10vh auto 0">
+<title>County Commons — select your county or city</title>
+<link rel="stylesheet" href="/style.css?v=5"><link rel="icon" href="/favicon.svg"></head><body><div class="wrap">
+<header class="page" style="max-width:720px;margin:7vh auto 0">
   <div class="eyebrow">County Commons</div>
-  <h1>Enter your PIN</h1>
-  <p class="src">Type the PIN for your county and you're in. A resident PIN opens your county's site; a host code opens its admin.</p>
-  <p class="src">County Commons is an independent community project — <b>not a government website</b>.</p>
+  <h1>Select your county or city</h1>
+  <p class="src" style="max-width:60ch">Public budget transparency, county by county — every dollar traced to its source document, the arithmetic checked in the open. Pick a place to begin. <b>County Commons is an independent community project — not a government website.</b></p>
   ${msg ? `<p class="src" style="color:var(--dead)">${esc(msg)}</p>` : ''}
-  <form method="POST" action="/gate" style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
-    <input type="password" name="pin" autofocus required aria-label="County PIN" autocomplete="off"
-      style="font-family:var(--mono);font-size:15px;padding:8px 10px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink);flex:1;min-width:160px">
-    <input type="hidden" name="next" value="${esc(dest)}">
-    <button type="submit" style="font-family:var(--mono);font-size:13px;padding:8px 14px;background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);cursor:pointer">Enter</button>
-  </form>
+  ${list || '<p class="src">No sites are published yet.</p>'}
+  <details style="margin:22px 0 0;border-top:1px solid var(--rule);padding-top:12px">
+    <summary style="cursor:pointer;font-size:13.5px;color:var(--accent)">Have a code? (hosts, or quick access)</summary>
+    <form method="POST" action="/gate" style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap;max-width:360px">
+      <input type="password" name="pin" aria-label="Access code" autocomplete="off" placeholder="access code"
+        style="font-family:var(--mono);font-size:15px;padding:8px 10px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink);flex:1;min-width:140px">
+      <input type="hidden" name="next" value="${esc(dest)}">
+      <button type="submit" style="font-family:var(--mono);font-size:13px;padding:8px 14px;background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);cursor:pointer">Enter</button>
+    </form>
+    <p class="src" style="margin-top:8px">A host code opens your county's admin. Quick access code: <b>1525</b>.</p>
+  </details>
 </header></div></body></html>`;
 }
+
+// Public view grant: selecting a county on the front door sets a view cookie
+// (network-wide, like any PIN) and sends you to that county's site. Registered
+// before the gate middleware so it works with no cookie.
+app.get('/enter', (req, res) => {
+  const to = String((req.query && req.query.to) || '').slice(0, 40);
+  const reg = tenantRegistry();
+  const t = reg.tenants && reg.tenants[to];
+  if (!t) return res.redirect('/gate');
+  res.setHeader('Set-Cookie',
+    `cc_access=${access.cookieValue(to, 'view', 'Public')}; Path=/; Max-Age=${60 * 60 * 24 * 30}; HttpOnly; SameSite=Lax${accessCookieDomain(req)}`);
+  const here = tenant.resolveHost(req.headers.host);
+  if (here.action === 'serve' && here.key === to) return res.redirect('/');
+  return res.redirect(`https://${t.host}/`);
+});
 
 app.get('/gate', (req, res) => res.send(gatePage(null, req.query.next || '/')));
 app.post('/gate', writeLimit, express.urlencoded({ extended: false }), (req, res) => {

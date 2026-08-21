@@ -1,0 +1,85 @@
+{
+  "name": "Richmond",
+  "state": "Virginia",
+  "slug": "richmondva",
+  "seat": "Richmond (independent city — belongs to no county)",
+  "population": 226610,
+  "population_source": "2020 U.S. Census",
+  "platform_name": "Richmond Commons",
+  "sponsor_line": "A free, independent civic-transparency project",
+  "contact_email": "brayden.ozark@gmail.com",
+  "jurisdictions": [
+    {
+      "id": "richmond",
+      "name": "City of Richmond",
+      "kind": "county",
+      "governing_body": "Richmond City Council (9 districts) with an elected Mayor",
+      "executive": "Mayor",
+      "website": "https://www.rva.gov"
+    }
+  ],
+  "peer_counties": [],
+  "officials": [
+    {
+      "office": "Mayor",
+      "name": "Danny Avula",
+      "term_expires": null,
+      "note": "Richmond’s 81st mayor; took office January 2025.",
+      "source": "rva.gov/mayors-office"
+    }
+  ],
+  "quorum_court": {
+    "source": "Richmond is one of Virginia’s 38 independent cities — it belongs to no county and performs county-level functions itself (its own courts, sheriff, jail, and constitutional officers). It has a strong-mayor form: an elected Mayor plus a nine-member City Council and a separately-elected School Board.",
+    "justices": []
+  },
+  "records_portals": [
+    {
+      "id": "rva-opendata",
+      "name": "Richmond Open Data",
+      "url": "https://data.richmondgov.com/"
+    }
+  ],
+  "calendar": {
+    "budget_adoption_window": {
+      "start_month": 3,
+      "end_month": 5,
+      "note": "The Mayor proposes in March and City Council adopts in May; the fiscal year begins July 1."
+    },
+    "meetings": [
+      {
+        "body": "City Council",
+        "schedule": "2nd & 4th Mondays",
+        "note": "City Hall, 900 E. Broad St."
+      }
+    ],
+    "election_blackouts": [
+      {
+        "note": "Bright lines: no candidate issues, no active-ballot-measure issues, no named-individual conduct issues.",
+        "start": null,
+        "end": null
+      }
+    ]
+  },
+  "data_sources": [
+    {
+      "id": "rva-budget",
+      "name": "Richmond budget documents",
+      "url": "https://www.rva.gov/budget-and-strategic-planning/budget-documents",
+      "holds": [
+        "adopted budget",
+        "CIP"
+      ]
+    },
+    {
+      "id": "rva-opendata",
+      "name": "Richmond Open Data (Socrata)",
+      "url": "https://data.richmondgov.com/",
+      "holds": [
+        "general fund budget dataset"
+      ]
+    }
+  ],
+  "currency_year": 2027,
+  "reading_level_target": "6th-8th grade",
+  "has_municipalities": false
+}
