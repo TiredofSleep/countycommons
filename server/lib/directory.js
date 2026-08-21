@@ -47,4 +47,11 @@ function byState() {
   return Object.keys(groups).sort().map(state => ({ state, places: groups[state] }));
 }
 
-module.exports = { featured, byState };
+// Is this tenant substantive (built out), or an un-ingested starter site?
+function isFeatured(key) {
+  if (!_featuredKeys) _featuredKeys = new Set(featured().map(t => t.key));
+  return _featuredKeys.has(key);
+}
+let _featuredKeys = null;
+
+module.exports = { featured, byState, isFeatured };

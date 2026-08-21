@@ -220,6 +220,34 @@ app.use((req, res, next) => {
   res.status(401).send(gatePage(null, req.originalUrl));
 });
 
+// Starter-site guard: an un-ingested county (no real budget, not featured) shows
+// an honest "not built yet" page instead of an empty $0 tree, so the public never
+// lands on a hollow site. Admin/owner routes pass through (a host can still log in
+// and build it); the network directory and the selector stay reachable as exits.
+function starterPage(data) {
+  const { layout } = require('./views/layout');
+  const { county } = data;
+  const body = `
+<header class="page">
+  <div class="eyebrow">${esc(county.name)}, ${esc(county.state)}</div>
+  <h1>Not built yet</h1>
+  <div class="src" style="max-width:60ch">County Commons hasn't ingested ${esc(county.name)} yet. This is a starter site, holding the county's spot on the network until its adopted budget and public records are loaded — then this page becomes a walkable money trail, every dollar cited to its source, like the counties already live.</div>
+</header>
+<section>
+  <p>See the counties and cities that <b>are</b> live — from big-city budgets to a 64-person county — on <a href="/gate">the county selector</a> or the <a href="/counties">full directory</a>.</p>
+  <p class="src">Want ${esc(county.name)} built out, or want to host it? The platform ingests a county from its own adopted budget and public records. Reach the project at ${county.contact_email ? `<a href="mailto:${esc(county.contact_email)}">${esc(county.contact_email)}</a>` : 'the contact on any live county page'}.</p>
+</section>`;
+  return layout({ title: `${county.name} — coming soon`, current: null, body, county, description: `${county.name} is a starter site on County Commons — not yet ingested.` });
+}
+app.use((req, res, next) => {
+  if (!req.tenantKey || req.method !== 'GET') return next();
+  if (directory.isFeatured(req.tenantKey)) return next();
+  const p = req.path;
+  if (p.startsWith('/admin') || p.startsWith('/owner') || p.startsWith('/gate') || p.startsWith('/enter') ||
+      p.startsWith('/counties') || p === '/health' || p === '/robots.txt' || /\.[a-z0-9]+$/i.test(p)) return next();
+  try { return res.send(starterPage(load(req.tenantKey))); } catch (e) { return next(); }
+});
+
 // Admin guard: for /admin routes, require an admin cookie for THIS county.
 // Now that the view gate admits any resident to any county, the county scope of
 // a host's edit rights is enforced HERE — an admin code edits only its own
