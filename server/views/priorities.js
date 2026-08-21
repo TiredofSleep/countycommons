@@ -289,4 +289,4 @@ ${list}
   });
 }
 
-module.exports = { prioritiesPage, PHASE, phaseBadge, statusLine, trailHtml, daysSince, srcLink, govBody, progressBar, funnelLevels, levelThreshold };
+module.exports = { prioritiesPage, PHASE, phaseBadge, statusLine, trailHtml, daysSince, srcLink, govBody, progressBar, funnelLevels, levelThreshold, levelFunnel };

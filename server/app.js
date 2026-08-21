@@ -405,28 +405,41 @@ function participantOf(req) {
 }
 
 app.get('/issues', (req, res) => res.send(issuesPage(load(req.tenantKey), {
+  level: (req.query.level || '').slice(0, 60) || 'county',
+  places: places.placesFor(req.tenantKey),
   asked: req.query.asked === '1', blocked: req.query.blocked || null, submitted: req.query.submitted === '1'
 })));
 
-// A resident proposes a question at a level (county / state / national).
+// Map a funnel level (national|state|county|city-<slug>) to a question scope.
+function levelToScope(level) {
+  if (level === 'national') return { scope: 'national', city: null };
+  if (level === 'state') return { scope: 'state', city: null };
+  if (level && level.indexOf('city-') === 0) return { scope: 'city', city: level.slice(5) };
+  return { scope: 'local', city: null }; // county
+}
+
+// A resident proposes a question at the selected funnel level.
 app.post('/issues/ask', writeLimit, express.urlencoded({ extended: false }), (req, res) => {
   const participant = ensureParticipant(req, res);
   const data = load(req.tenantKey);
-  const scope = (req.body && req.body.scope) || 'local';
+  const level = ((req.body && req.body.level) || '').slice(0, 60) || 'county';
+  const { scope, city } = levelToScope(level);
+  const back = '/issues?level=' + encodeURIComponent(level);
   const r = require('./questions').ask({
-    scope, state: data.county && data.county.state, tenant: req.tenantKey,
+    scope, city, state: data.county && data.county.state, tenant: req.tenantKey,
     wording: req.body && req.body.wording, context: req.body && req.body.context, participant
   });
-  if (r.error === 'bright-line') return res.redirect('/issues?blocked=' + encodeURIComponent((r.flags || []).join(', ')) + '#ask');
-  if (r.error) return res.redirect('/issues#ask');
-  res.redirect('/issues?asked=1#proposed');
+  if (r.error === 'bright-line') return res.redirect(back + '&blocked=' + encodeURIComponent((r.flags || []).join(', ')) + '#ask');
+  if (r.error) return res.redirect(back + '#ask');
+  res.redirect(back + '&asked=1#proposed');
 });
 
 // Support a proposal; it auto-opens for a live vote at the threshold.
 app.post('/issues/:id/support', writeLimit, express.urlencoded({ extended: false }), (req, res) => {
   const participant = ensureParticipant(req, res);
   require('./questions').support(participant, req.params.id);
-  res.redirect('/issues#proposed');
+  const level = ((req.body && req.body.level) || '').slice(0, 60) || 'county';
+  res.redirect('/issues?level=' + encodeURIComponent(level) + '#proposed');
 });
 
 app.post('/issues/submit', heavyLimit, express.urlencoded({ extended: false }), (req, res) => {
@@ -476,7 +489,7 @@ app.get('/issues/:id', (req, res) => {
   const participant = participantOf(req);
   res.send(issuePage(data, draft, participant, voted,
     participant ? identity.fieldsOf(participant) : [], req.query.registered === '1',
-    req.query.sign || null));
+    req.query.sign || null, places.placesFor(req.tenantKey)));
 });
 
 app.post('/issues/:id/vote', writeLimit, express.urlencoded({ extended: false }), (req, res) => {

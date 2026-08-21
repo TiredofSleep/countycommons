@@ -15,66 +15,83 @@ function openIssues(data) {
 
 // The level a question speaks to, and the body it signals. Base/overlay
 // (host) questions carry no scope → they're local to the county.
+function titleCaseSlug(s) {
+  return String(s || '').split('-').filter(Boolean).map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+}
 function scopeBadge(q, county) {
   if (q.scope === 'national') return '<span class="chip c-ok">National</span>';
   if (q.scope === 'state') return `<span class="chip c-part">State · ${esc(q.state || county.state)}</span>`;
+  if (q.scope === 'city') return `<span class="chip c-part">City · ${esc(titleCaseSlug(q.city))}</span>`;
   return `<span class="chip">Local · ${esc(county.name)}</span>`;
 }
-function scopeBody(scope, county) {
+function scopeBody(scope, county, q) {
   if (scope === 'national') return 'the U.S. Congress';
   if (scope === 'state') return `the ${esc(county.state)} Legislature`;
+  if (scope === 'city') return `${esc(titleCaseSlug(q && q.city))} — its city council or town meeting`;
   return 'your county — the quorum court, city board, or school board';
 }
 
 function issuesPage(data, opts) {
   opts = opts || {};
   const { county } = data;
-  const threshold = require('../lib/threshold').deliveryThreshold(county);
-  const { PROMOTE_AT } = require('../questions');
-  const items = openIssues(data).map(d => {
+  const { funnelLevels, levelThreshold, levelFunnel } = require('./priorities');
+  const { PROMOTE_AT, levelOf } = require('../questions');
+  const { levels, hasCountyGov } = funnelLevels(county, opts.places);
+  const defaultLevel = hasCountyGov ? 'county' : ((levels.find(l => l.kind === 'city' || l.kind === 'town') || {}).id || 'state');
+  const current = levels.find(l => l.id === opts.level) || levels.find(l => l.id === defaultLevel) || levels[0];
+  const threshold = levelThreshold(current, county);
+  const isLocal = current.kind === 'county' || current.kind === 'city' || current.kind === 'town';
+
+  // Only this level's questions — its own board, its own count. Base/overlay
+  // drafts have no scope, so levelOf() reads them as the county level.
+  const atLevel = q => levelOf(q) === current.id;
+
+  const items = openIssues(data).filter(atLevel).map(d => {
     const t = tally(d.id);
     return `
 <div class="issue" style="display:block">
-  <b><a href="/issues/${esc(d.id)}">${esc(d.final_wording || d.neutral_framing)}</a></b> ${scopeBadge(d, county)}
+  <b><a href="/issues/${esc(d.id)}">${esc(d.final_wording || d.neutral_framing)}</a></b>
   <p class="src">Opened ${esc(d.opened)} · ${t.total} response${t.total === 1 ? '' : 's'} · open sentiment (Tier 0) · <a href="/issues/${esc(d.id)}#share">share it</a></p>
 </div>`;
   }).join('');
 
-  const proposals = (data.proposals || []).slice().sort((a, b) => (b.supporters || []).length - (a.supporters || []).length);
+  const proposals = (data.proposals || []).filter(atLevel).slice().sort((a, b) => (b.supporters || []).length - (a.supporters || []).length);
   const propItems = proposals.map(p => {
     const n = (p.supporters || []).length;
     return `
 <div class="issue" style="display:block">
-  <b>${esc(p.final_wording)}</b> ${scopeBadge(p, county)}
-  <p class="src">${n} of ${PROMOTE_AT} supporters — ${PROMOTE_AT - n > 0 ? `${PROMOTE_AT - n} more puts it to a live vote` : 'ready to open'}. Signals ${scopeBody(p.scope, county)}.</p>
-  <form method="POST" action="/issues/${esc(p.id)}/support" style="margin:6px 0 0"><button type="submit" class="chip c-ok" style="cursor:pointer;border:1.5px solid var(--sourced);background:var(--sourced-bg)">Support this →</button></form>
+  <b>${esc(p.final_wording)}</b>
+  <p class="src">${n} of ${PROMOTE_AT} supporters — ${PROMOTE_AT - n > 0 ? `${PROMOTE_AT - n} more puts it to a live vote` : 'ready to open'}. Signals <b>${esc(current.body)}</b>.</p>
+  <form method="POST" action="/issues/${esc(p.id)}/support" style="margin:6px 0 0"><input type="hidden" name="level" value="${esc(current.id)}"><button type="submit" class="chip c-ok" style="cursor:pointer;border:1.5px solid var(--sourced);background:var(--sourced-bg)">Support this →</button></form>
 </div>`;
   }).join('');
 
-  const opt = (v, label) => `<option value="${v}">${esc(label)}</option>`;
   const body = `
 <header class="page">
   <div class="eyebrow">${esc(county.name)}, ${esc(county.state)}</div>
-  <h1>Open questions</h1>
-  <div class="src"><b>The counting room — where what residents want becomes a number with receipts.</b> Questions can be asked at three levels: your county, your state, or the nation. Each one is advisory signal carried to the body that decides — the quorum court or city board, the ${esc(county.state)} Legislature, or Congress. It informs the government we have; it never replaces it. No account needed, one voice per sitting, changeable while your window stays open.</div>
+  <h1>Open questions — at every level</h1>
+  <div class="src"><b>The counting room — where what residents want becomes a number with receipts.</b> There's a question board for every level of government, from your town up to the nation. Each one is advisory signal carried to the body that decides — and it informs the government we have; it never replaces it. No account needed, one voice per sitting, changeable while your window stays open.</div>
 </header>
-${items || '<p class="src">No questions are open right now — ask the first one below.</p>'}
+
+<div id="board">${levelFunnel(levels, current.id, '')}</div>
+
+<div class="issue" style="display:block;border-left:3px solid var(--accent)">
+  <div class="eyebrow" style="color:var(--accent)">the <b>${esc(current.label)}</b> questions — their own count, their own votes</div>
+  <p class="src" style="margin:4px 0 0">These are questions for what ${current.kind === 'national' ? 'the country' : current.kind === 'state' ? esc(county.state) : esc(current.label)} should do. Each is answered by ${isLocal ? 'people here' : 'people across the whole network'}, and at <b>${threshold}</b> responses the result is carried to <b>${esc(current.body)}</b>.${!isLocal ? ' National and state boards pool answers from every county on the platform.' : ''}</p>
+</div>
+
+${items || `<p class="src">No questions are open on the <b>${esc(current.label)}</b> board yet — ask the first one below.</p>`}
 
 <section id="ask">
-<h2>Ask a question <span class="sub">— county, state, or national</span></h2>
+<h2>Ask a question <span class="sub">— on the ${esc(current.label)} board</span></h2>
 ${opts.asked ? `<p style="color:var(--sourced)"><b>Proposed ✓</b> — your question is up for support below. When it reaches ${PROMOTE_AT} supporters, it opens for a live vote.</p>` : ''}
 ${opts.blocked ? `<div class="issue" style="display:block;border-color:var(--dead)"><b style="color:var(--dead)">That question can't be asked.</b><p class="src" style="margin:6px 0 0">A charter bright line was matched (${esc(opts.blocked)}). County Commons never runs questions about candidates, active ballot measures, or a named person's conduct — those belong to elections and the courts. Ask about a policy or a dollar, not a person or a race.</p></div>` : ''}
 <p>Ask it in your own words. It's checked against the <a href="/never">bright lines</a>, then goes up for support; at ${PROMOTE_AT} supporters it opens for the whole level to answer.</p>
 <form method="POST" action="/issues/ask" style="display:flex;flex-direction:column;gap:8px;max-width:60ch">
+  <input type="hidden" name="level" value="${esc(current.id)}">
+  <p class="src" style="margin:0;border-left:3px solid var(--accent);padding-left:10px">Asking on the <b>${esc(current.label)}</b> board — aimed at ${esc(current.body)}. ${levels.length > 1 ? `<a href="#board">Switch level above.</a>` : ''}</p>
   <textarea name="wording" required maxlength="300" rows="3" placeholder="Should every government dollar be publicly traceable to the receipt?"
     style="font-family:var(--sans);font-size:14px;padding:10px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink)"></textarea>
-  <label style="font-size:13.5px">Level
-    <select name="scope" style="font-family:var(--mono);font-size:14px;padding:7px 9px;border:1.5px solid var(--ink);background:var(--paper);color:var(--ink);margin-top:4px;display:block">
-      ${opt('local', `My county — ${county.name}`)}
-      ${opt('state', `My state — ${county.state}`)}
-      ${opt('national', 'National — the whole country')}
-    </select>
-  </label>
   <textarea name="context" maxlength="600" rows="2" placeholder="Context (optional) — why it matters. No verdicts."
     style="font-family:var(--sans);font-size:13px;padding:8px;border:1.5px solid var(--rule);background:var(--card);color:var(--ink)"></textarea>
   <button type="submit" style="font-family:var(--mono);font-size:13px;padding:10px 18px;background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);cursor:pointer;align-self:flex-start">Propose the question</button>
@@ -82,21 +99,31 @@ ${opts.blocked ? `<div class="issue" style="display:block;border-color:var(--dea
 </section>
 
 ${proposals.length ? `<section id="proposed">
-<h2>Proposed — support to put them to a vote <span class="sub">— ${proposals.length}</span></h2>
+<h2>Proposed on this board — support to put them to a vote <span class="sub">— ${proposals.length}</span></h2>
 ${propItems}
 </section>` : ''}
 
 <section>
 <h2>The traction rule <span class="sub">— what enough responses guarantees</span></h2>
-<p>Borrowed from the UK Parliament's petition site, where a signature count obligates a government response: <b>when a live question reaches ${threshold} responses, we print the result packet and hand-deliver it to the body that decides</b> — for a county question the quorum court, city board, or school board; for a state question the ${esc(county.state)} legislative delegation; for a national one the district's members of Congress — and stamp the delivery publicly. Officials aren't obligated to act. They are guaranteed to receive — and what they do next becomes part of the record either way.</p>
+<p>Borrowed from the UK Parliament's petition site, where a signature count obligates a government response: <b>when a live question reaches its threshold of responses, we print the result packet and hand-deliver it to the body that decides</b> — for a city question the city council or town meeting, for a county question the ${esc(hasCountyGov ? govBodyName(county) : 'county board')}, for a state question the ${esc(county.state)} legislative delegation, for a national one the district's members of Congress — and stamp the delivery publicly. The threshold is sized to the level, the way real petitions are: a share of the electorate there. Officials aren't obligated to act. They are guaranteed to receive — and what they do next becomes part of the record either way.</p>
 </section>`;
 
   return layout({ title: `Open questions — ${county.platform_name}`, current: '/issues', body, county });
 }
 
-function issuePage(data, draft, participant, justVoted, registeredFields = [], justRegistered = false, signState = null) {
+function govBodyName(county) {
+  const j = (county.jurisdictions || []).find(x => x.kind === 'county') || (county.jurisdictions || [])[0];
+  return (j && j.governing_body) || 'the county governing body';
+}
+
+function issuePage(data, draft, participant, justVoted, registeredFields = [], justRegistered = false, signState = null, places = null) {
   const { county } = data;
-  const threshold = require('../lib/threshold').deliveryThreshold(county);
+  // Size the delivery threshold to the question's own funnel level — a city
+  // question to that city, a state question to the state, and so on.
+  const { funnelLevels, levelThreshold } = require('./priorities');
+  const { levelOf } = require('../questions');
+  const _lvl = funnelLevels(county, places).levels.find(l => l.id === levelOf(draft));
+  const threshold = _lvl ? levelThreshold(_lvl, county) : require('../lib/threshold').deliveryThreshold(county);
   const t = tally(draft.id);
   const mine = participant ? myVote(participant, draft.id) : null;
   const { listFor, mySignature } = require('../signatures');
@@ -132,7 +159,7 @@ ${t.connections ? `<p class="src">Who's answering, self-reported (not verified):
 <header class="page">
   <div class="eyebrow">${esc(county.name)} · open question · Tier 0 sentiment · opened ${esc(draft.opened)}</div>
   <h1 style="font-size:clamp(18px,3.5vw,26px)">${esc(draft.final_wording)}</h1>
-  <p style="margin:6px 0 0">${scopeBadge(draft, county)} <span class="src">— advisory signal to ${scopeBody(draft.scope, county)}.</span></p>
+  <p style="margin:6px 0 0">${scopeBadge(draft, county)} <span class="src">— advisory signal to ${scopeBody(draft.scope, county, draft)}.</span></p>
   ${justVoted ? `<div class="stamp" style="position:static;display:inline-block;transform:none;margin-top:10px">Counted ✓ — you answered ${esc(justVoted.toUpperCase())}</div>` : ''}
 </header>
 

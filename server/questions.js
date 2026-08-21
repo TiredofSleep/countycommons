@@ -20,7 +20,19 @@ const { screen } = require('./submissions');
 
 const STORE = path.join(__dirname, '..', 'data', 'shared-questions.json');
 const PROMOTE_AT = 10; // supporters needed to put a proposal to a live vote
-const SCOPES = new Set(['local', 'state', 'national']);
+// The funnel levels a question can live at. 'local' is the county board; 'city'
+// is a specific municipality within it (a deeper, more local level).
+const SCOPES = new Set(['local', 'city', 'state', 'national']);
+
+// The funnel-level id for a question, matching the priorities funnel:
+// national | state | county | city-<slug>.
+function levelOf(q) {
+  if (!q) return 'county';
+  if (q.scope === 'national') return 'national';
+  if (q.scope === 'state') return 'state';
+  if (q.scope === 'city') return 'city-' + String(q.city || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+  return 'county'; // local, or an unscoped base/overlay draft
+}
 
 function load() {
   try { return JSON.parse(fs.readFileSync(STORE, 'utf8')); }
@@ -34,7 +46,7 @@ function save(store) {
 function today() { return new Date().toISOString().slice(0, 10); }
 
 // A resident proposes a question at a level. Returns {id} or {error, flags}.
-function ask({ scope, state, tenant, wording, context, participant }) {
+function ask({ scope, state, tenant, city, wording, context, participant }) {
   scope = SCOPES.has(scope) ? scope : 'local';
   wording = String(wording || '').trim().slice(0, 300);
   if (!wording) return { error: 'empty' };
@@ -45,7 +57,9 @@ function ask({ scope, state, tenant, wording, context, participant }) {
   const q = {
     id, scope,
     state: scope === 'national' ? null : (state || null),
-    tenant: scope === 'local' ? (tenant || null) : null,
+    // county/city questions belong to a tenant; city ones also name the city.
+    tenant: (scope === 'local' || scope === 'city') ? (tenant || null) : null,
+    city: scope === 'city' ? (String(city || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || null) : null,
     final_wording: wording,
     context: String(context || '').trim().slice(0, 600) || null,
     status: 'proposed',
@@ -103,7 +117,7 @@ function visibleFor(tenant, state) {
   return load().questions.filter(q =>
     q.scope === 'national'
     || (q.scope === 'state' && q.state === state)
-    || (q.scope === 'local' && q.tenant === tenant));
+    || ((q.scope === 'local' || q.scope === 'city') && q.tenant === tenant));
 }
 
 function get(id) { return load().questions.find(x => x.id === id) || null; }
@@ -116,4 +130,4 @@ function all() {
   return load().questions.slice().sort((a, b) => String(b.created_ts).localeCompare(String(a.created_ts)));
 }
 
-module.exports = { ask, support, setStatus, remove, visibleFor, get, forTenantLocal, all, PROMOTE_AT };
+module.exports = { ask, support, setStatus, remove, visibleFor, get, forTenantLocal, all, levelOf, PROMOTE_AT };
