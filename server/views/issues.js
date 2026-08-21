@@ -192,7 +192,7 @@ ${results}
 <p class="src"><b>Plainly:</b> because a Tier 0 answer takes no verification, a determined person can pad this number — that is exactly the weakness the verification tiers (phone, residency, voter-file) are built to close. Until then, treat these as open sentiment, never proof, and weigh the public signatures — real names, by choice — more heavily than the raw count.</p>
 </section>
 
-${solutionsSection(county, draft.id, sol.list || [], { myVotes: sol.myVotes, filed: sol.filed, error: sol.error, blocked: sol.blocked })}
+${solutionsSection(county, draft.id, sol.list || [], { myVotes: sol.myVotes, founding: sol.founding, filed: sol.filed, error: sol.error, blocked: sol.blocked })}
 
 <section id="register">
 <h2>Make it count for more <span class="sub">— optional, always</span></h2>

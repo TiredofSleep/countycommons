@@ -15,20 +15,25 @@ function citationList(cites) {
 }
 
 // One solution card: the proposal, its sources, the count, and the yes/no vote.
-function solutionCard(s, myVote, qid) {
+// opts: { badge, brief } — founding (platform-researched) solutions carry a badge
+// and a link to their full cited brief.
+function solutionCard(s, myVote, qid, opts) {
+  const o = opts || {};
   const btn = (val, label, mark) => {
     const on = myVote === val;
     const good = val === 'yes';
     return `<button type="submit" name="value" value="${val}" style="font-family:var(--mono);font-size:13px;font-weight:600;padding:7px 13px;cursor:pointer;border:1.5px solid var(--ink);white-space:nowrap;background:${on ? 'var(--ink)' : 'var(--card)'};color:${on ? 'var(--paper)' : (good ? 'var(--sourced)' : 'var(--dead)')}">${mark} ${label}${on ? ' ✓' : ''}</button>`;
   };
   return `
-<div class="issue" style="display:block">
+<div class="issue" style="display:block${o.badge ? ';border-left:3px solid var(--accent)' : ''}">
   <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline">
     <b style="font-size:16px">${esc(s.title)}</b>
     <span class="src" style="white-space:nowrap;font-variant-numeric:tabular-nums"><b style="color:var(--sourced)">▲ ${s.yes}</b> &nbsp; <b style="color:var(--dead)">▼ ${s.no}</b></span>
   </div>
+  ${o.badge ? `<div class="eyebrow" style="color:var(--accent);margin:4px 0 0">${esc(o.badge)}</div>` : ''}
   <p class="src" style="margin:6px 0 2px;white-space:pre-wrap">${esc(s.summary)}</p>
   ${citationList(s.citations)}
+  ${o.brief ? `<p class="src" style="margin:6px 0 0">→ <a href="${esc(o.brief)}"><b>Read the full brief</b></a>, with every precedent and the honest limits.</p>` : ''}
   <form method="POST" action="/issues/${esc(qid)}/solutions/${esc(s.id)}/vote" style="margin:10px 0 0;display:flex;gap:8px;align-items:center;flex-wrap:wrap">
     ${btn('yes', 'Yes', '▲')} ${btn('no', 'No', '▼')}
     <span class="src">${s.total} ${s.total === 1 ? 'vote' : 'votes'}${myVote ? ` · you voted <b>${esc(myVote.toUpperCase())}</b> — change it anytime` : ' · yes or no, no comment needed'}</span>
@@ -41,9 +46,11 @@ function solutionCard(s, myVote, qid) {
 function solutionsSection(county, qid, solutions, opts) {
   const o = opts || {};
   const myVotes = o.myVotes || {};
+  const founding = (o.founding || []).map(s =>
+    solutionCard(s, s.myVote, qid, { badge: 'researched by the platform · every claim cited', brief: s.brief })).join('');
   const list = solutions.length
     ? solutions.map(s => solutionCard(s, myVotes[s.id], qid)).join('')
-    : `<p class="src">No solutions filed yet. Be the first — bring a clear, cited proposal for how to move forward.</p>`;
+    : (founding ? '' : `<p class="src">No solutions filed yet. Be the first — bring a clear, cited proposal for how to move forward.</p>`);
 
   const flash = o.filed
     ? `<div class="issue" style="display:block;border-color:var(--sourced);background:var(--sourced-bg)"><b>Filed.</b> <span class="src">Your solution is on the board below, with its sources. Neighbors can now weigh it yes or no.</span></div>`
@@ -58,6 +65,7 @@ function solutionsSection(county, qid, solutions, opts) {
 <h2>Proposed solutions <span class="sub">— cited, and voted yes or no</span></h2>
 <p class="src" style="max-width:66ch">This is where the question turns into proposals. Anyone can file a clear, concise <b>solution moving forward</b> — backed by documents, research, or a worked-out idea, <b>with its sources</b>. Everyone else clicks yes or no. No comment threads: ideas rise on their sources and their count, not on who argues loudest.</p>
 ${flash}
+${founding}
 ${list}
 
 <details id="file" style="border:1.5px dashed var(--ink);padding:12px 14px;margin:14px 0 0;max-width:640px"${o.filed || o.error || o.blocked ? ' open' : ''}>

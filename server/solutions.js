@@ -92,16 +92,33 @@ function file({ tenant, question_id, title, summary, citations, participant, cou
 }
 
 // Click yes or no on a solution. One per participant, changeable (last wins).
+// Works for resident-filed solutions AND for the platform's own founding
+// solutions (curated in the corpus): if the id isn't a filed record, we create a
+// vote-only stub so a curated solution's yes/no count lives in the same store.
 function vote(participant, id, value) {
   if (!participant || !['yes', 'no'].includes(value)) return null;
+  id = String(id || '').slice(0, 80);
   const s = load();
-  const sol = s.solutions[id];
-  if (!sol || sol.status !== 'open') return null;
+  let sol = s.solutions[id];
+  if (!sol) sol = s.solutions[id] = { id, curated: true, status: 'open', votes: {} };
+  if (sol.status !== 'open') return null;
   sol.votes = sol.votes || {};
   sol.votes[participant] = value;
   chain.append('solution-vote', { id, value });
   save(s);
   return tallyOf(sol);
+}
+
+// Tally for any id (a filed solution or a curated founding one).
+function tallyFor(id) {
+  const sol = load().solutions[id];
+  return sol ? tallyOf(sol) : { yes: 0, no: 0, net: 0, total: 0 };
+}
+// How this participant voted on one id, or null.
+function myVoteOn(participant, id) {
+  if (!participant) return null;
+  const sol = load().solutions[id];
+  return (sol && sol.votes && sol.votes[participant]) || null;
 }
 
 function tallyOf(sol) {
@@ -115,7 +132,7 @@ function tallyOf(sol) {
 // then yes count, then newest). Each carries its tally and its citations.
 function listFor(tenant, question_id) {
   return Object.values(load().solutions)
-    .filter(s => s.status === 'open' && s.tenant === tenant && s.question_id === question_id)
+    .filter(s => s.status === 'open' && !s.curated && s.tenant === tenant && s.question_id === question_id)
     .map(s => {
       const t = tallyOf(s);
       return {
@@ -147,4 +164,4 @@ function listAll() {
     .sort((a, b) => String(b.created_at).localeCompare(String(a.created_at)));
 }
 
-module.exports = { file, vote, listFor, myVotesFor, get, remove, listAll, parseCitations };
+module.exports = { file, vote, tallyFor, myVoteOn, listFor, myVotesFor, get, remove, listAll, parseCitations };

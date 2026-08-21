@@ -401,6 +401,7 @@ app.get('/traffic', (req, res) => res.send(trafficPage(load(req.tenantKey), traf
 app.get('/security', charterPage('SECURITY.md', null, 'The platform\'s public threat model and integrity protocols, including the hash-chained activity log anyone can verify.'));
 app.get('/never', charterPage('NEVER.md', null, 'What this project will never do — written down before anyone was watching, on purpose.'));
 app.get('/field', charterPage('docs/FIELD.md', '/field', 'An honest map of where this platform sits among civic-democracy organizations — where it leads, where it is early by design, and what it refuses to become.'));
+app.get('/receipts', charterPage('docs/RECEIPTS-BY-RAILS.md', '/receipts', 'Receipts by rails: how a government could make its own check register publish itself — the precedents, with numbers, and the honest limits.'));
 
 // ---- issues: Tier 0 sentiment polling (the M2 seed) ----
 // The participant token is a 24-hex string we minted (randomBytes(12)). Read
@@ -497,8 +498,15 @@ app.get('/issues/:id', (req, res) => {
   const voted = req.query.voted && ['yes', 'no', 'skip'].includes(req.query.voted) ? req.query.voted : null;
   const participant = participantOf(req);
   const solutions = require('./solutions');
+  // Founding solutions: the platform's own cited proposals, curated in the corpus
+  // on the draft, votable like any other. Enrich each with its live tally + vote.
+  const founding = (draft.founding_solutions || []).map(fs => ({
+    id: fs.id, title: fs.title, summary: fs.summary, citations: fs.citations || [], brief: fs.brief || null,
+    ...solutions.tallyFor(fs.id), myVote: solutions.myVoteOn(participant, fs.id)
+  }));
   const sol = {
     list: solutions.listFor(req.tenantKey, draft.id),
+    founding,
     myVotes: solutions.myVotesFor(participant, req.tenantKey, draft.id),
     filed: req.query.filed === '1',
     error: req.query.solerr || null,
