@@ -575,6 +575,7 @@ app.get('/priorities', (req, res) => {
     supported: req.query.supported === '1',
     blocked: req.query.blocked || null,
     idea: (req.query.idea || '').slice(0, 120),
+    places: places.placesFor(req.tenantKey),
     mine: priorities.supportedBy(participant, req.tenantKey)
   }));
 });
@@ -582,7 +583,7 @@ app.get('/priorities', (req, res) => {
 app.post('/priorities/propose', writeLimit, express.urlencoded({ extended: false }), (req, res) => {
   const participant = ensureParticipant(req, res);
   const b = req.body || {};
-  const r = priorities.propose({ tenant: req.tenantKey, kind: b.kind, title: b.title, why: b.why, node_ref: b.node_ref, participant, county: load(req.tenantKey).county });
+  const r = priorities.propose({ tenant: req.tenantKey, kind: b.kind, title: b.title, why: b.why, node_ref: b.node_ref, target: b.target, participant, county: load(req.tenantKey).county });
   if (r.error === 'bright-line') return res.redirect('/priorities?blocked=' + encodeURIComponent((r.flags || []).join(', ')));
   if (r.error) return res.redirect('/priorities');
   res.redirect('/priorities?proposed=1');

@@ -48,10 +48,11 @@ function namesAnOfficial(text, county) {
 // Propose a priority. Returns { id } or { error, flags? }. Priorities publish
 // to the public board immediately (no human queue like question-submissions),
 // so a bright-line hit is a hard stop here, not just a flag for a reviewer.
-function propose({ tenant, kind, title, why, node_ref, participant, county }) {
+function propose({ tenant, kind, title, why, node_ref, participant, county, target }) {
   title = String(title || '').trim().slice(0, 120);
   why = String(why || '').trim().slice(0, 600);
   kind = KINDS.has(kind) ? kind : 'prioritize';
+  target = target ? String(target).slice(0, 60) : null;
   if (!title || !why) return { error: 'missing' };
   // The charter bright lines are a bone: no candidates, no active-ballot
   // measures, no named-individual conduct. Keyword screen + this county's
@@ -68,6 +69,7 @@ function propose({ tenant, kind, title, why, node_ref, participant, county }) {
   s.priorities[id] = {
     id, tenant, kind, title, why,
     node_ref: node_ref || null,
+    target: target || null,
     created_at: now,
     // The proposer is the first backer; keyed by token, never shown.
     supporters: participant ? { [participant]: { at: now } } : {},
@@ -162,7 +164,7 @@ function listFor(tenant) {
   return Object.values(load().priorities)
     .filter(p => p.status === 'open' && p.tenant === tenant)
     .map(p => ({
-      id: p.id, kind: p.kind, title: p.title, why: p.why, node_ref: p.node_ref, created_at: p.created_at,
+      id: p.id, kind: p.kind, title: p.title, why: p.why, node_ref: p.node_ref, target: p.target || null, created_at: p.created_at,
       support: Object.keys(p.supporters || {}).length,
       reasons: Object.values(p.supporters || {}).filter(x => x.why).map(x => x.why),
       timeline: p.timeline || [], phase: phaseOf(p)

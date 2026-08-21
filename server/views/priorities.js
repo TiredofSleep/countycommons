@@ -28,6 +28,26 @@ function govBody(county) {
   return (j && j.governing_body) || 'quorum court';
 }
 
+// The bodies a resident can direct a priority to: the county's governing body
+// (if it has one), plus every city and town. Where the county has no government
+// to hear it (Middlesex, MA), only the cities appear — the honest lane. Cities
+// come from the config jurisdictions AND the municipalities index, deduped.
+function participationTargets(county, places) {
+  const targets = [];
+  const gj = (county.jurisdictions || []).find(j => j.kind === 'county');
+  const cb = gj && gj.governing_body;
+  const hasCountyGov = cb && !/abolish|no county|commonwealth|state-funded/i.test(cb);
+  if (hasCountyGov) targets.push({ id: 'county', label: county.name, body: cb, kind: 'county' });
+  const seen = new Set();
+  const addCity = (name, body) => {
+    const k = String(name || '').toLowerCase(); if (!k || seen.has(k)) return; seen.add(k);
+    targets.push({ id: 'city-' + k.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''), label: name, body: body, kind: 'city' });
+  };
+  for (const j of (county.jurisdictions || [])) if (['city', 'town'].includes(j.kind)) addCity(j.name.replace(/^(City|Town) of /, ''), j.governing_body || (j.name.replace(/^(City|Town) of /, '') + ' City Council'));
+  for (const p of ((places && places.places) || [])) addCity(p.name, p.name + (p.kind === 'town' ? ' Town Meeting' : ' City Council'));
+  return { targets, hasCountyGov };
+}
+
 // The accountability loop, made visible. A priority's phase and the honest
 // count of days it has waited — the silence is the pressure.
 const PHASE = {
@@ -80,6 +100,9 @@ function prioritiesPage(data, items, opts) {
   const { county } = data;
   const body_name = govBody(county);
   const threshold = county.delivery_threshold || null;
+  const { targets, hasCountyGov } = participationTargets(county, o.places);
+  const targetMap = Object.fromEntries(targets.map(t => [t.id, t]));
+  const defaultTarget = hasCountyGov ? 'county' : ((targets[0] && targets[0].id) || '');
 
   // The starter-ideas menu — turns a blank board into a menu of winnable things.
   // Each chip one-taps into the form pre-filled. Examples, plainly, not real posts.
@@ -104,6 +127,10 @@ ${IDEAS.map(([g, items]) => `<p class="src" style="margin:10px 0 4px"><b>${esc(g
     <label style="display:block;margin:4px 0"><input type="radio" name="kind" value="prioritize" checked> <b>Prioritize it</b> — I want the county to lean into this.</label>
     <label style="display:block;margin:4px 0"><input type="radio" name="kind" value="reconsider"> <b>Take a fresh look</b> — I want them to weigh whether this is still worth it.</label>
   </fieldset>
+  ${targets.length ? `<label class="src" for="p-target">Who should hear this? <span style="opacity:.7">— the body that can act on it</span></label>
+  <select id="p-target" name="target" style="width:100%;font-size:15px;padding:8px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink);margin:4px 0 10px">
+    ${targets.map(t => `<option value="${esc(t.id)}"${t.id === defaultTarget ? ' selected' : ''}>${t.kind === 'county' ? '' : 'City · '}${esc(t.label)} — ${esc(t.body)}</option>`).join('')}
+  </select>` : ''}
   <label class="src" for="p-title">In a line, what is it?</label>
   <input id="p-title" name="title" required maxlength="120" value="${esc(o.idea || '')}" placeholder="e.g. A skate park for the kids, or a gazebo for the market"
     style="width:100%;font-size:15px;padding:8px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink);margin:4px 0 10px">
@@ -130,6 +157,7 @@ ${IDEAS.map(([g, items]) => `<p class="src" style="margin:10px 0 4px"><b>${esc(g
   </div>
   <p class="src" style="margin:6px 0 2px">${esc(p.why)}</p>
   ${area ? `<p class="src" style="margin:2px 0">On the money trail: <a href="/line/${esc(p.node_ref)}">${esc(area)}</a>.</p>` : ''}
+  ${p.target && targetMap[p.target] ? `<p class="src" style="margin:2px 0">→ for <b>${esc(targetMap[p.target].label)}</b> · ${esc(targetMap[p.target].body)}</p>` : ''}
   ${statusLine(p)}
   ${threshold && p.phase === 'raised' ? (p.support >= threshold
     ? `<p class="src" style="margin:6px 0 0;color:var(--sourced)">✓ <b>${threshold} reached</b> — ready to carry to the county's officials.</p>`
@@ -162,7 +190,7 @@ ${IDEAS.map(([g, items]) => `<p class="src" style="margin:10px 0 4px"><b>${esc(g
 
 <div class="issue" style="display:block;border-left:3px solid var(--accent)">
   <div class="eyebrow" style="color:var(--accent)">how this works</div>
-  <p class="src" style="margin:4px 0 0">Post what you want prioritized — or questioned — and why. Others back what they agree with, so the strongest-felt priorities rise to the top on their own.${threshold ? ` When one reaches <b>${threshold}</b> residents, it's formally carried to the <b>${esc(body_name)}</b> — the officials you elected to write the budget.` : ` The strongest are carried to the <b>${esc(body_name)}</b>.`} Their job is to fit it in; ours is to make it impossible to miss — and to track <a href="/outcomes">what came of it</a>.</p>
+  <p class="src" style="margin:4px 0 0">Post what you want prioritized — or questioned — and why, and say <b>who should hear it: the county, or your city or town</b>. Others back what they agree with, so the strongest-felt priorities rise on their own.${threshold ? ` When one reaches <b>${threshold}</b> residents, it's formally carried to the body you chose${hasCountyGov ? '' : ` — and since ${esc(county.name)} has no county government to receive it, that means your city or town, where the decisions actually get made`}.` : ''} Their job is to fit it in; ours is to make it impossible to miss — and to track <a href="/outcomes">what came of it</a>.</p>
 </div>
 
 ${o.proposed ? `<div class="issue" style="display:block;border-color:var(--sourced);background:var(--sourced-bg)"><b>Posted.</b> <span class="src">It's on the board below, and you're its first backer. Share it — this works when neighbors pile onto what they share.</span></div>` : ''}
