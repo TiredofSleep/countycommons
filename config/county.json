@@ -49,39 +49,129 @@
       "website": null
     }
   ],
-  "peer_counties": ["Nevada", "Hot Spring", "Pike", "Ouachita", "Garland"],
+  "peer_counties": [
+    "Nevada",
+    "Hot Spring",
+    "Pike",
+    "Ouachita",
+    "Garland"
+  ],
   "officials": [
-    { "office": "County Judge", "name": "Troy Tucker", "term_expires": "2026-12-31", "email": "ttucker@clarkcountyarkansas.com", "phone": "870-246-5847", "source": "clarkcountyar.gov/county-judge" },
-    { "office": "Sheriff and Collector", "name": "Jason Watson", "term_expires": null, "email": "jason.watson@clarkar.us", "phone": "870-246-2222", "source": "clarkcountyar.gov/sheriff" },
-    { "office": "District Judge", "name": "Randy Hill", "term_expires": null },
-    { "office": "City Manager, Arkadelphia", "name": "Gary Brinkley", "term_expires": null, "phone": "870-246-9864", "note": "Direct email not published; route via info@arkadelphia.gov, the city clerk, or in person at 700 Clay St #218" },
-    { "office": "Fire Chief, Arkadelphia", "name": "Andy Neel", "term_expires": null, "note": "Contact via Fire Station 1, 610 Caddo St, or city hall 870-246-9864" },
-    { "office": "Mayor, Arkadelphia", "name": "Scott Byrd", "term_expires": null, "email": "scottbyrddds@att.net", "source": "arkadelphia.gov/directory" }
+    {
+      "office": "County Judge",
+      "name": "Troy Tucker",
+      "term_expires": "2026-12-31",
+      "email": "ttucker@clarkcountyarkansas.com",
+      "phone": "870-246-5847",
+      "source": "clarkcountyar.gov/county-judge"
+    },
+    {
+      "office": "Sheriff and Collector",
+      "name": "Jason Watson",
+      "term_expires": null,
+      "email": "jason.watson@clarkar.us",
+      "phone": "870-246-2222",
+      "source": "clarkcountyar.gov/sheriff"
+    },
+    {
+      "office": "District Judge",
+      "name": "Randy Hill",
+      "term_expires": null
+    },
+    {
+      "office": "City Manager, Arkadelphia",
+      "name": "Gary Brinkley",
+      "term_expires": null,
+      "phone": "870-246-9864",
+      "note": "Direct email not published; route via info@arkadelphia.gov, the city clerk, or in person at 700 Clay St #218"
+    },
+    {
+      "office": "Fire Chief, Arkadelphia",
+      "name": "Andy Neel",
+      "term_expires": null,
+      "note": "Contact via Fire Station 1, 610 Caddo St, or city hall 870-246-9864"
+    },
+    {
+      "office": "Mayor, Arkadelphia",
+      "name": "Scott Byrd",
+      "term_expires": null,
+      "email": "scottbyrddds@att.net",
+      "source": "arkadelphia.gov/directory"
+    }
   ],
   "quorum_court": {
     "source": "clarkcountyar.gov/quorum-court (retrieved 2026-07-18)",
     "justices": [
-      { "district": 1, "name": "Zach Bledsoe" },
-      { "district": 2, "name": "Michael Ankton" },
-      { "district": 3, "name": "Vanilla Hannah" },
-      { "district": 4, "name": "Llewellyn Terry Sr." },
-      { "district": 5, "name": "Jimmy King" },
-      { "district": 6, "name": "Stuart Thomas" },
-      { "district": 7, "name": "Jenna Scott" },
-      { "district": 8, "name": "Garry \"BJ\" Johns" },
-      { "district": 9, "name": "Andrea Angle" },
-      { "district": 10, "name": "Wayne Baumgardner" },
-      { "district": 11, "name": "Tracy Drake" }
+      {
+        "district": 1,
+        "name": "Zach Bledsoe"
+      },
+      {
+        "district": 2,
+        "name": "Michael Ankton"
+      },
+      {
+        "district": 3,
+        "name": "Vanilla Hannah"
+      },
+      {
+        "district": 4,
+        "name": "Llewellyn Terry Sr."
+      },
+      {
+        "district": 5,
+        "name": "Jimmy King"
+      },
+      {
+        "district": 6,
+        "name": "Stuart Thomas"
+      },
+      {
+        "district": 7,
+        "name": "Jenna Scott"
+      },
+      {
+        "district": 8,
+        "name": "Garry \"BJ\" Johns"
+      },
+      {
+        "district": 9,
+        "name": "Andrea Angle"
+      },
+      {
+        "district": 10,
+        "name": "Wayne Baumgardner"
+      },
+      {
+        "district": 11,
+        "name": "Tracy Drake"
+      }
     ]
   },
   "records_portals": [
-    { "id": "cis-clark", "name": "Clark County document search (QC minutes + ordinances)", "url": "https://documents.cisarkansas.com/?C=Clark&S=ORD" }
+    {
+      "id": "cis-clark",
+      "name": "Clark County document search (QC minutes + ordinances)",
+      "url": "https://documents.cisarkansas.com/?C=Clark&S=ORD"
+    }
   ],
   "calendar": {
-    "budget_adoption_window": { "start_month": 10, "end_month": 12, "note": "Quorum court typically adopts next-year appropriations in the last quarter." },
+    "budget_adoption_window": {
+      "start_month": 10,
+      "end_month": 12,
+      "note": "Quorum court typically adopts next-year appropriations in the last quarter."
+    },
     "meetings": [
-      { "body": "Quorum Court", "schedule": "second Monday, monthly", "note": "Per the county website; special and committee sessions additional." },
-      { "body": "Arkadelphia City Board", "schedule": "monthly", "note": "Confirm current meeting day with city hall." }
+      {
+        "body": "Quorum Court",
+        "schedule": "second Monday, monthly",
+        "note": "Per the county website; special and committee sessions additional."
+      },
+      {
+        "body": "Arkadelphia City Board",
+        "schedule": "monthly",
+        "note": "Confirm current meeting day with city hall."
+      }
     ],
     "election_blackouts": [
       {
@@ -92,12 +182,40 @@
     ]
   },
   "data_sources": [
-    { "id": "county-site", "name": "Clark County official site", "url": "https://www.clarkcountyar.gov", "holds": ["appropriation ordinances", "county clerk records"] },
-    { "id": "ar-transparency", "name": "Arkansas transparency portal", "url": "https://transparency.arkansas.gov", "holds": ["filed county budgets"] },
-    { "id": "ark-leg-audit", "name": "Arkansas Legislative Audit", "url": "https://www.arklegaudit.gov", "holds": ["annual county and city audit reports"] },
-    { "id": "ade-finance", "name": "Arkansas Dept. of Education financial reports", "url": "https://dese.ade.arkansas.gov", "holds": ["school district budgets and millage"] }
+    {
+      "id": "county-site",
+      "name": "Clark County official site",
+      "url": "https://www.clarkcountyar.gov",
+      "holds": [
+        "appropriation ordinances",
+        "county clerk records"
+      ]
+    },
+    {
+      "id": "ar-transparency",
+      "name": "Arkansas transparency portal",
+      "url": "https://transparency.arkansas.gov",
+      "holds": [
+        "filed county budgets"
+      ]
+    },
+    {
+      "id": "ark-leg-audit",
+      "name": "Arkansas Legislative Audit",
+      "url": "https://www.arklegaudit.gov",
+      "holds": [
+        "annual county and city audit reports"
+      ]
+    },
+    {
+      "id": "ade-finance",
+      "name": "Arkansas Dept. of Education financial reports",
+      "url": "https://dese.ade.arkansas.gov",
+      "holds": [
+        "school district budgets and millage"
+      ]
+    }
   ],
   "currency_year": 2026,
-  "reading_level_target": "6th-8th grade",
-  "delivery_threshold": 400
+  "reading_level_target": "6th-8th grade"
 }

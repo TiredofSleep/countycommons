@@ -1,5 +1,21 @@
 const { esc } = require('../lib/corpus');
+const { deliveryThreshold } = require('../lib/threshold');
 const { layout } = require('./layout');
+
+// The live scoreboard — a count reaching for the threshold. Everyone who backs a
+// priority sees the bar move and their own vote count toward carrying it to the
+// officials. The bar goes green the moment the threshold is reached.
+function progressBar(support, threshold, toWhom) {
+  const pct = threshold ? Math.min(100, Math.round((support / threshold) * 100)) : 0;
+  const reached = threshold && support >= threshold;
+  const label = reached
+    ? `<b style="color:var(--sourced)">✓ ${threshold} reached — ready to carry${toWhom ? ' to ' + esc(toWhom) : ''}</b>`
+    : `<b>${support}</b> of <b>${threshold}</b> ${support === 1 ? 'neighbor' : 'neighbors'}${toWhom ? ` — at ${threshold} it goes to ${esc(toWhom)}` : ''}`;
+  return `<div style="margin:8px 0 0">
+    <div style="display:flex;justify-content:space-between;gap:8px;align-items:baseline"><span class="src">${label}</span><span class="src" style="font-variant-numeric:tabular-nums">${pct}%</span></div>
+    <div style="background:var(--rule);border-radius:3px;height:11px;overflow:hidden;margin-top:3px"><div style="width:${pct}%;height:100%;background:${reached ? 'var(--sourced)' : 'var(--accent)'};transition:width .3s"></div></div>
+  </div>`;
+}
 
 // The community-priorities board. Residents say what to lean into or take a
 // fresh look at, and why; others back what they share; the list ranks itself
@@ -37,14 +53,14 @@ function participationTargets(county, places) {
   const gj = (county.jurisdictions || []).find(j => j.kind === 'county');
   const cb = gj && gj.governing_body;
   const hasCountyGov = cb && !/abolish|no county|commonwealth|state-funded/i.test(cb);
-  if (hasCountyGov) targets.push({ id: 'county', label: county.name, body: cb, kind: 'county' });
+  if (hasCountyGov) targets.push({ id: 'county', label: county.name, body: cb, kind: 'county', pop: county.population || null });
   const seen = new Set();
-  const addCity = (name, body) => {
+  const addCity = (name, body, pop) => {
     const k = String(name || '').toLowerCase(); if (!k || seen.has(k)) return; seen.add(k);
-    targets.push({ id: 'city-' + k.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''), label: name, body: body, kind: 'city' });
+    targets.push({ id: 'city-' + k.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''), label: name, body: body, kind: 'city', pop: pop || null });
   };
-  for (const j of (county.jurisdictions || [])) if (['city', 'town'].includes(j.kind)) addCity(j.name.replace(/^(City|Town) of /, ''), j.governing_body || (j.name.replace(/^(City|Town) of /, '') + ' City Council'));
-  for (const p of ((places && places.places) || [])) addCity(p.name, p.name + (p.kind === 'town' ? ' Town Meeting' : ' City Council'));
+  for (const j of (county.jurisdictions || [])) if (['city', 'town'].includes(j.kind)) addCity(j.name.replace(/^(City|Town) of /, ''), j.governing_body || (j.name.replace(/^(City|Town) of /, '') + ' City Council'), null);
+  for (const p of ((places && places.places) || [])) addCity(p.name, p.name + (p.kind === 'town' ? ' Town Meeting' : ' City Council'), p.pop);
   return { targets, hasCountyGov };
 }
 
@@ -99,7 +115,7 @@ function prioritiesPage(data, items, opts) {
   const o = opts || {};
   const { county } = data;
   const body_name = govBody(county);
-  const threshold = county.delivery_threshold || null;
+  const threshold = deliveryThreshold(county);
   const { targets, hasCountyGov } = participationTargets(county, o.places);
   const targetMap = Object.fromEntries(targets.map(t => [t.id, t]));
   const defaultTarget = hasCountyGov ? 'county' : ((targets[0] && targets[0].id) || '');
@@ -159,9 +175,7 @@ ${IDEAS.map(([g, items]) => `<p class="src" style="margin:10px 0 4px"><b>${esc(g
   ${area ? `<p class="src" style="margin:2px 0">On the money trail: <a href="/line/${esc(p.node_ref)}">${esc(area)}</a>.</p>` : ''}
   ${p.target && targetMap[p.target] ? `<p class="src" style="margin:2px 0">→ for <b>${esc(targetMap[p.target].label)}</b> · ${esc(targetMap[p.target].body)}</p>` : ''}
   ${statusLine(p)}
-  ${threshold && p.phase === 'raised' ? (p.support >= threshold
-    ? `<p class="src" style="margin:6px 0 0;color:var(--sourced)">✓ <b>${threshold} reached</b> — ready to carry to the county's officials.</p>`
-    : `<p class="src" style="margin:6px 0 0"><b>${p.support}</b> of <b>${threshold}</b> — at ${threshold} residents, this is carried to the officials. <span style="opacity:.75">(counts are unverified for now; they become verified residents when the tiers ship)</span></p>`) : ''}
+  ${p.phase === 'raised' ? progressBar(p.support, deliveryThreshold(county, (targetMap[p.target] || {}).pop), (targetMap[p.target] || {}).body || body_name) : ''}
   <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center;margin-top:8px">
     <span class="src"><b>${p.support}</b> ${p.support === 1 ? 'person is' : 'people are'} behind this${o.mine && o.mine.has(p.id) ? ' — <span style="color:var(--sourced)">including you</span>' : ''}</span>
     ${o.mine && o.mine.has(p.id) ? '' : `<details style="margin:0">
@@ -215,4 +229,4 @@ ${list}
   });
 }
 
-module.exports = { prioritiesPage, PHASE, phaseBadge, statusLine, trailHtml, daysSince, srcLink, govBody };
+module.exports = { prioritiesPage, PHASE, phaseBadge, statusLine, trailHtml, daysSince, srcLink, govBody, progressBar };

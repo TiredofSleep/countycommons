@@ -1,4 +1,5 @@
 const { esc, money, copyText } = require('../lib/corpus');
+const { deliveryThreshold } = require('../lib/threshold');
 const { layout } = require('./layout');
 const { tally } = require('../tally');
 const { registrationForm } = require('./register-box');

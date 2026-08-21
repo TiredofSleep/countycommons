@@ -29,7 +29,7 @@ function scopeBody(scope, county) {
 function issuesPage(data, opts) {
   opts = opts || {};
   const { county } = data;
-  const threshold = county.delivery_threshold || 400;
+  const threshold = require('../lib/threshold').deliveryThreshold(county);
   const { PROMOTE_AT } = require('../questions');
   const items = openIssues(data).map(d => {
     const t = tally(d.id);
@@ -96,7 +96,7 @@ ${propItems}
 
 function issuePage(data, draft, participant, justVoted, registeredFields = [], justRegistered = false, signState = null) {
   const { county } = data;
-  const threshold = county.delivery_threshold || 400;
+  const threshold = require('../lib/threshold').deliveryThreshold(county);
   const t = tally(draft.id);
   const mine = participant ? myVote(participant, draft.id) : null;
   const { listFor, mySignature } = require('../signatures');
@@ -157,6 +157,8 @@ ${rulesDialog(county)}
 <section>
 <h2>The count so far <span class="sub">— aggregate only, always</span></h2>
 ${results}
+<div style="max-width:520px;margin:6px 0 10px">${require('./priorities').progressBar(t.total, threshold, 'the body that decides')}</div>
+<p class="src" style="margin:0">Every answer moves this bar in real time — including yours. At <b>${threshold}</b>, the result is printed and hand-delivered.</p>${justVoted ? '<p class="src" style="color:var(--sourced);margin:4px 0 0"><b>Your vote is in the count above.</b></p>' : ''}
 <p class="src">Tier 0 means open sentiment: it shows how visitors lean, and it is never cited as verified resident opinion. Phone, residency, and voter verification tiers arrive with the full voting layer — and results will always display every tier's count separately.</p>
 <p class="src">These counts are unofficial: gathered by an independent community platform, not by any government. This is not an election, a referendum, or a legal petition — its only weight is that the counting is published and checkable.</p>
 <p class="src"><b>Plainly:</b> because a Tier 0 answer takes no verification, a determined person can pad this number — that is exactly the weakness the verification tiers (phone, residency, voter-file) are built to close. Until then, treat these as open sentiment, never proof, and weigh the public signatures — real names, by choice — more heavily than the raw count.</p>

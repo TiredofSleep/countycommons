@@ -172,7 +172,7 @@ ${open.length ? open.map(q => `
   </label>
   <button type="submit" style="font-family:var(--mono);font-size:13px;padding:9px 16px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);cursor:pointer;align-self:flex-start">Open the question</button>
 </form>
-<p class="src" style="margin-top:10px;max-width:64ch">Every question you open carries the same standing terms as ours, automatically: anonymous Tier-0 sentiment, one voice per sitting, results labeled unverified until the verification tiers, and — at ${county.delivery_threshold || 400} responses — the result printed and hand-delivered to the body that decides, stamped in public. You can't turn those off; they're what make a number trustworthy.</p>
+<p class="src" style="margin-top:10px;max-width:64ch">Every question you open carries the same standing terms as ours, automatically: anonymous Tier-0 sentiment, one voice per sitting, results labeled unverified until the verification tiers, and — at ${require('../lib/threshold').deliveryThreshold(county)} responses — the result printed and hand-delivered to the body that decides, stamped in public. You can't turn those off; they're what make a number trustworthy.</p>
 </section>
 ${closed.length ? `<section><h2>Closed <span class="sub">— ${closed.length}</span></h2>${closed.map(q => `<p class="src"><b>${esc(q.final_wording)}</b> — closed</p>`).join('')}</section>` : ''}`;
   return shell(county, 'Questions', body);
@@ -186,7 +186,7 @@ ${closed.length ? `<section><h2>Closed <span class="sub">— ${closed.length}</s
 function adminPriorities(data, items, opts = {}) {
   const { county } = data;
   const { PHASE } = require('./priorities');
-  const threshold = county.delivery_threshold || null;
+  const threshold = require('../lib/threshold').deliveryThreshold(county);
   const officials = (county.officials || []).filter(o => o.email).map(o => o.email);
   const KIND = { prioritize: ['Prioritize', 'c-ok'], reconsider: ['Take a fresh look', 'c-amb'] };
   const field = 'font-family:var(--mono);font-size:13px;padding:7px 9px;border:1.5px solid var(--ink);background:var(--paper);color:var(--ink);width:100%;box-sizing:border-box';

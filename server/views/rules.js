@@ -23,7 +23,7 @@ function rulesDialog(county) {
     <li><b>Nothing follows you home.</b> The moment your browser window closes, this device forgets who was here — on purpose, so a shared or public computer never shows the next person your answers. Answers already counted stay counted; registered details stay safe on our server.</li>
     <li><b>Announcing is the loud version — and always your choice.</b> The count is anonymous, period. If you want to be heard by name, check the announce box when you register: your name, town, and answer go on the question page, petition-style — and unchecking takes them down. Self-signed and unverified until the tiers arrive; misused names removed on request, with removals logged.</li>
     <li><b>These counts are unofficial.</b> Not an election, not a referendum, not a petition. Their only weight is that the counting is published and checkable.</li>
-    <li><b>At ${county.delivery_threshold || 400} responses, the result travels.</b> We print the packet and hand-deliver it to the body that decides, and stamp the delivery publicly.</li>
+    <li><b>At ${require('../lib/threshold').deliveryThreshold(county)} responses, the result travels.</b> We print the packet and hand-deliver it to the body that decides, and stamp the delivery publicly.</li>
     <li><b>Bright lines.</b> No questions about candidates, active ballot measures, or the conduct of named individuals. The platform computes and cites; it never takes sides.</li>
     <li><b>Every count is checkable</b> — the tally is <a href="/verify">re-added in public</a> and the activity log is <a href="/security">hash-chained and anchored</a> where we can't rewrite it.</li>
   </ul>
