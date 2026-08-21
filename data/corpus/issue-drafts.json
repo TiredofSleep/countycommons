@@ -69,16 +69,24 @@
         },
         {
           "id": "sol-monthly-check-register",
-          "title": "Publish the county check register every month — vendor, amount, date, purpose",
-          "summary": "The immediately-doable version, needing no new payment rails: post every check the county writes each month, with the payee, amount, date, and purpose, in a searchable format — the way OhioCheckbook and the Texas Comptroller already do at state scale, and as Texas already sets as a local-government standard. This closes most ‘who got paid’ dead ends today, from the existing accounting system, while the deeper rails idea above is a longer project.",
+          "title": "Publish the county check register — downloadable and searchable, the way Tarrant County does",
+          "summary": "Right now Clark County publishes no public check register at all (Docket #10) — “who got paid” is a dead end on the money trail. The immediately-doable fix, needing no new payment rails: post every check the county writes — payee, amount, date, and purpose — as downloadable data with a vendor lookup, not a PDF. There is a clear peer model to copy: Tarrant County, Texas — the only county in its state to earn all six of the state’s transparency stars — publishes a downloadable check register (down to an item-description field) plus a live vendor-payment lookup anyone can search. Oklahoma goes a step further and publishes purchase-card spending at the item level; Ohio put 112 million transactions online and went from 46th to 1st in national transparency. Clark can copy the floor — a downloadable, searchable register — this year, from the accounting system it already runs, and this platform can ingest the feed directly instead of chasing records.",
           "citations": [
             {
-              "label": "OhioCheckbook — 112M state transactions online; moved Ohio from 46th to 1st in transparency",
-              "url": "https://www.buckeyeinstitute.org/research/detail/the-buckeye-institute-inspired-ohio-checkbook-ensures-government-transparency-and-should-be-made-permanent"
+              "label": "Tarrant County, TX — downloadable check register (with item-description field) + live vendor-payment lookup",
+              "url": "https://www.tarrantcountytx.gov/en/auditor/accounts-payable.html"
             },
             {
-              "label": "Texas Comptroller — local-government check-register transparency standard (payee, amount, date, purpose)",
-              "url": "https://comptroller.texas.gov/transparency/local/"
+              "label": "Tarrant County — live vendor payment lookup",
+              "url": "https://vendorchecks.tarrantcounty.com/"
+            },
+            {
+              "label": "Oklahoma — item-level purchase-card transactions published by default (the stretch goal)",
+              "url": "https://data.ok.gov/dataset/purchase-card-pcard-fiscal-year-2025"
+            },
+            {
+              "label": "OhioCheckbook — 112M transactions online; Ohio went from 46th to 1st in transparency",
+              "url": "https://www.buckeyeinstitute.org/research/detail/the-buckeye-institute-inspired-ohio-checkbook-ensures-government-transparency-and-should-be-made-permanent"
             }
           ]
         }
