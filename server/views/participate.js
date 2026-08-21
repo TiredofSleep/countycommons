@@ -1,31 +1,47 @@
 const { esc } = require('../lib/corpus');
 const { layout } = require('./layout');
 
-// The practical page: every way a Clark County resident can take part in
-// their governments, from fifteen seconds to a records request. Built from
-// the same config and corpus as everything else — navigation, not advocacy.
+// The practical page: every way a resident can take part in their county's
+// government, from fifteen seconds to a records request. Fully config-driven —
+// it reads the county's own governing body, officials, meetings, and state, so
+// it reads correctly for a Quorum Court, a Commissioners Court, or a county
+// whose government was abolished. Navigation, not advocacy.
 
-// Next second-Monday quorum court session, computed honestly at render time.
-function nextSecondMonday(from) {
-  for (let add = 0; add < 62; add++) {
-    const d = new Date(from.getFullYear(), from.getMonth(), from.getDate() + add);
-    if (d.getDay() === 1 && d.getDate() >= 8 && d.getDate() <= 14) return d;
-  }
-  return null;
-}
+// The state's open-records law, by name where we know it.
+const FOIA = {
+  Arkansas: 'Arkansas Freedom of Information Act',
+  Texas: 'Texas Public Information Act',
+  Massachusetts: 'Massachusetts Public Records Law'
+};
 
 function participatePage(data) {
   const { county } = data;
-  const now = new Date();
-  const qc = nextSecondMonday(now);
-  const qcStr = qc ? qc.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' }) : null;
-  const budgetSeason = now.getMonth() >= 7; // Aug–Dec: requests and adoption
-  const jps = county.quorum_court.justices;
+  const gj = (county.jurisdictions || []).find(j => j.kind === 'county') || (county.jurisdictions || [])[0] || {};
+  const bodyName = gj.governing_body || 'county government';
+  const execTitle = gj.executive || null;
+  const officials = county.officials || [];
+  const justices = (county.quorum_court && county.quorum_court.justices) || [];
+  const meetings = (county.calendar && county.calendar.meetings) || [];
+  const foia = FOIA[county.state] || `${county.state} open-records law`;
+  const hasGov = !/abolished|no county|state-funded/i.test(bodyName) && bodyName !== 'county government';
+
   const jpRows = [];
-  for (let i = 0; i < jps.length; i += 2) {
-    const a = jps[i], b = jps[i + 1];
-    jpRows.push(`<tr><td class="num">${a.district}</td><td>${esc(a.name)}</td>${b ? `<td class="num">${b.district}</td><td>${esc(b.name)}</td>` : '<td></td><td></td>'}</tr>`);
+  for (let i = 0; i < justices.length; i += 2) {
+    const a = justices[i], b = justices[i + 1];
+    jpRows.push(`<tr><td class="num">${esc(a.district)}</td><td>${esc(a.name)}</td>${b ? `<td class="num">${esc(b.district)}</td><td>${esc(b.name)}</td>` : '<td></td><td></td>'}</tr>`);
   }
+  const jpTable = justices.length ? `
+<p style="margin-top:8px">The ${esc(bodyName)}'s members by district:</p>
+<table class="plain"><thead><tr><th>Dist.</th><th>Member</th><th>Dist.</th><th>Member</th></tr></thead>
+<tbody>${jpRows.join('')}</tbody></table>` : '';
+
+  const officialsTable = officials.length ? `
+<table class="plain"><thead><tr><th>Office</th><th>Who</th></tr></thead>
+<tbody>${officials.map(o => `<tr><td>${esc(o.office)}</td><td>${esc(o.name)}</td></tr>`).join('')}</tbody></table>` : '';
+
+  const meetingLines = meetings.length
+    ? meetings.map(m => `<b>${esc(m.body)}</b> meets ${esc(m.schedule)}${m.note ? ` — <span class="src">${esc(m.note)}</span>` : ''}.`).join('<br>')
+    : `Public meeting times are listed on <a href="/calendar">the calendar</a> as they're confirmed.`;
 
   const body = `
 <header class="page">
@@ -34,33 +50,28 @@ function participatePage(data) {
   <div class="src">Every way to be involved, from fifteen seconds to a records request. None of it requires an account, an app, or anyone's permission — these are rights you already have. This page just makes them navigable.</div>
 </header>
 
-${qcStr ? `<div class="issue" style="display:block;border-color:var(--sourced);background:var(--sourced-bg)">
-  <b>This month in Clark County:</b>
-  <p style="font-size:13.5px;margin:6px 0 0">The quorum court's next regular session is <b>${esc(qcStr)}</b> at the courthouse — public, and you can speak.${budgetSeason ? ' <b>It is budget season:</b> the 2027 budget is being written between now and December. What gets said at these meetings lands in next year’s numbers.' : ''} One question is <a href="/issues">open for your answer</a> right now. Full schedule: <a href="/calendar">the calendar</a>.</p>
-</div>` : ''}
-
 <section>
-<h2>1 · Be counted <span class="sub">— fifteen seconds</span></h2>
-<p>One question is open right now: <a href="/issues">should every government dollar be traceable to the receipt?</a> No account needed. Your answer is changeable until the question closes, and the count shows exactly what it is — including how verified it is.</p>
+<h2>1 · Raise your voice <span class="sub">— fifteen seconds</span></h2>
+<p>Say what ${esc(county.name)} should prioritize — or take a fresh look at — and why, on <a href="/priorities">the priorities board</a>. Back what your neighbors have posted; the strongest-felt priorities rise on their own, and when one reaches the threshold it's carried to the people who decide. Prefer a straight yes/no? <a href="/issues">Answer an open question</a>. No account needed; you can change your mind until it closes.</p>
 </section>
 
 <section>
 <h2>2 · Know who speaks for you <span class="sub">— one phone call</span></h2>
-<p>County money is voted by eleven justices of the peace — one answers to your address. Not sure which district you live in? The county clerk's office can tell you in one call.</p>
-<table class="plain"><thead><tr><th>Dist.</th><th>Justice of the peace</th><th>Dist.</th><th>Justice of the peace</th></tr></thead>
-<tbody>${jpRows.join('')}</tbody></table>
-<p class="src">The county judge (${esc(county.officials[0].name)}) runs county government day to day. City money: the Arkadelphia board of directors and city manager. School money: elected school boards. Names from the county's own website.</p>
+<p>${hasGov ? `The people who vote your county's money sit on the <b>${esc(bodyName)}</b>${execTitle ? `, led by the ${esc(execTitle)}` : ''}. Here's who holds each office — names from the county's own record.` : `In ${esc(county.name)}, the decisions that shape daily life are made at the state and city level, not by a county government. Here are the county-level offices that remain.`}</p>
+${officialsTable || '<p class="src">The current office-holders are being added.</p>'}
+${jpTable}
+<p class="src">Not sure which district or precinct you're in? The county clerk's office can tell you in one call.</p>
 </section>
 
 <section>
 <h2>3 · Show up <span class="sub">— the calendar is the strategy</span></h2>
-<p><b>The quorum court meets the second Monday of every month</b> at the courthouse, and its meetings are public. The budget is written October through December — a concern raised in the fall lands in next year's budget; the same concern in spring waits a year. Budget committee and special sessions are public too, and their minutes are in <a href="/documents">our archive</a>.</p>
-<p><b>You can speak.</b> The court routinely votes to hear residents — the minutes show speakers getting three minutes each on contested questions. Come with one point, sourced if you can; the <a href="/budget">money trail</a> exists so you can cite the same documents the court has.</p>
+<p>${meetingLines}</p>
+<p>Public meetings are where the budget actually gets set, and residents can speak. Come with one point, sourced if you can — the <a href="/budget">money trail</a> exists so you can cite the same documents the officials have. Full schedule and any community events: <a href="/calendar">the calendar</a>.</p>
 </section>
 
 <section>
 <h2>4 · Ask for records <span class="sub">— rights, not favors</span></h2>
-<p>The Arkansas Freedom of Information Act gives every citizen the right to county records — budgets, minutes, contracts, the check register. Most of what this site publishes came from records anyone could have requested. A ready-to-send request for the records that would complete the money trail is on the <a href="/vendors">Who gets paid</a> page; responses are generally due within three business days.</p>
+<p>The ${esc(foia)} gives every citizen the right to public records — budgets, minutes, contracts, the check register. Most of what this site publishes came from records anyone could have requested. The <a href="/docket">docket</a> lists exactly which records would fill the remaining gaps, and the <a href="/budget">money trail</a> shows where they'd go.</p>
 </section>
 
 <section>
@@ -85,7 +96,7 @@ ${qcStr ? `<div class="issue" style="display:block;border-color:var(--sourced);b
 
   return layout({
     title: `Take part in your government — ${county.platform_name}`, current: '/participate', body, county,
-    description: 'Every way a Clark County resident can take part: be counted, know your JP, show up, speak, request records — rights you already have, made navigable.'
+    description: `Every way a ${esc(county.name)} resident can take part: raise a priority, be counted, know who represents you, show up, and request records — rights you already have, made navigable.`
   });
 }
 
