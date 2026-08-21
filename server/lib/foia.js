@@ -3,7 +3,12 @@
 const FOIA = {
   Arkansas: { name: 'Arkansas Freedom of Information Act', cite: 'Ark. Code § 25-19-101 et seq.' },
   Texas: { name: 'Texas Public Information Act', cite: 'Tex. Gov’t Code ch. 552' },
-  Massachusetts: { name: 'Massachusetts Public Records Law', cite: 'M.G.L. c. 66, § 10' }
+  Massachusetts: { name: 'Massachusetts Public Records Law', cite: 'M.G.L. c. 66, § 10' },
+  California: { name: 'California Public Records Act', cite: 'Cal. Gov’t Code § 7920.000 et seq.' },
+  Hawaii: { name: 'Hawaii Uniform Information Practices Act', cite: 'HRS ch. 92F' },
+  'North Carolina': { name: 'North Carolina Public Records Law', cite: 'N.C. Gen. Stat. ch. 132' },
+  Colorado: { name: 'Colorado Open Records Act', cite: 'C.R.S. § 24-72-200.1 et seq.' },
+  Virginia: { name: 'Virginia Freedom of Information Act', cite: 'Va. Code § 2.2-3700 et seq.' }
 };
 
 function foiaOf(state) {

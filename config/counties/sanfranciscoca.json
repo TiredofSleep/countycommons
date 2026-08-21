@@ -1,0 +1,130 @@
+{
+  "name": "San Francisco",
+  "state": "California",
+  "slug": "sanfranciscoca",
+  "seat": "San Francisco (consolidated city-county)",
+  "population": 873965,
+  "population_source": "2020 U.S. Census (July 2024 estimate ~827,500)",
+  "platform_name": "San Francisco Commons",
+  "sponsor_line": "A free, independent civic-transparency project",
+  "contact_email": "brayden.ozark@gmail.com",
+  "jurisdictions": [
+    {
+      "id": "sf",
+      "name": "City and County of San Francisco",
+      "kind": "county",
+      "governing_body": "Board of Supervisors (11 districts) with an elected Mayor",
+      "executive": "Mayor",
+      "website": "https://www.sf.gov"
+    }
+  ],
+  "peer_counties": [],
+  "officials": [
+    {
+      "office": "Mayor",
+      "name": "Daniel Lurie",
+      "term_expires": null,
+      "note": "Took office January 8, 2025.",
+      "source": "sf.gov/departments--office-mayor"
+    },
+    {
+      "office": "Sheriff",
+      "name": "Paul Miyamoto",
+      "term_expires": null,
+      "source": "sfsheriff.com"
+    },
+    {
+      "office": "District Attorney",
+      "name": "Brooke Jenkins",
+      "term_expires": null,
+      "source": "sfdistrictattorney.org"
+    },
+    {
+      "office": "Assessor-Recorder",
+      "name": "Joaquín Torres",
+      "term_expires": null
+    },
+    {
+      "office": "Treasurer & Tax Collector",
+      "name": "José Cisneros",
+      "term_expires": null,
+      "source": "sftreasurer.org"
+    },
+    {
+      "office": "City Attorney",
+      "name": "David Chiu",
+      "term_expires": null,
+      "source": "sfcityattorney.org"
+    },
+    {
+      "office": "Public Defender",
+      "name": "Mano Raju",
+      "term_expires": null
+    }
+  ],
+  "quorum_court": {
+    "source": "San Francisco is governed by an 11-member Board of Supervisors (one per district) and an elected Mayor; the Board sits as both the city council and the county board of supervisors.",
+    "justices": []
+  },
+  "records_portals": [
+    {
+      "id": "sf-openbook",
+      "name": "SF OpenBook (spending & vendor payments)",
+      "url": "https://openbook.sfgov.org"
+    }
+  ],
+  "calendar": {
+    "budget_adoption_window": {
+      "start_month": 6,
+      "end_month": 7,
+      "note": "The Mayor proposes in June and the Board adopts by the Aug 1 charter deadline; the fiscal year begins July 1. SF adopts a two-year budget."
+    },
+    "meetings": [
+      {
+        "body": "Board of Supervisors",
+        "schedule": "Tuesdays, 2:00 p.m.",
+        "note": "City Hall, 1 Dr. Carlton B. Goodlett Place."
+      }
+    ],
+    "election_blackouts": [
+      {
+        "note": "Bright lines: no candidate issues, no active-ballot-measure issues, no named-individual conduct issues.",
+        "start": null,
+        "end": null
+      }
+    ]
+  },
+  "data_sources": [
+    {
+      "id": "datasf",
+      "name": "DataSF open-data portal",
+      "url": "https://data.sfgov.org",
+      "holds": [
+        "budget appropriation ordinance",
+        "vendor payments"
+      ]
+    },
+    {
+      "id": "sf-openbook",
+      "name": "SF OpenBook",
+      "url": "https://openbook.sfgov.org",
+      "holds": [
+        "spending",
+        "revenue",
+        "supplier payments"
+      ]
+    },
+    {
+      "id": "sf-controller",
+      "name": "Controller’s Office",
+      "url": "https://www.sf.gov/departments--controller",
+      "holds": [
+        "budget",
+        "financial reports"
+      ]
+    }
+  ],
+  "currency_year": 2027,
+  "reading_level_target": "6th-8th grade",
+  "has_municipalities": false
+}

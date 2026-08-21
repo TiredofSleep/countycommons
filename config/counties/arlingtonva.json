@@ -1,0 +1,94 @@
+{
+  "name": "Arlington County",
+  "state": "Virginia",
+  "slug": "arlingtonva",
+  "seat": "Arlington (county-manager government; no incorporated towns)",
+  "population": 238643,
+  "population_source": "2020 U.S. Census",
+  "platform_name": "Arlington Commons",
+  "sponsor_line": "A free, independent civic-transparency project",
+  "contact_email": "brayden.ozark@gmail.com",
+  "jurisdictions": [
+    {
+      "id": "arlington-county",
+      "name": "Arlington County",
+      "kind": "county",
+      "governing_body": "County Board (5 at-large members)",
+      "executive": "County Board Chair",
+      "website": "https://www.arlingtonva.us"
+    }
+  ],
+  "peer_counties": [
+    "Fairfax",
+    "Alexandria",
+    "Loudoun",
+    "Prince William"
+  ],
+  "officials": [
+    {
+      "office": "Chair, County Board",
+      "name": "Matt de Ferranti",
+      "term_expires": null,
+      "note": "Elected board chair at the Jan 2026 organizational meeting."
+    },
+    {
+      "office": "Vice-Chair, County Board",
+      "name": "Maureen Coffey",
+      "term_expires": null
+    }
+  ],
+  "quorum_court": {
+    "source": "Arlington County is governed by a five-member County Board, elected at-large, which chooses its own chair each year; a professional County Manager runs day-to-day operations.",
+    "justices": []
+  },
+  "records_portals": [
+    {
+      "id": "arlington-opendata",
+      "name": "Arlington County open data",
+      "url": "https://data.arlingtonva.us"
+    }
+  ],
+  "calendar": {
+    "budget_adoption_window": {
+      "start_month": 2,
+      "end_month": 4,
+      "note": "The County Manager proposes in February and the County Board adopts in April; the fiscal year begins July 1."
+    },
+    "meetings": [
+      {
+        "body": "County Board",
+        "schedule": "monthly (Saturdays & Tuesdays)",
+        "note": "2100 Clarendon Blvd, Arlington."
+      }
+    ],
+    "election_blackouts": [
+      {
+        "note": "Bright lines: no candidate issues, no active-ballot-measure issues, no named-individual conduct issues.",
+        "start": null,
+        "end": null
+      }
+    ]
+  },
+  "data_sources": [
+    {
+      "id": "arlington-budget",
+      "name": "Arlington County adopted budget",
+      "url": "https://www.arlingtonva.us/Government/Programs/Budget-Finance",
+      "holds": [
+        "adopted budget",
+        "appropriations resolution"
+      ]
+    },
+    {
+      "id": "arlington-opendata",
+      "name": "Arlington open data (Socrata)",
+      "url": "https://data.arlingtonva.us",
+      "holds": [
+        "budget & spending datasets"
+      ]
+    }
+  ],
+  "currency_year": 2027,
+  "reading_level_target": "6th-8th grade",
+  "has_municipalities": false
+}
