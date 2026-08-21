@@ -574,6 +574,7 @@ app.get('/priorities', (req, res) => {
     proposed: req.query.proposed === '1',
     supported: req.query.supported === '1',
     blocked: req.query.blocked || null,
+    idea: (req.query.idea || '').slice(0, 120),
     mine: priorities.supportedBy(participant, req.tenantKey)
   }));
 });

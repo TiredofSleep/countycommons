@@ -11,6 +11,18 @@ const KIND = {
   reconsider: { label: 'Take a fresh look', cls: 'c-amb', mark: '⁈', prompt: 'Is this worth it?' }
 };
 
+// Starter ideas — the generative, joyful side of the board, so it never reads as
+// a blank page or a budget lecture. Clearly examples, not real posts; each is a
+// one-tap start that pre-fills the form. Big or small, build-something or
+// fix-the-everyday or food-as-a-utility or see-the-money-at-every-scale.
+const IDEAS = [
+  ['Build something the town would love', ['A skate park for the kids', 'A gazebo in the square', 'Benches and shade downtown', 'A splash pad for summer', 'A dog park', 'A community garden']],
+  ['Hire local talent', ['A mural by a local artist', 'Fund a neighbor’s passion project', 'A summer music series in the park']],
+  ['Food and the basics', ['A community fridge — food as a utility', 'A farmers-market pavilion', 'Help fill the school-lunch gap']],
+  ['Fix the everyday', ['A crosswalk by the school', 'Longer library hours', 'Grade the roads out past town']],
+  ['See the money, at every scale', ['Publish the school budget like this one', 'Put the check register online each month']]
+];
+
 function govBody(county) {
   const j = (county.jurisdictions || []).find(x => x.kind === 'county') || (county.jurisdictions || [])[0];
   return (j && j.governing_body) || 'quorum court';
@@ -69,6 +81,16 @@ function prioritiesPage(data, items, opts) {
   const body_name = govBody(county);
   const threshold = county.delivery_threshold || null;
 
+  // The starter-ideas menu — turns a blank board into a menu of winnable things.
+  // Each chip one-taps into the form pre-filled. Examples, plainly, not real posts.
+  const ideasBlock = `
+<section>
+<h2>Not sure where to start? <span class="sub">— tap one, or write your own</span></h2>
+<p class="src">Neighbors rally for real things here — big or small, joyful or practical. Pick one to start it, then say why in a line. If enough people want it, it goes to the folks who hold the budget.</p>
+${IDEAS.map(([g, items]) => `<p class="src" style="margin:10px 0 4px"><b>${esc(g)}</b></p>
+<div style="display:flex;gap:6px;flex-wrap:wrap">${items.map(it => `<a href="/priorities?idea=${encodeURIComponent(it)}#add" style="text-decoration:none;font-size:13.5px;border:1.5px solid var(--ink);background:var(--card);padding:6px 11px;color:var(--ink)">${esc(it)} <b style="color:var(--accent)">+</b></a>`).join('')}</div>`).join('')}
+</section>`;
+
   // Budget areas for the optional "what part of the county?" link — grounds a
   // priority in what people can actually see on the money trail.
   const areas = (data.budget.nodes || []).filter(n => n.parent === null && n.section === 'appropriations');
@@ -83,7 +105,7 @@ function prioritiesPage(data, items, opts) {
     <label style="display:block;margin:4px 0"><input type="radio" name="kind" value="reconsider"> <b>Take a fresh look</b> — I want them to weigh whether this is still worth it.</label>
   </fieldset>
   <label class="src" for="p-title">In a line, what is it?</label>
-  <input id="p-title" name="title" required maxlength="120" placeholder="e.g. Keep the county roads graded out past Gum Springs"
+  <input id="p-title" name="title" required maxlength="120" value="${esc(o.idea || '')}" placeholder="e.g. A skate park for the kids, or a gazebo for the market"
     style="width:100%;font-size:15px;padding:8px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink);margin:4px 0 10px">
   <label class="src" for="p-why">Why does it matter? <span style="opacity:.7">— this is the part the county actually needs</span></label>
   <textarea id="p-why" name="why" required maxlength="600" rows="3" placeholder="Say it plainly. What happens if they do — or don't?"
@@ -146,8 +168,11 @@ function prioritiesPage(data, items, opts) {
 ${o.proposed ? `<div class="issue" style="display:block;border-color:var(--sourced);background:var(--sourced-bg)"><b>Posted.</b> <span class="src">It's on the board below, and you're its first backer. Share it — this works when neighbors pile onto what they share.</span></div>` : ''}
 ${o.supported ? `<div class="issue" style="display:block;border-color:var(--sourced);background:var(--sourced-bg)"><b>You're on record.</b> <span class="src">Your backing is counted; your name is not shown.</span></div>` : ''}
 
-<section>
-<h2>Add a priority</h2>
+${ideasBlock}
+
+<section id="add">
+<h2>${o.idea ? 'Make it yours' : 'Or write your own'}</h2>
+${o.idea ? `<p class="src">You picked <b>“${esc(o.idea)}”</b> — keep it or change it, then say why it matters.</p>` : ''}
 ${proposeForm}
 </section>
 
