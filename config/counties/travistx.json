@@ -1,0 +1,208 @@
+{
+  "name": "Travis County",
+  "state": "Texas",
+  "slug": "travistx",
+  "seat": "Austin",
+  "population": 1290188,
+  "population_source": "2020 U.S. Census (latest estimate ~1.33M; the fifth-most-populous Texas county)",
+  "platform_name": "Travis Commons",
+  "sponsor_line": "A free, independent civic-transparency project",
+  "contact_email": "brayden.ozark@gmail.com",
+  "jurisdictions": [
+    {
+      "id": "travis-county",
+      "name": "Travis County",
+      "kind": "county",
+      "governing_body": "Commissioners Court (County Judge + 4 Precinct Commissioners)",
+      "executive": "County Judge",
+      "website": "https://www.traviscountytx.gov"
+    },
+    {
+      "id": "austin",
+      "name": "City of Austin",
+      "kind": "city",
+      "governing_body": "Austin City Council (Mayor + 10 districts)",
+      "executive": "City Manager",
+      "website": "https://www.austintexas.gov"
+    },
+    {
+      "id": "pflugerville",
+      "name": "City of Pflugerville",
+      "kind": "city",
+      "governing_body": "Pflugerville City Council",
+      "executive": "Mayor",
+      "website": "https://www.pflugervilletx.gov"
+    },
+    {
+      "id": "lakeway",
+      "name": "City of Lakeway",
+      "kind": "city",
+      "governing_body": "Lakeway City Council",
+      "executive": "Mayor",
+      "website": "https://www.lakeway-tx.gov"
+    }
+  ],
+  "peer_counties": [
+    "Williamson",
+    "Hays",
+    "Bastrop",
+    "Caldwell"
+  ],
+  "officials": [
+    {
+      "office": "County Judge",
+      "name": "Andy Brown",
+      "term_expires": null,
+      "note": "Presides over the Commissioners Court; countywide-elected.",
+      "source": "traviscountytx.gov"
+    },
+    {
+      "office": "Commissioner, Precinct 1",
+      "name": "Jeff Travillion",
+      "term_expires": "2026-12-31"
+    },
+    {
+      "office": "Commissioner, Precinct 2",
+      "name": "Brigid Shea",
+      "term_expires": "2026-12-31"
+    },
+    {
+      "office": "Commissioner, Precinct 3",
+      "name": "Ann Howard",
+      "term_expires": "2026-12-31"
+    },
+    {
+      "office": "Commissioner, Precinct 4",
+      "name": "Margaret Gómez",
+      "term_expires": "2026-12-31"
+    },
+    {
+      "office": "Sheriff",
+      "name": "Sally Hernandez",
+      "term_expires": null,
+      "source": "tcsheriff.org"
+    },
+    {
+      "office": "District Attorney",
+      "name": "José Garza",
+      "term_expires": "2028-12-31",
+      "source": "districtattorney.traviscountytx.gov"
+    },
+    {
+      "office": "County Attorney",
+      "name": "Delia Garza",
+      "term_expires": "2026-12-31"
+    },
+    {
+      "office": "Tax Assessor-Collector",
+      "name": "Celia Israel",
+      "term_expires": null,
+      "note": "In office since January 2025."
+    },
+    {
+      "office": "County Clerk",
+      "name": "Dyana Limon-Mercado",
+      "term_expires": "2026-12-31"
+    },
+    {
+      "office": "District Clerk",
+      "name": "Velva Price",
+      "term_expires": null,
+      "source": "traviscountytx.gov/district-clerk"
+    },
+    {
+      "office": "County Treasurer",
+      "name": "Dolores Ortega Carter",
+      "term_expires": "2026-12-31",
+      "note": "The Treasurer’s office still exists and is elected in Travis County."
+    },
+    {
+      "office": "County Auditor",
+      "name": "Patti Smith, CPA",
+      "term_expires": null,
+      "note": "Appointed by the district judges, not elected.",
+      "source": "traviscountytx.gov/county-auditor"
+    }
+  ],
+  "quorum_court": {
+    "source": "Travis County is governed by the Commissioners Court — the County Judge (at-large) plus four Precinct Commissioners. All four precinct seats and several other offices are on the November 2026 ballot, so this roster may change.",
+    "justices": [
+      {
+        "district": 1,
+        "name": "Jeff Travillion"
+      },
+      {
+        "district": 2,
+        "name": "Brigid Shea"
+      },
+      {
+        "district": 3,
+        "name": "Ann Howard"
+      },
+      {
+        "district": 4,
+        "name": "Margaret Gómez"
+      }
+    ]
+  },
+  "records_portals": [
+    {
+      "id": "travis-transparency",
+      "name": "Travis County Financial Transparency Portal (Vendor Payment Register)",
+      "url": "https://financialtransparency.traviscountytx.gov/"
+    }
+  ],
+  "calendar": {
+    "budget_adoption_window": {
+      "start_month": 8,
+      "end_month": 9,
+      "note": "The Commissioners Court adopts the next-year budget and tax rate in late summer; the fiscal year begins October 1."
+    },
+    "meetings": [
+      {
+        "body": "Commissioners Court",
+        "schedule": "Tuesdays, 9:00 a.m.",
+        "note": "Voting sessions weekly; work sessions the 2nd & 4th Thursdays. Commissioners Courtroom, 700 Lavaca St, Austin."
+      }
+    ],
+    "election_blackouts": [
+      {
+        "note": "County election year 2026 — the Commissioners Court and several countywide offices are on the ballot. Bright lines: no candidate issues, no active-ballot-measure issues, no named-individual conduct issues.",
+        "start": null,
+        "end": null
+      }
+    ]
+  },
+  "data_sources": [
+    {
+      "id": "travis-budget",
+      "name": "Travis County adopted budget",
+      "url": "https://www.traviscountytx.gov/planning-budget/current-year",
+      "holds": [
+        "adopted budgets",
+        "recapitulation financial statement"
+      ]
+    },
+    {
+      "id": "travis-transparency",
+      "name": "Travis County Financial Transparency Portal",
+      "url": "https://financialtransparency.traviscountytx.gov/",
+      "holds": [
+        "vendor payment register",
+        "vendor payment detail",
+        "ACFR"
+      ]
+    },
+    {
+      "id": "tcad",
+      "name": "Travis Central Appraisal District",
+      "url": "https://traviscad.org",
+      "holds": [
+        "certified taxable values"
+      ]
+    }
+  ],
+  "currency_year": 2026,
+  "reading_level_target": "6th-8th grade",
+  "has_municipalities": true
+}
