@@ -64,6 +64,63 @@ function participationTargets(county, places) {
   return { targets, hasCountyGov };
 }
 
+// The funnel: every level of government this county's residents can push at, from
+// the whole nation down to a single town. Each is its own board with its own set
+// of votes and its own count — you toggle between them. National and state are
+// shared across the whole network (a push that isn't about one county pools
+// voices from every host); county and city are this place's own.
+function funnelLevels(county, places) {
+  const { targets, hasCountyGov } = participationTargets(county, places);
+  const levels = [
+    { id: 'national', label: 'National', kind: 'national', body: 'Congress and federal agencies', scope: 'the whole country' }
+  ];
+  if (county.state) levels.push({ id: 'state', label: county.state, kind: 'state', body: `the ${county.state} legislature`, scope: `all of ${county.state}` });
+  for (const t of targets) levels.push({ id: t.id, label: t.label, kind: t.kind, body: t.body, pop: t.pop, scope: t.kind === 'county' ? `all of ${county.name}` : t.label });
+  return { levels, hasCountyGov };
+}
+
+// The threshold for one level. County and city size to their own electorate
+// (real petition precedent); national and state are network-wide ceilings until
+// we load real statewide/national turnout — labeled as such in the copy.
+function levelThreshold(lvl, county) {
+  if (!lvl) return deliveryThreshold(county);
+  if (lvl.kind === 'national') return 5000;
+  if (lvl.kind === 'state') return 2500;
+  return deliveryThreshold(county, lvl.pop || undefined);
+}
+
+// The toggle row itself — pills, current level filled in. A tap loads that
+// level's board; any picked starter idea rides along so it isn't lost. The upper
+// levels (nation → state → county) are always-visible pills; cities collapse
+// into an expandable group when there are many, so a big county doesn't become a
+// wall of forty pills. The currently-selected city always shows as a live pill.
+function levelFunnel(levels, currentId, idea) {
+  const q = idea ? '&idea=' + encodeURIComponent(idea) : '';
+  const tag = { national: 'nation', state: 'state', county: 'county', city: 'city', town: 'town' };
+  const pill = (l) => {
+    const on = l.id === currentId;
+    return `<a href="/priorities?level=${encodeURIComponent(l.id)}${q}#board" style="text-decoration:none;font-size:13.5px;line-height:1.2;padding:6px 11px;border:1.5px solid var(--ink);${on ? 'background:var(--ink);color:var(--paper)' : 'background:var(--card);color:var(--ink)'}"><span style="opacity:.6;font-size:10px;text-transform:uppercase;letter-spacing:.05em">${tag[l.kind] || ''}</span><br><b>${esc(l.label)}</b></a>`;
+  };
+  const upper = levels.filter(l => l.kind === 'national' || l.kind === 'state' || l.kind === 'county');
+  const cities = levels.filter(l => l.kind === 'city' || l.kind === 'town');
+  const currentIsCity = cities.some(c => c.id === currentId);
+  let cityHtml;
+  if (cities.length <= 6) {
+    cityHtml = cities.map(pill).join('');
+  } else {
+    // Many cities: an inline pill for the selected one, then a disclosure with all.
+    const selected = cities.find(c => c.id === currentId);
+    cityHtml = `${selected ? pill(selected) : ''}<details style="display:inline-block;vertical-align:top"${currentIsCity ? '' : ''}>
+      <summary style="cursor:pointer;font-size:13.5px;line-height:1.2;padding:6px 11px;border:1.5px dashed var(--ink);background:var(--card);color:var(--ink);list-style:none">${selected ? 'Other ' : ''}Cities &amp; towns (${cities.length}) ▾</summary>
+      <div style="display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 0">${cities.map(pill).join('')}</div>
+    </details>`;
+  }
+  return `<div class="eyebrow" style="margin:0 0 4px">the funnel — pick a level, each is its own board</div>
+<div style="display:flex;gap:6px;flex-wrap:wrap;margin:0 0 6px;align-items:flex-start">
+${upper.map(pill).join('')}${cityHtml}
+</div>`;
+}
+
 // The accountability loop, made visible. A priority's phase and the honest
 // count of days it has waited — the silence is the pressure.
 const PHASE = {
@@ -114,11 +171,14 @@ function trailHtml(p) {
 function prioritiesPage(data, items, opts) {
   const o = opts || {};
   const { county } = data;
-  const body_name = govBody(county);
-  const threshold = deliveryThreshold(county);
-  const { targets, hasCountyGov } = participationTargets(county, o.places);
-  const targetMap = Object.fromEntries(targets.map(t => [t.id, t]));
-  const defaultTarget = hasCountyGov ? 'county' : ((targets[0] && targets[0].id) || '');
+  const { levels, hasCountyGov } = funnelLevels(county, o.places);
+  // The selected level (from ?level=). Default to the county board where there's
+  // a county government, otherwise the first city — the honest local lane.
+  const defaultLevel = hasCountyGov ? 'county' : ((levels.find(l => l.kind === 'city' || l.kind === 'town') || {}).id || 'state');
+  const current = levels.find(l => l.id === o.level) || levels.find(l => l.id === defaultLevel) || levels[0];
+  const threshold = levelThreshold(current, county);
+  const body_name = current.body;
+  const isLocal = current.kind === 'county' || current.kind === 'city' || current.kind === 'town';
 
   // The starter-ideas menu — turns a blank board into a menu of winnable things.
   // Each chip one-taps into the form pre-filled. Examples, plainly, not real posts.
@@ -127,7 +187,7 @@ function prioritiesPage(data, items, opts) {
 <h2>Not sure where to start? <span class="sub">— tap one, or write your own</span></h2>
 <p class="src">Neighbors rally for real things here — big or small, joyful or practical. Pick one to start it, then say why in a line. If enough people want it, it goes to the folks who hold the budget.</p>
 ${IDEAS.map(([g, items]) => `<p class="src" style="margin:10px 0 4px"><b>${esc(g)}</b></p>
-<div style="display:flex;gap:6px;flex-wrap:wrap">${items.map(it => `<a href="/priorities?idea=${encodeURIComponent(it)}#add" style="text-decoration:none;font-size:13.5px;border:1.5px solid var(--ink);background:var(--card);padding:6px 11px;color:var(--ink)">${esc(it)} <b style="color:var(--accent)">+</b></a>`).join('')}</div>`).join('')}
+<div style="display:flex;gap:6px;flex-wrap:wrap">${items.map(it => `<a href="/priorities?level=${encodeURIComponent(current.id)}&idea=${encodeURIComponent(it)}#add" style="text-decoration:none;font-size:13.5px;border:1.5px solid var(--ink);background:var(--card);padding:6px 11px;color:var(--ink)">${esc(it)} <b style="color:var(--accent)">+</b></a>`).join('')}</div>`).join('')}
 </section>`;
 
   // Budget areas for the optional "what part of the county?" link — grounds a
@@ -138,15 +198,13 @@ ${IDEAS.map(([g, items]) => `<p class="src" style="margin:10px 0 4px"><b>${esc(g
   const proposeForm = `
 <form method="POST" action="/priorities/propose" style="margin-top:8px">
   ${o.blocked ? `<p class="src" style="color:var(--dead)"><b>That can't go up as written.</b> This platform never hosts questions about candidates, active ballot measures, or a named person's conduct (${esc(o.blocked)}). Say it about the work or the dollars, not a person, and it's welcome.</p>` : ''}
+  <input type="hidden" name="level" value="${esc(current.id)}">
+  <p class="src" style="margin:0 0 10px;border-left:3px solid var(--accent);padding-left:10px">Posting to the <b>${esc(current.label)}</b> board${current.body ? ` — aimed at ${esc(current.body)}` : ''}. ${levels.length > 1 ? `Wrong level? <a href="#board">Switch above.</a>` : ''}</p>
   <fieldset style="border:1.5px solid var(--rule);padding:12px;margin:0 0 10px">
     <legend class="src" style="padding:0 6px">What kind of ask is this?</legend>
-    <label style="display:block;margin:4px 0"><input type="radio" name="kind" value="prioritize" checked> <b>Prioritize it</b> — I want the county to lean into this.</label>
+    <label style="display:block;margin:4px 0"><input type="radio" name="kind" value="prioritize" checked> <b>Prioritize it</b> — I want them to lean into this.</label>
     <label style="display:block;margin:4px 0"><input type="radio" name="kind" value="reconsider"> <b>Take a fresh look</b> — I want them to weigh whether this is still worth it.</label>
   </fieldset>
-  ${targets.length ? `<label class="src" for="p-target">Who should hear this? <span style="opacity:.7">— the body that can act on it</span></label>
-  <select id="p-target" name="target" style="width:100%;font-size:15px;padding:8px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink);margin:4px 0 10px">
-    ${targets.map(t => `<option value="${esc(t.id)}"${t.id === defaultTarget ? ' selected' : ''}>${t.kind === 'county' ? '' : 'City · '}${esc(t.label)} — ${esc(t.body)}</option>`).join('')}
-  </select>` : ''}
   <label class="src" for="p-title">In a line, what is it?</label>
   <input id="p-title" name="title" required maxlength="120" value="${esc(o.idea || '')}" placeholder="e.g. A skate park for the kids, or a gazebo for the market"
     style="width:100%;font-size:15px;padding:8px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink);margin:4px 0 10px">
@@ -173,14 +231,14 @@ ${IDEAS.map(([g, items]) => `<p class="src" style="margin:10px 0 4px"><b>${esc(g
   </div>
   <p class="src" style="margin:6px 0 2px">${esc(p.why)}</p>
   ${area ? `<p class="src" style="margin:2px 0">On the money trail: <a href="/line/${esc(p.node_ref)}">${esc(area)}</a>.</p>` : ''}
-  ${p.target && targetMap[p.target] ? `<p class="src" style="margin:2px 0">→ for <b>${esc(targetMap[p.target].label)}</b> · ${esc(targetMap[p.target].body)}</p>` : ''}
   ${statusLine(p)}
-  ${p.phase === 'raised' ? progressBar(p.support, deliveryThreshold(county, (targetMap[p.target] || {}).pop), (targetMap[p.target] || {}).body || body_name) : ''}
+  ${p.phase === 'raised' ? progressBar(p.support, threshold, body_name) : ''}
   <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center;margin-top:8px">
     <span class="src"><b>${p.support}</b> ${p.support === 1 ? 'person is' : 'people are'} behind this${o.mine && o.mine.has(p.id) ? ' — <span style="color:var(--sourced)">including you</span>' : ''}</span>
     ${o.mine && o.mine.has(p.id) ? '' : `<details style="margin:0">
       <summary style="cursor:pointer;font-size:13px;color:var(--accent)">I'm with this →</summary>
       <form method="POST" action="/priorities/${esc(p.id)}/support" style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap;align-items:flex-start">
+        <input type="hidden" name="level" value="${esc(current.id)}">
         <input name="why" maxlength="400" placeholder="add your reason (optional)"
           style="flex:1;min-width:200px;font-size:14px;padding:7px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink)">
         <button type="submit" style="font-family:var(--mono);font-size:13px;padding:7px 12px;background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);cursor:pointer">Back it</button>
@@ -193,18 +251,20 @@ ${IDEAS.map(([g, items]) => `<p class="src" style="margin:10px 0 4px"><b>${esc(g
 
   const list = items.length
     ? items.map(card).join('')
-    : `<p class="src">No priorities yet. Be the first — and it helps to <a href="/budget">see what's already here</a> before you say what to lift up or question.</p>`;
+    : `<p class="src">Nothing on the <b>${esc(current.label)}</b> board yet — be the first. ${isLocal ? `It helps to <a href="/budget">see what's already here</a> before you say what to lift up or question.` : `Say what ${current.kind === 'national' ? 'the country' : esc(county.state)} should take on.`}</p>`;
 
   const body = `
 <header class="page">
   <div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · the community's voice</div>
-  <h1>What should the county prioritize?</h1>
-  <div class="src">We don't write the budget — we elected people to do that. This is where the community says what it wants them to weigh: what to lean into, or what to take a fresh look at, and <b>why</b>. Back the ones you share; the list ranks itself. It starts with seeing what's here — <a href="/budget">the money trail</a> shows where the money goes today.</div>
+  <h1>What should we push for — and at which level?</h1>
+  <div class="src">We don't write the budgets or the laws — we elected people to do that. This is where the community says what it wants them to weigh, and <b>why</b>. There's a board for every level of government, from your town all the way up to the nation. Pick a level, back what you share, and the list ranks itself.</div>
 </header>
 
+<div id="board">${levelFunnel(levels, current.id, o.idea)}</div>
+
 <div class="issue" style="display:block;border-left:3px solid var(--accent)">
-  <div class="eyebrow" style="color:var(--accent)">how this works</div>
-  <p class="src" style="margin:4px 0 0">Post what you want prioritized — or questioned — and why, and say <b>who should hear it: the county, or your city or town</b>. Others back what they agree with, so the strongest-felt priorities rise on their own.${threshold ? ` When one reaches <b>${threshold}</b> residents, it's formally carried to the body you chose${hasCountyGov ? '' : ` — and since ${esc(county.name)} has no county government to receive it, that means your city or town, where the decisions actually get made`}.` : ''} Their job is to fit it in; ours is to make it impossible to miss — and to track <a href="/outcomes">what came of it</a>.</p>
+  <div class="eyebrow" style="color:var(--accent)">the <b>${esc(current.label)}</b> board — its own count, its own votes</div>
+  <p class="src" style="margin:4px 0 0">This board is for what ${current.kind === 'national' ? 'the country' : current.kind === 'state' ? esc(county.state) : esc(current.label)} should do. Post what you want prioritized — or questioned — and why. Others back what they agree with, so the strongest-felt priorities rise on their own.${threshold ? ` When one reaches <b>${threshold}</b> ${isLocal ? 'residents' : 'people across the network'}, it's carried to <b>${esc(current.body)}</b>.` : ''}${!isLocal ? ` <span style="opacity:.85">National and state boards pool voices from every county on the platform; delivery targets there are still being built — but the count starts now.</span>` : ''} We track <a href="/outcomes">what came of it</a>.</p>
 </div>
 
 ${o.proposed ? `<div class="issue" style="display:block;border-color:var(--sourced);background:var(--sourced-bg)"><b>Posted.</b> <span class="src">It's on the board below, and you're its first backer. Share it — this works when neighbors pile onto what they share.</span></div>` : ''}
@@ -219,7 +279,7 @@ ${proposeForm}
 </section>
 
 <section>
-<h2>The community's priorities <span class="sub">— most-backed first</span></h2>
+<h2>On the ${esc(current.label)} board <span class="sub">— most-backed first</span></h2>
 ${list}
 </section>`;
 
@@ -229,4 +289,4 @@ ${list}
   });
 }
 
-module.exports = { prioritiesPage, PHASE, phaseBadge, statusLine, trailHtml, daysSince, srcLink, govBody, progressBar };
+module.exports = { prioritiesPage, PHASE, phaseBadge, statusLine, trailHtml, daysSince, srcLink, govBody, progressBar, funnelLevels, levelThreshold };

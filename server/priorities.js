@@ -76,7 +76,7 @@ function propose({ tenant, kind, title, why, node_ref, participant, county, targ
   s.priorities[id] = {
     id, tenant, kind, title, why,
     node_ref: node_ref || null,
-    target: target || null,
+    level, target: level, state: state || null,
     created_at: now,
     // The proposer is the first backer; keyed by token, never shown.
     supporters: participant ? { [participant]: { at: now } } : {},
@@ -154,28 +154,58 @@ function setStatus(id, status) { const s = load(); if (s.priorities[id]) { s.pri
 function remove(id) { const s = load(); if (s.priorities[id]) { delete s.priorities[id]; save(s); } }
 function mySupport(participant, id) { const p = get(id); return !!(p && p.supporters && p.supporters[participant]); }
 
-// The set of a county's priorities this participant already backs — one load,
-// so the board can mark them without re-reading the store per card.
+// The set of priorities this participant already backs — one load, so the board
+// can mark them without re-reading the store per card. Not level-scoped: a token
+// marks everything it has backed, which is all the board needs to show "you're in."
 function supportedBy(participant, tenant) {
   const set = new Set();
   if (!participant) return set;
   for (const p of Object.values(load().priorities)) {
-    if (p.tenant === tenant && p.status === 'open' && p.supporters && p.supporters[participant]) set.add(p.id);
+    if (p.status === 'open' && p.supporters && p.supporters[participant]) set.add(p.id);
   }
   return set;
 }
 
-// The ranked community voice for a county: most-backed first. Support is a
-// count; supporter reasons ride along (without names) as the texture behind it.
+function levelOf(p) { return p.level || p.target || 'county'; }
+
+function enrich(p) {
+  return {
+    id: p.id, kind: p.kind, title: p.title, why: p.why, node_ref: p.node_ref,
+    level: levelOf(p), target: p.target || levelOf(p), state: p.state || null,
+    tenant: p.tenant, created_at: p.created_at,
+    support: Object.keys(p.supporters || {}).length,
+    reasons: Object.values(p.supporters || {}).filter(x => x.why).map(x => x.why),
+    timeline: p.timeline || [], phase: phaseOf(p)
+  };
+}
+
+// Priorities at ONE funnel level — its own space, its own set of votes:
+//   national         -> shared across the whole network
+//   state            -> shared across every county in that state
+//   county           -> this county's own board
+//   city-<slug>      -> this specific city's own board
+// County/city are scoped to this tenant; national/state pool across tenants so a
+// statewide or nationwide push gathers voices from every host at once.
+function listByLevel({ tenant, state, level }) {
+  level = level || 'county';
+  return Object.values(load().priorities)
+    .filter(p => p.status === 'open')
+    .filter(p => {
+      const lv = levelOf(p);
+      if (level === 'national') return lv === 'national';
+      if (level === 'state') return lv === 'state' && p.state === state;
+      if (level === 'county') return p.tenant === tenant && lv === 'county';
+      return p.tenant === tenant && lv === level; // city-<slug>
+    })
+    .map(enrich)
+    .sort((a, b) => b.support - a.support || String(b.created_at).localeCompare(String(a.created_at)));
+}
+
+// The ranked community voice for a county (county-level only, back-compat).
 function listFor(tenant) {
   return Object.values(load().priorities)
-    .filter(p => p.status === 'open' && p.tenant === tenant)
-    .map(p => ({
-      id: p.id, kind: p.kind, title: p.title, why: p.why, node_ref: p.node_ref, target: p.target || null, created_at: p.created_at,
-      support: Object.keys(p.supporters || {}).length,
-      reasons: Object.values(p.supporters || {}).filter(x => x.why).map(x => x.why),
-      timeline: p.timeline || [], phase: phaseOf(p)
-    }))
+    .filter(p => p.status === 'open' && p.tenant === tenant && levelOf(p) === 'county')
+    .map(enrich)
     .sort((a, b) => b.support - a.support || String(b.created_at).localeCompare(String(a.created_at)));
 }
 
@@ -187,4 +217,4 @@ function listAll() {
     .sort((a, b) => String(b.created_at).localeCompare(String(a.created_at)));
 }
 
-module.exports = { propose, support, addOutcome, undoOutcome, phaseOf, get, setStatus, remove, mySupport, supportedBy, listFor, listAll };
+module.exports = { propose, support, addOutcome, undoOutcome, phaseOf, get, setStatus, remove, mySupport, supportedBy, listFor, listByLevel, listAll };

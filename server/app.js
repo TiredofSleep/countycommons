@@ -568,9 +568,12 @@ const { prioritiesPage } = require('./views/priorities');
 
 app.get('/priorities', (req, res) => {
   const data = load(req.tenantKey);
-  const items = priorities.listFor(req.tenantKey);
+  const state = data.county.state;
+  const level = (req.query.level || '').slice(0, 60) || 'county';
+  const items = priorities.listByLevel({ tenant: req.tenantKey, state, level });
   const participant = participantOf(req);
   res.send(prioritiesPage(data, items, {
+    level,
     proposed: req.query.proposed === '1',
     supported: req.query.supported === '1',
     blocked: req.query.blocked || null,
@@ -583,16 +586,19 @@ app.get('/priorities', (req, res) => {
 app.post('/priorities/propose', writeLimit, express.urlencoded({ extended: false }), (req, res) => {
   const participant = ensureParticipant(req, res);
   const b = req.body || {};
-  const r = priorities.propose({ tenant: req.tenantKey, kind: b.kind, title: b.title, why: b.why, node_ref: b.node_ref, target: b.target, participant, county: load(req.tenantKey).county });
-  if (r.error === 'bright-line') return res.redirect('/priorities?blocked=' + encodeURIComponent((r.flags || []).join(', ')));
-  if (r.error) return res.redirect('/priorities');
-  res.redirect('/priorities?proposed=1');
+  const level = (b.level || '').slice(0, 60) || 'county';
+  const back = '/priorities?level=' + encodeURIComponent(level);
+  const r = priorities.propose({ tenant: req.tenantKey, kind: b.kind, title: b.title, why: b.why, node_ref: b.node_ref, level, participant, county: load(req.tenantKey).county });
+  if (r.error === 'bright-line') return res.redirect(back + '&blocked=' + encodeURIComponent((r.flags || []).join(', ')) + '#add');
+  if (r.error) return res.redirect(back);
+  res.redirect(back + '&proposed=1#board');
 });
 
 app.post('/priorities/:id/support', writeLimit, express.urlencoded({ extended: false }), (req, res) => {
   const participant = ensureParticipant(req, res);
   priorities.support(participant, req.params.id, (req.body && req.body.why) || '');
-  res.redirect('/priorities?supported=1');
+  const level = ((req.body && req.body.level) || '').slice(0, 60) || 'county';
+  res.redirect('/priorities?level=' + encodeURIComponent(level) + '&supported=1#board');
 });
 
 // The accountability loop, in public: what the county did with each priority.
