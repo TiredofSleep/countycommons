@@ -21,10 +21,11 @@ function shell(county, title, body) {
 // feeds the elected republic, not a parallel government. A county question is
 // advisory signal carried to the body that decides — it informs elected
 // officials; it does not replace them or bind them.
-function republicFrame() {
+function republicFrame(county) {
+  const body = require('../lib/gov').govBodyName(county);
   return `<div style="border-left:3px solid var(--accent);background:var(--card);padding:10px 14px;margin:0 0 14px;max-width:680px">
   <div class="eyebrow" style="color:var(--accent)">the frame — it doesn't change</div>
-  <p style="font-size:13.5px;margin:4px 0 0">Direct participation here works <b>alongside the republic, not instead of it</b>. A question gathers residents' voice and carries it to the body that decides — the quorum court, the city board, the school board. Officials are guaranteed to <i>receive</i> a result; they are never bound by it. That's the whole design: sharper signal into the government we already have, never a replacement for it.</p>
+  <p style="font-size:13.5px;margin:4px 0 0">Direct participation here works <b>alongside the republic, not instead of it</b>. A question gathers residents' voice and carries it to the body that decides — ${esc(body)}, the city board, the school board. Officials are guaranteed to <i>receive</i> a result; they are never bound by it. That's the whole design: sharper signal into the government we already have, never a replacement for it.</p>
 </div>`;
 }
 
@@ -42,7 +43,7 @@ function adminDashboard(data, hostName) {
   <h1>Your county</h1>
   <div class="src">You're signed in as a host of ${esc(county.name)}${hostName ? `, ${esc(hostName)}` : ''}. You can shape your county's content here — every change is scoped to your county and stamped in the public record by name. The shared frame (how money is cited, how votes are counted, the privacy rules) stays fixed for everyone.</div>
 </header>
-${republicFrame()}
+${republicFrame(data.county)}
 <section>
 <h2>What you can edit</h2>
 <div style="display:flex;gap:10px;flex-wrap:wrap">
@@ -145,7 +146,7 @@ ${residentQuestions.length ? residentQuestions.map(q => modRow(q, '/admin/questi
   <h1>Questions</h1>
   <div class="src">Open a yes/no question for your county's residents, and close it when it's run its course. Every question travels through the same counting room and the same rules as ours.</div>
 </header>
-${republicFrame()}
+${republicFrame(data.county)}
 ${opts.opened ? `<p class="src" style="color:var(--sourced)"><b>Question opened ✓</b> — live on <a href="/issues">Open questions</a> now.</p>` : ''}
 ${opts.closed ? `<p class="src" style="color:var(--sourced)"><b>Question closed.</b></p>` : ''}
 ${opts.blocked ? `<div class="issue" style="display:block;border-color:var(--dead)"><b style="color:var(--dead)">That question can't be opened.</b><p class="src" style="margin:6px 0 0">A charter bright line was matched (${esc(opts.blocked)}). County Commons never runs questions about candidates, active ballot measures, or a named person's conduct — those belong to elections and the courts, not to an advisory poll. Reword it to ask about a policy or a dollar, not a person or a race.</p></div>` : ''}
@@ -240,7 +241,7 @@ function adminPriorities(data, items, opts = {}) {
   <h1>Community priorities</h1>
   <div class="src">What residents posted for ${esc(county.name)} to lean into or take a fresh look at — and your control surface for the accountability loop. ${threshold ? `At <b>${threshold}</b> backers a priority is ready to carry to the officials; you send it and record each step here.` : 'Record what the county does with each one here.'} Candidate, ballot-measure, and named-official posts are refused automatically. Every action is stamped in the public record by your name.</div>
 </header>
-${republicFrame()}
+${republicFrame(data.county)}
 ${opts.removed ? `<p class="src" style="color:var(--sourced)"><b>Removed ✓</b> — it's off the board.</p>` : ''}
 ${opts.recorded ? `<p class="src" style="color:var(--sourced)"><b>Recorded ✓</b> — it's on <a href="/outcomes">the outcomes page</a> now, cited and dated.</p>` : ''}
 ${ready.length ? `<div class="issue" style="display:block;border-color:var(--sourced)"><b style="color:var(--sourced)">${ready.length} ready to carry to the county</b><p class="src" style="margin:4px 0 0">These passed ${threshold} backers. Send them to the officials, then record it below.</p></div>` : ''}

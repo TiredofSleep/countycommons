@@ -41,7 +41,7 @@ const IDEAS = [
 
 function govBody(county) {
   const j = (county.jurisdictions || []).find(x => x.kind === 'county') || (county.jurisdictions || [])[0];
-  return (j && j.governing_body) || 'quorum court';
+  return (j && j.governing_body) || 'the county governing body';
 }
 
 // The bodies a resident can direct a priority to: the county's governing body

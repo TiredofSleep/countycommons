@@ -1,24 +1,104 @@
 const { esc, money } = require('../lib/corpus');
 const { layout } = require('./layout');
+const { govBodyName } = require('../lib/gov');
+const { foiaOf } = require('../lib/foia');
 
-// The plain-words synthesis: what the money is, what we found, who decides,
-// and how a resident gets heard. Reading level target: 6th-8th grade.
-// Every number here links to its citation page. This page navigates;
-// it never tells anyone what to want.
+// The plain-words synthesis: what the money is, who decides, and how a resident
+// gets heard. Reading level target: 6th-8th grade. Every number links to its
+// citation page. This page navigates; it never tells anyone what to want.
+//
+// The flagship (Clark) has a hand-written tour of its own investigation. Every
+// other county gets the same shape, computed from its own corpus and config —
+// so no county ever sees another county's government data.
 
-function storyPage(data) {
+const MONTHS = ['', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+function hero(county) {
+  return `<header class="page">
+  <div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · start here · plain words</div>
+  <h1 style="font-size:clamp(27px,5.4vw,44px);line-height:1.08;margin:8px 0 10px">See where the money goes.<br>Then have your say.</h1>
+  <div class="src" style="font-size:16px;max-width:66ch">The whole story so far, in plain words — what ${esc(county.name)} spends, who decides it, and how you get heard. Every number links to the document it came from. Nothing here tells you what to think.</div>
+</header>`;
+}
+
+// ---- the generic, computed tour (every non-flagship county) ----
+function genericStory(data) {
+  const { budget, county } = data;
+  const total = budget.meta.grand_total;
+  const hasBudget = total > 0;
+  const pop = county.population;
+  const perResident = (hasBudget && pop) ? Math.round(total / pop) : null;
+  const areas = (budget.nodes || []).filter(n => n.parent === null && n.section === 'appropriations' && n.amount).sort((a, b) => b.amount - a.amount);
+  const top = areas.slice(0, 3);
+  const adjacents = (budget.nodes || []).filter(n => n.parent === null && n.section === 'adjacent' && n.amount);
+  const body_name = govBodyName(county);
+  const exec = (county.officials || []).find(o => /judge|executive|mayor|manager/i.test(o.office || ''));
+  const jps = (county.quorum_court && county.quorum_court.justices) || [];
+  const foia = foiaOf(county.state);
+  const win = (county.calendar && county.calendar.budget_adoption_window) || null;
+  const memberWord = /commission/i.test(body_name) ? 'commissioner' : /quorum|justice/i.test(body_name) ? 'justice of the peace' : 'member';
+  const hasCountyGov = (county.jurisdictions || []).some(j => j.kind === 'county') && !/abolish|no county|commonwealth|state-funded/i.test(body_name);
+  const abolished = /abolish/i.test((county.seat || '') + ' ' + ((county.quorum_court && county.quorum_court.source) || '') + ' ' + body_name);
+  const noGovReason = abolished
+    ? 'County government here was abolished, so there is no county council and no county budget — only a few countywide offices remain.'
+    : 'The county government does not run a general-purpose budget of its own.';
+
+  const section1 = hasBudget ? `
+<section>
+<h2>1 · The short version <span class="sub">— one minute</span></h2>
+<p><b>${esc(county.name)} plans to spend <a href="/verify">${money(total)}</a> in ${esc(String(budget.meta.year))}.</b>${perResident ? ` That is about <b>$${perResident.toLocaleString('en-US')} for every person</b> who lives here.` : ''}</p>
+${top.length ? `<p><b>The biggest pieces of it:</b> ${top.map(n => `<a href="/line/${esc(n.id)}">${esc(n.name)}</a> (${money(n.amount)})`).join(', ')}. <a href="/budget">Walk the whole money trail →</a></p>` : ''}
+<p><b>Everything here is checked arithmetic.</b> Every branch of the money tree adds up to the dollar, and <a href="/verify">you can see the receipt</a>. Where a number isn't known yet, the page says so out loud — a dead end means "not yet ingested and navigable," never "hidden."</p>
+</section>` : `
+<section>
+<h2>1 · The short version <span class="sub">— one minute</span></h2>
+<p><b>${esc(county.name)} has no general-purpose county budget to walk.</b> ${esc(noGovReason)}</p>
+${adjacents.length ? `<p><b>What this site follows instead:</b> ${adjacents.map(n => `<a href="/line/${esc(n.id)}">${esc(n.name)}</a>${n.amount ? ` (${money(n.amount)})` : ''}`).join(', ')} — on the <a href="/budget">money trail</a>${county.has_municipalities ? `, and each city's own budget on the <a href="/places">cities &amp; towns page</a>` : ''}.</p>` : ''}
+<p><b>Everything here is checked arithmetic and cited.</b> Every number links to its source, and where a record isn't ingested yet the page says so out loud — a dead end means "not yet navigable," never "hidden."</p>
+</section>`;
+
+  const section2 = hasCountyGov ? `
+<section>
+<h2>2 · Who actually decides <span class="sub">— the map of power over this money</span></h2>
+<p>The budget is adopted by <b>${esc(body_name)}</b>${exec ? `, while ${esc(exec.name)} (${esc(exec.office)}) runs the day-to-day` : ''}.${jps.length ? ` If you live here, one of these ${jps.length} people — your ${esc(memberWord)} — answers to your vote:` : ''}</p>
+${jps.length ? `<table class="plain"><thead><tr><th>District</th><th>${esc(memberWord.replace(/^./, c => c.toUpperCase()))}</th></tr></thead><tbody>
+${jps.map(j => `<tr><td class="num">${esc(String(j.district))}</td><td>${esc(j.name)}</td></tr>`).join('')}
+</tbody></table>` : ''}
+<p class="src">Cities and school districts set their own budgets and tax rates through their own boards. See the full roster and how to reach them on the <a href="/participate">who-decides page</a>${county.has_municipalities ? `, and each city's own budget on the <a href="/places">cities &amp; towns page</a>` : ''}.</p>
+</section>` : `
+<section>
+<h2>2 · Who actually decides <span class="sub">— the map of power here</span></h2>
+<p><b>There is no county governing body to lobby here.</b> ${esc(noGovReason)} The governments that actually tax and spend are your <b>city or town</b> and the <b>state</b>${county.has_municipalities ? `` : ''}. See who they are and how to reach them on the <a href="/participate">who-decides page</a>${county.has_municipalities ? `, and each city's own budget on the <a href="/places">cities &amp; towns page</a>` : ''}.</p>
+<p class="src">That is also why the <a href="/priorities">priorities board</a> here points at the city and state levels, not a county one — the honest lane for where the decisions actually get made.</p>
+</section>`;
+
+  return `${hero(county)}
+${section1}
+${section2}
+
+<section>
+<h2>3 · How to be heard <span class="sub">— the calendar is the strategy</span></h2>
+${win ? `<p><b>The budget is written ${MONTHS[win.start_month] || ''}${win.end_month && win.end_month !== win.start_month ? '–' + (MONTHS[win.end_month] || '') : ''}.</b> ${win.note ? esc(win.note) + ' ' : ''}A concern raised while the budget is being written lands in it; the same concern raised after waits a year. If you care about a number in this tree, that window is when it moves.</p>` : ''}
+<p><b>Put it on the record — here.</b> Say what to prioritize, and why, on the <a href="/priorities">priorities board</a>, or answer an <a href="/issues">open question</a>. When enough neighbors back the same thing, it is carried to the people who decide, and <a href="/outcomes">what they do with it is tracked in the open</a>.</p>
+<p><b>The records are yours.</b> The ${esc(foia.name)}${foia.cite ? ` (${esc(foia.cite)})` : ''} gives every citizen the right to public records — budgets, minutes, contracts, the check register. Most of what this site publishes came from records anyone could have requested. The <a href="/docket">docket</a> lists exactly which records would fill the remaining gaps.</p>
+<p><b>Check the math yourself.</b> Every number links to its source. Every branch is re-added by a program, and <a href="/verify">the receipt is public</a>. If you find an error, that is a gift — the whole point is that it can be checked.</p>
+</section>
+
+<section>
+<h2>4 · What we still cannot see <span class="sub">— the honest gaps</span></h2>
+<p>The <a href="/docket">First Issues Docket</a> tracks every gap — the records still to pull, the pools no document yet itemizes. Each entry says what is known and what only a records request or a counter visit can answer. That open-to-answered loop is the platform's running work, in public.</p>
+</section>`;
+}
+
+// ---- the flagship's hand-written tour (Clark County only) ----
+function clarkStory(data) {
   const { budget, county } = data;
   const total = budget.meta.grand_total;
   const pop = county.population;
   const perResident = Math.round(total / pop);
   const jps = county.quorum_court.justices;
 
-  const body = `
-<header class="page">
-  <div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · start here</div>
-  <h1>The money, in plain words</h1>
-  <div class="src">This page tells the whole story so far — what your county spends, what we found while tracing it, who makes the decisions, and how you get heard. Every number links to the document it came from. Nothing here tells you what to think.</div>
-</header>
+  return `${hero(county)}
 
 <section>
 <h2>1 · The short version <span class="sub">— five things, one minute</span></h2>
@@ -64,6 +144,7 @@ ${jps.map(j => `<tr><td class="num">${j.district}</td><td>${esc(j.name)}</td></t
 <p><b>The budget is written in the fall.</b> Departments send requests in late summer; the quorum court works the budget October through December and adopts it before January. A concern raised in November lands in next year's budget. The same concern raised in March waits ten months. If you care about a number in this tree, fall is when it moves.</p>
 <p><b>Meetings are public and you can speak.</b> The quorum court meets monthly at the courthouse. City board and school board meetings are public too. Showing up matters more than most people think — most months, almost nobody does.</p>
 <p><b>The records are yours.</b> Arkansas's Freedom of Information Act gives every citizen the right to see county records — budgets, minutes, contracts, even the check register. Most of what this site publishes came from records anyone could have requested. The <a href="/docket">docket</a> lists what we are still chasing, and every "dead end" on this site is a records request waiting for a requester.</p>
+<p><b>Put it on the record — here.</b> Say what to prioritize on the <a href="/priorities">priorities board</a>, or answer an <a href="/issues">open question</a>; enough neighbors behind the same thing carries it to the people above, and <a href="/outcomes">what they do is tracked in the open</a>.</p>
 <p><b>Check the math yourself.</b> Every number links to its source page. Every branch is re-added by a program, and <a href="/verify">the receipt is public</a>. If you find an error, that is a gift — the whole point of this site is that it can be checked.</p>
 </section>
 
@@ -71,8 +152,17 @@ ${jps.map(j => `<tr><td class="num">${j.district}</td><td>${esc(j.name)}</td></t
 <h2>6 · What we still cannot see <span class="sub">— the honest gaps</span></h2>
 <p>The <a href="/docket">First Issues Docket</a> tracks every gap: the city's budget document, the EDCCC recipient list, fire department dues, the treasurer's reports, and the county check register. Each entry says what the internet answered and what only a records request or a counter visit can. A dead end here means "not yet ingested and navigable" — never "hidden."</p>
 </section>`;
+}
 
-  return layout({ title: `Start here — the money in plain words — ${county.platform_name}`, current: '/story', body, county });
+function storyPage(data, opts) {
+  const { county } = data;
+  const isFlagship = opts && opts.isFlagship;
+  const body = isFlagship ? clarkStory(data) : genericStory(data);
+  return layout({
+    title: `Start here — the money in plain words — ${county.platform_name}`,
+    current: '/guide', body, county,
+    description: `Where ${county.name}'s money goes, who decides it, and how to be heard — the plain-words tour, written for neighbors.`
+  });
 }
 
 module.exports = { storyPage };

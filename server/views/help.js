@@ -41,7 +41,7 @@ ${cats}
 
   return layout({
     title: `If you're in a hard spot — ${county.platform_name}`, current: '/help', body, county,
-    description: 'Food, light bill, rent, benefits — the real Clark County options with phone numbers and hours. No forms, no runaround.'
+    description: `Food, light bill, rent, benefits — the real ${county.name} options with phone numbers and hours. No forms, no runaround.`
   });
 }
 

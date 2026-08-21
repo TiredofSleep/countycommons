@@ -15,7 +15,7 @@ function vendorsPage(data) {
       title: `Who gets paid — ${county.platform_name}`, current: '/vendors', county,
       body: `<header class="page"><div class="eyebrow">${esc(county.name)}, ${esc(county.state)}</div>
 <h1>Who gets paid</h1>
-<div class="src">This page names the companies and people that public documents show receiving ${esc(county.name)} money — and marks the pools where no document names a payee yet. For ${esc(county.name)}, this layer isn't ingested yet: the budget shows the funds on the <a href="/budget">money trail</a>, but the checks, contracts, and bid awards that name the actual payees are the next pull — from quorum court minutes, bid records, and the check register. Not hidden; not yet navigable.</div></header>`,
+<div class="src">This page names the companies and people that public documents show receiving ${esc(county.name)} money — and marks the pools where no document names a payee yet. For ${esc(county.name)}, this layer isn't ingested yet: the budget shows the funds on the <a href="/budget">money trail</a>, but the checks, contracts, and bid awards that name the actual payees are the next pull — from ${esc(require('../lib/gov').govBodyName(county))} minutes, bid records, and the check register. Not hidden; not yet navigable.</div></header>`,
       description: `${county.name}: who receives public money, as documents name them.`
     });
   }
@@ -68,7 +68,7 @@ ${vendors.how_it_becomes_knowable.map(h => `<p class="src">· ${esc(h)}</p>`).jo
 </section>
 
 <section>
-<h2>The records request, ready to send <span class="sub">— any Arkansas citizen can send this</span></h2>
+<h2>The records request, ready to send <span class="sub">— any ${esc(county.state)} citizen can send this</span></h2>
 <p class="src">${esc(vendors.foia.law)} Custodian: ${esc(vendors.foia.custodian)}.</p>
 <div class="card"><pre style="white-space:pre-wrap;font-family:var(--mono);font-size:12.5px;margin:0">${esc(vendors.foia.template)}</pre></div>
 <p class="src">When the responsive records arrive, they go in the corpus like everything else — cited, hashed, and navigable. The open requests are tracked on <a href="/docket">the docket</a>.</p>

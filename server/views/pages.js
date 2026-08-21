@@ -195,7 +195,7 @@ function methodologyPage(data) {
 
 <section>
 <h3>Three layers of the money trail</h3>
-<p><b>Layer one — appropriations:</b> what the quorum court authorized to be spent. That is what this site shows today.
+<p><b>Layer one — appropriations:</b> what ${esc(require('../lib/gov').govBodyName(county))} authorized to be spent. That is what this site shows today.
 <b>Layer two — actuals:</b> what was really spent, from audit and treasurer reports (docket #8).
 <b>Layer three — transactions:</b> which vendor got which check (docket #10).
 Every number on this site says which layer it comes from, because mixing them up is how budget arguments go wrong.</p>

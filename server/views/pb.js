@@ -106,7 +106,7 @@ function pbPage(data, exercise, participant, myAlloc, tally, opts) {
 <h2>The people's budget, so far <span class="sub">— beside what the county adopted</span></h2>
 ${tally.provisional ? `<p class="src" style="color:var(--accent)">Early signal — <b>${tally.participants}</b> ${tally.participants === 1 ? 'person has' : 'people have'} taken part. Under ${tally.floor}, read this as a first sketch, not a verdict.</p>` : `<p class="src"><b>${tally.participants}</b> people have taken part.</p>`}
 ${exercise.options.map(resultRow).join('')}
-<p class="src">"Residents" is the average of everyone's tokens, turned back into dollars so the six pieces still add up to the whole ${money(exercise.pot_amount)} fund. It is a signal to the quorum court — it does not move a dollar.</p>
+<p class="src">"Residents" is the average of everyone's tokens, turned back into dollars so the six pieces still add up to the whole ${money(exercise.pot_amount)} fund. It is a signal to ${esc(require('../lib/gov').govBodyName(county))} — it does not move a dollar.</p>
 </section>` : `
 <section>
 <h2>The people's budget</h2>

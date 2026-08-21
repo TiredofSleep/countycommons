@@ -314,7 +314,7 @@ It was built first in Clark County, Arkansas, and generalized so any county coul
   }));
 });
 
-app.get('/guide', (req, res) => res.send(storyPage(load(req.tenantKey))));
+app.get('/guide', (req, res) => res.send(storyPage(load(req.tenantKey), { isFlagship: req.tenantKey === tenant.registry().default })));
 
 const { stancePage } = require('./views/stance');
 const { participatePage } = require('./views/participate');
@@ -345,13 +345,22 @@ app.get('/calendar', (req, res) => res.send(calendarPage(load(req.tenantKey))));
 app.get('/vendors', (req, res) => res.send(vendorsPage(load(req.tenantKey))));
 app.get('/audits', (req, res) => res.send(auditsPage(load(req.tenantKey))));
 
-app.get('/compare/spending', (req, res) => res.send(spendingPage(load(req.tenantKey))));
+app.get('/compare/spending', (req, res) => {
+  // Hardcoded Clark-vs-neighbor analysis — flagship only; others go to the tree.
+  if (req.tenantKey !== tenant.registry().default) return res.redirect('/budget');
+  res.send(spendingPage(load(req.tenantKey)));
+});
 
 // Cross-county comparison, per resident, by function, with AR/US benchmarks.
 // Registered before /compare/:id so it isn't caught as a comparison id.
 const { compute: computeCountyCompare } = require('./lib/countycompare');
 const { compareCountiesPage } = require('./views/comparecounties');
-app.get('/compare/counties', (req, res) => res.send(compareCountiesPage(load(req.tenantKey), computeCountyCompare())));
+app.get('/compare/counties', (req, res) => {
+  // Hardcoded Clark-vs-Garland Arkansas comparison — flagship only; others to
+  // the universal network directory.
+  if (req.tenantKey !== tenant.registry().default) return res.redirect('/counties');
+  res.send(compareCountiesPage(load(req.tenantKey), computeCountyCompare()));
+});
 
 // The county directory: every county on the network, live or awaiting a host.
 // Reachable once you're inside — this is how a resident navigates the whole

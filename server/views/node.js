@@ -1,12 +1,17 @@
 const { esc, money, pct, STATUS } = require('../lib/corpus');
 const { layout } = require('./layout');
 
-const LAYERS = {
-  appropriation: 'Layer one: what the quorum court authorized to be spent. What was actually spent is layer two (audit and treasurer reports); which vendor got which check is layer three (check register).',
-  actual: 'Layer two: what was actually spent, from audit and treasurer reports.',
-  transaction: 'Layer three: transaction-level detail — which vendor got which check.',
-  reference: 'Reference material: state publications and directories that explain the numbers (millage books, salary surveys) rather than authorize or record spending.'
-};
+const { govBodyName } = require('../lib/gov');
+
+function layerText(layer, county) {
+  const bodies = {
+    appropriation: `Layer one: what ${govBodyName(county)} authorized to be spent. What was actually spent is layer two (audit and treasurer reports); which vendor got which check is layer three (check register).`,
+    actual: 'Layer two: what was actually spent, from audit and treasurer reports.',
+    transaction: 'Layer three: transaction-level detail — which vendor got which check.',
+    reference: 'Reference material: state publications and directories that explain the numbers (millage books, salary surveys) rather than authorize or record spending.'
+  };
+  return bodies[layer] || '';
+}
 
 function ancestors(node, byId) {
   const chain = [];
@@ -79,7 +84,7 @@ function nodePage(data, node) {
 <dl class="prov">
   <dt>Source</dt><dd>${sourceRow}</dd>
   ${pageRow ? `<dt>Page</dt><dd>${pageRow}</dd>` : ''}
-  <dt>Layer</dt><dd>${esc(node.layer)} — ${esc(LAYERS[node.layer])}</dd>
+  <dt>Layer</dt><dd>${esc(node.layer)} — ${esc(layerText(node.layer, county))}</dd>
   <dt>Checked</dt><dd>${verify}</dd>
   ${share ? `<dt>Share</dt><dd>${share}</dd>` : ''}
   ${issue ? `<dt>Docket</dt><dd><a href="/docket#i${issue.num}">Issue #${issue.num} — ${esc(issue.title)}</a> (${esc(issue.status.replace('_', ' '))})</dd>` : ''}

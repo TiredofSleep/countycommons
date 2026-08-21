@@ -39,13 +39,13 @@ function casePage(data, c) {
 
 <section><h2>What happened</h2><p>${esc(c.what_happened)}</p></section>
 <section><h2>What the evidence shows</h2><p>${esc(c.what_evidence_shows)}</p></section>
-<section><h2>What it teaches Clark County</h2><p>${esc(c.what_it_teaches)}</p></section>
+<section><h2>What it teaches ${esc(county.name)}</h2><p>${esc(c.what_it_teaches)}</p></section>
 <section><h2>The honest caveat</h2><p class="src">${esc(c.caveats)}</p></section>
 <section><p class="src">Sources: ${c.sources.map(s => `<a href="${esc(s.url)}" rel="noopener">${esc(s.label)}</a>`).join(' · ')}</p></section>`;
 
   return layout({
     title: `${c.title} — ${county.platform_name}`, current: null, body, county,
-    description: `${c.place}, ${c.era}: what happened, what the evidence shows, and what it teaches Clark County.`
+    description: `${c.place}, ${c.era}: what happened, what the evidence shows, and what it teaches ${county.name}.`
   });
 }
 

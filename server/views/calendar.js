@@ -71,7 +71,7 @@ ${calendar.community.listings.length
 
   return layout({
     title: `The calendar — ${county.platform_name}`, current: '/calendar', body, county,
-    description: "Every public meeting where Clark County's decisions get made — dates computed live, rooms named, sources cited. Community events welcome."
+    description: `Every public meeting where ${county.name}'s decisions get made — dates computed live, rooms named, sources cited. Community events welcome.`
   });
 }
 
