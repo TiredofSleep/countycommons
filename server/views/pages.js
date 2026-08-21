@@ -218,14 +218,26 @@ ${(() => {
 
 <section>
 <h3>What this site never does</h3>
-<p>It never editorializes, never advocates, and never guesses. A dead end means "not yet ingested and navigable" — never "hidden." Where a number could be misread without context (like the county's $45,921 fire pass-through, which is only one slice of how fire departments are funded), the caveat is attached to the number itself.</p>
+<p>It never editorializes, never advocates, and never guesses. A dead end means "not yet ingested and navigable" — never "hidden." Where a number could be misread without context — like a small pass-through that is only one slice of how something is really funded — the caveat is attached to the number itself.</p>
 <p>And it never investigates people, and never renders verdicts — in either direction. This site maps where public money goes, as public documents draw the map. Naming a payee documents a transaction, not a suspicion. Where the map has a missing piece, the site asks for that piece — openly, from the records that hold it — and publishes what the record shows, whatever it shows. The trail and where it stops: that is the entire product.</p>
 </section>
 
 <section>
 <h3>Independent — and plainly so</h3>
-<p><b>${esc(county.platform_name)} is not a government website.</b> It is an independent project built by a resident, with no affiliation with, funding from, or endorsement by ${esc(county.name)}, the City of Arkadelphia, any school district, or any government body. For official business — paying taxes, filing records, contacting offices — use the official sites: <a href="https://www.clarkcountyar.gov" rel="noopener">clarkcountyar.gov</a> for the county and <a href="https://www.arkadelphia.gov" rel="noopener">arkadelphia.gov</a> for the city.</p>
-<p><b>The documents here are public records.</b> Ordinances, budgets, minutes, and audit reports are government records, obtained from official sources under the Arkansas Freedom of Information Act (Ark. Code § 25-19-101 et seq.) or from public websites. Government edicts and public records carry no copyright that bars republication; each document page shows where its copy came from and its checksum so you can confirm it is unaltered.</p>
+${(() => {
+  const juris = county.jurisdictions || [];
+  const countyJ = juris.find(j => j.kind === 'county');
+  const cityJ = juris.find(j => (j.kind === 'city' || j.kind === 'town') && j.website);
+  const link = (w) => w ? `<a href="${esc(w)}" rel="noopener">${esc(w.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, ''))}</a>` : null;
+  const sites = [countyJ && countyJ.website ? `${link(countyJ.website)} for the county` : null,
+                 cityJ ? `${link(cityJ.website)} for ${esc(cityJ.name.replace(/^(City|Town) of /, ''))}` : null].filter(Boolean);
+  return `<p><b>${esc(county.platform_name)} is not a government website.</b> It is an independent project built by a resident, with no affiliation with, funding from, or endorsement by ${esc(county.name)}, any city or town, any school district, or any government body.${sites.length ? ` For official business — paying taxes, filing records, contacting offices — use the official sites: ${sites.join(' and ')}.` : ''}</p>`;
+})()}
+${(() => {
+  const { foiaOf } = require('../lib/foia');
+  const f = foiaOf(county.state);
+  return `<p><b>The documents here are public records.</b> Ordinances, budgets, minutes, and audit reports are government records, obtained from official sources under the ${esc(f.name)}${f.cite ? ` (${esc(f.cite)})` : ''} or from public websites. Government edicts and public records carry no copyright that bars republication; each document page shows where its copy came from and its checksum so you can confirm it is unaltered.</p>`;
+})()}
 <p><b>Question results are unofficial.</b> Counts on this site are community sentiment gathered by a private platform. They are not an election, not a referendum, not a petition under any statute, and they bind no one. Their only power is that the counting method is published and checkable.</p>
 <p><b>Nothing here is professional advice.</b> The Help Finder shares contact information for local programs; each program decides its own eligibility, and hours and rules change — call ahead. Budget figures are transcriptions of public documents, not financial, legal, or tax advice.</p>
 <p><b>Names appear only as public records place them.</b> Officials, vendors, and payees are named exactly as ordinances, minutes, and audits name them — documenting transactions and offices, never alleging anything about anyone. If you believe something here misstates a record, say so and we will check it against the source and correct it in public, with the correction logged.</p>

@@ -28,7 +28,7 @@ function scopeBody(scope, county, q) {
   if (scope === 'national') return 'the U.S. Congress';
   if (scope === 'state') return `the ${esc(county.state)} Legislature`;
   if (scope === 'city') return `${esc(titleCaseSlug(q && q.city))} — its city council or town meeting`;
-  return 'your county — the quorum court, city board, or school board';
+  return `your county — ${esc(govBodyName(county))}, a city board, or the school board`;
 }
 
 function issuesPage(data, opts) {
@@ -241,7 +241,7 @@ ${sigs.length ? (() => {
     <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:8px 0">
       <span class="code" id="share-url" style="border:1.5px solid var(--rule);background:var(--card);padding:7px 10px;font-size:12px;user-select:all">countycommons.us/issues/${esc(draft.id)}</span>
       <button type="button" data-copy="https://countycommons.us/issues/${esc(draft.id)}" style="font-family:var(--mono);font-size:12px;padding:7px 12px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink);cursor:pointer">Copy link</button>
-      <button type="button" data-share-title="A question for Clark County" data-share-url="https://countycommons.us/issues/${esc(draft.id)}" style="font-family:var(--mono);font-size:12px;padding:7px 12px;border:1.5px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer">Share…</button>
+      <button type="button" data-share-title="A question for ${esc(county.name)}" data-share-url="https://countycommons.us/issues/${esc(draft.id)}" style="font-family:var(--mono);font-size:12px;padding:7px 12px;border:1.5px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer">Share…</button>
     </div>
     <p class="src"><b>During early access:</b> the site asks for a door code — send it along with the link (you know it if you're reading this). When they enter it, the door opens onto this exact page.</p>
     <p class="src">The traction rule: at ${threshold} responses, the result gets printed and hand-delivered to the relevant body, and the delivery is stamped on the <a href="/docket">docket</a>. ${t.total} of ${threshold} and counting — every share moves it.</p>
@@ -249,19 +249,21 @@ ${sigs.length ? (() => {
 </div>
 </section>
 
-<section>
+${draft.background || draft.context ? `<section>
 <h2>The context <span class="sub">— why this question exists</span></h2>
-<p>This platform traced every public dollar it could. Most of the trail is documented: the <a href="/budget">money trail</a> cross-foots to the dollar, and <a href="/audits">what the auditors reported</a> is quoted in full. But parts of the trail stop short of a receipt: <a href="/line/edccc">$1.84M/year in economic development incentives</a> with no public recipient list, <a href="/vendors">commodity purchases no posted document names</a>, and <a href="/compare/spending">about $4M a year that moves without public detail</a>. This question asks whether that should change — not whether anyone did anything wrong.</p>
-</section>
+${draft.background ? `<p>${draft.background}</p>` : `<p>${esc(draft.context)}</p>`}
+</section>` : ''}
 
 <section>
 <h2>Disclosures <span class="sub">— the platform holds itself to its own standard</span></h2>
-<p class="src">This question was submitted by the platform's founder, who owns Ozark Cleaners — the platform's sponsor; the raw submission and the wording history are logged in the platform's public repository. That double relationship is disclosed here on purpose. Bright lines that apply to every question here: no candidate questions, no active-ballot-measure questions, no questions about named individuals' conduct.</p>
+${draft.disclosure ? `<p class="src">${draft.disclosure}</p>` : ''}
+<p class="src">Bright lines that apply to every question here: no candidate questions, no active-ballot-measure questions, no questions about named individuals' conduct. The raw submission and any wording history are logged in the platform's public repository.</p>
 </section>`;
 
+  const q1 = String(draft.final_wording || '').replace(/\s+/g, ' ').trim();
   return layout({
     title: `${draft.final_wording.slice(0, 60)}… — ${county.platform_name}`, current: '/issues', body, county,
-    description: 'An open question for Clark County residents: should every government dollar be publicly traceable to the receipt?'
+    description: `An open question for ${county.name} residents: ${q1.slice(0, 140)}`
   });
 }
 
