@@ -11,9 +11,9 @@ const COPY_SLOTS = [
   { key: 'home.eyebrow', label: 'Top line (eyebrow)',
     default: '{platform} · countycommons.us · {county}, {state}' },
   { key: 'home.headline', label: 'Headline',
-    default: "Rally your community to shape what government does — from the town budget to state and national law." },
+    default: "See where the money goes. Say what your town needs. Bring your neighbors." },
   { key: 'home.subhead', label: 'Sub-headline',
-    default: "An open, standing petition with receipts. See where the money really goes, say what should change — in {county}, in your state, or in Congress — rally your neighbors behind it, and we carry it to the people who decide and track what they do. Free, nonpartisan, and checkable to the last number." },
+    default: "It's your money and your town. Look at every dollar — and where it came from. Say what your street or your county needs. Get your neighbors behind it, and we hand it to the people who decide, then show you what they did. Free. No account. Plain words." },
   { key: 'home.strip', label: 'Verb strip',
     default: 'SEE IT · SAY IT · RALLY YOUR NEIGHBORS · HOLD THEM TO IT' }
 ];

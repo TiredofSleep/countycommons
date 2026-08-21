@@ -29,6 +29,7 @@ function scopeBody(scope, county) {
 function issuesPage(data, opts) {
   opts = opts || {};
   const { county } = data;
+  const threshold = county.delivery_threshold || 400;
   const { PROMOTE_AT } = require('../questions');
   const items = openIssues(data).map(d => {
     const t = tally(d.id);
@@ -87,7 +88,7 @@ ${propItems}
 
 <section>
 <h2>The traction rule <span class="sub">— what enough responses guarantees</span></h2>
-<p>Borrowed from the UK Parliament's petition site, where 10,000 signatures obligates a government response: <b>when a live question reaches 100 responses, we print the result packet and hand-deliver it to the body that decides</b> — for a county question the quorum court, city board, or school board; for a state question the ${esc(county.state)} legislative delegation; for a national one the district's members of Congress — and stamp the delivery publicly. Officials aren't obligated to act. They are guaranteed to receive — and what they do next becomes part of the record either way.</p>
+<p>Borrowed from the UK Parliament's petition site, where a signature count obligates a government response: <b>when a live question reaches ${threshold} responses, we print the result packet and hand-deliver it to the body that decides</b> — for a county question the quorum court, city board, or school board; for a state question the ${esc(county.state)} legislative delegation; for a national one the district's members of Congress — and stamp the delivery publicly. Officials aren't obligated to act. They are guaranteed to receive — and what they do next becomes part of the record either way.</p>
 </section>`;
 
   return layout({ title: `Open questions — ${county.platform_name}`, current: '/issues', body, county });
@@ -95,6 +96,7 @@ ${propItems}
 
 function issuePage(data, draft, participant, justVoted, registeredFields = [], justRegistered = false, signState = null) {
   const { county } = data;
+  const threshold = county.delivery_threshold || 400;
   const t = tally(draft.id);
   const mine = participant ? myVote(participant, draft.id) : null;
   const { listFor, mySignature } = require('../signatures');
@@ -133,6 +135,14 @@ ${t.connections ? `<p class="src">Who's answering, self-reported (not verified):
   <p style="margin:6px 0 0">${scopeBadge(draft, county)} <span class="src">— advisory signal to ${scopeBody(draft.scope, county)}.</span></p>
   ${justVoted ? `<div class="stamp" style="position:static;display:inline-block;transform:none;margin-top:10px">Counted ✓ — you answered ${esc(justVoted.toUpperCase())}</div>` : ''}
 </header>
+
+${(draft.requested_documents && draft.requested_documents.length) ? `
+<div class="issue" style="display:block;border-left:3px solid var(--accent)">
+  <div class="eyebrow" style="color:var(--accent)">what a “yes” would put on the record</div>
+  <p class="src" style="margin:4px 0 8px">This isn't an abstract question. A yes means the county requires these specific things it doesn't show today — each a real gap you can see on the money trail:</p>
+  ${draft.requested_documents.map(rd => `<div style="margin:6px 0"><b>${esc(rd.title)}</b>${rd.node ? ` — <a href="/line/${esc(rd.node)}">see it on the money trail</a>` : ''}<p class="src" style="margin:2px 0 0">${esc(rd.why)}</p></div>`).join('')}
+  <p class="src" style="margin:8px 0 0">The more of these the county shows, the stronger every vote here becomes — you're not asking for a feeling, you're asking for these documents.</p>
+</div>` : ''}
 
 <section>
 <h2>Your answer <span class="sub">— fifteen seconds, no account, nothing asked</span> ${rulesButton()}</h2>
@@ -205,7 +215,7 @@ ${sigs.length ? (() => {
       <button type="button" data-share-title="A question for Clark County" data-share-url="https://countycommons.us/issues/${esc(draft.id)}" style="font-family:var(--mono);font-size:12px;padding:7px 12px;border:1.5px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer">Share…</button>
     </div>
     <p class="src"><b>During early access:</b> the site asks for a door code — send it along with the link (you know it if you're reading this). When they enter it, the door opens onto this exact page.</p>
-    <p class="src">The traction rule: at 100 responses, the result gets printed and hand-delivered to the relevant body, and the delivery is stamped on the <a href="/docket">docket</a>. ${t.total} of 100 and counting — every share moves it.</p>
+    <p class="src">The traction rule: at ${threshold} responses, the result gets printed and hand-delivered to the relevant body, and the delivery is stamped on the <a href="/docket">docket</a>. ${t.total} of ${threshold} and counting — every share moves it.</p>
   </div>
 </div>
 </section>

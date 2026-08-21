@@ -28,6 +28,7 @@ function homePage(data, opts = {}) {
   const { county, budget, documents, verification, docket, calendar, issueDrafts } = data;
   const offSite = ((county.jurisdictions || []).find(j => j.kind === 'county') || {}).website || null;
   const offSiteLabel = offSite ? offSite.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '') : '';
+  const threshold = county.delivery_threshold || 400;
   const openQs = (issueDrafts.drafts || []).filter(d => d.status === 'open-tier0');
   const nm = nextMeeting(calendar);
   const stamps = docket.issues.filter(i => i.stamped).slice(-3).reverse();
@@ -60,7 +61,7 @@ function homePage(data, opts = {}) {
   <h1 style="font-size:clamp(22px,4.6vw,36px);max-width:30ch;text-wrap:balance">${copyText(data, 'home.headline')}</h1>
   <p style="font-size:clamp(15px,2.6vw,19px);max-width:56ch;margin:10px 0 4px">${copyText(data, 'home.subhead')}</p>
   <p style="font-family:var(--mono);font-size:clamp(12px,2vw,14px);letter-spacing:.04em;margin:10px 0 2px"><b>${copyText(data, 'home.strip')}</b></p>
-  <p class="src" style="max-width:60ch">Every dollar cited to its source document. Every voice counted honestly by tier. Every claim checkable by anyone — including this one.</p>
+  <p class="src" style="max-width:60ch">Every dollar shown where it came from. Every voice counted honestly. Every claim you can check yourself — including this one.</p>
   ${vOk ? `<a href="/verify" style="text-decoration:none"><div class="stamp" title="Every branch of the budget re-adds to its stated total">${verification.summary.passed}/${verification.summary.total_checks} budget checks pass ✓</div></a>` : ''}
   <div style="margin:16px 0 2px;display:flex;gap:10px;flex-wrap:wrap;align-items:center">
     <a href="/priorities" style="display:inline-block;font-family:var(--mono);font-size:clamp(15px,2.4vw,18px);font-weight:600;padding:16px 26px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);text-decoration:none;text-wrap:balance">Raise your voice — put a priority on the record →</a>
@@ -104,9 +105,9 @@ function homePage(data, opts = {}) {
 </section>
 
 <section>
-<h2>The power of a verified number <span class="sub">— why counting here counts</span></h2>
-<p style="max-width:66ch">A town hall shout is one voice. A social media storm is noise with no names. But a line like <b>"214 verified ${esc(county.name)} residents said yes"</b> — once the verification tiers are live — is a different kind of thing: checkable, tiered, arithmetic-audited, the kind of fact an official can <i>cite</i> and survive the argument, and a skeptic can inspect and find only math. That's the trade this platform is built toward on your shared funds: your voice, made heavy enough to sit on a courthouse desk. <span class="src">(That 214 is an illustration of the mechanism, not today's count — the live tally is on every question page.)</span></p>
-<p style="max-width:66ch">The machinery is deliberate: anonymous answers count as open sentiment, verified residents count as the number officials cite, and — coming with the verification tiers — putting your name on the record counts like signing a petition. At <b>100 responses, any question's result gets printed and hand-delivered to the body that decides</b>, with the delivery stamped publicly. The UK Parliament set response thresholds like this in its rules; here, the platform binds itself — and the full <a href="/cases">library of precedents</a>, from town meetings to Taiwan, shows this working where it's been tried, and fraying where it's been neglected. What officials do with a number they can't dispute becomes part of the record either way.</p>
+<h2>Why a name and a number here counts <span class="sub">— plain and simple</span></h2>
+<p style="max-width:66ch">A shout at a meeting is one voice. A post online is noise with no name. Here your voice is counted honestly, and <b>you choose how much to share and how private to stay</b>. Weigh in with no account at all and it counts as open feeling. Or add as much as you like — your name, your town, that you live here — <b>kept private in a locked file, shown only to county officials if they ask to check the count is real, and never published unless you choose to.</b> Most people keep it private; that's the point. The more you're willing to show <i>them</i>, the harder your vote is to wave off — a room of real, verifiable neighbors is a fact an official has to answer, not an anonymous click.</p>
+<p style="max-width:66ch">And it goes somewhere. When <b>${threshold} neighbors back the same thing</b>, we print it and hand it to the people who decide — your county board, your city council, your school board — and stamp the delivery in the open. They don't have to agree. They do have to receive it, and what they do next is on the record either way. <a href="/cases">This has worked where it's been tried</a>, from town meetings to Taiwan.</p>
 </section>
 
 <section>
