@@ -1,5 +1,5 @@
 const { esc, money, copyText } = require('../lib/corpus');
-const { deliveryThreshold } = require('../lib/threshold');
+const { deliveryThreshold, deliveryInfo } = require('../lib/threshold');
 const { layout } = require('./layout');
 const { tally } = require('../tally');
 const { registrationForm } = require('./register-box');
@@ -29,7 +29,8 @@ function homePage(data, opts = {}) {
   const { county, budget, documents, verification, docket, calendar, issueDrafts } = data;
   const offSite = ((county.jurisdictions || []).find(j => j.kind === 'county') || {}).website || null;
   const offSiteLabel = offSite ? offSite.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '') : '';
-  const threshold = county.delivery_threshold || 400;
+  const tinfo = deliveryInfo(county);
+  const threshold = tinfo.value;
   const openQs = (issueDrafts.drafts || []).filter(d => d.status === 'open-tier0');
   const nm = nextMeeting(calendar);
   const stamps = docket.issues.filter(i => i.stamped).slice(-3).reverse();
@@ -109,6 +110,7 @@ function homePage(data, opts = {}) {
 <h2>Why a name and a number here counts <span class="sub">— plain and simple</span></h2>
 <p style="max-width:66ch">A shout at a meeting is one voice. A post online is noise with no name. Here your voice is counted honestly, and <b>you choose how much to share and how private to stay</b>. Weigh in with no account at all and it counts as open feeling. Or add as much as you like — your name, your town, that you live here — <b>kept private in a locked file, shown only to county officials if they ask to check the count is real, and never published unless you choose to.</b> Most people keep it private; that's the point. The more you're willing to show <i>them</i>, the harder your vote is to wave off — a room of real, verifiable neighbors is a fact an official has to answer, not an anonymous click.</p>
 <p style="max-width:66ch">And it goes somewhere. When <b>${threshold} neighbors back the same thing</b>, we print it and hand it to the people who decide — your county board, your city council, your school board — and stamp the delivery in the open. They don't have to agree. They do have to receive it, and what they do next is on the record either way. <a href="/cases">This has worked where it's been tried</a>, from town meetings to Taiwan.</p>
+<p class="src" style="max-width:66ch;margin-top:6px">Why ${threshold}? ${esc(tinfo.note)} It's the same kind of measure real petitions use — a share of the people who actually vote, not a number we picked. <a href="/methodology#threshold">How the threshold works</a>.</p>
 </section>
 
 <section>

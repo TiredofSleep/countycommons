@@ -206,6 +206,16 @@ Every number on this site says which layer it comes from, because mixing them up
 <p>Budgets are self-auditing: parts must sum to wholes. A verifier re-adds every complete branch of the tree and compares it to the document's own totals, to the dollar. The full receipt is on the <a href="/verify">verification page</a>. A line that cannot be checked yet says so on its citation page — it is never silently presented as checked.</p>
 </section>
 
+<section id="threshold">
+<h3>Where the delivery number comes from</h3>
+${(() => {
+  const { deliveryInfo } = require('../lib/threshold');
+  const t = deliveryInfo(county);
+  return `<p>When enough residents back the same priority, we print it and carry it to the body that decides. "Enough" isn't a number we invented. In the United States, the count that actually forces a government to act — a ballot initiative or referendum — is a <b>share of the votes cast in the last election</b>, not a share of the population. Arkansas county measures need signatures equal to 15% of the votes for a county office; Texas city charters commonly set 5%; the UK Parliament promises a response at a flat 10,000.</p>
+  <p>Ours is an <b>advisory</b> bar — a request to be heard, not a binding measure — so we sit at the low, reachable end: <b>about 5% of the votes cast last election</b>. For ${esc(county.name)} that comes to <b>${t.value.toLocaleString('en-US')}</b>. ${esc(t.note)} A city-level priority is sized to that city's own electorate the same way. Where a real local petition rule sets an exact number, we use that instead — and say so here.</p>`;
+})()}
+</section>
+
 <section>
 <h3>What this site never does</h3>
 <p>It never editorializes, never advocates, and never guesses. A dead end means "not yet ingested and navigable" — never "hidden." Where a number could be misread without context (like the county's $45,921 fire pass-through, which is only one slice of how fire departments are funded), the caveat is attached to the number itself.</p>

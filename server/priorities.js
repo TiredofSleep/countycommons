@@ -48,11 +48,18 @@ function namesAnOfficial(text, county) {
 // Propose a priority. Returns { id } or { error, flags? }. Priorities publish
 // to the public board immediately (no human queue like question-submissions),
 // so a bright-line hit is a hard stop here, not just a flag for a reviewer.
-function propose({ tenant, kind, title, why, node_ref, participant, county, target }) {
+// The funnel levels a priority can live at: the whole nation, a state, a county,
+// or a specific city. Each level is its own space with its own set of votes and
+// its own count — people toggle through the funnel to move between them.
+function propose({ tenant, kind, title, why, node_ref, participant, county, target, level, state }) {
   title = String(title || '').trim().slice(0, 120);
   why = String(why || '').trim().slice(0, 600);
   kind = KINDS.has(kind) ? kind : 'prioritize';
-  target = target ? String(target).slice(0, 60) : null;
+  // `level` is the funnel level (national|state|county|city-<slug>); `target`
+  // is kept as an alias so a level id doubles as the routing target.
+  level = String(level || target || 'county').slice(0, 60);
+  target = level;
+  state = state || (county && county.state) || null;
   if (!title || !why) return { error: 'missing' };
   // The charter bright lines are a bone: no candidates, no active-ballot
   // measures, no named-individual conduct. Keyword screen + this county's
