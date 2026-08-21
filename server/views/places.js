@@ -84,7 +84,7 @@ function cityBudgetPage(data, city) {
 
   const body = `
 <header class="page">
-  <div class="eyebrow">${esc(m.city)}, ${esc(county.state)} · ${esc(m.fiscal_year)} adopted budget${m.kind ? ' · ' + esc(m.kind) : ''}</div>
+  <div class="eyebrow">${esc(m.city)}, ${esc(county.state)} · ${esc(m.fiscal_year)} ${esc(m.basis_label || 'adopted budget')}${m.kind ? ' · ' + esc(m.kind) : ''}</div>
   <h1>${esc(m.city)} — the money trail</h1>
   <div class="total"><a class="amt" href="${esc(m.source.url)}" rel="noopener">${cap(total)}</a></div>
   <div class="src">${esc(m.note || '')} Click any number to open the source. ${foots ? `<b>The pieces add up to the ${esc(totalLabel)} total exactly.</b>` : ''}</div>
