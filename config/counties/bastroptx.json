@@ -1,0 +1,38 @@
+{
+  "name": "Bastrop County",
+  "state": "Texas",
+  "slug": "bastroptx",
+  "seat": "Bastrop",
+  "population": 97216,
+  "population_source": "2020 U.S. Census",
+  "platform_name": "Bastrop Commons",
+  "sponsor_line": "A free, independent civic-transparency project",
+  "contact_email": "brayden.ozark@gmail.com",
+  "jurisdictions": [
+    { "id": "bastrop-county", "name": "Bastrop County", "kind": "county", "governing_body": "Commissioners Court", "executive": "County Judge", "website": "https://www.bastropcountytx.gov" },
+    { "id": "city-bastrop", "name": "City of Bastrop", "kind": "city", "governing_body": "City Council", "executive": "Mayor", "website": "https://www.cityofbastrop.org" },
+    { "id": "city-elgin", "name": "City of Elgin", "kind": "city", "governing_body": "City Council", "executive": "Mayor", "website": "https://www.elgintx.gov" },
+    { "id": "city-smithville", "name": "City of Smithville", "kind": "city", "governing_body": "City Council", "executive": "Mayor", "website": "https://www.smithvilletx.org" }
+  ],
+  "peer_counties": ["Travis", "Caldwell", "Fayette", "Lee", "Williamson"],
+  "officials": [],
+  "quorum_court": { "source": "Bastrop County is governed by a Commissioners Court — the County Judge and four County Commissioners, one per precinct. It sets the budget and the tax rate.", "justices": [] },
+  "records_portals": [
+    { "id": "county-site", "name": "Bastrop County official site", "url": "https://www.bastropcountytx.gov" },
+    { "id": "tx-comptroller", "name": "Texas Comptroller — local government transparency", "url": "https://comptroller.texas.gov/transparency/local/" }
+  ],
+  "calendar": {
+    "budget_adoption_window": { "start_month": 8, "end_month": 9, "note": "Texas counties adopt the next fiscal year's budget and tax rate in late summer; the fiscal year begins October 1." },
+    "meetings": [],
+    "election_blackouts": [
+      { "note": "Bright lines: no candidate issues, no active-ballot-measure issues, no named-individual conduct issues. Windows to be pinned with local guidance before the voting layer opens.", "start": null, "end": null }
+    ]
+  },
+  "data_sources": [
+    { "id": "county-budget", "name": "Bastrop County adopted budget", "url": "https://www.bastropcountytx.gov", "holds": ["adopted county budget", "tax rate"] },
+    { "id": "tx-comptroller", "name": "Texas Comptroller of Public Accounts", "url": "https://comptroller.texas.gov/transparency/local/", "holds": ["local government debt and financial data"] }
+  ],
+  "currency_year": 2026,
+  "reading_level_target": "6th-8th grade",
+  "delivery_threshold": 500
+}
