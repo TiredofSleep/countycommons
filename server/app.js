@@ -496,9 +496,44 @@ app.get('/issues/:id', (req, res) => {
   if (!draft) return res.status(404).send(notFound(data, 'No open question with that id.'));
   const voted = req.query.voted && ['yes', 'no', 'skip'].includes(req.query.voted) ? req.query.voted : null;
   const participant = participantOf(req);
+  const solutions = require('./solutions');
+  const sol = {
+    list: solutions.listFor(req.tenantKey, draft.id),
+    myVotes: solutions.myVotesFor(participant, req.tenantKey, draft.id),
+    filed: req.query.filed === '1',
+    error: req.query.solerr || null,
+    blocked: req.query.solblocked || null
+  };
   res.send(issuePage(data, draft, participant, voted,
     participant ? identity.fieldsOf(participant) : [], req.query.registered === '1',
-    req.query.sign || null, places.placesFor(req.tenantKey)));
+    req.query.sign || null, places.placesFor(req.tenantKey), sol));
+});
+
+// File a cited solution under a question.
+app.post('/issues/:id/solutions', writeLimit, express.urlencoded({ extended: false }), (req, res) => {
+  const participant = ensureParticipant(req, res);
+  const data = load(req.tenantKey);
+  const draft = data.issueDrafts.drafts.find(d => d.id === req.params.id && d.status === 'open-tier0');
+  if (!draft) return res.redirect('/issues');
+  const b = req.body || {};
+  const r = require('./solutions').file({
+    tenant: req.tenantKey, question_id: draft.id,
+    title: b.title, summary: b.summary, citations: b.citations,
+    participant, county: data.county
+  });
+  const back = `/issues/${encodeURIComponent(draft.id)}`;
+  if (r.error === 'bright-line') return res.redirect(back + '?solblocked=' + encodeURIComponent((r.flags || []).join(', ')) + '#file');
+  if (r.error === 'uncited') return res.redirect(back + '?solerr=uncited#file');
+  if (r.error) return res.redirect(back + '#file');
+  res.redirect(back + '?filed=1#solutions');
+});
+
+// Click yes or no on a solution.
+app.post('/issues/:id/solutions/:sid/vote', writeLimit, express.urlencoded({ extended: false }), (req, res) => {
+  const participant = ensureParticipant(req, res);
+  const value = (req.body && req.body.value) || '';
+  require('./solutions').vote(participant, req.params.sid, value);
+  res.redirect(`/issues/${encodeURIComponent(req.params.id)}#solutions`);
 });
 
 app.post('/issues/:id/vote', writeLimit, express.urlencoded({ extended: false }), (req, res) => {

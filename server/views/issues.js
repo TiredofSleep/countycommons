@@ -116,8 +116,9 @@ function govBodyName(county) {
   return (j && j.governing_body) || 'the county governing body';
 }
 
-function issuePage(data, draft, participant, justVoted, registeredFields = [], justRegistered = false, signState = null, places = null) {
+function issuePage(data, draft, participant, justVoted, registeredFields = [], justRegistered = false, signState = null, places = null, sol = {}) {
   const { county } = data;
+  const { solutionsSection } = require('./solutions');
   // Size the delivery threshold to the question's own funnel level — a city
   // question to that city, a state question to the state, and so on.
   const { funnelLevels, levelThreshold } = require('./priorities');
@@ -190,6 +191,8 @@ ${results}
 <p class="src">These counts are unofficial: gathered by an independent community platform, not by any government. This is not an election, a referendum, or a legal petition — its only weight is that the counting is published and checkable.</p>
 <p class="src"><b>Plainly:</b> because a Tier 0 answer takes no verification, a determined person can pad this number — that is exactly the weakness the verification tiers (phone, residency, voter-file) are built to close. Until then, treat these as open sentiment, never proof, and weigh the public signatures — real names, by choice — more heavily than the raw count.</p>
 </section>
+
+${solutionsSection(county, draft.id, sol.list || [], { myVotes: sol.myVotes, filed: sol.filed, error: sol.error, blocked: sol.blocked })}
 
 <section id="register">
 <h2>Make it count for more <span class="sub">— optional, always</span></h2>
