@@ -1,25 +1,604 @@
 {
   "meta": {
-    "document": "Bastrop County adopted budget — being ingested",
+    "document": "Bastrop County FY2025-26 Adopted Budget",
     "title": "Bastrop County — the money trail",
-    "grand_total": 0,
+    "grand_total": 93738915,
     "year": 2026,
-    "note": "Bastrop County is governed by a Commissioners Court — the County Judge and four County Commissioners — which adopts the county budget and sets the property tax rate each year for the fiscal year beginning October 1. The adopted budget is being ingested now from the county's official document; every line will cite its source page. A dead end here means \"not yet ingested and navigable,\" never \"hidden.\""
+    "note": "Texas counties budget fund by fund, not as one grand total. This is the tax-supported budget — the General Fund (most offices and courts), the Road & Bridge Fund, and Debt Service — adopted by the Commissioners Court on August 25, 2025 for the fiscal year beginning October 1, 2025. The adopted property tax rate is $0.42870 per $100 of value. Capital-project and grant funds are budgeted separately and left out here because they double-count transfers; every figure below traces to the county’s adopted budget."
   },
   "nodes": [
     {
-      "id": "root",
-      "parent": null,
-      "name": "Bastrop County budget",
-      "code": null,
-      "amount": 0,
       "year": 2026,
       "layer": "appropriation",
       "section": "appropriations",
-      "source": null,
       "docket_ref": null,
-      "status": "dead_end",
-      "note": "The adopted county budget is being ingested from Bastrop County's official budget document. Sourced figures land here first."
+      "id": "general-fund",
+      "parent": null,
+      "name": "General Fund",
+      "code": "100",
+      "amount": 73512281,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "children_complete": true,
+      "status": "sourced",
+      "note": "The county’s main operating fund — most offices and courts. Funded mainly by property taxes. FY2025-26 adopted."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "road-bridge",
+      "parent": null,
+      "name": "Road & Bridge Fund",
+      "code": "221-224",
+      "amount": 13704096,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "children_complete": true,
+      "status": "sourced",
+      "note": "A separate fund for county roads, split among the four commissioner precincts."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "debt-service",
+      "parent": null,
+      "name": "Debt Service Fund",
+      "code": null,
+      "amount": 6522538,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Principal and interest on the county’s tax-supported debt for FY2026. Outstanding tax-supported debt was $96.5M as of Oct 1, 2025."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-1",
+      "parent": "general-fund",
+      "name": "Sheriff’s Office (Law Enforcement)",
+      "code": null,
+      "amount": 14735307,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Patrol, investigations, and law enforcement."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-2",
+      "parent": "general-fund",
+      "name": "County Jail",
+      "code": null,
+      "amount": 13174455,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Running the county jail and detention."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-3",
+      "parent": "general-fund",
+      "name": "Non-Departmental",
+      "code": null,
+      "amount": 6666750,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "County-wide costs not tied to one office — insurance, transfers, shared expenses."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-4",
+      "parent": "general-fund",
+      "name": "Information Technology",
+      "code": null,
+      "amount": 5205243,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "County computer systems and networks."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-5",
+      "parent": "general-fund",
+      "name": "911 Communications",
+      "code": null,
+      "amount": 2835442,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Emergency dispatch."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-6",
+      "parent": "general-fund",
+      "name": "Animal Services",
+      "code": null,
+      "amount": 2150675,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Animal control and the shelter."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-7",
+      "parent": "general-fund",
+      "name": "District Attorney (21st District)",
+      "code": null,
+      "amount": 2057150,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Felony prosecution, shared across four counties."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-8",
+      "parent": "general-fund",
+      "name": "Development Services",
+      "code": null,
+      "amount": 1864882,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Permits, planning, and inspections."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-9",
+      "parent": "general-fund",
+      "name": "General Services",
+      "code": null,
+      "amount": 1853120,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "County buildings and facilities."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-10",
+      "parent": "general-fund",
+      "name": "District Court",
+      "code": null,
+      "amount": 1838349,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "The felony trial courts."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-11",
+      "parent": "general-fund",
+      "name": "Environmental / Sanitation",
+      "code": null,
+      "amount": 1536302,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Waste, septic, and environmental enforcement."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-12",
+      "parent": "general-fund",
+      "name": "Tax Assessor-Collector",
+      "code": null,
+      "amount": 1470021,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Collecting property taxes and registering vehicles."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-13",
+      "parent": "general-fund",
+      "name": "Grants",
+      "code": null,
+      "amount": 1365940,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Grant-funded programs."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-14",
+      "parent": "general-fund",
+      "name": "County Court at Law",
+      "code": null,
+      "amount": 1290849,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Misdemeanor and civil courts."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-15",
+      "parent": "general-fund",
+      "name": "District Clerk",
+      "code": null,
+      "amount": 1237882,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Court records for the district courts."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-16",
+      "parent": "general-fund",
+      "name": "County Auditor",
+      "code": null,
+      "amount": 1045592,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "County finances and audit."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-17",
+      "parent": "general-fund",
+      "name": "Elections Administration",
+      "code": null,
+      "amount": 963933,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Running elections."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-18",
+      "parent": "general-fund",
+      "name": "Habitat Conservation",
+      "code": null,
+      "amount": 927723,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "The county’s regional habitat conservation plan."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-19",
+      "parent": "general-fund",
+      "name": "County Clerk",
+      "code": null,
+      "amount": 749048,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Public records, deeds, and vital records."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-20",
+      "parent": "general-fund",
+      "name": "Courthouse Security",
+      "code": null,
+      "amount": 741663,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Security at county buildings."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-21",
+      "parent": "general-fund",
+      "name": "Indigent Health Care",
+      "code": null,
+      "amount": 722073,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Health care for residents who cannot afford it."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-22",
+      "parent": "general-fund",
+      "name": "Justices of the Peace (Pct 1–4)",
+      "code": null,
+      "amount": 1484052,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "The four justice-of-the-peace courts."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-23",
+      "parent": "general-fund",
+      "name": "Commissioners Court",
+      "code": null,
+      "amount": 509786,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "The governing body’s own office."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-24",
+      "parent": "general-fund",
+      "name": "County Treasurer",
+      "code": null,
+      "amount": 468164,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "County banking and payroll."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-25",
+      "parent": "general-fund",
+      "name": "Juvenile Probation",
+      "code": null,
+      "amount": 387968,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Juvenile justice and probation."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-26",
+      "parent": "general-fund",
+      "name": "Emergency Management",
+      "code": null,
+      "amount": 375404,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Disaster preparedness and response."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-27",
+      "parent": "general-fund",
+      "name": "County Judge",
+      "code": null,
+      "amount": 315230,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "The county judge’s office."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-other",
+      "parent": "general-fund",
+      "name": "Other departments & budgeted contingency",
+      "code": null,
+      "amount": 5539278,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "partial",
+      "note": "The remaining smaller offices (constables, veterans, and others) plus the budgeted contingency and addition to fund balance — the General Fund total minus the departments listed above."
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "rb-1",
+      "parent": "road-bridge",
+      "name": "Road & Bridge — Precinct 1",
+      "code": null,
+      "amount": 2878912,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced"
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "rb-2",
+      "parent": "road-bridge",
+      "name": "Road & Bridge — Precinct 2",
+      "code": null,
+      "amount": 4165862,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced"
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "rb-3",
+      "parent": "road-bridge",
+      "name": "Road & Bridge — Precinct 3",
+      "code": null,
+      "amount": 3361300,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced"
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "rb-4",
+      "parent": "road-bridge",
+      "name": "Road & Bridge — Precinct 4",
+      "code": null,
+      "amount": 3298022,
+      "source": {
+        "doc": "bastrop-fy26-budget",
+        "page": null
+      },
+      "status": "sourced"
     }
   ]
 }

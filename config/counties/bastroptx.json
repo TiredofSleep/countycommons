@@ -4,35 +4,53 @@
   "slug": "bastroptx",
   "seat": "Bastrop",
   "population": 97216,
-  "population_source": "2020 U.S. Census",
+  "population_source": "2020 U.S. Census (one of the faster-growing Austin-area counties, up 31% since 2010)",
   "platform_name": "Bastrop Commons",
   "sponsor_line": "A free, independent civic-transparency project",
   "contact_email": "brayden.ozark@gmail.com",
   "jurisdictions": [
-    { "id": "bastrop-county", "name": "Bastrop County", "kind": "county", "governing_body": "Commissioners Court", "executive": "County Judge", "website": "https://www.bastropcountytx.gov" },
+    { "id": "bastrop-county", "name": "Bastrop County", "kind": "county", "governing_body": "Commissioners Court", "executive": "County Judge", "website": "https://www.bastropcounty.gov" },
     { "id": "city-bastrop", "name": "City of Bastrop", "kind": "city", "governing_body": "City Council", "executive": "Mayor", "website": "https://www.cityofbastrop.org" },
-    { "id": "city-elgin", "name": "City of Elgin", "kind": "city", "governing_body": "City Council", "executive": "Mayor", "website": "https://www.elgintx.gov" },
-    { "id": "city-smithville", "name": "City of Smithville", "kind": "city", "governing_body": "City Council", "executive": "Mayor", "website": "https://www.smithvilletx.org" }
+    { "id": "city-elgin", "name": "City of Elgin", "kind": "city", "governing_body": "City Council", "executive": "Mayor", "website": "https://www.elgintx.com" },
+    { "id": "city-smithville", "name": "City of Smithville", "kind": "city", "governing_body": "City Council", "executive": "Mayor", "website": "https://www.ci.smithville.tx.us" }
   ],
   "peer_counties": ["Travis", "Caldwell", "Fayette", "Lee", "Williamson"],
-  "officials": [],
-  "quorum_court": { "source": "Bastrop County is governed by a Commissioners Court — the County Judge and four County Commissioners, one per precinct. It sets the budget and the tax rate.", "justices": [] },
+  "officials": [
+    { "office": "County Judge", "name": "Gregory Klaus", "term_expires": null, "note": "Presides over the Commissioners Court.", "source": "bastropcounty.gov/page/co.county_judge" },
+    { "office": "Commissioner, Precinct 1", "name": "Butch Carmack", "term_expires": null, "source": "bastropcounty.gov/page/com.pct_1" },
+    { "office": "Commissioner, Precinct 2", "name": "Clara Beckett", "term_expires": null, "source": "bastropcounty.gov/page/com.pct_2" },
+    { "office": "Commissioner, Precinct 3", "name": "Mark Meuth", "term_expires": null, "source": "bastropcounty.gov/page/com.pct_3" },
+    { "office": "Commissioner, Precinct 4", "name": "David Glass", "term_expires": null, "source": "bastropcounty.gov/page/com.pct_4" },
+    { "office": "Sheriff", "name": "Maurice Cook", "term_expires": null, "note": "Elected 2016, re-elected 2024.", "source": "bastropcounty.gov/page/lec.sheriff" },
+    { "office": "District Attorney (21st Judicial District)", "name": "Bryan Goertz", "term_expires": null, "note": "A multi-county district office (Bastrop, Burleson, Lee, Washington), not solely Bastrop-elected. Bastrop County has no separate County Attorney.", "source": "bastropcounty.gov/page/da.attorney" },
+    { "office": "Tax Assessor-Collector", "name": "Ellen Owens", "term_expires": null, "source": "bastropcounty.gov elected-officials directory" },
+    { "office": "County Clerk", "name": "Krista Bartsch", "term_expires": null, "source": "bastropcounty.gov" },
+    { "office": "District Clerk", "name": "Sarah Loucks", "term_expires": null, "source": "bastropcounty.gov" },
+    { "office": "County Auditor", "name": "Jennifer Pacheco", "term_expires": null, "note": "Appointed by the district judges, not elected; signs the budget book.", "source": "FY2025-26 Budget Book" }
+  ],
+  "quorum_court": { "source": "Bastrop County is governed by a Commissioners Court — the County Judge and four County Commissioners, one per precinct — which adopts the budget and sets the property tax rate. It meets Mondays at 9:00 AM (typically 2nd & 4th Mondays) at 804 Pecan Street, Bastrop; agendas and minutes at bastropco.civicweb.net.", "justices": [] },
   "records_portals": [
-    { "id": "county-site", "name": "Bastrop County official site", "url": "https://www.bastropcountytx.gov" },
+    { "id": "county-site", "name": "Bastrop County official site", "url": "https://www.bastropcounty.gov" },
+    { "id": "budget", "name": "Bastrop County budget & finance", "url": "https://www.bastropcounty.gov/page/fin.budget" },
+    { "id": "agendas", "name": "Commissioners Court agendas & minutes (CivicWeb)", "url": "https://bastropco.civicweb.net" },
+    { "id": "records", "name": "Public records request portal", "url": "https://records.co.bastrop.tx.us" },
     { "id": "tx-comptroller", "name": "Texas Comptroller — local government transparency", "url": "https://comptroller.texas.gov/transparency/local/" }
   ],
   "calendar": {
-    "budget_adoption_window": { "start_month": 8, "end_month": 9, "note": "Texas counties adopt the next fiscal year's budget and tax rate in late summer; the fiscal year begins October 1." },
-    "meetings": [],
+    "budget_adoption_window": { "start_month": 8, "end_month": 9, "note": "Texas counties adopt the next fiscal year's budget and tax rate in late summer; the fiscal year begins October 1. Bastrop adopted FY2025-26 on August 25, 2025." },
+    "meetings": [
+      { "body": "Commissioners Court", "schedule": "Mondays, 9:00 AM (typically 2nd & 4th Mondays)", "note": "Commissioners Courtroom, 804 Pecan St, Bastrop. Agendas at bastropco.civicweb.net." }
+    ],
     "election_blackouts": [
       { "note": "Bright lines: no candidate issues, no active-ballot-measure issues, no named-individual conduct issues. Windows to be pinned with local guidance before the voting layer opens.", "start": null, "end": null }
     ]
   },
   "data_sources": [
-    { "id": "county-budget", "name": "Bastrop County adopted budget", "url": "https://www.bastropcountytx.gov", "holds": ["adopted county budget", "tax rate"] },
+    { "id": "county-budget", "name": "Bastrop County adopted budget", "url": "https://www.bastropcounty.gov/page/fin.budget", "holds": ["adopted county budget", "budget book", "raw line-item spreadsheet", "tax rate"] },
     { "id": "tx-comptroller", "name": "Texas Comptroller of Public Accounts", "url": "https://comptroller.texas.gov/transparency/local/", "holds": ["local government debt and financial data"] }
   ],
   "currency_year": 2026,
   "reading_level_target": "6th-8th grade",
+  "has_municipalities": true,
   "delivery_threshold": 500
 }
