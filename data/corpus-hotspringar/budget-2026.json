@@ -1,25 +1,743 @@
 {
   "meta": {
-    "document": "Hot Spring County — no appropriation document ingested yet",
-    "title": "Hot Spring County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+    "document": "Hot Spring County FY2025 Appropriation",
+    "title": "Hot Spring County — the money trail",
+    "grand_total": 17543508.72,
+    "year": 2025,
+    "note": "Arkansas counties appropriate fund by fund, and the ordinance prints no single all-funds total (the General Fund total also includes transfers that fund other listed funds, so a naive sum would double-count). This tree avoids that: the General Fund is shown at its department subtotal, and each dedicated fund — Road, the Hospital Sales Tax, Solid Waste, 9-1-1, the Library and the rest — stands beside it, so every dollar is counted once. The total shown is the honest sum of the appropriations, from the county’s FY2025 appropriation on the Arkansas transparency portal. The adopted FY2026 ordinance (a 4% raise, sheriff vehicles) is not yet posted — it is docket item #1."
   },
   "nodes": [
     {
-      "id": "root",
-      "parent": null,
-      "name": "Hot Spring County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
+      "year": 2025,
       "layer": "appropriation",
       "section": "appropriations",
-      "source": null,
       "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
+      "id": "general-fund",
+      "parent": null,
+      "name": "General Fund",
+      "code": "1000",
+      "amount": 6182202.14,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "children_complete": true,
+      "status": "sourced",
+      "note": "The county’s main operating fund — the sheriff, courts, and county offices. Shown at its department subtotal; the ~$395K it transfers out funds the Recorder’s Cost, Detention, 9-1-1, and Public Defender funds listed below, so those transfers are counted once, there."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-1",
+      "parent": "general-fund",
+      "name": "Sheriff",
+      "code": "1000-0400",
+      "amount": 1397606.59,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Patrol, investigations, and law enforcement."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-2",
+      "parent": "general-fund",
+      "name": "Jail",
+      "code": "1000-0418",
+      "amount": 1075007.84,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Running the county jail."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-3",
+      "parent": "general-fund",
+      "name": "Tax Assessor",
+      "code": "1000-0105",
+      "amount": 403494.73,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Valuing property for taxes."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-4",
+      "parent": "general-fund",
+      "name": "County & Probate Clerk",
+      "code": "1000-0101",
+      "amount": 287949.28,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Records, deeds, and probate."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-5",
+      "parent": "general-fund",
+      "name": "Tax Collector",
+      "code": "1000-0104",
+      "amount": 266489.28,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Collecting property taxes."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-6",
+      "parent": "general-fund",
+      "name": "School Resource Officers",
+      "code": "1000-0428",
+      "amount": 250131.16,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Officers in the schools."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-7",
+      "parent": "general-fund",
+      "name": "County Judge",
+      "code": "1000-0100",
+      "amount": 249546.52,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "The county judge’s office and county administration."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-8",
+      "parent": "general-fund",
+      "name": "Courthouse Maintenance",
+      "code": "1000-0108",
+      "amount": 233493.34,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Upkeep of the courthouse."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-9",
+      "parent": "general-fund",
+      "name": "Workers’ Compensation & other county expenses",
+      "code": "1000-0120",
+      "amount": 221000,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "County-wide insurance and shared costs."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-10",
+      "parent": "general-fund",
+      "name": "County Treasurer",
+      "code": "1000-0103",
+      "amount": 199763.02,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "County banking and disbursement."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-11",
+      "parent": "general-fund",
+      "name": "Reappraisal (Assessor)",
+      "code": "1000-0125",
+      "amount": 197120,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "The periodic property reappraisal."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-12",
+      "parent": "general-fund",
+      "name": "Juvenile Court",
+      "code": "1000-0414",
+      "amount": 146746.68,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Juvenile justice."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-13",
+      "parent": "general-fund",
+      "name": "Quorum Court",
+      "code": "1000-0107",
+      "amount": 143858.45,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "The governing body’s own office."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-14",
+      "parent": "general-fund",
+      "name": "Election",
+      "code": "1000-0109",
+      "amount": 143024.85,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Running elections."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-15",
+      "parent": "general-fund",
+      "name": "Circuit Court",
+      "code": "1000-0401",
+      "amount": 128441.43,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "The felony and civil trial courts."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-16",
+      "parent": "general-fund",
+      "name": "Prosecutor & Deputy Prosecuting Attorney",
+      "code": "1000-0416",
+      "amount": 126913.14,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Criminal prosecution."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-17",
+      "parent": "general-fund",
+      "name": "District Court",
+      "code": "1000-0409",
+      "amount": 123361.32,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Misdemeanor and small-claims court."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-18",
+      "parent": "general-fund",
+      "name": "Victim Witness",
+      "code": "1000-0426",
+      "amount": 114345.52,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Support for crime victims."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-19",
+      "parent": "general-fund",
+      "name": "Office of Emergency Services",
+      "code": "1000-0500",
+      "amount": 94683.71,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Disaster preparedness and response."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-20",
+      "parent": "general-fund",
+      "name": "Courthouse Annex",
+      "code": "1000-0118",
+      "amount": 82011.48,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "The annex building."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-21",
+      "parent": "general-fund",
+      "name": "County Extension Service",
+      "code": "1000-0801",
+      "amount": 78800,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Agriculture and 4-H extension."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-22",
+      "parent": "general-fund",
+      "name": "DeGray – Sheriff Dept.",
+      "code": "1000-0427",
+      "amount": 62532.79,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Sheriff coverage at DeGray Lake."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-23",
+      "parent": "general-fund",
+      "name": "Coroner",
+      "code": "1000-0419",
+      "amount": 38488.22,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "The county coroner."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-24",
+      "parent": "general-fund",
+      "name": "Health Department",
+      "code": "1000-0300",
+      "amount": 34760,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "County health services."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-25",
+      "parent": "general-fund",
+      "name": "Board of Equalization",
+      "code": "1000-0106",
+      "amount": 4925,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Property-value appeals."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "gf-other",
+      "parent": "general-fund",
+      "name": "Other General Fund offices",
+      "code": "1000",
+      "amount": 77707.79,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "partial",
+      "note": "The smaller General Fund lines together — Veterans Service Officer, State Police, county coroner extras, and appropriations to outside bodies (extension 4-H, the fair association, the historical society and museum, soil conservation). The General Fund subtotal minus the departments above."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "fund-1",
+      "parent": null,
+      "name": "County Road Fund",
+      "code": "2000-0200",
+      "amount": 3678263.45,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Building and maintaining county roads."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "fund-2",
+      "parent": null,
+      "name": "Hospital Sales Tax Fund",
+      "code": "3402-0302",
+      "amount": 2073001,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "A sales tax dedicated to the county hospital."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "fund-3",
+      "parent": null,
+      "name": "Solid Waste Tax Fund",
+      "code": "3009-0702",
+      "amount": 1763930.9,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Trash and recycling."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "fund-4",
+      "parent": null,
+      "name": "9-1-1 Emergency Fund",
+      "code": "3020-0501",
+      "amount": 919397.24,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Emergency dispatch."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "fund-5",
+      "parent": null,
+      "name": "County Library Fund",
+      "code": "3008-0600",
+      "amount": 761644.29,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "The county library system."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "fund-6",
+      "parent": null,
+      "name": "Jones Mill Industrial Park Fund",
+      "code": "3404-0130",
+      "amount": 604331.74,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "The county industrial park."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "fund-7",
+      "parent": null,
+      "name": "Additional Motor Fuel Tax Fund",
+      "code": "2003-0200",
+      "amount": 389282.69,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Act 416 of 2019 road money."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "fund-8",
+      "parent": null,
+      "name": "Recorder’s Cost Fund",
+      "code": "3006-0102",
+      "amount": 369876.31,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Fees supporting the recorder."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "fund-9",
+      "parent": null,
+      "name": "County Detention Facility Fund",
+      "code": "3018-0400",
+      "amount": 176000,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Detention facility support."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "fund-10",
+      "parent": null,
+      "name": "County Road Bridge Project Fund",
+      "code": "2803-0200",
+      "amount": 135969.48,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Bridge projects."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "fund-11",
+      "parent": null,
+      "name": "Solid Waste 5% Reserve Fund",
+      "code": "3405-0702",
+      "amount": 129558,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Reserve for solid waste."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "fund-12",
+      "parent": null,
+      "name": "Collector’s Automation Fund",
+      "code": "3001-0104",
+      "amount": 100500,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Collector office technology."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "fund-13",
+      "parent": null,
+      "name": "Treasurer’s Automation Fund",
+      "code": "3000-0103",
+      "amount": 76000,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Treasurer office technology."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "fund-14",
+      "parent": null,
+      "name": "Public Defender Fund",
+      "code": "3024-0417",
+      "amount": 62750,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Indigent legal defense."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "fund-15",
+      "parent": null,
+      "name": "Circuit Court Automation Fund",
+      "code": "3002-0401",
+      "amount": 30462.37,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "sourced",
+      "note": "Court technology."
+    },
+    {
+      "year": 2025,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "id": "fund-other",
+      "parent": null,
+      "name": "Other appropriated funds",
+      "code": null,
+      "amount": 90339.11,
+      "source": {
+        "doc": "hsc-approp-2025",
+        "page": null
+      },
+      "status": "partial",
+      "note": "The remaining smaller dedicated funds together — Assessor’s Amendment 79, County Clerk’s Cost, Adult Drug Court, Circuit Clerk Commissioner’s Fee, Drug Control, Breathalyzer, Boating Safety, and Coronavirus Relief."
     }
   ]
 }

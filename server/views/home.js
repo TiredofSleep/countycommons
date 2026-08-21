@@ -26,6 +26,8 @@ function nextMeeting(calendar) {
 function homePage(data, opts = {}) {
   const { registeredFields = [], justRegistered = false, announceChecked = false } = opts;
   const { county, budget, documents, verification, docket, calendar, issueDrafts } = data;
+  const offSite = ((county.jurisdictions || []).find(j => j.kind === 'county') || {}).website || null;
+  const offSiteLabel = offSite ? offSite.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '') : '';
   const openQs = (issueDrafts.drafts || []).filter(d => d.status === 'open-tier0');
   const nm = nextMeeting(calendar);
   const stamps = docket.issues.filter(i => i.stamped).slice(-3).reverse();
@@ -128,7 +130,7 @@ ${rulesDialog(county)}
 
 <section>
 <h2>Why you can trust it <span class="sub">— you don't have to; you can check</span></h2>
-<p style="max-width:66ch">First, know what this is: <b>an independent, citizen-built project — not a government website</b>. Nothing here is official; the county's own site is <a href="https://www.clarkcountyar.gov" rel="noopener">clarkcountyar.gov</a>. This platform is the layer in between: where the county's money becomes navigable, its questions get counted, and — as it grows — the projects it decides it wants find their footing.</p>
+<p style="max-width:66ch">First, know what this is: <b>an independent, citizen-built project — not a government website</b>. Nothing here is official${offSite ? `; ${esc(county.name)}'s own site is <a href="${esc(offSite)}" rel="noopener">${esc(offSiteLabel)}</a>` : ''}. This platform is the layer in between: where the county's money becomes navigable, its questions get counted, and — as it grows — the projects it decides it wants find their footing.</p>
 <p style="max-width:66ch">This platform renders no verdicts and takes no sides. Every number links to its source document. The arithmetic <a href="/verify">re-adds itself in public</a>. The activity log is <a href="/security">hash-chained and anchored</a> where we can't rewrite it. The code is <a href="https://github.com/TiredofSleep/countycommons" rel="noopener">public to the last line</a>. And the standard pointed at us first: <a href="/story">our story</a>, <a href="/stance">our stance</a>, <a href="/never">our nevers</a>.</p>
 </section>`;
 

@@ -5,36 +5,167 @@
   "seat": "Malvern",
   "population": 33040,
   "population_source": "2020 U.S. Census",
-  "platform_name": "County Commons",
-  "sponsor_line": "A free, independent civic-transparency project — opening county by county",
+  "platform_name": "Hot Spring Commons",
+  "sponsor_line": "A free, independent civic-transparency project",
   "contact_email": "brayden.ozark@gmail.com",
   "jurisdictions": [
     {
-      "id": "hotspringar",
+      "id": "hot-spring-county",
       "name": "Hot Spring County",
       "kind": "county",
-      "governing_body": "Quorum Court",
+      "governing_body": "Quorum Court (11 justices of the peace)",
       "executive": "County Judge",
-      "website": null
+      "website": "https://hotspringcounty.org"
+    },
+    {
+      "id": "city-malvern",
+      "name": "City of Malvern",
+      "kind": "city",
+      "governing_body": "City Council",
+      "executive": "Mayor",
+      "website": "https://www.malvernar.gov"
     }
   ],
-  "peer_counties": [],
-  "officials": [],
+  "peer_counties": [
+    "Garland",
+    "Clark",
+    "Grant",
+    "Saline",
+    "Dallas",
+    "Hot Spring"
+  ],
+  "officials": [
+    {
+      "office": "County Judge",
+      "name": "Dennis Thornton",
+      "term_expires": null,
+      "source": "hotspringcounty.org/county-judge"
+    },
+    {
+      "office": "Sheriff",
+      "name": "Richard Tolleson",
+      "term_expires": "2026-12-31",
+      "note": "Appointed by the Quorum Court on March 11, 2025 to serve the remainder of the term, after the elected sheriff resigned.",
+      "source": "hotspringcounty.org; KATV"
+    },
+    {
+      "office": "County & Probate Clerk",
+      "name": "Patty Griggs",
+      "term_expires": null,
+      "source": "hotspringcounty.org/county-clerk"
+    },
+    {
+      "office": "Circuit Clerk",
+      "name": "Teresa Pilcher",
+      "term_expires": null,
+      "source": "arcountydata.com"
+    },
+    {
+      "office": "Assessor",
+      "name": "Blake Riggan",
+      "term_expires": null,
+      "source": "arcountydata.com"
+    },
+    {
+      "office": "Collector",
+      "name": "Sheri Oden",
+      "term_expires": null,
+      "source": "arcountydata.com"
+    },
+    {
+      "office": "Treasurer",
+      "name": "Glorie Thornton",
+      "term_expires": null,
+      "source": "arcountydata.com"
+    }
+  ],
   "quorum_court": {
-    "source": "",
-    "justices": []
+    "source": "hotspringcounty.org/justices-of-the-peace (11 districts). Regular Quorum Court meets the first Monday of the month at 5:30 p.m.; committees the second Monday.",
+    "justices": [
+      {
+        "district": 1,
+        "name": "James Bryant"
+      },
+      {
+        "district": 2,
+        "name": "Brian Coston"
+      },
+      {
+        "district": 3,
+        "name": "Ralph Williams"
+      },
+      {
+        "district": 4,
+        "name": "Darrin Hardy"
+      },
+      {
+        "district": 5,
+        "name": "Mike Scarbrough"
+      },
+      {
+        "district": 6,
+        "name": "Don Hilyard"
+      },
+      {
+        "district": 7,
+        "name": "Peyton Murphy"
+      },
+      {
+        "district": 8,
+        "name": "Tony Shnaekel"
+      },
+      {
+        "district": 9,
+        "name": "Jimmy Rogers"
+      },
+      {
+        "district": 10,
+        "name": "Wylie Whitley"
+      },
+      {
+        "district": 11,
+        "name": "Jay Sheets"
+      }
+    ]
   },
-  "records_portals": [],
+  "records_portals": [
+    {
+      "id": "county-site",
+      "name": "Hot Spring County official site",
+      "url": "https://hotspringcounty.org"
+    },
+    {
+      "id": "ordinances",
+      "name": "County ordinances index",
+      "url": "https://hotspringcounty.org/ordinances/"
+    },
+    {
+      "id": "ar-transparency",
+      "name": "Arkansas county transparency portal",
+      "url": "https://artransparency.gov"
+    },
+    {
+      "id": "ark-leg-audit",
+      "name": "Arkansas Legislative Audit",
+      "url": "https://www.arklegaudit.gov"
+    }
+  ],
   "calendar": {
     "budget_adoption_window": {
       "start_month": 10,
       "end_month": 12,
-      "note": "Quorum court typically adopts next-year appropriations in the last quarter."
+      "note": "The Quorum Court adopts the next-year appropriation in the fourth quarter; the FY2026 budget was adopted in December 2025."
     },
-    "meetings": [],
+    "meetings": [
+      {
+        "body": "Quorum Court",
+        "schedule": "first Monday of the month, 5:30 p.m.",
+        "note": "Committee meetings the second Monday. Zoom available when needed."
+      }
+    ],
     "election_blackouts": [
       {
-        "note": "Bright lines: no candidate issues, no active-ballot-measure issues, no named-individual conduct issues. Windows to be pinned with legal advice before the voting layer opens.",
+        "note": "Bright lines: no candidate issues, no active-ballot-measure issues, no named-individual conduct issues. Windows to be pinned with local guidance before the voting layer opens.",
         "start": null,
         "end": null
       }
@@ -44,9 +175,9 @@
     {
       "id": "ar-transparency",
       "name": "Arkansas transparency portal",
-      "url": "https://transparency.arkansas.gov",
+      "url": "https://artransparency.gov",
       "holds": [
-        "filed county budgets"
+        "county appropriation ordinances"
       ]
     },
     {
@@ -54,10 +185,12 @@
       "name": "Arkansas Legislative Audit",
       "url": "https://www.arklegaudit.gov",
       "holds": [
-        "annual county and city audit reports"
+        "annual county audit reports"
       ]
     }
   ],
   "currency_year": 2026,
-  "reading_level_target": "6th-8th grade"
+  "reading_level_target": "6th-8th grade",
+  "has_municipalities": true,
+  "delivery_threshold": 400
 }

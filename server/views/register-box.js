@@ -14,6 +14,12 @@ const field = (name, label, ph, type) => `
 </label>`;
 
 function registrationForm({ county, action, registeredFields = [], justRegistered = false, voteHref = null, announce = null }) {
+  // City/ZIP placeholders come from THIS county's own cities, never hardcoded.
+  const cities = (county.jurisdictions || [])
+    .filter(j => ['city', 'town'].includes(j.kind))
+    .map(j => j.name.replace(/^(City|Town) of /, ''));
+  const cityPh = cities.length ? cities.slice(0, 3).join(', ') + '…'
+    : (county.seat && !/abolished|no county/i.test(county.seat) ? county.seat : 'your city or town');
   const announceBox = announce && announce.show ? `
 <label style="display:flex;gap:8px;align-items:baseline;font-size:13.5px;cursor:pointer;border:1.5px solid var(--ink);padding:9px 11px;background:var(--paper)">
   <input type="checkbox" name="announce"${announce.checked ? ' checked' : ''}>
@@ -35,9 +41,9 @@ ${justRegistered ? `<p class="src" style="color:var(--sourced)"><b>You're on the
 <form method="POST" action="${esc(action)}" style="display:flex;flex-direction:column;gap:10px;max-width:480px;margin-top:10px">
   ${field('name', 'Name', "as you'd sign a petition")}
   ${field('email', 'Email', 'you@example.com', 'email')}
-  ${field('phone', 'Phone', '870-555-0100', 'tel')}
-  ${field('city', 'City or town', 'Arkadelphia, Gurdon, Caddo Valley…')}
-  ${field('zip', 'ZIP', '71923')}
+  ${field('phone', 'Phone', '(555) 555-0100', 'tel')}
+  ${field('city', 'City or town', cityPh)}
+  ${field('zip', 'ZIP', 'ZIP code')}
   ${announceBox}
   ${buttons}
 </form>

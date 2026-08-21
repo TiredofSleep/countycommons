@@ -2,80 +2,458 @@
   "state": "Arkansas",
   "note": "The 75 Arkansas counties. Population is the 2020 U.S. Census. 'featured' marks counties with a fully ingested budget corpus; the rest are gated starter sites awaiting a local host. Source: 2020 Decennial Census as tabulated by the U. Census Bureau and cross-checked against individual county records.",
   "counties": [
-    {"name":"Arkansas County","seat":"DeWitt / Stuttgart","pop":17149,"slug":"arkansasar"},
-    {"name":"Ashley County","seat":"Hamburg","pop":19062,"slug":"ashleyar"},
-    {"name":"Baxter County","seat":"Mountain Home","pop":41627,"slug":"baxterar"},
-    {"name":"Benton County","seat":"Bentonville","pop":284333,"slug":"bentonar"},
-    {"name":"Boone County","seat":"Harrison","pop":37373,"slug":"boonear"},
-    {"name":"Bradley County","seat":"Warren","pop":10545,"slug":"bradleyar"},
-    {"name":"Calhoun County","seat":"Hampton","pop":4739,"slug":"calhounar"},
-    {"name":"Carroll County","seat":"Berryville / Eureka Springs","pop":28260,"slug":"carrollar"},
-    {"name":"Chicot County","seat":"Lake Village","pop":10208,"slug":"chicotar"},
-    {"name":"Clark County","seat":"Arkadelphia","pop":21446,"slug":"clarkar","featured":true},
-    {"name":"Clay County","seat":"Piggott / Corning","pop":14552,"slug":"clayar"},
-    {"name":"Cleburne County","seat":"Heber Springs","pop":24711,"slug":"cleburnear"},
-    {"name":"Cleveland County","seat":"Rison","pop":7550,"slug":"clevelandar"},
-    {"name":"Columbia County","seat":"Magnolia","pop":22801,"slug":"columbiaar"},
-    {"name":"Conway County","seat":"Morrilton","pop":20715,"slug":"conwayar"},
-    {"name":"Craighead County","seat":"Jonesboro / Lake City","pop":111231,"slug":"craigheadar"},
-    {"name":"Crawford County","seat":"Van Buren","pop":60133,"slug":"crawfordar"},
-    {"name":"Crittenden County","seat":"Marion","pop":48163,"slug":"crittendenar"},
-    {"name":"Cross County","seat":"Wynne","pop":16833,"slug":"crossar"},
-    {"name":"Dallas County","seat":"Fordyce","pop":6482,"slug":"dallasar"},
-    {"name":"Desha County","seat":"Arkansas City","pop":11395,"slug":"deshaar"},
-    {"name":"Drew County","seat":"Monticello","pop":17350,"slug":"drewar"},
-    {"name":"Faulkner County","seat":"Conway","pop":123498,"slug":"faulknerar"},
-    {"name":"Franklin County","seat":"Ozark / Charleston","pop":17097,"slug":"franklinar"},
-    {"name":"Fulton County","seat":"Salem","pop":12075,"slug":"fultonar"},
-    {"name":"Garland County","seat":"Hot Springs","pop":100180,"slug":"garlandar","featured":true},
-    {"name":"Grant County","seat":"Sheridan","pop":17958,"slug":"grantar"},
-    {"name":"Greene County","seat":"Paragould","pop":45736,"slug":"greenear"},
-    {"name":"Hempstead County","seat":"Hope","pop":20065,"slug":"hempsteadar"},
-    {"name":"Hot Spring County","seat":"Malvern","pop":33040,"slug":"hotspringar"},
-    {"name":"Howard County","seat":"Nashville","pop":12785,"slug":"howardar"},
-    {"name":"Independence County","seat":"Batesville","pop":37938,"slug":"independencear"},
-    {"name":"Izard County","seat":"Melbourne","pop":13577,"slug":"izardar"},
-    {"name":"Jackson County","seat":"Newport","pop":16755,"slug":"jacksonar"},
-    {"name":"Jefferson County","seat":"Pine Bluff","pop":67260,"slug":"jeffersonar"},
-    {"name":"Johnson County","seat":"Clarksville","pop":25749,"slug":"johnsonar"},
-    {"name":"Lafayette County","seat":"Lewisville","pop":6308,"slug":"lafayettear"},
-    {"name":"Lawrence County","seat":"Walnut Ridge","pop":16216,"slug":"lawrencear"},
-    {"name":"Lee County","seat":"Marianna","pop":8600,"slug":"leear"},
-    {"name":"Lincoln County","seat":"Star City","pop":12941,"slug":"lincolnar"},
-    {"name":"Little River County","seat":"Ashdown","pop":12026,"slug":"littleriverar"},
-    {"name":"Logan County","seat":"Paris / Booneville","pop":21131,"slug":"loganar"},
-    {"name":"Lonoke County","seat":"Lonoke","pop":74015,"slug":"lonokear"},
-    {"name":"Madison County","seat":"Huntsville","pop":16521,"slug":"madisonar"},
-    {"name":"Marion County","seat":"Yellville","pop":16826,"slug":"marionar"},
-    {"name":"Miller County","seat":"Texarkana","pop":42600,"slug":"millerar"},
-    {"name":"Mississippi County","seat":"Blytheville / Osceola","pop":40685,"slug":"mississippiar"},
-    {"name":"Monroe County","seat":"Clarendon","pop":6799,"slug":"monroear"},
-    {"name":"Montgomery County","seat":"Mount Ida","pop":8484,"slug":"montgomeryar"},
-    {"name":"Nevada County","seat":"Prescott","pop":8310,"slug":"nevadaar"},
-    {"name":"Newton County","seat":"Jasper","pop":7225,"slug":"newtonar"},
-    {"name":"Ouachita County","seat":"Camden","pop":22650,"slug":"ouachitaar"},
-    {"name":"Perry County","seat":"Perryville","pop":10019,"slug":"perryar"},
-    {"name":"Phillips County","seat":"Helena-West Helena","pop":16568,"slug":"phillipsar"},
-    {"name":"Pike County","seat":"Murfreesboro","pop":10171,"slug":"pikear"},
-    {"name":"Poinsett County","seat":"Harrisburg","pop":22965,"slug":"poinsettar"},
-    {"name":"Polk County","seat":"Mena","pop":19221,"slug":"polkar"},
-    {"name":"Pope County","seat":"Russellville","pop":63381,"slug":"popear"},
-    {"name":"Prairie County","seat":"Des Arc / De Valls Bluff","pop":8282,"slug":"prairiear"},
-    {"name":"Pulaski County","seat":"Little Rock","pop":399125,"slug":"pulaskiar"},
-    {"name":"Randolph County","seat":"Pocahontas","pop":18571,"slug":"randolphar"},
-    {"name":"St. Francis County","seat":"Forrest City","pop":23090,"slug":"stfrancisar"},
-    {"name":"Saline County","seat":"Benton","pop":123416,"slug":"salinear"},
-    {"name":"Scott County","seat":"Waldron","pop":9836,"slug":"scottar"},
-    {"name":"Searcy County","seat":"Marshall","pop":7828,"slug":"searcyar"},
-    {"name":"Sebastian County","seat":"Fort Smith / Greenwood","pop":127799,"slug":"sebastianar"},
-    {"name":"Sevier County","seat":"De Queen","pop":15839,"slug":"sevierar"},
-    {"name":"Sharp County","seat":"Ash Flat","pop":17271,"slug":"sharpar"},
-    {"name":"Stone County","seat":"Mountain View","pop":12359,"slug":"stonear"},
-    {"name":"Union County","seat":"El Dorado","pop":39054,"slug":"unionar"},
-    {"name":"Van Buren County","seat":"Clinton","pop":15796,"slug":"vanburenar"},
-    {"name":"Washington County","seat":"Fayetteville","pop":245871,"slug":"washingtonar"},
-    {"name":"White County","seat":"Searcy","pop":76822,"slug":"whitear"},
-    {"name":"Woodruff County","seat":"Augusta","pop":6269,"slug":"woodruffar"},
-    {"name":"Yell County","seat":"Danville / Dardanelle","pop":20263,"slug":"yellar"}
+    {
+      "name": "Arkansas County",
+      "seat": "DeWitt / Stuttgart",
+      "pop": 17149,
+      "slug": "arkansasar"
+    },
+    {
+      "name": "Ashley County",
+      "seat": "Hamburg",
+      "pop": 19062,
+      "slug": "ashleyar"
+    },
+    {
+      "name": "Baxter County",
+      "seat": "Mountain Home",
+      "pop": 41627,
+      "slug": "baxterar"
+    },
+    {
+      "name": "Benton County",
+      "seat": "Bentonville",
+      "pop": 284333,
+      "slug": "bentonar"
+    },
+    {
+      "name": "Boone County",
+      "seat": "Harrison",
+      "pop": 37373,
+      "slug": "boonear"
+    },
+    {
+      "name": "Bradley County",
+      "seat": "Warren",
+      "pop": 10545,
+      "slug": "bradleyar"
+    },
+    {
+      "name": "Calhoun County",
+      "seat": "Hampton",
+      "pop": 4739,
+      "slug": "calhounar"
+    },
+    {
+      "name": "Carroll County",
+      "seat": "Berryville / Eureka Springs",
+      "pop": 28260,
+      "slug": "carrollar"
+    },
+    {
+      "name": "Chicot County",
+      "seat": "Lake Village",
+      "pop": 10208,
+      "slug": "chicotar"
+    },
+    {
+      "name": "Clark County",
+      "seat": "Arkadelphia",
+      "pop": 21446,
+      "slug": "clarkar",
+      "featured": true
+    },
+    {
+      "name": "Clay County",
+      "seat": "Piggott / Corning",
+      "pop": 14552,
+      "slug": "clayar"
+    },
+    {
+      "name": "Cleburne County",
+      "seat": "Heber Springs",
+      "pop": 24711,
+      "slug": "cleburnear"
+    },
+    {
+      "name": "Cleveland County",
+      "seat": "Rison",
+      "pop": 7550,
+      "slug": "clevelandar"
+    },
+    {
+      "name": "Columbia County",
+      "seat": "Magnolia",
+      "pop": 22801,
+      "slug": "columbiaar"
+    },
+    {
+      "name": "Conway County",
+      "seat": "Morrilton",
+      "pop": 20715,
+      "slug": "conwayar"
+    },
+    {
+      "name": "Craighead County",
+      "seat": "Jonesboro / Lake City",
+      "pop": 111231,
+      "slug": "craigheadar"
+    },
+    {
+      "name": "Crawford County",
+      "seat": "Van Buren",
+      "pop": 60133,
+      "slug": "crawfordar"
+    },
+    {
+      "name": "Crittenden County",
+      "seat": "Marion",
+      "pop": 48163,
+      "slug": "crittendenar"
+    },
+    {
+      "name": "Cross County",
+      "seat": "Wynne",
+      "pop": 16833,
+      "slug": "crossar"
+    },
+    {
+      "name": "Dallas County",
+      "seat": "Fordyce",
+      "pop": 6482,
+      "slug": "dallasar"
+    },
+    {
+      "name": "Desha County",
+      "seat": "Arkansas City",
+      "pop": 11395,
+      "slug": "deshaar"
+    },
+    {
+      "name": "Drew County",
+      "seat": "Monticello",
+      "pop": 17350,
+      "slug": "drewar"
+    },
+    {
+      "name": "Faulkner County",
+      "seat": "Conway",
+      "pop": 123498,
+      "slug": "faulknerar"
+    },
+    {
+      "name": "Franklin County",
+      "seat": "Ozark / Charleston",
+      "pop": 17097,
+      "slug": "franklinar"
+    },
+    {
+      "name": "Fulton County",
+      "seat": "Salem",
+      "pop": 12075,
+      "slug": "fultonar"
+    },
+    {
+      "name": "Garland County",
+      "seat": "Hot Springs",
+      "pop": 100180,
+      "slug": "garlandar",
+      "featured": true
+    },
+    {
+      "name": "Grant County",
+      "seat": "Sheridan",
+      "pop": 17958,
+      "slug": "grantar"
+    },
+    {
+      "name": "Greene County",
+      "seat": "Paragould",
+      "pop": 45736,
+      "slug": "greenear"
+    },
+    {
+      "name": "Hempstead County",
+      "seat": "Hope",
+      "pop": 20065,
+      "slug": "hempsteadar"
+    },
+    {
+      "name": "Hot Spring County",
+      "seat": "Malvern",
+      "pop": 33040,
+      "slug": "hotspringar",
+      "featured": true
+    },
+    {
+      "name": "Howard County",
+      "seat": "Nashville",
+      "pop": 12785,
+      "slug": "howardar"
+    },
+    {
+      "name": "Independence County",
+      "seat": "Batesville",
+      "pop": 37938,
+      "slug": "independencear"
+    },
+    {
+      "name": "Izard County",
+      "seat": "Melbourne",
+      "pop": 13577,
+      "slug": "izardar"
+    },
+    {
+      "name": "Jackson County",
+      "seat": "Newport",
+      "pop": 16755,
+      "slug": "jacksonar"
+    },
+    {
+      "name": "Jefferson County",
+      "seat": "Pine Bluff",
+      "pop": 67260,
+      "slug": "jeffersonar"
+    },
+    {
+      "name": "Johnson County",
+      "seat": "Clarksville",
+      "pop": 25749,
+      "slug": "johnsonar"
+    },
+    {
+      "name": "Lafayette County",
+      "seat": "Lewisville",
+      "pop": 6308,
+      "slug": "lafayettear"
+    },
+    {
+      "name": "Lawrence County",
+      "seat": "Walnut Ridge",
+      "pop": 16216,
+      "slug": "lawrencear"
+    },
+    {
+      "name": "Lee County",
+      "seat": "Marianna",
+      "pop": 8600,
+      "slug": "leear"
+    },
+    {
+      "name": "Lincoln County",
+      "seat": "Star City",
+      "pop": 12941,
+      "slug": "lincolnar"
+    },
+    {
+      "name": "Little River County",
+      "seat": "Ashdown",
+      "pop": 12026,
+      "slug": "littleriverar"
+    },
+    {
+      "name": "Logan County",
+      "seat": "Paris / Booneville",
+      "pop": 21131,
+      "slug": "loganar"
+    },
+    {
+      "name": "Lonoke County",
+      "seat": "Lonoke",
+      "pop": 74015,
+      "slug": "lonokear"
+    },
+    {
+      "name": "Madison County",
+      "seat": "Huntsville",
+      "pop": 16521,
+      "slug": "madisonar"
+    },
+    {
+      "name": "Marion County",
+      "seat": "Yellville",
+      "pop": 16826,
+      "slug": "marionar"
+    },
+    {
+      "name": "Miller County",
+      "seat": "Texarkana",
+      "pop": 42600,
+      "slug": "millerar"
+    },
+    {
+      "name": "Mississippi County",
+      "seat": "Blytheville / Osceola",
+      "pop": 40685,
+      "slug": "mississippiar"
+    },
+    {
+      "name": "Monroe County",
+      "seat": "Clarendon",
+      "pop": 6799,
+      "slug": "monroear"
+    },
+    {
+      "name": "Montgomery County",
+      "seat": "Mount Ida",
+      "pop": 8484,
+      "slug": "montgomeryar"
+    },
+    {
+      "name": "Nevada County",
+      "seat": "Prescott",
+      "pop": 8310,
+      "slug": "nevadaar"
+    },
+    {
+      "name": "Newton County",
+      "seat": "Jasper",
+      "pop": 7225,
+      "slug": "newtonar"
+    },
+    {
+      "name": "Ouachita County",
+      "seat": "Camden",
+      "pop": 22650,
+      "slug": "ouachitaar"
+    },
+    {
+      "name": "Perry County",
+      "seat": "Perryville",
+      "pop": 10019,
+      "slug": "perryar"
+    },
+    {
+      "name": "Phillips County",
+      "seat": "Helena-West Helena",
+      "pop": 16568,
+      "slug": "phillipsar"
+    },
+    {
+      "name": "Pike County",
+      "seat": "Murfreesboro",
+      "pop": 10171,
+      "slug": "pikear"
+    },
+    {
+      "name": "Poinsett County",
+      "seat": "Harrisburg",
+      "pop": 22965,
+      "slug": "poinsettar"
+    },
+    {
+      "name": "Polk County",
+      "seat": "Mena",
+      "pop": 19221,
+      "slug": "polkar"
+    },
+    {
+      "name": "Pope County",
+      "seat": "Russellville",
+      "pop": 63381,
+      "slug": "popear"
+    },
+    {
+      "name": "Prairie County",
+      "seat": "Des Arc / De Valls Bluff",
+      "pop": 8282,
+      "slug": "prairiear"
+    },
+    {
+      "name": "Pulaski County",
+      "seat": "Little Rock",
+      "pop": 399125,
+      "slug": "pulaskiar"
+    },
+    {
+      "name": "Randolph County",
+      "seat": "Pocahontas",
+      "pop": 18571,
+      "slug": "randolphar"
+    },
+    {
+      "name": "St. Francis County",
+      "seat": "Forrest City",
+      "pop": 23090,
+      "slug": "stfrancisar"
+    },
+    {
+      "name": "Saline County",
+      "seat": "Benton",
+      "pop": 123416,
+      "slug": "salinear"
+    },
+    {
+      "name": "Scott County",
+      "seat": "Waldron",
+      "pop": 9836,
+      "slug": "scottar"
+    },
+    {
+      "name": "Searcy County",
+      "seat": "Marshall",
+      "pop": 7828,
+      "slug": "searcyar"
+    },
+    {
+      "name": "Sebastian County",
+      "seat": "Fort Smith / Greenwood",
+      "pop": 127799,
+      "slug": "sebastianar"
+    },
+    {
+      "name": "Sevier County",
+      "seat": "De Queen",
+      "pop": 15839,
+      "slug": "sevierar"
+    },
+    {
+      "name": "Sharp County",
+      "seat": "Ash Flat",
+      "pop": 17271,
+      "slug": "sharpar"
+    },
+    {
+      "name": "Stone County",
+      "seat": "Mountain View",
+      "pop": 12359,
+      "slug": "stonear"
+    },
+    {
+      "name": "Union County",
+      "seat": "El Dorado",
+      "pop": 39054,
+      "slug": "unionar"
+    },
+    {
+      "name": "Van Buren County",
+      "seat": "Clinton",
+      "pop": 15796,
+      "slug": "vanburenar"
+    },
+    {
+      "name": "Washington County",
+      "seat": "Fayetteville",
+      "pop": 245871,
+      "slug": "washingtonar"
+    },
+    {
+      "name": "White County",
+      "seat": "Searcy",
+      "pop": 76822,
+      "slug": "whitear"
+    },
+    {
+      "name": "Woodruff County",
+      "seat": "Augusta",
+      "pop": 6269,
+      "slug": "woodruffar"
+    },
+    {
+      "name": "Yell County",
+      "seat": "Danville / Dardanelle",
+      "pop": 20263,
+      "slug": "yellar"
+    }
   ]
 }

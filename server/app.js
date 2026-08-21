@@ -280,8 +280,18 @@ app.get('/story', (req, res) => {
   const data = load(req.tenantKey);
   const { layout } = require('./views/layout');
   const { mdToHtml } = require('./lib/md');
-  const md = fs.readFileSync(path.join(__dirname, '..', 'THE-STORY.md'), 'utf8')
-    .split('\n').slice(4).join('\n'); // drop the internal header block above the first ---
+  // The flagship (Clark) tells its real founding story; every other county gets
+  // the platform's mission story, not Clark's personal narrative.
+  const isFlagship = req.tenantKey === tenant.registry().default;
+  const md = isFlagship
+    ? fs.readFileSync(path.join(__dirname, '..', 'THE-STORY.md'), 'utf8').split('\n').slice(4).join('\n')
+    : `# Why ${data.county.platform_name} exists
+
+${data.county.name}'s public money should be as easy to walk as a receipt, and its residents should have a clear, checkable way to be heard. This is the layer in between: where the money becomes navigable, where the community says what to prioritize and why, and where what the officials do with that signal is tracked in the open.
+
+It computes and cites; it never takes sides. Every number links to its source. The arithmetic re-adds itself in public. It is independent and free — **not a government website**.
+
+It was built first in Clark County, Arkansas, and generalized so any county could have the same thing on the same code, the same rules, and the same receipts. ${data.county.name} is one of them. What it becomes here is up to the people who live here.`;
   const ledger = `
 <section style="margin-top:26px">
 <h2>The claims ledger <span class="sub">— every promise above, tracked honestly</span></h2>
