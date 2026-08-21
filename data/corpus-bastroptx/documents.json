@@ -28,7 +28,57 @@
       "source_url": "https://www.bastropcounty.gov/upload/page/0062/docs/County50-212.pdf",
       "retrieved_at": "2026-08-21",
       "status": "ingested",
-      "note": "Adopted rate $0.42870; no-new-revenue $0.40151."
+      "note": "Adopted rate $0.42870; no-new-revenue $0.40151; total debt levy $5,890,509."
+    },
+    {
+      "id": "bastrop-2025-tax-worksheet",
+      "title": "Bastrop County 2025 Tax Rate Calculation Worksheet (Form 50-856)",
+      "jurisdiction": "bastrop-county",
+      "layer": "actual",
+      "source_url": "https://www.bastropcounty.gov/upload/page/0278/docs/2025/BastropCounty2025.pdf",
+      "retrieved_at": "2026-08-21",
+      "status": "ingested",
+      "note": "Certified taxable value $13,474,499,007; M&O rate $0.38499 + debt (I&S) $0.04371 = $0.42870; voter-approval rate $0.42870 (adopted at the maximum without an election)."
+    },
+    {
+      "id": "bastrop-cad-rates",
+      "title": "Bastrop CAD — Bastrop County Tax Rates 2019-2025",
+      "jurisdiction": "bastrop-county",
+      "layer": "actual",
+      "source_url": "https://bastropcad.org/wp-content/uploads/2026/01/Bastrop-County-Tax-Rates-2019-2025.pdf",
+      "retrieved_at": "2026-08-21",
+      "status": "ingested",
+      "note": "Adopted county rate splits by fund: General Fund $0.350500 + Road $0.078210 = $0.428710. City of Bastrop 2025 rate $0.504000."
+    },
+    {
+      "id": "bastrop-debt-booklet",
+      "title": "Bastrop County Debt Service Booklet (as of Oct 1, 2025, prepared by PFM)",
+      "jurisdiction": "bastrop-county",
+      "layer": "actual",
+      "source_url": "https://www.bastropcounty.gov/upload/page/0071/docs/BastropCountyDebtBookasof9302025.pdf",
+      "retrieved_at": "2026-08-21",
+      "status": "ingested",
+      "note": "Outstanding principal $70,025,000; total remaining principal + interest $96,508,940; final maturity 8/1/2044; FY2025-26 payment $6,517,537. The 2024 certificate of obligation ($31.325M) is ~42% of all principal. Ratings AA+ (S&P), Aa1 (Moody's)."
+    },
+    {
+      "id": "bastrop-acfr-2024",
+      "title": "Bastrop County Annual Comprehensive Financial Report, FY ended Sept 30, 2024",
+      "jurisdiction": "bastrop-county",
+      "layer": "actual",
+      "source_url": "https://www.bastropcounty.gov/upload/page/0290/2024%20Annual%20Comprehensive%20Financial%20Report.pdf",
+      "retrieved_at": "2026-08-21",
+      "status": "ingested",
+      "note": "Independent auditor Pattillo, Brown & Hill, L.L.P.; unmodified (clean) opinion; total net position of governmental activities $69,009,465. A federal Single Audit was required for FY2024, but its findings schedule is a separate report not published online — that piece is still a dead end."
+    },
+    {
+      "id": "bastrop-check-register",
+      "title": "Bastrop County AP Check Report (open check register)",
+      "jurisdiction": "bastrop-county",
+      "layer": "transaction",
+      "source_url": "https://www.bastropcounty.gov/page/open/4060/0/DECEMBER2024CheckReport.pdf",
+      "retrieved_at": "2026-08-21",
+      "status": "ingested",
+      "note": "The county publishes an itemized check register — every vendor, date, check number, account code, and amount — more disclosure than most Texas counties. Largest named payees in the Dec 2024-Jan 2025 report include ATMAX Equipment ($596,924, road equipment), Lake Country Chevrolet ($544,029, fleet), Pavecon ($354,391, paving), and Halff Associates ($175,769, engineering)."
     }
   ]
 }

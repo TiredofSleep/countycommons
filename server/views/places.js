@@ -70,15 +70,27 @@ function cityBudgetPage(data, city) {
         m.capital ? `Capital ${cap(m.capital)}` : ''
       ].filter(Boolean).map(s => `<span class="src">${s}</span>`).join(' · ');
 
-  const bar = (d) => `
+  // Every amount clicks through to its source. Where a department names its own
+  // page in the budget PDF, the link jumps straight there (#page=N); otherwise it
+  // opens the document. The citation is always visible on hover and in the caption.
+  const cite = (d) => {
+    const href = d.page ? `${m.source.url}#page=${d.page}` : m.source.url;
+    const where = d.page ? `p. ${d.page}` : (m.source.page || '');
+    return { href, where };
+  };
+  const bar = (d) => {
+    const c = cite(d);
+    return `
 <div class="issue" style="display:block">
   <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline">
     <b>${esc(d.name)}</b>
-    <span style="white-space:nowrap"><a class="amt" href="${esc(m.source.url)}" rel="noopener" title="${esc(m.source.title)}${m.source.page ? ', ' + m.source.page : ''}">${cap(d.amount)}</a> <span class="src">· ${pctOf(d.amount, total)}%</span></span>
+    <span style="white-space:nowrap"><a class="amt" href="${esc(c.href)}" rel="noopener" title="${esc(m.source.title)}${c.where ? ', ' + esc(c.where) : ''}">${cap(d.amount)}</a> <span class="src">· ${pctOf(d.amount, total)}%</span></span>
   </div>
   ${d.what ? `<p class="src" style="margin:4px 0 6px">${esc(d.what)}</p>` : ''}
-  <div style="background:var(--rule);border-radius:2px;height:9px;overflow:hidden"><div style="width:${pctOf(d.amount, max).toFixed(1)}%;height:100%;background:var(--accent)"></div></div>
+  <div style="background:var(--rule);border-radius:2px;height:9px;overflow:hidden"><div style="width:${Math.max(0, pctOf(d.amount, max)).toFixed(1)}%;height:100%;background:var(--accent)"></div></div>
+  <div class="src" style="margin-top:4px"><a href="${esc(c.href)}" rel="noopener">source: ${esc(m.source.title)}${c.where ? ', ' + esc(c.where) : ''} ↗</a></div>
 </div>`;
+  };
 
   const fact = (f) => `<li style="margin:5px 0">${esc(f)}</li>`;
 

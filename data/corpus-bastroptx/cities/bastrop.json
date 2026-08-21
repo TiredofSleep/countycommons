@@ -4,6 +4,7 @@
     "slug": "bastrop",
     "kind": "city (county seat)",
     "fiscal_year": "FY2026",
+    "basis_label": "adopted budget",
     "population": 9688,
     "pop_source": "2020 U.S. Census",
     "adopted": "2025",
@@ -12,62 +13,38 @@
     "total_label": "General Fund",
     "general_fund": 18608924,
     "funds": [
-      {
-        "label": "General Fund",
-        "amount": 18608924
-      },
-      {
-        "label": "Bastrop Power & Light (electric)",
-        "amount": 9531974
-      },
-      {
-        "label": "Water & Wastewater",
-        "amount": 10041408
-      }
+      { "label": "General Fund", "amount": 18608924 },
+      { "label": "Bastrop Power & Light (electric)", "amount": 9531974 },
+      { "label": "Water & Wastewater", "amount": 10041408 }
     ],
     "source": {
       "title": "City of Bastrop FY2025-26 Annual Operating & Capital Budget",
       "url": "https://www.cityofbastrop.org/upload/page/0368/Annual%20Fiscal%20Year%202025-2026%20Operating%20and%20Capital%20Budget%20Final%20V2.pdf",
-      "page": "Fund & department summaries",
+      "page": "General Fund department detail, pp. 47-89",
       "finance_page": "https://www.cityofbastrop.org/page/fin.financial_transparency"
     },
-    "note": "The City of Bastrop (the county seat) — a separate government from Bastrop County. The bars are the city’s General Fund ($18.6M); Police and Fire are about two-thirds of it. Bastrop also runs its own electric utility (Bastrop Power & Light, $9.5M) and a Water & Wastewater fund ($10.0M) as self-supporting enterprises. The city budgets fund by fund and publishes no single all-funds total. Police, Fire, Parks, HR, and the City Secretary are the confirmed department totals; the rest are grouped.",
+    "note": "The City of Bastrop (the county seat) — a separate government from Bastrop County. The bars are the city's General Fund ($18.6M). Police is the largest single department at about a third of it; Police and Fire together are about 43%. Each amount links to the exact page of the adopted budget where it appears. Bastrop also runs its own electric utility (Bastrop Power & Light, $9.5M) and a Water & Wastewater fund ($10.0M) as self-supporting enterprises. One honest note on the arithmetic: the department pages sum to a little less than the $18.6M General-Fund total, because the city books some fund-wide costs (internal-service charges, and a non-departmental overhead-allocation credit) outside the individual departments. That remainder is shown as its own line so the tree still adds up to the dollar; the city's by-category view of the same fund (wages, benefits, supplies, and so on, pp. 41-44) foots to $18,608,924 exactly.",
     "facts": [
-      "Police and Fire together are ~67% of the city’s General Fund.",
+      "Police is the largest General-Fund department — $6.23M, about a third of the fund.",
+      "Police and Fire together are about 43% of the General Fund (not two-thirds — Fire is $1.79M).",
+      "The city cut its FY2026 property-tax rate to $0.5040 per $100, down from a proposed $0.5179.",
       "Bastrop owns its electric utility — Bastrop Power & Light — a $9.5M enterprise fund.",
       "This is the CITY of Bastrop, distinct from Bastrop County ($93.7M)."
     ]
   },
   "departments": [
-    {
-      "name": "Police",
-      "amount": 6248967,
-      "what": "The Bastrop Police Department."
-    },
-    {
-      "name": "Fire",
-      "amount": 6232761,
-      "what": "The Bastrop Fire Department."
-    },
-    {
-      "name": "Parks & Recreation",
-      "amount": 1855789,
-      "what": "City parks and recreation."
-    },
-    {
-      "name": "Human Resources",
-      "amount": 553231,
-      "what": "City HR."
-    },
-    {
-      "name": "City Secretary",
-      "amount": 354768,
-      "what": "City records and the council."
-    },
-    {
-      "name": "Other departments",
-      "amount": 3363408,
-      "what": "The remaining smaller offices together — the General Fund total minus the departments listed."
-    }
+    { "name": "Police", "amount": 6232761, "page": 89, "what": "The Bastrop Police Department — the largest General-Fund department." },
+    { "name": "Finance", "amount": 2405508, "page": 62, "what": "City accounting, budgeting, and financial management." },
+    { "name": "Parks & Recreation", "amount": 1855789, "page": 83, "what": "City parks, trails, and recreation programs." },
+    { "name": "Fire", "amount": 1790342, "page": 68, "what": "The Bastrop Fire Department." },
+    { "name": "Utility Billing", "amount": 1430016, "page": 65, "what": "Billing and collections for the city's utilities (a Finance division)." },
+    { "name": "Library", "amount": 1038296, "page": 76, "what": "The Bastrop Public Library." },
+    { "name": "City Manager's Office", "amount": 853176, "page": 53, "what": "The city's chief executive office and administration." },
+    { "name": "Human Resources", "amount": 553231, "page": 71, "what": "City hiring, benefits, and personnel." },
+    { "name": "Municipal Court", "amount": 550787, "page": 80, "what": "The city's court for tickets and municipal violations." },
+    { "name": "Communications", "amount": 360646, "page": 59, "what": "Public information and city communications." },
+    { "name": "City Secretary", "amount": 354768, "page": 56, "what": "City records, public notices, and support to the council." },
+    { "name": "City Council", "amount": 64365, "page": 47, "what": "The elected governing body's own office." },
+    { "name": "Fund-wide & internal-service costs (not assigned to a department)", "amount": 1119239, "page": 41, "status": "partial", "what": "The remainder between the departments above and the audited $18.6M General-Fund total: internal-service charges and a non-departmental overhead-allocation credit that the city books fund-wide rather than to one office. The by-category view of the fund (pp. 41-44) foots to the total exactly." }
   ]
 }
