@@ -18,6 +18,65 @@ const NAV = [
   ['/counties', 'All counties']
 ];
 
+// The flow panel — one place to reach every page, grouped in the order the
+// platform actually works: see the money, say what you want, rally and hold them
+// to it, then the wider network and the rules that keep it honest. Config gates
+// the items that don't exist for a given county (a cities layer, the flagship's
+// comparison pages). Every page on the site appears here exactly once.
+function siteMap(county, current) {
+  const muni = county && county.has_municipalities;
+  const cmp = county && county.has_compare;
+  const groups = [
+    ['See where the money goes', [
+      ['/budget', 'The money trail'],
+      muni ? ['/places', 'Cities & towns'] : null,
+      ['/vendors', 'Who gets paid'],
+      ['/audits', 'What the auditors reported'],
+      ['/verify', 'The receipt — arithmetic checked'],
+      ['/documents', 'The documents'],
+      ['/methodology', 'How every number is sourced'],
+      ['/guide', 'The plain-words tour']
+    ]],
+    ['Say what you want', [
+      ['/priorities', 'Priorities board'],
+      ['/issues', 'Open questions'],
+      ['/help', 'Find help']
+    ]],
+    ['Rally & hold them to it', [
+      ['/outcomes', 'What came of it'],
+      ['/docket', 'The docket'],
+      ['/calendar', 'The calendar'],
+      ['/participate', 'Get involved']
+    ]],
+    ['The wider network', [
+      ['/counties', 'All counties'],
+      cmp ? ['/compare/counties', 'How counties compare'] : null,
+      cmp ? ['/compare/spending', 'Spending vs. neighbors'] : null,
+      ['/kindred', 'Kindred work'],
+      ['/field', 'Where we sit in the field'],
+      ['/cases', 'The precedents'],
+      ['/research', 'The research shelf']
+    ]],
+    ['How to trust this', [
+      ['/stance', 'Where we stand'],
+      ['/never', 'What we will never do'],
+      ['/security', 'How this is secured'],
+      ['/traffic', 'The traffic log'],
+      ['/story', 'Our story'],
+      ['/feedback', 'Report a problem']
+    ]]
+  ];
+  const col = ([heading, items]) => `<div style="min-width:170px;flex:1">
+    <div class="eyebrow" style="margin:0 0 6px">${esc(heading)}</div>
+    ${items.filter(Boolean).map(([href, label]) =>
+      `<a href="${href}" style="display:block;padding:3px 0;font-size:13.5px;${href === current ? 'font-weight:700;color:var(--accent)' : ''}"${href === current ? ' aria-current="page"' : ''}>${esc(label)}</a>`).join('')}
+  </div>`;
+  return `<details class="sitemap" style="margin:10px 0 0;border:1.5px solid var(--rule);background:var(--card)">
+  <summary style="cursor:pointer;padding:9px 12px;font-family:var(--mono);font-size:13px;font-weight:600;list-style:none">🗺 Every page — the whole flow</summary>
+  <div style="display:flex;gap:20px;flex-wrap:wrap;padding:6px 14px 14px">${groups.map(col).join('')}</div>
+</details>`;
+}
+
 function layout({ title, current, body, county, description }) {
   // Counties with a municipalities layer (e.g. Middlesex, MA, where county
   // government was abolished) get a "Cities & towns" item after the money trail.
@@ -62,6 +121,7 @@ function layout({ title, current, body, county, description }) {
 <body>
 <div class="wrap">
 <nav class="site" aria-label="Site">${nav}</nav>
+${siteMap(county, current)}
 ${body}
 ${ctaBand}
 <footer>
@@ -69,7 +129,7 @@ ${ctaBand}
 <br><br>
 ${esc(county.platform_name)} is a free civic transparency project for ${esc(county.name)}, ${esc(county.state)}.
 It computes and cites; it never takes sides. A dead end means "not yet ingested and navigable," never "hidden."
-<a href="/methodology">How every number is sourced</a> · <a href="/documents">the documents</a> · <a href="/verify">the receipt</a> · <a href="/vendors">who gets paid</a> · <a href="/audits">what the auditors reported</a> · <a href="/counties">every county</a> · <a href="/compare/counties">how counties compare</a> · <a href="/stance">where we stand</a> · <a href="/cases">the precedents</a> · <a href="/research">the research shelf</a> · <a href="/kindred">kindred work</a> · <a href="/field">where we sit in the field</a> · <a href="/never">what we will never do</a> · <a href="/traffic">the traffic log</a> · <a href="/security">how this is secured</a> · <a href="/guide">the plain-words tour</a> · <a href="/feedback">report a problem</a>. ${esc(county.sponsor_line)}.${corrections}
+Every page is one click away in the <b>🗺 Every page</b> map at the top. ${esc(county.sponsor_line)}.${corrections}
 </footer>
 </div>
 </body>
