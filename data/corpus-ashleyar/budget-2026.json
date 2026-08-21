@@ -1,25 +1,43 @@
 {
   "meta": {
-    "document": "Ashley County — no appropriation document ingested yet",
-    "title": "Ashley County county budget",
-    "grand_total": 0,
+    "document": "Ashley County 2026 Budget",
+    "title": "Ashley County — the money trail",
+    "grand_total": 12235317,
     "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+    "note": "Ashley County’s two main funds for 2026 — General Fund and Road & Bridge — as reported by the Ashley County Ledger. Smaller funds exist but were not itemized in the public report; that is on the docket."
   },
   "nodes": [
     {
-      "id": "root",
-      "parent": null,
-      "name": "Ashley County — county budget",
-      "code": null,
-      "amount": 0,
       "year": 2026,
       "layer": "appropriation",
       "section": "appropriations",
-      "source": null,
       "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
+      "source": {
+        "doc": "ashley-2026",
+        "page": null
+      },
+      "status": "partial",
+      "id": "gf",
+      "parent": null,
+      "name": "General Fund",
+      "code": null,
+      "amount": 7584786
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "source": {
+        "doc": "ashley-2026",
+        "page": null
+      },
+      "status": "partial",
+      "id": "road",
+      "parent": null,
+      "name": "Road & Bridge Fund",
+      "code": null,
+      "amount": 4650531
     }
   ]
 }

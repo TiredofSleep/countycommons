@@ -1,25 +1,43 @@
 {
   "meta": {
-    "document": "Hempstead County — no appropriation document ingested yet",
-    "title": "Hempstead County county budget",
-    "grand_total": 0,
+    "document": "Hempstead County 2026 Budget",
+    "title": "Hempstead County — the money trail",
+    "grand_total": 11129819,
     "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+    "note": "Hempstead County’s 2026 adopted budget. The General Fund and Road & Bridge fund together are the $11.1M the Quorum Court passed in December 2025 (SWARK.today). The full line-item ordinance is a records request away (see the docket)."
   },
   "nodes": [
     {
-      "id": "root",
-      "parent": null,
-      "name": "Hempstead County — county budget",
-      "code": null,
-      "amount": 0,
       "year": 2026,
       "layer": "appropriation",
       "section": "appropriations",
-      "source": null,
       "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
+      "source": {
+        "doc": "hempstead-2026",
+        "page": null
+      },
+      "status": "partial",
+      "id": "gf",
+      "parent": null,
+      "name": "General Fund",
+      "code": null,
+      "amount": 6221110
+    },
+    {
+      "year": 2026,
+      "layer": "appropriation",
+      "section": "appropriations",
+      "docket_ref": null,
+      "source": {
+        "doc": "hempstead-2026",
+        "page": null
+      },
+      "status": "partial",
+      "id": "road",
+      "parent": null,
+      "name": "Road & Bridge Fund",
+      "code": null,
+      "amount": 4908709
     }
   ]
 }
