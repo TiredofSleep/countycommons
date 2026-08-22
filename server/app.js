@@ -64,8 +64,20 @@ function comingSoonPage(sub) {
 // to the flagship; an unknown subdomain gets the honest "not live yet" page.
 app.use((req, res, next) => {
   const r = tenant.resolveHost(req.headers.host);
-  if (r.action === 'redirect') return res.redirect(301, `https://${r.to}${req.originalUrl}`);
   if (r.action === 'unknown') return res.status(404).send(comingSoonPage(r.sub));
+  if (r.action === 'redirect') {
+    // Bare apex / www is the NETWORK opening page: the county selector itself,
+    // served here at "/". Functional routes (enter, gate) and static assets pass
+    // through so they work at the apex; any other deep link falls back to the
+    // flagship. This is why countycommons.us shows "select your county or city".
+    const p = req.path;
+    if (p === '/enter' || p.startsWith('/gate') || p === '/health' || p === '/robots.txt' || /\.[a-z0-9]+$/i.test(p)) return next();
+    if (p === '/') {
+      res.set('Content-Security-Policy', "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; frame-ancestors 'none'");
+      return res.send(gatePage(null, '/'));
+    }
+    return res.redirect(301, `https://${r.to}${req.originalUrl}`);
+  }
   req.tenantKey = r.key;
   next();
 });
