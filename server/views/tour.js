@@ -67,8 +67,9 @@ function levelsSVG() {
   </svg>`;
 }
 
-function tourPage(data) {
-  const { county } = data;
+// The tour as an embeddable block (slides + nav + its own styles) — used on its
+// own /tour page AND dropped in below the hero on every county's home page.
+function tourBlock(county) {
   const T = 7;
   const slides = [
     slide(1, T, 'welcome',
@@ -106,7 +107,7 @@ function tourPage(data) {
       `<p class="src" style="margin:12px 0 0">Or jump straight to <a href="/gate">any county or city</a>.</p>`)
   ].join('');
 
-  const body = `
+  return `
 <style>
   .tour-slide{border-top:1px solid var(--rule);padding-top:22px;margin-top:22px}
   .tour-slide:first-child{border-top:none;margin-top:0;padding-top:0}
@@ -121,11 +122,6 @@ function tourPage(data) {
   .tour-btn{font-family:var(--mono);font-size:14px;padding:9px 16px;border:1.5px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer}
   .tour-btn.ghost{background:var(--card);color:var(--ink)}
 </style>
-<header class="page">
-  <div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · a quick tour</div>
-  <h1>What this site lets you do</h1>
-  <div class="src">Two minutes, four moves: <b>see the money, say what you want, rally your neighbors, hold them to it.</b> Click through — or just scroll.</div>
-</header>
 <div class="tour" data-tour-start="/budget">
   ${slides}
   <div class="tour-nav">
@@ -134,11 +130,22 @@ function tourPage(data) {
     <button type="button" class="tour-btn" data-tour="next" data-href="/budget" data-last="See the money trail →">Next →</button>
   </div>
 </div>`;
+}
 
+// The standalone /tour page — a header + the same block, wrapped in the layout.
+function tourPage(data) {
+  const { county } = data;
+  const body = `
+<header class="page">
+  <div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · a quick tour</div>
+  <h1>What this site lets you do</h1>
+  <div class="src">Two minutes, four moves: <b>see the money, say what you want, rally your neighbors, hold them to it.</b> Click through — or just scroll.</div>
+</header>
+${tourBlock(county)}`;
   return layout({
     title: `Take the tour — ${county.platform_name}`, current: '/tour', body, county,
     description: `A two-minute walkthrough of ${county.platform_name}: see where every public dollar goes, say what your community needs, rally your neighbors, and hold officials to it.`
   });
 }
 
-module.exports = { tourPage };
+module.exports = { tourPage, tourBlock };

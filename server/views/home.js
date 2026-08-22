@@ -1,5 +1,6 @@
 const { esc, money, copyText } = require('../lib/corpus');
 const { deliveryThreshold, deliveryInfo } = require('../lib/threshold');
+const { tourBlock } = require('./tour');
 const { layout } = require('./layout');
 const { tally } = require('../tally');
 const { registrationForm } = require('./register-box');
@@ -71,6 +72,12 @@ function homePage(data, opts = {}) {
   </div>
 </header>
 
+<section style="margin-top:8px">
+<h2 style="margin-top:0">See it in two minutes <span class="sub">— what this site lets you do</span></h2>
+<p class="src" style="max-width:60ch;margin-bottom:4px">Click through the four moves — see the money, say what you want, rally your neighbors, hold them to it. Or just scroll.</p>
+${tourBlock(county)}
+</section>
+
 <div style="display:flex;gap:10px;flex-wrap:wrap;margin:14px 0">
   ${stat(money(budget.meta.grand_total), 'county dollars mapped', '/budget')}
   ${stat(String(documents.documents.length), 'source documents, hashed', '/documents')}
@@ -81,12 +88,6 @@ function homePage(data, opts = {}) {
 <section>
 <h2>This is your petition <span class="sub">— open-ended, and with receipts</span></h2>
 <p style="max-width:66ch">Not a one-off signature that disappears into an inbox. A standing place where a community can <b>see what government is doing, say what should change, rally behind it, and hold the outcome to the light</b> — on your town, in your state, and nationally. Every step is public and checkable, and nobody's voice is for sale.</p>
-<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px">
-  ${step('1', 'See it', 'Walk the budget from the total down to the line — every number cited to its source document.', '/budget', 'The money trail')}
-  ${step('2', 'Say it', 'Post what to prioritize — or take a fresh look at — and why. For your town, your state, or the nation.', '/priorities', 'Set a priority')}
-  ${step('3', 'Rally', 'Neighbors back what they share, so the strongest-felt priorities rise to the top on their own.', '/priorities', 'Back what matters')}
-  ${step('4', 'Hold them to it', 'At the threshold it\'s carried to the officials who decide — and we track, in public, what they actually do.', '/outcomes', 'What came of it')}
-</div>
 </section>
 
 <section>
