@@ -249,9 +249,22 @@ ${IDEAS.map(([g, items]) => `<p class="src" style="margin:10px 0 4px"><b>${esc(g
 </div>`;
   };
 
+  const emptyDest = threshold
+    ? `at <b>${threshold}</b> ${isLocal ? 'neighbors' : 'voices'} it's printed and hand-delivered to <b>${esc(current.body)}</b>`
+    : `it's carried to the people who decide`;
   const list = items.length
     ? items.map(card).join('')
-    : `<p class="src">Nothing on the <b>${esc(current.label)}</b> board yet — be the first. ${isLocal ? `It helps to <a href="/budget">see what's already here</a> before you say what to lift up or question.` : `Say what ${current.kind === 'national' ? 'the country' : esc(county.state)} should take on.`}</p>`;
+    : `<div class="issue" style="display:block;border-style:dashed">
+  <b>This board is open and waiting — be the first to post.</b>
+  <p class="src" style="margin:6px 0 0">An empty board isn't a dead one. It just means no one in <b>${esc(current.label)}</b> has spoken up here yet. Here's what happens when you do:</p>
+  <div style="display:flex;flex-direction:column;gap:4px;margin:10px 0 2px">
+    <p class="src" style="margin:0"><b>1.</b> You post what to prioritize — or take a fresh look at — and why. No account, and your name is never shown.</p>
+    <p class="src" style="margin:0"><b>2.</b> Neighbors back what they share, so the strongest-felt priorities rise to the top on their own.</p>
+    <p class="src" style="margin:0"><b>3.</b> ${emptyDest[0].toUpperCase() + emptyDest.slice(1)}.</p>
+    <p class="src" style="margin:0"><b>4.</b> We track, in public, what they actually do — see <a href="/outcomes">what came of it</a>.</p>
+  </div>
+  <p class="src" style="margin:8px 0 0">${isLocal ? `Not sure where to start? <a href="/budget">See what's already mapped</a>, or pick one of the starters below.` : `Say what ${current.kind === 'national' ? 'the country' : esc(county.state)} should take on — or pick a starter below.`}</p>
+</div>`;
 
   const body = `
 <header class="page">

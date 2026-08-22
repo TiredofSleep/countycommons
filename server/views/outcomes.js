@@ -26,6 +26,12 @@ function card(p) {
 function outcomesPage(data, items) {
   const { county } = data;
   const body_name = govBody(county);
+  // Some tenants have no county-level governing body (abolished counties like
+  // Middlesex, Fairfield; Kalawao). Their gov-body string is a whole sentence,
+  // so "carried to <that>" reads wrong — fall back to a generic phrasing.
+  const hasBody = !/no (county )?government|abolished|no governing body/i.test(body_name);
+  const carriedTo = hasBody ? `the <b>${esc(body_name)}</b>` : 'the people who decide';
+  const deliveredTo = hasBody ? `Delivered to ${esc(body_name)}` : 'Delivered to whoever holds the decision';
 
   const acted = items.filter(p => p.phase === 'acted');
   const answered = items.filter(p => p.phase === 'answered');
@@ -47,10 +53,23 @@ ${list.map(card).join('')}
 <header class="page">
   <div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · the accountability loop</div>
   <h1>What came of it</h1>
-  <div class="src">This is the whole point: the community says what it wants (on <a href="/priorities">the priorities board</a>), it gets carried to the <b>${esc(body_name)}</b>, and here we record what they did — with a source for every step. We never say they did right or wrong. We show what happened, and when nothing happens, we count the days in the open.</div>
+  <div class="src">This is the whole point: the community says what it wants (on <a href="/priorities">the priorities board</a>), it gets carried to ${carriedTo}, and here we record what they did — with a source for every step. We never say they did right or wrong. We show what happened, and when nothing happens, we count the days in the open.</div>
 </header>
 
-${moved === 0 ? `<div class="issue" style="display:block"><b>Nothing has moved yet.</b> <span class="src">Priorities start on <a href="/priorities">the board</a>. When one is carried to the county, answered, or acted on, its trail appears here — cited, dated, and in plain view.</span></div>` : ''}
+${moved === 0 ? `<div class="issue" style="display:block;border-style:dashed">
+  <b>Nothing has moved yet — and that's the honest starting point.</b>
+  <p class="src" style="margin:6px 0 0">This page fills itself in from real events, not promises. Nothing is here because no priority has been carried to ${carriedTo} yet. When one is, you'll see its whole trail — each step dated and cited to a real source:</p>
+  <div style="display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 2px;font-family:var(--mono);font-size:13px">
+    <span class="chip">① Raised on the board</span>
+    <span style="opacity:.5">→</span>
+    <span class="chip">② ${deliveredTo}</span>
+    <span style="opacity:.5">→</span>
+    <span class="chip">③ Answered</span>
+    <span style="opacity:.5">→</span>
+    <span class="chip c-ok">④ Acted on</span>
+  </div>
+  <p class="src" style="margin:8px 0 0">If an ask sits unanswered, we count the days in the open — silence gets recorded too. Start the loop on <a href="/priorities">the priorities board</a>.</p>
+</div>` : ''}
 
 ${section('Acted on', 'the loop closed', acted)}
 ${section('Answered, awaiting action', 'the county responded', answered)}
