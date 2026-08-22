@@ -35,7 +35,18 @@ function homePage(data, opts = {}) {
   const openQs = (issueDrafts.drafts || []).filter(d => d.status === 'open-tier0');
   const nm = nextMeeting(calendar);
   const stamps = docket.issues.filter(i => i.stamped).slice(-3).reverse();
-  const vOk = verification && verification.summary.failed === 0 && verification.summary.total_checks > 0;
+  // Split the verifier's checks: budget cross-foots (grand-total + node sums)
+  // vs. platform-integrity checks (hash chain, vote recount). The home stamp
+  // should only make a *budget* claim when there is a real budget to check —
+  // otherwise it boasts "budget checks pass" over an empty ordinance.
+  const hasBudget = budget.meta && budget.meta.grand_total > 0;
+  const fundCount = (budget.nodes || []).filter(n => n.parent === null && n.section === 'appropriations').length;
+  const budgetChecks = verification ? verification.checks.filter(c => c.kind !== 'chain' && c.kind !== 'recount') : [];
+  const budgetPassed = budgetChecks.filter(c => c.ok !== false).length;
+  const vOk = hasBudget && verification && verification.summary.failed === 0 && budgetChecks.length >= 1;
+  // Whether this county's documents are actually hash-fingerprinted and archived,
+  // or only indexed/transcribed (true only where source files have been stored).
+  const anyHashed = documents.documents.some(d => d.sha256);
 
   const stat = (value, label, href) => `
 <a href="${href}" style="text-decoration:none;color:var(--ink);flex:1;min-width:140px;border:1.5px solid var(--ink);background:var(--card);padding:12px 14px;display:block">
@@ -65,7 +76,7 @@ function homePage(data, opts = {}) {
   <p style="font-size:clamp(15px,2.6vw,19px);max-width:56ch;margin:10px 0 4px">${copyText(data, 'home.subhead')}</p>
   <p style="font-family:var(--mono);font-size:clamp(12px,2vw,14px);letter-spacing:.04em;margin:10px 0 2px"><b>${copyText(data, 'home.strip')}</b></p>
   <p class="src" style="max-width:60ch">Every dollar shown where it came from. Every voice counted honestly. Every claim you can check yourself — including this one.</p>
-  ${vOk ? `<a href="/verify" style="text-decoration:none"><div class="stamp" title="Every branch of the budget re-adds to its stated total">${verification.summary.passed}/${verification.summary.total_checks} budget checks pass ✓</div></a>` : ''}
+  ${vOk ? `<a href="/verify" style="text-decoration:none"><div class="stamp" title="Every branch of the budget re-adds to its stated total">${budgetPassed}/${budgetChecks.length} budget checks pass ✓</div></a>` : ''}
   <div style="margin:16px 0 2px;display:flex;gap:10px;flex-wrap:wrap;align-items:center">
     <a href="/priorities" style="display:inline-block;font-family:var(--mono);font-size:clamp(15px,2.4vw,18px);font-weight:600;padding:16px 26px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);text-decoration:none;text-wrap:balance">Raise your voice — put a priority on the record →</a>
     ${openQs.length ? `<a href="/issues/${esc(openQs[0].id)}" style="font-family:var(--mono);font-size:14px;font-weight:600;padding:14px 18px;border:2px solid var(--ink);color:var(--ink);text-decoration:none">or answer the open question →</a>` : ''}
@@ -80,7 +91,7 @@ ${tourBlock(county)}
 
 <div style="display:flex;gap:10px;flex-wrap:wrap;margin:14px 0">
   ${stat(money(budget.meta.grand_total), 'county dollars mapped', '/budget')}
-  ${stat(String(documents.documents.length), 'source documents, hashed', '/documents')}
+  ${stat(String(documents.documents.length), anyHashed ? 'source documents, hashed' : 'source documents, indexed', '/documents')}
   ${stat(nm ? nm.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : '—', nm ? 'next public meeting' : 'calendar', '/calendar')}
   ${stat(String(openQs.length), openQs.length === 1 ? 'question open now' : 'questions open now', '/issues')}
 </div>
@@ -94,13 +105,13 @@ ${tourBlock(county)}
 <h2>Start where you are <span class="sub">— four doors, no account, no app</span></h2>
 <div style="display:flex;gap:10px;flex-wrap:wrap">
   ${door('If you\'re in a hard spot', 'Food, the light bill, rent, benefits — the real local options with phone numbers and hours. This page gives; it never asks.', '/help', 'Find help')}
-  ${door('Where the money goes', `${money(budget.meta.grand_total)} across ~40 funds — walk it from the total to the line a deputy's salary lives on. Every number cites its page.`, '/budget', 'Follow the money')}
+  ${door('Where the money goes', hasBudget ? `${money(budget.meta.grand_total)}${fundCount ? ` across ${fundCount} funds` : ''} — walk it from the total to the line a deputy's salary lives on. Every number cites its page.` : `No budget ingested for ${county.name} yet — the trail is marked so, never hidden. See what's mapped and what's still owed.`, '/budget', 'Follow the money')}
   ${door('Be counted', openQs.length ? `"${(openQs[0].final_wording || '').slice(0, 90)}…" — answer in fifteen seconds, change your mind until it closes.` : 'Questions put to residents, answered by residents.', '/issues', 'Answer the question')}
   ${door('Show up', nm ? `${nm.ev.name.split('—')[0].trim()} meets ${nm.date.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}, ${nm.ev.time}. Public — and you can speak.` : 'Every public meeting, computed live.', '/calendar', 'See the calendar')}
 </div>
 <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
   ${door('The pursuit ledger', 'Every gap in the record, named and numbered — and stamped in public when it gets filled. Watch the record complete itself.', '/docket', 'See the docket')}
-  ${door('The document shelf', `${documents.documents.length} public documents — budgets, audits, minutes, ordinances — hashed, archived, and, where the scans are machine-readable, searchable to the words inside.`, '/documents', 'Search the documents')}
+  ${door('The document shelf', `${documents.documents.length} public documents — budgets, audits, minutes, ordinances — ${anyHashed ? 'hashed, archived, and, where the scans are machine-readable, searchable to the words inside' : 'indexed and cited, with source files hashed and archived as they\'re obtained'}.`, '/documents', 'Search the documents')}
   ${door('Why this exists', 'The story, the creed, and a ledger of every claim this platform makes about itself — each one checkable.', '/story', 'Read the story')}
   ${door('Make it travel', 'Share a question with a neighbor, put a QR code on a corkboard, bring this to your church or your shop. Traction is the product.', '/participate', 'Get involved')}
 </div>

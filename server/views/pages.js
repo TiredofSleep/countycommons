@@ -85,14 +85,14 @@ function documentsPage(data, q) {
   const rows = d => `
 <div class="issue" id="${esc(d.id)}">
   <div class="ibody">
-    <b>${esc(d.title)}</b>
-    <p>${esc(d.source_note)}</p>
+    <b>${esc(d.title || d.id || 'Untitled document')}</b>
+    ${d.source_note ? `<p>${esc(d.source_note)}</p>` : ''}
     <dl class="prov">
-      <dt>Jurisdiction</dt><dd>${esc(d.jurisdiction)}</dd>
-      <dt>Layer</dt><dd>${esc(d.layer)}</dd>
-      <dt>Retrieved</dt><dd>${esc(d.retrieved_at)}</dd>
+      ${d.jurisdiction ? `<dt>Jurisdiction</dt><dd>${esc(d.jurisdiction)}</dd>` : ''}
+      ${d.layer ? `<dt>Layer</dt><dd>${esc(d.layer)}</dd>` : ''}
+      ${d.retrieved_at ? `<dt>Retrieved</dt><dd>${esc(d.retrieved_at)}</dd>` : ''}
       <dt>Integrity</dt><dd>${d.sha256 ? `SHA-256 <span class="code">${esc(d.sha256)}</span>` : 'Source PDF not yet stored in this corpus — no file hash yet. The hand transcription is the current basis (see status).'}</dd>
-      <dt>Status</dt><dd>${esc(d.status)} — ${esc(d.status_note)}</dd>
+      <dt>Status</dt><dd>${esc(d.status || 'listed')}${d.status_note ? ` — ${esc(d.status_note)}` : ''}</dd>
       <dt>Cited by</dt><dd>${counts[d.id] || 0} lines in the money trail</dd>
       ${d.local_file ? `<dt>Stored copy</dt><dd><a href="/files/${esc(d.local_file.replace(/^inbox\//, ''))}">Read the archived PDF</a>${d.size_bytes ? ` (${(d.size_bytes / 1048576).toFixed(1)} MB)` : ''} — this is the exact file the SHA-256 above fingerprints.</dd>` : ''}
       ${d.source_url ? `<dt>Origin</dt><dd><a href="${esc(d.source_url)}" rel="noopener">${esc(d.source_url)}</a></dd>` : ''}

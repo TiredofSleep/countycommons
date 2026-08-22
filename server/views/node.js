@@ -88,7 +88,7 @@ function nodePage(data, node) {
   <dt>Checked</dt><dd>${verify}</dd>
   ${share ? `<dt>Share</dt><dd>${share}</dd>` : ''}
   ${issue ? `<dt>Docket</dt><dd><a href="/docket#i${issue.num}">Issue #${issue.num} — ${esc(issue.title)}</a> (${esc(issue.status.replace('_', ' '))})</dd>` : ''}
-  ${doc ? `<dt>Retrieved</dt><dd>${esc(doc.retrieved_at)} — ${esc(doc.status_note)}</dd>` : ''}
+  ${doc && (doc.retrieved_at || doc.status_note) ? `<dt>Retrieved</dt><dd>${doc.retrieved_at ? esc(doc.retrieved_at) : ''}${doc.retrieved_at && doc.status_note ? ' — ' : ''}${doc.status_note ? esc(doc.status_note) : ''}</dd>` : ''}
 </dl>
 
 ${node.note ? `<section><h3>Note on this line</h3><p>${esc(node.note)}</p></section>` : ''}
