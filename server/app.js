@@ -227,17 +227,28 @@ app.use((req, res, next) => {
 function starterPage(data) {
   const { layout } = require('./views/layout');
   const { county } = data;
+  // If the county's adopted budget document is already captured, surface it —
+  // the data is here and downloadable, just not yet parsed into a money trail.
+  const budgetDoc = ((data.documents && data.documents.documents) || []).find(d => d.layer === 'appropriation' && d.source_url);
+  const docBlock = budgetDoc ? `
+<section>
+  <div class="issue" style="display:block;border-left:3px solid var(--accent)">
+    <div class="eyebrow" style="color:var(--accent)">the document is here</div>
+    <p class="src" style="margin:4px 0 0"><b>${esc(county.name)}'s adopted budget is captured.</b> <a href="${esc(budgetDoc.source_url)}" rel="noopener">Open the appropriation ordinance ↗</a> — the county's real budget document. It isn't parsed into a walkable, cited money trail yet, but the source is here for anyone to read now.</p>
+  </div>
+</section>` : '';
   const body = `
 <header class="page">
   <div class="eyebrow">${esc(county.name)}, ${esc(county.state)}</div>
-  <h1>Not built yet</h1>
-  <div class="src" style="max-width:60ch">County Commons hasn't ingested ${esc(county.name)} yet. This is a starter site, holding the county's spot on the network until its adopted budget and public records are loaded — then this page becomes a walkable money trail, every dollar cited to its source, like the counties already live.</div>
+  <h1>${budgetDoc ? 'Budget captured — not yet parsed' : 'Not built yet'}</h1>
+  <div class="src" style="max-width:60ch">County Commons hasn't turned ${esc(county.name)} into a walkable money trail yet. ${budgetDoc ? 'But its adopted budget document is already captured below.' : 'This is a starter site, holding the county’s spot on the network until its budget is loaded.'} When it's parsed, this page becomes a money trail with every dollar cited to its source, like the counties already live.</div>
 </header>
+${docBlock}
 <section>
   <p>See the counties and cities that <b>are</b> live — from big-city budgets to a 64-person county — on <a href="/gate">the county selector</a> or the <a href="/counties">full directory</a>.</p>
-  <p class="src">Want ${esc(county.name)} built out, or want to host it? The platform ingests a county from its own adopted budget and public records. Reach the project at ${county.contact_email ? `<a href="mailto:${esc(county.contact_email)}">${esc(county.contact_email)}</a>` : 'the contact on any live county page'}.</p>
+  <p class="src">Want ${esc(county.name)} built out, or want to host it? Reach the project at ${county.contact_email ? `<a href="mailto:${esc(county.contact_email)}">${esc(county.contact_email)}</a>` : 'the contact on any live county page'}.</p>
 </section>`;
-  return layout({ title: `${county.name} — coming soon`, current: null, body, county, description: `${county.name} is a starter site on County Commons — not yet ingested.` });
+  return layout({ title: `${county.name} — ${budgetDoc ? 'budget captured' : 'coming soon'}`, current: null, body, county, description: `${county.name} on County Commons — ${budgetDoc ? 'budget document captured, parsing pending' : 'a starter site, not yet ingested'}.` });
 }
 app.use((req, res, next) => {
   if (!req.tenantKey || req.method !== 'GET') return next();
