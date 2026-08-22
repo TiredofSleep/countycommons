@@ -101,10 +101,14 @@ function tourBlock(county) {
       loopSVG(),
       `<p class="src" style="margin:12px 0 0">→ <a href="/outcomes">What came of it</a></p>`),
     slide(7, T, 'start',
-      'It’s yours — at every level.',
-      'City, county, state, nation — there’s a board for each, so you can push where the decision actually lives. It computes and cites; it never tells you what to want. That’s the whole idea: your money, made plain, and your voice, made impossible to miss. Start here.',
+      'Now go make a difference.',
+      'You’ve seen how it works — city, county, state, nation, a board for each. Don’t stop at reading. Do one of two things: <b>provide a solution</b> — a clear, cited proposal others can back — or <b>circulate a question</b> and get your neighbors on the record. It computes and cites; it never tells you what to want. Your money, made plain, and your voice, made impossible to miss.',
       levelsSVG(),
-      `<p class="src" style="margin:12px 0 0">Or jump straight to <a href="/gate">any county or city</a>.</p>`)
+      `<div style="display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 0">
+        <a href="/priorities" style="font-family:var(--mono);font-size:15px;font-weight:600;padding:13px 20px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);text-decoration:none">Provide a solution →</a>
+        <a href="/issues" style="font-family:var(--mono);font-size:15px;font-weight:600;padding:13px 20px;background:var(--card);color:var(--ink);border:2px solid var(--ink);text-decoration:none">Circulate a question →</a>
+      </div>
+      <p class="src" style="margin:12px 0 0">Or jump straight to <a href="/gate">any county or city</a>.</p>`)
   ].join('');
 
   return `
@@ -127,7 +131,7 @@ function tourBlock(county) {
   <div class="tour-nav">
     <button type="button" class="tour-btn ghost" data-tour="back">← Back</button>
     <div class="tour-dots" aria-hidden="true"></div>
-    <button type="button" class="tour-btn" data-tour="next" data-href="/budget" data-last="See the money trail →">Next →</button>
+    <button type="button" class="tour-btn" data-tour="next" data-href="/priorities" data-last="Go make a difference →">Next →</button>
   </div>
 </div>`;
 }
