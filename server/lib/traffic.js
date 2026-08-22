@@ -32,19 +32,57 @@ function load() {
 
 function today() { return new Date().toISOString().slice(0, 10); }
 
-// Record one page view for a county. `tenantKey` is the county; nothing else
-// about the request is passed in, so nothing else can be recorded.
-function note(tenantKey) {
+// Where a view came from — derived from the Referer header ONLY. We keep the
+// source bucket (a word like "Facebook"), never the full URL, never an IP.
+function classifySource(referer, host) {
+  if (!referer) return 'Direct';
+  let h = '';
+  try { h = new URL(referer).hostname.toLowerCase(); } catch (e) { return 'Other'; }
+  const bare = String(host || '').replace(/^www\./, '');
+  if (bare && (h === bare || h.endsWith('.' + bare))) return 'Internal';
+  if (/(^|\.)(facebook\.com|fb\.com|fb\.me|facebook\.net)$/.test(h)) return 'Facebook';
+  if (/(^|\.)google\./.test(h)) return 'Google';
+  if (/(^|\.)(twitter\.com|x\.com|t\.co)$/.test(h)) return 'X/Twitter';
+  if (/(^|\.)instagram\.com$/.test(h)) return 'Instagram';
+  if (/(^|\.)reddit\.com$/.test(h)) return 'Reddit';
+  if (/(^|\.)nextdoor\.com$/.test(h)) return 'Nextdoor';
+  if (/(^|\.)(bing\.com|duckduckgo\.com|search\.yahoo\.com)$/.test(h)) return 'Search (other)';
+  if (/(^|\.)(youtube\.com|linkedin\.com|lnkd\.in)$/.test(h)) return 'Social (other)';
+  return 'Other';
+}
+// Known crawlers/scrapers/tools — counted separately so human numbers stay clean.
+function isBot(ua) {
+  return /bot\b|crawl|spider|slurp|facebookexternalhit|facebot|bingpreview|headless|python-requests|curl|wget|httpx|go-http|Googlebot|APIs-Google|AhrefsBot|SemrushBot|DotBot|PetalBot|YandexBot|Applebot|Bytespider|GPTBot|ClaudeBot|CCBot|meta-externalagent|Discordbot|Slackbot|WhatsApp|TelegramBot|Twitterbot|LinkedInBot|Pinterest/i.test(ua || '');
+}
+
+// Record one page view for a county. `req` supplies ONLY the Referer and
+// User-Agent headers (for source + bot bucketing) — never an IP, never a cookie,
+// never a per-person identifier. tenantKey === '__network__' for the apex landing.
+function note(tenantKey, req) {
   if (!store) load();
   if (!tenantKey) return;
   const d = today();
   if (!store.since) store.since = d;
   store.updated = new Date().toISOString();
-  const day = store.days[d] || (store.days[d] = { total: 0, byCounty: {} });
+  const day = store.days[d] || (store.days[d] = { total: 0, byCounty: {}, bySource: {}, bots: 0 });
+  if (!day.bySource) day.bySource = {};
+  if (day.bots == null) day.bots = 0;
   day.total++;
   day.byCounty[tenantKey] = (day.byCounty[tenantKey] || 0) + 1;
   store.totalsByCounty[tenantKey] = (store.totalsByCounty[tenantKey] || 0) + 1;
   store.lifetimeTotal = (store.lifetimeTotal || 0) + 1;
+  const ua = req && req.headers && req.headers['user-agent'];
+  const ref = req && req.headers && req.headers.referer;
+  const host = req && req.headers && String(req.headers.host || '').split(':')[0];
+  if (isBot(ua)) {
+    day.bots++;
+    store.botTotal = (store.botTotal || 0) + 1;
+  } else {
+    const s = classifySource(ref, host);
+    day.bySource[s] = (day.bySource[s] || 0) + 1;
+    store.totalsBySource = store.totalsBySource || {};
+    store.totalsBySource[s] = (store.totalsBySource[s] || 0) + 1;
+  }
   dirty = true;
 }
 
@@ -62,11 +100,13 @@ function flush() {
 function summary(maxDays = 30) {
   if (!store) load();
   const days = Object.keys(store.days).sort().reverse().slice(0, maxDays)
-    .map(d => ({ date: d, total: store.days[d].total, byCounty: store.days[d].byCounty }));
+    .map(d => ({ date: d, total: store.days[d].total, byCounty: store.days[d].byCounty, bySource: store.days[d].bySource || {}, bots: store.days[d].bots || 0 }));
   return {
     since: store.since, updated: store.updated,
     lifetimeTotal: store.lifetimeTotal || 0,
     totalsByCounty: store.totalsByCounty || {},
+    totalsBySource: store.totalsBySource || {},
+    botTotal: store.botTotal || 0,
     days
   };
 }

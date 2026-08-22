@@ -30,7 +30,7 @@ function trafficPage(data, sum, reg) {
 <header class="page">
   <div class="eyebrow">${esc(county.platform_name)} · the traffic log</div>
   <h1>How much this is looked at</h1>
-  <div class="src">The one thing we count, published: how many pages each county got, by day. That's the whole record. <b>No IP addresses. No cookies. No user agents. Nothing tied to a person</b> — by us or by anyone who ever gets hold of the file. It can tell you which counties people are reading; it cannot tell anyone who read them, because we never wrote that down. This is the surveillance we refuse, made auditable: there's nothing here but sums.</div>
+  <div class="src">What we count, published: how many pages each county got by day, plus — in a single word — where a visit came from (a search engine, a link from Facebook, or direct) and whether it was a bot. We read the browser's referer and user-agent to sort a view into a bucket like "Facebook," then throw the details away: we keep the bucket, <b>never the full address, never an IP, never a cookie, nothing tied to a person</b> — by us or by anyone who ever gets hold of the file. It can tell you which counties people read and roughly how they found us; it cannot tell anyone who they were, because we never wrote that down. This is the surveillance we refuse, made auditable: there's nothing here but sums.</div>
 </header>
 
 <section>
@@ -40,6 +40,18 @@ function trafficPage(data, sum, reg) {
 <tbody>${totalRows}</tbody>
 </table>
 <p class="src">Lifetime total across every county: <b>${(sum.lifetimeTotal || 0).toLocaleString('en-US')}</b> page views.${sum.updated ? ` Last counted ${esc(sum.updated.slice(0, 16).replace('T', ' '))} UTC.` : ''}</p>
+</section>
+
+<section>
+<h2>Where visitors come from <span class="sub">— human views, by source</span></h2>
+${(() => {
+  const srcs = Object.entries(sum.totalsBySource || {}).sort((a, b) => b[1] - a[1]);
+  const hum = srcs.reduce((a, [, n]) => a + n, 0);
+  if (!hum && !sum.botTotal) return '<p class="src">No sources recorded yet — this starts counting from the update that added it.</p>';
+  const rows = srcs.map(([s, n]) => `<tr><td>${esc(s)}</td><td class="num">${n.toLocaleString('en-US')}</td><td class="num">${hum ? Math.round((n / hum) * 100) : 0}%</td></tr>`).join('');
+  return `<table class="plain"><thead><tr><th>Source</th><th class="num">Views</th><th class="num">Share</th></tr></thead><tbody>${rows}</tbody></table>
+  <p class="src"><b>${hum.toLocaleString('en-US')}</b> human views by source. Separately, <b>${(sum.botTotal || 0).toLocaleString('en-US')}</b> views were from bots and crawlers (search engines, link-preview scrapers) — counted apart so they don't inflate the human numbers. "Direct" means no referring link (typed, bookmarked, or an app that strips referrers); "Internal" means a click within the network.</p>`;
+})()}
 </section>
 
 <section>

@@ -73,6 +73,7 @@ app.use((req, res, next) => {
     const p = req.path;
     if (p === '/enter' || p.startsWith('/gate') || p === '/health' || p === '/robots.txt' || /\.[a-z0-9]+$/i.test(p)) return next();
     if (p === '/') {
+      traffic.note('__network__', req); // count the landing + where it came from
       res.set('Content-Security-Policy', "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; frame-ancestors 'none'");
       return res.send(gatePage(null, '/'));
     }
@@ -329,7 +330,7 @@ app.use((req, res, next) => {
 app.use((req, res, next) => {
   if (req.method === 'GET' && req.tenantKey
       && !req.path.startsWith('/files') && !/\.[a-z0-9]+$/i.test(req.path)) {
-    traffic.note(req.tenantKey);
+    traffic.note(req.tenantKey, req);
   }
   next();
 });
