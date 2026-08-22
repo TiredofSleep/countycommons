@@ -33,7 +33,7 @@ ${cats}
 
 <section>
 <h2>About this list <span class="sub">— honest and checkable, like everything here</span></h2>
-<p class="src">Listings verified ${esc(help.verified)}. ${esc(help.verified_note)}</p>
+<p class="src">${/^\s*\d/.test(String(help.verified || '')) ? `Listings last verified ${esc(help.verified)}.` : `These listings haven't been independently verified yet.`} ${esc(help.verified_note || '')}</p>
 <p class="src">${esc(help.missing)}</p>
 <p class="src">Nothing you look up here is logged or tracked — this page is served the same to everyone.</p>
 <p class="src">This is a community-kept list, not a government service. Each program decides its own eligibility, and hours and rules change — call ahead. A listing here is information, not a promise of help.</p>

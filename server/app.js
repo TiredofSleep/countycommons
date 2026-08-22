@@ -131,8 +131,9 @@ app.get('/sitemap.xml', (req, res) => {
   if (r.action === 'serve' && directory.isFeatured(r.key)) {
     let cfg = {}; try { cfg = load(r.key).county; } catch (e) {}
     const base = `https://${host}`;
-    const paths = ['/', '/budget', '/priorities', '/issues', '/outcomes', '/calendar', '/participate', '/docket', '/documents', '/vendors', '/audits', '/verify', '/methodology', '/guide', '/stance', '/counties', '/cases', '/kindred', '/field', '/never', '/security'];
+    const paths = ['/', '/tour', '/budget', '/priorities', '/issues', '/outcomes', '/help', '/calendar', '/participate', '/docket', '/documents', '/vendors', '/audits', '/verify', '/methodology', '/guide', '/stance', '/story', '/counties', '/cases', '/research', '/receipts', '/kindred', '/field', '/never', '/security', '/traffic'];
     if (cfg.has_municipalities) paths.push('/places');
+    if (cfg.has_compare) paths.push('/compare/counties', '/compare/spending');
     for (const p of paths) urls.push(base + p);
   } else if (r.action === 'serve') {
     urls.push(`https://${host}/`); // un-built starter
