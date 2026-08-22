@@ -114,6 +114,14 @@ function layout({ title, current, body, county, description }) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="County Commons">
+<meta property="og:title" content="${esc(title)}">
+<meta property="og:description" content="${esc(desc)}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="${esc(title)}">
+<meta name="twitter:description" content="${esc(desc)}">
 <link rel="stylesheet" href="/style.css?v=5">
 <link rel="icon" href="/favicon.svg">
 <script src="/app.js" defer></script>

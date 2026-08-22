@@ -114,9 +114,33 @@ app.use((req, res, next) => {
 // ---- always-open utility routes ----
 app.get('/health', (req, res) => res.type('text').send('ok'));
 app.get('/robots.txt', (req, res) => {
-  // Public launch: the site is open (the front door is a public county selector),
-  // so crawlers are welcome. Admin/owner areas sit behind codes regardless.
-  res.type('text').send('User-agent: *\nAllow: /\nDisallow: /admin\nDisallow: /owner\n');
+  // Public launch: the site is open, so crawlers are welcome. Admin/owner areas
+  // sit behind codes regardless. Point crawlers at this host's sitemap.
+  const host = String(req.headers.host || 'countycommons.us').split(':')[0];
+  res.type('text').send(`User-agent: *\nAllow: /\nDisallow: /admin\nDisallow: /owner\n\nSitemap: https://${host}/sitemap.xml\n`);
+});
+
+// Per-host sitemap: a tenant lists its own pages; the apex lists every featured
+// county/city home so crawlers can discover the whole network.
+app.get('/sitemap.xml', (req, res) => {
+  const directory = require('./lib/directory');
+  const r = tenant.resolveHost(req.headers.host);
+  const host = String(req.headers.host || 'countycommons.us').split(':')[0];
+  const urls = [];
+  if (r.action === 'serve' && directory.isFeatured(r.key)) {
+    let cfg = {}; try { cfg = load(r.key).county; } catch (e) {}
+    const base = `https://${host}`;
+    const paths = ['/', '/budget', '/priorities', '/issues', '/outcomes', '/calendar', '/participate', '/docket', '/documents', '/vendors', '/audits', '/verify', '/methodology', '/guide', '/stance', '/counties', '/cases', '/kindred', '/field', '/never', '/security'];
+    if (cfg.has_municipalities) paths.push('/places');
+    for (const p of paths) urls.push(base + p);
+  } else if (r.action === 'serve') {
+    urls.push(`https://${host}/`); // un-built starter
+  } else {
+    urls.push('https://countycommons.us/');
+    for (const t of directory.featured()) urls.push(`https://${t.host}/`);
+  }
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u => `  <url><loc>${u}</loc></url>`).join('\n')}\n</urlset>\n`;
+  res.type('application/xml').send(xml);
 });
 
 // Static assets are public (styles for the gate page; no data in them).
@@ -225,11 +249,14 @@ app.post('/gate', writeLimit, express.urlencoded({ extended: false }), (req, res
 // resident let in anywhere can navigate every county and the whole site. The
 // cookie still records which county+role you entered as; that scoping is
 // enforced where it matters (editing), not at the view gate.
+// Public launch: reading is open to everyone (and to search crawlers) — no PIN
+// wall on content, so the site can be found and indexed. A valid cookie is still
+// read when present (it carries admin/owner scope); editing routes enforce their
+// own access downstream. The apex county selector remains the friendly front door.
 app.use((req, res, next) => {
-  if (!access.gateConfigured()) return next();
   const acc = access.verifyCookie(cookies(req).cc_access);
-  if (acc) { req.access = acc; return next(); }
-  res.status(401).send(gatePage(null, req.originalUrl));
+  if (acc) req.access = acc;
+  next();
 });
 
 // Starter-site guard: an un-ingested county (no real budget, not featured) shows
