@@ -28,6 +28,7 @@ function siteMap(county, current) {
   const cmp = county && county.has_compare;
   const groups = [
     ['See where the money goes', [
+      ['/tour', '▶ Take the 2-minute tour'],
       ['/budget', 'The money trail'],
       muni ? ['/places', 'Cities & towns'] : null,
       ['/vendors', 'Who gets paid'],

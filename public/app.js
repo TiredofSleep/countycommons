@@ -30,6 +30,45 @@ document.querySelectorAll('[data-dialog]').forEach(function (b) {
   });
 });
 
+// Click-through tour: one slide at a time with Back / dots / Next. Pure
+// enhancement — with JS off, every slide is visible as a readable scroll.
+(function () {
+  var tour = document.querySelector('.tour');
+  if (!tour) return;
+  var slides = [].slice.call(tour.querySelectorAll('.tour-slide'));
+  if (slides.length < 2) return;
+  tour.classList.add('js');
+  var i = 0;
+  var back = tour.querySelector('[data-tour="back"]');
+  var next = tour.querySelector('[data-tour="next"]');
+  var dotsWrap = tour.querySelector('.tour-dots');
+  var dots = slides.map(function (_, k) {
+    var d = document.createElement('button');
+    d.type = 'button'; d.className = 'tour-dot';
+    d.setAttribute('aria-label', 'Go to step ' + (k + 1));
+    d.addEventListener('click', function () { go(k); });
+    if (dotsWrap) dotsWrap.appendChild(d);
+    return d;
+  });
+  function go(n) {
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach(function (s, k) { s.classList.toggle('active', k === i); });
+    dots.forEach(function (d, k) { d.classList.toggle('on', k === i); });
+    if (back) back.style.visibility = i === 0 ? 'hidden' : 'visible';
+    if (next) next.textContent = i === slides.length - 1 ? (next.dataset.last || 'Start') : 'Next →';
+  }
+  if (back) back.addEventListener('click', function () { go(i - 1); });
+  if (next) next.addEventListener('click', function () {
+    if (i === slides.length - 1) { window.location.href = next.dataset.href || '/'; }
+    else go(i + 1);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight') go(i + 1);
+    else if (e.key === 'ArrowLeft') go(i - 1);
+  });
+  go(0);
+})();
+
 // Participatory budgeting: live "tokens left" counter + submit guard. Pure
 // enhancement — the server enforces the sum regardless, so this works with JS
 // off (you just find out on submit instead of live).

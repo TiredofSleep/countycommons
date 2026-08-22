@@ -183,6 +183,7 @@ function gatePage(msg, next) {
   <div class="eyebrow">County Commons</div>
   <h1>Select your county or city</h1>
   <p class="src" style="max-width:60ch">Public budget transparency, county by county — every dollar traced to its source document, the arithmetic checked in the open. Pick a place to begin. <b>County Commons is an independent community project — not a government website.</b></p>
+  <p style="margin:2px 0 4px"><a href="/tour" style="display:inline-block;font-family:var(--mono);font-size:14px;font-weight:600;padding:9px 16px;border:1.5px solid var(--ink);background:var(--ink);color:var(--paper);text-decoration:none">▶ New here? Take the 2-minute tour</a></p>
   ${msg ? `<p class="src" style="color:var(--dead)">${esc(msg)}</p>` : ''}
   ${list || '<p class="src">No sites are published yet.</p>'}
   <details style="margin:22px 0 0;border-top:1px solid var(--rule);padding-top:12px">
@@ -423,6 +424,8 @@ It was built first in Clark County, Arkansas, and generalized so any county coul
 });
 
 app.get('/guide', (req, res) => res.send(storyPage(load(req.tenantKey), { isFlagship: req.tenantKey === tenant.registry().default })));
+const { tourPage } = require('./views/tour');
+app.get('/tour', (req, res) => res.send(tourPage(load(req.tenantKey))));
 
 const { stancePage } = require('./views/stance');
 const { participatePage } = require('./views/participate');
