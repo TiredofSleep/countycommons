@@ -29,7 +29,7 @@ function placesPage(data, index) {
 </header>
 
 ${ingested.length ? `<section>
-<h2>Walk a budget here <span class="sub">— ingested and cross-footed</span></h2>
+<h2>Walk a budget here <span class="sub">— ingested and re-added to the dollar</span></h2>
 ${ingested.map(p => `<a class="issue" style="display:block;text-decoration:none;border-left:3px solid var(--accent)" href="/places/${esc(p.slug)}"><b style="font-size:16px">${esc(p.name)}</b> <span class="src">· ${esc(p.kind)} · ${(p.pop || 0).toLocaleString('en-US')} residents · walk the budget →</span></a>`).join('')}
 </section>` : ''}
 

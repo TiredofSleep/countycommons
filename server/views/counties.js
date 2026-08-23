@@ -92,7 +92,7 @@ function countiesPage(data, reg) {
 </header>
 
 <section>
-<h2>Live now <span class="sub">— budgets ingested, itemized, cross-footed</span></h2>
+<h2>Live now <span class="sub">— budgets ingested, itemized, and re-added to the dollar</span></h2>
 ${liveItems.length ? liveItems.map(liveCard).join('') : '<p class="src">None yet.</p>'}
 ${arCompare ? `<p class="src" style="margin-top:10px">Compare the Arkansas counties side by side, per resident: <a href="/compare/counties">how counties spend</a>.</p>` : ''}
 </section>

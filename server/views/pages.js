@@ -165,7 +165,7 @@ function verifyPage(data) {
   <div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · run ${esc(verification.run_at)}</div>
   <h1>Does the tree add up?</h1>
   <div class="total">${verification.summary.passed}/${verification.summary.total_checks} ${ok ? '✓' : '— checks failing'}</div>
-  <div class="src">Budgets are self-auditing: line items must sum to category totals, categories to departments, departments to funds, funds to the ordinance's own grand total of ${money(budget.meta.grand_total)} — to the dollar, no rounding. This page is the arithmetic receipt for the whole <a href="/budget">money trail</a>. Any line that cannot be checked yet says so on its own citation page.</div>
+  <div class="src">Budgets are self-auditing: every total should equal the sum of its parts — accountants call that <b>cross-footing</b>. Line items must sum to category totals, categories to departments, departments to funds, funds to the ordinance's own grand total of ${money(budget.meta.grand_total)} — to the dollar, no rounding. This page is the arithmetic receipt for the whole <a href="/budget">money trail</a>. Any line that cannot be checked yet says so on its own citation page.</div>
   ${ok ? '<div class="stamp">Cross-foots ✓</div>' : ''}
 </header>
 <table class="plain">

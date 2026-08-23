@@ -158,7 +158,7 @@ ${t.connections ? `<p class="src">Who's answering, self-reported (not verified):
   const body = `
 <div class="crumb"><a href="/issues">Open questions</a></div>
 <header class="page">
-  <div class="eyebrow">${esc(county.name)} · open question · Tier 0 sentiment · opened ${esc(draft.opened)}</div>
+  <div class="eyebrow">${esc(county.name)} · open question · open sentiment (Tier 0) · opened ${esc(draft.opened)}</div>
   <h1 style="font-size:clamp(18px,3.5vw,26px)">${esc(draft.final_wording)}</h1>
   <p style="margin:6px 0 0">${scopeBadge(draft, county)} <span class="src">— advisory signal to ${scopeBody(draft.scope, county, draft)}.</span></p>
   ${justVoted ? `<div class="stamp" style="position:static;display:inline-block;transform:none;margin-top:10px">Counted ✓ — you answered ${esc(justVoted.toUpperCase())}</div>` : ''}

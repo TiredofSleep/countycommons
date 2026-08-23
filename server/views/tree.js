@@ -1,9 +1,9 @@
-const { esc, money, pct, STATUS } = require('../lib/corpus');
+const { esc, money, pct, STATUS, badgeFor } = require('../lib/corpus');
 const { layout } = require('./layout');
 
-function chip(node) {
-  const s = STATUS[node.status];
-  return `<a class="chip ${s.cls}" href="/line/${esc(node.id)}" title="${esc(s.label)} — click for the citation">${s.mark} ${esc(s.label)}</a>`;
+function chip(node, ctx) {
+  const s = badgeFor(node, ctx && ctx.verifyByNode);
+  return `<a class="chip ${s.cls}" href="/line/${esc(node.id)}" title="${esc(s.plain)}">${s.mark} ${esc(s.label)}</a>`;
 }
 
 function amountLink(node) {
@@ -23,7 +23,7 @@ function renderNode(node, ctx, depth) {
     if (p >= 25) share = `<span class="pct">${p}% of fund</span>`;
   }
   const note = node.note ? `<div class="note">${esc(node.note)}</div>` : '';
-  const row = `<span class="tw">▶</span><span class="nm">${esc(node.name)}</span>${code}<span class="lead"></span>${amountLink(node)}${share}${chip(node)}`;
+  const row = `<span class="tw">▶</span><span class="nm">${esc(node.name)}</span>${code}<span class="lead"></span>${amountLink(node)}${share}${chip(node, ctx)}`;
   if (kids.length === 0) {
     return `<div class="leaf">${row}</div>${note}`;
   }
@@ -33,20 +33,22 @@ function renderNode(node, ctx, depth) {
 }
 
 function treePage(data, opts) {
-  const { budget, county, verification, childrenOf } = data;
+  const { budget, county, verification, childrenOf, verifyByNode } = data;
   const o = opts || {};
   const roots = s => budget.nodes.filter(n => n.parent === null && n.section === s);
-  const ctx = { childrenOf, grandTotal: budget.meta.grand_total };
+  const ctx = { childrenOf, grandTotal: budget.meta.grand_total, verifyByNode };
 
   const vOk = verification && verification.summary.failed === 0;
   const vStamp = verification
     ? (vOk
-      ? `<div class="stamp">Cross-foots ✓ ${verification.summary.passed}/${verification.summary.total_checks}</div>`
+      ? `<div class="stamp" title="Cross-foots: every total re-adds to the sum of its parts, to the dollar. ${verification.summary.passed} of ${verification.summary.total_checks} checks pass.">Cross-foots ✓ ${verification.summary.passed}/${verification.summary.total_checks}</div>`
       : `<div class="stamp" style="border-color:var(--dead);color:var(--dead);background:var(--dead-bg)">${verification.summary.failed} check(s) failing</div>`)
     : '';
 
   const legend = Object.values(STATUS).map(s =>
-    `<span class="chip ${s.cls}">${s.mark} ${esc(s.label)}</span>`).join('');
+    `<span class="chip ${s.cls}" title="${esc(s.plain)}">${s.mark} ${esc(s.label)}</span>`).join('');
+  // Plain-words gloss for the two green-ish marks people most often misread.
+  const legendNote = `<div class="src" style="width:100%;font-size:12px;margin-top:2px"><b>✓ Sourced</b> = cited to a document <em>and</em> the math re-adds to the dollar. <b>○ Cited</b> = cited to a document, but the math isn't independently double-checked yet. Hover any mark for what it means.</div>`;
 
   // Generic across counties: pull the document label, title, and note from
   // the corpus meta, with sensible fallbacks so any county renders.
@@ -79,6 +81,7 @@ ${budget.meta.grand_total > 0 ? `<div class="issue" style="display:block;border-
   ${legend}
   <button type="button" data-act="open">Expand all</button>
   <button type="button" data-act="close">Collapse all</button>
+  ${legendNote}
 </div>
 
 ${section('Where it comes from', '— the thinner half of the record', 'revenue')}

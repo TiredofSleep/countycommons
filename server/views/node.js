@@ -1,4 +1,4 @@
-const { esc, money, pct, STATUS } = require('../lib/corpus');
+const { esc, money, pct, STATUS, badgeFor } = require('../lib/corpus');
 const { layout } = require('./layout');
 
 const { govBodyName } = require('../lib/gov');
@@ -22,7 +22,7 @@ function ancestors(node, byId) {
 
 function nodePage(data, node) {
   const { byId, childrenOf, documents, docket, county, verifyByNode } = data;
-  const s = STATUS[node.status];
+  const s = badgeFor(node, verifyByNode);
   const kids = childrenOf.get(node.id) || [];
   const doc = node.source ? documents.documents.find(d => d.id === node.source.doc) : null;
   const issue = node.docket_ref !== null ? docket.issues.find(i => i.num === node.docket_ref) : null;
@@ -42,6 +42,8 @@ function nodePage(data, node) {
       : `⚠ Fails cross-footing: ${esc(own.detail)} <a href="/verify">Full report</a>.`;
   } else if (parentCheck && parentCheck.kind === 'children-sum' && parentCheck.ok) {
     verify = `Counted ✓ — this line is part of ${esc(parent.name)}'s verified total. <a href="/verify">Full report</a>.`;
+  } else if (!parent && node.section === 'appropriations' && (verifyByNode.get('__grand_total__') || {}).ok) {
+    verify = `Counted ✓ — this fund is part of the grand total that re-adds to the ordinance's stated figure exactly. <a href="/verify">Full report</a>.`;
   } else {
     verify = 'Not independently checkable yet — no complete set of sub-lines exists in the corpus to sum against.';
   }
@@ -56,18 +58,24 @@ function nodePage(data, node) {
   const sourceRow = doc
     ? `<a href="/documents#${esc(doc.id)}">${esc(doc.title)}</a>`
     : 'No source document in the corpus yet.';
+  // A source can be pinned to a printed page (a number) or to a locator inside a
+  // dataset/portal (a string id) — calling a dataset id a "Page" is wrong, so
+  // the label follows the value.
+  const pageVal = node.source ? node.source.page : null;
+  const isNumericPage = pageVal !== null && pageVal !== undefined && /^\d+$/.test(String(pageVal).trim());
+  const pageLabel = isNumericPage ? 'Page' : 'Source locator';
   const pageRow = doc
-    ? (node.source.page !== null
-      ? `Page ${esc(String(node.source.page))}`
-      : 'Page not yet pinned — the transcription predates storing the source PDF. Pinning every number to its page is part of <a href="/docket#i7">Docket #7</a>.')
+    ? (pageVal !== null && pageVal !== undefined
+      ? esc(String(pageVal))
+      : 'Not yet pinned — the transcription predates storing the source PDF. Pinning every number to its page or locator is part of <a href="/docket#i7">Docket #7</a>.')
     : null;
 
   const kidRows = kids.map(k => {
-    const ks = STATUS[k.status];
+    const ks = badgeFor(k, verifyByNode);
     return `<tr>
       <td><a href="/line/${esc(k.id)}">${esc(k.name)}</a></td>
       <td class="num">${k.amount !== null ? `<a class="amt" href="/line/${esc(k.id)}">${money(k.amount)}</a>` : '—'}</td>
-      <td><a class="chip ${ks.cls}" href="/line/${esc(k.id)}">${ks.mark} ${esc(ks.label)}</a></td>
+      <td><a class="chip ${ks.cls}" href="/line/${esc(k.id)}" title="${esc(ks.plain)}">${ks.mark} ${esc(ks.label)}</a></td>
     </tr>`;
   }).join('');
 
@@ -83,7 +91,7 @@ function nodePage(data, node) {
 
 <dl class="prov">
   <dt>Source</dt><dd>${sourceRow}</dd>
-  ${pageRow ? `<dt>Page</dt><dd>${pageRow}</dd>` : ''}
+  ${pageRow ? `<dt>${pageLabel}</dt><dd>${pageRow}</dd>` : ''}
   <dt>Layer</dt><dd>${esc(node.layer)} — ${esc(layerText(node.layer, county))}</dd>
   <dt>Checked</dt><dd>${verify}</dd>
   ${share ? `<dt>Share</dt><dd>${share}</dd>` : ''}

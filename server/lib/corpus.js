@@ -147,7 +147,9 @@ function pct(part, whole) {
 
 const STATUS = {
   sourced:   { mark: '✓', label: 'Sourced',   cls: 'c-ok',
-    plain: 'This number is transcribed from the source document.' },
+    plain: 'This number is cited to a source document, and its arithmetic re-adds to the dollar (it cross-foots, or it is counted inside a total that does).' },
+  cited:     { mark: '○', label: 'Cited',     cls: 'c-cite',
+    plain: 'This number is cited to a source document, but its arithmetic is not independently cross-checked yet — no complete set of sub-lines exists in the corpus to re-add against.' },
   partial:   { mark: '◐', label: 'Partial',   cls: 'c-part',
     plain: 'The total is sourced, but the detail beneath it has not been ingested yet.' },
   ambiguous: { mark: '⚠', label: 'Ambiguous', cls: 'c-amb',
@@ -156,4 +158,36 @@ const STATUS = {
     plain: 'No document for this exists in the corpus yet. Dead end means "not yet ingested and navigable" — never "hidden."' }
 };
 
-module.exports = { load, esc, money, pct, STATUS, copyText };
+// The arithmetic-check state of one budget node, shared by the tree badge and
+// the line page so they never disagree: 'crossfoots' (its own children sum to
+// it), 'counted' (it's a member of a parent total that cross-foots), 'fails'
+// (its check is failing), or 'unchecked' (nothing to re-add it against yet).
+function budgetCheckState(node, verifyByNode) {
+  if (!verifyByNode || !node) return 'unchecked';
+  const own = verifyByNode.get(node.id);
+  if (own) return own.ok ? 'crossfoots' : 'fails';
+  const pc = node.parent ? verifyByNode.get(node.parent) : null;
+  if (pc) return pc.ok ? 'counted' : 'fails';
+  // A top-level appropriation fund with no parent is still a member of the
+  // grand-total cross-foot: if that check passes, the fund is counted inside a
+  // sum that re-adds to the ordinance's stated total exactly.
+  if (node.parent === null && node.section === 'appropriations') {
+    const gt = verifyByNode.get('__grand_total__');
+    if (gt) return gt.ok ? 'counted' : 'fails';
+  }
+  return 'unchecked';
+}
+
+// The badge a node shows in the tree: 'sourced' splits into the strong
+// "Sourced" (cross-checked) and the weaker "Cited" (not yet), so a green check
+// never over-signals verification the arithmetic hasn't earned.
+function badgeFor(node, verifyByNode) {
+  if (node.status === 'sourced') {
+    const st = budgetCheckState(node, verifyByNode);
+    if (st === 'fails') return STATUS.ambiguous;
+    if (st === 'unchecked') return STATUS.cited;
+  }
+  return STATUS[node.status] || STATUS.cited;
+}
+
+module.exports = { load, esc, money, pct, STATUS, copyText, budgetCheckState, badgeFor };

@@ -123,7 +123,7 @@ function layout({ title, current, body, county, description }) {
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="${esc(title)}">
 <meta name="twitter:description" content="${esc(desc)}">
-<link rel="stylesheet" href="/style.css?v=5">
+<link rel="stylesheet" href="/style.css?v=6">
 <link rel="icon" href="/favicon.svg">
 <script src="/app.js" defer></script>
 </head>
