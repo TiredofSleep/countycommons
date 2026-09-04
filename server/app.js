@@ -518,7 +518,15 @@ app.get('/security', charterPage('SECURITY.md', null, 'The platform\'s public th
 app.get('/never', charterPage('NEVER.md', null, 'What this project will never do — written down before anyone was watching, on purpose.'));
 app.get('/field', charterPage('docs/FIELD.md', '/field', 'An honest map of where this platform sits among civic-democracy organizations — where it leads, where it is early by design, and what it refuses to become.'));
 app.get('/receipts', charterPage('docs/RECEIPTS-BY-RAILS.md', '/receipts', 'Receipts by rails: how a government could make its own check register publish itself — the precedents, with numbers, and the honest limits.'));
-app.get('/food', charterPage('docs/FOOD-AS-UTILITY.md', '/food', 'Food as a utility: how a county could back community food-growing as public infrastructure — the precedents, with numbers, and the honest limits.'));
+// Food-as-utility brief. A county with its own version (docs/food/<tenant>.md,
+// with its local food-insecurity number and named local partners) gets it; every
+// other county gets the county-neutral default. Keeps the leak-free rule: no
+// county sees another county's specifics.
+app.get('/food', (req, res, next) => {
+  const perCounty = path.join('docs', 'food', `${req.tenantKey}.md`);
+  const file = fs.existsSync(path.join(__dirname, '..', perCounty)) ? perCounty : 'docs/FOOD-AS-UTILITY.md';
+  return charterPage(file, '/food', 'Food as a utility: how a county could back community food-growing as public infrastructure — the precedents, with numbers, and the honest limits.')(req, res, next);
+});
 
 // ---- issues: Tier 0 sentiment polling (the M2 seed) ----
 // The participant token is a 24-hex string we minted (randomBytes(12)). Read
