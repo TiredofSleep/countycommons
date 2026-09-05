@@ -46,6 +46,10 @@ These are the direction, not the destination for a small rural county. Cite them
 4. **Volunteers burn out and gardens need water, soil, and stewards.** The programs that last (Seattle, Brown County) are the ones with a paid coordinator and a stable home, not the ones that ride on one heroic volunteer.
 5. **Community fridges are citizen-led, not a government program.** The Freedge network (150+ US fridges as of 2021, [Shelterforce](https://shelterforce.org/2021/02/24/community-fridges-provide-vital-and-visible-relief-in-the-war-on-hunger/)) is mutual aid that governments mostly tolerate — cite it as a neighbor-run complement, not a county service.
 
+## Will it last — or just start and die?
+
+A fridge or a garden is easy to start and easy to lose. Whether it *sustains* — pays for its own operations instead of dying when the grant ends — is a system-design question, answered in **[the food flywheel](/engine)**: sell to buyers who already pay, spend grants on capital rather than payroll, and let the people who depend on it own it.
+
 ## What this platform would do with it
 
 County Commons does not grow food. Its role is three things:

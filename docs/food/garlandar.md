@@ -48,6 +48,10 @@ Connect the gardens, the farmers market, gleaning, and the schools Garland alrea
 4. **Volunteers burn out; gardens need water, soil, and stewards.** The programs that last have a paid coordinator and a stable home.
 5. **Community fridges are citizen-led, not a government program** — the Freedge network (150+ US fridges as of 2021, [Shelterforce](https://shelterforce.org/2021/02/24/community-fridges-provide-vital-and-visible-relief-in-the-war-on-hunger/)) is mutual aid, a neighbor-run complement.
 
+## Will it last — or just start and die?
+
+A fridge or a garden is easy to start and easy to lose. Whether it *sustains* — pays for its own operations instead of dying when the grant ends — is a system-design question, answered in **[the food flywheel](/engine)**: sell to buyers who already pay, spend grants on capital rather than payroll, and let the people who depend on it own it. In Garland that engine is unusually close — Oaklawn, the hospitals, and National Park College are anchor buyers already spending on food, and Arkansas's Medicaid nutrition waiver opens a produce-prescription payer.
+
 ## What this platform would do with it
 
 County Commons does not grow food. Its role is three things: **put the question to the people who decide** (this open question and the priorities board), **track the loop in public** on [what came of it](/outcomes) — each step dated and cited — and **keep score honestly**, how much of this is real and running versus proposed, with the food-insecurity number beside it, year over year.

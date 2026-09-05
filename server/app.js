@@ -131,7 +131,7 @@ app.get('/sitemap.xml', (req, res) => {
   if (r.action === 'serve' && directory.isFeatured(r.key)) {
     let cfg = {}; try { cfg = load(r.key).county; } catch (e) {}
     const base = `https://${host}`;
-    const paths = ['/', '/tour', '/budget', '/priorities', '/issues', '/outcomes', '/help', '/calendar', '/participate', '/docket', '/documents', '/vendors', '/audits', '/verify', '/methodology', '/guide', '/stance', '/story', '/counties', '/cases', '/research', '/receipts', '/food', '/kindred', '/field', '/never', '/security', '/traffic'];
+    const paths = ['/', '/tour', '/budget', '/priorities', '/issues', '/outcomes', '/help', '/calendar', '/participate', '/docket', '/documents', '/vendors', '/audits', '/verify', '/methodology', '/guide', '/stance', '/story', '/counties', '/cases', '/research', '/receipts', '/food', '/engine', '/kindred', '/field', '/never', '/security', '/traffic'];
     if (cfg.has_municipalities) paths.push('/places');
     if (cfg.has_compare) paths.push('/compare/counties', '/compare/spending');
     for (const p of paths) urls.push(base + p);
@@ -527,6 +527,10 @@ app.get('/food', (req, res, next) => {
   const file = fs.existsSync(path.join(__dirname, '..', perCounty)) ? perCounty : 'docs/FOOD-AS-UTILITY.md';
   return charterPage(file, '/food', 'Food as a utility: how a county could back community food-growing as public infrastructure — the precedents, with numbers, and the honest limits.')(req, res, next);
 });
+// The economic engine behind it: how a local food system pays for its own
+// operations (earned revenue + circulating value) instead of dying when the
+// grant ends. Shared across counties; the cited systems design.
+app.get('/engine', charterPage('docs/FOOD-ENGINE.md', '/engine', 'The food flywheel: how a local food system pays for itself — food hubs, anchor buyers, food-is-medicine, compost, and co-op ownership, with the evidence and the honest limits.'));
 
 // ---- issues: Tier 0 sentiment polling (the M2 seed) ----
 // The participant token is a 24-hex string we minted (randomBytes(12)). Read
