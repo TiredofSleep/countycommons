@@ -131,7 +131,7 @@ app.get('/sitemap.xml', (req, res) => {
   if (r.action === 'serve' && directory.isFeatured(r.key)) {
     let cfg = {}; try { cfg = load(r.key).county; } catch (e) {}
     const base = `https://${host}`;
-    const paths = ['/', '/tour', '/budget', '/priorities', '/issues', '/outcomes', '/help', '/calendar', '/participate', '/docket', '/documents', '/vendors', '/audits', '/verify', '/methodology', '/guide', '/stance', '/story', '/counties', '/cases', '/research', '/receipts', '/food', '/engine', '/commons', '/blueprint', '/almanac', '/kindred', '/field', '/never', '/security', '/traffic'];
+    const paths = ['/', '/tour', '/budget', '/priorities', '/issues', '/outcomes', '/help', '/calendar', '/participate', '/docket', '/documents', '/vendors', '/audits', '/verify', '/methodology', '/guide', '/stance', '/story', '/counties', '/cases', '/research', '/receipts', '/food', '/engine', '/commons', '/blueprint', '/almanac', '/feed', '/kindred', '/field', '/never', '/security', '/traffic'];
     if (cfg.has_municipalities) paths.push('/places');
     if (cfg.has_compare) paths.push('/compare/counties', '/compare/spending');
     for (const p of paths) urls.push(base + p);
@@ -534,6 +534,7 @@ app.get('/engine', charterPage('docs/FOOD-ENGINE.md', '/engine', 'The food flywh
 app.get('/commons', charterPage('docs/FOOD-COMMONS.md', '/commons', 'The two pots: who pays to feed a county and why — the earned engine and the poured-in commons fund, with the case for funding food as a public utility.'));
 app.get('/blueprint', charterPage('docs/FOOD-BLUEPRINT.md', '/blueprint', 'The $400K blueprint: how to spend a USDA-scale grant as durable capital plus a shrinking bridge, so a county food system outlives the grant.'));
 app.get('/almanac', charterPage('docs/FOOD-ALMANAC.md', '/almanac', 'The grower\'s almanac: year-round food production in central Arkansas (zone 8a) — month-by-month planting, winter crops, season extension, and the cellar crops.'));
+app.get('/feed', charterPage('docs/FOOD-FEED-THE-COUNTY.md', '/feed', 'Feeding the county: a carrying-capacity model of the nutrition, land, and labor to feed 80% of the county — and why land is not the constraint, growers are.'));
 
 // ---- issues: Tier 0 sentiment polling (the M2 seed) ----
 // The participant token is a 24-hex string we minted (randomBytes(12)). Read
