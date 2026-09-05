@@ -50,6 +50,8 @@ These are the direction, not the destination for a rural county of ~21,000. Cite
 
 A fridge or a garden is easy to start and easy to lose. Whether it *sustains* — pays for its own operations instead of dying when the grant ends — is a system-design question, answered in **[the food flywheel](/engine)**: sell to buyers who already pay, spend grants on capital rather than payroll, and let the people who depend on it own it.
 
+**The food docs:** [the flywheel](/engine) — how it pays for itself · [the two pots](/commons) — who funds it and why · [the $400K blueprint](/blueprint) — spend a grant to last · [the grower's almanac](/almanac) — grow it year-round.
+
 ## What this platform would do with it
 
 County Commons does not grow food. Its role is three things:

@@ -52,6 +52,8 @@ Connect the gardens, the farmers market, gleaning, and the schools Garland alrea
 
 A fridge or a garden is easy to start and easy to lose. Whether it *sustains* — pays for its own operations instead of dying when the grant ends — is a system-design question, answered in **[the food flywheel](/engine)**: sell to buyers who already pay, spend grants on capital rather than payroll, and let the people who depend on it own it. In Garland that engine is unusually close — Oaklawn, the hospitals, and National Park College are anchor buyers already spending on food, and Arkansas's Medicaid nutrition waiver opens a produce-prescription payer.
 
+**The food docs:** [the flywheel](/engine) — how it pays for itself · [the two pots](/commons) — who funds it and why · [the $400K blueprint](/blueprint) — spend a grant to last · [the grower's almanac](/almanac) — grow it year-round.
+
 ## What this platform would do with it
 
 County Commons does not grow food. Its role is three things: **put the question to the people who decide** (this open question and the priorities board), **track the loop in public** on [what came of it](/outcomes) — each step dated and cited — and **keep score honestly**, how much of this is real and running versus proposed, with the food-insecurity number beside it, year over year.
