@@ -52,7 +52,7 @@ Connect the gardens, the farmers market, gleaning, and the schools Garland alrea
 
 A fridge or a garden is easy to start and easy to lose. Whether it *sustains* — pays for its own operations instead of dying when the grant ends — is a system-design question, answered in **[the food flywheel](/engine)**: sell to buyers who already pay, spend grants on capital rather than payroll, and let the people who depend on it own it. In Garland that engine is unusually close — Oaklawn, the hospitals, and National Park College are anchor buyers already spending on food, and Arkansas's Medicaid nutrition waiver opens a produce-prescription payer.
 
-**The food docs:** [the flywheel](/engine) — how it pays for itself · [the two pots](/commons) — who funds it and why · [the $400K blueprint](/blueprint) — spend a grant to last · [the grower's almanac](/almanac) — grow it year-round · [feeding the county](/feed) — what it would take.
+**The food docs:** [the path to food sovereignty](/sovereignty) — the goal · [the flywheel](/engine) — how it pays for itself · [the two pots](/commons) — who funds it and why · [the $400K blueprint](/blueprint) — spend a grant to last · [the grower's almanac](/almanac) — grow it year-round · [feeding the county](/feed) — what it would take.
 
 ## What this platform would do with it
 
