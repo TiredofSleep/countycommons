@@ -131,7 +131,7 @@ app.get('/sitemap.xml', (req, res) => {
   if (r.action === 'serve' && directory.isFeatured(r.key)) {
     let cfg = {}; try { cfg = load(r.key).county; } catch (e) {}
     const base = `https://${host}`;
-    const paths = ['/', '/tour', '/budget', '/priorities', '/issues', '/outcomes', '/help', '/calendar', '/participate', '/docket', '/documents', '/vendors', '/audits', '/verify', '/methodology', '/guide', '/stance', '/story', '/counties', '/cases', '/research', '/receipts', '/food', '/sovereignty', '/engine', '/commons', '/blueprint', '/almanac', '/feed', '/kindred', '/field', '/never', '/security', '/traffic'];
+    const paths = ['/', '/tour', '/budget', '/priorities', '/issues', '/outcomes', '/help', '/calendar', '/participate', '/docket', '/documents', '/vendors', '/audits', '/verify', '/methodology', '/guide', '/stance', '/story', '/counties', '/cases', '/research', '/receipts', '/food', '/sovereignty', '/engine', '/commons', '/blueprint', '/almanac', '/feed', '/frontier', '/kindred', '/field', '/never', '/security', '/traffic'];
     if (cfg.has_municipalities) paths.push('/places');
     if (cfg.has_compare) paths.push('/compare/counties', '/compare/spending');
     for (const p of paths) urls.push(base + p);
@@ -536,6 +536,7 @@ app.get('/blueprint', charterPage('docs/FOOD-BLUEPRINT.md', '/blueprint', 'The $
 app.get('/almanac', charterPage('docs/FOOD-ALMANAC.md', '/almanac', 'The grower\'s almanac: year-round food production in central Arkansas (zone 8a) — month-by-month planting, winter crops, season extension, and the cellar crops.'));
 app.get('/feed', charterPage('docs/FOOD-FEED-THE-COUNTY.md', '/feed', 'Feeding the county: a carrying-capacity model of the nutrition, land, and labor to feed 80% of the county — and why land is not the constraint, growers are.'));
 app.get('/sovereignty', charterPage('docs/FOOD-SOVEREIGNTY.md', '/sovereignty', 'The path to food sovereignty: local food security a community grows, owns, and takes pride in — from one garden to a county that feeds itself, with the diet lever that makes it possible.'));
+app.get('/frontier', charterPage('docs/FOOD-FRONTIER.md', '/frontier', 'The frontier, honestly: which new-age growing strategies (container farms, vertical potatoes, automation, perennials, passive solar) actually serve food sovereignty — and which just swap the grocery truck for an electric bill and a tech vendor.'));
 
 // ---- issues: Tier 0 sentiment polling (the M2 seed) ----
 // The participant token is a 24-hex string we minted (randomBytes(12)). Read

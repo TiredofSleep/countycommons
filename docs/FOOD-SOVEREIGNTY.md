@@ -15,6 +15,20 @@ Run the county on a deliberate, plant-forward, low-waste sovereignty diet at tha
 
 And there's room to grow into: Garland County has **678 square miles — about 434,000 acres — and only ~6.7% of it is in farms at all**, with just **27 acres** growing vegetables ([USDA 2022 Census of Agriculture](https://www.nass.usda.gov/Publications/AgCensus/2022/Online_Resources/County_Profiles/Arkansas/cp05051.pdf)). Land was never the wall.
 
+## The local plate — reclaiming the diet, concretely
+
+The diet lever isn't abstract; it's a plate, and protein is where it bites. Beef is the land hog — about **6 lb of grain per pound of beef** (or 7–25 lb of forage), versus **2.5 lb of feed per pound of chicken** ([Noble Research Institute](https://www.noble.org/regenerative-agriculture/livestock/the-efficiency-of-beef-production/)). So the sovereign plate keeps the efficient, local proteins as the base and makes beef the exception:
+
+- **Eggs — the quiet MVP.** A good backyard hen lays **250–300 eggs a year** ([UNH Extension](https://extension.unh.edu/resource/producing-your-own-eggs)); a few hens cover a household's daily protein, and nobody controls them but you.
+- **Chicken.** The most feed-efficient meat, and this is poultry country. The everyday bird.
+- **Deer.** Arkansas hunters already take **~200,000 deer a year** ([AGFC](https://www.agfc.com/news/arkansas-deer-harvest-increases-just-short-of-200000/)) — ~45–60 lb of venison each, wild and near-zero-input, shared through the processor → nonprofit channel.
+- **Beans & pulses.** The plant-protein backbone — land-efficient, storable, and about **1/13th the carbon per gram of protein of beef** ([Drewnowski & Conrad 2024](https://pmc.ncbi.nlm.nih.gov/articles/PMC11377338/)); the [almanac](/almanac) already grows them.
+- **Beef — the delicacy: a yearly ration for everyone.**
+
+**The ration math:** Americans eat ~57 lb of beef a year each. Cut that to a **~12 lb yearly ration** and 80,000 people need ~960,000 lb — about **2,000 finished cattle a year** (a ~1,200-lb steer yields ~470–490 lb of freezer beef, [SDSU](https://extension.sdstate.edu/how-much-meat-can-you-expect-fed-steer) & [MSU Extension](https://extension.msstate.edu/publications/how-much-meat-expect-beef-animal-farm-direct-beef)). At Arkansas stocking rates (~2–5 acres per cow, UA Division of Agriculture), that herd is **on the order of the county's existing 10,820 acres of pasture** — the grass it already grazes, especially with rotational grazing. Everyday beef for 80,000 would take several times that. **Beef-as-ration is exactly what keeps local protein inside the county's own land.**
+
+And the framing is the gift: a yearly ration turns scarcity into **ceremony** — a *community beef share*, animals raised on the commons and divided among every household each fall. Not "you can't have beef," but "beef is special, and everyone gets their share." A feast, and a commons (a community cattle co-op, everyone a member). *(Rough figures from sourced building blocks; the Arkansas stocking rate should be re-checked against the primary PDF before it's quoted as hard.)*
+
 ## The proof it's real, not utopian
 
 This has been done — at national scale, in living memory, without the market:
