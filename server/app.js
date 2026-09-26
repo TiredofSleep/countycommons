@@ -131,7 +131,7 @@ app.get('/sitemap.xml', (req, res) => {
   if (r.action === 'serve' && directory.isFeatured(r.key)) {
     let cfg = {}; try { cfg = load(r.key).county; } catch (e) {}
     const base = `https://${host}`;
-    const paths = ['/', '/tour', '/budget', '/priorities', '/issues', '/outcomes', '/help', '/calendar', '/participate', '/docket', '/documents', '/vendors', '/audits', '/verify', '/methodology', '/guide', '/stance', '/story', '/counties', '/cases', '/research', '/receipts', '/food', '/sovereignty', '/engine', '/commons', '/blueprint', '/almanac', '/feed', '/frontier', '/growops', '/water', '/kindred', '/field', '/never', '/security', '/traffic'];
+    const paths = ['/', '/tour', '/budget', '/priorities', '/issues', '/outcomes', '/help', '/calendar', '/participate', '/docket', '/documents', '/vendors', '/audits', '/verify', '/methodology', '/guide', '/stance', '/story', '/counties', '/cases', '/research', '/receipts', '/food', '/sovereignty', '/engine', '/commons', '/blueprint', '/almanac', '/feed', '/frontier', '/growops', '/water', '/justice', '/kindred', '/field', '/never', '/security', '/traffic'];
     if (cfg.has_municipalities) paths.push('/places');
     if (cfg.has_compare) paths.push('/compare/counties', '/compare/spending');
     if (cfg.has_taxes_debt) paths.push('/taxes');
@@ -506,6 +506,14 @@ app.get('/water', (req, res) => {
   const data = load(req.tenantKey);
   if (!data.waterGuide) return res.redirect('/budget');
   res.send(waterPage(data));
+});
+
+// From holding to building — every county gets the page; the local section appears once researched.
+const { justicePage } = require('./views/justice');
+app.get('/justice', (req, res) => {
+  const data = load(req.tenantKey);
+  if (!data.justiceGuide) return res.redirect('/budget');
+  res.send(justicePage(data));
 });
 
 // Commonwealth — what a community can do with its own money.
