@@ -32,6 +32,7 @@ function siteMap(county, current) {
       ['/budget', 'The money trail'],
       muni ? ['/places', 'Cities & towns'] : null,
       ['/vendors', 'Who gets paid'],
+      county && county.has_taxes_debt ? ['/taxes', 'Taxes & debt'] : null,
       ['/audits', 'What the auditors reported'],
       ['/verify', 'The receipt — arithmetic checked'],
       ['/documents', 'The documents'],

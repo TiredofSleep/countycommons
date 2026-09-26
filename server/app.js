@@ -134,6 +134,7 @@ app.get('/sitemap.xml', (req, res) => {
     const paths = ['/', '/tour', '/budget', '/priorities', '/issues', '/outcomes', '/help', '/calendar', '/participate', '/docket', '/documents', '/vendors', '/audits', '/verify', '/methodology', '/guide', '/stance', '/story', '/counties', '/cases', '/research', '/receipts', '/food', '/sovereignty', '/engine', '/commons', '/blueprint', '/almanac', '/feed', '/frontier', '/growops', '/kindred', '/field', '/never', '/security', '/traffic'];
     if (cfg.has_municipalities) paths.push('/places');
     if (cfg.has_compare) paths.push('/compare/counties', '/compare/spending');
+    if (cfg.has_taxes_debt) paths.push('/taxes');
     for (const p of paths) urls.push(base + p);
   } else if (r.action === 'serve') {
     urls.push(`https://${host}/`); // un-built starter
@@ -456,6 +457,15 @@ const { calendarPage } = require('./views/calendar');
 app.get('/calendar', (req, res) => res.send(calendarPage(load(req.tenantKey))));
 app.get('/vendors', (req, res) => res.send(vendorsPage(load(req.tenantKey))));
 app.get('/audits', (req, res) => res.send(auditsPage(load(req.tenantKey))));
+
+// Taxes & debt — every tax stream in, every loan out. Counties without the
+// data file go to the money trail instead.
+const { taxDebtPage } = require('./views/taxdebt');
+app.get('/taxes', (req, res) => {
+  const data = load(req.tenantKey);
+  if (!data.taxDebt) return res.redirect('/budget');
+  res.send(taxDebtPage(data));
+});
 
 app.get('/compare/spending', (req, res) => {
   // Hardcoded Clark-vs-neighbor analysis — flagship only; others go to the tree.

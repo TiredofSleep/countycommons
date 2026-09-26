@@ -62,6 +62,10 @@ function load(tenantKey) {
   try {
     spending = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'spending.json'), 'utf8'));
   } catch (e) { /* none yet */ }
+  let taxDebt = null;
+  try {
+    taxDebt = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'taxes-debt.json'), 'utf8'));
+  } catch (e) { /* none yet */ }
   // Shared platform doctrine — identical across counties; a new county inherits
   // the default county's copy until it has its own.
   const stance = sharedRead('stance.json');
@@ -92,7 +96,7 @@ function load(tenantKey) {
   if (verification) {
     for (const c of verification.checks) verifyByNode.set(c.node, c);
   }
-  const data = { budget, docket, documents, county, verification, comparisons, vendors, auditFindings, spending, stance, cases, help, calendar, research, issueDrafts, byId, childrenOf, verifyByNode };
+  const data = { budget, docket, documents, county, verification, comparisons, vendors, auditFindings, spending, taxDebt, stance, cases, help, calendar, research, issueDrafts, byId, childrenOf, verifyByNode };
   // Lay this county's writable overlay (a local host's edits) on top of the
   // git-seeded corpus. Only whitelisted sections merge (see overlay.js); the
   // bones are never touched. Resolve to the default county when unkeyed.
