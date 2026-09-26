@@ -52,6 +52,27 @@ ${w.fits.map(f => `<div style="border-bottom:1px solid var(--rule-soft);padding:
 <p>Found your system’s report? <a href="/feedback">Send it to us</a> and we’ll add it here.</p>
 </section>`;
 
+  // A proposal is the platform's own, named as such: evidence, limits, and the
+  // question put to residents. The record sections above stay neutral.
+  const p = w && w.proposal;
+  const proposal = p ? `
+<section id="proposal">
+<h2>Our proposal <span class="sub">— ${esc(p.by)}</span></h2>
+<div class="issue" style="display:block;border-left:3px solid var(--accent)">
+  <b style="font-size:18px">${esc(p.title)}</b>
+  <p>${esc(p.summary)}</p>
+  <p style="font-size:14px"><b>Why here:</b> ${esc(p.why_here)} <span class="src">${cites(p.why_src)}</span></p>
+  <p style="font-size:14px;margin-bottom:4px"><b>The evidence:</b></p>
+  <ul>${p.evidence.map(x => `<li style="font-size:14px">${esc(x.text)} <span class="src">${cites(x.src)}</span></li>`).join('')}</ul>
+  <p style="font-size:14px;margin-bottom:4px"><b>The honest limits:</b></p>
+  <ul>${p.limits.map(x => `<li style="font-size:14px">${esc(x)}</li>`).join('')}</ul>
+  ${p.limits_src ? `<p class="src" style="max-width:none">${cites(p.limits_src)}</p>` : ''}
+  <p style="font-size:14px"><b>First step:</b> ${esc(p.first_step)}</p>
+  ${p.ask ? `<p><a href="${esc(p.ask.href)}">${esc(p.ask.label)} →</a></p>` : ''}
+</div>
+<p class="src" style="max-width:none">This is a proposal, labeled as one. The records above are the facts; whether to do this is for residents and the people they elect to decide.</p>
+</section>` : '';
+
   const options = g.options.map(grp => `
 <h3 style="margin-top:18px">${esc(grp.group)}</h3>
 ${grp.items.map(o => `
@@ -68,6 +89,7 @@ ${grp.items.map(o => `
   <div class="src">Clean water is the one public service every person uses every day. This page shows ${w ? 'what the records say about ours, and ' : ''}the options for keeping it safe and affordable as we grow — each graded honestly: proven, piloted, or still in the lab. Updated ${esc((w && w.updated) || g.updated)}.</div>
 </header>
 ${local}
+${proposal}
 
 <section id="options">
 <h2>The options <span class="sub">— graded A (proven), B (piloted), C (lab stage)</span></h2>
