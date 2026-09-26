@@ -25,7 +25,8 @@ function readInputs(lab, q) {
 }
 
 // Property tax on a home for one layer, at a given rate.
-function homeTax(lab, L, rate, home) {
+function homeTax(lab, L, rate, home, homestead) {
+  if (homestead && L.homestead_exempt) home = Math.max(0, home - L.homestead_exempt);   // e.g. Texas school exemption
   if (L.unit === 'mills') return home * lab.household.assess_ratio * rate / 1000;   // Arkansas: mills on assessed value
   return home / 100 * rate / 100;                                                    // Texas: cents per $100 of value
 }
@@ -64,8 +65,8 @@ function run(lab, inputs, ctx) {
       (c.above !== undefined && next > c.above + 1e-9) || (c.below !== undefined && next < c.below - 1e-9));
     const out = { L, d, next, revenue, flags };
     if (L.kind === 'property' && L.on_home) {
-      out.homeBefore = homeTax(lab, L, L.base, inputs.home);
-      out.homeAfter = homeTax(lab, L, next, inputs.home);
+      out.homeBefore = homeTax(lab, L, L.base, inputs.home, inputs.homestead);
+      out.homeAfter = homeTax(lab, L, next, inputs.home, inputs.homestead);
     }
     if (L.kind === 'sales' && L.on_spend) {
       out.spendBefore = inputs.spend * L.base / 100;

@@ -66,7 +66,7 @@ function taxLabPage(data, query, ctx) {
   <div style="display:flex;flex-wrap:wrap;gap:10px 18px;align-items:flex-end">
     <label class="src" style="max-width:none">Home value ($)<br><input name="home" type="number" min="0" step="1000" value="${inputs.home}" style="${field};margin-top:3px;width:150px"></label>
     <label class="src" style="max-width:none">Taxable purchases a year ($)<br><input name="spend" type="number" min="0" step="500" value="${inputs.spend}" style="${field};margin-top:3px;width:150px"></label>
-    ${lab.household.homestead_credit ? `<label class="src" style="max-width:none"><input type="checkbox" name="hs" value="1"${inputs.homestead ? ' checked' : ''}> It’s my homestead ($${lab.household.homestead_credit} credit)</label>` : ''}
+    ${lab.household.homestead_label ? `<label class="src" style="max-width:none"><input type="checkbox" name="hs" value="1"${inputs.homestead ? ' checked' : ''}> ${esc(lab.household.homestead_label)}</label>` : ''}
     <button type="submit" style="font-family:var(--mono);font-size:14px;padding:9px 16px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);cursor:pointer">Run it</button>
     <a class="src" href="/taxlab">Reset</a>
   </div>
@@ -81,7 +81,7 @@ function taxLabPage(data, query, ctx) {
 <table class="plain"><tbody>
 <tr><td>Property tax a year${h.credit ? ` (after the $${h.credit} homestead credit)` : ''}</td><td class="num">${m(h.propBefore)}</td><td class="num">→ ${m(h.propAfter)}</td></tr>
 <tr><td>Local sales tax a year</td><td class="num">${m(h.salesBefore)}</td><td class="num">→ ${m(h.salesAfter)}</td></tr>
-<tr><td><b>Change</b></td><td></td><td class="num"><b>${hDiff === 0 ? 'no change' : `${signed(hDiff)} a year`}</b>${hDiff !== 0 ? `<br><span class="soft" style="font-size:12px">${signed(hDiff / 12)} a month</span>` : ''}</td></tr>
+<tr><td><b>Change</b></td><td></td><td class="num"><b>${hDiff === 0 ? 'no change' : `${signed(hDiff)} a year`}</b>${hDiff !== 0 ? `<br><span class="soft" style="font-size:12px">${Math.abs(hDiff / 12) < 10 ? `${hDiff > 0 ? '+' : '−'}$${Math.abs(hDiff / 12).toFixed(2)}` : signed(hDiff / 12)} a month</span>` : ''}</td></tr>
 </tbody></table>
 <p class="src">${esc(lab.household.note)}</p>
 </section>`;

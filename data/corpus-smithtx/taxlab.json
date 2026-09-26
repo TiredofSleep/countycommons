@@ -4,10 +4,11 @@
  "household": {
   "assess_ratio": 1,
   "homestead_credit": 0,
+  "homestead_label": "It’s my homestead (takes off the $140,000 school exemption)",
   "home_default": 240428,
   "spend_default": 20000,
-  "where": "The household example is a home inside Tyler city limits, so it pays the county and city rates and both sales taxes. School district and Tyler Junior College taxes are left out: their current rates aren’t confirmed from a primary source yet.",
-  "note": "Texas taxes property on its full appraised value, in cents per $100. The default home is Tyler’s median-valued homestead for 2026 ($240,428, from the city’s taxpayer impact statement). Homestead exemptions you may have are not subtracted. Taxable purchases are your own guess; most groceries aren’t taxed in Texas."
+  "where": "The household example is a home inside Tyler city limits, Tyler ISD, and the Tyler Junior College district, so it pays all four property taxes and both sales taxes. All four 2026 rates are from the county tax office’s Truth-in-Taxation database.",
+  "note": "Texas taxes property on its full appraised value, in cents per $100. The default home is Tyler’s median-valued homestead for 2026 ($240,428, from the city’s taxpayer impact statement). The homestead box takes off the state’s $140,000 school exemption (Tax Code §11.13(b)); county, city, and college homestead exemptions aren’t confirmed yet and aren’t subtracted, and over-65 exemptions and tax ceilings aren’t modeled. Taxable purchases are your own guess; most groceries aren’t taxed in Texas."
  },
  "layers": [
   {
@@ -81,7 +82,76 @@
     "amount": 104501466
    },
    "compare": "tyler",
-   "caps": []
+   "caps": [
+    {
+     "above": 24.2063,
+     "kind": "election",
+     "text": "Tyler's 2026 rate is already at its voter-approval rate of 24.2063¢. Going higher would send the rate to the voters in most cases.",
+     "source": {
+      "url": "https://smith.truthintaxes.com/",
+      "label": "Smith County Truth-in-Taxation database, 2026"
+     }
+    }
+   ]
+  },
+  {
+   "id": "tyler_isd",
+   "kind": "property",
+   "name": "Tyler ISD tax rate",
+   "gov": "Tyler ISD",
+   "unit": "cents",
+   "base": 83.5,
+   "per_unit": 1313720,
+   "step": 0.5,
+   "min_change": -10,
+   "max_change": 10,
+   "on_home": true,
+   "homestead_exempt": 140000,
+   "base_note": "Each 1¢ per $100 raises about $1,313,720 a year on the district’s $13,137,201,946 of 2026 taxable value (Form 50-859, line 21). The board cut the rate from 84.5¢ to 83.5¢ for 2026.",
+   "source": {
+    "doc": "tyler-isd-2026-worksheet",
+    "page": "Form 50-859, lines 21 and 35–37"
+   },
+   "caps": [
+    {
+     "above": 84.7024,
+     "kind": "election",
+     "text": "This is above Tyler ISD's 2026 voter-approval rate of 84.7024¢. A school district above it needs voters to approve the rate at an election.",
+     "source": {
+      "doc": "tyler-isd-2026-worksheet",
+      "page": "Form 50-859, line 37"
+     }
+    }
+   ]
+  },
+  {
+   "id": "tjc_rate",
+   "kind": "property",
+   "name": "Tyler Junior College tax rate",
+   "gov": "Tyler Junior College",
+   "unit": "cents",
+   "base": 21.0312,
+   "per_unit": 2069423,
+   "step": 0.5,
+   "min_change": -10,
+   "max_change": 10,
+   "on_home": true,
+   "base_note": "Each 1¢ per $100 raises about $2,069,423 a year on the college district’s $20,694,229,152 of 2026 taxable value (Form 50-856, line 22). The rate rose from 18.5068¢ in 2025 to 21.0312¢ — its voter-approval rate, the most it could set without an election.",
+   "source": {
+    "doc": "tjc-2026-worksheet",
+    "page": "Form 50-856, line 22"
+   },
+   "caps": [
+    {
+     "above": 21.0312,
+     "kind": "election",
+     "text": "TJC's 2026 rate is already at its voter-approval rate of 21.0312¢. Going higher would send the rate to the voters in most cases.",
+     "source": {
+      "url": "https://smith.truthintaxes.com/",
+      "label": "Smith County Truth-in-Taxation database, 2026"
+     }
+    }
+   ]
   },
   {
    "id": "county_sales",
@@ -170,6 +240,20 @@
    }
   },
   {
+   "text": "2026 adopted rates for a home in Tyler, per $100: Smith County 37.4088¢, City of Tyler 24.2063¢, Tyler ISD 83.5¢, Tyler Junior College 21.0312¢ — $1.661463 in all. Tyler and TJC adopted exactly their voter-approval rates; Tyler ISD cut its rate a penny.",
+   "source": {
+    "url": "https://smith.truthintaxes.com/",
+    "label": "Smith County Truth-in-Taxation database, 2026"
+   }
+  },
+  {
+   "text": "Every Texas homestead gets a $140,000 exemption from school district taxes, and $60,000 more if the owner is 65 or older or disabled.",
+   "source": {
+    "url": "https://statutes.capitol.texas.gov/Docs/TX/htm/TX.11.htm#11.13",
+    "label": "Texas Tax Code §11.13(b)–(c)"
+   }
+  },
+  {
    "text": "The voter-approval rate lets operating taxes grow at most 3.5% a year on the same property, plus what debt payments require.",
    "source": {
     "url": "https://texas.public.law/statutes/tex._tax_code_section_26.04",
@@ -202,7 +286,8 @@
   "Tax bases are held at this year’s values. Appraisals rise and fall, and Texas truth-in-taxation math resets the no-new-revenue and voter-approval rates every year.",
   "A sales-tax change can change where people shop. This page assumes the same spending.",
   "Smith County’s rate applies across the whole county, not just Tyler; Tyler’s rate applies only inside the city.",
-  "Homestead, over-65, and disability exemptions and tax ceilings are not modeled for the household example.",
+  "Only the $140,000 school homestead exemption is modeled. Over-65 and disability exemptions, local optional exemptions, and tax ceilings are not.",
+  "Tyler ISD’s taxable value already excludes homesteads frozen under the over-65 ceiling, so its per-cent figure is on the low side.",
   "Paying bonds off early is only possible when the bonds allow it (their call dates).",
   "Saving-up times ignore interest earned and rising construction costs."
  ]
