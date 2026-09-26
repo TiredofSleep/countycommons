@@ -94,6 +94,34 @@ ${wrap(`<table class="plain">
 ${debtCards}
 </section>
 
+${t.banks ? `
+<section id="banks">
+<h2>Who we owe, and who holds our money <span class="sub">— three governments side by side</span></h2>
+<p>${esc(t.banks.lead)}</p>
+${t.banks.rows.map(b => `
+<div class="issue" style="display:block">
+  <div class="eyebrow" style="margin:0 0 4px">${esc(b.who)} · ${esc(b.as_of)}</div>
+  <table class="plain" style="margin:6px 0 4px;table-layout:fixed;width:100%"><tbody>
+    <tr><td style="width:110px">In the bank</td><td class="num">${money(b.deposits)}</td></tr>
+    <tr><td>Owed</td><td class="num">${money(b.owed)}</td></tr>
+  </tbody></table>
+  <p style="font-size:14px;margin:6px 0">${esc(b.deposits_note)}</p>
+  <p style="font-size:14px;margin:6px 0">${esc(b.owed_note)}</p>
+  <p class="src" style="overflow-wrap:anywhere">Sources: ${cite(b.deposits_src.doc, b.deposits_src.page)} · ${cite(b.owed_src.doc, b.owed_src.page)}</p>
+</div>`).join('')}
+<div class="issue" style="display:block;border-left:3px solid var(--accent)">
+  <div class="eyebrow" style="margin:0 0 4px">The finding</div>
+  <b style="font-size:17px">${esc(t.banks.finding.title)}</b>
+  <p>${esc(t.banks.finding.lead)}</p>
+  ${wrap(`<table class="plain"><thead><tr><th>How it’s paid for</th><th>How long</th><th>Total paid</th></tr></thead><tbody>
+  ${t.banks.finding.rows.map(x => `<tr><td>${esc(x.how)}</td><td>${esc(x.time)}</td><td class="num">${money(x.total)}</td></tr>`).join('')}
+  </tbody></table>`)}
+  <p style="font-size:14px">${esc(t.banks.finding.catch)}</p>
+  <p style="font-size:14px"><b>Open question:</b> ${esc(t.banks.finding.open)}</p>
+  <p class="src" style="overflow-wrap:anywhere">${esc(t.banks.finding.method)} Sources: ${t.banks.finding.src.map(x => cite(x.doc, x.page)).join(' · ')} · <a href="/whatif">Play it out on the What-if page</a></p>
+</div>
+</section>` : ''}
+
 <section id="arithmetic">
 <h2>The honest arithmetic <span class="sub">— what these numbers do and don't show</span></h2>
 <p>${esc(t.arithmetic.lead)}</p>
