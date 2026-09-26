@@ -136,6 +136,7 @@ app.get('/sitemap.xml', (req, res) => {
     if (cfg.has_compare) paths.push('/compare/counties', '/compare/spending');
     if (cfg.has_taxes_debt) paths.push('/taxes');
     if (cfg.has_whatif) paths.push('/whatif');
+    if (cfg.has_taxlab) paths.push('/taxlab');
     for (const p of paths) urls.push(base + p);
   } else if (r.action === 'serve') {
     urls.push(`https://${host}/`); // un-built starter
@@ -474,6 +475,28 @@ app.get('/whatif', (req, res) => {
   const data = load(req.tenantKey);
   if (!data.whatIf || !data.market) return res.redirect('/budget');
   res.send(whatIfPage(data, req.query));
+});
+
+// The tax lab — raise or lower a tax and see the household, budget, debt, and
+// legal effects. Budget lines to size a cut against come from the county's own
+// money trail and, for a city layer, its ingested city budget.
+const { taxLabPage } = require('./views/taxlab');
+app.get('/taxlab', (req, res) => {
+  const data = load(req.tenantKey);
+  if (!data.taxLab) return res.redirect('/budget');
+  const nodes = data.budget.nodes.filter(n => n.layer === 'appropriation' && n.amount > 0);
+  const topIds = new Set(nodes.filter(n => !n.parent).map(n => n.id));
+  const compare = {
+    // Spending lines one level under each fund (skipping the revenue side), plus the small funds themselves.
+    'budget-lines': nodes.filter(n => !String(n.id).startsWith('rev-') && n.parent !== 'projected-revenues' &&
+      (topIds.has(n.parent) || (!n.parent && n.id !== 'projected-revenues'))).map(n => ({ name: n.name, amount: n.amount })),
+    'smith-gf': nodes.filter(n => n.parent === 'general-fund').map(n => ({ name: n.name, amount: n.amount })),
+    'tyler': ((places.cityBudget(req.tenantKey, 'tyler') || {}).departments || [])
+      .filter(d => d.name !== 'Transfers out').map(d => ({ name: 'Tyler ' + d.name, amount: d.amount }))
+  };
+  const debt = {};
+  for (const g of (data.whatIf && data.whatIf.governments) || []) debt[g.id] = g.pay;
+  res.send(taxLabPage(data, req.query, { compare, debt }));
 });
 
 app.get('/compare/spending', (req, res) => {

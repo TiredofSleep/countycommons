@@ -34,6 +34,7 @@ function siteMap(county, current) {
       ['/vendors', 'Who gets paid'],
       county && county.has_taxes_debt ? ['/taxes', 'Taxes & debt'] : null,
       county && county.has_whatif ? ['/whatif', 'What if we saved?'] : null,
+      county && county.has_taxlab ? ['/taxlab', 'Tax lab — change the taxes'] : null,
       ['/audits', 'What the auditors reported'],
       ['/verify', 'The receipt — arithmetic checked'],
       ['/documents', 'The documents'],

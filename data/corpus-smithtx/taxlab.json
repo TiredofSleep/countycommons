@@ -1,0 +1,209 @@
+{
+ "updated": "2026-09-26",
+ "intro": "Move a tax up or down — Smith County’s or Tyler’s property tax rate, or a sales tax — and see what it does to a household’s bill, to each budget, and to what that money could pay for or would have to give up. Every rate and tax base comes from a cited document.",
+ "household": {
+  "assess_ratio": 1,
+  "homestead_credit": 0,
+  "home_default": 240428,
+  "spend_default": 20000,
+  "where": "The household example is a home inside Tyler city limits, so it pays the county and city rates and both sales taxes. School district and Tyler Junior College taxes are left out: their current rates aren’t confirmed from a primary source yet.",
+  "note": "Texas taxes property on its full appraised value, in cents per $100. The default home is Tyler’s median-valued homestead for 2026 ($240,428, from the city’s taxpayer impact statement). Homestead exemptions you may have are not subtracted. Taxable purchases are your own guess; most groceries aren’t taxed in Texas."
+ },
+ "layers": [
+  {
+   "id": "county_rate",
+   "kind": "property",
+   "name": "Smith County tax rate",
+   "gov": "Smith County",
+   "unit": "cents",
+   "base": 37.4088,
+   "per_unit": 2932847,
+   "step": 0.5,
+   "min_change": -10,
+   "max_change": 10,
+   "on_home": true,
+   "base_note": "Each 1¢ per $100 raises about $2,932,847 a year — the county’s own budget math (General Fund taxes $77,754,758 on 26.5117¢). The 37.4088¢ is 31.7617¢ for operations and 5.6471¢ for debt.",
+   "source": {
+    "doc": "smith-fy27-budget",
+    "page": "pp. 18, 27, 30"
+   },
+   "budget": {
+    "label": "the county’s General Fund",
+    "amount": 120711946
+   },
+   "compare": "smith-gf",
+   "debt_gov": "smith",
+   "reserve": {
+    "label": "the General Fund’s savings",
+    "amount": 55597748
+   },
+   "projects": [
+    {
+     "name": "a year of road bonds",
+     "amount": 10060000
+    },
+    {
+     "name": "the new courthouse",
+     "amount": 152335000
+    }
+   ],
+   "caps": [
+    {
+     "above": 39.2898,
+     "kind": "election",
+     "text": "This is above the county's FY27 voter-approval rate of 39.2898¢. In most cases a rate above it triggers an automatic election.",
+     "source": {
+      "url": "https://comptroller.texas.gov/taxes/property-tax/truth-in-taxation/rollback-elections.php",
+      "label": "Texas Comptroller — tax rate elections"
+     }
+    }
+   ]
+  },
+  {
+   "id": "tyler_rate",
+   "kind": "property",
+   "name": "City of Tyler tax rate",
+   "gov": "the City of Tyler",
+   "unit": "cents",
+   "base": 24.2063,
+   "per_unit": 1397484,
+   "step": 0.5,
+   "min_change": -10,
+   "max_change": 10,
+   "on_home": true,
+   "base_note": "Each 1¢ per $100 raises about $1,397,484 a year: the city’s General Fund expects $33,827,912 in property tax at 24.2063¢.",
+   "source": {
+    "doc": "tyler-fy27-budget",
+    "page": "p. 5 of 70"
+   },
+   "budget": {
+    "label": "Tyler’s General Fund",
+    "amount": 104501466
+   },
+   "compare": "tyler",
+   "caps": []
+  },
+  {
+   "id": "county_sales",
+   "kind": "sales",
+   "name": "Smith County sales tax",
+   "gov": "Smith County",
+   "base": 0.5,
+   "per_point": 60000000,
+   "step": 0.125,
+   "min_change": -0.5,
+   "max_change": 0.5,
+   "on_spend": true,
+   "base_note": "Each 1% would raise about $60 million a year: the county’s half-cent brings its General Fund about $30,000,000 (FY27). By state rule this half-cent exists to lower property taxes — the county’s rate worksheet counts it as replacing about 11.8¢ per $100.",
+   "source": {
+    "doc": "smith-fy27-budget",
+    "page": "revenue detail p. 30; rate worksheet line 41"
+   },
+   "budget": {
+    "label": "the county’s General Fund",
+    "amount": 120711946
+   },
+   "compare": "smith-gf",
+   "debt_gov": "smith",
+   "reserve": {
+    "label": "the General Fund’s savings",
+    "amount": 55597748
+   },
+   "projects": [
+    {
+     "name": "a year of road bonds",
+     "amount": 10060000
+    }
+   ],
+   "caps": [
+    {
+     "above": 0.5,
+     "kind": "limit",
+     "text": "Inside Tyler the local sales tax is already 2% (1.5% city + 0.5% county). A county can't raise its tax if the combined local rate would \"exceed two percent at any location in the county.\"",
+     "source": {
+      "url": "https://texas.public.law/statutes/tex._tax_code_section_323.101",
+      "label": "Texas Tax Code §323.101"
+     }
+    }
+   ]
+  },
+  {
+   "id": "tyler_sales",
+   "kind": "sales",
+   "name": "City of Tyler sales tax",
+   "gov": "the City of Tyler",
+   "base": 1.5,
+   "per_point": 45175855,
+   "step": 0.125,
+   "min_change": -1,
+   "max_change": 0.5,
+   "on_spend": true,
+   "base_note": "Tyler’s 1.5% is 1% for the General Fund plus the voter-approved half-cent run by a separate corporation. Each 1% raises roughly $45 million: the General Fund expects $45,175,855 in sales and use taxes in FY27.",
+   "source": {
+    "doc": "tyler-fy27-budget",
+    "page": "p. 5 of 70"
+   },
+   "budget": {
+    "label": "Tyler’s General Fund",
+    "amount": 104501466
+   },
+   "compare": "tyler",
+   "caps": [
+    {
+     "above": 1.5,
+     "kind": "limit",
+     "text": "Tyler's combined local sales tax is already 2%. A city can't raise its tax if the combined local rate would \"exceed two percent at any location in the municipality.\"",
+     "source": {
+      "url": "https://texas.public.law/statutes/tex._tax_code_section_321.101",
+      "label": "Texas Tax Code §321.101"
+     }
+    }
+   ]
+  }
+ ],
+ "law": [
+  {
+   "text": "Smith County's FY27 rate is 37.4088¢ per $100. Its no-new-revenue rate — the rate that would raise the same money as last year from the same property — is 35.764¢, and its voter-approval rate is 39.2898¢. Above the voter-approval rate, voters decide in most cases.",
+   "source": {
+    "doc": "smith-fy27-budget",
+    "page": "p. 18"
+   }
+  },
+  {
+   "text": "The voter-approval rate lets operating taxes grow at most 3.5% a year on the same property, plus what debt payments require.",
+   "source": {
+    "url": "https://texas.public.law/statutes/tex._tax_code_section_26.04",
+    "label": "Texas Tax Code §26.04"
+   }
+  },
+  {
+   "text": "Texas caps combined local sales tax at 2% at any location (state 6.25% + local 2% = 8.25%). Tyler is at the cap, so neither the county nor the city can raise sales tax there.",
+   "source": {
+    "url": "https://texas.public.law/statutes/tex._tax_code_section_323.101",
+    "label": "Texas Tax Code §323.101"
+   }
+  },
+  {
+   "text": "Smith County's half-cent is the kind voters adopt \"to reduce the county property tax rate\" — the county's rate worksheet counts it as replacing about 11.8¢ per $100.",
+   "source": {
+    "url": "https://codes.findlaw.com/tx/tax-code/tax-sect-323-404/",
+    "label": "Texas Tax Code §323.404"
+   }
+  },
+  {
+   "text": "Counties may grant a homestead exemption of up to 20% of value, and may freeze county taxes for over-65 and disabled homeowners (Tax Code §§11.13(n), 11.261). Smith County's current exemption amounts aren't confirmed here yet.",
+   "source": {
+    "url": "https://texas.public.law/statutes/tex._tax_code_section_11.13",
+    "label": "Texas Tax Code §11.13"
+   }
+  }
+ ],
+ "limits": [
+  "Tax bases are held at this year’s values. Appraisals rise and fall, and Texas truth-in-taxation math resets the no-new-revenue and voter-approval rates every year.",
+  "A sales-tax change can change where people shop. This page assumes the same spending.",
+  "Smith County’s rate applies across the whole county, not just Tyler; Tyler’s rate applies only inside the city.",
+  "Homestead, over-65, and disability exemptions and tax ceilings are not modeled for the household example.",
+  "Paying bonds off early is only possible when the bonds allow it (their call dates).",
+  "Saving-up times ignore interest earned and rising construction costs."
+ ]
+}

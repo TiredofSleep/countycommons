@@ -1,0 +1,264 @@
+{
+ "updated": "2026-09-26",
+ "intro": "Move a tax up or down — the county’s mills, the city’s, the school district’s, or a sales tax — and see what it does to a household’s bill, to each government’s budget, and to what that money could pay for or would have to give up. Every rate and tax base comes from a cited document.",
+ "household": {
+  "assess_ratio": 0.2,
+  "homestead_credit": 600,
+  "home_default": 100000,
+  "spend_default": 20000,
+  "where": "The household example is a home inside Arkadelphia city limits, in the Arkadelphia School District, so it pays county, city, and school mills and both sales taxes.",
+  "note": "Arkansas taxes a home on 20% of its value; each mill is $1 per $1,000 of that. The $600 homestead credit comes off the bill (Amendment 79; the state repays local governments for it). Taxable purchases are your own guess; this counts local sales tax only."
+ },
+ "layers": [
+  {
+   "id": "county_mills",
+   "kind": "property",
+   "name": "Clark County mills",
+   "gov": "Clark County",
+   "unit": "mills",
+   "base": 7.1,
+   "per_unit": 346080,
+   "step": 0.5,
+   "min_change": -5,
+   "max_change": 5,
+   "on_home": true,
+   "base_note": "One mill raises about $346,080 a year: the county’s taxable property is assessed at about $346.1 million (its 2.5% short-term debt limit is $8,652,005). The 7.1 mills include road 3.0, library 1.0, hospital 1.0, and college 1.0.",
+   "source": {
+    "doc": "clark-legaudit-2023",
+    "page": "Note 8"
+   },
+   "budget": {
+    "label": "the county’s 2026 budget",
+    "amount": 21386230
+   },
+   "compare": "budget-lines",
+   "projects": [
+    {
+     "name": "a road bond the size of the Truck Bypass bonds",
+     "amount": 8460000
+    }
+   ],
+   "caps": [
+    {
+     "above": 11,
+     "kind": "limit",
+     "text": "Clark County's general levy can't pass 5 mills (\"one-half of one per cent,\" Ark. Const. art. 16, §9) and now uses 1.1; its road levy is already at the 3-mill cap (Amendment 61); the library, hospital, and college mills are set by voters. So the quorum court alone can't go past about 11.0 mills.",
+     "source": {
+      "url": "https://codes.findlaw.com/ar/arkansas-constitution-of-1874/ar-const-art-16-sect-9/",
+      "label": "Ark. Const. art. 16, §9"
+     }
+    }
+   ]
+  },
+  {
+   "id": "city_mills",
+   "kind": "property",
+   "name": "City of Arkadelphia mills",
+   "gov": "the City of Arkadelphia",
+   "unit": "mills",
+   "base": 5,
+   "per_unit": 127068,
+   "step": 0.5,
+   "min_change": -5,
+   "max_change": 5,
+   "on_home": true,
+   "base_note": "One mill raises about $127,068 a year: property in the city is assessed at about $127.1 million (its 5% short-term debt limit is $6,353,411). The city’s 5 mills brought its General Fund $606,382 in 2024.",
+   "source": {
+    "doc": "arkadelphia-audit-2024",
+    "page": "Note 8"
+   },
+   "budget": {
+    "label": "the city’s 2024 General Fund sales and property taxes",
+    "amount": 6824023
+   },
+   "debt_gov": "city",
+   "projects": [
+    {
+     "name": "a project the size of the city’s 2019 bonds",
+     "amount": 3505000
+    }
+   ],
+   "caps": []
+  },
+  {
+   "id": "school_mills",
+   "kind": "property",
+   "name": "Arkadelphia School District mills",
+   "gov": "the Arkadelphia School District",
+   "unit": "mills",
+   "base": 47.65,
+   "per_unit": 279861,
+   "step": 0.5,
+   "min_change": -5,
+   "max_change": 10,
+   "on_home": true,
+   "base_note": "One mill raises about $279,861 a year on the district’s $279,861,475 assessment. Of the 47.65 mills, 22.65 pay the bonds and 25 are the state’s required minimum for running schools.",
+   "source": {
+    "doc": "arkadelphia-sd-os-2026",
+    "page": "pp. 10–12"
+   },
+   "budget": {
+    "label": "the district’s 2024 revenue",
+    "amount": 22620919
+   },
+   "debt_gov": "schools",
+   "projects": [
+    {
+     "name": "a school the size of the new high school",
+     "amount": 37170000
+    }
+   ],
+   "caps": [
+    {
+     "below": 47.65,
+     "kind": "limit",
+     "text": "The 22.65 debt mills are pledged to the district's bonds through 2056, and the other 25 are the state's required minimum (Amendment 74). While the bonds are unpaid, the rate can't go below 47.65.",
+     "source": {
+      "doc": "arkadelphia-sd-os-2026",
+      "page": "pp. 11–12"
+     }
+    },
+    {
+     "above": 47.65,
+     "kind": "election",
+     "text": "School millage changes go to the district's voters at a school election.",
+     "source": {
+      "url": "https://codes.findlaw.com/ar/arkansas-constitution-of-1874/ar-const-art-14-sect-3/",
+      "label": "Ark. Const. art. 14, §3"
+     }
+    }
+   ]
+  },
+  {
+   "id": "county_sales",
+   "kind": "sales",
+   "name": "Clark County sales tax",
+   "gov": "Clark County",
+   "base": 1.5,
+   "per_point": 3482948,
+   "step": 0.125,
+   "min_change": -1.5,
+   "max_change": 1.5,
+   "on_spend": true,
+   "base_note": "Each 1% raises about $3.5 million a year countywide: the EDCCC half-cent brought $1,741,474 in 2023. The 1.5% includes that half-cent and the 0.5% pledged to the road bonds.",
+   "source": {
+    "doc": "clark-legaudit-2023",
+    "page": "Schedule 2, p. 31"
+   },
+   "budget": {
+    "label": "the county’s 2026 budget",
+    "amount": 21386230
+   },
+   "compare": "budget-lines",
+   "debt_gov": "county",
+   "projects": [
+    {
+     "name": "a road bond the size of the Truck Bypass bonds",
+     "amount": 8460000
+    }
+   ],
+   "caps": [
+    {
+     "above": 1.5,
+     "kind": "election",
+     "text": "A county sales tax is adopted by ordinance \"and with approval of the voters.\"",
+     "source": {
+      "url": "https://codes.findlaw.com/ar/title-26-taxation/ar-code-sect-26-74-207/",
+      "label": "Ark. Code §26-74-207"
+     }
+    }
+   ]
+  },
+  {
+   "id": "city_sales",
+   "kind": "sales",
+   "name": "City of Arkadelphia sales tax",
+   "gov": "the City of Arkadelphia",
+   "base": 2,
+   "per_point": 3108821,
+   "step": 0.125,
+   "min_change": -2,
+   "max_change": 1,
+   "on_spend": true,
+   "base_note": "Each 1% raises roughly $3.1 million a year: the city’s General Fund took in $6,217,641 of sales tax in 2024 on its 2% (that figure may also include the city’s share of county sales tax, so treat it as rough).",
+   "source": {
+    "doc": "arkadelphia-audit-2024",
+    "page": "Exhibit B"
+   },
+   "budget": {
+    "label": "the city’s 2024 General Fund sales and property taxes",
+    "amount": 6824023
+   },
+   "debt_gov": "city",
+   "projects": [
+    {
+     "name": "a project the size of the city’s 2019 bonds",
+     "amount": 3505000
+    }
+   ],
+   "caps": [
+    {
+     "above": 2,
+     "kind": "election",
+     "text": "A city sales tax takes a vote of the city's voters.",
+     "source": {
+      "url": "https://codes.findlaw.com/ar/title-26-taxation/ar-code-sect-26-75-207/",
+      "label": "Ark. Code §26-75-207"
+     }
+    }
+   ]
+  }
+ ],
+ "law": [
+  {
+   "text": "County general levy: at most 5 mills (Ark. Const. art. 16, §9). Clark levies 1.1 general mills — 0.55 of them allotted to cities — plus 3 road, 1 library, 1 hospital, and 1 college.",
+   "source": {
+    "doc": "acd-millage-2025",
+    "page": "p. 15"
+   }
+  },
+  {
+   "text": "County road levy: at most 3 mills, set by the quorum court (Amendment 61). Clark is at 3.",
+   "source": {
+    "url": "https://codes.findlaw.com/ar/arkansas-constitution-of-1874/ar-const-amend-61/",
+    "label": "Ark. Const. amend. 61"
+   }
+  },
+  {
+   "text": "Schools: at least 25 mills to run schools (Amendment 74); changes go to a school election. The Arkadelphia district's other 22.65 mills are pledged to its bonds.",
+   "source": {
+    "doc": "arkadelphia-sd-os-2026",
+    "page": "pp. 11–12"
+   }
+  },
+  {
+   "text": "Sales taxes: a new or higher county or city sales tax needs a vote of the people (Ark. Code §§26-74-207, 26-75-207). In Clark County, 0.5% is pledged to the road bonds through 2036 and 0.5% is the voter-dedicated EDCCC half-cent.",
+   "source": {
+    "url": "https://codes.findlaw.com/ar/title-26-taxation/ar-code-sect-26-74-207/",
+    "label": "Ark. Code §26-74-207"
+   }
+  },
+  {
+   "text": "After a county-wide reassessment, Amendment 59 rolls millage back so the reassessment alone doesn't raise more money.",
+   "source": {
+    "url": "https://codes.findlaw.com/ar/arkansas-constitution-of-1874/ar-const-art-16-sect-14/",
+    "label": "Ark. Const. art. 16, §14"
+   }
+  },
+  {
+   "text": "Every homestead gets a $600 credit against its property tax bill as of 2025 (Amendment 79); the state repays local governments for it.",
+   "source": {
+    "doc": "arkadelphia-sd-os-2026",
+    "page": "p. 11"
+   }
+  }
+ ],
+ "limits": [
+  "Tax bases are held where the documents last put them. Real property values move, and the 2025 reassessment will shift them; under Amendment 59, a reassessment can roll millage back.",
+  "A sales-tax change can change where people shop. This page assumes the same spending.",
+  "Not every bill gets paid on time; actual collections run a little below the full levy.",
+  "Clark County and the school district cover more than the city — mills here raise money from every property in their area, not just homes in Arkadelphia.",
+  "Paying bonds off early is only possible when the bonds allow it (their call dates).",
+  "Saving-up times ignore interest earned and rising construction costs."
+ ]
+}
