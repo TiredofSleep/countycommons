@@ -1,0 +1,304 @@
+{
+ "updated": "2026-09-26",
+ "grades": {
+  "A": "Proven — running in real towns and cities",
+  "B": "Piloted — working plants, not yet common",
+  "C": "Lab stage — promising research, no utility runs it yet"
+ },
+ "options": [
+  {
+   "group": "Drinking water",
+   "items": [
+    {
+     "name": "Find the water you’re losing",
+     "grade": "A",
+     "what": "Smart meters plus listening devices on the pipes find leaks early. Every gallon lost was already pumped and treated.",
+     "example": "Hot Springs, Arkansas cut water it couldn’t account for from 44% to 24%, and found one broken valve wasting about 4 million gallons a day (the meter company’s case study).",
+     "src": [
+      {
+       "url": "https://www.xylem.com/en-us/resources/case-studies/hot-springs-combats-aging-infrastructure-challenges-with-xylem-digital-solutions/",
+       "label": "Xylem case study, Hot Springs"
+      }
+     ],
+     "limit": "The case study comes from the company that sold the system. Savings depend on how leaky the pipes are to begin with."
+    },
+    {
+     "name": "Let bacteria clean it first (biological filtration)",
+     "grade": "A",
+     "what": "A living layer on the sand or carbon filter eats organic matter and ammonia — with fewer chemicals. Less organic matter means fewer chlorine byproducts later. Slow sand filters work this way.",
+     "example": "Slow sand filters have run for more than 150 years; several U.S. utilities have converted filters to biological operation.",
+     "src": [
+      {
+       "url": "https://scijournals.onlinelibrary.wiley.com/doi/10.1002/jctb.4860",
+       "label": "Biofiltration review, 2016"
+      },
+      {
+       "url": "https://www.hazenandsawyer.com/horizons/hazenfilter",
+       "label": "Hazen and Sawyer"
+      }
+     ],
+     "limit": "It doesn’t remove “forever chemicals” (PFAS) by itself, and slow sand filters need land."
+    },
+    {
+     "name": "Disinfect with UV light",
+     "grade": "A",
+     "what": "Ultraviolet light kills germs without adding a chemical, so less chlorine is needed. Adding hydrogen peroxide under UV (advanced oxidation) breaks down trace chemicals too.",
+     "src": [
+      {
+       "url": "https://www.trojantechnologies.com/technologies/uv-advanced-oxidation-process",
+       "label": "Trojan Technologies"
+      }
+     ],
+     "limit": "Some chlorine is still needed to keep water safe inside the pipes."
+    },
+    {
+     "name": "Let the riverbank filter it",
+     "grade": "A",
+     "what": "Wells beside a river pull water through natural sand and gravel, which filters it before it reaches the plant.",
+     "example": "Louisville Water in Kentucky uses riverbank filtration.",
+     "src": [
+      {
+       "url": "https://louisvillewater.com/your-water/water-quality/riverbank-filtration/",
+       "label": "Louisville Water"
+      }
+     ],
+     "limit": "Only works where the ground next to the river is the right kind of sand and gravel — that takes a study."
+    },
+    {
+     "name": "Membranes (ultrafiltration)",
+     "grade": "A",
+     "what": "Very fine filters physically block germs and particles. Packaged systems are sold for small towns.",
+     "src": [
+      {
+       "url": "https://www.amtaorg.com/smallscale-ultrafiltration-systems-process-fundamentals-equipment-design-considerations-case-studies",
+       "label": "AMTA"
+      }
+     ],
+     "limit": "Membranes need cleaning and replacing, and they use electricity."
+    },
+    {
+     "name": "Remove “forever chemicals” (PFAS)",
+     "grade": "A",
+     "what": "Activated carbon, ion exchange, and reverse osmosis remove PFAS. Destroying PFAS completely (supercritical water, electrochemical methods) is still in pilots.",
+     "src": [
+      {
+       "url": "https://www.epa.gov/sciencematters/reducing-pfas-drinking-water-treatment-technologies",
+       "label": "EPA"
+      },
+      {
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10428202/",
+       "label": "PFAS destruction review"
+      }
+     ],
+     "limit": "EPA set PFAS limits in 2024. In 2026 it proposed pushing the main deadline from 2029 to 2031 and dropping limits for four of the six chemicals — both still proposals. Test first, then decide.",
+     "src2": [
+      {
+       "url": "https://www.epa.gov/sdwa/proposed-pfoa-and-pfos-compliance-extension-rule",
+       "label": "EPA — proposed extension"
+      },
+      {
+       "url": "https://www.epa.gov/sdwa/proposed-pfas-rescission-rule",
+       "label": "EPA — proposed rescission"
+      }
+     ]
+    },
+    {
+     "name": "Protect the source",
+     "grade": "A",
+     "what": "Keeping the watershed healthy — forests, stream banks, fixing upstream sewage — is usually cheaper than treating dirty water.",
+     "example": "New York City protected its Catskill watershed instead of building a filtration plant estimated at up to $10 billion.",
+     "src": [
+      {
+       "url": "https://www.perc.org/2005/06/01/the-catskills-parable/",
+       "label": "PERC"
+      }
+     ],
+     "limit": "New York’s dollars don’t scale down; the idea does."
+    }
+   ]
+  },
+  {
+   "group": "Wastewater",
+   "items": [
+    {
+     "name": "Constructed wetlands",
+     "grade": "A",
+     "what": "Planted, shallow basins where plants, soil, and microbes clean treated wastewater further.",
+     "example": "EPA guidance calls them well suited to small towns “where inexpensive land is available.”",
+     "src": [
+      {
+       "url": "https://wrrc.arizona.edu/publication/constructed-wetlands-using-human-ingenuity-natural-processes-treat-water-build-habitat",
+       "label": "Univ. of Arizona, summarizing EPA guidance"
+      }
+     ],
+     "limit": "Needs land, and works slower in cold weather."
+    },
+    {
+     "name": "Algae on moving belts",
+     "grade": "B",
+     "what": "Algae grow on belts that rotate through lagoon water, pulling out phosphorus and nitrogen. The harvested algae can become fertilizer.",
+     "example": "Gross-Wen Technologies (Iowa) — at least eight systems running in Iowa and Illinois.",
+     "src": [
+      {
+       "url": "https://www.biocenturyresearchfarm.iastate.edu/news/2021/gross-wen-technologies-receives-2m-grant-new-algae-partner-project",
+       "label": "Iowa State"
+      },
+      {
+       "url": "https://phys.org/news/2023-11-newly-algal-strains-rich-phosphorous.html",
+       "label": "phys.org, 2023"
+      }
+     ],
+     "limit": "Still young, and algae slow down in winter."
+    },
+    {
+     "name": "Duckweed, fungi, and “living machines”",
+     "grade": "C",
+     "what": "Floating plants, fungal filters, and greenhouse ecosystems that clean water. Duckweed pulled more than 93% of nitrogen and phosphorus from wastewater in a study.",
+     "src": [
+      {
+       "url": "https://www.mdpi.com/2223-7747/12/3/589",
+       "label": "Duckweed study (MDPI)"
+      },
+      {
+       "url": "https://www.oberlin.edu/ajlc/building-systems/living-machine",
+       "label": "Oberlin’s Living Machine"
+      }
+     ],
+     "limit": "Strong study results, few full-size town plants to copy. Treat as a supplement, not a whole plant."
+    },
+    {
+     "name": "Recover energy and fertilizer",
+     "grade": "A",
+     "what": "Digesting sludge makes biogas; phosphorus can be recovered as a fertilizer.",
+     "example": "Tigard, Oregon became the first U.S. plant to recycle nutrients into commercial fertilizer (Ostara, 2009).",
+     "src": [
+      {
+       "url": "https://ostara.com/ostara-nutrient-recovery-technologies-inc-oregon-wastewater-treatment-plant-is-the-first-in-u-s-to-recycle-nutrients-into-green-commercial-fertilizer/",
+       "label": "Ostara"
+      }
+     ],
+     "limit": "Usually pays off only at bigger plants."
+    }
+   ]
+  },
+  {
+   "group": "New materials",
+   "items": [
+    {
+     "name": "Metamaterials and solar evaporation",
+     "grade": "C",
+     "what": "Engineered surfaces that soak up sunlight to evaporate and purify water.",
+     "src": [
+      {
+       "url": "https://pubmed.ncbi.nlm.nih.gov/38640844/",
+       "label": "research review"
+      },
+      {
+       "url": "https://pubs.rsc.org/en/content/articlelanding/2022/ta/d2ta03321f",
+       "label": "J. Mater. Chem. A, 2022"
+      }
+     ],
+     "limit": "Researchers say fouling, cost, and scale still need to be solved. No utility runs it."
+    },
+    {
+     "name": "Graphene membranes",
+     "grade": "C",
+     "what": "Ultra-thin carbon membranes that could filter faster with less energy.",
+     "limit": "Research says most use is “still limited to laboratory scale.” No U.S. water utility uses them as its main filter yet.",
+     "src": [
+      {
+       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11741062/",
+       "label": "ACS Environmental Au review"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "ownership": [
+  {
+   "text": "Small towns aren’t alone: the National Rural Water Association and its state groups count over 31,000 member utility systems, and the Arkansas Rural Water Association is a nonprofit of rural and small publicly owned systems that trains and helps systems serving 10,000 people or fewer.",
+   "src": [
+    {
+     "url": "https://nrwa.org/about/",
+     "label": "National Rural Water Association"
+    },
+    {
+     "url": "https://arkansasruralwater.org/",
+     "label": "Arkansas Rural Water Association"
+    }
+   ]
+  }
+ ],
+ "funding": [
+  {
+   "text": "State revolving funds lend water money that’s repaid into the same fund to lend again — part of some loans is forgiven.",
+   "src": [
+    {
+     "url": "https://www.epa.gov/dwsrf/how-drinking-water-state-revolving-fund-works",
+     "label": "EPA"
+    }
+   ]
+  },
+  {
+   "text": "USDA Rural Development lends and grants for water and sewer in rural areas and towns of 10,000 or fewer.",
+   "src": [
+    {
+     "url": "https://www.rd.usda.gov/programs-services/water-environmental-programs/water-waste-disposal-loan-grant-program",
+     "label": "USDA"
+    }
+   ]
+  },
+  {
+   "text": "WIFIA offers low-cost federal loans for larger water projects.",
+   "src": [
+    {
+     "url": "https://www.epa.gov/water-infrastructure/water-infrastructure-wifia-program",
+     "label": "EPA"
+    }
+   ]
+  }
+ ],
+ "find": [
+  {
+   "text": "Your water system’s yearly water-quality report (every system must publish one).",
+   "src": [
+    {
+     "url": "https://www.epa.gov/ccr/ccr-information-consumers",
+     "label": "EPA — find your report"
+    }
+   ]
+  },
+  {
+   "text": "Violations and enforcement for drinking water and sewer plants.",
+   "src": [
+    {
+     "url": "https://echo.epa.gov/facilities/facility-search",
+     "label": "EPA ECHO"
+    },
+    {
+     "url": "https://sdwis.epa.gov/ords/sfdw_pub/r/sfdw/sdwis_fed_reports_public/200",
+     "label": "EPA SDWIS"
+    }
+   ]
+  },
+  {
+   "text": "“Forever chemical” (PFAS) test results from EPA’s national sampling.",
+   "src": [
+    {
+     "url": "https://www.epa.gov/dwucmr/occurrence-data-unregulated-contaminant-monitoring-rule",
+     "label": "EPA UCMR data"
+    }
+   ]
+  },
+  {
+   "text": "Texas systems: the state’s Drinking Water Watch.",
+   "src": [
+    {
+     "url": "https://dww2.tceq.texas.gov/DWW/",
+     "label": "TCEQ"
+    }
+   ]
+  }
+ ]
+}
