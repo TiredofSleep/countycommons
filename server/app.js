@@ -135,6 +135,7 @@ app.get('/sitemap.xml', (req, res) => {
     if (cfg.has_municipalities) paths.push('/places');
     if (cfg.has_compare) paths.push('/compare/counties', '/compare/spending');
     if (cfg.has_taxes_debt) paths.push('/taxes');
+    if (cfg.has_whatif) paths.push('/whatif');
     for (const p of paths) urls.push(base + p);
   } else if (r.action === 'serve') {
     urls.push(`https://${host}/`); // un-built starter
@@ -465,6 +466,14 @@ app.get('/taxes', (req, res) => {
   const data = load(req.tenantKey);
   if (!data.taxDebt) return res.redirect('/budget');
   res.send(taxDebtPage(data));
+});
+
+// What if we saved instead of borrowing? Counties without the data go to the money trail.
+const { whatIfPage } = require('./views/whatif');
+app.get('/whatif', (req, res) => {
+  const data = load(req.tenantKey);
+  if (!data.whatIf || !data.market) return res.redirect('/budget');
+  res.send(whatIfPage(data, req.query));
 });
 
 app.get('/compare/spending', (req, res) => {
