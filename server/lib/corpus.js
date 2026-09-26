@@ -66,6 +66,10 @@ function load(tenantKey) {
   try {
     taxDebt = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'taxes-debt.json'), 'utf8'));
   } catch (e) { /* none yet */ }
+  let commonwealth = null;
+  try {
+    commonwealth = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'commonwealth.json'), 'utf8'));
+  } catch (e) { /* none yet */ }
   let taxLab = null;
   try {
     taxLab = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'taxlab.json'), 'utf8'));
@@ -105,7 +109,7 @@ function load(tenantKey) {
   if (verification) {
     for (const c of verification.checks) verifyByNode.set(c.node, c);
   }
-  const data = { budget, docket, documents, county, verification, comparisons, vendors, auditFindings, spending, taxDebt, whatIf, market, taxLab, stance, cases, help, calendar, research, issueDrafts, byId, childrenOf, verifyByNode };
+  const data = { budget, docket, documents, county, verification, comparisons, vendors, auditFindings, spending, taxDebt, whatIf, market, taxLab, commonwealth, stance, cases, help, calendar, research, issueDrafts, byId, childrenOf, verifyByNode };
   // Lay this county's writable overlay (a local host's edits) on top of the
   // git-seeded corpus. Only whitelisted sections merge (see overlay.js); the
   // bones are never touched. Resolve to the default county when unkeyed.

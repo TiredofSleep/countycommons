@@ -137,6 +137,7 @@ app.get('/sitemap.xml', (req, res) => {
     if (cfg.has_taxes_debt) paths.push('/taxes');
     if (cfg.has_whatif) paths.push('/whatif');
     if (cfg.has_taxlab) paths.push('/taxlab');
+    if (cfg.has_commonwealth) paths.push('/commonwealth');
     for (const p of paths) urls.push(base + p);
   } else if (r.action === 'serve') {
     urls.push(`https://${host}/`); // un-built starter
@@ -497,6 +498,14 @@ app.get('/taxlab', (req, res) => {
   const debt = {};
   for (const g of (data.whatIf && data.whatIf.governments) || []) debt[g.id] = g.pay;
   res.send(taxLabPage(data, req.query, { compare, debt }));
+});
+
+// Commonwealth — what a community can do with its own money.
+const { commonwealthPage } = require('./views/commonwealth');
+app.get('/commonwealth', (req, res) => {
+  const data = load(req.tenantKey);
+  if (!data.commonwealth) return res.redirect('/budget');
+  res.send(commonwealthPage(data));
 });
 
 app.get('/compare/spending', (req, res) => {
