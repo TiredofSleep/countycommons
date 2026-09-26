@@ -1,0 +1,44 @@
+{
+ "updated": "2026-09-26",
+ "county_point": [
+  34.831116,
+  -91.55362
+ ],
+ "nearest": [
+  {
+   "name": "Maximum Security Unit",
+   "city": "Tucker",
+   "type": "State prison unit",
+   "miles": 33,
+   "url": "https://doc.arkansas.gov/facilities/maximum-security-unit/",
+   "approx": false
+  },
+  {
+   "name": "Tucker Unit",
+   "city": "Tucker",
+   "type": "State prison unit",
+   "miles": 34,
+   "url": "https://doc.arkansas.gov/facilities/tucker-unit/",
+   "approx": false
+  },
+  {
+   "name": "Wrightsville Unit",
+   "city": "Wrightsville",
+   "type": "State prison unit",
+   "miles": 40,
+   "url": "https://doc.arkansas.gov/facilities/wrightsville-unit/",
+   "approx": false
+  }
+ ],
+ "method": "Straight-line miles from the county’s Census center point to each Arkansas Division of Correction unit, using the map coordinates on each unit’s official page.",
+ "src": [
+  {
+   "url": "https://doc.arkansas.gov/correction/facilities/",
+   "label": "Arkansas Division of Correction — facilities"
+  },
+  {
+   "url": "https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html",
+   "label": "Census Gazetteer 2024"
+  }
+ ]
+}

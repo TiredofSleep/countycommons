@@ -1,0 +1,44 @@
+{
+ "updated": "2026-09-26",
+ "county_point": [
+  32.375105,
+  -95.268939
+ ],
+ "nearest": [
+  {
+   "name": "Moore, B. Unit",
+   "city": "Overton",
+   "type": "Prison",
+   "miles": 19,
+   "url": "https://www.tdcj.texas.gov/unit_directory/index.html",
+   "approx": false
+  },
+  {
+   "name": "Bradshaw Unit",
+   "city": "Henderson",
+   "type": "Prison/ISF",
+   "miles": 31,
+   "url": "https://www.tdcj.texas.gov/unit_directory/index.html",
+   "approx": false
+  },
+  {
+   "name": "Skyview Unit",
+   "city": "Rusk",
+   "type": "Prison",
+   "miles": 41,
+   "url": "https://www.tdcj.texas.gov/unit_directory/index.html",
+   "approx": false
+  }
+ ],
+ "method": "Straight-line miles from the county’s Census center point to each TDCJ unit’s city (Census place point); Beto, Coffield, and Michael are placed at Anderson County’s center.",
+ "src": [
+  {
+   "url": "https://www.tdcj.texas.gov/unit_directory/index.html",
+   "label": "TDCJ unit directory"
+  },
+  {
+   "url": "https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html",
+   "label": "Census Gazetteer 2024"
+  }
+ ]
+}

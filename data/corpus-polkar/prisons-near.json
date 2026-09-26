@@ -1,0 +1,44 @@
+{
+ "updated": "2026-09-26",
+ "county_point": [
+  34.49096,
+  -94.230894
+ ],
+ "nearest": [
+  {
+   "name": "Ouachita River Unit",
+   "city": "Malvern",
+   "type": "State prison unit",
+   "miles": 80,
+   "url": "https://doc.arkansas.gov/facilities/ouachita-river-unit/",
+   "approx": false
+  },
+  {
+   "name": "Benton Unit",
+   "city": "Benton",
+   "type": "State prison unit",
+   "miles": 90,
+   "url": "https://doc.arkansas.gov/facilities/benton-unit/",
+   "approx": false
+  },
+  {
+   "name": "Dr. Mary Parker Reed Women’s Health Unit",
+   "city": "Little Rock",
+   "type": "State prison unit",
+   "miles": 110,
+   "url": "https://doc.arkansas.gov/facilities/dr-mary-parker-reed-womens-health-unit/",
+   "approx": false
+  }
+ ],
+ "method": "Straight-line miles from the county’s Census center point to each Arkansas Division of Correction unit, using the map coordinates on each unit’s official page.",
+ "src": [
+  {
+   "url": "https://doc.arkansas.gov/correction/facilities/",
+   "label": "Arkansas Division of Correction — facilities"
+  },
+  {
+   "url": "https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html",
+   "label": "Census Gazetteer 2024"
+  }
+ ]
+}

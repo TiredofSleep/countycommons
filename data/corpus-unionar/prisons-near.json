@@ -1,0 +1,44 @@
+{
+ "updated": "2026-09-26",
+ "county_point": [
+  33.168219,
+  -92.598145
+ ],
+ "nearest": [
+  {
+   "name": "Delta Regional Unit",
+   "city": "Dermott",
+   "type": "State prison unit",
+   "miles": 72,
+   "url": "https://doc.arkansas.gov/facilities/delta-regional-unit/",
+   "approx": false
+  },
+  {
+   "name": "Barbara Ester Unit",
+   "city": "Pine Bluff",
+   "type": "State prison unit",
+   "miles": 79,
+   "url": "https://doc.arkansas.gov/facilities/barbara-ester-unit/",
+   "approx": false
+  },
+  {
+   "name": "Pine Bluff Unit",
+   "city": "Pine Bluff",
+   "type": "State prison unit",
+   "miles": 79,
+   "url": "https://doc.arkansas.gov/facilities/pine-bluff-unit/",
+   "approx": false
+  }
+ ],
+ "method": "Straight-line miles from the county’s Census center point to each Arkansas Division of Correction unit, using the map coordinates on each unit’s official page.",
+ "src": [
+  {
+   "url": "https://doc.arkansas.gov/correction/facilities/",
+   "label": "Arkansas Division of Correction — facilities"
+  },
+  {
+   "url": "https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html",
+   "label": "Census Gazetteer 2024"
+  }
+ ]
+}

@@ -1,0 +1,44 @@
+{
+ "updated": "2026-09-26",
+ "county_point": [
+  34.277239,
+  -91.929673
+ ],
+ "nearest": [
+  {
+   "name": "Barbara Ester Unit",
+   "city": "Pine Bluff",
+   "type": "State prison unit",
+   "miles": 9,
+   "url": "https://doc.arkansas.gov/facilities/barbara-ester-unit/",
+   "approx": false
+  },
+  {
+   "name": "Pine Bluff Unit",
+   "city": "Pine Bluff",
+   "type": "State prison unit",
+   "miles": 9,
+   "url": "https://doc.arkansas.gov/facilities/pine-bluff-unit/",
+   "approx": false
+  },
+  {
+   "name": "Randall L. Williams Correctional Facility",
+   "city": "Pine Bluff",
+   "type": "State prison unit",
+   "miles": 9,
+   "url": "https://doc.arkansas.gov/facilities/randall-l-williams-correctional-facility/",
+   "approx": false
+  }
+ ],
+ "method": "Straight-line miles from the county’s Census center point to each Arkansas Division of Correction unit, using the map coordinates on each unit’s official page.",
+ "src": [
+  {
+   "url": "https://doc.arkansas.gov/correction/facilities/",
+   "label": "Arkansas Division of Correction — facilities"
+  },
+  {
+   "url": "https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html",
+   "label": "Census Gazetteer 2024"
+  }
+ ]
+}

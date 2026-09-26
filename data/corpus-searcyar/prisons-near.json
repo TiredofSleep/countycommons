@@ -1,0 +1,44 @@
+{
+ "updated": "2026-09-26",
+ "county_point": [
+  35.896387,
+  -92.695888
+ ],
+ "nearest": [
+  {
+   "name": "Benny Magness Unit",
+   "city": "Calico Rock",
+   "type": "State prison unit",
+   "miles": 36,
+   "url": "https://doc.arkansas.gov/facilities/benny-magness-unit/",
+   "approx": false
+  },
+  {
+   "name": "Dr. Mary Parker Reed Women’s Health Unit",
+   "city": "Little Rock",
+   "type": "State prison unit",
+   "miles": 82,
+   "url": "https://doc.arkansas.gov/facilities/dr-mary-parker-reed-womens-health-unit/",
+   "approx": false
+  },
+  {
+   "name": "McPherson Unit",
+   "city": "Newport",
+   "type": "State prison unit",
+   "miles": 86,
+   "url": "https://doc.arkansas.gov/facilities/mcpherson-unit/",
+   "approx": false
+  }
+ ],
+ "method": "Straight-line miles from the county’s Census center point to each Arkansas Division of Correction unit, using the map coordinates on each unit’s official page.",
+ "src": [
+  {
+   "url": "https://doc.arkansas.gov/correction/facilities/",
+   "label": "Arkansas Division of Correction — facilities"
+  },
+  {
+   "url": "https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html",
+   "label": "Census Gazetteer 2024"
+  }
+ ]
+}

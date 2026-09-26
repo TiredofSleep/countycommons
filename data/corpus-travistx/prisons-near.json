@@ -1,0 +1,44 @@
+{
+ "updated": "2026-09-26",
+ "county_point": [
+  30.239513,
+  -97.69127
+ ],
+ "nearest": [
+  {
+   "name": "Travis Unit",
+   "city": "Austin",
+   "type": "Prison",
+   "miles": 6,
+   "url": "https://www.tdcj.texas.gov/unit_directory/index.html",
+   "approx": false
+  },
+  {
+   "name": "Kyle Unit",
+   "city": "Kyle",
+   "type": "Prison",
+   "miles": 20,
+   "url": "https://www.tdcj.texas.gov/unit_directory/index.html",
+   "approx": false
+  },
+  {
+   "name": "Coleman Unit",
+   "city": "Lockhart",
+   "type": "Prison",
+   "miles": 25,
+   "url": "https://www.tdcj.texas.gov/unit_directory/index.html",
+   "approx": false
+  }
+ ],
+ "method": "Straight-line miles from the county’s Census center point to each TDCJ unit’s city (Census place point); Beto, Coffield, and Michael are placed at Anderson County’s center.",
+ "src": [
+  {
+   "url": "https://www.tdcj.texas.gov/unit_directory/index.html",
+   "label": "TDCJ unit directory"
+  },
+  {
+   "url": "https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html",
+   "label": "Census Gazetteer 2024"
+  }
+ ]
+}

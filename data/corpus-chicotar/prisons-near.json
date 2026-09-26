@@ -1,0 +1,44 @@
+{
+ "updated": "2026-09-26",
+ "county_point": [
+  33.267139,
+  -91.297158
+ ],
+ "nearest": [
+  {
+   "name": "Delta Regional Unit",
+   "city": "Dermott",
+   "type": "State prison unit",
+   "miles": 19,
+   "url": "https://doc.arkansas.gov/facilities/delta-regional-unit/",
+   "approx": false
+  },
+  {
+   "name": "Varner and Varner Supermax Unit",
+   "city": "Grady",
+   "type": "State prison unit",
+   "miles": 56,
+   "url": "https://doc.arkansas.gov/facilities/varner-varner-supermax-unit/",
+   "approx": false
+  },
+  {
+   "name": "Cummins Unit",
+   "city": "Grady",
+   "type": "State prison unit",
+   "miles": 57,
+   "url": "https://doc.arkansas.gov/facilities/cummins-unit/",
+   "approx": false
+  }
+ ],
+ "method": "Straight-line miles from the county’s Census center point to each Arkansas Division of Correction unit, using the map coordinates on each unit’s official page.",
+ "src": [
+  {
+   "url": "https://doc.arkansas.gov/correction/facilities/",
+   "label": "Arkansas Division of Correction — facilities"
+  },
+  {
+   "url": "https://www.census.gov/geographies/reference-files/time-series/geo/gazetteer-files.html",
+   "label": "Census Gazetteer 2024"
+  }
+ ]
+}

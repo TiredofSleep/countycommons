@@ -8,7 +8,7 @@ const { layout } = require('./layout');
 // Facts stay neutral; proposals are named as proposals; residents decide.
 
 function justicePage(data) {
-  const { county, justice: j, justiceGuide: g, documents } = data;
+  const { county, justice: j, justiceGuide: g, documents, prisonsNear: pn } = data;
   const docs = new Map(documents.documents.map(d => [d.id, d]));
   const cite = (s) => {
     if (!s) return '';
@@ -31,6 +31,19 @@ ${j.local.facts.map(f => `<tr><td style="width:92px"><b>${esc(f.k)}</b></td><td 
 <section id="ours">
 <h2>${esc(county.name)}’s jail <span class="sub">— not researched yet</span></h2>
 <p>We haven’t pulled ${esc(county.name)}’s jail records yet — not gathered, not hidden. The county budget shows what the jail costs; the ideas below apply anywhere.</p>
+</section>`;
+
+  const prisons = pn ? `
+<section id="prisons">
+<h2>The closest state prisons <span class="sub">— the nearest by distance (the state assigns prisons by classification, not distance)</span></h2>
+<table class="plain"><tbody>
+${pn.nearest.map(x => `<tr><td><a href="${esc(x.url)}" rel="noopener">${esc(x.name)}</a><br><span class="soft" style="font-size:12.5px">${esc(x.city)} · ${esc(x.type)}</span></td><td class="num">${x.miles} miles</td></tr>`).join('')}
+</tbody></table>
+<p class="src" style="max-width:none">${esc(pn.method)} Sources: ${cites(pn.src)}</p>
+</section>` : `
+<section id="prisons">
+<h2>The closest state prisons</h2>
+<p>Not mapped yet for ${esc(county.state)} — not gathered, not hidden.</p>
 </section>`;
 
   const proposals = j && j.proposals ? `
@@ -62,6 +75,7 @@ ${j.proposals.map(p => `
 <ul>${g.why.map(li).join('')}</ul>
 </section>
 ${local}
+${prisons}
 ${proposals}
 
 <section id="world">

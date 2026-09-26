@@ -26,43 +26,58 @@ const NAV = [
 function siteMap(county, current) {
   const muni = county && county.has_municipalities;
   const cmp = county && county.has_compare;
+  // The six pillars every county is built on, then the network and the rules.
   const groups = [
-    ['See where the money goes', [
+    ['The votes', [
+      ['/issues', 'Open questions'],
+      ['/priorities', 'Priorities board'],
+      ['/outcomes', 'What came of it'],
+      ['/participate', 'Get involved']
+    ]],
+    ['The budget', [
       ['/tour', '▶ Take the 2-minute tour'],
       ['/budget', 'The money trail'],
       muni ? ['/places', 'Cities & towns'] : null,
-      ['/vendors', 'Who gets paid'],
       county && county.has_taxes_debt ? ['/taxes', 'Taxes & debt'] : null,
-      county && county.has_whatif ? ['/whatif', 'What if we saved?'] : null,
-      county && county.has_taxlab ? ['/taxlab', 'Tax lab — change the taxes'] : null,
-      county && county.has_commonwealth ? ['/commonwealth', 'Commonwealth — our own money'] : null,
-      ['/water', 'Our water'],
-      ['/justice', 'From holding to building'],
+      ['/vendors', 'Who gets paid'],
       ['/audits', 'What the auditors reported'],
       ['/verify', 'The receipt — arithmetic checked'],
       ['/documents', 'The documents'],
       ['/methodology', 'How every number is sourced'],
       ['/guide', 'The plain-words tour']
     ]],
-    ['Say what you want', [
-      ['/priorities', 'Priorities board'],
-      ['/issues', 'Open questions'],
+    ['Public needs', [
+      ['/water', 'Our water'],
+      ['/justice', 'Jails & prisons — from holding to building'],
       ['/help', 'Find help']
     ]],
-    ['Rally & hold them to it', [
-      ['/outcomes', 'What came of it'],
+    ['Dead ends & open questions', [
       ['/docket', 'The docket'],
       ['/calendar', 'The calendar'],
-      ['/participate', 'Get involved']
+      ['/coverage', 'How complete is this county?']
+    ]],
+    ['Research for a better county', [
+      county && county.has_whatif ? ['/whatif', 'What if we saved?'] : null,
+      county && county.has_taxlab ? ['/taxlab', 'Tax lab — change the taxes'] : null,
+      county && county.has_commonwealth ? ['/commonwealth', 'Commonwealth — our own money'] : null,
+      ['/receipts', 'Receipts by rails'],
+      ['/sovereignty', 'Food sovereignty'],
+      ['/growops', 'Grow-ops'],
+      ['/engine', 'The food flywheel'],
+      ['/commons', 'The two pots'],
+      ['/feed', 'Feeding the county'],
+      ['/frontier', 'The growing frontier'],
+      ['/almanac', 'The grower’s almanac'],
+      ['/blueprint', 'The $400K blueprint'],
+      ['/research', 'The research shelf'],
+      ['/cases', 'The precedents']
     ]],
     ['The wider network', [
       ['/counties', 'All counties'],
       cmp ? ['/compare/counties', 'How counties compare'] : null,
       cmp ? ['/compare/spending', 'Spending vs. neighbors'] : null,
       ['/kindred', 'Kindred work'],
-      ['/field', 'Where we sit in the field'],
-      ['/cases', 'The precedents'],
-      ['/research', 'The research shelf']
+      ['/field', 'Where we sit in the field']
     ]],
     ['How to trust this', [
       ['/stance', 'Where we stand'],
