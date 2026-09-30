@@ -3,18 +3,18 @@ const { esc } = require('../lib/corpus');
 // Page shell. No external requests of any kind — styles and the tiny
 // enhancement script are served from this box. Works with JS disabled.
 
+// The top bar is the pillars every county shares; everything else lives in the
+// "Every page" panel below it.
 const NAV = [
   ['/', 'Home'],
-  ['/stance', 'Where we stand'],
-  ['/help', 'Find help'],
-  ['/budget', 'Money trail'],
+  ['/issues', 'The votes'],
   ['/priorities', 'Priorities'],
-  ['/outcomes', 'What came of it'],
-  ['/issues', 'Open questions'],
-  ['/calendar', 'Calendar'],
-  ['/participate', 'Get involved'],
+  ['/budget', 'Budget'],
+  ['/water', 'Water'],
+  ['/justice', 'Jails'],
   ['/docket', 'Docket'],
-  ['/story', 'Our story'],
+  ['/coverage', 'How complete'],
+  ['/help', 'Find help'],
   ['/counties', 'All counties']
 ];
 
