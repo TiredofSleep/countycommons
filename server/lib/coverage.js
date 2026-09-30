@@ -7,10 +7,12 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..', '..');
 const readJSON = (p) => { try { return JSON.parse(fs.readFileSync(path.join(ROOT, p), 'utf8')); } catch (e) { return null; } };
 
-// The six pillars, in the order the site reads.
+// The pillars, in the order the site reads.
 const PILLARS = [
   { id: 'votes', label: 'The votes', href: '/issues' },
+  { id: 'turnout', label: 'Voter turnout', href: '/turnout' },
   { id: 'budget', label: 'The budget', href: '/budget' },
+  { id: 'grants', label: 'Grants', href: '/grants' },
   { id: 'water', label: 'Water', href: '/water' },
   { id: 'jails', label: 'Jails & prisons', href: '/justice' },
   { id: 'docket', label: 'Dead ends & open questions', href: '/docket' },
@@ -35,7 +37,15 @@ function forTenant(key, t) {
   const openItems = issues.length - doneItems - progressItems;
   const water = has('water.json'), justice = has('justice.json'), prisons = has('prisons-near.json');
 
+  const stateSlug = String(cfg.state || '').toLowerCase().replace(/\s+/g, '-');
+  const stTurn = readJSON('data/corpus/turnout-' + stateSlug + '.json');
+  const cKey = String(cfg.name || '').replace(/ County$/, '');
+  const hasTurnout = !!(stTurn && stTurn.elections.some(e => e.counties[cKey]));
+  const hasStateGrants = fs.existsSync(path.join(ROOT, 'data/corpus/grants-' + stateSlug + '.json'));
+
   const s = {
+    turnout: hasTurnout ? ['done', 'Official counts gathered'] : ['none', 'State counts not gathered yet'],
+    grants: has('grants.json') ? ['done', 'Matched to local needs'] : hasStateGrants ? ['partial', 'State and federal programs listed; not matched locally'] : ['partial', 'Federal programs only'],
     votes: open ? ['done', `${open} open question${open === 1 ? '' : 's'} + the priorities board`] : ['partial', 'Priorities board open; no county questions yet'],
     budget: hasBudget ? (checked ? ['done', 'Ingested and arithmetic-checked'] : ['partial', 'Ingested; a check needs attention']) : ['none', 'Not ingested yet'],
     water: water ? ['done', 'Local system researched'] : ['partial', 'Options guide only; local system not researched'],

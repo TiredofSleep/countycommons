@@ -7,16 +7,17 @@ const { esc } = require('../lib/corpus');
 // "Every page" panel below it.
 const NAV = [
   ['/', 'Home'],
-  ['/issues', 'The votes'],
+  ['/issues', 'Votes'],
   ['/priorities', 'Priorities'],
   ['/budget', 'Budget'],
+  ['/grants', 'Grants'],
   ['/water', 'Water'],
   ['/justice', 'Jails'],
   ['/turnout', 'Turnout'],
   ['/docket', 'Docket'],
-  ['/coverage', 'How complete'],
-  ['/help', 'Find help'],
-  ['/counties', 'All counties']
+  ['/coverage', 'Coverage'],
+  ['/help', 'Help'],
+  ['/counties', 'Counties']
 ];
 
 // The flow panel — one place to reach every page, grouped in the order the
@@ -41,6 +42,7 @@ function siteMap(county, current) {
       ['/budget', 'The money trail'],
       muni ? ['/places', 'Cities & towns'] : null,
       county && county.has_taxes_debt ? ['/taxes', 'Taxes & debt'] : null,
+      ['/grants', 'Grants — money we could go get'],
       ['/vendors', 'Who gets paid'],
       ['/audits', 'What the auditors reported'],
       ['/verify', 'The receipt — arithmetic checked'],

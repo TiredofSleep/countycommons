@@ -79,6 +79,15 @@ function load(tenantKey) {
   try {
     turnoutLocal = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'turnout-local.json'), 'utf8'));
   } catch (e) { /* not researched yet */ }
+  // Grants: federal programs are shared by every county, state programs by every
+  // county in that state; a county's own matches are its own and never inherited.
+  const stateSlug = String(county.state || '').toLowerCase().replace(/\s+/g, '-');
+  const grantsGuide = sharedRead('grants-guide.json');
+  const grantsState = sharedRead('grants-' + stateSlug + '.json');
+  let grants = null;
+  try {
+    grants = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'grants.json'), 'utf8'));
+  } catch (e) { /* not matched yet */ }
   let prisonsNear = null;
   try {
     prisonsNear = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'prisons-near.json'), 'utf8'));
@@ -132,7 +141,7 @@ function load(tenantKey) {
   if (verification) {
     for (const c of verification.checks) verifyByNode.set(c.node, c);
   }
-  const data = { budget, docket, documents, county, verification, comparisons, vendors, auditFindings, spending, taxDebt, whatIf, market, taxLab, commonwealth, water, waterGuide, justice, justiceGuide, prisonsNear, turnout, turnoutLocal, stance, cases, help, calendar, research, issueDrafts, byId, childrenOf, verifyByNode };
+  const data = { budget, docket, documents, county, verification, comparisons, vendors, auditFindings, spending, taxDebt, whatIf, market, taxLab, commonwealth, water, waterGuide, justice, justiceGuide, prisonsNear, turnout, turnoutLocal, grants, grantsState, grantsGuide, stance, cases, help, calendar, research, issueDrafts, byId, childrenOf, verifyByNode };
   // Lay this county's writable overlay (a local host's edits) on top of the
   // git-seeded corpus. Only whitelisted sections merge (see overlay.js); the
   // bones are never touched. Resolve to the default county when unkeyed.

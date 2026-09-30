@@ -26,11 +26,11 @@ function coveragePage(data, tenantKey) {
 <header class="page">
   <div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · how complete</div>
   <h1>How complete is this county?</h1>
-  <div class="src">Every county site is built on the same six pillars. Some are filled in; some aren’t yet. A gap means not gathered yet — never hidden. This page is the to-do list, in public.</div>
+  <div class="src">Every county site is built on the same pillars. Some are filled in; some aren’t yet. A gap means not gathered yet — never hidden. This page is the to-do list, in public.</div>
 </header>
 
 <section>
-<h2>${esc(county.name)} <span class="sub">— the six pillars</span></h2>
+<h2>${esc(county.name)} <span class="sub">— the pillars</span></h2>
 <div style="overflow-x:auto;max-width:100%"><table class="plain"><tbody>${mine}</tbody></table></div>
 <p class="src">● done &nbsp; ◐ partly &nbsp; ○ not yet. Know where a missing document is? <a href="/feedback">Tell us</a>.</p>
 </section>
@@ -45,7 +45,7 @@ function coveragePage(data, tenantKey) {
 
   return layout({
     title: `How complete is this county? — ${county.platform_name}`, current: '/coverage', body, county,
-    description: `Which of the six pillars — the votes, the budget, water, jails and prisons, dead ends and open questions, and research — are filled in for ${county.name}, and for every county in the network.`
+    description: `Which pillars — the votes, turnout, the budget, grants, water, jails and prisons, dead ends and open questions, and research — are filled in for ${county.name}, and for every county in the network.`
   });
 }
 
