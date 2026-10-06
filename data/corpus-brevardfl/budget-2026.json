@@ -7,7 +7,7 @@
   "title": "Brevard County — the money trail",
   "grand_total": 2425831993,
   "grand_total_note": "The total operating and capital budget the Board of County Commissioners adopted on September 22, 2026, for the year that began October 1 (Resolution No. 26-091).",
-  "note": "Florida counties count every fund in one total — including reserves (money set aside, not spent this year), money moved between funds, and internal insurance pools — so the total is far larger than what the county spends in a year. Departments below are the July proposal from the county’s own line-item spreadsheets; the adopted book isn’t posted yet. The part the spreadsheets don’t itemize, mostly the elected officers led by the Sheriff, is shown as one computed line."
+  "note": "Florida counties count every fund in one total — including reserves (money set aside, not spent this year), money moved between funds, and internal insurance pools — so the total is far larger than what the county spends in a year. Departments and offices below are the July proposed budget — from the county’s budget book (Budget by Agency, p. 22, total $2,386,361,863) and its line-item spreadsheets. The adopted book isn’t posted yet, so the $39.5 million the Board added before adoption is shown as one computed line."
  },
  "nodes": [
   {
@@ -22,10 +22,10 @@
    "id": "board",
    "parent": null,
    "name": "County departments (Board agencies)",
-   "amount": 2089718194,
+   "amount": 2091272699,
    "source": {
-    "doc": "brevard-line-items-2027",
-    "page": null
+    "doc": "brevard-proposed-2027",
+    "page": "p. 22"
    }
   },
   {
@@ -360,11 +360,11 @@
    "code": null,
    "children_complete": true,
    "status": "sourced",
-   "note": "Costs that belong to the whole county rather than one department: state-required payments (\"mandates\"), debt payments, transfers between funds, and reserves ($29.0 million). Inside this total: reserves $29,038,669, capital $25,171,400, grants and aid $5,604,821, debt payments $4,063,346, transfers $49,953,300. The county’s sheet also lists a $654,970 federal ARPA public-health line outside this total.",
+   "note": "Costs that belong to the whole county rather than one department: state-required payments (\"mandates\"), debt payments, transfers between funds, and reserves ($29.0 million). Inside this total: reserves $29,038,669, capital $25,171,400, grants and aid $5,604,821, debt payments $4,063,346, transfers $49,953,300.",
    "id": "board-general-government",
    "parent": "board",
    "name": "General Government",
-   "amount": 140964183,
+   "amount": 142518688,
    "source": {
     "doc": "brevard-line-items-2027",
     "page": "General Government"
@@ -422,6 +422,24 @@
    "source": {
     "doc": "brevard-line-items-2027",
     "page": "General Government → General Government Operations"
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "board-general-government-public-health-emergency",
+   "parent": "board-general-government",
+   "name": "Public Health Emergency",
+   "amount": 1554505,
+   "source": {
+    "doc": "brevard-line-items-2027",
+    "page": "General Government → Public Health Emergency"
    }
   },
   {
@@ -1644,8 +1662,8 @@
    "name": "Court operations",
    "amount": 9000206,
    "source": {
-    "doc": "brevard-line-items-2027",
-    "page": null
+    "doc": "brevard-proposed-2027",
+    "page": "p. 22"
    }
   },
   {
@@ -1788,8 +1806,8 @@
    "name": "Outside agencies the county budgets for",
    "amount": 27695768,
    "source": {
-    "doc": "brevard-line-items-2027",
-    "page": null
+    "doc": "brevard-proposed-2027",
+    "page": "p. 22"
    }
   },
   {
@@ -1868,15 +1886,411 @@
    "year": 2026,
    "layer": "appropriation",
    "section": "appropriations",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": true,
+   "status": "sourced",
+   "note": "Offices run by their own elected officials, budgeted through the county. These five add to $258,393,190, as the book states.",
+   "id": "officers",
+   "parent": null,
+   "name": "Elected officers (Charter Officers)",
+   "amount": 258393190,
+   "source": {
+    "doc": "brevard-proposed-2027",
+    "page": "p. 22"
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": true,
+   "status": "sourced",
+   "note": "Runs patrol in unincorporated Brevard, the county jail, court security and 9-1-1 dispatch. About $157.4 million of it is transferred from the county’s General Fund (book p. 394).",
+   "id": "off-sheriff-s-office",
+   "parent": "officers",
+   "name": "Sheriff’s Office",
+   "amount": 220439187,
+   "source": {
+    "doc": "brevard-proposed-2027",
+    "page": "p. 394"
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "off-sheriff-s-office-law-enforcement-general-fund",
+   "parent": "off-sheriff-s-office",
+   "name": "Law Enforcement — General Fund",
+   "amount": 76097922,
+   "source": {
+    "doc": "brevard-proposed-2027",
+    "page": "p. 395"
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "off-sheriff-s-office-law-enforcement-mstu-unincorporated-patr",
+   "parent": "off-sheriff-s-office",
+   "name": "Law Enforcement — MSTU (unincorporated patrol)",
+   "amount": 36356443,
+   "source": {
+    "doc": "brevard-proposed-2027",
+    "page": "p. 397"
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "off-sheriff-s-office-county-jail-complex",
+   "parent": "off-sheriff-s-office",
+   "name": "County Jail Complex",
+   "amount": 66553297,
+   "source": {
+    "doc": "brevard-proposed-2027",
+    "page": "p. 399"
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "off-sheriff-s-office-judicial-operations-court-security",
+   "parent": "off-sheriff-s-office",
+   "name": "Judicial Operations (court security)",
+   "amount": 10540459,
+   "source": {
+    "doc": "brevard-proposed-2027",
+    "page": "p. 401"
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "off-sheriff-s-office-animal-services",
+   "parent": "off-sheriff-s-office",
+   "name": "Animal Services",
+   "amount": 5781022,
+   "source": {
+    "doc": "brevard-proposed-2027",
+    "page": "p. 403"
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "off-sheriff-s-office-contracted-services",
+   "parent": "off-sheriff-s-office",
+   "name": "Contracted Services",
+   "amount": 15598220,
+   "source": {
+    "doc": "brevard-proposed-2027",
+    "page": "p. 405"
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "off-sheriff-s-office-unified-communications-center-dispatch",
+   "parent": "off-sheriff-s-office",
+   "name": "Unified Communications Center (dispatch)",
+   "amount": 6225359,
+   "source": {
+    "doc": "brevard-proposed-2027",
+    "page": "p. 407"
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "off-sheriff-s-office-inmate-welfare",
+   "parent": "off-sheriff-s-office",
+   "name": "Inmate Welfare",
+   "amount": 1324000,
+   "source": {
+    "doc": "brevard-proposed-2027",
+    "page": "p. 409"
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "off-sheriff-s-office-state-forfeiture",
+   "parent": "off-sheriff-s-office",
+   "name": "State Forfeiture",
+   "amount": 710680,
+   "source": {
+    "doc": "brevard-proposed-2027",
+    "page": "p. 411"
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "off-sheriff-s-office-second-dollar-education",
+   "parent": "off-sheriff-s-office",
+   "name": "Second Dollar Education",
+   "amount": 35779,
+   "source": {
+    "doc": "brevard-proposed-2027",
+    "page": "p. 413"
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "off-sheriff-s-office-two-fifty-education",
+   "parent": "off-sheriff-s-office",
+   "name": "Two-Fifty Education",
+   "amount": 129741,
+   "source": {
+    "doc": "brevard-proposed-2027",
+    "page": "p. 415"
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "off-sheriff-s-office-federal-forfeiture-justice",
+   "parent": "off-sheriff-s-office",
+   "name": "Federal Forfeiture — Justice",
+   "amount": 479641,
+   "source": {
+    "doc": "brevard-proposed-2027",
+    "page": "p. 417"
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "off-sheriff-s-office-federal-forfeiture-treasury",
+   "parent": "off-sheriff-s-office",
+   "name": "Federal Forfeiture — Treasury",
+   "amount": 68782,
+   "source": {
+    "doc": "brevard-proposed-2027",
+    "page": "p. 419"
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "off-sheriff-s-office-crime-prevention",
+   "parent": "off-sheriff-s-office",
+   "name": "Crime Prevention",
+   "amount": 261000,
+   "source": {
+    "doc": "brevard-proposed-2027",
+    "page": "p. 421"
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "off-sheriff-s-office-animal-services-enforcement-training",
+   "parent": "off-sheriff-s-office",
+   "name": "Animal Services Enforcement Training",
+   "amount": 21322,
+   "source": {
+    "doc": "brevard-proposed-2027",
+    "page": "p. 423"
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "off-sheriff-s-office-spay-neuter",
+   "parent": "off-sheriff-s-office",
+   "name": "Spay/Neuter",
+   "amount": 255520,
+   "source": {
+    "doc": "brevard-proposed-2027",
+    "page": "p. 425"
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "off-tax-collector-s-office",
+   "parent": "officers",
+   "name": "Tax Collector’s Office",
+   "amount": 15539989,
+   "source": {
+    "doc": "brevard-proposed-2027",
+    "page": "p. 438"
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "off-property-appraiser-s-office",
+   "parent": "officers",
+   "name": "Property Appraiser’s Office",
+   "amount": 12567183,
+   "source": {
+    "doc": "brevard-proposed-2027",
+    "page": "p. 390"
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "off-supervisor-of-elections",
+   "parent": "officers",
+   "name": "Supervisor of Elections",
+   "amount": 7296431,
+   "source": {
+    "doc": "brevard-proposed-2027",
+    "page": "p. 435"
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "off-clerk-to-the-board",
+   "parent": "officers",
+   "name": "Clerk to the Board",
+   "amount": 2550400,
+   "source": {
+    "doc": "brevard-proposed-2027",
+    "page": "p. 387"
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
    "docket_ref": 1,
    "code": null,
    "children_complete": false,
    "status": "ambiguous",
-   "note": "Computed, not printed: the adopted total ($2,425,831,993) minus everything the county’s line-item spreadsheets itemize ($2,126,414,168). The spreadsheets have no files for the “Charter Officers” — the Sheriff (who runs the jail), Clerk of Court, Tax Collector, Property Appraiser and Supervisor of Elections — and they show the July proposal, before the Board’s changes. The adopted budget book is “coming soon” on the county’s site (Docket #1). The Sheriff alone asked for $206,465,773 for FY2025-26.",
-   "id": "not-itemized",
+   "note": "Computed, not printed: the adopted total ($2,425,831,993) minus the proposed budget book’s total ($2,386,361,863, book p. 22). The Board made changes in July and at its September hearings; the county has posted an “Adjustments … July Board Action” summary, and the adopted book is “coming soon” (Docket #1). Until then, which lines grew is not itemized here.",
+   "id": "changes",
    "parent": null,
-   "name": "Not itemized yet: the elected officers’ budgets and later changes",
-   "amount": 299417825,
+   "name": "Changes between the July proposal and adoption",
+   "amount": 39470130,
    "source": {
     "doc": "brevard-res-26-091",
     "page": 1

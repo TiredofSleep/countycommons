@@ -1,10 +1,10 @@
 {
-  "run_at": "2026-10-06T06:14:56.241Z",
+  "run_at": "2026-10-06T06:23:25.685Z",
   "corpus_year": 2026,
   "grand_total": 2425831993,
   "summary": {
-    "total_checks": 24,
-    "passed": 24,
+    "total_checks": 26,
+    "passed": 26,
     "failed": 0
   },
   "checks": [
@@ -13,8 +13,8 @@
       "name": "County departments (Board agencies)",
       "kind": "children-sum",
       "ok": true,
-      "expected": 2089718194,
-      "computed": 2089718194,
+      "expected": 2091272699,
+      "computed": 2091272699,
       "detail": "25 children sum to the parent total exactly."
     },
     {
@@ -49,9 +49,9 @@
       "name": "General Government",
       "kind": "children-sum",
       "ok": true,
-      "expected": 140964183,
-      "computed": 140964183,
-      "detail": "3 children sum to the parent total exactly."
+      "expected": 142518688,
+      "computed": 142518688,
+      "detail": "4 children sum to the parent total exactly."
     },
     {
       "node": "board-house-and-human-services-department",
@@ -162,13 +162,31 @@
       "detail": "4 children sum to the parent total exactly."
     },
     {
+      "node": "officers",
+      "name": "Elected officers (Charter Officers)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 258393190,
+      "computed": 258393190,
+      "detail": "5 children sum to the parent total exactly."
+    },
+    {
+      "node": "off-sheriff-s-office",
+      "name": "Sheriff’s Office",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 220439187,
+      "computed": 220439187,
+      "detail": "16 children sum to the parent total exactly."
+    },
+    {
       "node": "__grand_total__",
       "name": "Ordinance grand total",
       "kind": "grand-total",
       "ok": true,
       "expected": 2425831993,
       "computed": 2425831993,
-      "detail": "4 top-level funds sum to the ordinance's stated total exactly."
+      "detail": "5 top-level funds sum to the ordinance's stated total exactly."
     },
     {
       "node": "__activity_chain__",
