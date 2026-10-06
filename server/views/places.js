@@ -24,7 +24,7 @@ function placesPage(data, index) {
   const body = `
 <header class="page">
   <div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · where the money really is</div>
-  <h1>The cities and towns of Middlesex</h1>
+  <h1>The cities and towns of ${esc(county.name.replace(/ County$/, ''))}</h1>
   <div class="src">${esc(index.note || '')}</div>
 </header>
 
@@ -36,10 +36,10 @@ ${ingested.map(p => `<a class="issue" style="display:block;text-decoration:none;
 <section>
 <h2>Every municipality <span class="sub">— ${places.length} of ${index.total_municipalities || places.length} listed</span></h2>
 <table class="plain">
-<thead><tr><th>Place</th><th>Type</th><th class="num">Residents (2020)</th><th>Budget</th></tr></thead>
+<thead><tr><th>Place</th><th>Type</th><th class="num">Residents${index.pop_year ? ` (${esc(index.pop_year)})` : ' (2020)'}</th><th>Budget</th></tr></thead>
 <tbody>${places.map(row).join('')}</tbody>
 </table>
-<p class="src">Populations are the 2020 U.S. Census. More cities and towns — and more ingested budgets — are being added. Want yours walked next? <a href="/priorities">Say so on the priorities board</a>.</p>
+<p class="src">${esc(index.pop_note || 'Populations are the 2020 U.S. Census.')} More cities and towns — and more ingested budgets — are being added. Want yours walked next? <a href="/priorities">Say so on the priorities board</a>.</p>
 </section>`;
 
   return layout({
@@ -100,12 +100,12 @@ function cityBudgetPage(data, city) {
   <h1>${esc(m.city)} — the money trail</h1>
   <div class="total"><a class="amt" href="${esc(m.source.url)}" rel="noopener">${cap(total)}</a></div>
   <div class="src">${esc(m.note || '')} Click any number to open the source. ${foots ? `<b>The pieces add up to the ${esc(totalLabel)} total exactly.</b>` : ''}</div>
-  <div class="crumb" style="margin-top:8px"><a href="/places">← all Middlesex cities & towns</a> · <a href="/budget">the county page</a></div>
+  <div class="crumb" style="margin-top:8px"><a href="/places">← all ${esc(county.name.replace(/ County$/, ''))} cities & towns</a> · <a href="/budget">the county page</a></div>
 </header>
 
 <div class="bar" style="gap:14px;flex-wrap:wrap">
   ${fundsChips}
-  ${m.population ? `<span class="src">· ${m.population.toLocaleString('en-US')} residents (2020)</span>` : ''}
+  ${m.population ? `<span class="src">· ${m.population.toLocaleString('en-US')} residents (${esc(m.pop_year || '2020')})</span>` : ''}
 </div>
 
 <section>

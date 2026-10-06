@@ -1,0 +1,156 @@
+{
+ "updated": "2026-10-06",
+ "intro": "Move a county property tax up or down — the county’s general fund, the sheriff’s patrol tax, the fire tax, or the schools — and see what it does to a household’s bill, to the budget, and to what that money could pay for or would have to give up. Every rate and tax base comes from a cited document.",
+ "household": {
+  "assess_ratio": 1,
+  "homestead_credit": 0,
+  "homestead_label": "It’s my homestead (takes off Florida’s homestead exemption)",
+  "home_default": 300000,
+  "spend_default": 0,
+  "where": "The household example is a home in unincorporated Brevard County (outside any city), so it pays the county general fund, the sheriff’s patrol tax, the fire tax, and the schools.",
+  "note": "Florida taxes property on its assessed value, in mills: $1 for every $1,000. Use the assessed value on your TRIM notice or bcpao.us. The homestead box takes off $51,411 for county taxes and $25,000 for school taxes (2026). Rates are the final 2025 rates. Smaller taxes on the bill (library, mosquito control, recreation, road and water districts) stay as they are; a home inside a city pays the city’s tax instead of the sheriff’s patrol tax."
+ },
+ "layers": [
+  {
+   "id": "county_mills",
+   "kind": "property",
+   "name": "Brevard County general fund mills",
+   "gov": "Brevard County",
+   "unit": "mills",
+   "base": 2.8643,
+   "per_unit": 76403021,
+   "step": 0.1,
+   "min_change": -1,
+   "max_change": 1,
+   "on_home": true,
+   "homestead_exempt": 51411,
+   "base_note": "One mill raises about $76.4 million a year across the whole county — its 2026 taxable value is $76,403,021,129. The general fund pays for most county services, including the jail. 2.8643 is the 2025 rate; the 2026 rates were set by Resolution 26-090 on September 22, 2026.",
+   "source": {
+    "doc": "bcpao-millage-2025",
+    "page": "code 34X0"
+   },
+   "caps": [
+    {
+     "above": 10,
+     "kind": "limit",
+     "text": "Florida’s Constitution caps county operating taxes at 10 mills (Art. VII, §9(b)).",
+     "source": {
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?submenu=3",
+      "label": "Fla. Const. Art. VII, §9"
+     }
+    }
+   ],
+   "budget": {
+    "label": "the county’s total budget",
+    "amount": 2425831993
+   },
+   "compare": "budget-lines",
+   "projects": [
+    {
+     "name": "a year of jail repairs the Sheriff asked for",
+     "amount": 3500000
+    },
+    {
+     "name": "a year of the jail’s food and medical care",
+     "amount": 13402347
+    }
+   ]
+  },
+  {
+   "id": "le_mstu",
+   "kind": "property",
+   "name": "Law Enforcement MSTU (unincorporated areas)",
+   "gov": "the county’s sheriff patrol tax",
+   "unit": "mills",
+   "base": 0.8531,
+   "per_unit": 33358102,
+   "step": 0.1,
+   "min_change": -0.5,
+   "max_change": 0.5,
+   "on_home": true,
+   "homestead_exempt": 51411,
+   "base_note": "Paid in the areas the Sheriff patrols — mostly unincorporated Brevard, outside the cities with their own police. One mill raises about $33.4 million: the district’s 2026 taxable value is $33,358,102,229.",
+   "source": {
+    "doc": "bcpao-dr420-2026",
+    "page": "Law Enforcement MSTU"
+   }
+  },
+  {
+   "id": "fire_mstu",
+   "kind": "property",
+   "name": "Fire Control MSTU",
+   "gov": "the county’s fire district tax",
+   "unit": "mills",
+   "base": 0.6431,
+   "per_unit": 36455457,
+   "step": 0.1,
+   "min_change": -0.5,
+   "max_change": 0.5,
+   "on_home": true,
+   "homestead_exempt": 51411,
+   "base_note": "Pays for Brevard County Fire Rescue where the county provides fire service. One mill raises about $36.5 million: the district’s 2026 taxable value is $36,455,456,846.",
+   "source": {
+    "doc": "bcpao-dr420-2026",
+    "page": "Fire Control MSTU"
+   }
+  },
+  {
+   "id": "school_mills",
+   "kind": "property",
+   "name": "Brevard Public Schools mills",
+   "gov": "Brevard Public Schools",
+   "unit": "mills",
+   "base": 6.31,
+   "per_unit": 82873663,
+   "step": 0.1,
+   "min_change": -1,
+   "max_change": 1,
+   "on_home": true,
+   "homestead_exempt": 25000,
+   "base_note": "One mill raises about $82.9 million a year — the school district’s 2026 taxable value is $82,873,662,940. The 6.31 mills (2025) are 3.062 required by the state, 0.748 set by the School Board, 1.5 for buildings, and 1.0 that voters approved for teacher pay.",
+   "source": {
+    "doc": "bcpao-millage-2025",
+    "page": "code 34X0"
+   },
+   "caps": [
+    {
+     "above": 6.31,
+     "kind": "election",
+     "text": "The state sets the required mills each year; Florida law caps the School Board’s own operating levy (0.748 mills, the amount the state budget allows) and its building levy at 1.5 mills (§1011.71). Anything more needs the voters — as the teacher-pay mill did.",
+     "source": {
+      "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=1000-1099/1011/Sections/1011.71.html",
+      "label": "Fla. Stat. §1011.71"
+     }
+    }
+   ]
+  }
+ ],
+ "law": [
+  {
+   "text": "Florida’s Truth in Millage (TRIM) law: each August the Property Appraiser mails every owner a notice with each government’s proposed rate and its rolled-back rate; budgets are then adopted at two September hearings.",
+   "source": {
+    "url": "https://floridarevenue.com/property/Pages/TRIM.aspx",
+    "label": "Florida Dept. of Revenue — TRIM"
+   }
+  },
+  {
+   "text": "Homesteads get up to $51,411 off county and city taxes in 2026 ($25,000 off school taxes), and Save Our Homes limits a homestead’s yearly assessment increase to 3% or inflation, whichever is less.",
+   "source": {
+    "doc": "bcpao-amendment3"
+   }
+  },
+  {
+   "text": "On the November 3, 2026 ballot, Amendment 3 would raise the homestead exemption for non-school taxes to up to $150,000 in 2027 and $250,000 in 2028, and cut the yearly cap on non-homestead assessment increases from 10% to 5%. School taxes would keep the $25,000 exemption. It needs 60% to pass. In FY2024-25, homesteads paid 41.6% of the county commission’s property taxes. This site gives facts on the amendment and takes no side.",
+   "source": {
+    "doc": "bcpao-amendment3"
+   }
+  }
+ ],
+ "limits": [
+  "Tax bases are held at the 2026 certified values. Values move every year, and if Amendment 3 passes, homestead taxable values would fall sharply starting in 2027.",
+  "Not every bill gets paid on time, and early payers get up to a 4% discount; governments budget about 95–97% of the levy for that reason.",
+  "The general fund and school mills raise money from every property in the county; the sheriff’s patrol and fire taxes only from the areas they serve.",
+  "Save Our Homes means a long-time homesteader’s assessed value can be far below market value. Use the assessed value on your notice, not the sale price.",
+  "Saving-up times ignore interest earned and rising construction costs."
+ ]
+}
