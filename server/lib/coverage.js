@@ -39,7 +39,7 @@ function forTenant(key, t) {
 
   const stateSlug = String(cfg.state || '').toLowerCase().replace(/\s+/g, '-');
   const stTurn = readJSON('data/corpus/turnout-' + stateSlug + '.json');
-  const cKey = String(cfg.name || '').replace(/ County$/, '');
+  const cKey = cfg.turnout_county || String(cfg.name || '').replace(/ County$/, '');
   const hasTurnout = !!(stTurn && stTurn.elections.some(e => e.counties[cKey]));
   const hasStateGrants = fs.existsSync(path.join(ROOT, 'data/corpus/grants-' + stateSlug + '.json'));
 

@@ -10,7 +10,9 @@ const n = (x) => Number(x).toLocaleString('en-US');
 
 function turnoutPage(data) {
   const { county, turnout: t, turnoutLocal: loc } = data;
-  const key = county.name.replace(/ County$/, '');
+  // A town reads its county's row in the state file (config turnout_county).
+  const key = county.turnout_county || county.name.replace(/ County$/, '');
+  const place = county.turnout_county ? `${county.turnout_county} County` : county.name;
   const cite = (s) => s && s.url ? `<a href="${esc(s.url)}" rel="noopener">${esc(s.label || s.url.replace(/^https?:\/\/(www\.)?/, ''))}</a>` : '';
   const bar = (pct, tone) => `<div style="background:var(--rule-soft);height:10px;max-width:260px"><div style="width:${Math.min(100, pct)}%;height:10px;background:var(--${tone || 'accent'})"></div></div>`;
 
@@ -43,7 +45,7 @@ function turnoutPage(data) {
     // Compare a general election with the primary held the same year.
     const general = els.find(e => /general/i.test(e.id) && els.some(p => /primary/i.test(p.id) && p.id.slice(0, 4) === e.id.slice(0, 4)));
     const primary = general && els.find(p => /primary/i.test(p.id) && p.id.slice(0, 4) === general.id.slice(0, 4));
-    const gap = general && primary ? `<p>In ${esc(county.name)}, ${n(general.counties[key].ballots)} people voted in the ${esc(general.name)} — and ${n(primary.counties[key].ballots)} in the ${esc(primary.name)}: about ${Math.round(primary.counties[key].ballots / general.counties[key].ballots * 100)} primary voters for every 100 general-election voters.</p>` : '';
+    const gap = general && primary ? `<p>In ${esc(place)}, ${n(general.counties[key].ballots)} people voted in the ${esc(general.name)} — and ${n(primary.counties[key].ballots)} in the ${esc(primary.name)}: about ${Math.round(primary.counties[key].ballots / general.counties[key].ballots * 100)} primary voters for every 100 general-election voters.</p>` : '';
 
     const local = loc ? `
 <section id="local">
@@ -67,7 +69,7 @@ ${loc.note ? `<p class="src" style="max-width:none">${esc(loc.note)}</p>` : ''}
 </header>
 
 <section id="county">
-<h2>${esc(county.name)} <span class="sub">— share of registered voters who voted</span></h2>
+<h2>${esc(place)} <span class="sub">— share of registered voters who voted${county.turnout_county ? `, countywide (the state reports by county; ${esc(county.name)}’s own counts are below)` : ''}</span></h2>
 <div style="overflow-x:auto;max-width:100%"><table class="plain"><tbody>${rows}</tbody></table></div>
 ${gap}
 ${spread}

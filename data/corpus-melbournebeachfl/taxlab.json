@@ -1,0 +1,126 @@
+{
+ "updated": "2026-10-06",
+ "intro": "Move a property tax rate up or down — the town’s, the county’s, or the schools’ — and see what it does to a household’s bill, to the budget, and to what that money could pay for or would have to give up. Every rate and tax base comes from a cited document.",
+ "household": {
+  "assess_ratio": 1,
+  "homestead_credit": 0,
+  "homestead_label": "It’s my homestead (takes off Florida’s homestead exemption)",
+  "home_default": 300000,
+  "spend_default": 0,
+  "where": "The household example is a home inside the Town of Melbourne Beach (millage code 34X0), so it pays the town, Brevard County, and Brevard Public Schools.",
+  "note": "Florida taxes property on its assessed value, in mills: $1 for every $1,000. Enter your assessed value from your TRIM notice or bcpao.us. The homestead box takes off $51,411 for town and county taxes and $25,000 for school taxes (2026 amounts, per the Property Appraiser); homes assessed under about $76,000 get a smaller exemption, and senior, veteran and other exemptions aren’t modeled. County and school rates are the final 2025 rates — the 2026 table wasn’t posted yet. Smaller taxes on the bill (library, mosquito control, recreation, water management, inlet and navigation districts — 1.1933 mills together in 2025) stay as they are."
+ },
+ "layers": [
+  {
+   "id": "town_mills",
+   "kind": "property",
+   "name": "Town of Melbourne Beach mills",
+   "gov": "the Town of Melbourne Beach",
+   "unit": "mills",
+   "base": 4.6,
+   "per_unit": 725978,
+   "step": 0.1,
+   "min_change": -2,
+   "max_change": 2,
+   "on_home": true,
+   "homestead_exempt": 51411,
+   "base_note": "One mill raises about $725,978 a year — the town’s 2026 taxable value is $725,977,934 (Property Appraiser’s certification). The town budgets 97% of that, since some taxpayers pay early for a discount. The stormwater debt mill ended when that loan was paid off in July 2026.",
+   "source": { "doc": "mb-fy27-budget", "page": "PDF p. 23" },
+   "budget": { "label": "the town’s General Fund", "amount": 4704285 },
+   "compare": "budget-lines",
+   "reserve": { "label": "the General Fund’s unassigned savings (Sept. 30, 2025)", "amount": 3520439 },
+   "projects": [
+    { "name": "a new police car", "amount": 35000 },
+    { "name": "the state-required town hall elevator repair", "amount": 100000 },
+    { "name": "a year of road paving and curbs", "amount": 135000 }
+   ],
+   "caps": [
+    {
+     "above": 4.3987,
+     "kind": "notice",
+     "text": "Above the rolled-back rate of 4.3987 mills — the rate that would raise the same money as last year — Florida’s Truth in Millage law has the town advertise the rate as a tax increase. FY2027’s 4.6000 is 4.58% above it.",
+     "source": { "doc": "mb-fy27-budget", "page": "PDF p. 23" }
+    },
+    {
+     "above": 10,
+     "kind": "limit",
+     "text": "Florida’s Constitution caps city and town operating taxes at 10 mills (Art. VII, §9(b)), not counting voter-approved debt.",
+     "source": { "url": "http://www.leg.state.fl.us/statutes/index.cfm?submenu=3", "label": "Fla. Const. Art. VII, §9" }
+    }
+   ]
+  },
+  {
+   "id": "county_mills",
+   "kind": "property",
+   "name": "Brevard County general fund mills",
+   "gov": "Brevard County",
+   "unit": "mills",
+   "base": 2.8643,
+   "per_unit": 76403021,
+   "step": 0.1,
+   "min_change": -1,
+   "max_change": 1,
+   "on_home": true,
+   "homestead_exempt": 51411,
+   "base_note": "One mill raises about $76.4 million a year across the whole county — its 2026 taxable value is $76,403,021,129. The county’s general fund pays for the jail and most county services. 2.8643 is the 2025 rate.",
+   "source": { "doc": "bcpao-millage-2025", "page": "code 34X0" },
+   "caps": [
+    {
+     "above": 10,
+     "kind": "limit",
+     "text": "Florida’s Constitution caps county operating taxes at 10 mills (Art. VII, §9(b)).",
+     "source": { "url": "http://www.leg.state.fl.us/statutes/index.cfm?submenu=3", "label": "Fla. Const. Art. VII, §9" }
+    }
+   ]
+  },
+  {
+   "id": "school_mills",
+   "kind": "property",
+   "name": "Brevard Public Schools mills",
+   "gov": "Brevard Public Schools",
+   "unit": "mills",
+   "base": 6.31,
+   "per_unit": 82873663,
+   "step": 0.1,
+   "min_change": -1,
+   "max_change": 1,
+   "on_home": true,
+   "homestead_exempt": 25000,
+   "base_note": "One mill raises about $82.9 million a year — the school district’s 2026 taxable value is $82,873,662,940. The 6.31 mills (2025) are 3.062 required by the state, 0.748 set by the School Board, 1.5 for buildings, and 1.0 that voters approved for teacher pay.",
+   "source": { "doc": "bcpao-millage-2025", "page": "code 34X0" },
+   "caps": [
+    {
+     "above": 6.31,
+     "kind": "election",
+     "text": "The state sets the required mills each year; Florida law caps the School Board’s own operating levy (0.748 mills, the amount the state budget allows) and its building levy at 1.5 mills (§1011.71). Anything more needs the voters — as the teacher-pay mill did.",
+     "source": { "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=1000-1099/1011/Sections/1011.71.html", "label": "Fla. Stat. §1011.71" }
+    }
+   ]
+  }
+ ],
+ "law": [
+  {
+   "text": "Florida’s Truth in Millage (TRIM) law: each August the Property Appraiser mails every owner a notice with each government’s proposed rate and its rolled-back rate; budgets are then adopted at two September hearings.",
+   "source": { "url": "https://floridarevenue.com/property/Pages/TRIM.aspx", "label": "Florida Dept. of Revenue — TRIM" }
+  },
+  {
+   "text": "Homesteads get up to $51,411 off town and county taxes in 2026 ($25,000 off school taxes), and Save Our Homes limits a homestead’s yearly assessment increase to 3% or inflation, whichever is less.",
+   "source": { "doc": "bcpao-amendment3" }
+  },
+  {
+   "text": "On the November 3, 2026 ballot, Amendment 3 would raise the homestead exemption for non-school taxes to up to $150,000 in 2027 and $250,000 in 2028, and cut the yearly cap on non-homestead assessment increases from 10% to 5%. School taxes would keep the $25,000 exemption. It needs 60% to pass. In FY2024-25, homesteads paid 59.7% of the town’s property taxes. This site gives facts on the amendment and takes no side.",
+   "source": { "doc": "bcpao-amendment3" }
+  },
+  {
+   "text": "Also on the ballot: the town’s $5.0 million General Obligation bond, which the town estimates at 0.53–0.70 additional mills a year for 20 years ($131–$175 a year on $250,000 of taxable value). Facts only, no side taken.",
+   "source": { "doc": "mb-gobond" }
+  }
+ ],
+ "limits": [
+  "Tax bases are held at the 2026 certified values. Values move every year, and if Amendment 3 passes, homestead taxable values would fall sharply starting in 2027.",
+  "Not every bill gets paid on time, and early payers get up to a 4% discount; the town budgets 97% of its levy for that reason.",
+  "County and school mills raise money from every property in Brevard County, not just homes in Melbourne Beach.",
+  "Save Our Homes means a long-time homesteader’s assessed value can be far below market value. Use the assessed value on your notice, not the sale price.",
+  "Saving-up times ignore interest earned and rising construction costs."
+ ]
+}

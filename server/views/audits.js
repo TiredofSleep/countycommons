@@ -29,7 +29,9 @@ function auditsPage(data) {
 
   const chip = v => v === 'clean'
     ? '<span class="chip c-ok">✓ no findings reported</span>'
-    : '<span class="chip c-part">◐ no findings surfaced in machine read</span>';
+    : v === 'recommendation'
+      ? '<span class="chip c-part">◐ a recommendation, no findings</span>'
+      : '<span class="chip c-part">◐ no findings surfaced in machine read</span>';
 
   const rows = auditFindings.verdicts.map(v => {
     const doc = v.source ? documents.documents.find(d => d.id === v.source.doc) : null;

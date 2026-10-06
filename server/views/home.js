@@ -90,7 +90,7 @@ ${tourBlock(county)}
 </section>
 
 <div style="display:flex;gap:10px;flex-wrap:wrap;margin:14px 0">
-  ${stat(money(budget.meta.grand_total), 'county dollars mapped', '/budget')}
+  ${stat(money(budget.meta.grand_total), 'public dollars mapped', '/budget')}
   ${stat(String(documents.documents.length), anyHashed ? 'source documents, hashed' : 'source documents, indexed', '/documents')}
   ${stat(nm ? nm.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : '—', nm ? 'next public meeting' : 'calendar', '/calendar')}
   ${stat(String(openQs.length), openQs.length === 1 ? 'question open now' : 'questions open now', '/issues')}

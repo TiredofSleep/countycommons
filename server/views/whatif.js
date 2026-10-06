@@ -86,12 +86,13 @@ ${plan('Invest and borrow against it', notLegal, m(p.smart.total), `${m(p.smart.
   <div class="src">${esc(w.intro)} Updated ${esc(w.updated)}.</div>
 </header>
 
-<section>
+${w.governments.length ? `<section>
 <h2>Play it <span class="sub">— pick a start year and a stretch of market history</span></h2>
 ${form}
 <p class="src">Showing: saving starts in <b>${start}</b>; markets ${era.year ? `replay the years from <b>${era.year}</b>` : 'follow <b>what really happened</b>'}. Each plan buys the same things on the same dates.</p>
 </section>
-${govCards}
+${govCards}` : ''}
+${w.notice ? `<div class="issue" style="display:block;border-color:var(--partial)"><b>${esc(w.notice)}</b></div>` : ''}
 
 <section id="today">
 <h2>${esc(f.title)} <span class="sub">— the next round, not the last one</span></h2>
@@ -102,10 +103,11 @@ ${govCards}
 
 <section id="smart-money">
 <h2>“Invest it and borrow against it” <span class="sub">— why counties can’t, and who can</span></h2>
-<p>Wealthy people borrow against their stocks so they never have to sell them and pay capital-gains tax. Governments pay no income tax, so that part doesn’t apply. What’s left is a bet: that investments earn more than the loan costs. In the table above, most of the gain comes from investing early — not from the borrowing.</p>
+<p>Wealthy people borrow against their stocks so they never have to sell them and pay capital-gains tax. Governments pay no income tax, so that part doesn’t apply. What’s left is a bet: that investments earn more than the loan costs.${w.governments.length ? ' In the table above, most of the gain comes from investing early — not from the borrowing.' : ''}</p>
 <ul>
 <li><b>Texas law</b> lets a county invest only in government-type securities, bank CDs, and funds <a href="https://texas.public.law/statutes/tex._gov't_code_section_2256.014">“invested exclusively in obligations approved by this subchapter”</a> (Gov’t Code §2256.014). No stocks.</li>
 <li><b>Arkansas law</b> limits county and city spare cash to securities <a href="https://codes.findlaw.com/ar/title-19-public-finance/ar-code-sect-19-1-504.html">“having a maturity of not longer than five (5) years,”</a> bank CDs, pools, and repurchase agreements (§19-1-504). No stocks.</li>
+${county.state === 'Florida' ? `<li><b>Florida law</b> lets a town without a written investment policy hold only the state pool, top-rated money market funds, bank deposits, and U.S. Treasuries. With a written policy that puts “safety of principal and liquidity” first, it may add “other investments authorized by law or by ordinance” (<a href="http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0200-0299/0218/Sections/0218.415.html">§218.415</a>). Stocks are not on the default list.</li>` : ''}
 <li><b>Federal law</b> won’t let tax-exempt bond money be invested at a higher return than the bond pays; extra earnings go to the U.S. Treasury (<a href="https://www.law.cornell.edu/uscode/text/26/148">26 U.S.C. §148</a>).</li>
 <li><b>The warning:</b> in 1994, Orange County, California used borrowed money to stretch a $7.6 billion investment pool to more than $20 billion. It lost about $1.7 billion and filed for bankruptcy on December 6, 1994 (<a href="https://www.sec.gov/litigation/admin/33-8121.htm">SEC order</a>).</li>
 <li><b>The version that works is run by the state:</b> approved Texas school bonds are <a href="https://texas.public.law/statutes/tex._educ._code_section_45.052">“guaranteed by the corpus and income of the permanent school fund”</a> (Education Code §45.052), so districts borrow at top-rated rates — borrowing against investments, with a state-sized fund behind it (<a href="https://texaspsf.org">texaspsf.org</a>).</li>

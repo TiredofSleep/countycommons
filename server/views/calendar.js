@@ -56,6 +56,11 @@ ${inSeason ? `<div class="issue" style="display:block;border-color:var(--partial
 ${rows || '<p class="src">No meetings found in the window — which would be surprising; tell us.</p>'}
 </section>
 
+${(calendar.dated || []).length ? `<section>
+<h2>Dates to know <span class="sub">— one-time dates, each from its source</span></h2>
+${calendar.dated.filter(x => new Date(x.date + 'T23:59:59') >= now).map(x => `<p style="font-size:14px;margin:6px 0"><b>${esc(new Date(x.date + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'short', month: 'long', day: 'numeric', year: 'numeric' }))}</b> — ${esc(x.what)} <span class="src">${x.url ? `<a href="${esc(x.url)}" rel="noopener">${esc(x.label || 'source')}</a>` : ''}</span></p>`).join('')}
+</section>` : ''}
+
 <section>
 <h2>Being verified <span class="sub">— listed the moment they're confirmed</span></h2>
 ${calendar.unverified.map(u => `<p class="src"><b>${esc(u.name)}</b> — ${esc(u.note)}</p>`).join('')}

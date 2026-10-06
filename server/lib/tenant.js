@@ -53,6 +53,13 @@ function resolveHost(rawHost) {
   if (!host || host === 'localhost' || /^\d+\.\d+\.\d+\.\d+$/.test(host)) {
     return { action: 'serve', key: reg.default };
   }
+  // Local dev: <sub>.localhost previews that tenant (browsers resolve
+  // *.localhost to this machine; it never reaches the public server).
+  if (host.endsWith('.localhost')) {
+    const sub = host.slice(0, -'.localhost'.length);
+    const key = Object.keys(reg.tenants).find(k => reg.tenants[k].sub === sub);
+    return { action: 'serve', key: key || reg.default };
+  }
   // Bare apex and www → send them to the flagship county's subdomain.
   if (host === base || host === 'www.' + base) {
     return { action: 'redirect', to: reg.tenants[reg.default].host };

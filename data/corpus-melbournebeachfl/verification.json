@@ -1,0 +1,174 @@
+{
+  "run_at": "2026-10-06T05:47:45.631Z",
+  "corpus_year": 2026,
+  "grand_total": 5359912,
+  "summary": {
+    "total_checks": 18,
+    "passed": 18,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "node": "rev-gf",
+      "name": "General Fund and Building Fund revenue",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 5126817,
+      "computed": 5126817,
+      "detail": "6 children sum to the parent total exactly."
+    },
+    {
+      "node": "rev-taxes",
+      "name": "Taxes",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4242463,
+      "computed": 4242463,
+      "detail": "15 children sum to the parent total exactly."
+    },
+    {
+      "node": "gf",
+      "name": "General Fund (001)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4704285,
+      "computed": 4704285,
+      "detail": "10 children sum to the parent total exactly."
+    },
+    {
+      "node": "gf-11",
+      "name": "Town Commission and Clerk (Legislative)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 278169,
+      "computed": 278169,
+      "detail": "19 children sum to the parent total exactly."
+    },
+    {
+      "node": "gf-14",
+      "name": "Town Attorney (Legal)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 160042,
+      "computed": 160042,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "gf-15",
+      "name": "Town Planner",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 55000,
+      "computed": 55000,
+      "detail": "1 children sum to the parent total exactly."
+    },
+    {
+      "node": "gf-19",
+      "name": "General Services (town hall, insurance, streetlights)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 574836,
+      "computed": 574836,
+      "detail": "29 children sum to the parent total exactly."
+    },
+    {
+      "node": "gf-21",
+      "name": "Police",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 1677353,
+      "computed": 1677353,
+      "detail": "37 children sum to the parent total exactly."
+    },
+    {
+      "node": "gf-22",
+      "name": "Fire",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 782710,
+      "computed": 782710,
+      "detail": "36 children sum to the parent total exactly."
+    },
+    {
+      "node": "f351",
+      "name": "Road Paving and Repairs (351)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 135000,
+      "computed": 135000,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f390",
+      "name": "Historic buildings — Ryckman House and Old Town Hall (390, 391)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 2075,
+      "computed": 2075,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "__grand_total__",
+      "name": "Ordinance grand total",
+      "kind": "grand-total",
+      "ok": true,
+      "expected": 5359912,
+      "computed": 5359912,
+      "detail": "11 top-level funds sum to the ordinance's stated total exactly."
+    },
+    {
+      "node": "__activity_chain__",
+      "name": "Activity log hash chain",
+      "kind": "chain",
+      "ok": true,
+      "expected": null,
+      "computed": null,
+      "detail": "Chain verified: 130 entries, head 716fd1d6dfbacce6…"
+    },
+    {
+      "node": "__recount__",
+      "name": "Votes: no unlogged writes",
+      "kind": "recount",
+      "ok": true,
+      "expected": null,
+      "computed": null,
+      "detail": "35 store votes all present in the chain"
+    },
+    {
+      "node": "__recount__",
+      "name": "Votes: final values match chain",
+      "kind": "recount",
+      "ok": true,
+      "expected": null,
+      "computed": null,
+      "detail": "every store value equals its last chain event"
+    },
+    {
+      "node": "__recount__",
+      "name": "Votes: chain↔store orphans explained",
+      "kind": "recount",
+      "ok": true,
+      "expected": null,
+      "computed": null,
+      "detail": "no chain votes missing from the store (corrections accounted for)"
+    },
+    {
+      "node": "__recount__",
+      "name": "Submissions: no unlogged writes",
+      "kind": "recount",
+      "ok": true,
+      "expected": null,
+      "computed": null,
+      "detail": "0 submissions all chained"
+    },
+    {
+      "node": "__recount__",
+      "name": "Signatures: no unlogged writes",
+      "kind": "recount",
+      "ok": true,
+      "expected": null,
+      "computed": null,
+      "detail": "0 public signatures all chained"
+    }
+  ]
+}

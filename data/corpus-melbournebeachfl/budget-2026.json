@@ -1,0 +1,5000 @@
+{
+ "meta": {
+  "year": 2026,
+  "jurisdiction": "melbourne-beach",
+  "layer": "appropriation",
+  "document": "mb-fy27-budget",
+  "title": "Town of Melbourne Beach — the money trail",
+  "grand_total": 5359912,
+  "grand_total_note": "Total spending across the town’s funds for the year that began October 1, 2026, as stated on the official Budget Summary the town posts (“TOTAL EXPENDITURES $5,359,912”). The Town Commission approved the budget and a tax rate of 4.6000 mills on September 16, 2026.",
+  "note": "Florida towns budget fund by fund for a year that runs October 1 to September 30. This is the town’s own all-funds spending total from its Budget Summary. The property tax rate stays at 4.6000 mills — 4.6% above the “rolled-back” rate of 4.3987 that would raise the same money as last year (PDF p. 23). The town also keeps $3.07 million in reserve accounts and $2.64 million in its operating account (July 31, 2026, PDF p. 22)."
+ },
+ "nodes": [
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "revenue",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": true,
+   "status": "sourced",
+   "note": "What the town expects to collect in its main fund and its building-permit fund for the year that began October 1, 2026. Property tax is budgeted at 97% of the levy, because Florida lets taxpayers pay early for a discount. These six groups add up to $5,126,817 exactly.",
+   "id": "rev-gf",
+   "parent": null,
+   "name": "General Fund and Building Fund revenue",
+   "amount": 5126817,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 24
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "revenue",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": true,
+   "status": "sourced",
+   "note": "Property tax is three of every four tax dollars. The rest are taxes and fees on electric, water, gas, phone and cable bills, plus a share of gas and insurance taxes.",
+   "id": "rev-taxes",
+   "parent": "rev-gf",
+   "name": "Taxes",
+   "amount": 4242463,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 25
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "revenue",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": false,
+   "status": "sourced",
+   "note": "Mostly building permits ($205,000), plus vacation-rental, golf-cart (LSV) and bonfire permits.",
+   "id": "rev-licenses",
+   "parent": "rev-gf",
+   "name": "Licenses and permits",
+   "amount": 257050,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 25
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "revenue",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": false,
+   "status": "sourced",
+   "note": "The local half-cent sales tax ($224,000), state revenue sharing ($107,271), alcohol licenses, and a $6,000 safety grant.",
+   "id": "rev-intergov",
+   "parent": "rev-gf",
+   "name": "Money from the state and county",
+   "amount": 341671,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 25
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "revenue",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": false,
+   "status": "sourced",
+   "note": "Almost all of it is the Brevard County School Board paying for the school resource officer ($77,000).",
+   "id": "rev-services",
+   "parent": "rev-gf",
+   "name": "Charges for services",
+   "amount": 78000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 25
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "revenue",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "rev-fines",
+   "parent": "rev-gf",
+   "name": "Fines",
+   "amount": 16250,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 25
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "revenue",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": false,
+   "status": "sourced",
+   "note": "Interest on the town’s savings ($100,000) and $84,170 carried forward from last year.",
+   "id": "rev-misc",
+   "parent": "rev-gf",
+   "name": "Interest and other income",
+   "amount": 191383,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 26
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "revenue",
+   "docket_ref": null,
+   "code": "001-00-311.00.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": "The levy at 4.6000 mills on $725,977,934 of taxable value is $3,339,498 (PDF p. 23). The budget counts 97% of it.",
+   "id": "rev-t-001003110000",
+   "parent": "rev-taxes",
+   "name": "Property tax (4.6000 mills, budgeted at 97%)",
+   "amount": 3239313,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 25
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "revenue",
+   "docket_ref": null,
+   "code": "001-00-312.41.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "rev-t-001003124100",
+   "parent": "rev-taxes",
+   "name": "Local option gas tax (county share)",
+   "amount": 95500,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 25
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "revenue",
+   "docket_ref": null,
+   "code": "001-00-314.10.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "rev-t-001003141000",
+   "parent": "rev-taxes",
+   "name": "Utility tax — electric (FPL)",
+   "amount": 291200,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 25
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "revenue",
+   "docket_ref": null,
+   "code": "001-00-314.30.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "rev-t-001003143000",
+   "parent": "rev-taxes",
+   "name": "Utility tax — water",
+   "amount": 60000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 25
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "revenue",
+   "docket_ref": null,
+   "code": "001-00-314.40.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "rev-t-001003144000",
+   "parent": "rev-taxes",
+   "name": "Utility tax — gas",
+   "amount": 650,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 25
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "revenue",
+   "docket_ref": null,
+   "code": "001-00-314.40.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "rev-t-001003144010",
+   "parent": "rev-taxes",
+   "name": "Utility tax — gas (AmeriGas)",
+   "amount": 6600,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 25
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "revenue",
+   "docket_ref": null,
+   "code": "001-00-314.40.20",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "rev-t-001003144020",
+   "parent": "rev-taxes",
+   "name": "Utility tax — gas (Suburban)",
+   "amount": 1300,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 25
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "revenue",
+   "docket_ref": null,
+   "code": "001-00-314.40.30",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "rev-t-001003144030",
+   "parent": "rev-taxes",
+   "name": "Utility tax — gas (Ferrell)",
+   "amount": 3000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 25
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "revenue",
+   "docket_ref": null,
+   "code": "001-00-314.40.40",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "rev-t-001003144040",
+   "parent": "rev-taxes",
+   "name": "Utility tax — gas (Sam’s)",
+   "amount": 700,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 25
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "revenue",
+   "docket_ref": null,
+   "code": "001-00-315.00.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "rev-t-001003150000",
+   "parent": "rev-taxes",
+   "name": "Communications services tax",
+   "amount": 150000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 25
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "revenue",
+   "docket_ref": null,
+   "code": "001-00-316.00.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "rev-t-001003160000",
+   "parent": "rev-taxes",
+   "name": "Business tax",
+   "amount": 14000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 25
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "revenue",
+   "docket_ref": null,
+   "code": "001-00-323.10.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "rev-t-001003231000",
+   "parent": "rev-taxes",
+   "name": "Franchise fee — electric (FPL)",
+   "amount": 227200,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 25
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "revenue",
+   "docket_ref": null,
+   "code": "001-00-323.70.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "rev-t-001003237000",
+   "parent": "rev-taxes",
+   "name": "Franchise fee — trash, homes",
+   "amount": 80000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 25
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "revenue",
+   "docket_ref": null,
+   "code": "001-00-323.70.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "rev-t-001003237010",
+   "parent": "rev-taxes",
+   "name": "Franchise fee — trash, businesses",
+   "amount": 20000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 25
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "revenue",
+   "docket_ref": null,
+   "code": "001-21-312.52.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "rev-t-001213125200",
+   "parent": "rev-taxes",
+   "name": "Insurance premium tax (for police pension)",
+   "amount": 53000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 25
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001",
+   "children_complete": true,
+   "status": "sourced",
+   "note": "The town’s main fund: police, fire, public works, town hall. The ten departments below add up to $4,704,285 exactly. The General Fund also moves $204,278 to other funds (mostly $116,250 for the town-hall bond and $74,078 for stormwater). Those dollars are counted where they are spent, in the funds below, so they are not counted twice here.",
+   "id": "gf",
+   "parent": null,
+   "name": "General Fund (001)",
+   "amount": 4704285,
+   "source": {
+    "doc": "mb-fy27-summary",
+    "page": null
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-11",
+   "children_complete": true,
+   "status": "sourced",
+   "note": "Five commissioners paid $3,000 a year each, the town clerk and deputy clerk, elections, legal notices, and records software. A $3,000 transfer to stormwater is counted in the stormwater fund.",
+   "id": "gf-11",
+   "parent": "gf",
+   "name": "Town Commission and Clerk (Legislative)",
+   "amount": 278169,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 29
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-11-500.11.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-11-5001100",
+   "parent": "gf-11",
+   "name": "Commissioner pay",
+   "amount": 12000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 29
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-11-500.12.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-11-5001200",
+   "parent": "gf-11",
+   "name": "Regular salaries",
+   "amount": 107630.96,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 29
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-11-500.14.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-11-5001400",
+   "parent": "gf-11",
+   "name": "Overtime",
+   "amount": 0,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 29
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-11-500.21.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-11-5002100",
+   "parent": "gf-11",
+   "name": "Social Security and Medicare (FICA)",
+   "amount": 9381.27,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 29
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-11-500.22.20",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-11-5002220",
+   "parent": "gf-11",
+   "name": "Retirement",
+   "amount": 14627.05,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 29
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-11-500.23.01",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-11-5002301",
+   "parent": "gf-11",
+   "name": "Health insurance",
+   "amount": 17542.56,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 29
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-11-500.23.02",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-11-5002302",
+   "parent": "gf-11",
+   "name": "Life insurance",
+   "amount": 136,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 29
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-11-500.25.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-11-5002500",
+   "parent": "gf-11",
+   "name": "Unemployment",
+   "amount": 129.16,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 29
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-11-510.31.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-11-5103100",
+   "parent": "gf-11",
+   "name": "Professional services (incl. $10,000 transcription)",
+   "amount": 10840,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 29
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-11-510.40.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-11-5104000",
+   "parent": "gf-11",
+   "name": "Travel and meetings — commission",
+   "amount": 5940,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 29
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-11-510.40.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-11-5104010",
+   "parent": "gf-11",
+   "name": "Travel and meetings — staff",
+   "amount": 4625,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 29
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-11-510.47.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-11-5104700",
+   "parent": "gf-11",
+   "name": "Printing (code of ordinances)",
+   "amount": 3668,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 29
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-11-510.48.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-11-5104800",
+   "parent": "gf-11",
+   "name": "Promotional activities",
+   "amount": 600,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 29
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-11-510.48.40",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-11-5104840",
+   "parent": "gf-11",
+   "name": "Legal notices and advertising",
+   "amount": 5322,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 29
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-11-510.49.50",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-11-5104950",
+   "parent": "gf-11",
+   "name": "Election expense",
+   "amount": 1500,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 29
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-11-510.54.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-11-5105400",
+   "parent": "gf-11",
+   "name": "Dues and subscriptions",
+   "amount": 1210,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 29
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-11-510.54.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-11-5105410",
+   "parent": "gf-11",
+   "name": "Training",
+   "amount": 3645,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 29
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-11-510.64.01",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-11-5106401",
+   "parent": "gf-11",
+   "name": "Capital — ADA-compliant software",
+   "amount": 22619,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 29
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-11-543.00.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-11-5430000",
+   "parent": "gf-11",
+   "name": "Licenses and fees (records, video, web software)",
+   "amount": 56753,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 29
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-12",
+   "children_complete": false,
+   "status": "sourced",
+   "note": "The town manager ($124,500, contract) and an assistant, plus $78,000 of professional services: $33,000 for grant writing and $45,000 for a non-ad valorem (special assessment) study (PDF p. 33). Honest arithmetic: the lines below, printed to the cent, add to $354,405.70; the book rounds the department to $354,406.",
+   "id": "gf-12",
+   "parent": "gf",
+   "name": "Town Manager (Executive)",
+   "amount": 354406,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 32
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-12-500.12.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-12-5001200",
+   "parent": "gf-12",
+   "name": "Regular salaries",
+   "amount": 172130.96,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 32
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-12-500.12.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-12-5001200b",
+   "parent": "gf-12",
+   "name": "Retirement payout",
+   "amount": 0,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 32
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-12-500.21.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-12-5002100",
+   "parent": "gf-12",
+   "name": "Social Security and Medicare (FICA)",
+   "amount": 13168.02,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 32
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-12-500.22.01",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-12-5002201",
+   "parent": "gf-12",
+   "name": "Retirement — ICMA",
+   "amount": 16919.55,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 32
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-12-500.22.20",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-12-5002220",
+   "parent": "gf-12",
+   "name": "Retirement — town employees",
+   "amount": 6473.05,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 32
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-12-500.23.01",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-12-5002301",
+   "parent": "gf-12",
+   "name": "Health insurance",
+   "amount": 47389.56,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 32
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-12-500.23.02",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-12-5002302",
+   "parent": "gf-12",
+   "name": "Life insurance",
+   "amount": 203,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 32
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-12-500.25.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-12-5002500",
+   "parent": "gf-12",
+   "name": "Unemployment",
+   "amount": 206.56,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 32
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-12-510.31.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-12-5103100",
+   "parent": "gf-12",
+   "name": "Professional services — grant writing and assessment study",
+   "amount": 78000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 32
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-12-510.40.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-12-5104000",
+   "parent": "gf-12",
+   "name": "Travel and meetings",
+   "amount": 2260,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 32
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-12-510.49.99",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-12-5104999",
+   "parent": "gf-12",
+   "name": "Miscellaneous (team building)",
+   "amount": 10400,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 32
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-12-510.52.50",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-12-5105250",
+   "parent": "gf-12",
+   "name": "Gas and oil (stipend)",
+   "amount": 2600,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 32
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-12-510.54.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-12-5105400",
+   "parent": "gf-12",
+   "name": "Dues and subscriptions",
+   "amount": 3655,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 32
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-12-510.54.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-12-5105410",
+   "parent": "gf-12",
+   "name": "Training",
+   "amount": 1000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 32
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-13",
+   "children_complete": false,
+   "status": "sourced",
+   "note": "The finance manager and finance clerk, the annual audit ($35,000), a federal single audit ($3,500), and an actuarial report (PDF p. 35). Honest arithmetic: the lines add to $275,898 — $1 more than the department total the book prints. That is rounding in the town’s own book.",
+   "id": "gf-13",
+   "parent": "gf",
+   "name": "Finance",
+   "amount": 275897,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 34
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-13-500.12.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-13-5001200",
+   "parent": "gf-13",
+   "name": "Regular salaries",
+   "amount": 126399,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 34
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-13-500.21.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-13-5002100",
+   "parent": "gf-13",
+   "name": "Social Security and Medicare (FICA)",
+   "amount": 9670,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 34
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-13-500.22.20",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-13-5002220",
+   "parent": "gf-13",
+   "name": "Retirement",
+   "amount": 17178,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 34
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-13-500.23.01",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-13-5002301",
+   "parent": "gf-13",
+   "name": "Health insurance",
+   "amount": 23556,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 34
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-13-500.23.02",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-13-5002302",
+   "parent": "gf-13",
+   "name": "Life insurance",
+   "amount": 136,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 34
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-13-500.25.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-13-5002500",
+   "parent": "gf-13",
+   "name": "Unemployment",
+   "amount": 152,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 34
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-13-510.31.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-13-5103100",
+   "parent": "gf-13",
+   "name": "Professional services — General Fund projection",
+   "amount": 25000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 34
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-13-510.32.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-13-5103200",
+   "parent": "gf-13",
+   "name": "Audit, single audit, actuarial report",
+   "amount": 41000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 34
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-13-510.32.90",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-13-5103290",
+   "parent": "gf-13",
+   "name": "Banking fees",
+   "amount": 11842,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 34
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-13-510.40.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-13-5104000",
+   "parent": "gf-13",
+   "name": "Travel and meetings",
+   "amount": 1200,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 34
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-13-510.47.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-13-5104700",
+   "parent": "gf-13",
+   "name": "Printing",
+   "amount": 75,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 34
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-13-510.54.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-13-5105400",
+   "parent": "gf-13",
+   "name": "Dues and subscriptions",
+   "amount": 60,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 34
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-13-510.54.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-13-5105410",
+   "parent": "gf-13",
+   "name": "Training",
+   "amount": 900,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 34
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-13-543.00.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-13-5430000",
+   "parent": "gf-13",
+   "name": "Licenses and fees (software)",
+   "amount": 18730,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 34
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-14",
+   "children_complete": true,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-14",
+   "parent": "gf",
+   "name": "Town Attorney (Legal)",
+   "amount": 160042,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 36
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-14-510.31.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-14-5103100",
+   "parent": "gf-14",
+   "name": "Professional services — town attorney",
+   "amount": 145742,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 36
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-14-510.31.01",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-14-5103101",
+   "parent": "gf-14",
+   "name": "Code enforcement legal services",
+   "amount": 14300,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 36
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-15",
+   "children_complete": true,
+   "status": "sourced",
+   "note": "Up from $9,000 budgeted last year.",
+   "id": "gf-15",
+   "parent": "gf",
+   "name": "Town Planner",
+   "amount": 55000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 36
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-15-510.31.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-15-5103100",
+   "parent": "gf-15",
+   "name": "Professional services — planning",
+   "amount": 55000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 36
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19",
+   "children_complete": true,
+   "status": "sourced",
+   "note": "What it costs to run the town’s buildings: insurance ($151,417 across liability, flood, property, auto and cyber), phones and internet, streetlights, utilities, and $110,000 of capital — mostly a state-required elevator repair ($100,000, PDF p. 38). A $5,000 transfer to long-term capital is counted separately.",
+   "id": "gf-19",
+   "parent": "gf",
+   "name": "General Services (town hall, insurance, streetlights)",
+   "amount": 574836,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-500.24.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5002400",
+   "parent": "gf-19",
+   "name": "Workers’ compensation",
+   "amount": 321,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-510.31.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5103100",
+   "parent": "gf-19",
+   "name": "Professional services",
+   "amount": 3924,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-510.31.11",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5103111",
+   "parent": "gf-19",
+   "name": "Security",
+   "amount": 583,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-510.34.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5103410",
+   "parent": "gf-19",
+   "name": "Janitorial services",
+   "amount": 19548,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-510.35.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5103500",
+   "parent": "gf-19",
+   "name": "Pre-employment",
+   "amount": 250,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-510.41.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5104100",
+   "parent": "gf-19",
+   "name": "Telephone",
+   "amount": 23160,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-510.41.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5104110",
+   "parent": "gf-19",
+   "name": "Communication services",
+   "amount": 13812,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-510.41.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5104110b",
+   "parent": "gf-19",
+   "name": "Computer and network services",
+   "amount": 69527,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-510.43.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5104300",
+   "parent": "gf-19",
+   "name": "Street lights",
+   "amount": 60000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-510.43.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5104310",
+   "parent": "gf-19",
+   "name": "Electricity",
+   "amount": 30000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-510.43.20",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5104320",
+   "parent": "gf-19",
+   "name": "Water and sewer",
+   "amount": 6000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-510.43.50",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5104350",
+   "parent": "gf-19",
+   "name": "Waste service tax",
+   "amount": 3804,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-510.45.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5104500",
+   "parent": "gf-19",
+   "name": "General liability insurance",
+   "amount": 66480,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-510.45.01",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5104501",
+   "parent": "gf-19",
+   "name": "Flood insurance",
+   "amount": 8308,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-510.45.02",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5104502",
+   "parent": "gf-19",
+   "name": "Property insurance",
+   "amount": 67213,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-510.45.03",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5104503",
+   "parent": "gf-19",
+   "name": "Auto insurance",
+   "amount": 8223,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-510.45.04",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5104504",
+   "parent": "gf-19",
+   "name": "Cyber liability insurance",
+   "amount": 1193,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-510.46.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5104610",
+   "parent": "gf-19",
+   "name": "Office equipment maintenance",
+   "amount": 5560,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-510.46.15",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5104615",
+   "parent": "gf-19",
+   "name": "Equipment maintenance",
+   "amount": 12000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-510.46.30",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5104630",
+   "parent": "gf-19",
+   "name": "Healthy-environment building work",
+   "amount": 10000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-510.46.36",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5104636",
+   "parent": "gf-19",
+   "name": "Pest control",
+   "amount": 4320,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-510.47.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5104700",
+   "parent": "gf-19",
+   "name": "Printing",
+   "amount": 200,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-510.49.98",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5104998",
+   "parent": "gf-19",
+   "name": "Contingency",
+   "amount": 25000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-510.51.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5105100",
+   "parent": "gf-19",
+   "name": "Office supplies",
+   "amount": 7000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-510.51.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5105110",
+   "parent": "gf-19",
+   "name": "Postage",
+   "amount": 1500,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-510.52.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5105210",
+   "parent": "gf-19",
+   "name": "Janitorial supplies",
+   "amount": 4500,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-510.54.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5105400",
+   "parent": "gf-19",
+   "name": "Dues and subscriptions",
+   "amount": 400,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-510.64.01",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5106401",
+   "parent": "gf-19",
+   "name": "Capital — elevator repair, A/C, computers",
+   "amount": 110000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-19-543.00.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-19-5430000",
+   "parent": "gf-19",
+   "name": "Licenses and fees",
+   "amount": 12010,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 38
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21",
+   "children_complete": true,
+   "status": "sourced",
+   "note": "The Melbourne Beach Police Department: a chief, a deputy chief, two sergeants, two corporals, six officers (one is the school resource officer, paid back by the School Board) and an assistant (PDF p. 27). The largest department — 36 cents of every General Fund dollar. The police pension costs $225,481 this year. A $4,450 transfer to long-term capital is counted separately.",
+   "id": "gf-21",
+   "parent": "gf",
+   "name": "Police",
+   "amount": 1677353,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-500.12.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5001200",
+   "parent": "gf-21",
+   "name": "Regular salaries",
+   "amount": 848307,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-500.12.50",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5001250",
+   "parent": "gf-21",
+   "name": "Holiday pay",
+   "amount": 42464,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-500.14.01",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5001401",
+   "parent": "gf-21",
+   "name": "Shift differential",
+   "amount": 11866,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-500.14.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5001400",
+   "parent": "gf-21",
+   "name": "Overtime",
+   "amount": 49000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-500.14.16",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5001416",
+   "parent": "gf-21",
+   "name": "Contingency pay",
+   "amount": 5000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-500.15.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5001500",
+   "parent": "gf-21",
+   "name": "Education incentive pay",
+   "amount": 11050,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-500.15.01",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5001501",
+   "parent": "gf-21",
+   "name": "First responder pay",
+   "amount": 7800,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-500.21.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5002100",
+   "parent": "gf-21",
+   "name": "Social Security and Medicare (FICA)",
+   "amount": 74286,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-500.22.02",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5002202",
+   "parent": "gf-21",
+   "name": "Police pension",
+   "amount": 225481,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-500.22.02",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5002202b",
+   "parent": "gf-21",
+   "name": "State pension money passed through",
+   "amount": 53000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-500.22.20",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5002220",
+   "parent": "gf-21",
+   "name": "Retirement — town plan",
+   "amount": 6504,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-500.23.01",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5002301",
+   "parent": "gf-21",
+   "name": "Health insurance",
+   "amount": 160876,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-500.23.02",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5002302",
+   "parent": "gf-21",
+   "name": "Life insurance",
+   "amount": 2766,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-500.23.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5002310",
+   "parent": "gf-21",
+   "name": "Accidental death insurance",
+   "amount": 1163,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-500.24.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5002400",
+   "parent": "gf-21",
+   "name": "Workers’ compensation",
+   "amount": 18555,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-500.25.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5002500",
+   "parent": "gf-21",
+   "name": "Unemployment",
+   "amount": 1042,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-500.12.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5001200b",
+   "parent": "gf-21",
+   "name": "Chief retirement payout",
+   "amount": 0,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-520.31.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5203100",
+   "parent": "gf-21",
+   "name": "Professional services",
+   "amount": 125,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-520.34.40",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5203440",
+   "parent": "gf-21",
+   "name": "Dispatching services",
+   "amount": 20500,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-520.35.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5203500",
+   "parent": "gf-21",
+   "name": "Pre-employment",
+   "amount": 1049,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-520.40.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5204000",
+   "parent": "gf-21",
+   "name": "Travel and meetings",
+   "amount": 3392,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-520.41.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5204110",
+   "parent": "gf-21",
+   "name": "Communication services",
+   "amount": 18440,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-520.46.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5204610",
+   "parent": "gf-21",
+   "name": "Office equipment",
+   "amount": 200,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-520.46.15",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5204615",
+   "parent": "gf-21",
+   "name": "Equipment maintenance",
+   "amount": 11260,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-520.46.16",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5204616",
+   "parent": "gf-21",
+   "name": "Radar calibration",
+   "amount": 950,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-520.46.20",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5204620",
+   "parent": "gf-21",
+   "name": "Vehicle maintenance",
+   "amount": 20560,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-520.48.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5204800",
+   "parent": "gf-21",
+   "name": "Promotional activities",
+   "amount": 1800,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-520.51.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5205110",
+   "parent": "gf-21",
+   "name": "Postage",
+   "amount": 195,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-520.52.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5205200",
+   "parent": "gf-21",
+   "name": "Uniforms",
+   "amount": 8500,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-520.52.05",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5205205",
+   "parent": "gf-21",
+   "name": "Protective gear",
+   "amount": 9574,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-520.52.50",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5205250",
+   "parent": "gf-21",
+   "name": "Gas and oil",
+   "amount": 20000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-520.52.70",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5205270",
+   "parent": "gf-21",
+   "name": "Medical",
+   "amount": 5000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-520.52.90",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5205290",
+   "parent": "gf-21",
+   "name": "Operating supplies",
+   "amount": 3000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-520.54.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5205400",
+   "parent": "gf-21",
+   "name": "Dues and subscriptions",
+   "amount": 920,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-520.54.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5205410",
+   "parent": "gf-21",
+   "name": "Training",
+   "amount": 4050,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-520.64.01",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5206401",
+   "parent": "gf-21",
+   "name": "Capital outlay",
+   "amount": 0,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-21-543.00.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-21-5430000",
+   "parent": "gf-21",
+   "name": "Licenses and fees",
+   "amount": 28678,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 41
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22",
+   "children_complete": true,
+   "status": "sourced",
+   "note": "The Melbourne Beach Volunteer Fire Department: a paid chief and three paid captains, plus about 36 volunteers who share $59,200 in stipends (PDF pp. 21, 45). Up from $401,553 two years ago, mostly because the three captain jobs are new and paid. $79,460 a year goes to Fire Engine 58, bought on a lease-purchase in FY2024 (PDF p. 80).",
+   "id": "gf-22",
+   "parent": "gf",
+   "name": "Fire",
+   "amount": 782710,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-500.12.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5001200",
+   "parent": "gf-22",
+   "name": "Regular salaries",
+   "amount": 243653,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-500.15.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5001500",
+   "parent": "gf-22",
+   "name": "Education incentive pay",
+   "amount": 7080,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-500.14.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5001400",
+   "parent": "gf-22",
+   "name": "Overtime",
+   "amount": 51236,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-500.12.50",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5001250",
+   "parent": "gf-22",
+   "name": "Holiday pay",
+   "amount": 11940,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-500.14.16",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5001416",
+   "parent": "gf-22",
+   "name": "Contingency pay",
+   "amount": 0,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-500.14.50",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5001450",
+   "parent": "gf-22",
+   "name": "Volunteer firefighter stipends (36)",
+   "amount": 59200,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-500.21.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5002100",
+   "parent": "gf-22",
+   "name": "Social Security and Medicare (FICA)",
+   "amount": 27868,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-500.21.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5002100b",
+   "parent": "gf-22",
+   "name": "Retirement — ICMA",
+   "amount": 0,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-500.22.20",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5002220",
+   "parent": "gf-22",
+   "name": "Retirement — Florida Retirement System",
+   "amount": 115138,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-500.23.01",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5002301",
+   "parent": "gf-22",
+   "name": "Health insurance",
+   "amount": 41436,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-500.23.02",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5002302",
+   "parent": "gf-22",
+   "name": "Life insurance",
+   "amount": 960,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-500.23.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5002310",
+   "parent": "gf-22",
+   "name": "Accidental death insurance",
+   "amount": 380,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-500.24.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5002400",
+   "parent": "gf-22",
+   "name": "Workers’ compensation",
+   "amount": 10844,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-500.25.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5002500",
+   "parent": "gf-22",
+   "name": "Unemployment",
+   "amount": 401,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-520.31.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5203100",
+   "parent": "gf-22",
+   "name": "Professional services",
+   "amount": 4500,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-520.34.40",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5203440",
+   "parent": "gf-22",
+   "name": "Dispatching services",
+   "amount": 5500,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-520.35.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5203500",
+   "parent": "gf-22",
+   "name": "Pre-employment",
+   "amount": 2200,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-520.36.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5203600",
+   "parent": "gf-22",
+   "name": "Annual physicals",
+   "amount": 4700,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-520.40.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5204000",
+   "parent": "gf-22",
+   "name": "Travel and meetings",
+   "amount": 2000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-520.41.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5204110",
+   "parent": "gf-22",
+   "name": "Communication services",
+   "amount": 3822,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-520.46.15",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5204615",
+   "parent": "gf-22",
+   "name": "Equipment maintenance",
+   "amount": 8000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-520.46.20",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5204620",
+   "parent": "gf-22",
+   "name": "Vehicle maintenance",
+   "amount": 20000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-520.46.30",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5204630",
+   "parent": "gf-22",
+   "name": "Building maintenance",
+   "amount": 2500,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-520.51.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5205100",
+   "parent": "gf-22",
+   "name": "Office supplies",
+   "amount": 1000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-520.52.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5205200",
+   "parent": "gf-22",
+   "name": "Uniforms",
+   "amount": 7000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-520.52.02",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5205202",
+   "parent": "gf-22",
+   "name": "Breathing air packs (SCBA)",
+   "amount": 4000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-520.52.05",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5205205",
+   "parent": "gf-22",
+   "name": "Protective gear",
+   "amount": 3200,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-520.52.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5205210",
+   "parent": "gf-22",
+   "name": "Janitorial supplies",
+   "amount": 1000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-520.52.20",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5205220",
+   "parent": "gf-22",
+   "name": "Tools and hardware",
+   "amount": 5000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-520.52.50",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5205250",
+   "parent": "gf-22",
+   "name": "Gas and oil",
+   "amount": 4000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-520.52.70",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5205270",
+   "parent": "gf-22",
+   "name": "Medical supplies",
+   "amount": 2000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-520.54.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5205400",
+   "parent": "gf-22",
+   "name": "Dues and subscriptions",
+   "amount": 745,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-520.54.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5205410",
+   "parent": "gf-22",
+   "name": "Training",
+   "amount": 5740,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-520.54.12",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5205412",
+   "parent": "gf-22",
+   "name": "Training materials",
+   "amount": 2500,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-520.64.01",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5206401",
+   "parent": "gf-22",
+   "name": "Capital — Fire Engine 58 payment and bunker gear",
+   "amount": 101960,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-22-543.00.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-22-5430000",
+   "parent": "gf-22",
+   "name": "Licenses and fees",
+   "amount": 21207,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 45
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-29",
+   "children_complete": false,
+   "status": "sourced",
+   "note": "One code officer, plus a $15,000 software line. Honest arithmetic: the lines, printed to the cent, add to $90,747.95; the book rounds to $90,748.",
+   "id": "gf-29",
+   "parent": "gf",
+   "name": "Code Enforcement",
+   "amount": 90748,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 49
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-29-500.12.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-29-5001200",
+   "parent": "gf-29",
+   "name": "Regular salary",
+   "amount": 47630.96,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 49
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-29-500.21.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-29-5002100",
+   "parent": "gf-29",
+   "name": "Social Security and Medicare (FICA)",
+   "amount": 3643.77,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 49
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-29-500.22.20",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-29-5002220",
+   "parent": "gf-29",
+   "name": "Retirement",
+   "amount": 6473.05,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 49
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-29-500.23.01",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-29-5002301",
+   "parent": "gf-29",
+   "name": "Health insurance",
+   "amount": 7964.4,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 49
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-29-500.23.02",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-29-5002302",
+   "parent": "gf-29",
+   "name": "Life insurance",
+   "amount": 22,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 49
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-29-500.23.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-29-5002310",
+   "parent": "gf-29",
+   "name": "Accidental death insurance",
+   "amount": 42,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 49
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-29-500.24.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-29-5002400",
+   "parent": "gf-29",
+   "name": "Workers’ compensation",
+   "amount": 714,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 49
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-29-500.25.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-29-5002500",
+   "parent": "gf-29",
+   "name": "Unemployment",
+   "amount": 32.77,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 49
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-29-520.40.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-29-5204000",
+   "parent": "gf-29",
+   "name": "Travel and meetings",
+   "amount": 425,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 49
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-29-520.46.12",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-29-5204612",
+   "parent": "gf-29",
+   "name": "Maintenance supplies",
+   "amount": 0,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 49
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-29-520.46.20",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-29-5204620",
+   "parent": "gf-29",
+   "name": "Vehicle maintenance",
+   "amount": 0,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 49
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-29-520.48.55",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-29-5204855",
+   "parent": "gf-29",
+   "name": "Fire inspections",
+   "amount": 5500,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 49
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-29-520.51.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-29-5205100",
+   "parent": "gf-29",
+   "name": "Office supplies",
+   "amount": 400,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 49
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-29-520.51.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-29-5205110",
+   "parent": "gf-29",
+   "name": "Postage",
+   "amount": 1000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 49
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-29-520.51.20",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-29-5205120",
+   "parent": "gf-29",
+   "name": "Recording costs",
+   "amount": 250,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 49
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-29-520.52.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-29-5205200",
+   "parent": "gf-29",
+   "name": "Uniforms",
+   "amount": 300,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 49
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-29-520.54.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-29-5205400",
+   "parent": "gf-29",
+   "name": "Dues and subscriptions",
+   "amount": 150,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 49
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-29-520.54.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-29-5205410",
+   "parent": "gf-29",
+   "name": "Training",
+   "amount": 1200,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 49
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-29-520.64.01",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-29-5206401",
+   "parent": "gf-29",
+   "name": "Capital expense",
+   "amount": 0,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 49
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-29-543.00.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-29-5430000",
+   "parent": "gf-29",
+   "name": "Licenses and fees",
+   "amount": 15000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 49
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41",
+   "children_complete": false,
+   "status": "sourced",
+   "note": "A director, a foreman, two maintenance workers and a groundskeeper who keep up streets, parks, buildings and trees. Honest arithmetic: the lines, printed to the cent, add to $455,123.93; the book rounds to $455,124.",
+   "id": "gf-41",
+   "parent": "gf",
+   "name": "Public Works",
+   "amount": 455124,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-500.12.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5001200",
+   "parent": "gf-41",
+   "name": "Regular salaries",
+   "amount": 250855.7,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-500.14.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5001400",
+   "parent": "gf-41",
+   "name": "Overtime",
+   "amount": 1500,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-500.14.16",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5001416",
+   "parent": "gf-41",
+   "name": "Contingency salary",
+   "amount": 2000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-500.21.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5002100",
+   "parent": "gf-41",
+   "name": "Social Security and Medicare (FICA)",
+   "amount": 19190.46,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-500.22.20",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5002220",
+   "parent": "gf-41",
+   "name": "Retirement",
+   "amount": 34091.29,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-500.23.01",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5002301",
+   "parent": "gf-41",
+   "name": "Health insurance",
+   "amount": 47112.48,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-500.23.02",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5002302",
+   "parent": "gf-41",
+   "name": "Life insurance",
+   "amount": 534,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-500.23.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5002310",
+   "parent": "gf-41",
+   "name": "Accidental death insurance",
+   "amount": 83,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-500.24.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5002400",
+   "parent": "gf-41",
+   "name": "Workers’ compensation",
+   "amount": 6797,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-500.25.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5002500",
+   "parent": "gf-41",
+   "name": "Unemployment",
+   "amount": 300,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-530.34.91",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5303491",
+   "parent": "gf-41",
+   "name": "Landscaping town parks",
+   "amount": 5000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-530.40.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5304000",
+   "parent": "gf-41",
+   "name": "Travel and meetings",
+   "amount": 800,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-530.43.15",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5304315",
+   "parent": "gf-41",
+   "name": "Contracted electrical work",
+   "amount": 5000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-530.43.50",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5304350",
+   "parent": "gf-41",
+   "name": "Dump service",
+   "amount": 160,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-530.46.12",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5304612",
+   "parent": "gf-41",
+   "name": "Maintenance supplies",
+   "amount": 1500,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-530.46.15",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5304615",
+   "parent": "gf-41",
+   "name": "Equipment repairs",
+   "amount": 5000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-530.46.20",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5304620",
+   "parent": "gf-41",
+   "name": "Vehicle repairs",
+   "amount": 15000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-530.46.30",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5304630",
+   "parent": "gf-41",
+   "name": "Building repairs",
+   "amount": 10000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-530.46.31",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5304631",
+   "parent": "gf-41",
+   "name": "Old Town Hall upkeep",
+   "amount": 3000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-530.46.32",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5304632",
+   "parent": "gf-41",
+   "name": "Ryckman House repairs",
+   "amount": 0,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-530.46.33",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5304633",
+   "parent": "gf-41",
+   "name": "Old Post Office repairs",
+   "amount": 0,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-530.46.35",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5304635",
+   "parent": "gf-41",
+   "name": "Pier maintenance",
+   "amount": 0,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-530.46.40",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5304640",
+   "parent": "gf-41",
+   "name": "Grounds maintenance",
+   "amount": 13500,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-530.46.43",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5304643",
+   "parent": "gf-41",
+   "name": "Trees",
+   "amount": 1200,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-530.52.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5305200",
+   "parent": "gf-41",
+   "name": "Uniforms",
+   "amount": 2000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-530.52.05",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5305205",
+   "parent": "gf-41",
+   "name": "Protective gear",
+   "amount": 1000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-530.52.20",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5305220",
+   "parent": "gf-41",
+   "name": "Tools and hardware",
+   "amount": 6000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-530.52.25",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5305225",
+   "parent": "gf-41",
+   "name": "Tool rentals",
+   "amount": 1000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-530.52.50",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5305250",
+   "parent": "gf-41",
+   "name": "Gas and oil",
+   "amount": 6300,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-530.53.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5305310",
+   "parent": "gf-41",
+   "name": "Street repair and painting",
+   "amount": 7000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-530.53.20",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5305320",
+   "parent": "gf-41",
+   "name": "Street signs",
+   "amount": 8000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-530.54.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5305410",
+   "parent": "gf-41",
+   "name": "Training",
+   "amount": 1200,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "001-41-530.64.01",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "gf-41-5306401",
+   "parent": "gf-41",
+   "name": "Capital outlay",
+   "amount": 0,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 51
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "125",
+   "children_complete": false,
+   "status": "sourced",
+   "note": "Paid for by building permits, by Florida law kept apart from other town money. The building official is a contract ($120,000, “CAP Contract”). Honest arithmetic: the lines add to $218,255 — $1 over the printed total, rounding in the town’s own book.",
+   "id": "f125",
+   "parent": null,
+   "name": "Building Department Fund (125)",
+   "amount": 218254,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 62
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "125-24-500.12.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "f125-5001200",
+   "parent": "f125",
+   "name": "Permit technician salary",
+   "amount": 50892,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 62
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "125-24-500.12.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "f125-5001200b",
+   "parent": "f125",
+   "name": "Contingency salary",
+   "amount": 1500,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 62
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "125-24-500.21.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "f125-5002100",
+   "parent": "f125",
+   "name": "Social Security and Medicare (FICA)",
+   "amount": 4008,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 62
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "125-24-500.22.20",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "f125-5002220",
+   "parent": "f125",
+   "name": "Retirement",
+   "amount": 7120,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 62
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "125-24-500.23.01",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "f125-5002301",
+   "parent": "f125",
+   "name": "Health insurance",
+   "amount": 19718,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 62
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "125-24-500.23.02",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "f125-5002302",
+   "parent": "f125",
+   "name": "Life insurance",
+   "amount": 112,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 62
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "125-24-500.23.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "f125-5002310",
+   "parent": "f125",
+   "name": "Accidental death insurance",
+   "amount": 42,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 62
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "125-24-500.24.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "f125-5002400",
+   "parent": "f125",
+   "name": "Workers’ compensation",
+   "amount": 260,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 62
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "125-24-500.25.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "f125-5002500",
+   "parent": "f125",
+   "name": "Unemployment",
+   "amount": 63,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 62
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "125-24-520.30.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "f125-5203000",
+   "parent": "f125",
+   "name": "Building official contract",
+   "amount": 120000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 62
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "125-24-520.40.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "f125-5204000",
+   "parent": "f125",
+   "name": "Travel and meetings",
+   "amount": 2500,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 62
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "125-24-520.41.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "f125-5204110",
+   "parent": "f125",
+   "name": "Communications",
+   "amount": 1910,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 62
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "125-24-520.51.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "f125-5205100",
+   "parent": "f125",
+   "name": "Office supplies",
+   "amount": 500,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 62
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "125-24-520.51.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "f125-5205110",
+   "parent": "f125",
+   "name": "Postage",
+   "amount": 100,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 62
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "125-24-520.52.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "f125-5205200",
+   "parent": "f125",
+   "name": "Uniforms",
+   "amount": 150,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 62
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "125-24-520.52.05",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "f125-5205205",
+   "parent": "f125",
+   "name": "Protective gear",
+   "amount": 150,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 62
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "125-24-520.54.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "f125-5205400",
+   "parent": "f125",
+   "name": "Code books",
+   "amount": 165,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 62
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "125-24-520.54.10",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "f125-5205410",
+   "parent": "f125",
+   "name": "Training",
+   "amount": 3565,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 62
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "125-24-543.00.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "f125-5430000",
+   "parent": "f125",
+   "name": "Permit software",
+   "amount": 5500,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 62
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "104",
+   "children_complete": false,
+   "status": "sourced",
+   "note": "A citizen board’s small fund for environmental programs.",
+   "id": "f104",
+   "parent": null,
+   "name": "Environmental Advisory Board (104)",
+   "amount": 2450,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 55
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "107",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "f107",
+   "parent": null,
+   "name": "Parks and Recreation Advisory Board (107)",
+   "amount": 10200,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 56
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "124",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "f124",
+   "parent": null,
+   "name": "Building Department Education (124)",
+   "amount": 320,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 59
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "141",
+   "children_complete": false,
+   "status": "sourced",
+   "note": "Paid for by the stormwater fee on property. Includes $72,000 of repair work (PDF p. 65). The plan sets $111,868 a year aside for emergency stormwater repairs (PDF p. 81).",
+   "id": "f141",
+   "parent": null,
+   "name": "Stormwater Utility (141)",
+   "amount": 94000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 64
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "333",
+   "children_complete": false,
+   "status": "sourced",
+   "note": "No spending is planned from this savings fund this year. It holds money set aside for future equipment and buildings ($429,901, Budget Summary).",
+   "id": "f333",
+   "parent": null,
+   "name": "Long-Term Capital Projects (333)",
+   "amount": 0,
+   "source": {
+    "doc": "mb-fy27-summary",
+    "page": null
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "201",
+   "children_complete": false,
+   "status": "sourced",
+   "note": "The yearly payment on the 2017 Florida Municipal Loan Council bonds that refinanced the municipal complex. The 2025 audit shows $405,000 left, with the last payment on October 1, 2029 (audit p. 34). The book lists $100,000 of principal and $13,550 of interest; the other $2,700 of the $116,250 is not itemized on the page. The separate stormwater loan (Fund 202) was paid off in July 2026, so it shows $0.",
+   "id": "f201",
+   "parent": null,
+   "name": "Debt Service — Town Hall Bond (201)",
+   "amount": 116250,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 72
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "201-00-510.71.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "f201-principal",
+   "parent": "f201",
+   "name": "Principal",
+   "amount": 100000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 72
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "201-00-510.72.00",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "f201-interest",
+   "parent": "f201",
+   "name": "Interest",
+   "amount": 13550,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 72
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "341",
+   "children_complete": false,
+   "status": "sourced",
+   "note": "Pipes, drains and outfalls. Last year this fund spent about $2 million of savings on projects; this year’s $77,078 comes from the General Fund. The bigger list of road and drainage projects depends on the November 3 bond vote and is not in this budget (PDF p. 81).",
+   "id": "f341",
+   "parent": null,
+   "name": "Stormwater Projects (341)",
+   "amount": 77078,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 75
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "351",
+   "children_complete": true,
+   "status": "sourced",
+   "note": "Paid from savings set aside in this fund. The yearly “pave and mill one mile” line was removed “in lieu of GO Bond” (PDF p. 80).",
+   "id": "f351",
+   "parent": null,
+   "name": "Road Paving and Repairs (351)",
+   "amount": 135000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 76
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "351-570.64.01",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "f351-mill",
+   "parent": "f351",
+   "name": "Mill and pave",
+   "amount": 80000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 76
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "351-570.64.01",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "f351-curb",
+   "parent": "f351",
+   "name": "Curb replacement",
+   "amount": 55000,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 76
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "390/391",
+   "children_complete": true,
+   "status": "sourced",
+   "note": null,
+   "id": "f390",
+   "parent": null,
+   "name": "Historic buildings — Ryckman House and Old Town Hall (390, 391)",
+   "amount": 2075,
+   "source": {
+    "doc": "mb-fy27-summary",
+    "page": null
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "390",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "f390-ryckman",
+   "parent": "f390",
+   "name": "Ryckman House (390)",
+   "amount": 250,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 77
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "appropriation",
+   "section": "appropriations",
+   "docket_ref": null,
+   "code": "391",
+   "children_complete": false,
+   "status": "sourced",
+   "note": null,
+   "id": "f390-oth",
+   "parent": "f390",
+   "name": "Old Town Hall History Center (391)",
+   "amount": 1825,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 78
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "reference",
+   "section": "adjacent",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": false,
+   "status": "partial",
+   "note": "Parking meters at Ocean Avenue Park and Ryckman Park are budgeted to bring in about $240,000 this year ($140,500 and $99,900). That money pays for lifeguards ($24,202), park upkeep, town events, playground and court repairs ($30,000) and transfers to other funds (PDF pp. 66–71). These two funds are in the budget book but not in the official one-page Budget Summary total — Docket #2.",
+   "id": "adj-parking",
+   "parent": null,
+   "name": "Beach parking funds (172, 175)",
+   "amount": null,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 66
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "reference",
+   "section": "adjacent",
+   "docket_ref": null,
+   "code": null,
+   "children_complete": false,
+   "status": "partial",
+   "note": "Small funds from donations and fees: fire donations ($18,000 planned spending), police education ($1,500), police donations ($2,150). Fund 122 held $167,510 that the town received for police work for another government (“Police Services to Other Governments”) and the book shows $154,593 spent from it (PDF pp. 25, 58).",
+   "id": "adj-donations",
+   "parent": null,
+   "name": "Police and fire donation funds (103, 121, 122, 622)",
+   "amount": null,
+   "source": {
+    "doc": "mb-fy27-budget",
+    "page": 54
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "reference",
+   "section": "adjacent",
+   "docket_ref": 3,
+   "code": null,
+   "children_complete": false,
+   "status": "partial",
+   "note": "The county is a separate government with its own budget. On a Melbourne Beach tax bill (millage code 34X0) it levies 2.8643 mills for its general fund, plus the library district (0.3242), mosquito control (0.1340), South Brevard Recreation District (0.3000) and environmentally endangered lands (0.0733). The Brevard County Sheriff runs the county jail. The county budget is not ingested yet — Docket #3.",
+   "id": "adj-county",
+   "parent": null,
+   "name": "Brevard County",
+   "amount": null,
+   "source": {
+    "doc": "bcpao-millage-2025",
+    "page": 1
+   }
+  },
+  {
+   "year": 2026,
+   "layer": "reference",
+   "section": "adjacent",
+   "docket_ref": 3,
+   "code": null,
+   "children_complete": false,
+   "status": "partial",
+   "note": "The largest piece of most tax bills: 6.3100 mills in 2025 — 3.0620 set by state law, 0.7480 by the local board, 1.5000 for buildings, and 1.0000 that voters approved for teacher pay. Not ingested yet.",
+   "id": "adj-schools",
+   "parent": null,
+   "name": "Brevard Public Schools",
+   "amount": null,
+   "source": {
+    "doc": "bcpao-millage-2025",
+    "page": 1
+   }
+  }
+ ]
+}

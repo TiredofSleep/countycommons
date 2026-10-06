@@ -113,7 +113,7 @@ ${r.layers.map(({ L }) => {
       else if (x.size && x.size.above) lines.push(`A cut this size is smaller than the smallest listed budget line, ${esc(x.size.above.name)} (${m(x.size.above.amount)}).`);
       if (x.reserveYears) lines.push(`Paid from savings instead of cuts, it would use up ${esc(L.reserve.label)} (${m(L.reserve.amount)}) in about <b>${x.reserveYears.toFixed(1)} years</b>.`);
     }
-    const flags = x.flags.map(f => `<p style="margin:6px 0 0"><span class="chip ${f.kind === 'limit' ? 'c-dead' : 'c-part'}">${f.kind === 'limit' ? 'the law doesn’t allow this' : 'needs a vote of the people'}</span> ${esc(f.text)} ${cite(f.source)}</p>`).join('');
+    const flags = x.flags.map(f => `<p style="margin:6px 0 0"><span class="chip ${f.kind === 'limit' ? 'c-dead' : 'c-part'}">${f.kind === 'limit' ? 'the law doesn’t allow this' : f.kind === 'notice' ? 'counts as a tax increase' : 'needs a vote of the people'}</span> ${esc(f.text)} ${cite(f.source)}</p>`).join('');
     return `
 <div style="border-bottom:1px solid var(--rule-soft);padding:10px 0">
   <b>${esc(L.name)}</b>: ${fmtRate(L, L.base)} → <b>${fmtRate(L, x.next)}</b>
