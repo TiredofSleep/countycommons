@@ -27,6 +27,11 @@ function renderNode(node, ctx, depth) {
   if (kids.length === 0) {
     return `<div class="leaf">${row}</div>${note}`;
   }
+  // A very deep branch (e.g. every school) opens on its own line page instead
+  // of inline, so the money trail stays light on old phones.
+  if (node.drill) {
+    return `<div class="leaf">${row}</div>${note}<div class="note"><a href="/line/${esc(node.id)}">Open all ${kids.length} lines →</a></div>`;
+  }
   for (const k of kids) k.parentAmount = node.amount;
   const open = node.id === 'general-fund' ? ' open' : '';
   return `<details class="node"${open}><summary>${row}</summary>${note}${kids.map(k => renderNode(k, ctx, depth + 1)).join('')}</details>`;

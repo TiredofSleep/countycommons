@@ -1,10 +1,10 @@
 {
-  "run_at": "2026-10-06T06:23:25.685Z",
+  "run_at": "2026-10-06T06:37:51.856Z",
   "corpus_year": 2026,
   "grand_total": 2425831993,
   "summary": {
-    "total_checks": 26,
-    "passed": 26,
+    "total_checks": 141,
+    "passed": 141,
     "failed": 0
   },
   "checks": [
@@ -178,6 +178,1041 @@
       "expected": 220439187,
       "computed": 220439187,
       "detail": "16 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps",
+      "name": "Brevard Public Schools — all funds",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 1567771257,
+      "computed": 1567771257,
+      "detail": "5 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-gf",
+      "name": "General Fund — running the schools",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 821250715,
+      "computed": 821250715,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-gf-spend",
+      "name": "Spending, by what it’s for",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 775481666,
+      "computed": 775481666,
+      "detail": "18 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-gf-balance",
+      "name": "Left at year’s end (June 30, 2027)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 43173964,
+      "computed": 43173964,
+      "detail": "4 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-debt",
+      "name": "Debt Service — paying for past buildings",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 36116361,
+      "computed": 36116361,
+      "detail": "4 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-cap",
+      "name": "Capital Projects — building and fixing schools",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 433477839,
+      "computed": 433477839,
+      "detail": "5 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-cap-build",
+      "name": "Construction and renovation",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 176331610,
+      "computed": 176331610,
+      "detail": "8 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-cap-transfers",
+      "name": "Moved to other funds",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 94197261,
+      "computed": 94197261,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sr",
+      "name": "Special Revenue — school meals, federal grants, school clubs",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 152106977,
+      "computed": 152106977,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sr-food",
+      "name": "School meals",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 67042910,
+      "computed": 67042910,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sr-federal",
+      "name": "Federal grants",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 57309471,
+      "computed": 57309471,
+      "detail": "11 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sr-internal",
+      "name": "School internal funds (clubs, activities, fundraising)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 27754596,
+      "computed": 27754596,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-isf",
+      "name": "Internal Service — the district’s own insurance",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 124819365,
+      "computed": 124819365,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-rev",
+      "name": "Brevard Public Schools — where the General Fund’s money comes from",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 821250715,
+      "computed": 821250715,
+      "detail": "6 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-rev-local",
+      "name": "Local — mostly property taxes",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 405383211,
+      "computed": 405383211,
+      "detail": "9 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-rev-state",
+      "name": "State",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 329416796,
+      "computed": 329416796,
+      "detail": "9 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-rev-federal",
+      "name": "Federal",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4155000,
+      "computed": 4155000,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-fefp",
+      "name": "The state school formula (FEFP) for Brevard — who gets it",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 751564942,
+      "computed": 751564942,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-schools",
+      "name": "Brevard Public Schools — school by school (FY2026, latest posted)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 474635030,
+      "computed": 474635030,
+      "detail": "91 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-1171",
+      "name": "Viera High (1171)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 12121660,
+      "computed": 12121660,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-2211",
+      "name": "Bayside High School (2211)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 12084465,
+      "computed": 12084465,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-2011",
+      "name": "Melbourne High School (2011)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 12006060,
+      "computed": 12006060,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-2311",
+      "name": "Heritage High School (2311)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 11318306,
+      "computed": 11318306,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-1121",
+      "name": "Cocoa High School (1121)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 10538698,
+      "computed": 10538698,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-2021",
+      "name": "Palm Bay Magnet High School (2021)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 10466410,
+      "computed": 10466410,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-0302",
+      "name": "Space Coast Junior/Senior High (0302)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 9741787,
+      "computed": 9741787,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-1011",
+      "name": "Rockledge High School (1011)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 9640401,
+      "computed": 9640401,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-3011",
+      "name": "Eau Gallie High School (3011)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 9330753,
+      "computed": 9330753,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-0011",
+      "name": "Titusville High School (0011)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 8509142,
+      "computed": 8509142,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-6011",
+      "name": "Satellite High School (6011)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 8432393,
+      "computed": 8432393,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-4011",
+      "name": "Merritt Island High School (4011)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 8392876,
+      "computed": 8392876,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-2212",
+      "name": "Westside Elementary School (2212)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 7579123,
+      "computed": 7579123,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-3021",
+      "name": "Central Middle School (3021)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 7194437,
+      "computed": 7194437,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-0161",
+      "name": "Astronaut High School (0161)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 7191218,
+      "computed": 7191218,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-2122",
+      "name": "Southwest Middle School (2122)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 6929179,
+      "computed": 6929179,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-5011",
+      "name": "Cocoa Beach Junior/Senior High (5011)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 6724883,
+      "computed": 6724883,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-2191",
+      "name": "Jupiter Elementary School (2191)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 6648735,
+      "computed": 6648735,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-2221",
+      "name": "Sunrise Elementary (2221)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 6641355,
+      "computed": 6641355,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-3141",
+      "name": "West Shore Junior/Senior High (3141)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 6363072,
+      "computed": 6363072,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-4021",
+      "name": "Edgewood Junior/Senior High (4021)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 6262423,
+      "computed": 6262423,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-3161",
+      "name": "Viera Elementary (3161)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 6112548,
+      "computed": 6112548,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-1161",
+      "name": "Manatee Elementary (1161)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 6086946,
+      "computed": 6086946,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-1051",
+      "name": "Endeavour Elementary School (1051)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 5962766,
+      "computed": 5962766,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-0201",
+      "name": "Atlantis Elementary School (0201)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 5831336,
+      "computed": 5831336,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-2151",
+      "name": "Discovery Elementary School (2151)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 5642540,
+      "computed": 5642540,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-2031",
+      "name": "Meadowlane Intermediate Elem (2031)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 5632415,
+      "computed": 5632415,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-2171",
+      "name": "Riviera Elementary School (2171)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 5530645,
+      "computed": 5530645,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-2041",
+      "name": "Meadowlane Primary Elem (2041)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 5530069,
+      "computed": 5530069,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-3171",
+      "name": "Viera Middle School (3171)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 5457593,
+      "computed": 5457593,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-2161",
+      "name": "Christa McAuliffe Elementary (2161)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 5451207,
+      "computed": 5451207,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-2121",
+      "name": "John F. Turner Elementary (2121)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 5309844,
+      "computed": 5309844,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-3151",
+      "name": "Quest Elementary (3151)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 5237822,
+      "computed": 5237822,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-7004",
+      "name": "Brevard Virtual School (7004)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 5140568,
+      "computed": 5140568,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-2111",
+      "name": "Lockmar Elementary School (2111)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 5073592,
+      "computed": 5073592,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-0151",
+      "name": "Imperial Estates Elementary (0151)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4999421,
+      "computed": 4999421,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-2131",
+      "name": "Columbia Elementary School (2131)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4971131,
+      "computed": 4971131,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-2061",
+      "name": "Port Malabar Elementary (2061)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4954096,
+      "computed": 4954096,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-6141",
+      "name": "Dr. W.J. Creel Elementary (6141)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4831038,
+      "computed": 4831038,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-6081",
+      "name": "Indialantic Elementary School (6081)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4825691,
+      "computed": 4825691,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-0061",
+      "name": "Apollo Elementary School (0061)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4721798,
+      "computed": 4721798,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-0051",
+      "name": "Oak Park Elementary School (0051)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4721454,
+      "computed": 4721454,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-2081",
+      "name": "Palm Bay Elementary School (2081)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4698677,
+      "computed": 4698677,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-1131",
+      "name": "Saturn Elementary School (1131)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4651481,
+      "computed": 4651481,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-3031",
+      "name": "L.B. Johnson Middle School (3031)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4618321,
+      "computed": 4618321,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-3101",
+      "name": "Roy Allen Elementary School (3101)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4611120,
+      "computed": 4611120,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-3131",
+      "name": "Longleaf Elementary School (3131)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4572277,
+      "computed": 4572277,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-4041",
+      "name": "Tropical Elementary School (4041)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4434339,
+      "computed": 4434339,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-4121",
+      "name": "Lewis Carroll Elementary (4121)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4410139,
+      "computed": 4410139,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-0301",
+      "name": "Enterprise Elementary School (0301)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4388930,
+      "computed": 4388930,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-2071",
+      "name": "Stone Magnet Middle School (2071)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4310622,
+      "computed": 4310622,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-3121",
+      "name": "Suntree Elementary School (3121)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4278264,
+      "computed": 4278264,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-1151",
+      "name": "Ralph M. Williams, Jr Elem. (1151)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4261677,
+      "computed": 4261677,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-2051",
+      "name": "University Park Elementary (2051)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4256809,
+      "computed": 4256809,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-1041",
+      "name": "Cambridge Elementary School (1041)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4180587,
+      "computed": 4180587,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-1091",
+      "name": "Fairglen Elementary School (1091)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4145688,
+      "computed": 4145688,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-4031",
+      "name": "Mila Elementary School (4031)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4142613,
+      "computed": 4142613,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-1141",
+      "name": "Hans Christian Andersen Elem (1141)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4122800,
+      "computed": 4122800,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-1071",
+      "name": "Golfview Elem Magnet School (1071)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4082051,
+      "computed": 4082051,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-2042",
+      "name": "West Melbourne Sch for Science (2042)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4071548,
+      "computed": 4071548,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-4051",
+      "name": "Audubon Elementary School (4051)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4060711,
+      "computed": 4060711,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-3071",
+      "name": "Sabal Elementary School (3071)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 3999366,
+      "computed": 3999366,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-6071",
+      "name": "Ocean Breeze Elementary School (6071)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 3973552,
+      "computed": 3973552,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-3091",
+      "name": "Croton Elementary School (3091)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 3935384,
+      "computed": 3935384,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-0122",
+      "name": "South Lake Elementary (0122)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 3891026,
+      "computed": 3891026,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-6082",
+      "name": "Herbert C. Hoover Middle Schl (6082)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 3887591,
+      "computed": 3887591,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-0181",
+      "name": "Pinewood Elementary School (0181)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 3873966,
+      "computed": 3873966,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-6012",
+      "name": "DeLaura Middle School (6012)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 3818212,
+      "computed": 3818212,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-3041",
+      "name": "Sherwood Elementary School (3041)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 3818170,
+      "computed": 3818170,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-4111",
+      "name": "Thomas Jefferson Middle School (4111)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 3796751,
+      "computed": 3796751,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-0052",
+      "name": "James Madison Middle School (0052)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 3774988,
+      "computed": 3774988,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-0101",
+      "name": "Mims Elementary School (0101)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 3728701,
+      "computed": 3728701,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-0191",
+      "name": "Challenger 7 Elementary (0191)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 3701834,
+      "computed": 3701834,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-4071",
+      "name": "Robert L Stevenson Sch of Arts (4071)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 3658574,
+      "computed": 3658574,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-0141",
+      "name": "Andrew Jackson Middle School (0141)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 3615268,
+      "computed": 3615268,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-1101",
+      "name": "John F. Kennedy Middle School (1101)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 3591996,
+      "computed": 3591996,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-0091",
+      "name": "Coquina Elementary School (0091)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 3559989,
+      "computed": 3559989,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-3061",
+      "name": "Harbor City Elementary School (3061)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 3420751,
+      "computed": 3420751,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-0089",
+      "name": "Gardendale Separate Day School (0089)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 3376167,
+      "computed": 3376167,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-6101",
+      "name": "Gemini Elementary School (6101)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 3352442,
+      "computed": 3352442,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-5021",
+      "name": "Freedom 7 -International Study (5021)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 3227702,
+      "computed": 3227702,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-6061",
+      "name": "Surfside Elementary School (6061)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 3198164,
+      "computed": 3198164,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-6051",
+      "name": "Sea Park Elementary (6051)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 3130029,
+      "computed": 3130029,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-6013",
+      "name": "Spessard L. Holland Elementary (6013)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 3070170,
+      "computed": 3070170,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-5031",
+      "name": "Cape View Elementary School (5031)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 3009024,
+      "computed": 3009024,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-1081",
+      "name": "Ronald McNair Magnet Middle (1081)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 2786879,
+      "computed": 2786879,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-5012",
+      "name": "Theodore Roosevelt Elementary (5012)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 2779860,
+      "computed": 2779860,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-1021",
+      "name": "PreK ESE Services (1021)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 1675256,
+      "computed": 1675256,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-1028",
+      "name": "Devereux Florida Treatment (1028)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 1622359,
+      "computed": 1622359,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-1025",
+      "name": "Brevard Juvenile Detention Cnt (1025)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 688045,
+      "computed": 688045,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-sch-1073",
+      "name": "Project Search (1073)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 232264,
+      "computed": 232264,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-surtax",
+      "name": "The half-cent school sales tax — projects by school (FY2026, latest posted)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 215461163,
+      "computed": 215461163,
+      "detail": "5 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-surtax-facility-renewal",
+      "name": "Facility Renewal",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 43520416,
+      "computed": 43520416,
+      "detail": "95 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-surtax-district-security",
+      "name": "District Security",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 7967790,
+      "computed": 7967790,
+      "detail": "99 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-surtax-educational-technology",
+      "name": "Educational Technology",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 8600406,
+      "computed": 8600406,
+      "detail": "30 children sum to the parent total exactly."
+    },
+    {
+      "node": "bps-debt-owed",
+      "name": "Brevard Public Schools — debt owed (June 30, 2025)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 249360000,
+      "computed": 249360000,
+      "detail": "6 children sum to the parent total exactly."
     },
     {
       "node": "__grand_total__",
