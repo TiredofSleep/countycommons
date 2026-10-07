@@ -1,743 +1,3773 @@
 {
-  "meta": {
-    "document": "Hot Spring County FY2025 Appropriation",
-    "title": "Hot Spring County — the money trail",
-    "grand_total": 17543508.72,
-    "year": 2025,
-    "note": "Arkansas counties appropriate fund by fund, and the ordinance prints no single all-funds total (the General Fund total also includes transfers that fund other listed funds, so a naive sum would double-count). This tree avoids that: the General Fund is shown at its department subtotal, and each dedicated fund — Road, the Hospital Sales Tax, Solid Waste, 9-1-1, the Library and the rest — stands beside it, so every dollar is counted once. The total shown is the honest sum of the appropriations, from the county’s FY2025 appropriation on the Arkansas transparency portal. The adopted FY2026 ordinance (a 4% raise, sheriff vehicles) is not yet posted — it is docket item #1."
+ "meta": {
+  "document": "Hot Spring County 2026 adopted budget",
+  "title": "Hot Spring County — the money trail",
+  "year": 2026,
+  "grand_total": 20542273.12,
+  "note": "This is Hot Spring County's 2026 annual budget as filed with the state, adopted by the quorum court's appropriated transfer ordinance (Bill #25-26). Amounts are the 2026 budget column. The county moves money between its own funds: the General Fund sends $436,404.66 to four other funds and takes in $339,798.21 from four funds (the ordinance lists each transfer), so those dollars can appear in both funds."
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General Fund",
+   "code": "1000",
+   "amount": 7076204.78,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "pp. 1–41"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
   },
-  "nodes": [
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "general-fund",
-      "parent": null,
-      "name": "General Fund",
-      "code": "1000",
-      "amount": 6182202.14,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "children_complete": true,
-      "status": "sourced",
-      "note": "The county’s main operating fund — the sheriff, courts, and county offices. Shown at its department subtotal; the ~$395K it transfers out funds the Recorder’s Cost, Detention, 9-1-1, and Public Defender funds listed below, so those transfers are counted once, there."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "gf-1",
-      "parent": "general-fund",
-      "name": "Sheriff",
-      "code": "1000-0400",
-      "amount": 1397606.59,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "Patrol, investigations, and law enforcement."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "gf-2",
-      "parent": "general-fund",
-      "name": "Jail",
-      "code": "1000-0418",
-      "amount": 1075007.84,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "Running the county jail."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "gf-3",
-      "parent": "general-fund",
-      "name": "Tax Assessor",
-      "code": "1000-0105",
-      "amount": 403494.73,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "Valuing property for taxes."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "gf-4",
-      "parent": "general-fund",
-      "name": "County & Probate Clerk",
-      "code": "1000-0101",
-      "amount": 287949.28,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "Records, deeds, and probate."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "gf-5",
-      "parent": "general-fund",
-      "name": "Tax Collector",
-      "code": "1000-0104",
-      "amount": 266489.28,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "Collecting property taxes."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "gf-6",
-      "parent": "general-fund",
-      "name": "School Resource Officers",
-      "code": "1000-0428",
-      "amount": 250131.16,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "Officers in the schools."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "gf-7",
-      "parent": "general-fund",
-      "name": "County Judge",
-      "code": "1000-0100",
-      "amount": 249546.52,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "The county judge’s office and county administration."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "gf-8",
-      "parent": "general-fund",
-      "name": "Courthouse Maintenance",
-      "code": "1000-0108",
-      "amount": 233493.34,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "Upkeep of the courthouse."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "gf-9",
-      "parent": "general-fund",
-      "name": "Workers’ Compensation & other county expenses",
-      "code": "1000-0120",
-      "amount": 221000,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "County-wide insurance and shared costs."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "gf-10",
-      "parent": "general-fund",
-      "name": "County Treasurer",
-      "code": "1000-0103",
-      "amount": 199763.02,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "County banking and disbursement."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "gf-11",
-      "parent": "general-fund",
-      "name": "Reappraisal (Assessor)",
-      "code": "1000-0125",
-      "amount": 197120,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "The periodic property reappraisal."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "gf-12",
-      "parent": "general-fund",
-      "name": "Juvenile Court",
-      "code": "1000-0414",
-      "amount": 146746.68,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "Juvenile justice."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "gf-13",
-      "parent": "general-fund",
-      "name": "Quorum Court",
-      "code": "1000-0107",
-      "amount": 143858.45,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "The governing body’s own office."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "gf-14",
-      "parent": "general-fund",
-      "name": "Election",
-      "code": "1000-0109",
-      "amount": 143024.85,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "Running elections."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "gf-15",
-      "parent": "general-fund",
-      "name": "Circuit Court",
-      "code": "1000-0401",
-      "amount": 128441.43,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "The felony and civil trial courts."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "gf-16",
-      "parent": "general-fund",
-      "name": "Prosecutor & Deputy Prosecuting Attorney",
-      "code": "1000-0416",
-      "amount": 126913.14,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "Criminal prosecution."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "gf-17",
-      "parent": "general-fund",
-      "name": "District Court",
-      "code": "1000-0409",
-      "amount": 123361.32,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "Misdemeanor and small-claims court."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "gf-18",
-      "parent": "general-fund",
-      "name": "Victim Witness",
-      "code": "1000-0426",
-      "amount": 114345.52,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "Support for crime victims."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "gf-19",
-      "parent": "general-fund",
-      "name": "Office of Emergency Services",
-      "code": "1000-0500",
-      "amount": 94683.71,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "Disaster preparedness and response."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "gf-20",
-      "parent": "general-fund",
-      "name": "Courthouse Annex",
-      "code": "1000-0118",
-      "amount": 82011.48,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "The annex building."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "gf-21",
-      "parent": "general-fund",
-      "name": "County Extension Service",
-      "code": "1000-0801",
-      "amount": 78800,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "Agriculture and 4-H extension."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "gf-22",
-      "parent": "general-fund",
-      "name": "DeGray – Sheriff Dept.",
-      "code": "1000-0427",
-      "amount": 62532.79,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "Sheriff coverage at DeGray Lake."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "gf-23",
-      "parent": "general-fund",
-      "name": "Coroner",
-      "code": "1000-0419",
-      "amount": 38488.22,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "The county coroner."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "gf-24",
-      "parent": "general-fund",
-      "name": "Health Department",
-      "code": "1000-0300",
-      "amount": 34760,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "County health services."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "gf-25",
-      "parent": "general-fund",
-      "name": "Board of Equalization",
-      "code": "1000-0106",
-      "amount": 4925,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "Property-value appeals."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "gf-other",
-      "parent": "general-fund",
-      "name": "Other General Fund offices",
-      "code": "1000",
-      "amount": 77707.79,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "partial",
-      "note": "The smaller General Fund lines together — Veterans Service Officer, State Police, county coroner extras, and appropriations to outside bodies (extension 4-H, the fair association, the historical society and museum, soil conservation). The General Fund subtotal minus the departments above."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "fund-1",
-      "parent": null,
-      "name": "County Road Fund",
-      "code": "2000-0200",
-      "amount": 3678263.45,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "Building and maintaining county roads."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "fund-2",
-      "parent": null,
-      "name": "Hospital Sales Tax Fund",
-      "code": "3402-0302",
-      "amount": 2073001,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "A sales tax dedicated to the county hospital."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "fund-3",
-      "parent": null,
-      "name": "Solid Waste Tax Fund",
-      "code": "3009-0702",
-      "amount": 1763930.9,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "Trash and recycling."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "fund-4",
-      "parent": null,
-      "name": "9-1-1 Emergency Fund",
-      "code": "3020-0501",
-      "amount": 919397.24,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "Emergency dispatch."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "fund-5",
-      "parent": null,
-      "name": "County Library Fund",
-      "code": "3008-0600",
-      "amount": 761644.29,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "The county library system."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "fund-6",
-      "parent": null,
-      "name": "Jones Mill Industrial Park Fund",
-      "code": "3404-0130",
-      "amount": 604331.74,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "The county industrial park."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "fund-7",
-      "parent": null,
-      "name": "Additional Motor Fuel Tax Fund",
-      "code": "2003-0200",
-      "amount": 389282.69,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "Act 416 of 2019 road money."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "fund-8",
-      "parent": null,
-      "name": "Recorder’s Cost Fund",
-      "code": "3006-0102",
-      "amount": 369876.31,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "Fees supporting the recorder."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "fund-9",
-      "parent": null,
-      "name": "County Detention Facility Fund",
-      "code": "3018-0400",
-      "amount": 176000,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "Detention facility support."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "fund-10",
-      "parent": null,
-      "name": "County Road Bridge Project Fund",
-      "code": "2803-0200",
-      "amount": 135969.48,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "Bridge projects."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "fund-11",
-      "parent": null,
-      "name": "Solid Waste 5% Reserve Fund",
-      "code": "3405-0702",
-      "amount": 129558,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "Reserve for solid waste."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "fund-12",
-      "parent": null,
-      "name": "Collector’s Automation Fund",
-      "code": "3001-0104",
-      "amount": 100500,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "Collector office technology."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "fund-13",
-      "parent": null,
-      "name": "Treasurer’s Automation Fund",
-      "code": "3000-0103",
-      "amount": 76000,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "Treasurer office technology."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "fund-14",
-      "parent": null,
-      "name": "Public Defender Fund",
-      "code": "3024-0417",
-      "amount": 62750,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "Indigent legal defense."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "fund-15",
-      "parent": null,
-      "name": "Circuit Court Automation Fund",
-      "code": "3002-0401",
-      "amount": 30462.37,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "sourced",
-      "note": "Court technology."
-    },
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "id": "fund-other",
-      "parent": null,
-      "name": "Other appropriated funds",
-      "code": null,
-      "amount": 90339.11,
-      "source": {
-        "doc": "hsc-approp-2025",
-        "page": null
-      },
-      "status": "partial",
-      "note": "The remaining smaller dedicated funds together — Assessor’s Amendment 79, County Clerk’s Cost, Adult Drug Court, Circuit Clerk Commissioner’s Fee, Drug Control, Breathalyzer, Boating Safety, and Coronavirus Relief."
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-0100",
+   "amount": 264309.26,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-ps",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 235369.26,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-su",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3840,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-os",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 25100,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County and Probate Clerk",
+   "code": "1000-0101",
+   "amount": 307090.88,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-ps",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 261030.88,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-su",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10260,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-os",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 35800,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Treasurer",
+   "code": "1000-0103",
+   "amount": 217549.05,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-ps",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 209349.05,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-su",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-os",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5200,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Tax Collector",
+   "code": "1000-0104",
+   "amount": 285030.87,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-ps",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 261030.87,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-su",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-os",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 19000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Tax Assessor",
+   "code": "1000-0105",
+   "amount": 430494.46,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-ps",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 390394.46,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-su",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7200,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-os",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 32900,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Board of Equalization",
+   "code": "1000-0106",
+   "amount": 8675,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-ps",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 8250,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-su",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 25,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-os",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 400,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 143858.45,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-ps",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 93978.45,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-os",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 49880,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse Maintenance",
+   "code": "1000-0108",
+   "amount": 215594.04,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-ps",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 51424.04,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-su",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 70600,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-os",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 93570,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Election",
+   "code": "1000-0109",
+   "amount": 240679,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-ps",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 140224,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-su",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 22255,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-os",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 78200,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0118",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse Annex",
+   "code": "1000-0118",
+   "amount": 70847.35,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0118-ps",
+   "parent": "f1000-d0118",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 22277.35,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0118-su",
+   "parent": "f1000-d0118",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 21500,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0118-os",
+   "parent": "f1000-d0118",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 27070,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0120",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Workers' Compensation - Other County Expenses",
+   "code": "1000-0120",
+   "amount": 221000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0120-ps",
+   "parent": "f1000-d0120",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 70000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0120-os",
+   "parent": "f1000-d0120",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 151000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0125",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Reappraisal - Assessor",
+   "code": "1000-0125",
+   "amount": 197120,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0125-os",
+   "parent": "f1000-d0125",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 197120,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Health Department",
+   "code": "1000-0300",
+   "amount": 38698,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-su",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 18128,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-os",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 20570,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff",
+   "code": "1000-0400",
+   "amount": 1499656.89,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "pp. 16–17"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-ps",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1095856.89,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-su",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 226000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-os",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 77800,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-co",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 100000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court",
+   "code": "1000-0401",
+   "amount": 133128.28,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-ps",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 66370.78,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-su",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 23800,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-os",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 42957.5,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit and Chancery Court",
+   "code": "1000-0406",
+   "amount": 20340,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406-ps",
+   "parent": "f1000-d0406",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406-su",
+   "parent": "f1000-d0406",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7540,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406-os",
+   "parent": "f1000-d0406",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2800,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court",
+   "code": "1000-0409",
+   "amount": 106518.92,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The 2026 category totals print as $0.00; the whole amount is one line item (1000-0409-3500)."
+  },
+  {
+   "id": "f1000-d0414",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Court",
+   "code": "1000-0414",
+   "amount": 157362.75,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-ps",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 127362.75,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-su",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4100,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-os",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 25900,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecutor and Deputy Prosecuting Attorney",
+   "code": "1000-0416",
+   "amount": 135317.09,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-ps",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 123317.09,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-os",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 12000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Jail",
+   "code": "1000-0418",
+   "amount": 1133631.96,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-ps",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 785781.96,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-su",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 198000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-os",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 149850,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Coroner",
+   "code": "1000-0419",
+   "amount": 46115.52,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-ps",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 25765.52,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-su",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 11200,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-os",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 9150,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "State Police",
+   "code": "1000-0422",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422-su",
+   "parent": "f1000-d0422",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422-os",
+   "parent": "f1000-d0422",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4500,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0426",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Victim Witness",
+   "code": "1000-0426",
+   "amount": 123041.73,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0426-ps",
+   "parent": "f1000-d0426",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 123041.73,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0427",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "DeGray - Sheriff Dept.",
+   "code": "1000-0427",
+   "amount": 67219.96,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0427-ps",
+   "parent": "f1000-d0427",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 67219.96,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0428",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "School Resource Officers",
+   "code": "1000-0428",
+   "amount": 336099.78,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0428-ps",
+   "parent": "f1000-d0428",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 336099.78,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Office of Emergency Services",
+   "code": "1000-0500",
+   "amount": 103000.08,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-ps",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 66480.08,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-su",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 12050,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-os",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 22470,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-co",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veteran's Service Officer",
+   "code": "1000-0800",
+   "amount": 18303.71,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-ps",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 13153.71,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-su",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2350,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-os",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2800,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Extension Service",
+   "code": "1000-0801",
+   "amount": 80500,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-ps",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 65000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-su",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1750,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-os",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 13750,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0804",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Association of Arkansas Counties",
+   "code": "1000-0804",
+   "amount": 2800,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0804-os",
+   "parent": "f1000-d0804",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2800,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0805",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "CADC",
+   "code": "1000-0805",
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0805-os",
+   "parent": "f1000-d0805",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0806",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "4-H Club",
+   "code": "1000-0806",
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0806-os",
+   "parent": "f1000-d0806",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0807",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Hot Spring County Fair Association",
+   "code": "1000-0807",
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0807-os",
+   "parent": "f1000-d0807",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0808",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Hot Spring County R.O.S.E.",
+   "code": "1000-0808",
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0808-os",
+   "parent": "f1000-d0808",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0809",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Soil Conservation District",
+   "code": "1000-0809",
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0809-os",
+   "parent": "f1000-d0809",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0810",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "West Central AR Planning and Development District",
+   "code": "1000-0810",
+   "amount": 7317.09,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0810-os",
+   "parent": "f1000-d0810",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7317.09,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0812",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Hot Spring County Historical Society",
+   "code": "1000-0812",
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0812-os",
+   "parent": "f1000-d0812",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0813",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Hot Spring County Museum",
+   "code": "1000-0813",
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0813-os",
+   "parent": "f1000-d0813",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-t3006",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Transfer out to Recorder's Cost Fund",
+   "code": null,
+   "amount": 133074.88,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-t3018",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Transfer out to County Detention Facility Fund",
+   "code": null,
+   "amount": 86442.84,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-t3020",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "911 Emergency Fund (HSC payment)",
+   "code": null,
+   "amount": 163335.99,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-t3024",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Transfer out to Public Defender Fund",
+   "code": null,
+   "amount": 53550.95,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "General Reserve Fund",
+   "code": "1001",
+   "amount": 200000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1001-os",
+   "parent": "f1001",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 200000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1005",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Coronavirus Relief Fund",
+   "code": "1005",
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1005-os",
+   "parent": "f1005",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Road Fund",
+   "code": "2000",
+   "amount": 4084985.03,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "pp. 44–45"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed subtotal (the amount appropriated). The page also prints a grand total of $4,016,640.51, which takes out the $68,344.52 transfer to the General Fund that is already inside the categories."
+  },
+  {
+   "id": "f2000-ps",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1610552.51,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-su",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1731900,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-os",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 428444.52,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-co",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 314088,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Additional Motor Fuel Tax Fund (Act 416 of 2019)",
+   "code": "2003",
+   "amount": 315224.75,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003-os",
+   "parent": "f2003",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 315224.75,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2803",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Road Bridge Project Fund",
+   "code": "2803",
+   "amount": 37129.61,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2803-os",
+   "parent": "f2803",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 37129.61,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Automation Fund",
+   "code": "3000",
+   "amount": 44500,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 49"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-su",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 15500,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 49"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-os",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 29000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 49"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Automation Fund",
+   "code": "3001",
+   "amount": 100500,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-su",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 15500,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-os",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 85000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Automation Fund",
+   "code": "3002",
+   "amount": 37559.26,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-os",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 37559.26,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Amendment No. 79 Fund",
+   "code": "3004",
+   "amount": 19800,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-os",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 19800,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk's Cost Fund",
+   "code": "3005",
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-su",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-os",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 9000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Recorder's Cost Fund",
+   "code": "3006",
+   "amount": 392037.67,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-ps",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 312712.67,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-su",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 8500,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-os",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 69825,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-co",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Library Fund",
+   "code": "3008",
+   "amount": 943411.82,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "pp. 55–56"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-ps",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 495361.82,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-su",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-os",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 135250,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-co",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 282800,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Solid Waste Tax Fund",
+   "code": "3009",
+   "amount": 1930800,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed subtotal (the amount appropriated). The page also prints a \"grand total\" of $1,895,346.31, which is projected money left after transfers and payouts, not spending."
+  },
+  {
+   "id": "f3009-os",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1930800,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Child Support Cost Fund",
+   "code": "3012",
+   "amount": 2400,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-su",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2400,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Control Fund",
+   "code": "3015",
+   "amount": 4764.12,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015-os",
+   "parent": "f3015",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4764.12,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3016",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Breathalyzer Fund",
+   "code": "3016",
+   "amount": 4870.03,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3016-os",
+   "parent": "f3016",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4870.03,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3018",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Detention Facility Fund",
+   "code": "3018",
+   "amount": 176000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3018-su",
+   "parent": "f3018",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3018-os",
+   "parent": "f3018",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 170000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Boating Safety Fund (OES)",
+   "code": "3019",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-os",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "911 Emergency Fund",
+   "code": "3020",
+   "amount": 1084111.11,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "pp. 63–64"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-ps",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 797811.11,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 63"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-su",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 177200,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 63"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-os",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 109100,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 64"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3022",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emergency Vehicle Fund",
+   "code": "3022",
+   "amount": 17223.6,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 65"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3022-os",
+   "parent": "f3022",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 17223.6,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 65"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Public Defender Fund",
+   "code": "3024",
+   "amount": 63800,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024-ps",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 24000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024-su",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 17000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024-os",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 22800,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3025",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Victim Witness Fund",
+   "code": "3025",
+   "amount": 17000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3025-os",
+   "parent": "f3025",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 17000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Adult Drug Court Fund",
+   "code": "3028",
+   "amount": 15594.72,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 68"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028-os",
+   "parent": "f3028",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 15594.72,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 68"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Juvenile Division Fund",
+   "code": "3031",
+   "amount": 20249.54,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 69"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-os",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 20249.54,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 69"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3032",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Court Representation Fund",
+   "code": "3032",
+   "amount": 22958.03,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 70"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3032-os",
+   "parent": "f3032",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 22958.03,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 70"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk Commissioner's Fee Fund",
+   "code": "3039",
+   "amount": 30755.96,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 71"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039-os",
+   "parent": "f3039",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 30755.96,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 71"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Late Assessment Fee Fund",
+   "code": "3042",
+   "amount": 6807.53,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 72"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042-os",
+   "parent": "f3042",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6807.53,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 72"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3048",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Opioid Settlement Grant Fund",
+   "code": "3048",
+   "amount": 12234.99,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3048-os",
+   "parent": "f3048",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 12234.99,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court/Sheriff Automation Fund",
+   "code": "3400",
+   "amount": 13866.13,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 74"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-os",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 13866.13,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 74"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Hospital Sales Tax Fund",
+   "code": "3402",
+   "amount": 3066000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 75"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402-os",
+   "parent": "f3402",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3066000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 75"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jones Mill Industrial Park Fund",
+   "code": "3404",
+   "amount": 213112.99,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed subtotal (the amount appropriated). The page also prints a grand total of $177,112.99, which takes out the $36,000.00 transfer to the General Fund that is already inside the categories."
+  },
+  {
+   "id": "f3404-ps",
+   "parent": "f3404",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 61812.99,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404-su",
+   "parent": "f3404",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 22300,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404-os",
+   "parent": "f3404",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 109000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404-co",
+   "parent": "f3404",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3405",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Solid Waste 5% Reserve Fund",
+   "code": "3405",
+   "amount": 137000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3405-os",
+   "parent": "f3405",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 137000,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3527",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Fun Park Grant Fund",
+   "code": "3527",
+   "amount": 96310.45,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 78"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3527-os",
+   "parent": "f3527",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 96310.45,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 78"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4800",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Energy Efficiency Bond Fund",
+   "code": "4800",
+   "amount": 310061,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4800-os",
+   "parent": "f4800",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 310061,
+   "status": "sourced",
+   "source": {
+    "doc": "hotspringar-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }

@@ -1,25 +1,1487 @@
 {
-  "meta": {
-    "document": "Greene County — no appropriation document ingested yet",
-    "title": "Greene County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Greene County 2026 adopted budget",
+  "title": "Greene County — the money trail",
+  "year": 2026,
+  "grand_total": 24825752,
+  "note": "This is Greene County's 2026 budget as filed with the state: Appropriation Ordinance 2025-24 and the budget detail behind it. Amounts are the 2026 appropriations. The county moves money between its own funds (the General Fund alone budgets $1,809,314.81 of transfers out, mostly to the Special Reserve Fund), so those dollars appear in both funds."
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General Fund",
+   "code": "1000",
+   "amount": 6962825.59,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Greene County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-0100",
+   "amount": 180027.57,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "1000-0101",
+   "amount": 429097.89,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Clerk",
+   "code": "1000-0102",
+   "amount": 240338.23,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Treasurer",
+   "code": "1000-0103",
+   "amount": 184341.84,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Tax Collector",
+   "code": "1000-0104",
+   "amount": 289377.5,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Assessor",
+   "code": "1000-0105",
+   "amount": 1009560.05,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Board of Equalization",
+   "code": "1000-0106",
+   "amount": 6261.88,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 115330.46,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse Maintenance",
+   "code": "1000-0108",
+   "amount": 247689.96,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Election",
+   "code": "1000-0109",
+   "amount": 178301.6,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0116",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Grants-in-Aid - General",
+   "code": "1000-0116",
+   "amount": 55493.06,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Contributory Insurance",
+   "code": "1000-0117",
+   "amount": 80000,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0118",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Historic Courthouse Maintenance",
+   "code": "1000-0118",
+   "amount": 35457,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0198",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "HR",
+   "code": "1000-0198",
+   "amount": 81176.62,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0199",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Court Security Office",
+   "code": "1000-0199",
+   "amount": 1701,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Health",
+   "code": "1000-0300",
+   "amount": 82720,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court - General",
+   "code": "1000-0401",
+   "amount": 32200,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court - Div. II (Philhours)",
+   "code": "1000-0402",
+   "amount": 17000,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court - Div. 7 (Broadaway)",
+   "code": "1000-0403",
+   "amount": 13000,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0404",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court - Div. 12 (Ellington)",
+   "code": "1000-0404",
+   "amount": 17000,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0405",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court - Division 8 (Bibb)",
+   "code": "1000-0405",
+   "amount": 19870,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court",
+   "code": "1000-0409",
+   "amount": 389902.09,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Court",
+   "code": "1000-0414",
+   "amount": 455906.76,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney",
+   "code": "1000-0416",
+   "amount": 228200.5,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0417",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Public Defender",
+   "code": "1000-0417",
+   "amount": 57883.19,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Coroner",
+   "code": "1000-0419",
+   "amount": 168215.84,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0420",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Constables",
+   "code": "1000-0420",
+   "amount": 8036.88,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0423",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney Administrator",
+   "code": "1000-0423",
+   "amount": 81976.65,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0501",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Nine One One",
+   "code": "1000-0501",
+   "amount": 198710.04,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0502",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Fire Departments",
+   "code": "1000-0502",
+   "amount": 1025,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veterans Service Officer",
+   "code": "1000-0800",
+   "amount": 145504.17,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Extension",
+   "code": "1000-0801",
+   "amount": 102205,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d8888",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": "1000-8888",
+   "amount": 1809314.81,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "General Reserve Fund",
+   "code": "1001",
+   "amount": 195108,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1001-d0108",
+   "parent": "f1001",
+   "section": "appropriations",
+   "name": "Courthouse Maintenance",
+   "code": "1001-0108",
+   "amount": 172553,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1001-d0111",
+   "parent": "f1001",
+   "section": "appropriations",
+   "name": "County Buildings",
+   "code": "1001-0111",
+   "amount": 22555,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "ARPA Revenue Replacement Fund",
+   "code": "1006",
+   "amount": 249740.38,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1006-d0100",
+   "parent": "f1006",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1006-0100",
+   "amount": 4500,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1006-d0111",
+   "parent": "f1006",
+   "section": "appropriations",
+   "name": "County Buildings",
+   "code": "1006-0111",
+   "amount": 245240.38,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1807",
+   "parent": null,
+   "section": "appropriations",
+   "name": "General - Hard Surface Maintenance Fund",
+   "code": "1807",
+   "amount": 662001,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1809",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Special Reserve Fund",
+   "code": "1809",
+   "amount": 1399995.42,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1809-d0111",
+   "parent": "f1809",
+   "section": "appropriations",
+   "name": "County Buildings",
+   "code": "1809-0111",
+   "amount": 294674.22,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1809-d0200",
+   "parent": "f1809",
+   "section": "appropriations",
+   "name": "County Roads",
+   "code": "1809-0200",
+   "amount": 1096319.2,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1809-d0419",
+   "parent": "f1809",
+   "section": "appropriations",
+   "name": "Coroner",
+   "code": "1809-0419",
+   "amount": 9002,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Road Fund",
+   "code": "2000",
+   "amount": 3908650.05,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Additional Motor Fuel Tax Fund",
+   "code": "2003",
+   "amount": 227115,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2800",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Road Reserve Fund",
+   "code": "2800",
+   "amount": 1,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Library Fund",
+   "code": "3008",
+   "amount": 946448.58,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3405",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Law Enforcement Fund",
+   "code": "3405",
+   "amount": 9356954.6,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3405-d0400",
+   "parent": "f3405",
+   "section": "appropriations",
+   "name": "County Sheriff",
+   "code": "3405-0400",
+   "amount": 3393611.26,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3405-d0418",
+   "parent": "f3405",
+   "section": "appropriations",
+   "name": "County Jail",
+   "code": "3405-0418",
+   "amount": 5486252.6,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3405-d0450",
+   "parent": "f3405",
+   "section": "appropriations",
+   "name": "School Resource Officers - GCT",
+   "code": "3405-0450",
+   "amount": 336912.72,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3405-d0451",
+   "parent": "f3405",
+   "section": "appropriations",
+   "name": "School Resource Officers - CRA",
+   "code": "3405-0451",
+   "amount": 82360.45,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3405-d8888",
+   "parent": "f3405",
+   "section": "appropriations",
+   "name": "Transfers Out",
+   "code": "3405-8888",
+   "amount": 57817.57,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Automation Fund",
+   "code": "3000",
+   "amount": 38047.19,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Automation Fund",
+   "code": "3001",
+   "amount": 126108.51,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Automation Fund",
+   "code": "3002",
+   "amount": 2554,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Amendment #79 Fund",
+   "code": "3004",
+   "amount": 11001,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk's Cost Fund",
+   "code": "3005",
+   "amount": 17303,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Recorder's Cost Fund",
+   "code": "3006",
+   "amount": 328551.65,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Child Support Cost Fund",
+   "code": "3012",
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Operation and Maintenance Fund",
+   "code": "3017",
+   "amount": 140381.46,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3018",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Detention Facility Fund",
+   "code": "3018",
+   "amount": 18886.91,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Boating Safety Fund",
+   "code": "3019",
+   "amount": 5001,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emergency 911 Fund",
+   "code": "3020",
+   "amount": 29621.44,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3025",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Victim Witness Fund",
+   "code": "3025",
+   "amount": 28179.97,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Adult Drug Court Fund",
+   "code": "3028",
+   "amount": 4500,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Juvenile Division Fund",
+   "code": "3031",
+   "amount": 18802,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3048",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Adult Drug Court Opioid Settlement Fund",
+   "code": "3048",
+   "amount": 6579.5,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3401",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff's Donation Fund",
+   "code": "3401",
+   "amount": 3,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff's Drug Fund",
+   "code": "3402",
+   "amount": 3,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3403",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Bond Revenue/Court Costs Fund",
+   "code": "3403",
+   "amount": 58605.42,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3409",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Mentorship Program Fund",
+   "code": "3409",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3503",
+   "parent": null,
+   "section": "appropriations",
+   "name": "CIP Team Grant - Division 7 Broadaway",
+   "code": "3503",
+   "amount": 1657.21,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3513",
+   "parent": null,
+   "section": "appropriations",
+   "name": "AHPP Grant Historic Courthouse Fund",
+   "code": "3513",
+   "amount": 4,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3522",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Unpaved Roads Grant Fund",
+   "code": "3522",
+   "amount": 4,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3523",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Peer Recovery Specialist Fund",
+   "code": "3523",
+   "amount": 51415.9,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3525",
+   "parent": null,
+   "section": "appropriations",
+   "name": "LLEBG Grant",
+   "code": "3525",
+   "amount": 2,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3526",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Arkansas Disaster Relief Grant Fund",
+   "code": "3526",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3527",
+   "parent": null,
+   "section": "appropriations",
+   "name": "AOC CIP Juvenile Court Grant Fund",
+   "code": "3527",
+   "amount": 14196.22,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3528",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Act 786 Public Safety Equipment Grant",
+   "code": "3528",
+   "amount": 4,
+   "status": "sourced",
+   "source": {
+    "doc": "greenear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }
