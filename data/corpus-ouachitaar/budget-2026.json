@@ -1,25 +1,3503 @@
 {
-  "meta": {
-    "document": "Ouachita County — no appropriation document ingested yet",
-    "title": "Ouachita County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Ouachita County 2026 proposed budget",
+  "title": "Ouachita County — the money trail",
+  "note": "This is the county's 2026 budget report as filed with the state. It is titled \"2026 Proposed\" and its only 2026 column is \"Request 2026\", so these are the amounts asked for; the document does not show the quorum court's final vote. Some funds move money to other funds (\"Transfers out\"), so those dollars can appear in two funds.",
+  "year": 2026,
+  "grand_total": 16099195.57
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General",
+   "code": "1000",
+   "amount": 4015710.69,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "pp. 2–78"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Ouachita County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-0100",
+   "amount": 194832.8,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-ps",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 158682.8,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-sup",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3300,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-osc",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 32850,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "1000-0101",
+   "amount": 407143.83,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-ps",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 335993.83,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-sup",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 13650,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-osc",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 57500,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Clerk",
+   "code": "1000-0102",
+   "amount": 477959.86,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-ps",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 421259.86,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-sup",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 23450,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-osc",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 33250,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Treasurer",
+   "code": "1000-0103",
+   "amount": 150639.75,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-ps",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 108889.75,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-sup",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5350,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-osc",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 36400,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Collector",
+   "code": "1000-0104",
+   "amount": 348576.27,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-ps",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 281950.11,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-sup",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 12550,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-osc",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 54076.16,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Assessor",
+   "code": "1000-0105",
+   "amount": 581946.99,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-ps",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 507496.99,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-sup",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 28350,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-osc",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 46100,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Equalization Board",
+   "code": "1000-0106",
+   "amount": 221098.5,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-ps",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 5482.5,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-osc",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 215616,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 80487.88,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-ps",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 76337.88,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-osc",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4150,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse Maintenance",
+   "code": "1000-0108",
+   "amount": 254009.23,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-ps",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 142309.23,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-sup",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 28000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-osc",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 83700,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Election",
+   "code": "1000-0109",
+   "amount": 158572.01,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-ps",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 98000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-sup",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 58141.89,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-osc",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2430.12,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0112",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Special Projects",
+   "code": "1000-0112",
+   "amount": 95500,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0112-ps",
+   "parent": "f1000-d0112",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0112-osc",
+   "parent": "f1000-d0112",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 85500,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Southwest Planning District",
+   "code": "1000-0117",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117-osc",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0119",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Women's Crisis Center",
+   "code": "1000-0119",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0119-osc",
+   "parent": "f1000-d0119",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0120",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "CASA",
+   "code": "1000-0120",
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0120-osc",
+   "parent": "f1000-d0120",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0121",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Soil Conservation",
+   "code": "1000-0121",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0121-osc",
+   "parent": "f1000-d0121",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0122",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Boys' & Girls' Club",
+   "code": "1000-0122",
+   "amount": 3500,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0122-osc",
+   "parent": "f1000-d0122",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3500,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0124",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Chamber of Commerce",
+   "code": "1000-0124",
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0124-osc",
+   "parent": "f1000-d0124",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0126",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Fair",
+   "code": "1000-0126",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0126-osc",
+   "parent": "f1000-d0126",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0129",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "O C Red Cross",
+   "code": "1000-0129",
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0129-osc",
+   "parent": "f1000-d0129",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0130",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Area Agency on Aging",
+   "code": "1000-0130",
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0130-osc",
+   "parent": "f1000-d0130",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0131",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Chidester Library",
+   "code": "1000-0131",
+   "amount": 9200,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0131-osc",
+   "parent": "f1000-d0131",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 9200,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0150",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Mosquito Abatement",
+   "code": "1000-0150",
+   "amount": 66450.77,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0150-ps",
+   "parent": "f1000-d0150",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 36350.77,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0150-sup",
+   "parent": "f1000-d0150",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0150-osc",
+   "parent": "f1000-d0150",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 100,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0160",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Economic Development",
+   "code": "1000-0160",
+   "amount": 100000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0160-osc",
+   "parent": "f1000-d0160",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 100000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Health Department",
+   "code": "1000-0300",
+   "amount": 63847.92,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-ps",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 25997.92,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-sup",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 14950,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-osc",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 22900,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court 1st Division",
+   "code": "1000-0401",
+   "amount": 27545,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-sup",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2200,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-osc",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 25345,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court 3rd Division",
+   "code": "1000-0402",
+   "amount": 12700,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-sup",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-osc",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 11200,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court",
+   "code": "1000-0409",
+   "amount": 147998.25,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 64"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-ps",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 107598.25,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 63"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-sup",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7500,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 64"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-osc",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 32900,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 64"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Court",
+   "code": "1000-0414",
+   "amount": 213136.46,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-ps",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 187381.46,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 65"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-sup",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4700,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-osc",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 21055,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney",
+   "code": "1000-0416",
+   "amount": 93291.04,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 68"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-ps",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 71491.04,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-sup",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 21000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 68"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-osc",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 800,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 68"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Coroner",
+   "code": "1000-0419",
+   "amount": 79968.64,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 72"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-ps",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 50618.64,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 71"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-sup",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 8900,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 72"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-osc",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 9950,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 72"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-cap",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10500,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 72"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0421",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff's Reserves",
+   "code": "1000-0421",
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 74"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0421-osc",
+   "parent": "f1000-d0421",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 74"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Office of Emergency Services",
+   "code": "1000-0500",
+   "amount": 112805.49,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-ps",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 78260.49,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 75"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-sup",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 13400,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-osc",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 21145,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Extension Office",
+   "code": "1000-0801",
+   "amount": 74000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 78"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-ps",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 28000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-osc",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 46000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 78"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Solid Waste",
+   "code": "1800",
+   "amount": 1499472.14,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 84"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the only department with 2026 money (1800-0700 Solid Waste)."
+  },
+  {
+   "id": "f1800-ps",
+   "parent": "f1800",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 944997.14,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 83"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800-sup",
+   "parent": "f1800",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 288800,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 84"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800-osc",
+   "parent": "f1800",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 206675,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 84"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800-cap",
+   "parent": "f1800",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 54000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 84"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800-tr",
+   "parent": "f1800",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 84"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Special Reserve Account",
+   "code": "1810",
+   "amount": 106839.29,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 89"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the only department with 2026 money (1810-0112 Retirement Bonus)."
+  },
+  {
+   "id": "f1810-ps",
+   "parent": "f1810",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 106839.29,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 89"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1815",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Department of Human Services",
+   "code": "1815",
+   "amount": 141500,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the only department with 2026 money (1815-0305 DHS)."
+  },
+  {
+   "id": "f1815-ps",
+   "parent": "f1815",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 90"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1815-sup",
+   "parent": "f1815",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 31000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1815-osc",
+   "parent": "f1815",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 9500,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1815-tr",
+   "parent": "f1815",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 100000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1817",
+   "parent": null,
+   "section": "appropriations",
+   "name": "New Animal Rescue",
+   "code": "1817",
+   "amount": 80428.36,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 93"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the only department with 2026 money (1817-0422 Animal Rescue)."
+  },
+  {
+   "id": "f1817-ps",
+   "parent": "f1817",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 59928.36,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 92"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1817-osc",
+   "parent": "f1817",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 20500,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 93"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Road",
+   "code": "2000",
+   "amount": 3380935.3,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 97"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the only department with 2026 money (2000-0200 Highway)."
+  },
+  {
+   "id": "f2000-ps",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1853385.3,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 96"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-sup",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 980950,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 97"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-osc",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 119350,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 97"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-debt",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 150000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 97"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"Section 6\" (lease purchase principal and interest)."
+  },
+  {
+   "id": "f2000-cap",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 277250,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 97"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Motor Fuel Tax",
+   "code": "2003",
+   "amount": 144000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 99"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the only department with 2026 money (2003-0200 HIGHWAY)."
+  },
+  {
+   "id": "f2003-sup",
+   "parent": "f2003",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 144000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 99"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Automation",
+   "code": "3000",
+   "amount": 15100,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 101"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the only department with 2026 money (3000-0103 Treasurer)."
+  },
+  {
+   "id": "f3000-sup",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7300,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 101"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-osc",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7800,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 101"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Automation",
+   "code": "3001",
+   "amount": 72000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 103"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the only department with 2026 money (3001-0104 Collector)."
+  },
+  {
+   "id": "f3001-sup",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 103"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-osc",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 31000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 103"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-cap",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 32000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 103"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Automation",
+   "code": "3002",
+   "amount": 19200,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 105"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the only department with 2026 money (3002-0403 Circuit Court Automation)."
+  },
+  {
+   "id": "f3002-sup",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5500,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 105"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-osc",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 8700,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 105"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-cap",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 105"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Amendment 79",
+   "code": "3004",
+   "amount": 18100,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 107"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the only department with 2026 money (3004-0105 Assessor)."
+  },
+  {
+   "id": "f3004-sup",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 107"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-osc",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 13100,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 107"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk's Automation",
+   "code": "3005",
+   "amount": 5810,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 109"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the only department with 2026 money (3005-0101 County Clerk)."
+  },
+  {
+   "id": "f3005-sup",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5810,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 109"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk's Automation",
+   "code": "3006",
+   "amount": 45500,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 111"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the only department with 2026 money (3006-0102 Circuit Clerk)."
+  },
+  {
+   "id": "f3006-sup",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 25500,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 111"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-osc",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 111"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Library",
+   "code": "3008",
+   "amount": 242383.27,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 113"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the only department with 2026 money (3008-0600 County Library)."
+  },
+  {
+   "id": "f3008-ps",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 162483.27,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 112"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-sup",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 48500,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 113"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-osc",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 31400,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 113"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk Child Support 80%",
+   "code": "3012",
+   "amount": 1264.51,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 117"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the only department with 2026 money (3012-0102 Circuit Clerk)."
+  },
+  {
+   "id": "f3012-sup",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1264.51,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 117"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Control (Forfeitures)",
+   "code": "3015",
+   "amount": 3670.07,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 119"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the only department with 2026 money (3015-0400 Sheriff Drug Buy Funds)."
+  },
+  {
+   "id": "f3015-osc",
+   "parent": "f3015",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3670.07,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 119"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Operating",
+   "code": "3017",
+   "amount": 5753113.66,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "pp. 121–123"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3017-d0400",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Sheriff",
+   "code": "3017-0400",
+   "amount": 2616915.5,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 121"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0400-ps",
+   "parent": "f3017-d0400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2112815.5,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 120"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0400-sup",
+   "parent": "f3017-d0400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 287800,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 121"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0400-osc",
+   "parent": "f3017-d0400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 116300,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 121"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0400-cap",
+   "parent": "f3017-d0400",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 100000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 121"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0418",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "County Jail",
+   "code": "3017-0418",
+   "amount": 3136198.16,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 123"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0418-ps",
+   "parent": "f3017-d0418",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2065398.16,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 122"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0418-sup",
+   "parent": "f3017-d0418",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 664300,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 123"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0418-osc",
+   "parent": "f3017-d0418",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 406500,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 123"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Boating Safety",
+   "code": "3019",
+   "amount": 9300,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the only department with 2026 money (3019-0504 Emergency Rescue)."
+  },
+  {
+   "id": "f3019-sup",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7800,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-osc",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emergency 9-1-1",
+   "code": "3020",
+   "amount": 311583.26,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the only department with 2026 money (3020-0501 Nine One One)."
+  },
+  {
+   "id": "f3020-ps",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 207683.26,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 126"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-sup",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6400,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-osc",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 97500,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Public Defender",
+   "code": "3024",
+   "amount": 38045.3,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the only department with 2026 money (3024-0417 Public Defender)."
+  },
+  {
+   "id": "f3024-ps",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 28785.3,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 128"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024-sup",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4800,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024-osc",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4460,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3025",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Victim Witness",
+   "code": "3025",
+   "amount": 17439.24,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 131"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the only department with 2026 money (3025-0416 PA Victim Witness)."
+  },
+  {
+   "id": "f3025-ps",
+   "parent": "f3025",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 17439.24,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 130"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Indigent Defense",
+   "code": "3026",
+   "amount": 9898.03,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 133"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the only department with 2026 money (3026-0417 Public Defender)."
+  },
+  {
+   "id": "f3026-osc",
+   "parent": "f3026",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6898.03,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 133"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026-tr",
+   "parent": "f3026",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 133"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Court",
+   "code": "3028",
+   "amount": 13800,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 135"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the only department with 2026 money (3028-0403 Circuit Court Drug Court)."
+  },
+  {
+   "id": "f3028-osc",
+   "parent": "f3028",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 13800,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 135"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Fund",
+   "code": "3031",
+   "amount": 5538.07,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 137"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the only department with 2026 money (3031-0414 Juvenile Court)."
+  },
+  {
+   "id": "f3031-osc",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5538.07,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 137"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3041",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Enforcement",
+   "code": "3041",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 141"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the only department with 2026 money (3041-0400 Sheriff)."
+  },
+  {
+   "id": "f3041-osc",
+   "parent": "f3041",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 141"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3410",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Law Library",
+   "code": "3410",
+   "amount": 70000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 147"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the only department with 2026 money (3410-0405 Law Library)."
+  },
+  {
+   "id": "f3410-sup",
+   "parent": "f3410",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 147"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3410-osc",
+   "parent": "f3410",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 60000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 147"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3430",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Recorder's Cost (25%)",
+   "code": "3430",
+   "amount": 24000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 149"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the only department with 2026 money (3430-0102 Circuit)."
+  },
+  {
+   "id": "f3430-osc",
+   "parent": "f3430",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 24000,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 149"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3501",
+   "parent": null,
+   "section": "appropriations",
+   "name": "CC Automated Record System Grant",
+   "code": "3501",
+   "amount": 49564.38,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 155"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the only department with 2026 money (3501-0102 Circuit Clerk)."
+  },
+  {
+   "id": "f3501-osc",
+   "parent": "f3501",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 49564.38,
+   "status": "sourced",
+   "source": {
+    "doc": "ouachitaar-budget-2026",
+    "page": "p. 155"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }

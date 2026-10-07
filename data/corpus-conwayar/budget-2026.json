@@ -1,25 +1,3827 @@
 {
-  "meta": {
-    "document": "Conway County — no appropriation document ingested yet",
-    "title": "Conway County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Conway County 2026 budget workbook (projected)",
+  "title": "Conway County — the money trail",
+  "note": "This is Conway County's 2026 budget workbook as filed with the state. We use the \"Projected 2026\" column, not the 2025 column next to it. Some funds move money to other funds or to a health savings reserve (transfer lines); money moved between county funds shows up in both funds. The workbook isn’t the adopted ordinance: one fund’s (3045) lines are missing from the print, and the other funds come to $7,249.99 less than its printed “Total Budgeted Funds.” The adopted ordinance is a records request away.",
+  "grand_total": 19133804.02,
+  "year": 2026
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General",
+   "code": "1000",
+   "amount": 7463969.03,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 14–30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed total is $7,463,969.03; the departments listed add to $7,463,969.04."
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Conway County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-0100",
+   "amount": 175482.26,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 14–15"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-ps",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 145790.88,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-su",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 16750,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-os",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 12941.38,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "1000-0101",
+   "amount": 322366.45,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 15–16"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-ps",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 264873.83,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-su",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 35950,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-os",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 17342.62,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-co",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 4200,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Clerk",
+   "code": "1000-0102",
+   "amount": 344676.2,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 16–17"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-ps",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 302663.77,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-su",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 32000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-os",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10012.43,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Treasurer",
+   "code": "1000-0103",
+   "amount": 248183.99,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 17–18"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-ps",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 194238.34,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-su",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10500,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-os",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 16275.85,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-tr",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 27169.8,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Collector",
+   "code": "1000-0104",
+   "amount": 311060.1,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 18–19"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-ps",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 231250.81,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-su",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 8500,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-os",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 35082.89,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-tr",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 36226.4,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Assessor",
+   "code": "1000-0105",
+   "amount": 614945.74,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 19–20"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-ps",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 241058.67,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-su",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 162361,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-os",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 170299.67,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-co",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-tr",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 36226.4,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 76288.76,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-ps",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 71138.76,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-su",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 100,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-os",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5050,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse Maintenance",
+   "code": "1000-0108",
+   "amount": 132807.05,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 20–21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-ps",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 26704.44,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-su",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 24000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-os",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 82102.61,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Elections",
+   "code": "1000-0109",
+   "amount": 41959.79,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 21–22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-ps",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 10137.6,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-su",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5700,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-os",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 25047.19,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-co",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1075,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0112",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Other County Expense",
+   "code": "1000-0112",
+   "amount": 95505.63,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0112-ps",
+   "parent": "f1000-d0112",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 21686.38,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0112-os",
+   "parent": "f1000-d0112",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 73819.25,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0116",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Grants in Aid",
+   "code": "1000-0116",
+   "amount": 1800,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0116-os",
+   "parent": "f1000-d0116",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1800,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Health Department",
+   "code": "1000-0300",
+   "amount": 37103.47,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 22–23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-su",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 18750,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-os",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 18353.47,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff",
+   "code": "1000-0400",
+   "amount": 2033341.22,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 23–24"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-ps",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1762716.89,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-su",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 175150,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-os",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 85474.33,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-co",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court Division 1",
+   "code": "1000-0401",
+   "amount": 39859,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-su",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9380,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-os",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 27979,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-co",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court Division 2",
+   "code": "1000-0402",
+   "amount": 2856,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 24–25"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-os",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2856,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court Division 3",
+   "code": "1000-0403",
+   "amount": 129981.42,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403-ps",
+   "parent": "f1000-d0403",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 114769.74,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403-su",
+   "parent": "f1000-d0403",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2200,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403-os",
+   "parent": "f1000-d0403",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 13011.68,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court",
+   "code": "1000-0409",
+   "amount": 256565.19,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 25–26"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-ps",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 222144.69,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-su",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9050,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-os",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 15612.5,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-co",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 9758,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney",
+   "code": "1000-0416",
+   "amount": 221554.4,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 26–27"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-ps",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 148324.4,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-su",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 15500,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-os",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 57730,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Jail",
+   "code": "1000-0418",
+   "amount": 1594575.85,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 27–28"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-ps",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1175355.35,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-su",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 263500,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-os",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 155720.5,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Coroner",
+   "code": "1000-0419",
+   "amount": 48002.28,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-ps",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 37203.33,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-su",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 8250,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-os",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2548.95,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Mounted Patrol",
+   "code": "1000-0422",
+   "amount": 5360,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 28–29"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422-ps",
+   "parent": "f1000-d0422",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 150,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422-su",
+   "parent": "f1000-d0422",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4750,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422-os",
+   "parent": "f1000-d0422",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 460,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veteran's Services",
+   "code": "1000-0800",
+   "amount": 22107.33,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-ps",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 20454.33,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-su",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 350,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-os",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1303,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Extension Office",
+   "code": "1000-0801",
+   "amount": 80946.41,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 29–30"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-ps",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 4496.41,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-su",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1400,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-os",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 75050,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d8888",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Transfers Out",
+   "code": "1000-8888",
+   "amount": 626640.5,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 30–31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Road",
+   "code": "2000",
+   "amount": 3951032.61,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-ps",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1540172.92,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-su",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1334021,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-os",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 220065.19,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-co",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 400000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-ds",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 220000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-tr",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 236773.5,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Additional Motor Fuel Tax",
+   "code": "2003",
+   "amount": 158000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 31–32"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003-co",
+   "parent": "f2003",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 158000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Automation",
+   "code": "3000",
+   "amount": 29700,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-su",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 21000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-os",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5700,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-co",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Automation",
+   "code": "3001",
+   "amount": 92550,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-su",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 57550,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-os",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-co",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk's Automation",
+   "code": "3002",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 32–33"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-co",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk Cost Fund",
+   "code": "3005",
+   "amount": 28750,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-su",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 17000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-os",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3750,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-co",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Court Recorder's Cost Fund",
+   "code": "3006",
+   "amount": 88000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 33–34"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-su",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 48000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-os",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-co",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Library",
+   "code": "3008",
+   "amount": 620606.66,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-ps",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 423492.46,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-su",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 81600,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-os",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 32118,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-co",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-tr",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 63396.2,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Child Support",
+   "code": "3012",
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 34–35"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-su",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Control",
+   "code": "3015",
+   "amount": 13950,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015-os",
+   "parent": "f3015",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 13950,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Fund",
+   "code": "3017",
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-su",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Act 122 Boating Safety",
+   "code": "3019",
+   "amount": 1899,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 35–36"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-su",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1899,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "911",
+   "code": "3020",
+   "amount": 852838.12,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 36–37"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-ps",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 616919.06,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-su",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 50300,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-os",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 93453.06,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-co",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1600,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-tr",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 90566,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3023",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Act 833 District",
+   "code": "3023",
+   "amount": 280000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3023-su",
+   "parent": "f3023",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 280000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Public Defender",
+   "code": "3026",
+   "amount": 28373.48,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026-su",
+   "parent": "f3026",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5940,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026-os",
+   "parent": "f3026",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 22433.48,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Court Program Fund",
+   "code": "3028",
+   "amount": 13596.71,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028-su",
+   "parent": "f3028",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4100,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028-os",
+   "parent": "f3028",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 9496.71,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk Commissioner Fees",
+   "code": "3039",
+   "amount": 150,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039-os",
+   "parent": "f3039",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 150,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Fire Department",
+   "code": "3400",
+   "amount": 2450090.07,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 38–44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3400",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Fire Department Administrative",
+   "code": "3400",
+   "amount": 2235590.07,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 38–39"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3400-ps",
+   "parent": "f3400-d3400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 485985.47,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3400-su",
+   "parent": "f3400-d3400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 58000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3400-os",
+   "parent": "f3400-d3400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 338900,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3400-co",
+   "parent": "f3400-d3400",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1080000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3400-ds",
+   "parent": "f3400-d3400",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 208000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3400-tr",
+   "parent": "f3400-d3400",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 64704.6,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3401",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Conway County Fire Springfield Dist 1",
+   "code": "3401",
+   "amount": 19500,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3401-su",
+   "parent": "f3400-d3401",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 16800,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3401-os",
+   "parent": "f3400-d3401",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2700,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3402",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Conway County Fire Jerusalem Dist 2",
+   "code": "3402",
+   "amount": 19500,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 39–40"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3402-su",
+   "parent": "f3400-d3402",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 16800,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3402-os",
+   "parent": "f3400-d3402",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2700,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3403",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Conway County Fire Birdtown Dist 3",
+   "code": "3403",
+   "amount": 19500,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3403-su",
+   "parent": "f3400-d3403",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 16800,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3403-os",
+   "parent": "f3400-d3403",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2700,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3404",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Conway County Fire St Vincent Dist 4",
+   "code": "3404",
+   "amount": 19500,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 40–41"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3404-su",
+   "parent": "f3400-d3404",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 16800,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3404-os",
+   "parent": "f3400-d3404",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2700,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3405",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Conway County Fire Petit Jean Dist 5",
+   "code": "3405",
+   "amount": 19500,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3405-su",
+   "parent": "f3400-d3405",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 16800,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3405-os",
+   "parent": "f3400-d3405",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2700,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3406",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Conway County Fire Cleveland Dist #6",
+   "code": "3406",
+   "amount": 19500,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 41–42"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3406-su",
+   "parent": "f3400-d3406",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 16800,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3406-os",
+   "parent": "f3400-d3406",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2700,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3407",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Conway County Fire Center Ridge Dist #7",
+   "code": "3407",
+   "amount": 19500,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3407-su",
+   "parent": "f3400-d3407",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 16800,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3407-os",
+   "parent": "f3400-d3407",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2700,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3408",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Conway County Fire Hillcreek Dist #8",
+   "code": "3408",
+   "amount": 19500,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 42–43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3408-su",
+   "parent": "f3400-d3408",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 16800,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3408-os",
+   "parent": "f3400-d3408",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2700,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3410",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Conway County Fire Blackwell Dist #10",
+   "code": "3410",
+   "amount": 19500,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3410-su",
+   "parent": "f3400-d3410",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 16800,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3410-os",
+   "parent": "f3400-d3410",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2700,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3411",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Conway County Fire Overcup Dist #11",
+   "code": "3411",
+   "amount": 19500,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 43–44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3411-su",
+   "parent": "f3400-d3411",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 16800,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3411-os",
+   "parent": "f3400-d3411",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2700,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3412",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Conway County Fire Sardis Dist #12",
+   "code": "3412",
+   "amount": 19500,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3412-su",
+   "parent": "f3400-d3412",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 16800,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d3412-os",
+   "parent": "f3400-d3412",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2700,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3413",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Oppelo Fire",
+   "code": "3413",
+   "amount": 50500,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3413-su",
+   "parent": "f3413",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 20500,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3413-os",
+   "parent": "f3413",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3414",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Hospital Property Tax",
+   "code": "3414",
+   "amount": 434252.5,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3414-os",
+   "parent": "f3414",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 434252.5,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3415",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Hospital Sales Tax",
+   "code": "3415",
+   "amount": 1250000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 44–45"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3415-co",
+   "parent": "f3415",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1250000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3416",
+   "parent": null,
+   "section": "appropriations",
+   "name": "UACCM 1/4 Cent Sales Tax",
+   "code": "3416",
+   "amount": 1085000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3416-os",
+   "parent": "f3416",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1085000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3417",
+   "parent": null,
+   "section": "appropriations",
+   "name": "District Court Cost",
+   "code": "3417",
+   "amount": 27900,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3417-su",
+   "parent": "f3417",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7250,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3417-os",
+   "parent": "f3417",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 20650,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3500",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Nuclear Grant/OEM",
+   "code": "3500",
+   "amount": 192645.84,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "pp. 45–46"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3500-ps",
+   "parent": "f3500",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 100442.99,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3500-su",
+   "parent": "f3500",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 24900,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3500-os",
+   "parent": "f3500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 16246.25,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3500-co",
+   "parent": "f3500",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 42000,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3500-tr",
+   "parent": "f3500",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 9056.6,
+   "status": "sourced",
+   "source": {
+    "doc": "conwayar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal printed; this is the \"3500-0500-9999 Transfers to Health Savings\" line."
+  }
+ ]
 }

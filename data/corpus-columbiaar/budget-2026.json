@@ -1,25 +1,4187 @@
 {
-  "meta": {
-    "document": "Columbia County — no appropriation document ingested yet",
-    "title": "Columbia County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Columbia County 2026 adopted budget",
+  "title": "Columbia County — the money trail",
+  "note": "This is Columbia County's 2026 final budget, adopted by Ordinance 2025-28 on November 10, 2025, as filed with the state. We use the \"Budget 2026\" column. Some funds move money to other county funds (transfer lines, $774,910.00 in all), so those dollars appear in both funds.",
+  "grand_total": 21746853.88,
+  "year": 2026
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General",
+   "code": "1000",
+   "amount": 3942457,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 1–50"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Columbia County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-0100",
+   "amount": 123699,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 1–2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-ps",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 71249,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-su",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-os",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 37450,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "1000-0101",
+   "amount": 411654,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 3–4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-ps",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 358054,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-su",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 45000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-os",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 8600,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Clerk",
+   "code": "1000-0102",
+   "amount": 291197,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 5–6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-ps",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 251217,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-su",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 27000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-os",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 12980,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 80896,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 7–8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-ps",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 62687,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-su",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-os",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 14300,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-tr",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 1909,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Election",
+   "code": "1000-0109",
+   "amount": 94095,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 9–10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-ps",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 39895,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-su",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 41000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-os",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 13200,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Buildings",
+   "code": "1000-0111",
+   "amount": 395000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 11–12"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111-ps",
+   "parent": "f1000-d0111",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111-tr",
+   "parent": "f1000-d0111",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 385000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0112",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Columbia County Special Projects",
+   "code": "1000-0112",
+   "amount": 320000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 13–14"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0112-tr",
+   "parent": "f1000-d0112",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 320000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Surveyor",
+   "code": "1000-0117",
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 15–16"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117-su",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117-os",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0125",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County/Civil Attorney",
+   "code": "1000-0125",
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 17–18"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0125-os",
+   "parent": "f1000-d0125",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Health",
+   "code": "1000-0300",
+   "amount": 49300,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 19–20"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-su",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6200,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-os",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 43100,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff",
+   "code": "1000-0400",
+   "amount": 1592781,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 21–22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-ps",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1332306,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-su",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 186000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-os",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 68475,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-tr",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court",
+   "code": "1000-0401",
+   "amount": 19500,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 23–24"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-su",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-os",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 15500,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court",
+   "code": "1000-0402",
+   "amount": 20500,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 25–26"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-su",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5500,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-os",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court",
+   "code": "1000-0403",
+   "amount": 19975,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 27–28"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403-su",
+   "parent": "f1000-d0403",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403-os",
+   "parent": "f1000-d0403",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 17975,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court",
+   "code": "1000-0409",
+   "amount": 53981,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 29–30"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-os",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 53981,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "DPA/Deputy Prosecuting Attorney",
+   "code": "1000-0416",
+   "amount": 123975,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 31–32"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-os",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 123975,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Coroner",
+   "code": "1000-0419",
+   "amount": 27605,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 33–34"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-ps",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 15277,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-su",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10750,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-os",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1578,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0420",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Constables",
+   "code": "1000-0420",
+   "amount": 51,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 35–36"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0420-ps",
+   "parent": "f1000-d0420",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 40,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0420-os",
+   "parent": "f1000-d0420",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 11,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0431",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Housing Department",
+   "code": "1000-0431",
+   "amount": 46000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 37–38"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0431-os",
+   "parent": "f1000-d0431",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 46000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "OEM/Office of Emergency Management",
+   "code": "1000-0500",
+   "amount": 40125,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 39–40"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-ps",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 16475,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-su",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 11500,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-os",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 12150,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0502",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Fire Departments",
+   "code": "1000-0502",
+   "amount": 22850,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 41–42"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0502-ps",
+   "parent": "f1000-d0502",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 5350,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0502-os",
+   "parent": "f1000-d0502",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 17500,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veterans' Service",
+   "code": "1000-0800",
+   "amount": 17766,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 43–44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-ps",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 14366,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-su",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2750,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-os",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 650,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Extension Office",
+   "code": "1000-0801",
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 45–46"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-os",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0804",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Soil Conservation - GIA",
+   "code": "1000-0804",
+   "amount": 12500,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 47–48"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0804-os",
+   "parent": "f1000-d0804",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 12500,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d1000",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "RDA/Rural Development Authority",
+   "code": "1000-1000",
+   "amount": 123007,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 49–50"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d1000-ps",
+   "parent": "f1000-d1000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 117057,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 49"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d1000-su",
+   "parent": "f1000-d1000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4200,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d1000-os",
+   "parent": "f1000-d1000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1750,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Special Projects",
+   "code": "1800",
+   "amount": 333401,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 51–56"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f1800-d0113",
+   "parent": "f1800",
+   "section": "appropriations",
+   "name": "Financial Mgmt Dept",
+   "code": "1800-0113",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 51–52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800-d0113-os",
+   "parent": "f1800-d0113",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800-d0400",
+   "parent": "f1800",
+   "section": "appropriations",
+   "name": "Sheriff",
+   "code": "1800-0400",
+   "amount": 139400,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 53–54"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800-d0400-co",
+   "parent": "f1800-d0400",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 139400,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800-d0501",
+   "parent": "f1800",
+   "section": "appropriations",
+   "name": "911/CENTRAL DISPATCH",
+   "code": "1800-0501",
+   "amount": 184001,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 55–56"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800-d0501-su",
+   "parent": "f1800-d0501",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 42000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800-d0501-os",
+   "parent": "f1800-d0501",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 70000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800-d0501-co",
+   "parent": "f1800-d0501",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800-d0501-tr",
+   "parent": "f1800-d0501",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 62001,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1801",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General Building and Maintenance Fund",
+   "code": "1801",
+   "amount": 384273,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 57–58"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f1801-d0111",
+   "parent": "f1801",
+   "section": "appropriations",
+   "name": "County Buildings",
+   "code": "1801-0111",
+   "amount": 384273,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 57–58"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1801-d0111-ps",
+   "parent": "f1801-d0111",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 84473,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1801-d0111-su",
+   "parent": "f1801-d0111",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 108500,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1801-d0111-os",
+   "parent": "f1801-d0111",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 101300,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1801-d0111-co",
+   "parent": "f1801-d0111",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 90000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General Commissions Fund",
+   "code": "1810",
+   "amount": 1333723,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 59–66"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f1810-d0103",
+   "parent": "f1810",
+   "section": "appropriations",
+   "name": "Treasurer",
+   "code": "1810-0103",
+   "amount": 156674,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 59–60"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810-d0103-ps",
+   "parent": "f1810-d0103",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 144624,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810-d0103-su",
+   "parent": "f1810-d0103",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810-d0103-os",
+   "parent": "f1810-d0103",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7050,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810-d0104",
+   "parent": "f1810",
+   "section": "appropriations",
+   "name": "Tax Collector",
+   "code": "1810-0104",
+   "amount": 320333,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 61–62"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810-d0104-ps",
+   "parent": "f1810-d0104",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 296833,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810-d0104-su",
+   "parent": "f1810-d0104",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10500,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810-d0104-os",
+   "parent": "f1810-d0104",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 13000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810-d0105",
+   "parent": "f1810",
+   "section": "appropriations",
+   "name": "Assessor",
+   "code": "1810-0105",
+   "amount": 630496,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 63–64"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810-d0105-ps",
+   "parent": "f1810-d0105",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 478206,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 63"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810-d0105-su",
+   "parent": "f1810-d0105",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 74000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 64"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810-d0105-os",
+   "parent": "f1810-d0105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 68290,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 64"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810-d0105-co",
+   "parent": "f1810-d0105",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 64"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810-d0106",
+   "parent": "f1810",
+   "section": "appropriations",
+   "name": "Equalization Board",
+   "code": "1810-0106",
+   "amount": 226220,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 65–66"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810-d0106-ps",
+   "parent": "f1810-d0106",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1630,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 65"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810-d0106-os",
+   "parent": "f1810-d0106",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 224590,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Road",
+   "code": "2000",
+   "amount": 5256546,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 67–68"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f2000-d0200",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "County Road",
+   "code": "2000-0200",
+   "amount": 5256546,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 67–68"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-d0200-ps",
+   "parent": "f2000-d0200",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2398546,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-d0200-su",
+   "parent": "f2000-d0200",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2180500,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 68"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-d0200-os",
+   "parent": "f2000-d0200",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 197500,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 68"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-d0200-co",
+   "parent": "f2000-d0200",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 480000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 68"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Additional Motor Fuel Tax",
+   "code": "2003",
+   "amount": 589500,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 69"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f2003-d0200",
+   "parent": "f2003",
+   "section": "appropriations",
+   "name": "Additional Motor Fuel Tax",
+   "code": "2003-0200",
+   "amount": 589500,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 69"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003-d0200-ps",
+   "parent": "f2003-d0200",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 589500,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 69"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Automation Fund",
+   "code": "3000",
+   "amount": 81000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 72–73"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3000-d0103",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Treasurer",
+   "code": "3000-0103",
+   "amount": 81000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 72–73"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-d0103-ps",
+   "parent": "f3000-d0103",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 10770,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 72"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-d0103-su",
+   "parent": "f3000-d0103",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 48530,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-d0103-os",
+   "parent": "f3000-d0103",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 11700,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-d0103-co",
+   "parent": "f3000-d0103",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Automation Fund",
+   "code": "3001",
+   "amount": 101000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 74–75"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3001-d0104",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Tax Collector",
+   "code": "3001-0104",
+   "amount": 101000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 74–75"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-d0104-su",
+   "parent": "f3001-d0104",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 40000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 75"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-d0104-os",
+   "parent": "f3001-d0104",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 51000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 75"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-d0104-co",
+   "parent": "f3001-d0104",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 75"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Automation Fund",
+   "code": "3002",
+   "amount": 27450,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 76–77"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3002-d0402",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Circuit Court",
+   "code": "3002-0402",
+   "amount": 27450,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 76–77"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-d0402-su",
+   "parent": "f3002-d0402",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 17450,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-d0402-co",
+   "parent": "f3002-d0402",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Amendment No. 79 Fund",
+   "code": "3004",
+   "amount": 17370,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 78–79"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3004-d0105",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Assessor",
+   "code": "3004-0105",
+   "amount": 17370,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 78–79"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-d0105-su",
+   "parent": "f3004-d0105",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-d0105-os",
+   "parent": "f3004-d0105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 16370,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk's Cost Fund",
+   "code": "3005",
+   "amount": 21000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 80–81"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3005-d0101",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "3005-0101",
+   "amount": 21000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 80–81"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-d0101-su",
+   "parent": "f3005-d0101",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 81"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-d0101-os",
+   "parent": "f3005-d0101",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 11000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 81"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Recorder's Cost Fund",
+   "code": "3006",
+   "amount": 395685,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 82–83"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3006-d0102",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Circuit Clerk",
+   "code": "3006-0102",
+   "amount": 395685,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 82–83"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-d0102-ps",
+   "parent": "f3006-d0102",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 184528,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 82"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-d0102-su",
+   "parent": "f3006-d0102",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 168357,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 83"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-d0102-os",
+   "parent": "f3006-d0102",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 32800,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 83"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-d0102-co",
+   "parent": "f3006-d0102",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 83"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Library Fund",
+   "code": "3008",
+   "amount": 515492,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 84–85"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3008-d0600",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "County Library",
+   "code": "3008-0600",
+   "amount": 515492,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 84–85"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0600-ps",
+   "parent": "f3008-d0600",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 277842,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 84"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0600-su",
+   "parent": "f3008-d0600",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 133500,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 85"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0600-os",
+   "parent": "f3008-d0600",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 99150,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 85"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0600-co",
+   "parent": "f3008-d0600",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 85"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Solid Waste Fund",
+   "code": "3009",
+   "amount": 4903718,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 86–87"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3009-d0701",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Solid Waste",
+   "code": "3009-0701",
+   "amount": 4903718,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 86–87"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-d0701-ps",
+   "parent": "f3009-d0701",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 912318,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 86"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-d0701-su",
+   "parent": "f3009-d0701",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2885000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 87"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-d0701-os",
+   "parent": "f3009-d0701",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 156400,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 87"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-d0701-co",
+   "parent": "f3009-d0701",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 950000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 87"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Child Support Cost Fund",
+   "code": "3012",
+   "amount": 450,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 88–89"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3012-d0114",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Child Support",
+   "code": "3012-0114",
+   "amount": 450,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 88–89"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-d0114-su",
+   "parent": "f3012-d0114",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 200,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 89"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-d0114-os",
+   "parent": "f3012-d0114",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 250,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 89"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Control Fund",
+   "code": "3015",
+   "amount": 13000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 90–91"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3015-d0400",
+   "parent": "f3015",
+   "section": "appropriations",
+   "name": "Sheriff",
+   "code": "3015-0400",
+   "amount": 13000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 90–91"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015-d0400-su",
+   "parent": "f3015-d0400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015-d0400-os",
+   "parent": "f3015-d0400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 12000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Operation and Maintenance Fund",
+   "code": "3017",
+   "amount": 2226067,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 92–93"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3017-d0418",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "County Jail",
+   "code": "3017-0418",
+   "amount": 2226067,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 92–93"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0418-ps",
+   "parent": "f3017-d0418",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1435592,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 92"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0418-su",
+   "parent": "f3017-d0418",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 427000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 93"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0418-os",
+   "parent": "f3017-d0418",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 293775,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 93"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0418-co",
+   "parent": "f3017-d0418",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 69700,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 93"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emergency 911",
+   "code": "3020",
+   "amount": 455739,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 96–97"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3020-d0501",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "911/Central Dispatch",
+   "code": "3020-0501",
+   "amount": 455739,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 96–97"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-d0501-ps",
+   "parent": "f3020-d0501",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 387439,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 96"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-d0501-su",
+   "parent": "f3020-d0501",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 97"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-d0501-os",
+   "parent": "f3020-d0501",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 62300,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 97"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3022",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emergency Vehicle Fund",
+   "code": "3022",
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 98–99"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3022-d0400",
+   "parent": "f3022",
+   "section": "appropriations",
+   "name": "Sheriff",
+   "code": "3022-0400",
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 98–99"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3022-d0400-su",
+   "parent": "f3022-d0400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 99"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3025",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Victim Witness Fund",
+   "code": "3025",
+   "amount": 21150,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 100–101"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3025-d0416",
+   "parent": "f3025",
+   "section": "appropriations",
+   "name": "DPA/Deputy Prosecuting Attorney",
+   "code": "3025-0416",
+   "amount": 21150,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 100–101"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3025-d0416-os",
+   "parent": "f3025-d0416",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 21150,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 101"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Indigent Criminal Defense Fund",
+   "code": "3026",
+   "amount": 14390,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 102–103"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments. The ordinance attachment (p. 130, a scanned page) lists total expenditures of $10,890.00 for this fund, $3,500.00 less than this report; the report includes a $3,500.00 travel line."
+  },
+  {
+   "id": "f3026-d0417",
+   "parent": "f3026",
+   "section": "appropriations",
+   "name": "Public Defender",
+   "code": "3026-0417",
+   "amount": 14390,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 102–103"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026-d0417-su",
+   "parent": "f3026-d0417",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 8540,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 103"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026-d0417-os",
+   "parent": "f3026-d0417",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5850,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 103"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Adult Drug Court Fund",
+   "code": "3028",
+   "amount": 7920,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 104–105"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3028-d0402",
+   "parent": "f3028",
+   "section": "appropriations",
+   "name": "Circuit Court",
+   "code": "3028-0402",
+   "amount": 7920,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 104–105"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028-d0402-su",
+   "parent": "f3028-d0402",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5920,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 105"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028-d0402-os",
+   "parent": "f3028-d0402",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 105"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Juvenile Division Fund",
+   "code": "3031",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 106–107"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3031-d0402",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Circuit Court",
+   "code": "3031-0402",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 106–107"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-d0402-su",
+   "parent": "f3031-d0402",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 107"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-d0402-os",
+   "parent": "f3031-d0402",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 107"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk Commissioner's Fee Fund",
+   "code": "3039",
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 108–109"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3039-d0102",
+   "parent": "f3039",
+   "section": "appropriations",
+   "name": "Circuit Clerk",
+   "code": "3039-0102",
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 108–109"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039-d0102-su",
+   "parent": "f3039-d0102",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 109"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039-d0102-os",
+   "parent": "f3039-d0102",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 109"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessors Late Assessment Fee Fund",
+   "code": "3042",
+   "amount": 9180,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 110–111"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3042-d0105",
+   "parent": "f3042",
+   "section": "appropriations",
+   "name": "Assessors Late Assessment Fee",
+   "code": "3042-0105",
+   "amount": 9180,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 110–111"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042-d0105-su",
+   "parent": "f3042-d0105",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 750,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 111"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042-d0105-os",
+   "parent": "f3042-d0105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 8430,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 111"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3048",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Adult Drug Court - Opioid Settlement",
+   "code": "3048",
+   "amount": 16559.88,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 112–113"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3048-d0421",
+   "parent": "f3048",
+   "section": "appropriations",
+   "name": "Grants-in-Aid - Law Enforcement",
+   "code": "3048-0421",
+   "amount": 16559.88,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 112–113"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3048-d0421-os",
+   "parent": "f3048-d0421",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 16559.88,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 113"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Investigator-Public Defender Fund",
+   "code": "3400",
+   "amount": 19913,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 114"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3400-d0402",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Circuit Court",
+   "code": "3400-0402",
+   "amount": 19913,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 114"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d0402-ps",
+   "parent": "f3400-d0402",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 19913,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 114"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3401",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Rural Community Aid Sales Tax Fund",
+   "code": "3401",
+   "amount": 35000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 115–118"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3401-d0505",
+   "parent": "f3401",
+   "section": "appropriations",
+   "name": "Grants-In-Aid - County Judge",
+   "code": "3401-0505",
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 115–116"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3401-d0505-os",
+   "parent": "f3401-d0505",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 116"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3401-d0602",
+   "parent": "f3401",
+   "section": "appropriations",
+   "name": "Community Center",
+   "code": "3401-0602",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 117–118"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3401-d0602-os",
+   "parent": "f3401-d0602",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 118"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3502",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Federal Grants Fund",
+   "code": "3502",
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 119–120"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3502-d0500",
+   "parent": "f3502",
+   "section": "appropriations",
+   "name": "Office of Emergency Management",
+   "code": "3502-0500",
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 119–120"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3502-d0500-os",
+   "parent": "f3502-d0500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 120"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3506",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Community Development Block Grants Fund",
+   "code": "3506",
+   "amount": 488140,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 121–122"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3506-d1000",
+   "parent": "f3506",
+   "section": "appropriations",
+   "name": "Economic Development",
+   "code": "3506-1000",
+   "amount": 488140,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 121–122"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3506-d1000-su",
+   "parent": "f3506-d1000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 122"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3506-d1000-os",
+   "parent": "f3506-d1000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 26498,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 122"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3506-d1000-co",
+   "parent": "f3506-d1000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 460642,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 122"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3507",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Community Development Block Grants Fund",
+   "code": "3507",
+   "amount": 499730,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 123–125"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3507-d1000",
+   "parent": "f3507",
+   "section": "appropriations",
+   "name": "Economic Development",
+   "code": "3507-1000",
+   "amount": 499730,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "pp. 123–125"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3507-d1000-os",
+   "parent": "f3507-d1000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 76230,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3507-d1000-co",
+   "parent": "f3507-d1000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 423500,
+   "status": "sourced",
+   "source": {
+    "doc": "columbiaar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }

@@ -1,25 +1,3143 @@
 {
-  "meta": {
-    "document": "Cleveland County — no appropriation document ingested yet",
-    "title": "Cleveland County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Cleveland County 2026 adopted budget",
+  "title": "Cleveland County — the money trail",
+  "note": "This is Cleveland County's 2026 budget ordinance (No. 2025-12), passed December 1, 2025 and filed with the state. We use the amounts the ordinance sets for each office and fund. The ordinance also moves $6,000 from County General to fund 3026 and $45,137 from the Ambulance Service fund to County General; those transfers are printed outside the totals shown here.",
+  "grand_total": 6925466,
+  "year": 2026
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General Fund",
+   "code": "1000",
+   "amount": 2519186,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "pp. 124–126"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Cleveland County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge's Office",
+   "code": "1000-0100",
+   "amount": 55260,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-ps",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 44768,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-su",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2950,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-os",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7542,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk's Office",
+   "code": "1000-0101",
+   "amount": 231500,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-ps",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 203989,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-su",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3300,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-os",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 24211,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Clerk's Office",
+   "code": "1000-0102",
+   "amount": 26639,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-ps",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1729,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-su",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2620,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-os",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 22290,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Treasurer's Office",
+   "code": "1000-0103",
+   "amount": 115733,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-ps",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 112069,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-su",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 189,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-os",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3475,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Collector's Office",
+   "code": "1000-0104",
+   "amount": 144145,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-ps",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 130217,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-su",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3248,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-os",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10680,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Assessor's Office",
+   "code": "1000-0105",
+   "amount": 185490,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-ps",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 149222,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-su",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2138,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-os",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 34130,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Board of Equalization",
+   "code": "1000-0106",
+   "amount": 1050,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-ps",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 800,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-os",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 250,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 27550,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-ps",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 24950,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-su",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 100,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-os",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse Maintenance",
+   "code": "1000-0108",
+   "amount": 49089,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-ps",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 21039,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-su",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4900,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-os",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 23150,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Elections",
+   "code": "1000-0109",
+   "amount": 78535,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-ps",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 47240,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-su",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-os",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 25295,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Buildings",
+   "code": "1000-0111",
+   "amount": 4800,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111-su",
+   "parent": "f1000-d0111",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2200,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111-os",
+   "parent": "f1000-d0111",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2600,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0116",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Grants in Aid",
+   "code": "1000-0116",
+   "amount": 26000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The ordinance prints this office as one amount, with no category split."
+  },
+  {
+   "id": "f1000-d0117",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Reappraisal",
+   "code": "1000-0117",
+   "amount": 76209,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117-os",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 76209,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Health Department",
+   "code": "1000-0300",
+   "amount": 17820,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-su",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4900,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-os",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 12920,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff's Office",
+   "code": "1000-0400",
+   "amount": 815661,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-ps",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 709936,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-su",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 75050,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-os",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 29675,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-co",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court",
+   "code": "1000-0409",
+   "amount": 127651,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-ps",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 101618,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-su",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1300,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-os",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 24733,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Court",
+   "code": "1000-0415",
+   "amount": 57306,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415-ps",
+   "parent": "f1000-d0415",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 55331,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415-su",
+   "parent": "f1000-d0415",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 100,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415-os",
+   "parent": "f1000-d0415",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1875,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney",
+   "code": "1000-0416",
+   "amount": 17000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-os",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 17000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Jail",
+   "code": "1000-0418",
+   "amount": 351197,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-ps",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 296532,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-su",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4300,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-os",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 46365,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-co",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Coroner",
+   "code": "1000-0419",
+   "amount": 17175,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 126"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-ps",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 9699,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 126"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-su",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2400,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 126"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-os",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5076,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 126"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "O.E.M. (Office of Emergency Management)",
+   "code": "1000-0500",
+   "amount": 30326,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 126"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-ps",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 20576,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 126"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-su",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2750,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 126"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-os",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 126"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veteran's Office",
+   "code": "1000-0800",
+   "amount": 23665,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 126"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-ps",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 16290,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 126"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-su",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 600,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 126"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-os",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6775,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 126"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Extension Office",
+   "code": "1000-0801",
+   "amount": 38635,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 126"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-su",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 900,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 126"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-os",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 37735,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 126"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0802",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Paupers & Welfare",
+   "code": "1000-0802",
+   "amount": 750,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 126"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0802-os",
+   "parent": "f1000-d0802",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 750,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 126"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1801",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Workers Compensation Fund",
+   "code": "1801",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 126"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1801-ps",
+   "parent": "f1801",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 126"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Road Department Fund",
+   "code": "2000",
+   "amount": 2298444,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-ps",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 895044,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-su",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 901000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-os",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 53900,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-co",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 291500,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-ds",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 157000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Additional Motor Fuel Tax (Act 416 of 2019) Fund",
+   "code": "2003",
+   "amount": 191700,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003-su",
+   "parent": "f2003",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 191700,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Automation Fund",
+   "code": "3000",
+   "amount": 9125,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-su",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-os",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7125,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Automation Fund",
+   "code": "3001",
+   "amount": 29417,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-ps",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1077,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-su",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2250,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-os",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 26090,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Automation Fund",
+   "code": "3002",
+   "amount": 160,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 128"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-su",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 160,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 128"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "District Court Automation Fund",
+   "code": "3003",
+   "amount": 3600,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 128"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3003-os",
+   "parent": "f3003",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3600,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 128"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Amendment 79 Fund",
+   "code": "3004",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 128"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-ps",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 128"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-su",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 128"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-os",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 128"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-co",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 128"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Recorder's Cost Fund",
+   "code": "3006",
+   "amount": 65195,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 128"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-ps",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 53195,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 128"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-su",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 128"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-os",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 128"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Library Fund",
+   "code": "3008",
+   "amount": 134881,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "pp. 128–129"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-ps",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 84921,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-su",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 24400,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-os",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 22560,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-co",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Solid Waste Fund",
+   "code": "3009",
+   "amount": 1111890,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-ps",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 130940,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-su",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 12500,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-os",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 968450,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3010",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk Operating Fund",
+   "code": "3010",
+   "amount": 600,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3010-su",
+   "parent": "f3010",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 600,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Child Support Fund",
+   "code": "3012",
+   "amount": 1400,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-su",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 900,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-os",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Communications & Facility Equipment Fund",
+   "code": "3014",
+   "amount": 20500,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "pp. 129–130"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014-su",
+   "parent": "f3014",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10500,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014-co",
+   "parent": "f3014",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 130"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Operation and Maintenance Fund",
+   "code": "3017",
+   "amount": 54000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 130"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-su",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 26000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 130"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-os",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 23000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 130"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-co",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 130"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Boating Safety Fund",
+   "code": "3019",
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 130"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-co",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 130"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "911 Public Safety Fund",
+   "code": "3020",
+   "amount": 177713,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 130"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-ps",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 157113,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 130"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-su",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 20500,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 130"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-os",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 100,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 130"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Indigent Criminal Defense Fund",
+   "code": "3026",
+   "amount": 8930,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "pp. 130–131"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026-su",
+   "parent": "f3026",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 130"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026-os",
+   "parent": "f3026",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7930,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 130"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Probation Fund",
+   "code": "3031",
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 131"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-su",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 131"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-os",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 131"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3032",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Court Representation Fund",
+   "code": "3032",
+   "amount": 60,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 131"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3032-su",
+   "parent": "f3032",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 60,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 131"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk Commissioner's Fee Fund",
+   "code": "3039",
+   "amount": 400,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 131"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039-su",
+   "parent": "f3039",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 200,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 131"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039-os",
+   "parent": "f3039",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 200,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 131"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Late Assessment Fee Fund",
+   "code": "3042",
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 131"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042-su",
+   "parent": "f3042",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 131"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Ambulance Service Fund",
+   "code": "3400",
+   "amount": 96000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 132"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-su",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 132"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-os",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 92000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 132"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-co",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 132"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3401",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff's Equipment Fund",
+   "code": "3401",
+   "amount": 141000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 132"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3401-co",
+   "parent": "f3401",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 141000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 132"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Special Jail Fees",
+   "code": "3402",
+   "amount": 2600,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 132"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402-os",
+   "parent": "f3402",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2600,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 132"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Additional District Judge Retirement Fund",
+   "code": "3404",
+   "amount": 29500,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "pp. 132–133"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404-ps",
+   "parent": "f3404",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 9500,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 132"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404-os",
+   "parent": "f3404",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 133"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3405",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Hospital Maintenance",
+   "code": "3405",
+   "amount": 2550,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 133"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3405-su",
+   "parent": "f3405",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 133"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3405-os",
+   "parent": "f3405",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 50,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 133"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3505",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Mitigation Grant Fund",
+   "code": "3505",
+   "amount": 700,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 133"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3505-os",
+   "parent": "f3505",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 700,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 133"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3524",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Automated Records Systems Grant Fund",
+   "code": "3524",
+   "amount": 1915,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 134"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3524-os",
+   "parent": "f3524",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1915,
+   "status": "sourced",
+   "source": {
+    "doc": "clevelandar-budget-2026",
+    "page": "p. 134"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }

@@ -1,28 +1,3701 @@
 {
-  "meta": {
-    "document": "Madison County 2025 Appropriation Ordinance (No. 2024-20)",
-    "title": "Madison County — the money trail",
-    "grand_total": 18281798.16,
-    "year": 2025,
-    "note": "Madison County’s total 2025 appropriation, $18,281,798.16, stated in the enacting clause of Appropriation Ordinance 2024-20 (“there is hereby appropriated… the sum of $18,281,798.16”), read from the county’s own ordinance. The department-by-department detail is in the attached budget on file with the County Clerk — adding it is on the docket."
+ "meta": {
+  "document": "Madison County 2026 adopted budget",
+  "title": "Madison County — the money trail",
+  "note": "This is the county's 2026 budget as filed with the state: Ordinance No. 2025-20 and the January 2026 budget detail report it adopts, using the report's \"Original Budget\" column. The county moves money between its own funds; the budget says $1,070,873.58 of the $20,809,465.21 total is these transfers, so those dollars appear in two funds. Without them the county budget is $19,738,591.63.",
+  "year": 2026,
+  "grand_total": 20809465.21
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General",
+   "code": "1000",
+   "amount": 4598134.4,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 81"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
   },
-  "nodes": [
-    {
-      "year": 2025,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "source": {
-        "doc": "madisonar-ord",
-        "page": null
-      },
-      "status": "partial",
-      "id": "all",
-      "parent": null,
-      "name": "All funds (2025 adopted)",
-      "code": null,
-      "amount": 18281798.16,
-      "note": "The county’s total 2025 appropriation across all funds, per the ordinance’s enacting clause."
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-0100",
+   "amount": 201089.65,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-ps",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 181089.65,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-sup",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-osc",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "1000-0101",
+   "amount": 374020.84,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-ps",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 323020.84,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-sup",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-osc",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 36000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Clerk",
+   "code": "1000-0102",
+   "amount": 220286.78,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-ps",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 215786.78,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-sup",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-osc",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3500,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Treasurer",
+   "code": "1000-0103",
+   "amount": 155927.23,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-ps",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 154727.23,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-sup",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 100,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-osc",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1100,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Collector",
+   "code": "1000-0104",
+   "amount": 192513.16,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-ps",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 181513.16,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-sup",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-osc",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 8500,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Assessor",
+   "code": "1000-0105",
+   "amount": 413639.13,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-ps",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 184076.69,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-sup",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-osc",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 199562.44,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Board of Equalization",
+   "code": "1000-0106",
+   "amount": 2250,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-ps",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1750,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-sup",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 100,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-osc",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 400,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 65075,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 47"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-ps",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 52975,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-sup",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 100,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-osc",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 12000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse Maintenance",
+   "code": "1000-0108",
+   "amount": 90000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 49"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-sup",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-osc",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 75000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 49"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Election Commission",
+   "code": "1000-0109",
+   "amount": 174540,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-ps",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 69540,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-sup",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 45000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-osc",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 60000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0110",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Planning Board",
+   "code": "1000-0110",
+   "amount": 22525,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0110-ps",
+   "parent": "f1000-d0110",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 5525,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0110-osc",
+   "parent": "f1000-d0110",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 17000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Buildings",
+   "code": "1000-0111",
+   "amount": 17000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111-sup",
+   "parent": "f1000-d0111",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111-osc",
+   "parent": "f1000-d0111",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Flood Plain",
+   "code": "1000-0117",
+   "amount": 1100,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117-sup",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 100,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117-osc",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0119",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Other County Expenses",
+   "code": "1000-0119",
+   "amount": 48243.77,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0119-ps",
+   "parent": "f1000-d0119",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0119-sup",
+   "parent": "f1000-d0119",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0119-osc",
+   "parent": "f1000-d0119",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0119-debt",
+   "parent": "f1000-d0119",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 44243.77,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0120",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Drug Enforcement",
+   "code": "1000-0120",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0120-osc",
+   "parent": "f1000-d0120",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0121",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Surveyor",
+   "code": "1000-0121",
+   "amount": 100,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0121-osc",
+   "parent": "f1000-d0121",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 100,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0123",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Attorney",
+   "code": "1000-0123",
+   "amount": 13000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0123-osc",
+   "parent": "f1000-d0123",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 13000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Health Unit",
+   "code": "1000-0300",
+   "amount": 35000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-sup",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-osc",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 32000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff",
+   "code": "1000-0400",
+   "amount": 1867288.19,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 63"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-ps",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1397288.19,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-sup",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 130000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-osc",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 190000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-cap",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 150000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court",
+   "code": "1000-0401",
+   "amount": 112000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 65"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-sup",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 63"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-osc",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 110000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 65"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court",
+   "code": "1000-0409",
+   "amount": 60672.02,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-ps",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 23672.02,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 65"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-osc",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 37000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Probation Officer",
+   "code": "1000-0414",
+   "amount": 79309.34,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 69"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-ps",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 71809.34,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-sup",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-osc",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 68"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney",
+   "code": "1000-0416",
+   "amount": 142030.97,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 71"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-ps",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 128430.97,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 69"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-sup",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 70"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-osc",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6600,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 71"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Jail",
+   "code": "1000-0418",
+   "amount": 100000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 72"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-osc",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 100000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 71"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Coroner",
+   "code": "1000-0419",
+   "amount": 18413.95,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-ps",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 13413.95,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 72"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-sup",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 72"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-osc",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Dept of Emergency Management",
+   "code": "1000-0500",
+   "amount": 117230.17,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-ps",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 77230.17,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 74"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-sup",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 17000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 74"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-osc",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 13000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-cap",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0601",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Parks & Recreation",
+   "code": "1000-0601",
+   "amount": 7500,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0601-sup",
+   "parent": "f1000-d0601",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0601-osc",
+   "parent": "f1000-d0601",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veteran Service Officer",
+   "code": "1000-0800",
+   "amount": 22179.2,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-ps",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 18379.2,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 78"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-sup",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 78"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-osc",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2800,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Extension Office",
+   "code": "1000-0801",
+   "amount": 39000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 80"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-ps",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-sup",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-osc",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 8500,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 80"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0802",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Paupers & Welfare",
+   "code": "1000-0802",
+   "amount": 1200,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 80"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0802-osc",
+   "parent": "f1000-d0802",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1200,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 80"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Road & Bridge",
+   "code": "2000",
+   "amount": 6336739.53,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 87"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-ps",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2701927.73,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 83"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-sup",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1600000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 84"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-osc",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 880000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 86"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-debt",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 654811.8,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 86"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-cap",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 500000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 86"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Additional Motor Fuel Tax",
+   "code": "2003",
+   "amount": 155000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 88"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003-sup",
+   "parent": "f2003",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 155000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 88"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Automation",
+   "code": "3000",
+   "amount": 55000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-sup",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 89"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-osc",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 90"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Automation",
+   "code": "3001",
+   "amount": 90000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 93"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-sup",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 45000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 92"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-osc",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 40000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 93"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-cap",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 93"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Court Automation",
+   "code": "3002",
+   "amount": 14000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 94"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-sup",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 94"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-osc",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 94"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-cap",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 94"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Property Tax Relief",
+   "code": "3004",
+   "amount": 12000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 96"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-sup",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 95"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-osc",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 95"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk's Cost",
+   "code": "3005",
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 98"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-sup",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 97"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-osc",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 97"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Recorder's Cost",
+   "code": "3006",
+   "amount": 96158.18,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 101"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-ps",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 69158.18,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 99"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-sup",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 100"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-osc",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 101"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-cap",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 101"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Library",
+   "code": "3008",
+   "amount": 388304.3,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 109"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0600",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Huntsville Library",
+   "code": "3008-0600",
+   "amount": 290916.46,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 104"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0600-ps",
+   "parent": "f3008-d0600",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 216916.46,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 102"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0600-sup",
+   "parent": "f3008-d0600",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 32000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 103"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0600-osc",
+   "parent": "f3008-d0600",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 42000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 104"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0610",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Kingston Library",
+   "code": "3008-0610",
+   "amount": 49573.92,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 107"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0610-ps",
+   "parent": "f3008-d0610",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 23213.92,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 104"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0610-sup",
+   "parent": "f3008-d0610",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 11000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 105"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0610-osc",
+   "parent": "f3008-d0610",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 15360,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 106"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0611",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "St Paul Library",
+   "code": "3008-0611",
+   "amount": 47813.92,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 109"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0611-ps",
+   "parent": "f3008-d0611",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 23213.92,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 107"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0611-sup",
+   "parent": "f3008-d0611",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 11000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 107"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0611-osc",
+   "parent": "f3008-d0611",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 13600,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 108"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Solid Waste & Recycling",
+   "code": "3009",
+   "amount": 1192933.13,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 113"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-d0700",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Solid Waste & Recycling",
+   "code": "3009-0700",
+   "amount": 1168933.13,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 113"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-d0700-ps",
+   "parent": "f3009-d0700",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 707933.13,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 110"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-d0700-sup",
+   "parent": "f3009-d0700",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 65000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 111"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-d0700-osc",
+   "parent": "f3009-d0700",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 376000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 112"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-d0700-cap",
+   "parent": "f3009-d0700",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 113"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-d8888",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Interfund Transfers",
+   "code": "3009-8888",
+   "amount": 24000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 113"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-d8888-tr",
+   "parent": "f3009-d8888",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 24000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 113"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Child Support",
+   "code": "3012",
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 115"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-osc",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 114"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Radio Equipment & Repair",
+   "code": "3014",
+   "amount": 14000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 117"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014-sup",
+   "parent": "f3014",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 116"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014-osc",
+   "parent": "f3014",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 116"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Control Fund",
+   "code": "3015",
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 118"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015-sup",
+   "parent": "f3015",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 118"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Operation & Maintenance",
+   "code": "3017",
+   "amount": 2624760.82,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 121"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "One department in this fund (3017-0418 Special Detention)."
+  },
+  {
+   "id": "f3017-ps",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1504760.82,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 119"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-sup",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 120"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-osc",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 500000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 121"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-cap",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 120000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 121"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Boating Safety",
+   "code": "3019",
+   "amount": 4900,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 122"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-tr",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 4900,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 122"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emergency 911",
+   "code": "3020",
+   "amount": 802976.4,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-ps",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 730976.4,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 123"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-sup",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-osc",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 45000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-cap",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 12000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3021",
+   "parent": null,
+   "section": "appropriations",
+   "name": "EMS 1% Sales Tax",
+   "code": "3021",
+   "amount": 4190311.69,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3021-d0301",
+   "parent": "f3021",
+   "section": "appropriations",
+   "name": "EMS 1% Sales Tax",
+   "code": "3021-0301",
+   "amount": 3184311.69,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3021-d0301-ps",
+   "parent": "f3021-d0301",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2164311.69,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 126"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3021-d0301-sup",
+   "parent": "f3021-d0301",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 170000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3021-d0301-osc",
+   "parent": "f3021-d0301",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 300000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 128"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3021-d0301-cap",
+   "parent": "f3021-d0301",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 550000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3021-d8888",
+   "parent": "f3021",
+   "section": "appropriations",
+   "name": "Interfund Transfers",
+   "code": "3021-8888",
+   "amount": 1006000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3021-d8888-tr",
+   "parent": "f3021-d8888",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 1006000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Court Program",
+   "code": "3028",
+   "amount": 18000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 130"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028-sup",
+   "parent": "f3028",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 130"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028-osc",
+   "parent": "f3028",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 9000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 130"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Senior Activity Center",
+   "code": "3400",
+   "amount": 5300,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 132"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-osc",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5300,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 131"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3401",
+   "parent": null,
+   "section": "appropriations",
+   "name": "K-9",
+   "code": "3401",
+   "amount": 100,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 132"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3401-sup",
+   "parent": "f3401",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 100,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 132"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Recorder's Automation",
+   "code": "3402",
+   "amount": 100000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 133"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402-sup",
+   "parent": "f3402",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 35000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 133"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402-osc",
+   "parent": "f3402",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 35000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 133"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402-cap",
+   "parent": "f3402",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 133"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3407",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Services Grant",
+   "code": "3407",
+   "amount": 4500,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 135"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3407-sup",
+   "parent": "f3407",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4500,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 134"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3502",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Solid Waste Grant Fund",
+   "code": "3502",
+   "amount": 3704.34,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 139"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3502-sup",
+   "parent": "f3502",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3704.34,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 139"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Construction Fund",
+   "code": "4000",
+   "amount": 26642.42,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 140"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "One department in this fund (4000-0418 County Jail)."
+  },
+  {
+   "id": "f4000-osc",
+   "parent": "f4000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 26642.42,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 140"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6009",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Law Library",
+   "code": "6009",
+   "amount": 58000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 141"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6009-sup",
+   "parent": "f6009",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 141"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6009-osc",
+   "parent": "f6009",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 141"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6009-cap",
+   "parent": "f6009",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "madisonar-budget-2026",
+    "page": "p. 141"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }

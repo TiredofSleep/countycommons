@@ -1,25 +1,1199 @@
 {
-  "meta": {
-    "document": "Mississippi County — no appropriation document ingested yet",
-    "title": "Mississippi County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Mississippi County 2026 adopted budget",
+  "title": "Mississippi County — the money trail",
+  "note": "This is Schedule A of the county's 2026 appropriation ordinance (O-2025-44), as filed with the state. It lists one 2026 appropriation for each office and fund. The General Fund plans to move $2,413,802.28 to other county funds (senior citizens and jail operations), so those dollars appear in both places.",
+  "year": 2026,
+  "grand_total": 52345777.92
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General Fund",
+   "code": "1000",
+   "amount": 18930176.52,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"Total County General Expenditures.\" This schedule prints one total per office, not category totals."
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Mississippi County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-0100",
+   "amount": 574296.71,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "1000-0101",
+   "amount": 635534.39,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Clerk",
+   "code": "1000-0102",
+   "amount": 766499.65,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Treasurer",
+   "code": "1000-0103",
+   "amount": 514712.87,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Collector",
+   "code": "1000-0104",
+   "amount": 423842.67,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Tax Assessor",
+   "code": "1000-0105",
+   "amount": 831464.32,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Quorum Court",
+   "code": "1000-0107",
+   "amount": 239188.09,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Courthouses",
+   "code": "1000-0108",
+   "amount": 4561790.7,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Election Office",
+   "code": "1000-0109",
+   "amount": 141450,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Other County Expenses",
+   "code": "1000-0111",
+   "amount": 393421.52,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Health Department - Bly",
+   "code": "1000-0300",
+   "amount": 54536.4,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0305",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Health Department - Osc",
+   "code": "1000-0305",
+   "amount": 49989.33,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0305b",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Mental Health Court",
+   "code": "1000-0305",
+   "amount": 68546.15,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The schedule prints code 1000.0305 for both this line and County Health Department - Osc."
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Sheriff Department",
+   "code": "1000-0400",
+   "amount": 5400298.11,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court",
+   "code": "1000-0401",
+   "amount": 58400,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Judge Dan Ritchey",
+   "code": "1000-0403",
+   "amount": 68182.91,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Chickasawba District Civil Division",
+   "code": "1000-0409",
+   "amount": 73255.28,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0410",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Osceola District Civil Division",
+   "code": "1000-0410",
+   "amount": 68332.45,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Intake",
+   "code": "1000-0415",
+   "amount": 575802.03,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney Office",
+   "code": "1000-0416",
+   "amount": 324109.31,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0417",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Public Defender Office",
+   "code": "1000-0417",
+   "amount": 183057.43,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Coroner",
+   "code": "1000-0419",
+   "amount": 70434.24,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Office of Emergency Management",
+   "code": "1000-0500",
+   "amount": 200903.93,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veterans Services",
+   "code": "1000-0800",
+   "amount": 108575.75,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Cooperative Extension Office",
+   "code": "1000-0801",
+   "amount": 128550,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0802",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Paupers & Welfare",
+   "code": "1000-0802",
+   "amount": 1200,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d8888",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Transfers Out to Other Funds",
+   "code": "1000-8888",
+   "amount": 2413802.28,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Money the General Fund moves to other county funds; the schedule marks it \"(Sr.Cz. & Jail Opr)\" (senior citizens and jail operations)."
+  },
+  {
+   "id": "f1002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "MSCO Insurance Account",
+   "code": "1002",
+   "amount": 18000,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 1002.0118."
+  },
+  {
+   "id": "f1004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Inmate Incentive Program",
+   "code": "1004",
+   "amount": 17200,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 1004.0418."
+  },
+  {
+   "id": "f1006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "ARPA Revenue Replacement Fund",
+   "code": "1006",
+   "amount": 452904.06,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Road Department",
+   "code": "2000",
+   "amount": 5221512.4,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 2000.0200."
+  },
+  {
+   "id": "f2003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Additional Motor Fuel Tax-Act 416 of 2019",
+   "code": "2003",
+   "amount": 159246,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 2003.0200."
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Treasurer Automation",
+   "code": "3000",
+   "amount": 40682.66,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3000.0103."
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Tax Collector Automation",
+   "code": "3001",
+   "amount": 98000,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3001.0104."
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Court Automation Act 1809",
+   "code": "3002",
+   "amount": 9100,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3002.0404."
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor Amendment 79",
+   "code": "3004",
+   "amount": 34000,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3004.0105."
+  },
+  {
+   "id": "f3005",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk Automation",
+   "code": "3005",
+   "amount": 13650,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3005.0101."
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit /Recorder 25% - Blytheville",
+   "code": "3006",
+   "amount": 21500,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3006.0102."
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Library Fund",
+   "code": "3008",
+   "amount": 1195681.5,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3008.0600."
+  },
+  {
+   "id": "f3009",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Solid Waste/Landfill",
+   "code": "3009",
+   "amount": 4336841.64,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3009.0700."
+  },
+  {
+   "id": "f3011",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Property Reappraisal",
+   "code": "3011",
+   "amount": 196056,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3011.0117."
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk Child Support Fees",
+   "code": "3012",
+   "amount": 300,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3012.0102."
+  },
+  {
+   "id": "f3014",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Communication/Radio Fund",
+   "code": "3014",
+   "amount": 67150,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3014.0400."
+  },
+  {
+   "id": "f3015",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff Drug Control Fund",
+   "code": "3015",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3015.0400."
+  },
+  {
+   "id": "f3017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "MSCO Detention Center Act 1188",
+   "code": "3017",
+   "amount": 94000,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3017.0434."
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Act 122 Boating Safety",
+   "code": "3019",
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3019.0505."
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "E-911 Emergency/Flood Plain",
+   "code": "3020",
+   "amount": 552313.19,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3020.0501."
+  },
+  {
+   "id": "f3024",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Public Defender User Fee Fund",
+   "code": "3024",
+   "amount": 9000,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3024.0417."
+  },
+  {
+   "id": "f3028",
+   "parent": null,
+   "section": "appropriations",
+   "name": "MSCO Adult Drug Court",
+   "code": "3028",
+   "amount": 2800,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3028.0405."
+  },
+  {
+   "id": "f3031",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Division of Circuit Court",
+   "code": "3031",
+   "amount": 20400,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3031.0414."
+  },
+  {
+   "id": "f3039",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk Commissioners Fees",
+   "code": "3039",
+   "amount": 4250,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3039.0102."
+  },
+  {
+   "id": "f3048",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Opioid Settlement Fund-Adult Drug Court",
+   "code": "3048",
+   "amount": 15616.06,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3048.0405."
+  },
+  {
+   "id": "f3400",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Hospital Fund",
+   "code": "3400",
+   "amount": 4700000,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3400.0302."
+  },
+  {
+   "id": "f3401",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Senior Citizens Center",
+   "code": "3401",
+   "amount": 784137.93,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3401.0804."
+  },
+  {
+   "id": "f3404",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit/Recorder 25% - Osceola",
+   "code": "3404",
+   "amount": 18000,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3404.0102."
+  },
+  {
+   "id": "f3405",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit/Recorder 75% @ Large",
+   "code": "3405",
+   "amount": 237204.42,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3405.0102."
+  },
+  {
+   "id": "f3410",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff Emergency Operations Fund",
+   "code": "3410",
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3410.0400."
+  },
+  {
+   "id": "f3414",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Economic Development Fund",
+   "code": "3414",
+   "amount": 9412084.33,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3414.0129."
+  },
+  {
+   "id": "f3418",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Sales Tax Fund",
+   "code": "3418",
+   "amount": 170000,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3418.0119."
+  },
+  {
+   "id": "f3498",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Jail Operations Fund",
+   "code": "3498",
+   "amount": 5044263.45,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3498.0418."
+  },
+  {
+   "id": "f3502",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Federal Grant Funds",
+   "code": "3502",
+   "amount": 100000,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3504",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Juvenile Grant Fund",
+   "code": "3504",
+   "amount": 4535.23,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3504.0400."
+  },
+  {
+   "id": "f3512",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff JAG Grant",
+   "code": "3512",
+   "amount": 14000,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 3512.0400."
+  },
+  {
+   "id": "f4800",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Blytheville Courthouse Construction Fund",
+   "code": "4800",
+   "amount": 145646.84,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 4800.0108."
+  },
+  {
+   "id": "f4801",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Osceola Courthouse Construction Fund",
+   "code": "4801",
+   "amount": 198025.69,
+   "status": "sourced",
+   "source": {
+    "doc": "mississippiar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed with department code 4801.0108."
+  }
+ ]
 }

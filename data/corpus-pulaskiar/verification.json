@@ -1,21 +1,624 @@
 {
-  "run_at": "2026-08-17T01:47:20.814Z",
+  "run_at": "2026-10-07T02:50:00.705Z",
   "corpus_year": 2026,
-  "grand_total": 0,
+  "grand_total": 181901627,
   "summary": {
-    "total_checks": 7,
-    "passed": 7,
+    "total_checks": 74,
+    "passed": 74,
     "failed": 0
   },
   "checks": [
+    {
+      "node": "f1000",
+      "name": "General Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 105627735,
+      "computed": 105627735,
+      "detail": "51 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0100",
+      "name": "County Judge",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 676006,
+      "computed": 676006,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0120",
+      "name": "General County Government",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4676688,
+      "computed": 4676688,
+      "detail": "1 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0117",
+      "name": "Communications",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 274619,
+      "computed": 274619,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0425",
+      "name": "Juvenile Detention",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 2543166,
+      "computed": 2543166,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0108",
+      "name": "General Services",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 3349384,
+      "computed": 3349384,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0121",
+      "name": "Human Resources",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 1364294,
+      "computed": 1364294,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0115",
+      "name": "Information Systems",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 1098872,
+      "computed": 1098872,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0113",
+      "name": "Comptroller",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 1476021,
+      "computed": 1476021,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0806",
+      "name": "Community Services",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 729304,
+      "computed": 729304,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0300",
+      "name": "Pulaski County Health Units",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 391760,
+      "computed": 391760,
+      "detail": "1 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0801",
+      "name": "County Extension",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 15650,
+      "computed": 15650,
+      "detail": "1 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0804",
+      "name": "Youth Services",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 1107522,
+      "computed": 1107522,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0605",
+      "name": "2 Rivers Park",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 1311405,
+      "computed": 1311405,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0500",
+      "name": "OEM",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 658444,
+      "computed": 658444,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0110",
+      "name": "Planning & Development",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 570661,
+      "computed": 570661,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0446",
+      "name": "Animal Services",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 380937,
+      "computed": 380937,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0419",
+      "name": "Coroner",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 1692666,
+      "computed": 1692666,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0122",
+      "name": "County Civil Attorney",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 1046577,
+      "computed": 1046577,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0445",
+      "name": "CASA",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 138599,
+      "computed": 138599,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0101",
+      "name": "Circuit Clerk",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 6172418,
+      "computed": 6172418,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0106",
+      "name": "Board of Equalization",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 101003,
+      "computed": 101003,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0103",
+      "name": "Juror Fees",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 351590,
+      "computed": 351590,
+      "detail": "1 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0400",
+      "name": "Sheriff Enforcement",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 16051817,
+      "computed": 16051817,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0418",
+      "name": "Sheriff - Detention Facility",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 33185264,
+      "computed": 33185264,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0450",
+      "name": "Detention Medical",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 7847038,
+      "computed": 7847038,
+      "detail": "1 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0401",
+      "name": "1st Division",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 432846,
+      "computed": 432846,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0402",
+      "name": "2nd Division",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 307141,
+      "computed": 307141,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0403",
+      "name": "3rd Division",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 314116,
+      "computed": 314116,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0404",
+      "name": "4th Division",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 281034,
+      "computed": 281034,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0405",
+      "name": "5th Division",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 406116,
+      "computed": 406116,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0426",
+      "name": "6th Division",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 322738,
+      "computed": 322738,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0427",
+      "name": "7th Division",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 443218,
+      "computed": 443218,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0435",
+      "name": "8th Division",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 1053963,
+      "computed": 1053963,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0436",
+      "name": "9th Division",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 463214,
+      "computed": 463214,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0437",
+      "name": "10th Division",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 1235751,
+      "computed": 1235751,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0434",
+      "name": "11th Division",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 425979,
+      "computed": 425979,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0428",
+      "name": "12th Division",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 301451,
+      "computed": 301451,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0429",
+      "name": "13th Division",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 295961,
+      "computed": 295961,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0430",
+      "name": "14th Division",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 295713,
+      "computed": 295713,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0431",
+      "name": "15th Division",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 279417,
+      "computed": 279417,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0432",
+      "name": "16th Division",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 513712,
+      "computed": 513712,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0433",
+      "name": "17th Division",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 391423,
+      "computed": 391423,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0409",
+      "name": "District Court",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 1699876,
+      "computed": 1699876,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0410",
+      "name": "District YAPP",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 190549,
+      "computed": 190549,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0107",
+      "name": "Quorum Court",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 667937,
+      "computed": 667937,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0416",
+      "name": "Prosecuting Attorney",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 3443499,
+      "computed": 3443499,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0440",
+      "name": "Victim/Witness Assistance",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 912715,
+      "computed": 912715,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0441",
+      "name": "Hot Check Program",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 78976,
+      "computed": 78976,
+      "detail": "1 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0109",
+      "name": "Election Department",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 2470792,
+      "computed": 2470792,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0417",
+      "name": "Public Defender",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 1027772,
+      "computed": 1027772,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0447",
+      "name": "PD Conflicts",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 160121,
+      "computed": 160121,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f2000",
+      "name": "Road & Bridge Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 26293517,
+      "computed": 26293517,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f7001",
+      "name": "Sanitation Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 7539351,
+      "computed": 7539351,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1801",
+      "name": "Assessor Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 10552329,
+      "computed": 10552329,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1803",
+      "name": "Treasurer / Collector Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 746451,
+      "computed": 746451,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3019",
+      "name": "Boating & Safety Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 29102,
+      "computed": 29102,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3015",
+      "name": "Drug Control (State) Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 116089,
+      "computed": 116089,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3402",
+      "name": "Drug Seizure (Federal) Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 110000,
+      "computed": 110000,
+      "detail": "1 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1804",
+      "name": "Collector Salary and Expense Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 6718654,
+      "computed": 6718654,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3014",
+      "name": "Communication Facility Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 1300000,
+      "computed": 1300000,
+      "detail": "1 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3403",
+      "name": "Regional Detention Act 1188 of 2003 Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 814101,
+      "computed": 814101,
+      "detail": "1 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3008",
+      "name": "Central Arkansas Library",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 2175995,
+      "computed": 2175995,
+      "detail": "1 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3406",
+      "name": "Sheriff IRS Seizure",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 275000,
+      "computed": 275000,
+      "detail": "1 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3012",
+      "name": "Circuit Clerk - Support Collection",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 60000,
+      "computed": 60000,
+      "detail": "1 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3018",
+      "name": "Regional Detention Act 117",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 100000,
+      "computed": 100000,
+      "detail": "1 children sum to the parent total exactly."
+    },
+    {
+      "node": "f2003",
+      "name": "Motor Fuel Tax Fund (Act 416 of 2019)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 233035,
+      "computed": 233035,
+      "detail": "1 children sum to the parent total exactly."
+    },
     {
       "node": "__grand_total__",
       "name": "Ordinance grand total",
       "kind": "grand-total",
       "ok": true,
-      "expected": 0,
-      "computed": 0,
-      "detail": "1 top-level funds sum to the ordinance's stated total exactly."
+      "expected": 181901627,
+      "computed": 181901627,
+      "detail": "29 top-level funds sum to the ordinance's stated total exactly."
     },
     {
       "node": "__activity_chain__",
@@ -24,7 +627,7 @@
       "ok": true,
       "expected": null,
       "computed": null,
-      "detail": "Chain verified: 90 entries, head 810721fca416c21b…"
+      "detail": "Chain verified: 130 entries, head 716fd1d6dfbacce6…"
     },
     {
       "node": "__recount__",

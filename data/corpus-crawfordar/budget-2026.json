@@ -1,25 +1,4259 @@
 {
-  "meta": {
-    "document": "Crawford County — no appropriation document ingested yet",
-    "title": "Crawford County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Crawford County 2026 adopted budget",
+  "title": "Crawford County — the money trail",
+  "note": "This is Crawford County's 2026 appropriation ordinance (No. 2025-33, amended) as filed with the state. We use the amounts the ordinance appropriates, with category detail from its attachments. The pages are scanned images, so every number was read by eye and checked against the printed totals.",
+  "grand_total": 31512961.75,
+  "year": 2026
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General Fund",
+   "code": "1000",
+   "amount": 11033945.1,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "pp. 1–2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Crawford County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-0100",
+   "amount": 828322.87,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-ps",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 434905.1,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-su",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 24000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-os",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 323400,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-co",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 46017.77,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "1000-0101",
+   "amount": 611557.47,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-ps",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 511657.47,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-su",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 57400,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-os",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 42500,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Clerk",
+   "code": "1000-0102",
+   "amount": 756734.63,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-ps",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 750534.63,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-su",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-os",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5700,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Treasurer",
+   "code": "1000-0103",
+   "amount": 201118.61,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-ps",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 175318.61,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-su",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-os",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10800,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff",
+   "code": "1000-0400",
+   "amount": 2417742.06,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-ps",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2417742.06,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Tax Collector",
+   "code": "1000-0104",
+   "amount": 502301.52,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-ps",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 502301.52,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Tax Assessor",
+   "code": "1000-0105",
+   "amount": 1098670.68,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-ps",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 705840.68,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-su",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 70950,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-os",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 321880,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Board of Equalization",
+   "code": "1000-0106",
+   "amount": 9000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-ps",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-su",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 250,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-os",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 750,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court Division I",
+   "code": "1000-0401",
+   "amount": 107075.01,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-ps",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 68075.01,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-su",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 21000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-os",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 18000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court Division II",
+   "code": "1000-0402",
+   "amount": 100000.01,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-ps",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 68075.01,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-su",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 12940,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-os",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 18985,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court Division III",
+   "code": "1000-0403",
+   "amount": 155825.01,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403-ps",
+   "parent": "f1000-d0403",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 68075.01,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403-su",
+   "parent": "f1000-d0403",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 16950,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403-os",
+   "parent": "f1000-d0403",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 70800,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court",
+   "code": "1000-0409",
+   "amount": 400000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-os",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 400000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0417",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Public Defender",
+   "code": "1000-0417",
+   "amount": 173517.36,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0417-ps",
+   "parent": "f1000-d0417",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 88717.36,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0417-su",
+   "parent": "f1000-d0417",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 32050,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0417-os",
+   "parent": "f1000-d0417",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 52750,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 125113.57,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-ps",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 111288.57,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-su",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-os",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 12825,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Court",
+   "code": "1000-0414",
+   "amount": 474321.24,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-ps",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 373685.74,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-su",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 19355.5,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-os",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 81280,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney",
+   "code": "1000-0416",
+   "amount": 480108.63,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-ps",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 480108.63,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse Maintenance",
+   "code": "1000-0108",
+   "amount": 385986.78,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-ps",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 136256.78,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-su",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 79230,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-os",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 170500,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Jail",
+   "code": "1000-0418",
+   "amount": 1271817.84,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-ps",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1271817.84,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Health Department",
+   "code": "1000-0300",
+   "amount": 63960,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-su",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7660,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-os",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 56300,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Election Commission",
+   "code": "1000-0109",
+   "amount": 211583.54,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-ps",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 120354.14,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-su",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 21000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-os",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 60229.4,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-co",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Coroner",
+   "code": "1000-0419",
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-os",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0802",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Paupers & Welfare",
+   "code": "1000-0802",
+   "amount": 1275,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0802-os",
+   "parent": "f1000-d0802",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1275,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "ADEM",
+   "code": "1000-0500",
+   "amount": 143163.98,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-ps",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 76263.98,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-su",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 50500,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-os",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 16400,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0603",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "AR Historic Preservation Grant",
+   "code": "1000-0603",
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0603-os",
+   "parent": "f1000-d0603",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Buildings",
+   "code": "1000-0111",
+   "amount": 101000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111-su",
+   "parent": "f1000-d0111",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 86000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111-os",
+   "parent": "f1000-d0111",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Extension Service",
+   "code": "1000-0801",
+   "amount": 63309.4,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-ps",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 41634.4,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-su",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2075,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-os",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 19600,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0604",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "CC Fair Association",
+   "code": "1000-0604",
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0604-os",
+   "parent": "f1000-d0604",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0805",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "CC Senior Community Action",
+   "code": "1000-0805",
+   "amount": 60000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0805-os",
+   "parent": "f1000-d0805",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 60000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0806",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "W.A.P.D.D.",
+   "code": "1000-0806",
+   "amount": 10341,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0806-os",
+   "parent": "f1000-d0806",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10341,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0115",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Information Technology",
+   "code": "1000-0115",
+   "amount": 117834.6,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0115-ps",
+   "parent": "f1000-d0115",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 22134.6,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0115-su",
+   "parent": "f1000-d0115",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 91700,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0115-os",
+   "parent": "f1000-d0115",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse Annex",
+   "code": "1000-0117",
+   "amount": 146264.29,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117-su",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 146264.29,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3429",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sales Tax 40% Public Safety Fund",
+   "code": "3429",
+   "amount": 1938031.74,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "pp. 2–3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3429-d0400",
+   "parent": "f3429",
+   "section": "appropriations",
+   "name": "Sheriff - Sales Tax Public Safety",
+   "code": "3429-0400",
+   "amount": 972713.83,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3429-d0400-ps",
+   "parent": "f3429-d0400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 528213.83,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3429-d0400-su",
+   "parent": "f3429-d0400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 264100,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3429-d0400-os",
+   "parent": "f3429-d0400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 180400,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3429-d0414",
+   "parent": "f3429",
+   "section": "appropriations",
+   "name": "Juvenile - Sales Tax Public Safety",
+   "code": "3429-0414",
+   "amount": 124975.3,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3429-d0414-ps",
+   "parent": "f3429-d0414",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 124975.3,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3429-d0418",
+   "parent": "f3429",
+   "section": "appropriations",
+   "name": "Jail - Sales Tax Public Safety",
+   "code": "3429-0418",
+   "amount": 202200,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3429-d0418-su",
+   "parent": "f3429-d0418",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 144000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3429-d0418-os",
+   "parent": "f3429-d0418",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 58200,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3429-d0419",
+   "parent": "f3429",
+   "section": "appropriations",
+   "name": "Coroner - Sales Tax Public Safety",
+   "code": "3429-0419",
+   "amount": 249483.61,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3429-d0419-ps",
+   "parent": "f3429-d0419",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 186083.61,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3429-d0419-su",
+   "parent": "f3429-d0419",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 46000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3429-d0419-os",
+   "parent": "f3429-d0419",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 17400,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3429-d0500",
+   "parent": "f3429",
+   "section": "appropriations",
+   "name": "ADEM - Sales Tax Public Safety",
+   "code": "3429-0500",
+   "amount": 46000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Section 4 of the ordinance (p. 2) appropriates $46,000.00; Attachment \"C\" (p. 22) lists supplies $40,000 and capital outlay $3,000, total $43,000.00. Printed total is $46,000.00; the categories listed add to $43,000.00."
+  },
+  {
+   "id": "f3429-d0500-su",
+   "parent": "f3429-d0500",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 40000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3429-d0500-co",
+   "parent": "f3429-d0500",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3429-d0506",
+   "parent": "f3429",
+   "section": "appropriations",
+   "name": "Comprehensive Juvenile Services - Sales Tax Public Safety",
+   "code": "3429-0506",
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3429-d0506-os",
+   "parent": "f3429-d0506",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3429-d0502",
+   "parent": "f3429",
+   "section": "appropriations",
+   "name": "Rural Fire Association",
+   "code": "3429-0502",
+   "amount": 305987,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3429-d0502-ps",
+   "parent": "f3429-d0502",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 9000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3429-d0502-su",
+   "parent": "f3429-d0502",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 137454,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3429-d0502-os",
+   "parent": "f3429-d0502",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 99533,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3429-d0502-co",
+   "parent": "f3429-d0502",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 60000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3429-d0504",
+   "parent": "f3429",
+   "section": "appropriations",
+   "name": "Hazmat - Sales Tax Public Safety",
+   "code": "3429-0504",
+   "amount": 12772,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3429-d0504-ps",
+   "parent": "f3429-d0504",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 12772,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3429-d0420",
+   "parent": "f3429",
+   "section": "appropriations",
+   "name": "Constables - Sales Tax Public Safety",
+   "code": "3429-0420",
+   "amount": 3900,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3429-d0420-ps",
+   "parent": "f3429-d0420",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 3900,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "ARPA Revenue Replacement Fund",
+   "code": "1006",
+   "amount": 619578.34,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f1006-d0100",
+   "parent": "f1006",
+   "section": "appropriations",
+   "name": "ARPA Revenue Budget 0100",
+   "code": "1006-0100",
+   "amount": 597.31,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1006-d0501",
+   "parent": "f1006",
+   "section": "appropriations",
+   "name": "ARPA Revenue Budget 0501",
+   "code": "1006-0501",
+   "amount": 169641.91,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1006-d0805",
+   "parent": "f1006",
+   "section": "appropriations",
+   "name": "ARPA Revenue Budget 0805",
+   "code": "1006-0805",
+   "amount": 3431.25,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1006-d0300",
+   "parent": "f1006",
+   "section": "appropriations",
+   "name": "ARPA Revenue Budget 0300",
+   "code": "1006-0300",
+   "amount": 48204.04,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1006-d0400",
+   "parent": "f1006",
+   "section": "appropriations",
+   "name": "ARPA Revenue Budget 0400",
+   "code": "1006-0400",
+   "amount": 397703.83,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Highway Fund",
+   "code": "2000",
+   "amount": 9590008.25,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-d0200",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "County Highway",
+   "code": "2000-0200",
+   "amount": 7730008.25,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-d0200-ps",
+   "parent": "f2000-d0200",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2873908.25,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-d0200-su",
+   "parent": "f2000-d0200",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3327000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-d0200-os",
+   "parent": "f2000-d0200",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 994100,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-d0200-co",
+   "parent": "f2000-d0200",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 535000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-d0215",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Sales Tax Department",
+   "code": "2000-0215",
+   "amount": 1860000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-d0215-su",
+   "parent": "f2000-d0215",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1250000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-d0215-co",
+   "parent": "f2000-d0215",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 610000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Library Fund",
+   "code": "3008",
+   "amount": 1461106.16,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0600",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "County Library",
+   "code": "3008-0600",
+   "amount": 1459906.16,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0600-ps",
+   "parent": "f3008-d0600",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1046106.16,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0600-su",
+   "parent": "f3008-d0600",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 307900,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0600-os",
+   "parent": "f3008-d0600",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 85900,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0600-co",
+   "parent": "f3008-d0600",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0601",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Alma Petty Cash",
+   "code": "3008-0601",
+   "amount": 300,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0601-os",
+   "parent": "f3008-d0601",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 300,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0602",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Cedarville Petty Cash",
+   "code": "3008-0602",
+   "amount": 300,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0602-os",
+   "parent": "f3008-d0602",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 300,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0604",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Mountainburg Petty Cash",
+   "code": "3008-0604",
+   "amount": 300,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0604-os",
+   "parent": "f3008-d0604",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 300,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0605",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Mulberry Petty Cash",
+   "code": "3008-0605",
+   "amount": 300,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0605-os",
+   "parent": "f3008-d0605",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 300,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Automation Fund",
+   "code": "3002",
+   "amount": 23243.74,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3002-d0401",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Circuit Court Automation (0401)",
+   "code": "3002-0401",
+   "amount": 6243.74,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-d0403",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Circuit Court Automation (0403)",
+   "code": "3002-0403",
+   "amount": 17000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Additional Motor Fuel Tax Act 416 of 2019",
+   "code": "2003",
+   "amount": 100000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003-su",
+   "parent": "f2003",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 100000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "E-911 Fund",
+   "code": "3020",
+   "amount": 2004532.66,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-ps",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1194332.41,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-su",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 398000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-os",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 362200.25,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-co",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 50000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1802",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Hazmat Fund",
+   "code": "1802",
+   "amount": 36900,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1802-ps",
+   "parent": "f1802",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 13000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1802-su",
+   "parent": "f1802",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6800,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1802-os",
+   "parent": "f1802",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 600,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1802-co",
+   "parent": "f1802",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 16500,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Automation Fund",
+   "code": "3000",
+   "amount": 64000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-ps",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-su",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 13000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-os",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 11000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-co",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 35000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Automation Fund",
+   "code": "3001",
+   "amount": 106700,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-su",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 55700,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-os",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 51000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Amendment 79 Fund",
+   "code": "3004",
+   "amount": 9000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-su",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-os",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7500,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk's Cost Fund",
+   "code": "3005",
+   "amount": 70000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-su",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-os",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 60000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Act 768 Fund (25%)",
+   "code": "3006",
+   "amount": 113100,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-su",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-os",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 71100,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-co",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 35000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Fund",
+   "code": "3009",
+   "amount": 3600,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-os",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3600,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk's Support Collections Cost Fund 80%",
+   "code": "3012",
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-os",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Communication Facilities & Equip. Fund",
+   "code": "3014",
+   "amount": 32200,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014-su",
+   "parent": "f3014",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 29000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014-os",
+   "parent": "f3014",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3200,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Court Program Fund",
+   "code": "3015",
+   "amount": 44000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015-su",
+   "parent": "f3015",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015-os",
+   "parent": "f3015",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 24000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Enforcement Overtime Fund",
+   "code": "3017",
+   "amount": 4918.8,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-ps",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 4918.8,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3018",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Detention Center Building Fund",
+   "code": "3018",
+   "amount": 152477,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3018-su",
+   "parent": "f3018",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 141000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3018-os",
+   "parent": "f3018",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 11477,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Boating Safety Fund",
+   "code": "3019",
+   "amount": 9000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-su",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-os",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Probation Fund",
+   "code": "3031",
+   "amount": 18500,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-os",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 18500,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk's Commissioner's Fee Fund",
+   "code": "3039",
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039-su",
+   "parent": "f3039",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3041",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk's Commission Fee Fund",
+   "code": "3041",
+   "amount": 94.32,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3041-os",
+   "parent": "f3041",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 94.32,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3428",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail & Law Enforcement (1/4 Cent Sales Tax) Fund",
+   "code": "3428",
+   "amount": 3756022.84,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3428-ps",
+   "parent": "f3428",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1726122.84,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3428-su",
+   "parent": "f3428",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 760900,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3428-os",
+   "parent": "f3428",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1269000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3430",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Act 768 Fund (75%)",
+   "code": "3430",
+   "amount": 254518.33,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3430-ps",
+   "parent": "f3430",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 207218.33,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3430-su",
+   "parent": "f3430",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 16700,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3430-os",
+   "parent": "f3430",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 30600,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3804",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Division II Circuit Court Grant Fund",
+   "code": "3804",
+   "amount": 9717.66,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3804-os",
+   "parent": "f3804",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 9717.66,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3850",
+   "parent": null,
+   "section": "appropriations",
+   "name": "MRC Grant Fund",
+   "code": "3850",
+   "amount": 486.98,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3850-os",
+   "parent": "f3850",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 486.98,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3432",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk Passport Fund",
+   "code": "3432",
+   "amount": 9500,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3432-os",
+   "parent": "f3432",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 8500,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3432-co",
+   "parent": "f3432",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3433",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk Passport Photo Fund",
+   "code": "3433",
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3433-su",
+   "parent": "f3433",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3701",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Compliance Grant",
+   "code": "3701",
+   "amount": 5279.83,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed only as a fund total; no category detail in the attachments."
+  },
+  {
+   "id": "f3011",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Division III Fund (Mental Health Court)",
+   "code": "3011",
+   "amount": 38500,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3011-su",
+   "parent": "f3011",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3011-os",
+   "parent": "f3011",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 28500,
+   "status": "sourced",
+   "source": {
+    "doc": "crawfordar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }

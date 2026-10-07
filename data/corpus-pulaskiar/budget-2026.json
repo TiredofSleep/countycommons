@@ -1,25 +1,3629 @@
 {
-  "meta": {
-    "document": "Pulaski County — no appropriation document ingested yet",
-    "title": "Pulaski County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Pulaski County 2026 adopted budget",
+  "title": "Pulaski County — the money trail",
+  "note": "This is the county's 2026 budget as filed with the state: Budget Ordinance No. 25-OR-52 and the annual budget it adopts. Fund amounts are the ordinance's \"Appropriation\" lines; departments and their salary and \"M&O\" (maintenance and operations) totals come from the budget pages. Some funds pay for work in other funds, so a few dollars may be counted twice.",
+  "year": 2026,
+  "grand_total": 181901627
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "General Fund",
+   "code": "1000",
+   "amount": 105627735,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Pulaski County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-0100",
+   "amount": 676006,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-ps",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 656818,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-mo",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 19188,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0120",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "General County Government",
+   "code": "1000-0120",
+   "amount": 4676688,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0120-mo",
+   "parent": "f1000-d0120",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 4676688,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0117",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Communications",
+   "code": "1000-0117",
+   "amount": 274619,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117-ps",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 191769,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117-mo",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 82850,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0425",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Detention",
+   "code": "1000-0425",
+   "amount": 2543166,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0425-ps",
+   "parent": "f1000-d0425",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2231466,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0425-mo",
+   "parent": "f1000-d0425",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 311700,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "General Services",
+   "code": "1000-0108",
+   "amount": 3349384,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-ps",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1703012,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-mo",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 1646372,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0121",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Human Resources",
+   "code": "1000-0121",
+   "amount": 1364294,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0121-ps",
+   "parent": "f1000-d0121",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 924590,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0121-mo",
+   "parent": "f1000-d0121",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 439704,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0115",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Information Systems",
+   "code": "1000-0115",
+   "amount": 1098872,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0115-ps",
+   "parent": "f1000-d0115",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 829781,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0115-mo",
+   "parent": "f1000-d0115",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 269091,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0113",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Comptroller",
+   "code": "1000-0113",
+   "amount": 1476021,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0113-ps",
+   "parent": "f1000-d0113",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1423995,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0113-mo",
+   "parent": "f1000-d0113",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 52026,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0806",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Community Services",
+   "code": "1000-0806",
+   "amount": 729304,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0806-ps",
+   "parent": "f1000-d0806",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 534535,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0806-mo",
+   "parent": "f1000-d0806",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 194769,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Pulaski County Health Units",
+   "code": "1000-0300",
+   "amount": 391760,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-mo",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 391760,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Extension",
+   "code": "1000-0801",
+   "amount": 15650,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-mo",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 15650,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0804",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Youth Services",
+   "code": "1000-0804",
+   "amount": 1107522,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0804-ps",
+   "parent": "f1000-d0804",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 848736,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0804-mo",
+   "parent": "f1000-d0804",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 258786,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0605",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "2 Rivers Park",
+   "code": "1000-0605",
+   "amount": 1311405,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 74"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0605-ps",
+   "parent": "f1000-d0605",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 494005,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0605-mo",
+   "parent": "f1000-d0605",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 817400,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 74"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "OEM",
+   "code": "1000-0500",
+   "amount": 658444,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-ps",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 443298,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-mo",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 215146,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0110",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Planning & Development",
+   "code": "1000-0110",
+   "amount": 570661,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 78"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0110-ps",
+   "parent": "f1000-d0110",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 496924,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 78"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0110-mo",
+   "parent": "f1000-d0110",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 73737,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 78"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0446",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Animal Services",
+   "code": "1000-0446",
+   "amount": 380937,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 83"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0446-ps",
+   "parent": "f1000-d0446",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 259408,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 83"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0446-mo",
+   "parent": "f1000-d0446",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 121529,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 83"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Coroner",
+   "code": "1000-0419",
+   "amount": 1692666,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 85"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-ps",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1352602,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 85"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-mo",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 340064,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 85"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0122",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Civil Attorney",
+   "code": "1000-0122",
+   "amount": 1046577,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 87"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0122-ps",
+   "parent": "f1000-d0122",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 832282,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 87"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0122-mo",
+   "parent": "f1000-d0122",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 214295,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 87"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0445",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "CASA",
+   "code": "1000-0445",
+   "amount": 138599,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 89"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0445-ps",
+   "parent": "f1000-d0445",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 129673,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 89"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0445-mo",
+   "parent": "f1000-d0445",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 8926,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 89"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Clerk",
+   "code": "1000-0101",
+   "amount": 6172418,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-ps",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 5448258,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-mo",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 724160,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0106",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Board of Equalization",
+   "code": "1000-0106",
+   "amount": 101003,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 103"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-ps",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 91503,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 103"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-mo",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 9500,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 103"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juror Fees",
+   "code": "1000-0103",
+   "amount": 351590,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 113"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-mo",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 351590,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 113"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff Enforcement",
+   "code": "1000-0400",
+   "amount": 16051817,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 116"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-ps",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 13236764,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 115"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-mo",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 2815053,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 116"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0418",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff - Detention Facility",
+   "code": "1000-0418",
+   "amount": 33185264,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-ps",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 26304256,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 126"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-mo",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 6881008,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0450",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Detention Medical",
+   "code": "1000-0450",
+   "amount": 7847038,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 148"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0450-mo",
+   "parent": "f1000-d0450",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 7847038,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 148"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "1st Division",
+   "code": "1000-0401",
+   "amount": 432846,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 166"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-ps",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 399546,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 166"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-mo",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 33300,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 166"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0402",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "2nd Division",
+   "code": "1000-0402",
+   "amount": 307141,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 168"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-ps",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 275172,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 168"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-mo",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 31969,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 168"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0403",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "3rd Division",
+   "code": "1000-0403",
+   "amount": 314116,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 170"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403-ps",
+   "parent": "f1000-d0403",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 261961,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 170"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403-mo",
+   "parent": "f1000-d0403",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 52155,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 170"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0404",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "4th Division",
+   "code": "1000-0404",
+   "amount": 281034,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 172"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0404-ps",
+   "parent": "f1000-d0404",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 261884,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 172"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0404-mo",
+   "parent": "f1000-d0404",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 19150,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 172"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0405",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "5th Division",
+   "code": "1000-0405",
+   "amount": 406116,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 174"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0405-ps",
+   "parent": "f1000-d0405",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 338502,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 174"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0405-mo",
+   "parent": "f1000-d0405",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 67614,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 174"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0426",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "6th Division",
+   "code": "1000-0426",
+   "amount": 322738,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 176"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0426-ps",
+   "parent": "f1000-d0426",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 299550,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 176"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0426-mo",
+   "parent": "f1000-d0426",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 23188,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 176"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0427",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "7th Division",
+   "code": "1000-0427",
+   "amount": 443218,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 178"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0427-ps",
+   "parent": "f1000-d0427",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 412253,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 178"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0427-mo",
+   "parent": "f1000-d0427",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 30965,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 178"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0435",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "8th Division",
+   "code": "1000-0435",
+   "amount": 1053963,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 180"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0435-ps",
+   "parent": "f1000-d0435",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 961233,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 180"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0435-mo",
+   "parent": "f1000-d0435",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 92730,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 180"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0436",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "9th Division",
+   "code": "1000-0436",
+   "amount": 463214,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 182"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0436-ps",
+   "parent": "f1000-d0436",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 422514,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 182"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0436-mo",
+   "parent": "f1000-d0436",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 40700,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 182"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0437",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "10th Division",
+   "code": "1000-0437",
+   "amount": 1235751,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 184"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0437-ps",
+   "parent": "f1000-d0437",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1111326,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 184"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0437-mo",
+   "parent": "f1000-d0437",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 124425,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 184"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0434",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "11th Division",
+   "code": "1000-0434",
+   "amount": 425979,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 186"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0434-ps",
+   "parent": "f1000-d0434",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 354791,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 186"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0434-mo",
+   "parent": "f1000-d0434",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 71188,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 186"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0428",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "12th Division",
+   "code": "1000-0428",
+   "amount": 301451,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 188"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0428-ps",
+   "parent": "f1000-d0428",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 270058,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 188"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0428-mo",
+   "parent": "f1000-d0428",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 31393,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 188"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0429",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "13th Division",
+   "code": "1000-0429",
+   "amount": 295961,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 190"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0429-ps",
+   "parent": "f1000-d0429",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 276257,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 190"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0429-mo",
+   "parent": "f1000-d0429",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 19704,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 190"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0430",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "14th Division",
+   "code": "1000-0430",
+   "amount": 295713,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 192"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0430-ps",
+   "parent": "f1000-d0430",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 267063,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 192"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0430-mo",
+   "parent": "f1000-d0430",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 28650,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 192"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0431",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "15th Division",
+   "code": "1000-0431",
+   "amount": 279417,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 194"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0431-ps",
+   "parent": "f1000-d0431",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 261941,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 194"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0431-mo",
+   "parent": "f1000-d0431",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 17476,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 194"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0432",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "16th Division",
+   "code": "1000-0432",
+   "amount": 513712,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 196"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0432-ps",
+   "parent": "f1000-d0432",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 482338,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 196"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0432-mo",
+   "parent": "f1000-d0432",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 31374,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 196"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0433",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "17th Division",
+   "code": "1000-0433",
+   "amount": 391423,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 198"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0433-ps",
+   "parent": "f1000-d0433",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 362272,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 198"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0433-mo",
+   "parent": "f1000-d0433",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 29151,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 198"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court",
+   "code": "1000-0409",
+   "amount": 1699876,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 201"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-ps",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1465989,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 201"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-mo",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 233887,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 201"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0410",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District YAPP",
+   "code": "1000-0410",
+   "amount": 190549,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 204"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0410-ps",
+   "parent": "f1000-d0410",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 164849,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 204"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0410-mo",
+   "parent": "f1000-d0410",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 25700,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 204"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 667937,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 206"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-ps",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 613865,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 206"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-mo",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 54072,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 206"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney",
+   "code": "1000-0416",
+   "amount": 3443499,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 208"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-ps",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2799299,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 208"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-mo",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 644200,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 208"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0440",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Victim/Witness Assistance",
+   "code": "1000-0440",
+   "amount": 912715,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 212"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0440-ps",
+   "parent": "f1000-d0440",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 894015,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 212"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0440-mo",
+   "parent": "f1000-d0440",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 18700,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 212"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0441",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Hot Check Program",
+   "code": "1000-0441",
+   "amount": 78976,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 214"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0441-ps",
+   "parent": "f1000-d0441",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 78976,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 214"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Election Department",
+   "code": "1000-0109",
+   "amount": 2470792,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 217"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-ps",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1670842,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 216"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-mo",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 799950,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 217"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0417",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Public Defender",
+   "code": "1000-0417",
+   "amount": 1027772,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 219"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0417-ps",
+   "parent": "f1000-d0417",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 797350,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 219"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0417-mo",
+   "parent": "f1000-d0417",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 230422,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 219"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1000-d0447",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "PD Conflicts",
+   "code": "1000-0447",
+   "amount": 160121,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 221"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0447-ps",
+   "parent": "f1000-d0447",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 112661,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 221"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0447-mo",
+   "parent": "f1000-d0447",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 47460,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 221"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Road & Bridge Fund",
+   "code": "2000",
+   "amount": 26293517,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "One department in this fund (2000-0200 Public Works)."
+  },
+  {
+   "id": "f2000-ps",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 10329323,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-mo",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 15964194,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 63"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f7001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sanitation Fund",
+   "code": "7001",
+   "amount": 7539351,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "One department in this fund (7001-0700 Sanitation)."
+  },
+  {
+   "id": "f7001-ps",
+   "parent": "f7001",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1002987,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 80"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f7001-mo",
+   "parent": "f7001",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 6536364,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 81"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1801",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor Fund",
+   "code": "1801",
+   "amount": 10552329,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "One department in this fund (1801-0105 Assessor)."
+  },
+  {
+   "id": "f1801-ps",
+   "parent": "f1801",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 9118241,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 156"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1801-mo",
+   "parent": "f1801",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 1434088,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 157"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f3011",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor Real Property Reappraisal",
+   "code": "3011",
+   "amount": 1066527,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The budget ordinance (p. 10) appropriates $1,066,527; the budget detail pages total $1,066,627.00. The ordinance amount is shown. Printed total is $1,066,527.00; the categories listed add to $1,066,627.00."
+  },
+  {
+   "id": "f3011-mo",
+   "parent": "f3011",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 1066627,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 165"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f1803",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer / Collector Fund",
+   "code": "1803",
+   "amount": 746451,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "One department in this fund (1803-0103 Treasurer Salary & Expense Fund)."
+  },
+  {
+   "id": "f1803-ps",
+   "parent": "f1803",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 657851,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 105"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1803-mo",
+   "parent": "f1803",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 88600,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 105"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f6016",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Vol. Fire Protection Fund",
+   "code": "6016",
+   "amount": 60000,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No budget detail page for this fund; amount from the budget ordinance."
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Boating & Safety Fund",
+   "code": "3019",
+   "amount": 29102,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "One department in this fund (3019-0400 Water Patrol/Boating Safety)."
+  },
+  {
+   "id": "f3019-ps",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 10102,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 149"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-mo",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 19000,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 149"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f3015",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Control (State) Fund",
+   "code": "3015",
+   "amount": 116089,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "One department in this fund (3015-0400 Drug Control State)."
+  },
+  {
+   "id": "f3015-ps",
+   "parent": "f3015",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 16089,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 153"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015-mo",
+   "parent": "f3015",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 100000,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 153"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f3409",
+   "parent": null,
+   "section": "appropriations",
+   "name": "9-1-1 Revenue Fund",
+   "code": "3409",
+   "amount": 686905,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The budget ordinance (p. 10) appropriates $686,905; the budget detail pages total $686,095.00. The ordinance amount is shown."
+  },
+  {
+   "id": "f3402",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Seizure (Federal) Fund",
+   "code": "3402",
+   "amount": 110000,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "One department in this fund (3402-0400 Drug Seizure Federal)."
+  },
+  {
+   "id": "f3402-mo",
+   "parent": "f3402",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 110000,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 154"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Recorder's Cost Fund",
+   "code": "3006",
+   "amount": 3021100,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The budget ordinance (p. 10) appropriates $3,021,100; the budget detail pages total $3,166,341.00. The ordinance amount is shown. Printed total is $3,021,100.00; the categories listed add to $3,166,341.00."
+  },
+  {
+   "id": "f3006-ps",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1680582,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 97"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-mo",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 1485759,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 97"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Automation Fund",
+   "code": "3000",
+   "amount": 509100,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "One department in this fund (3000-0103 Treasurer Automation Fund)."
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Automation Fund",
+   "code": "3001",
+   "amount": 3021100,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "One department in this fund (3001-0104 Collector Automation Fund)."
+  },
+  {
+   "id": "f1804",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector Salary and Expense Fund",
+   "code": "1804",
+   "amount": 6718654,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "One department in this fund (1804-0104 Collector Salary & Exp)."
+  },
+  {
+   "id": "f1804-ps",
+   "parent": "f1804",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 4589274,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 108"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1804-mo",
+   "parent": "f1804",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 2129380,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 108"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f3014",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Communication Facility Fund",
+   "code": "3014",
+   "amount": 1300000,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "One department in this fund (3014-0400 Comm Equip Facility Escrow)."
+  },
+  {
+   "id": "f3014-mo",
+   "parent": "f3014",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 1300000,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 150"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f3403",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Regional Detention Act 1188 of 2003 Fund",
+   "code": "3403",
+   "amount": 814101,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "One department in this fund (3403-0451 Sheriff's Act 1188)."
+  },
+  {
+   "id": "f3403-mo",
+   "parent": "f3403",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 814101,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 152"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "fgrants",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Grant Funds (3416-3806)",
+   "code": null,
+   "amount": 8117536,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "One appropriation for all grant funds. The budget lists 31 grants by line item with no totals (pp. 223-259), so they are not broken out here."
+  },
+  {
+   "id": "f3408",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Clerk Commission Fund",
+   "code": "3408",
+   "amount": 100000,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "One department in this fund (3408-0102 Circuit Collection Cost Fund)."
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Central Arkansas Library",
+   "code": "3008",
+   "amount": 2175995,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "One department in this fund (3008-0600 Central AR Library System)."
+  },
+  {
+   "id": "f3008-mo",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 2175995,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 114"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f3413",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Spay/Neuter",
+   "code": "3413",
+   "amount": 133000,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "One department in this fund (3413-0113 Spay Neuter Fund)."
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Cir. Co. Court Automation",
+   "code": "3002",
+   "amount": 80000,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "One department in this fund (3002-0438 Court Automation Fund)."
+  },
+  {
+   "id": "f3406",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff IRS Seizure",
+   "code": "3406",
+   "amount": 275000,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "One department in this fund (3406-0400 IRS Seizure Fund)."
+  },
+  {
+   "id": "f3406-mo",
+   "parent": "f3406",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 275000,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 155"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk - Support Collection",
+   "code": "3012",
+   "amount": 60000,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "One department in this fund (3012-0114 Child Support Collection)."
+  },
+  {
+   "id": "f3012-mo",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 60000,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 100"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f3018",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Regional Detention Act 117",
+   "code": "3018",
+   "amount": 100000,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "One department in this fund (3018-0418 Detention Facility Fund)."
+  },
+  {
+   "id": "f3018-mo",
+   "parent": "f3018",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 100000,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 151"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f2003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Motor Fuel Tax Fund (Act 416 of 2019)",
+   "code": "2003",
+   "amount": 233035,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "One department in this fund (2003-0200 Add'l Motor Fuel Tax (Act 416))."
+  },
+  {
+   "id": "f2003-mo",
+   "parent": "f2003",
+   "section": "appropriations",
+   "name": "Maintenance and operations",
+   "code": null,
+   "amount": 233035,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 72"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as \"TOTAL M&O\"; in this budget it covers supplies, other services and charges, and capital outlay lines."
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "CMRS E911 Fund",
+   "code": "3020",
+   "amount": 1270000,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "One department in this fund (3020-0501 E911 CMRS Fund)."
+  },
+  {
+   "id": "f3039",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Commissioner Fee Fund",
+   "code": "3039",
+   "amount": 65000,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "One department in this fund (3039-0102 Clerk Commssion Fee)."
+  },
+  {
+   "id": "f3415",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Crisis Stabilization Unit",
+   "code": "3415",
+   "amount": 1080000,
+   "status": "sourced",
+   "source": {
+    "doc": "pulaskiar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "One department in this fund (3415-0300 CSU)."
+  }
+ ]
 }
