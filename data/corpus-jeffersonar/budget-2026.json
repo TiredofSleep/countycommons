@@ -1,25 +1,1253 @@
 {
-  "meta": {
-    "document": "Jefferson County — no appropriation document ingested yet",
-    "title": "Jefferson County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Jefferson County 2026 adopted budget",
+  "title": "Jefferson County — the money trail",
+  "year": 2026,
+  "grand_total": 39595853.4,
+  "note": "This is the county's 2026 appropriation ordinance (No. 2026-92) as filed with the state. It lists one amount for each General Fund office and for each other fund. The ordinance also moves $9,224,629.79 between county funds (Article III), so some dollars may appear in both the fund that sends them and the fund that spends them."
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "General Fund",
+   "code": "1000",
+   "amount": 12900015.55,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Jefferson County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-100",
+   "amount": 1687659.88,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "1000-101",
+   "amount": 877805.94,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Clerk",
+   "code": "1000-102",
+   "amount": 423817.84,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Treasurer",
+   "code": "1000-103",
+   "amount": 237450,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Tax Collector",
+   "code": "1000-104",
+   "amount": 534881.54,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Assessor",
+   "code": "1000-105",
+   "amount": 714805.24,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-107",
+   "amount": 353018.13,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Buildings",
+   "code": "1000-108",
+   "amount": 630454.02,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Election",
+   "code": "1000-109",
+   "amount": 216762.91,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d114",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Child Support (Cir. Clerk)",
+   "code": "1000-114",
+   "amount": 155236.82,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d117",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Utilities",
+   "code": "1000-117",
+   "amount": 337715,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d118",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Comprehensive Insurance",
+   "code": "1000-118",
+   "amount": 650000,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d119",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Reappraisal",
+   "code": "1000-119",
+   "amount": 604827,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Health Department",
+   "code": "1000-300",
+   "amount": 31000,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff",
+   "code": "1000-400",
+   "amount": 2598833.82,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court 1st Div.",
+   "code": "1000-401",
+   "amount": 86506.41,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d402",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court 2nd Div.",
+   "code": "1000-402",
+   "amount": 22333.25,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d403",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court 3rd Div.",
+   "code": "1000-403",
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d404",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court 4th Div.",
+   "code": "1000-404",
+   "amount": 12500,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d405",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court 5th Div.",
+   "code": "1000-405",
+   "amount": 10659.25,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d414",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court 6th Div.",
+   "code": "1000-414",
+   "amount": 1211793.93,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney",
+   "code": "1000-416",
+   "amount": 632027.82,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Coroner",
+   "code": "1000-419",
+   "amount": 318525.05,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d420",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Constables",
+   "code": "1000-420",
+   "amount": 22500,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "OEM",
+   "code": "1000-500",
+   "amount": 282238.45,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d603",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Museum",
+   "code": "1000-603",
+   "amount": 23000,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veterans Services",
+   "code": "1000-800",
+   "amount": 91743.26,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Cooperative Extension",
+   "code": "1000-801",
+   "amount": 123919.99,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1803",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Justice Center (JJC)",
+   "code": "1803-418",
+   "amount": 2296618,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1804",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Solid Waste Contract",
+   "code": "1804-700",
+   "amount": 1144038.9,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1805",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sales and Use Tax Fund (1805)",
+   "code": "1805",
+   "amount": 1922300.81,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total is printed; this is the sum of its two lines (Sheriff and Rural Protection)."
+  },
+  {
+   "id": "f1805-d400",
+   "parent": "f1805",
+   "section": "appropriations",
+   "name": "Sheriff/Sales and Use Tax",
+   "code": "1805-400",
+   "amount": 1520219.83,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1805-d502",
+   "parent": "f1805",
+   "section": "appropriations",
+   "name": "Rural Protection/Sales and Use Tax",
+   "code": "1805-502",
+   "amount": 402080.98,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1806",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Adult Jail Medical Fund",
+   "code": "1806-418",
+   "amount": 53043.32,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1808",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Environmental Enforcement",
+   "code": "1808-423",
+   "amount": 80000.6,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1809",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Fins & Truancy",
+   "code": "1809-414",
+   "amount": 819200,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jury Fee",
+   "code": "1810-429",
+   "amount": 88500,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1812",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Solid Waste",
+   "code": "1812-700",
+   "amount": 343539.6,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1813",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Adult Jail",
+   "code": "1813-418",
+   "amount": 6118608.1,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1819",
+   "parent": null,
+   "section": "appropriations",
+   "name": "District Court",
+   "code": "1819-409",
+   "amount": 524345.24,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1851",
+   "parent": null,
+   "section": "appropriations",
+   "name": "School Lunch Fund",
+   "code": "1851-418",
+   "amount": 180000,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1900",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Tri-County Drug Task Force",
+   "code": "1900-400",
+   "amount": 153642.61,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1901",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Fins & Truancy Grant",
+   "code": "1901-414",
+   "amount": 387817,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1906",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jefferson County Peer Support (6th)",
+   "code": "1906-414",
+   "amount": 140782.19,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1910",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Tri-County",
+   "code": "1910-400",
+   "amount": 96064.58,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Road Department",
+   "code": "2000-200",
+   "amount": 5948298.26,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Automation Fund",
+   "code": "3000-103",
+   "amount": 46600,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Automation",
+   "code": "3001-104",
+   "amount": 163908.05,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Automation",
+   "code": "3002-430",
+   "amount": 18000,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Recorder's Cost (Cir. Clerk)",
+   "code": "3006-102",
+   "amount": 151077.09,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Library",
+   "code": "3008-600",
+   "amount": 915000,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Boating Safety",
+   "code": "3019-712",
+   "amount": 24941.17,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3022",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emergency Vehicle",
+   "code": "3022-400",
+   "amount": 36191.72,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3025",
+   "parent": null,
+   "section": "appropriations",
+   "name": "PA - Victim of Crime",
+   "code": "3025-422",
+   "amount": 276665.8,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Public Defender",
+   "code": "3026-417",
+   "amount": 49600,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Court",
+   "code": "3028-424",
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3036",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Recycling",
+   "code": "3036-702",
+   "amount": 247500,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3401",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Justice Education",
+   "code": "3401-418",
+   "amount": 993582.25,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3403",
+   "parent": null,
+   "section": "appropriations",
+   "name": "MECA",
+   "code": "3403-501",
+   "amount": 2764888.4,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3505",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Court Accountability",
+   "code": "3505-424",
+   "amount": 21727.01,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3508",
+   "parent": null,
+   "section": "appropriations",
+   "name": "LLEBG",
+   "code": "3508-400",
+   "amount": 128472.06,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3509",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Justice Equitable Sharing-Sheriff",
+   "code": "3509-400",
+   "amount": 35047.47,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3510",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Recycling Resource Recovery",
+   "code": "3510-702",
+   "amount": 12316.24,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3514",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Opioid Program Cat 4",
+   "code": "3514-418",
+   "amount": 366782.52,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3521",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Building Resilient Infrastructure",
+   "code": "3521-500",
+   "amount": 29542.5,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3525",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Gang Reduction Grip Grant (GVI)",
+   "code": "3525-400",
+   "amount": 41801.41,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3526",
+   "parent": null,
+   "section": "appropriations",
+   "name": "HITDA Fund",
+   "code": "3526-100",
+   "amount": 1340,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6009",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Law Library",
+   "code": "6009-426",
+   "amount": 54054.95,
+   "status": "sourced",
+   "source": {
+    "doc": "jeffersonar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }

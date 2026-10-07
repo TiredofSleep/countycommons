@@ -1,25 +1,1019 @@
 {
-  "meta": {
-    "document": "Nevada County — no appropriation document ingested yet",
-    "title": "Nevada County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Nevada County 2026 adopted budget",
+  "title": "Nevada County — the money trail",
+  "year": 2026,
+  "grand_total": 7597587.84,
+  "note": "This is the county's 2026 budget ordinance (No. O-25-15), passed December 9, 2025, as filed with the state. We used the \"2026\" column. The ordinance lists one total per department or fund, so there are no smaller parts to show."
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General Fund",
+   "code": null,
+   "amount": 2460315.56,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed total is $2,460,315.56; the departments listed add to $2,458,289.56. The page image shows these numbers; the $2,026.00 gap is not explained on the page."
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Nevada County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Judge",
+   "code": "100",
+   "amount": 76225,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "101",
+   "amount": 204562,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Clerk",
+   "code": "102",
+   "amount": 194215,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Treasurer",
+   "code": "103",
+   "amount": 140608.34,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Collector",
+   "code": "104",
+   "amount": 159378,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Assessor",
+   "code": "105",
+   "amount": 318200,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d106",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "EQ Board",
+   "code": "106",
+   "amount": 2750,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "107",
+   "amount": 39300,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse Maint.",
+   "code": "108",
+   "amount": 124250,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Election",
+   "code": "109",
+   "amount": 80950,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d116",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Grants & Aids",
+   "code": "116",
+   "amount": 7500,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Health Department",
+   "code": "300",
+   "amount": 57650,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d301",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Ambulance",
+   "code": "301",
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff",
+   "code": "400",
+   "amount": 507050,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Judge Culpepper",
+   "code": "401",
+   "amount": 29069,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d402",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Judge Short",
+   "code": "402",
+   "amount": 20805,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d405",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Jurors/Witness",
+   "code": "405",
+   "amount": 5100,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d408",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Probate",
+   "code": "408",
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court",
+   "code": "409",
+   "amount": 69334.73,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d415",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Intake",
+   "code": "415",
+   "amount": 40748,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "DPA",
+   "code": "416",
+   "amount": 65388.93,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d418",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Jail",
+   "code": "418",
+   "amount": 90000,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Coroner",
+   "code": "419",
+   "amount": 23463.94,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Civil Defense",
+   "code": "500",
+   "amount": 61706,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d507",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Flood Plain",
+   "code": "507",
+   "amount": 850,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d510",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Weather Center",
+   "code": "510",
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d601",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Parks & Recreation",
+   "code": "601",
+   "amount": 6600,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "VA Service",
+   "code": "800",
+   "amount": 18052.62,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Extension Office",
+   "code": "801",
+   "amount": 58533,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d803",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Other County Expenses",
+   "code": "803",
+   "amount": 33000,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1005",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Coronavirus Relief",
+   "code": "1005",
+   "amount": 26338.23,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Arpen Loss Fund",
+   "code": "1006",
+   "amount": 23168.58,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Solid Waste",
+   "code": "1800",
+   "amount": 1014350,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1801",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Comm. Facility & Eqpt.",
+   "code": "1801",
+   "amount": 7500,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Road & Bridge",
+   "code": "2000",
+   "amount": 2191175,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Wholesale Fuel",
+   "code": "2003",
+   "amount": 90000,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Auto",
+   "code": "3000",
+   "amount": 16800,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Auto",
+   "code": "3001",
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "District Court Auto",
+   "code": "3003",
+   "amount": 2700,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Auto",
+   "code": "3004",
+   "amount": 6500,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk's Auto",
+   "code": "3005",
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Recorders Cost",
+   "code": "3006",
+   "amount": 18000,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Library",
+   "code": "3008",
+   "amount": 130692.18,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009",
+   "parent": null,
+   "section": "appropriations",
+   "name": "SW Management",
+   "code": "3009",
+   "amount": 80000,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Rev.",
+   "code": "3017",
+   "amount": 81781.07,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3018",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Detention",
+   "code": "3018",
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Boating Safety",
+   "code": "3019",
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "911",
+   "code": "3020",
+   "amount": 447916.22,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3022",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emerg Vehicle/Act 988",
+   "code": "3022",
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Public Defender",
+   "code": "3024",
+   "amount": 9131,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3025",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Victim Witness",
+   "code": "3025",
+   "amount": 3500,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Adult Drug Court",
+   "code": "3028",
+   "amount": 350,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Law Library",
+   "code": "3402",
+   "amount": 1670,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3408",
+   "parent": null,
+   "section": "appropriations",
+   "name": "New Jail",
+   "code": "3408",
+   "amount": 907700,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Commissary Fund",
+   "code": "6017",
+   "amount": 50000,
+   "status": "sourced",
+   "source": {
+    "doc": "nevadaar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }

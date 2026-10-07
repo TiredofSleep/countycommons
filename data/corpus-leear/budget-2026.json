@@ -1,25 +1,2045 @@
 {
-  "meta": {
-    "document": "Lee County — no appropriation document ingested yet",
-    "title": "Lee County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Lee County 2026 adopted budget",
+  "title": "Lee County — the money trail",
+  "year": 2026,
+  "grand_total": 6452872.87,
+  "note": "This is the county's 2026 budget ordinance (No. 2025-9), passed December 30, 2025, as filed with the state. We used the appropriated amounts it lists for each office."
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "General Fund",
+   "code": "1000",
+   "amount": 3742551.38,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "pp. 3–6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Lee County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge's Office",
+   "code": "1000-100",
+   "amount": 100896.95,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d100-ps",
+   "parent": "f1000-d100",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 85206.95,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d100-su",
+   "parent": "f1000-d100",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2300,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d100-os",
+   "parent": "f1000-d100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 13390,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk's Office",
+   "code": "1000-101",
+   "amount": 222098.85,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d101-ps",
+   "parent": "f1000-d101",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 174483.85,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d101-su",
+   "parent": "f1000-d101",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5600,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d101-ops",
+   "parent": "f1000-d101",
+   "section": "appropriations",
+   "name": "Other personal services",
+   "code": null,
+   "amount": 40515,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed label is \"Other Personal Services\"; it sits where other offices list Other Services and Charges."
+  },
+  {
+   "id": "f1000-d101-co",
+   "parent": "f1000-d101",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Clerk's Office",
+   "code": "1000-102",
+   "amount": 276910.76,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d102-ps",
+   "parent": "f1000-d102",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 198010.76,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d102-su",
+   "parent": "f1000-d102",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d102-os",
+   "parent": "f1000-d102",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 68900,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Treasurer's Office",
+   "code": "1000-103",
+   "amount": 104262.83,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d103-ps",
+   "parent": "f1000-d103",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 102587.83,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d103-su",
+   "parent": "f1000-d103",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 700,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d103-os",
+   "parent": "f1000-d103",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 975,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Collector's Office",
+   "code": "1000-104",
+   "amount": 212068.58,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d104-ps",
+   "parent": "f1000-d104",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 156543.58,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d104-su",
+   "parent": "f1000-d104",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5400,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d104-os",
+   "parent": "f1000-d104",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 50125,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Assessor's Office",
+   "code": "1000-105",
+   "amount": 341050.86,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d105-ps",
+   "parent": "f1000-d105",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 181550.86,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d105-su",
+   "parent": "f1000-d105",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 14500,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d105-os",
+   "parent": "f1000-d105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 145000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-107",
+   "amount": 37026.9,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d107-ps",
+   "parent": "f1000-d107",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 33726.9,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d107-os",
+   "parent": "f1000-d107",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3300,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse Maintenance",
+   "code": "1000-108",
+   "amount": 185500,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d108-ps",
+   "parent": "f1000-d108",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 32000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d108-su",
+   "parent": "f1000-d108",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 64300,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d108-os",
+   "parent": "f1000-d108",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 49200,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d108-co",
+   "parent": "f1000-d108",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 40000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Elections",
+   "code": "1000-109",
+   "amount": 452965,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The total line for this office is printed as \"Total Ordinary County Purposes\"."
+  },
+  {
+   "id": "f1000-d109-ps",
+   "parent": "f1000-d109",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 13800,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d109-su",
+   "parent": "f1000-d109",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d109-os",
+   "parent": "f1000-d109",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 394165,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d109-pe",
+   "parent": "f1000-d109",
+   "section": "appropriations",
+   "name": "Permanent equipment",
+   "code": null,
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Health Department",
+   "code": "1000-300",
+   "amount": 74975,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d300-ps",
+   "parent": "f1000-d300",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 25375,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d300-su",
+   "parent": "f1000-d300",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 21000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d300-os",
+   "parent": "f1000-d300",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 28600,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff's Office",
+   "code": "1000-400",
+   "amount": 1409112.36,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d400-ps",
+   "parent": "f1000-d400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 844392.76,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d400-su",
+   "parent": "f1000-d400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 179500,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d400-os",
+   "parent": "f1000-d400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 340450,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d400-co",
+   "parent": "f1000-d400",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 44769.6,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d403",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court",
+   "code": "1000-403",
+   "amount": 94184.64,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d403-ps",
+   "parent": "f1000-d403",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 40184.64,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d403-su",
+   "parent": "f1000-d403",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 19000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d403-os",
+   "parent": "f1000-d403",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 35000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d417",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Public Defender",
+   "code": "1000-417",
+   "amount": 9300,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d417-su",
+   "parent": "f1000-d417",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9300,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Coroner's Office",
+   "code": "1000-419",
+   "amount": 62339.57,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d419-ps",
+   "parent": "f1000-d419",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 20879.57,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d419-su",
+   "parent": "f1000-d419",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 20500,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d419-os",
+   "parent": "f1000-d419",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 20960,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "OEM",
+   "code": "1000-500",
+   "amount": 43455.56,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d500-ps",
+   "parent": "f1000-d500",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 27705.56,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d500-su",
+   "parent": "f1000-d500",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d500-os",
+   "parent": "f1000-d500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 15250,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d502",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Fire Department",
+   "code": "1000-502",
+   "amount": 71400,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d502-ps",
+   "parent": "f1000-d502",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 27300,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d502-os",
+   "parent": "f1000-d502",
+   "section": "appropriations",
+   "name": "Other services",
+   "code": null,
+   "amount": 37600,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d502-co",
+   "parent": "f1000-d502",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 6500,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veterans Service Officer",
+   "code": "1000-800",
+   "amount": 6953.52,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d800-ps",
+   "parent": "f1000-d800",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 5653.52,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d800-su",
+   "parent": "f1000-d800",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 650,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d800-os",
+   "parent": "f1000-d800",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 650,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Extension Service",
+   "code": "1000-801",
+   "amount": 38050,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d801-os",
+   "parent": "f1000-d801",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 38050,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1806",
+   "parent": null,
+   "section": "appropriations",
+   "name": "District Court Clerk/All Courts",
+   "code": "1806-409",
+   "amount": 165857.17,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1806-ps",
+   "parent": "f1806",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 117007.17,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1806-su",
+   "parent": "f1806",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1806-os",
+   "parent": "f1806",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 40850,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1806-co",
+   "parent": "f1806",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Library",
+   "code": "3008-600",
+   "amount": 88195.68,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-ps",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 55295.68,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-su",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 16300,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-os",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 14600,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-co",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Nine One One (911)",
+   "code": "3020-501",
+   "amount": 51200,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Personal services and supplies are printed as $0.00."
+  },
+  {
+   "id": "f3020-os",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 51200,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer Automation",
+   "code": "3000-103",
+   "amount": 26000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-su",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 11000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-co",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Automation",
+   "code": "3001-104",
+   "amount": 40000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-su",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-co",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Administration of Courts",
+   "code": "3002-410",
+   "amount": 60000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-co",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 60000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Amendment 79 Fund",
+   "code": "3004-105",
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-su",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-co",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Recorder's Cost Fund",
+   "code": "3006-102",
+   "amount": 32000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "pp. 6–7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "This fund has one line and no separate total; the fund amount is that line."
+  },
+  {
+   "id": "f3006-ps",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 32000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3007",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff's Automation",
+   "code": "3007-400",
+   "amount": 7300,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "This fund has one line and no separate total; the fund amount is that line."
+  },
+  {
+   "id": "f3007-su",
+   "parent": "f3007",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7300,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3016",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff's Donation",
+   "code": "3016-400",
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "This fund has one line and no separate total; the fund amount is that line."
+  },
+  {
+   "id": "f3016-os",
+   "parent": "f3016",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Boating Safety Fund",
+   "code": "3019-502",
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "This fund has one line and no separate total; the fund amount is that line."
+  },
+  {
+   "id": "f3019-su",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6009",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Law Library",
+   "code": "6009-600",
+   "amount": 10600,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "This fund has one line and no separate total; the fund amount is that line."
+  },
+  {
+   "id": "f6009-os",
+   "parent": "f6009",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10600,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff's Comm Facility Equipment",
+   "code": "3014-400",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "This fund has one line and no separate total; the fund amount is that line."
+  },
+  {
+   "id": "f3014-su",
+   "parent": "f3014",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "froad",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Road Fund",
+   "code": null,
+   "amount": 2206668.64,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "pp. 7–8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "froad-ps",
+   "parent": "froad",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 864018.64,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "froad-su",
+   "parent": "froad",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 964000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "froad-os",
+   "parent": "froad",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 48650,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "froad-co",
+   "parent": "froad",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 165000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "froad-ds",
+   "parent": "froad",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 165000,
+   "status": "sourced",
+   "source": {
+    "doc": "leear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }
