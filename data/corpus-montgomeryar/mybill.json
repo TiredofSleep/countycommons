@@ -1,0 +1,540 @@
+{
+ "updated": "2026-10-06",
+ "mode": "arkansas",
+ "where": "Any home in Montgomery County: pick your city (or “outside any city”) and school district below. Rates are the 2025 millage the state certifies for taxes collected in 2026.",
+ "input_label": "Market value of your home (from the county assessor)",
+ "assess_ratio": 0.2,
+ "home_default": 150000,
+ "default_place": "black-springs-caddo-hills-28-1",
+ "places": [
+  {
+   "id": "rural-caddo-hills-28-0",
+   "label": "Outside any city · Caddo Hills #28 schools (41.9 mills)",
+   "city": null,
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Caddo Hills School District",
+     "kind": "school",
+     "mills": 33.6,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 56"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       8.6,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Montgomery County",
+     "kind": "county",
+     "mills": 8.3,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 56"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "black-springs-caddo-hills-28-1",
+   "label": "Black Springs · Caddo Hills #28 schools (46.9 mills)",
+   "city": "Black Springs",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Caddo Hills School District",
+     "kind": "school",
+     "mills": 33.6,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 56"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       8.6,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Black Springs",
+     "kind": "city",
+     "mills": 5,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 56"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Montgomery County",
+     "kind": "county",
+     "mills": 8.3,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 56"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "glenwood-caddo-hills-28-2",
+   "label": "Glenwood · Caddo Hills #28 schools (45.7 mills)",
+   "city": "Glenwood",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Caddo Hills School District",
+     "kind": "school",
+     "mills": 33.6,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 56"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       8.6,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Glenwood",
+     "kind": "city",
+     "mills": 3.8,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 56"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Montgomery County",
+     "kind": "county",
+     "mills": 8.3,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 56"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "norman-caddo-hills-28-3",
+   "label": "Norman · Caddo Hills #28 schools (46.9 mills)",
+   "city": "Norman",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Caddo Hills School District",
+     "kind": "school",
+     "mills": 33.6,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 56"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       8.6,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Norman",
+     "kind": "city",
+     "mills": 5,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 56"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Montgomery County",
+     "kind": "county",
+     "mills": 8.3,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 56"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rural-mount-ida-20-4",
+   "label": "Outside any city · Mount Ida #20 schools (42.01 mills)",
+   "city": null,
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Mount Ida School District",
+     "kind": "school",
+     "mills": 33.71,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 56"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       8.71,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Montgomery County",
+     "kind": "county",
+     "mills": 8.3,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 56"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mt-ida-mount-ida-20-5",
+   "label": "Mt. Ida · Mount Ida #20 schools (44.61 mills)",
+   "city": "Mt. Ida",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Mount Ida School District",
+     "kind": "school",
+     "mills": 33.71,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 56"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       8.71,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Mt. Ida",
+     "kind": "city",
+     "mills": 2.6,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 56"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Montgomery County",
+     "kind": "county",
+     "mills": 8.3,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 56"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rural-ouachita-river-30-6",
+   "label": "Outside any city · Ouachita River #30 schools (39.6 mills)",
+   "city": null,
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Ouachita River School District",
+     "kind": "school",
+     "mills": 31.3,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 56"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       6.3,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Montgomery County",
+     "kind": "county",
+     "mills": 8.3,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 56"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "oden-ouachita-river-30-7",
+   "label": "Oden · Ouachita River #30 schools (41 mills)",
+   "city": "Oden",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Ouachita River School District",
+     "kind": "school",
+     "mills": 31.3,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 56"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       6.3,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Oden",
+     "kind": "city",
+     "mills": 1.4,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 56"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Montgomery County",
+     "kind": "county",
+     "mills": 8.3,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 56"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "exemptions": {
+  "school": 0,
+  "city": 0,
+  "county": 0
+ },
+ "credit": {
+  "amount": 600,
+  "label": "homestead credit",
+  "note": "Arkansas taxes a home on 20% of its market value. Every homestead gets up to a $600 credit off the bill (Amendment 79); the state repays the local governments for it, so they still receive the full amount shown below.",
+  "limits": "The $600 homestead credit is applied in full when the bill is large enough; Amendment 79 also limits how fast a homestead’s assessed value can rise, which isn’t modeled."
+ },
+ "split_note": "Each government’s share is split by the mills it levies: the school district’s operating mills versus its bond (debt) mills, as the state lists them. City and county taxes are one slice each; the county’s spending is on the money trail.",
+ "tags": {
+  "schoolops": "Running the schools",
+  "debt": "Paying off bonds (debt)",
+  "city": "City services",
+  "county": "County services"
+ },
+ "rollback_title": "Why there’s no “no-raise” rate here",
+ "rollback_sub": "Arkansas works differently",
+ "rollback_note": "Florida and Texas publish a yearly “no-raise” rate. Arkansas doesn’t: its rates are set in mills, and after a countywide reassessment Amendment 59 rolls millage back so the reassessment alone doesn’t raise more money. School millage changes need a vote of the district’s voters at the school election — so the biggest lever on most Arkansas bills is a school election that usually draws far fewer voters than November.",
+ "hearing": "County and city millage is levied by the quorum court and city council each fall; school millage is set by the district’s voters at the school election.",
+ "limits": [
+  "Rates are from the state’s 2025 Millage Report (2026 collections), page 56.",
+  "County and city taxes are shown as single slices; the county’s own spending is on the money trail."
+ ]
+}

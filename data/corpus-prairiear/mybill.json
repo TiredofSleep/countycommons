@@ -1,0 +1,667 @@
+{
+ "updated": "2026-10-06",
+ "mode": "arkansas",
+ "where": "Any home in Prairie County: pick your city (or “outside any city”) and school district below. Rates are the 2025 millage the state certifies for taxes collected in 2026.",
+ "input_label": "Market value of your home (from the county assessor)",
+ "assess_ratio": 0.2,
+ "home_default": 150000,
+ "default_place": "des-arc-des-arc-5-1",
+ "places": [
+  {
+   "id": "rural-des-arc-5-0",
+   "label": "Outside any city · Des Arc #5 schools (45.8 mills)",
+   "city": null,
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Des Arc School District",
+     "kind": "school",
+     "mills": 35.8,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 66"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       10.8,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Prairie County",
+     "kind": "county",
+     "mills": 10,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 66"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "des-arc-des-arc-5-1",
+   "label": "Des Arc · Des Arc #5 schools (50.8 mills)",
+   "city": "Des Arc",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Des Arc School District",
+     "kind": "school",
+     "mills": 35.8,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 66"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       10.8,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Des Arc",
+     "kind": "city",
+     "mills": 5,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 66"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Prairie County",
+     "kind": "county",
+     "mills": 10,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 66"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rural-hazen-2-2",
+   "label": "Outside any city · Hazen #2 schools (51.33 mills)",
+   "city": null,
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Hazen School District",
+     "kind": "school",
+     "mills": 41.33,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 66"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "Running the schools — extra operating mills",
+       1.43,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       14.9,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Prairie County",
+     "kind": "county",
+     "mills": 10,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 66"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "biscoe-hazen-2-3",
+   "label": "Biscoe · Hazen #2 schools (56.33 mills)",
+   "city": "Biscoe",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Hazen School District",
+     "kind": "school",
+     "mills": 41.33,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 66"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "Running the schools — extra operating mills",
+       1.43,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       14.9,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Biscoe",
+     "kind": "city",
+     "mills": 5,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 66"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Prairie County",
+     "kind": "county",
+     "mills": 10,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 66"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "devalls-bluff-hazen-2-4",
+   "label": "DeValls Bluff · Hazen #2 schools (56.33 mills)",
+   "city": "DeValls Bluff",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Hazen School District",
+     "kind": "school",
+     "mills": 41.33,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 66"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "Running the schools — extra operating mills",
+       1.43,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       14.9,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of DeValls Bluff",
+     "kind": "city",
+     "mills": 5,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 66"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Prairie County",
+     "kind": "county",
+     "mills": 10,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 66"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hazen-hazen-2-5",
+   "label": "Hazen · Hazen #2 schools (56.33 mills)",
+   "city": "Hazen",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Hazen School District",
+     "kind": "school",
+     "mills": 41.33,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 66"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "Running the schools — extra operating mills",
+       1.43,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       14.9,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Hazen",
+     "kind": "city",
+     "mills": 5,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 66"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Prairie County",
+     "kind": "county",
+     "mills": 10,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 66"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ulm-hazen-2-6",
+   "label": "Ulm · Hazen #2 schools (56.33 mills)",
+   "city": "Ulm",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Hazen School District",
+     "kind": "school",
+     "mills": 41.33,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 66"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "Running the schools — extra operating mills",
+       1.43,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       14.9,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Ulm",
+     "kind": "city",
+     "mills": 5,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 66"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Prairie County",
+     "kind": "county",
+     "mills": 10,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 66"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rural-beebe-21-7",
+   "label": "Outside any city · Beebe #21 schools (46.6 mills)",
+   "city": null,
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Beebe School District",
+     "kind": "school",
+     "mills": 36.6,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 66"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       11.6,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Prairie County",
+     "kind": "county",
+     "mills": 10,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 66"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rural-carlisle-3-8",
+   "label": "Outside any city · Carlisle #3 schools (52 mills)",
+   "city": null,
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Carlisle School District",
+     "kind": "school",
+     "mills": 42,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 66"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       17,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Prairie County",
+     "kind": "county",
+     "mills": 10,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 66"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rural-clarendon-6-9",
+   "label": "Outside any city · Clarendon #6 schools (49.4 mills)",
+   "city": null,
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Clarendon School District",
+     "kind": "school",
+     "mills": 39.4,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 66"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       14.4,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Prairie County",
+     "kind": "county",
+     "mills": 10,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 66"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "exemptions": {
+  "school": 0,
+  "city": 0,
+  "county": 0
+ },
+ "credit": {
+  "amount": 600,
+  "label": "homestead credit",
+  "note": "Arkansas taxes a home on 20% of its market value. Every homestead gets up to a $600 credit off the bill (Amendment 79); the state repays the local governments for it, so they still receive the full amount shown below.",
+  "limits": "The $600 homestead credit is applied in full when the bill is large enough; Amendment 79 also limits how fast a homestead’s assessed value can rise, which isn’t modeled."
+ },
+ "split_note": "Each government’s share is split by the mills it levies: the school district’s operating mills versus its bond (debt) mills, as the state lists them. City and county taxes are one slice each; the county’s spending is on the money trail.",
+ "tags": {
+  "schoolops": "Running the schools",
+  "debt": "Paying off bonds (debt)",
+  "city": "City services",
+  "county": "County services"
+ },
+ "rollback_title": "Why there’s no “no-raise” rate here",
+ "rollback_sub": "Arkansas works differently",
+ "rollback_note": "Florida and Texas publish a yearly “no-raise” rate. Arkansas doesn’t: its rates are set in mills, and after a countywide reassessment Amendment 59 rolls millage back so the reassessment alone doesn’t raise more money. School millage changes need a vote of the district’s voters at the school election — so the biggest lever on most Arkansas bills is a school election that usually draws far fewer voters than November.",
+ "hearing": "County and city millage is levied by the quorum court and city council each fall; school millage is set by the district’s voters at the school election.",
+ "limits": [
+  "Rates are from the state’s 2025 Millage Report (2026 collections), page 66.",
+  "County and city taxes are shown as single slices; the county’s own spending is on the money trail."
+ ]
+}

@@ -1,0 +1,680 @@
+{
+ "updated": "2026-10-06",
+ "mode": "arkansas",
+ "where": "Any home in Perry County: pick your city (or “outside any city”) and school district below. Rates are the 2025 millage the state certifies for taxes collected in 2026.",
+ "input_label": "Market value of your home (from the county assessor)",
+ "assess_ratio": 0.2,
+ "home_default": 150000,
+ "default_place": "perryville-perryville-7-6",
+ "places": [
+  {
+   "id": "rural-east-end-1-0",
+   "label": "Outside any city · East End #1 schools (49 mills)",
+   "city": null,
+   "authorities": [
+    {
+     "id": "school",
+     "name": "East End School District",
+     "kind": "school",
+     "mills": 40.4,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 60"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       15.4,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Perry County",
+     "kind": "county",
+     "mills": 8.6,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 60"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bigelow-east-end-1-1",
+   "label": "Bigelow · East End #1 schools (53.2 mills)",
+   "city": "Bigelow",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "East End School District",
+     "kind": "school",
+     "mills": 40.4,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 60"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       15.4,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Bigelow",
+     "kind": "city",
+     "mills": 4.2,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 60"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Perry County",
+     "kind": "county",
+     "mills": 8.6,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 60"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fourche-east-end-1-2",
+   "label": "Fourche · East End #1 schools (50.2 mills)",
+   "city": "Fourche",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "East End School District",
+     "kind": "school",
+     "mills": 40.4,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 60"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       15.4,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Fourche",
+     "kind": "city",
+     "mills": 1.2,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 60"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Perry County",
+     "kind": "county",
+     "mills": 8.6,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 60"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "houston-east-end-1-3",
+   "label": "Houston · East End #1 schools (54 mills)",
+   "city": "Houston",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "East End School District",
+     "kind": "school",
+     "mills": 40.4,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 60"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       15.4,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Houston",
+     "kind": "city",
+     "mills": 5,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 60"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Perry County",
+     "kind": "county",
+     "mills": 8.6,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 60"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rural-perryville-7-4",
+   "label": "Outside any city · Perryville #7 schools (46.28 mills)",
+   "city": null,
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Perryville School District",
+     "kind": "school",
+     "mills": 37.68,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 60"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       12.68,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Perry County",
+     "kind": "county",
+     "mills": 8.6,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 60"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "adona-perryville-7-5",
+   "label": "Adona · Perryville #7 schools (49.28 mills)",
+   "city": "Adona",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Perryville School District",
+     "kind": "school",
+     "mills": 37.68,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 60"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       12.68,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Adona",
+     "kind": "city",
+     "mills": 3,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 60"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Perry County",
+     "kind": "county",
+     "mills": 8.6,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 60"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "perryville-perryville-7-6",
+   "label": "Perryville · Perryville #7 schools (51.28 mills)",
+   "city": "Perryville",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Perryville School District",
+     "kind": "school",
+     "mills": 37.68,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 60"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       12.68,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Perryville",
+     "kind": "city",
+     "mills": 5,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 60"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Perry County",
+     "kind": "county",
+     "mills": 8.6,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 60"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rural-two-rivers-10-7",
+   "label": "Outside any city · Two Rivers #10 schools (44.2 mills)",
+   "city": null,
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Two Rivers School District",
+     "kind": "school",
+     "mills": 35.6,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 60"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       10.6,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Perry County",
+     "kind": "county",
+     "mills": 8.6,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 60"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "casa-two-rivers-10-8",
+   "label": "Casa · Two Rivers #10 schools (49.2 mills)",
+   "city": "Casa",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Two Rivers School District",
+     "kind": "school",
+     "mills": 35.6,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 60"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       10.6,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Casa",
+     "kind": "city",
+     "mills": 5,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 60"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Perry County",
+     "kind": "county",
+     "mills": 8.6,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 60"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "perry-two-rivers-10-9",
+   "label": "Perry · Two Rivers #10 schools (47.2 mills)",
+   "city": "Perry",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Two Rivers School District",
+     "kind": "school",
+     "mills": 35.6,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 60"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       10.6,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Perry",
+     "kind": "city",
+     "mills": 3,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 60"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Perry County",
+     "kind": "county",
+     "mills": 8.6,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 60"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "exemptions": {
+  "school": 0,
+  "city": 0,
+  "county": 0
+ },
+ "credit": {
+  "amount": 600,
+  "label": "homestead credit",
+  "note": "Arkansas taxes a home on 20% of its market value. Every homestead gets up to a $600 credit off the bill (Amendment 79); the state repays the local governments for it, so they still receive the full amount shown below.",
+  "limits": "The $600 homestead credit is applied in full when the bill is large enough; Amendment 79 also limits how fast a homestead’s assessed value can rise, which isn’t modeled."
+ },
+ "split_note": "Each government’s share is split by the mills it levies: the school district’s operating mills versus its bond (debt) mills, as the state lists them. City and county taxes are one slice each; the county’s spending is on the money trail.",
+ "tags": {
+  "schoolops": "Running the schools",
+  "debt": "Paying off bonds (debt)",
+  "city": "City services",
+  "county": "County services"
+ },
+ "rollback_title": "Why there’s no “no-raise” rate here",
+ "rollback_sub": "Arkansas works differently",
+ "rollback_note": "Florida and Texas publish a yearly “no-raise” rate. Arkansas doesn’t: its rates are set in mills, and after a countywide reassessment Amendment 59 rolls millage back so the reassessment alone doesn’t raise more money. School millage changes need a vote of the district’s voters at the school election — so the biggest lever on most Arkansas bills is a school election that usually draws far fewer voters than November.",
+ "hearing": "County and city millage is levied by the quorum court and city council each fall; school millage is set by the district’s voters at the school election.",
+ "limits": [
+  "Rates are from the state’s 2025 Millage Report (2026 collections), page 60.",
+  "County and city taxes are shown as single slices; the county’s own spending is on the money trail."
+ ]
+}

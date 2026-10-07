@@ -1,0 +1,1785 @@
+{
+ "updated": "2026-10-06",
+ "mode": "arkansas",
+ "where": "Any home in Mississippi County: pick your city (or “outside any city”) and school district below. Rates are the 2025 millage the state certifies for taxes collected in 2026.",
+ "input_label": "Market value of your home (from the county assessor)",
+ "assess_ratio": 0.2,
+ "home_default": 150000,
+ "default_place": "blytheville-armorel-9-1",
+ "places": [
+  {
+   "id": "rural-armorel-9-0",
+   "label": "Outside any city · Armorel #9 schools (48.7 mills)",
+   "city": null,
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Armorel School District",
+     "kind": "school",
+     "mills": 39,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "Running the schools — extra operating mills",
+       2,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       12,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Mississippi County",
+     "kind": "county",
+     "mills": 9.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "blytheville-armorel-9-1",
+   "label": "Blytheville · Armorel #9 schools (52.7 mills)",
+   "city": "Blytheville",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Armorel School District",
+     "kind": "school",
+     "mills": 39,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "Running the schools — extra operating mills",
+       2,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       12,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Blytheville",
+     "kind": "city",
+     "mills": 4,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Mississippi County",
+     "kind": "county",
+     "mills": 9.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rural-blytheville-5-2",
+   "label": "Outside any city · Blytheville #5 schools (50.2 mills)",
+   "city": null,
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Blytheville School District",
+     "kind": "school",
+     "mills": 40.5,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "Running the schools — extra operating mills",
+       2.5,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       13,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Mississippi County",
+     "kind": "county",
+     "mills": 9.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "blytheville-blytheville-5-3",
+   "label": "Blytheville · Blytheville #5 schools (54.2 mills)",
+   "city": "Blytheville",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Blytheville School District",
+     "kind": "school",
+     "mills": 40.5,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "Running the schools — extra operating mills",
+       2.5,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       13,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Blytheville",
+     "kind": "city",
+     "mills": 4,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Mississippi County",
+     "kind": "county",
+     "mills": 9.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "burdette-blytheville-5-4",
+   "label": "Burdette · Blytheville #5 schools (55.2 mills)",
+   "city": "Burdette",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Blytheville School District",
+     "kind": "school",
+     "mills": 40.5,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "Running the schools — extra operating mills",
+       2.5,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       13,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Burdette",
+     "kind": "city",
+     "mills": 5,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Mississippi County",
+     "kind": "county",
+     "mills": 9.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rural-gosnell-6-5",
+   "label": "Outside any city · Gosnell #6 schools (49.7 mills)",
+   "city": null,
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Gosnell School District",
+     "kind": "school",
+     "mills": 40,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "Running the schools — extra operating mills",
+       10,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       5,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Mississippi County",
+     "kind": "county",
+     "mills": 9.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dell-gosnell-6-6",
+   "label": "Dell · Gosnell #6 schools (54.7 mills)",
+   "city": "Dell",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Gosnell School District",
+     "kind": "school",
+     "mills": 40,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "Running the schools — extra operating mills",
+       10,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       5,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Dell",
+     "kind": "city",
+     "mills": 5,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Mississippi County",
+     "kind": "county",
+     "mills": 9.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gosnell-gosnell-6-7",
+   "label": "Gosnell · Gosnell #6 schools (53.7 mills)",
+   "city": "Gosnell",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Gosnell School District",
+     "kind": "school",
+     "mills": 40,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "Running the schools — extra operating mills",
+       10,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       5,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Gosnell",
+     "kind": "city",
+     "mills": 4,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Mississippi County",
+     "kind": "county",
+     "mills": 9.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rural-manila-15-8",
+   "label": "Outside any city · Manila #15 schools (51.1 mills)",
+   "city": null,
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Manila School District",
+     "kind": "school",
+     "mills": 41.4,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       11.7,
+       "debt"
+      ],
+      [
+       "Other school bonds (debt)",
+       4.7,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Mississippi County",
+     "kind": "county",
+     "mills": 9.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "etowah-manila-15-9",
+   "label": "Etowah · Manila #15 schools (56.1 mills)",
+   "city": "Etowah",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Manila School District",
+     "kind": "school",
+     "mills": 41.4,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       11.7,
+       "debt"
+      ],
+      [
+       "Other school bonds (debt)",
+       4.7,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Etowah",
+     "kind": "city",
+     "mills": 5,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Mississippi County",
+     "kind": "county",
+     "mills": 9.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "manila-manila-15-10",
+   "label": "Manila · Manila #15 schools (56.1 mills)",
+   "city": "Manila",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Manila School District",
+     "kind": "school",
+     "mills": 41.4,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       11.7,
+       "debt"
+      ],
+      [
+       "Other school bonds (debt)",
+       4.7,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Manila",
+     "kind": "city",
+     "mills": 5,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Mississippi County",
+     "kind": "county",
+     "mills": 9.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rural-osceola-1-11",
+   "label": "Outside any city · Osceola #1 schools (49.4 mills)",
+   "city": null,
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Osceola School District",
+     "kind": "school",
+     "mills": 39.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       13.2,
+       "debt"
+      ],
+      [
+       "Other school bonds (debt)",
+       1.5,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Mississippi County",
+     "kind": "county",
+     "mills": 9.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "osceola-osceola-1-12",
+   "label": "Osceola · Osceola #1 schools (56.4 mills)",
+   "city": "Osceola",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Osceola School District",
+     "kind": "school",
+     "mills": 39.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       13.2,
+       "debt"
+      ],
+      [
+       "Other school bonds (debt)",
+       1.5,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Osceola",
+     "kind": "city",
+     "mills": 7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Mississippi County",
+     "kind": "county",
+     "mills": 9.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "so-miss-rivercrest-5rural-13",
+   "label": " · So Miss/Rivercrest #5Rural schools (50.5 mills)",
+   "city": "",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "So Miss/Rivercrest #5Rural schools",
+     "kind": "school",
+     "mills": 40.8,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "School district (operating and debt split not listed)",
+       1,
+       "schoolops"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Mississippi County",
+     "kind": "county",
+     "mills": 9.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bassett-so-miss-rivercrest-5rural-14",
+   "label": "Bassett · So Miss/Rivercrest #5Rural schools (51.9 mills)",
+   "city": "Bassett",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "So Miss/Rivercrest #5Rural schools",
+     "kind": "school",
+     "mills": 40.8,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "School district (operating and debt split not listed)",
+       1,
+       "schoolops"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Bassett",
+     "kind": "city",
+     "mills": 1.4,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Mississippi County",
+     "kind": "county",
+     "mills": 9.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "birdsong-so-miss-rivercrest-5rural-15",
+   "label": "Birdsong · So Miss/Rivercrest #5Rural schools (58.5 mills)",
+   "city": "Birdsong",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "So Miss/Rivercrest #5Rural schools",
+     "kind": "school",
+     "mills": 40.8,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "School district (operating and debt split not listed)",
+       1,
+       "schoolops"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Birdsong",
+     "kind": "city",
+     "mills": 8,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Mississippi County",
+     "kind": "county",
+     "mills": 9.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "dyess-so-miss-rivercrest-5rural-16",
+   "label": "Dyess · So Miss/Rivercrest #5Rural schools (57.2 mills)",
+   "city": "Dyess",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "So Miss/Rivercrest #5Rural schools",
+     "kind": "school",
+     "mills": 40.8,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "School district (operating and debt split not listed)",
+       1,
+       "schoolops"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Dyess",
+     "kind": "city",
+     "mills": 6.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Mississippi County",
+     "kind": "county",
+     "mills": 9.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "etowah-so-miss-rivercrest-5rural-17",
+   "label": "Etowah · So Miss/Rivercrest #5Rural schools (55.5 mills)",
+   "city": "Etowah",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "So Miss/Rivercrest #5Rural schools",
+     "kind": "school",
+     "mills": 40.8,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "School district (operating and debt split not listed)",
+       1,
+       "schoolops"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Etowah",
+     "kind": "city",
+     "mills": 5,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Mississippi County",
+     "kind": "county",
+     "mills": 9.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "joiner-so-miss-rivercrest-5rural-18",
+   "label": "Joiner · So Miss/Rivercrest #5Rural schools (55 mills)",
+   "city": "Joiner",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "So Miss/Rivercrest #5Rural schools",
+     "kind": "school",
+     "mills": 40.8,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "School district (operating and debt split not listed)",
+       1,
+       "schoolops"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Joiner",
+     "kind": "city",
+     "mills": 4.5,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Mississippi County",
+     "kind": "county",
+     "mills": 9.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "keiser-so-miss-rivercrest-5rural-19",
+   "label": "Keiser · So Miss/Rivercrest #5Rural schools (56.5 mills)",
+   "city": "Keiser",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "So Miss/Rivercrest #5Rural schools",
+     "kind": "school",
+     "mills": 40.8,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "School district (operating and debt split not listed)",
+       1,
+       "schoolops"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Keiser",
+     "kind": "city",
+     "mills": 6,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Mississippi County",
+     "kind": "county",
+     "mills": 9.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "luxora-so-miss-rivercrest-5rural-20",
+   "label": "Luxora · So Miss/Rivercrest #5Rural schools (52 mills)",
+   "city": "Luxora",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "So Miss/Rivercrest #5Rural schools",
+     "kind": "school",
+     "mills": 40.8,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "School district (operating and debt split not listed)",
+       1,
+       "schoolops"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Luxora",
+     "kind": "city",
+     "mills": 1.5,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Mississippi County",
+     "kind": "county",
+     "mills": 9.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "marie-so-miss-rivercrest-5rural-21",
+   "label": "Marie · So Miss/Rivercrest #5Rural schools (52.4 mills)",
+   "city": "Marie",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "So Miss/Rivercrest #5Rural schools",
+     "kind": "school",
+     "mills": 40.8,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "School district (operating and debt split not listed)",
+       1,
+       "schoolops"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Marie",
+     "kind": "city",
+     "mills": 1.9,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Mississippi County",
+     "kind": "county",
+     "mills": 9.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "victoria-so-miss-rivercrest-5rural-22",
+   "label": "Victoria · So Miss/Rivercrest #5Rural schools (55.5 mills)",
+   "city": "Victoria",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "So Miss/Rivercrest #5Rural schools",
+     "kind": "school",
+     "mills": 40.8,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "School district (operating and debt split not listed)",
+       1,
+       "schoolops"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Victoria",
+     "kind": "city",
+     "mills": 5,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Mississippi County",
+     "kind": "county",
+     "mills": 9.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "wilson-so-miss-rivercrest-5rural-23",
+   "label": "Wilson · So Miss/Rivercrest #5Rural schools (52.8 mills)",
+   "city": "Wilson",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "So Miss/Rivercrest #5Rural schools",
+     "kind": "school",
+     "mills": 40.8,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "School district (operating and debt split not listed)",
+       1,
+       "schoolops"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Wilson",
+     "kind": "city",
+     "mills": 2.3,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Mississippi County",
+     "kind": "county",
+     "mills": 9.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rural-buffalo-island-centra-24",
+   "label": "Outside any city · Buffalo Island Centra schools (49.7 mills)",
+   "city": null,
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Buffalo Island Central School District",
+     "kind": "school",
+     "mills": 40,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       15,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Mississippi County",
+     "kind": "county",
+     "mills": 9.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "leachville-buffalo-island-centra-25",
+   "label": "Leachville · Buffalo Island Centra schools (54.7 mills)",
+   "city": "Leachville",
+   "authorities": [
+    {
+     "id": "school",
+     "name": "Buffalo Island Central School District",
+     "kind": "school",
+     "mills": 40,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       15,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "city",
+     "name": "City of Leachville",
+     "kind": "city",
+     "mills": 5,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "City services",
+       1,
+       "city"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Mississippi County",
+     "kind": "county",
+     "mills": 9.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rural-east-poinsett-county-26",
+   "label": "Outside any city · East Poinsett County schools (52.8 mills)",
+   "city": null,
+   "authorities": [
+    {
+     "id": "school",
+     "name": "East Poinsett County School District",
+     "kind": "school",
+     "mills": 43.1,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "slices": [
+      [
+       "Running the schools — the state’s 25-mill minimum (Amendment 74)",
+       25,
+       "schoolops"
+      ],
+      [
+       "School building bonds (debt)",
+       18.1,
+       "debt"
+      ]
+     ]
+    },
+    {
+     "id": "county",
+     "name": "Mississippi County",
+     "kind": "county",
+     "mills": 9.7,
+     "rollback": null,
+     "status": "2025 millage, collected in 2026",
+     "src": {
+      "url": "https://www.dfa.arkansas.gov/wp-content/uploads/2025-millage-2026-collections.pdf",
+      "label": "Arkansas 2025 Millage Report (2026 collections), p. 53"
+     },
+     "link": "/budget",
+     "slices": [
+      [
+       "County services — roads, sheriff and jail, courts, and any voter-approved library, hospital or college mills",
+       1,
+       "county"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "exemptions": {
+  "school": 0,
+  "city": 0,
+  "county": 0
+ },
+ "credit": {
+  "amount": 600,
+  "label": "homestead credit",
+  "note": "Arkansas taxes a home on 20% of its market value. Every homestead gets up to a $600 credit off the bill (Amendment 79); the state repays the local governments for it, so they still receive the full amount shown below.",
+  "limits": "The $600 homestead credit is applied in full when the bill is large enough; Amendment 79 also limits how fast a homestead’s assessed value can rise, which isn’t modeled."
+ },
+ "split_note": "Each government’s share is split by the mills it levies: the school district’s operating mills versus its bond (debt) mills, as the state lists them. City and county taxes are one slice each; the county’s spending is on the money trail.",
+ "tags": {
+  "schoolops": "Running the schools",
+  "debt": "Paying off bonds (debt)",
+  "city": "City services",
+  "county": "County services"
+ },
+ "rollback_title": "Why there’s no “no-raise” rate here",
+ "rollback_sub": "Arkansas works differently",
+ "rollback_note": "Florida and Texas publish a yearly “no-raise” rate. Arkansas doesn’t: its rates are set in mills, and after a countywide reassessment Amendment 59 rolls millage back so the reassessment alone doesn’t raise more money. School millage changes need a vote of the district’s voters at the school election — so the biggest lever on most Arkansas bills is a school election that usually draws far fewer voters than November.",
+ "hearing": "County and city millage is levied by the quorum court and city council each fall; school millage is set by the district’s voters at the school election.",
+ "limits": [
+  "Rates are from the state’s 2025 Millage Report (2026 collections), page 53.",
+  "County and city taxes are shown as single slices; the county’s own spending is on the money trail."
+ ]
+}

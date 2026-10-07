@@ -10,9 +10,12 @@ const { layout } = require('./layout');
 const cents = (x) => '$' + x.toFixed(2);
 const dollars = (x) => '$' + Math.round(x).toLocaleString('en-US');
 
-function compute(b, value, homestead) {
-  const taxable = (kind) => Math.max(0, value - (homestead ? (b.exemptions[kind] || 0) : 0));
-  const govs = b.authorities.map(a => {
+function compute(b, value, homestead, place) {
+  const ratio = b.assess_ratio || 1;
+  const ex = b.exemptions || {};
+  const taxable = (kind) => Math.max(0, value * ratio - (homestead ? (ex[kind] || 0) : 0));
+  const authorities = place ? place.authorities : b.authorities;
+  const govs = authorities.map(a => {
     const tv = taxable(a.kind);
     const parts = a.parts || [{ label: null, mills: a.mills, slices: a.slices, slices_note: a.slices_note }];
     let tax = 0;
@@ -29,7 +32,8 @@ function compute(b, value, homestead) {
   const total = govs.reduce((s, g) => s + g.tax, 0);
   const byTag = {};
   for (const g of govs) for (const s of g.slices) byTag[s.tag] = (byTag[s.tag] || 0) + s.amount;
-  return { govs, total, byTag };
+  const credit = homestead && b.credit ? Math.min(b.credit.amount, total) : 0;
+  return { govs, total, byTag, credit, ratio };
 }
 
 function myBillPage(data, query) {
@@ -52,14 +56,19 @@ function myBillPage(data, query) {
   if (!Number.isFinite(value) || value < 0) value = b.home_default;
   value = Math.min(20e6, Math.round(value));
   const homestead = query.run === '1' ? query.hs === '1' : true;
-  const r = compute(b, value, homestead);
+  const places = b.places || null;
+  const place = places ? (places.find(p => p.id === query.place) || places.find(p => p.id === b.default_place) || places[0]) : null;
+  const r = compute(b, value, homestead, place);
+  const rateText = (m) => b.rate_unit === 'per100' ? `$${(m / 10).toFixed(4)} per $100` : `${m.toFixed(m < 1 ? 4 : 2)} mills`;
   const per100 = (x) => r.total ? x / r.total * 100 : 0;
   const bar = (pct) => `<div style="background:var(--rule-soft);height:9px;max-width:300px;margin:3px 0 0"><div style="width:${Math.min(100, pct)}%;height:9px;background:var(--accent)"></div></div>`;
 
   const form = `
 <form method="GET" action="/mybill" class="issue" style="display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end">
   <input type="hidden" name="run" value="1">
-  <label class="src" style="max-width:none">Assessed value (from your TRIM notice or bcpao.us)<br>
+  ${places ? `<label class="src" style="max-width:none;flex:1 1 260px;min-width:0">Where you live<br>
+    <select name="place" style="font-family:var(--mono);font-size:14px;padding:8px 10px;border:1.5px solid var(--ink);background:var(--paper);color:var(--ink);margin-top:3px;width:100%;max-width:100%;box-sizing:border-box">${places.map(p => `<option value="${esc(p.id)}"${p === place ? ' selected' : ''}>${esc(p.label)}</option>`).join('')}</select></label>` : ''}
+  <label class="src" style="max-width:none">${esc(b.input_label || 'Assessed value (from your TRIM notice)')}<br>
     <input name="value" type="number" min="0" step="1000" value="${value}" style="font-family:var(--mono);font-size:15px;padding:8px 10px;border:1.5px solid var(--ink);background:var(--paper);color:var(--ink);margin-top:3px;width:11em;max-width:100%"></label>
   <label class="src" style="max-width:none;display:flex;gap:6px;align-items:center"><input type="checkbox" name="hs" value="1"${homestead ? ' checked' : ''}> It’s my homestead</label>
   <button type="submit" style="font-family:var(--mono);font-size:14px;padding:9px 16px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);cursor:pointer">Explain my bill</button>
@@ -82,7 +91,7 @@ function myBillPage(data, query) {
   const rbGovs = r.govs.filter(g => g.extra !== null);
   const extraTotal = rbGovs.reduce((s, g) => s + g.extra, 0);
   const rbRows = rbGovs.slice().sort((x, y) => y.extra - x.extra).map(g => `
-<tr><td><b>${esc(g.a.name)}</b><br><span class="soft" style="font-size:12px">${g.a.mills.toFixed(4)} mills vs. no-raise ${g.a.rollback.toFixed(4)}</span></td>
+<tr><td><b>${esc(g.a.name)}</b><br><span class="soft" style="font-size:12px">${rateText(g.a.mills)} vs. no-raise ${rateText(g.a.rollback)}</span></td>
 <td class="num">${g.extra >= 0 ? '+' : '−'}${cents(Math.abs(g.extra))}</td></tr>`).join('');
 
   const detail = r.govs.map(g => {
@@ -93,7 +102,7 @@ function myBillPage(data, query) {
     return `
 <details class="issue" style="display:block">
   <summary style="cursor:pointer"><b>${esc(g.a.name)}</b> — ${dollars(g.tax)} a year</summary>
-  <p class="src" style="max-width:none">${g.a.mills.toFixed(4)} mills on ${dollars(g.taxable)} of taxable value · ${esc(g.a.status)} · ${cite(g.a.src)}${g.a.link ? ` · <a href="${esc(g.a.link)}">its budget →</a>` : ''}</p>
+  <p class="src" style="max-width:none">${rateText(g.a.mills)} on ${dollars(g.taxable)} of taxable value · ${esc(g.a.status)} · ${cite(g.a.src)}${g.a.link ? ` · <a href="${esc(g.a.link)}">its budget →</a>` : ''}</p>
   ${g.a.note ? `<p class="src" style="max-width:none">${esc(g.a.note)}</p>` : ''}
   ${grouped}
 </details>`;
@@ -108,8 +117,9 @@ function myBillPage(data, query) {
 ${form}
 
 <section>
-<h2>${dollars(r.total)} a year <span class="sub">— about ${dollars(r.total / 12)} a month</span></h2>
-<p class="src" style="max-width:none">On an assessed value of ${dollars(value)}${homestead ? ', with the homestead exemption' : ', without a homestead exemption'}. An estimate from published rates — your own TRIM notice and tax bill are the final word.</p>
+<h2>${dollars(r.total - r.credit)} a year <span class="sub">— about ${dollars((r.total - r.credit) / 12)} a month</span></h2>
+<p class="src" style="max-width:none">On ${r.ratio !== 1 ? `a market value of ${dollars(value)} — taxed on ${Math.round(r.ratio * 100)}% of it, ${dollars(value * r.ratio)}` : `an assessed value of ${dollars(value)}`}${homestead ? ', as a homestead' : ', not a homestead'}${place ? `, in ${esc(place.label)}` : ''}.${r.credit ? ` Taxes levied: ${dollars(r.total)}, less the ${dollars(r.credit)} ${esc(b.credit.label)}.` : ''} An estimate from published rates — your own tax notice is the final word.</p>
+${r.credit && b.credit.note ? `<p class="src" style="max-width:none">${esc(b.credit.note)}</p>` : ''}
 <h3 style="margin-top:14px">Of every $100 you pay</h3>
 ${govRows}
 </section>
@@ -117,15 +127,15 @@ ${govRows}
 <section>
 <h2>Where it ends up <span class="sub">— every government’s share, by what it pays for</span></h2>
 ${tagList}
-<p class="src" style="max-width:none">Each government’s share is spread the way its own budget spends money. Open a government below to see its lines and sources.</p>
+<p class="src" style="max-width:none">${esc(b.split_note || 'Each government’s share is spread the way its own budget spends money. Open a government below to see its lines and sources.')}</p>
 </section>
 
 <section id="no-raise">
-<h2>The “no-raise” rate <span class="sub">— the rolled-back rate</span></h2>
+<h2>${esc(b.rollback_title || 'The “no-raise” rate')} <span class="sub">— ${esc(b.rollback_sub || 'the rolled-back rate')}</span></h2>
 <p>${esc(b.rollback_note)}</p>
 ${rbGovs.length ? `<p style="font-size:15px">At these rates you pay <b>${extraTotal >= 0 ? cents(extraTotal) + ' more' : cents(-extraTotal) + ' less'}</b> a year than you would at every government’s no-raise rate.</p>
 <div style="overflow-x:auto;max-width:100%"><table class="plain"><tbody>${rbRows}</tbody></table></div>` : ''}
-<p class="src" style="max-width:none">${esc(b.hearing)} Districts without a published no-raise rate here aren’t in the comparison. Meetings are on the <a href="/calendar">calendar</a>.</p>
+<p class="src" style="max-width:none">${esc(b.hearing)}${rbGovs.length ? ' Districts without a published no-raise rate here aren’t in the comparison.' : ''} Meetings are on the <a href="/calendar">calendar</a>.</p>
 </section>
 
 <section>
@@ -137,8 +147,8 @@ ${detail}
 <h2>What this doesn’t show <span class="sub">— the honest limits</span></h2>
 <ul>
 <li>Fees and assessments on the same bill — stormwater, trash, street lights and others — aren’t property taxes and aren’t included.</li>
-<li>${esc(b.exemptions.note)} Senior, veteran, widow and disability exemptions aren’t modeled.</li>
-<li>Some rates are the July proposals; the final rates were set in September. Each line says which.</li>
+<li>${esc((b.exemptions && b.exemptions.note) || (b.credit && b.credit.limits) || '')} Senior, veteran, widow and disability exemptions aren’t modeled.</li>
+${(b.limits || ['Some rates are the July proposals; the final rates were set in September. Each line says which.']).map(x => `<li>${esc(x)}</li>`).join('')}
 <li>Spreading a government’s tax across its whole budget is a fair picture, not a receipt: most budgets also run on other money (sales tax, state aid, fees).</li>
 </ul>
 <p class="src">Related: <a href="/taxlab">Tax lab — change the rates</a> · <a href="/budget">The money trail</a> · <a href="/whatif">What if we saved?</a>. This page computes and cites; it doesn’t say what any rate should be. Spot an error? <a href="/feedback">Report it</a>.</p>
