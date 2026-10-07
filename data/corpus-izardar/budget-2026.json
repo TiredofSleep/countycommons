@@ -1,25 +1,3107 @@
 {
-  "meta": {
-    "document": "Izard County — no appropriation document ingested yet",
-    "title": "Izard County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Izard County 2026 budget book (requested amounts)",
+  "title": "Izard County — the money trail",
+  "year": 2026,
+  "grand_total": 9170289,
+  "note": "This is Izard County's 2026 budget book, as sent to the state. Amounts are the 2026 column on each office's budget page. On a few pages the line items do not add up to the printed total; we show the printed total and say so. The book has no appropriation ordinance, and its summaries label the 2026 column “Requested,” so the quorum court’s final amounts may differ."
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General",
+   "code": "1000",
+   "amount": 3632298,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "pp. 10–34"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No total for fund 1000 alone is printed; this is the sum of its offices' printed 2026 totals."
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Izard County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-0100",
+   "amount": 118479,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-ps",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 92929,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-su",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1800,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-os",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 23250,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-co",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "1000-0101",
+   "amount": 155897,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-ps",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 132098,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-su",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5200,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-os",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 18599,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Treasurer",
+   "code": "1000-0103",
+   "amount": 164387,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The summary on p. 8 lists $161,456.00 for this office."
+  },
+  {
+   "id": "f1000-d0103-ps",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 156987,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-su",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1550,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-os",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5850,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Collector",
+   "code": "1000-0104",
+   "amount": 177392,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-ps",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 148177,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-su",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 640,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-os",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 28575,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Assessor",
+   "code": "1000-0105",
+   "amount": 564325,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-ps",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 474706,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-su",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 12400,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-os",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 67483,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-ds",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 9736,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 43835,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-ps",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 40165,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-os",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3670,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse Maintenance",
+   "code": "1000-0108",
+   "amount": 148949,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-ps",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 44249,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-su",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5600,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-os",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 98100,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-co",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Elections",
+   "code": "1000-0109",
+   "amount": 153390,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-ps",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 75590,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-su",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5500,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-os",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 72300,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0116",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Grants-in-Aid / Tri-County Recycling",
+   "code": "1000-0116",
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0116-os",
+   "parent": "f1000-d0116",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Health Department",
+   "code": "1000-0300",
+   "amount": 37519,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-ps",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 13769,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-su",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3350,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-os",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 20400,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff",
+   "code": "1000-0400",
+   "amount": 1633574,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-ps",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1365394,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-su",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 95000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-os",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 173180,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court",
+   "code": "1000-0401",
+   "amount": 18347,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-su",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 400,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-os",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 15225,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-co",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2722,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court",
+   "code": "1000-0409",
+   "amount": 110387,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-ps",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 101187,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-su",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-os",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6700,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Court",
+   "code": "1000-0414",
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-os",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney",
+   "code": "1000-0416",
+   "amount": 16365,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed total is $16,365.00; the parts listed add to $16,436.00."
+  },
+  {
+   "id": "f1000-d0416-ps",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 12694,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-su",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 731,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-os",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3011,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Coroner",
+   "code": "1000-0419",
+   "amount": 38589,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The summary on p. 8 lists $35,589.00 for this office."
+  },
+  {
+   "id": "f1000-d0419-ps",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 35189,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-su",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1900,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-os",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0421",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Grants-in-Aid / Drug Task Force",
+   "code": "1000-0421",
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Only a line item total is printed; no separate total budget amount."
+  },
+  {
+   "id": "f1000-d0421-os",
+   "parent": "f1000-d0421",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Deputy Prosecuting Attorney",
+   "code": "1000-0422",
+   "amount": 24027,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422-ps",
+   "parent": "f1000-d0422",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 13738,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422-su",
+   "parent": "f1000-d0422",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2960,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422-os",
+   "parent": "f1000-d0422",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7329,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "OEM",
+   "code": "1000-0500",
+   "amount": 91766,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed total is $91,766.00; the parts listed add to $91,776.00."
+  },
+  {
+   "id": "f1000-d0500-ps",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 53476,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-su",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5800,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-os",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 32500,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0602",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Grants-in-Aid / Recreation Culture",
+   "code": "1000-0602",
+   "amount": 16000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0602-os",
+   "parent": "f1000-d0602",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 16000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veterans Service",
+   "code": "1000-0800",
+   "amount": 15235,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed total is $15,235.00; the parts listed add to $15,495.00."
+  },
+  {
+   "id": "f1000-d0800-ps",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 15155,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-su",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 200,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-os",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 140,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Extension Office",
+   "code": "1000-0801",
+   "amount": 38235,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-ps",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-su",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 770,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-os",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7465,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0803",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Grants-in-Aid / Social Services",
+   "code": "1000-0803",
+   "amount": 21600,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Line 3103 Grants-in-Aid has no amount of its own; $21,600 is the printed total (NADC food program $18,000 and three food rooms at $1,200)."
+  },
+  {
+   "id": "f1000-d0803-os",
+   "parent": "f1000-d0803",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 21600,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Courthouse Annex Maintenance",
+   "code": "1800",
+   "amount": 40000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800-su",
+   "parent": "f1800",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4800,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800-os",
+   "parent": "f1800",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 35200,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1807",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Enforcement",
+   "code": "1807",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1807-os",
+   "parent": "f1807",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Road Fund",
+   "code": "2000",
+   "amount": 2393438,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-ps",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1008858,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-su",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 510600,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-os",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 168480,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-ds",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 235000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-co",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 470500,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Additional Motor Fuel Tax (416 of 2019)",
+   "code": "2003",
+   "amount": 112000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003-su",
+   "parent": "f2003",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 112000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer Automation Fund",
+   "code": "3000",
+   "amount": 39250,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-su",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-os",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 31250,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-co",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector Automation Fund",
+   "code": "3001",
+   "amount": 47200,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-su",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9500,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-os",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 32700,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-co",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Automation Fund",
+   "code": "3002",
+   "amount": 5795,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-os",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2795,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-co",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "District Court Automation Fund",
+   "code": "3003",
+   "amount": 5800,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3003-su",
+   "parent": "f3003",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 200,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3003-os",
+   "parent": "f3003",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5600,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor Automation Fund",
+   "code": "3004",
+   "amount": 43069,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-ps",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 8859,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-su",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7867,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-os",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 26343,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Recorder Cost Fund",
+   "code": "3006",
+   "amount": 186353,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-ps",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 138803,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-su",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 19600,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-os",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 27950,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Library",
+   "code": "3008",
+   "amount": 322300,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-ps",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 151437,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-su",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 39750,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-os",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 106113,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-co",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Child Support Cost Fund",
+   "code": "3012",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-su",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-os",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Control",
+   "code": "3015",
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 49"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Only a line item total is printed; no separate total budget amount."
+  },
+  {
+   "id": "f3015-os",
+   "parent": "f3015",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 49"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Operation Fund",
+   "code": "3017",
+   "amount": 1120414,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-ps",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 825889,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-su",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 128500,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-os",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 166025,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Boating Safety Fund",
+   "code": "3019",
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-su",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-co",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emergency 911",
+   "code": "3020",
+   "amount": 349001,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed total is $349,001.00; the parts listed add to $350,001.00."
+  },
+  {
+   "id": "f3020-ps",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 248851,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-os",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 31150,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-co",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 70000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3021",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emergency Medical Services Fund",
+   "code": "3021",
+   "amount": 257152,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3021-ps",
+   "parent": "f3021",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 241152,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3021-os",
+   "parent": "f3021",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 16000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Public Defender Fund",
+   "code": "3024",
+   "amount": 22000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "On this sheet the amounts sit one row above their labels; read by eye."
+  },
+  {
+   "id": "f3024-ps",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024-su",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024-os",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 14000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Adult Drug Court Fund",
+   "code": "3028",
+   "amount": 1370,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028-su",
+   "parent": "f3028",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 650,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028-os",
+   "parent": "f3028",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 720,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Juvenile Division/Juvenile Probation Fee Fund",
+   "code": "3031",
+   "amount": 8700,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-os",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 8700,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3506",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Tobacco Prevention",
+   "code": "3506",
+   "amount": 110412,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3506-ps",
+   "parent": "f3506",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 78754,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3506-su",
+   "parent": "f3506",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3506-os",
+   "parent": "f3506",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 24658,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3508",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Court Grant",
+   "code": "3508",
+   "amount": 5845,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3508-su",
+   "parent": "f3508",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 725,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3508-os",
+   "parent": "f3508",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5120,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor Late Fund",
+   "code": "3400",
+   "amount": 3278,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-su",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3278,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3513",
+   "parent": null,
+   "section": "appropriations",
+   "name": "COAP 19 Grant",
+   "code": "3513",
+   "amount": 324526,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3513-ps",
+   "parent": "f3513",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 259950,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3513-su",
+   "parent": "f3513",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 27258,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3513-os",
+   "parent": "f3513",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 37318,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3514",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Rivers Grant",
+   "code": "3514",
+   "amount": 112500,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3514-ps",
+   "parent": "f3514",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 65239,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3514-su",
+   "parent": "f3514",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 23480,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3514-os",
+   "parent": "f3514",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 23781,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3048",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Special Project Adult Drug Court Grant",
+   "code": "3048",
+   "amount": 7588,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 63"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3048-os",
+   "parent": "f3048",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7588,
+   "status": "sourced",
+   "source": {
+    "doc": "izardar-budget-2026",
+    "page": "p. 63"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }

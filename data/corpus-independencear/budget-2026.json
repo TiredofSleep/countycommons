@@ -1,25 +1,5303 @@
 {
-  "meta": {
-    "document": "Independence County — no appropriation document ingested yet",
-    "title": "Independence County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Independence County 2026 adopted budget",
+  "title": "Independence County — the money trail",
+  "year": 2026,
+  "grand_total": 38170065.54,
+  "note": "This is Independence County's 2026 budget, set by Ordinance 2025-26 and filed with the state. Amounts are what the ordinance appropriates for each fund; the split of each general fund office comes from the 2026 budget worksheets. Some money moves between county funds, so it shows up twice: for example, the Road Fund sends $894,000 to the Four Lane Highway Fund, and the general fund sends $143,750 to 9-1-1 and the public defender."
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General Fund",
+   "code": "1000",
+   "amount": 8935331.19,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Independence County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-0100",
+   "amount": 86021.03,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-ps",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 41761,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-su",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6700,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-os",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 31250,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-co",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 6310.03,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "1000-0101",
+   "amount": 299420,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-ps",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 269724.5,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-su",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6750,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-os",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 22945.5,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Clerk",
+   "code": "1000-0102",
+   "amount": 335017.7,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-ps",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 335017.7,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Treasurer",
+   "code": "1000-0103",
+   "amount": 201496,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-ps",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 201496,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Tax Collector",
+   "code": "1000-0104",
+   "amount": 482439.95,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-ps",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 390084.82,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-su",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 12200,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-os",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 69607.13,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-tr",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 10548,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Tax Assessor",
+   "code": "1000-0105",
+   "amount": 757025.14,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-ps",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 571887.14,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-su",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 23400,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-os",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 151190,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-tr",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 10548,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Equalization Board",
+   "code": "1000-0106",
+   "amount": 6800,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-ps",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 6500,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-os",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 300,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 134530,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-ps",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 128460,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-su",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 100,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-os",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5970,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Maintenance",
+   "code": "1000-0108",
+   "amount": 269395.55,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-ps",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 133022.55,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-su",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 36273,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-os",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 100100,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Independence Co. Election Commission",
+   "code": "1000-0109",
+   "amount": 183250,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-ps",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 117650,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-su",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 16200,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-os",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 49400,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0116",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Grant-in-Aid-General",
+   "code": "1000-0116",
+   "amount": 24750,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0116-os",
+   "parent": "f1000-d0116",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 24750,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0125",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Assessor's Reappraisal",
+   "code": "1000-0125",
+   "amount": 382387.34,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0125-ps",
+   "parent": "f1000-d0125",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 203062.34,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0125-su",
+   "parent": "f1000-d0125",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 26900,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0125-os",
+   "parent": "f1000-d0125",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 152425,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0127",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Association Dues",
+   "code": "1000-0127",
+   "amount": 3300,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0127-os",
+   "parent": "f1000-d0127",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3300,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0128",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Pre-Paid Unemployment/Workers Comp",
+   "code": "1000-0128",
+   "amount": 25400,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0128-ps",
+   "parent": "f1000-d0128",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 23500,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0128-os",
+   "parent": "f1000-d0128",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1900,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Public Health",
+   "code": "1000-0300",
+   "amount": 2400,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-su",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2400,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Sheriff",
+   "code": "1000-0400",
+   "amount": 2325096,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The ordinance appropriates $2,325,096.00; the categories on the 2026 budget worksheet add to $2,325,081.00."
+  },
+  {
+   "id": "f1000-d0400-ps",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2011025,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-su",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 201616,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-os",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 87440,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-co",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court",
+   "code": "1000-0401",
+   "amount": 33875,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-su",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2400,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-os",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 31475,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court",
+   "code": "1000-0409",
+   "amount": 319860,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-ps",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 286718,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-su",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6100,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-os",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 27042,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0410",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Community Service",
+   "code": "1000-0410",
+   "amount": 90999,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0410-ps",
+   "parent": "f1000-d0410",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 67124,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 47"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0410-su",
+   "parent": "f1000-d0410",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6300,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 47"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0410-os",
+   "parent": "f1000-d0410",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 17575,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit/Chancery/Juvenile Court",
+   "code": "1000-0414",
+   "amount": 414871.5,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-ps",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 387099,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 49"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-su",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3525,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 49"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-os",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 24247.5,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney 16th Judicial",
+   "code": "1000-0416",
+   "amount": 143136,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-ps",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 113661,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-su",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4900,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-os",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 24575,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Jail",
+   "code": "1000-0418",
+   "amount": 1765739,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-ps",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1255685,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-su",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 269100,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-os",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 234498,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-co",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 6456,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Coroner",
+   "code": "1000-0419",
+   "amount": 43463,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-ps",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 40051,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-su",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1592,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-os",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1820,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0421",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Grant-in-Aid-Law Enforcement",
+   "code": "1000-0421",
+   "amount": 48200,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0421-os",
+   "parent": "f1000-d0421",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 48200,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0453",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff Reserves/SWAT",
+   "code": "1000-0453",
+   "amount": 18300,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0453-su",
+   "parent": "f1000-d0453",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 15800,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0453-os",
+   "parent": "f1000-d0453",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0456",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney Independence County",
+   "code": "1000-0456",
+   "amount": 86302.28,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0456-ps",
+   "parent": "f1000-d0456",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 86252.28,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0456-os",
+   "parent": "f1000-d0456",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 50,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0457",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Independence County-State Police",
+   "code": "1000-0457",
+   "amount": 1100,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0457-su",
+   "parent": "f1000-d0457",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 75,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0457-os",
+   "parent": "f1000-d0457",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1025,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "OEM",
+   "code": "1000-0500",
+   "amount": 125072.2,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-ps",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 80059.2,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-su",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 21063,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-os",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 16050,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-ds",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 400,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-co",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 7500,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veterans Service",
+   "code": "1000-0800",
+   "amount": 45434.5,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-ps",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 43209.5,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 63"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-su",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 900,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 63"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-os",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1325,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 63"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Extension Service",
+   "code": "1000-0801",
+   "amount": 65400,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-ps",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 52500,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 65"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-su",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 65"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-os",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 12400,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 65"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0803",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Grant-in-Aid-Social Services",
+   "code": "1000-0803",
+   "amount": 71100,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0803-os",
+   "parent": "f1000-d0803",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 71100,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d8888",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Transfers Budget",
+   "code": "1000-8888",
+   "amount": 143750,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d8888-tr",
+   "parent": "f1000-d8888",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 143750,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1804",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Detention Fund",
+   "code": "1804",
+   "amount": 2000000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1804-os",
+   "parent": "f1804",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2000000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1805",
+   "parent": null,
+   "section": "appropriations",
+   "name": "School Resource Officer Fund",
+   "code": "1805",
+   "amount": 510600,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1805-ps",
+   "parent": "f1805",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 508800,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1805-os",
+   "parent": "f1805",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1800,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1806",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Newark Metro Fund",
+   "code": "1806",
+   "amount": 142330,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1806-ps",
+   "parent": "f1806",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 141730,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1806-os",
+   "parent": "f1806",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 600,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1809",
+   "parent": null,
+   "section": "appropriations",
+   "name": "District Court Funding City of Batesville Fund",
+   "code": "1809",
+   "amount": 157651.62,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1809-os",
+   "parent": "f1809",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 157651.62,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1811",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Prosecuting Attorney Victim Assistance Program Fund",
+   "code": "1811",
+   "amount": 156736.32,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1811-ps",
+   "parent": "f1811",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 149583.63,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1811-su",
+   "parent": "f1811",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2376.17,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1811-os",
+   "parent": "f1811",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4776.52,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1813",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Act 209 of 2009 City of Batesville Fund",
+   "code": "1813",
+   "amount": 35321.79,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1813-os",
+   "parent": "f1813",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 35321.79,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Road Fund",
+   "code": "2000",
+   "amount": 9884077.25,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-ps",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2829100,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-su",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4464977.25,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-os",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 346000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-co",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1295000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-ds",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 55000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-tr",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 894000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Additional Motor Fuel Tax (Act 416 of 2019) Fund",
+   "code": "2003",
+   "amount": 400000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003-os",
+   "parent": "f2003",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 400000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2851",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Four Lane Highway Construction Fund",
+   "code": "2851",
+   "amount": 1344000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2851-co",
+   "parent": "f2851",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1344000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Automation Fund",
+   "code": "3000",
+   "amount": 58522,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-su",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 25150,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-os",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 19474,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-co",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 3350,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-tr",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 10548,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Tax Collector's Automation Fund",
+   "code": "3001",
+   "amount": 144100,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-su",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-os",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 74400,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-co",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 61700,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Act 1262 of 1995 Circuit Court Automation Fund",
+   "code": "3002",
+   "amount": 16529,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-os",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4345,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-co",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 12184,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Amd. 79 Fund",
+   "code": "3004",
+   "amount": 62900,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-su",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 51400,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-os",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 11500,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk Cost Fund",
+   "code": "3005",
+   "amount": 8500,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-os",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 8500,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Recorder Cost Fund",
+   "code": "3006",
+   "amount": 330350,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-ps",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 210275,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-su",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 14200,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-os",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 105875,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Library Mill Tax Fund",
+   "code": "3008",
+   "amount": 1027840,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-ps",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 631191,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-su",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 195224,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-os",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 171425,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-co",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Integrated Solid Waste System Fund",
+   "code": "3009",
+   "amount": 3652400,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-d0700",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Solid Waste Collection Budget",
+   "code": "3009-0700",
+   "amount": 3242900,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-d0700-ps",
+   "parent": "f3009-d0700",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 794300,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-d0700-su",
+   "parent": "f3009-d0700",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 458000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-d0700-os",
+   "parent": "f3009-d0700",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1430600,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-d0700-co",
+   "parent": "f3009-d0700",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 560000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-d0702",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Independence County/City of Batesville Recycling Fund",
+   "code": "3009-0702",
+   "amount": 409500,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-d0702-ps",
+   "parent": "f3009-d0702",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 213500,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-d0702-su",
+   "parent": "f3009-d0702",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 66000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-d0702-os",
+   "parent": "f3009-d0702",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 50000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-d0702-co",
+   "parent": "f3009-d0702",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 80000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Child Support Fund",
+   "code": "3012",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-os",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-tr",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Communications Facility and Equipment Fund",
+   "code": "3014",
+   "amount": 81700,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014-su",
+   "parent": "f3014",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 61900,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014-os",
+   "parent": "f3014",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 17300,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014-co",
+   "parent": "f3014",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Fine Fund",
+   "code": "3017",
+   "amount": 265400,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-su",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 33900,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-os",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 72000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-co",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 159500,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3018",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Detention Facility Fund",
+   "code": "3018",
+   "amount": 10440,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3018-os",
+   "parent": "f3018",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10440,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Boating Safety Act 122 of 1987 Fund",
+   "code": "3019",
+   "amount": 29245,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-su",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-os",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-co",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 16245,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "9-1-1 Emergency Number Fund",
+   "code": "3020",
+   "amount": 909695,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-ps",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 676000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-su",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 67200,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-os",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 118600,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-co",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 47895,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3022",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emergency Vehicle Fund",
+   "code": "3022",
+   "amount": 27980,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3022-co",
+   "parent": "f3022",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 27980,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Public Defender Fund",
+   "code": "3026",
+   "amount": 31660,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026-ps",
+   "parent": "f3026",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 11000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026-su",
+   "parent": "f3026",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026-os",
+   "parent": "f3026",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 19660,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3048",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Adult Drug Court Fund",
+   "code": "3048",
+   "amount": 14367.56,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3048-su",
+   "parent": "f3048",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4367.56,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3048-os",
+   "parent": "f3048",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3075",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Facilities Depreciation Fund",
+   "code": "3075",
+   "amount": 410000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3075-su",
+   "parent": "f3075",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 80000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3075-os",
+   "parent": "f3075",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 330000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3076",
+   "parent": null,
+   "section": "appropriations",
+   "name": "UA Community College-Batesville Fund",
+   "code": "3076",
+   "amount": 2064397.5,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3076-tr",
+   "parent": "f3076",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 2064397.5,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Hydro Fund",
+   "code": "3400",
+   "amount": 2162.5,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-os",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2162.5,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3403",
+   "parent": null,
+   "section": "appropriations",
+   "name": "DHS/Health Complex/County Facilities/Law Enforcement/Emergency Services Fund",
+   "code": "3403",
+   "amount": 387607,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3403-ps",
+   "parent": "f3403",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 122872,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3403-su",
+   "parent": "f3403",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 48500,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3403-os",
+   "parent": "f3403",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 104100,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3403-co",
+   "parent": "f3403",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 112135,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Special Disaster Recovery Fund",
+   "code": "3404",
+   "amount": 21388.52,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404-su",
+   "parent": "f3404",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9388.52,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404-co",
+   "parent": "f3404",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 12000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3405",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Independence County Economic Development Fund",
+   "code": "3405",
+   "amount": 788000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3405-su",
+   "parent": "f3405",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 40000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3405-os",
+   "parent": "f3405",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 748000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3407",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sales Tax Fire Department Fund",
+   "code": "3407",
+   "amount": 505774.72,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3407-ps",
+   "parent": "f3407",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3407-os",
+   "parent": "f3407",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 500774.72,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3408",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sales Tax Recreation Fund",
+   "code": "3408",
+   "amount": 246200,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3408-os",
+   "parent": "f3408",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 206200,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3408-tr",
+   "parent": "f3408",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 40000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3409",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Magnum Drug Court Act 490 Fund",
+   "code": "3409",
+   "amount": 2836.83,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3409-su",
+   "parent": "f3409",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3409-os",
+   "parent": "f3409",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1836.83,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3410",
+   "parent": null,
+   "section": "appropriations",
+   "name": "DWI Court Fund",
+   "code": "3410",
+   "amount": 70000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3410-ps",
+   "parent": "f3410",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 65114,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3410-su",
+   "parent": "f3410",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2336,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3410-os",
+   "parent": "f3410",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2550,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3411",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Independence County Shooting Range Fund",
+   "code": "3411",
+   "amount": 178592,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3411-ps",
+   "parent": "f3411",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 97002,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3411-su",
+   "parent": "f3411",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 67490,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3411-os",
+   "parent": "f3411",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 13300,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3411-co",
+   "parent": "f3411",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 800,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3417",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Act 490 of 2009 Fees Fund",
+   "code": "3417",
+   "amount": 19100,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3417-os",
+   "parent": "f3417",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 19100,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3418",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Court Graduation Fund",
+   "code": "3418",
+   "amount": 16.68,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3418-su",
+   "parent": "f3418",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 16.68,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3437",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Fire Departments 1/2 Cent Sales Tax Fund",
+   "code": "3437",
+   "amount": 1736621.85,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3437-os",
+   "parent": "f3437",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1736621.85,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3438",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff Special Needs Fund",
+   "code": "3438",
+   "amount": 31834,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3438-su",
+   "parent": "f3438",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 20534,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3438-os",
+   "parent": "f3438",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 11300,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3439",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff Special Drug & Investigation Fund",
+   "code": "3439",
+   "amount": 30506,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3439-su",
+   "parent": "f3439",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 12100,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3439-os",
+   "parent": "f3439",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 18406,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3440",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Senior Citizens Fund",
+   "code": "3440",
+   "amount": 535065,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3440-ps",
+   "parent": "f3440",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 355000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3440-su",
+   "parent": "f3440",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 97100,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3440-os",
+   "parent": "f3440",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 81965,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3440-co",
+   "parent": "f3440",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3490",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Donation Fund-911",
+   "code": "3490",
+   "amount": 4100,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3490-su",
+   "parent": "f3490",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3490-os",
+   "parent": "f3490",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1600,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3491",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Bayou Trail Project Fund",
+   "code": "3491",
+   "amount": 18310.08,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3491-su",
+   "parent": "f3491",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6000.26,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3491-os",
+   "parent": "f3491",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 12309.82,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3493",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Natural Disaster Relief Grant Fund",
+   "code": "3493",
+   "amount": 76000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3493-os",
+   "parent": "f3493",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 76000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3500",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Grant Fund",
+   "code": "3500",
+   "amount": 50000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3500-su",
+   "parent": "f3500",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3500-os",
+   "parent": "f3500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3500-co",
+   "parent": "f3500",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3521",
+   "parent": null,
+   "section": "appropriations",
+   "name": "DWI Court Grant Fund",
+   "code": "3521",
+   "amount": 1301.69,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3521-os",
+   "parent": "f3521",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1301.69,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3433",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Officer Grant Fund",
+   "code": "3433",
+   "amount": 12767.3,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3433-su",
+   "parent": "f3433",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 12767.3,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3534",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Office Grant Supplies Fund",
+   "code": "3534",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3534-os",
+   "parent": "f3534",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4500",
+   "parent": null,
+   "section": "appropriations",
+   "name": "OEM Complex Construction Fund",
+   "code": "4500",
+   "amount": 541657.14,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4500-os",
+   "parent": "f4500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 195600,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4500-co",
+   "parent": "f4500",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 346057.14,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6500",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Bethesda Area Volunteer Fire Department Act 833 Fund",
+   "code": "6500",
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6500-su",
+   "parent": "f6500",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 12000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6500-os",
+   "parent": "f6500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6500-co",
+   "parent": "f6500",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6501",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Bethesda Area Volunteer Fire Department 12% of 1-Cent Sales Tax Fund",
+   "code": "6501",
+   "amount": 30400,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6501-su",
+   "parent": "f6501",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6501-os",
+   "parent": "f6501",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 21400,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6502",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Bethesda Area Volunteer Fire Department 1/2-Cent Sales Tax Fund",
+   "code": "6502",
+   "amount": 137750,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6502-su",
+   "parent": "f6502",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 58500,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6502-os",
+   "parent": "f6502",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 29250,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6502-co",
+   "parent": "f6502",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 50000,
+   "status": "sourced",
+   "source": {
+    "doc": "independencear-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }

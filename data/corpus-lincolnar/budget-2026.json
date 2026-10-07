@@ -1,25 +1,2711 @@
 {
-  "meta": {
-    "document": "Lincoln County — no appropriation document ingested yet",
-    "title": "Lincoln County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Lincoln County 2026 adopted budget",
+  "title": "Lincoln County — the money trail",
+  "year": 2026,
+  "grand_total": 8489815.89,
+  "note": "This is Lincoln County's 2026 budget, set by Ordinance 2025-21 and filed with the state. Amounts are the ordinance's maximum appropriations; the split of each General Fund office comes from its application for appropriation. The Reappraisal Fund's $76,608 is moved into the General Fund, so those dollars appear in both."
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "General Fund",
+   "code": "1000",
+   "amount": 3622326.61,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Lincoln County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Office of County Judge",
+   "code": "1000-0100",
+   "amount": 109845.29,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-ps",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 69145.29,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-su",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-os",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 37700,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Office of County Clerk",
+   "code": "1000-0101",
+   "amount": 198474.72,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The ordinance appropriates $198,474.72; the application for appropriation (p. 10) requests $162,710.00, split into the categories shown."
+  },
+  {
+   "id": "f1000-d0101-ps",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 108910,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-su",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-os",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 34300,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-co",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10500,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Office of Circuit Clerk",
+   "code": "1000-0102",
+   "amount": 175763.22,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-ps",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 175763.22,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Office of Treasurer",
+   "code": "1000-0103",
+   "amount": 120949.72,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-ps",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 72799.72,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-su",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-os",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 41150,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Office of Collector",
+   "code": "1000-0104",
+   "amount": 250203.18,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The ordinance appropriates $250,203.18; the application for appropriation (p. 17) requests $255,570.19, split into the categories shown."
+  },
+  {
+   "id": "f1000-d0104-ps",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 177598.18,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-su",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-os",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 68605,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-co",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 5367.01,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Office of Assessor",
+   "code": "1000-0105",
+   "amount": 283279.88,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-ps",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 182904.88,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-su",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-os",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 96375,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-co",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Board of Equalization",
+   "code": "1000-0106",
+   "amount": 93700,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-ps",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 91500,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-os",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2200,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 118084.07,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-ps",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 111384.07,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-su",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-os",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5700,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse Maintenance",
+   "code": "1000-0108",
+   "amount": 226411.55,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-ps",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 66611.55,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-su",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 79100,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-os",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 60700,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-co",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Election Expense",
+   "code": "1000-0109",
+   "amount": 64250,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-ps",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 21050,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-su",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 28000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-os",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 13200,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-co",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Health Dept",
+   "code": "1000-0300",
+   "amount": 35750,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-su",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 15850,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-os",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 19900,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0304",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Senior Citizen Center",
+   "code": "1000-0304",
+   "amount": 37125,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0304-su",
+   "parent": "f1000-d0304",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0304-os",
+   "parent": "f1000-d0304",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10625,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0304-co",
+   "parent": "f1000-d0304",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Office of County Sheriff",
+   "code": "1000-0400",
+   "amount": 1137089.31,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-ps",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 881889.31,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-su",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 124000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-os",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 81200,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-co",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 50000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Office of School Resource Officers",
+   "code": "1000-0401",
+   "amount": 145847.88,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-ps",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 145847.88,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit & Courtroom",
+   "code": "1000-0406",
+   "amount": 18422,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406-ps",
+   "parent": "f1000-d0406",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 7822,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406-os",
+   "parent": "f1000-d0406",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10600,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Judge",
+   "code": "1000-0414",
+   "amount": 198083.51,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The ordinance appropriates $198,083.51; the application for appropriation (pp. 44–45) requests $199,283.51, split into the categories shown."
+  },
+  {
+   "id": "f1000-d0414-ps",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 147683.51,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-su",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-os",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 49100,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court Clerk",
+   "code": "1000-0409",
+   "amount": 97177.1,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-ps",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 89827.1,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-su",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4500,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-os",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2850,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Coroner",
+   "code": "1000-0419",
+   "amount": 21874.58,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The ordinance appropriates $21,874.58; the application for appropriation (pp. 47–48) requests $21,974.58, split into the categories shown."
+  },
+  {
+   "id": "f1000-d0419-ps",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 16914.58,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-su",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3250,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-os",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1810,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "OEM Budget",
+   "code": "1000-0500",
+   "amount": 146785,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-ps",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 55350,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-su",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 55075,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-os",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 34360,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-co",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0600",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Library",
+   "code": "1000-0600",
+   "amount": 10740,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0600-os",
+   "parent": "f1000-d0600",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10740,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veteran Service",
+   "code": "1000-0800",
+   "amount": 20220.6,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-ps",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 15600.6,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-su",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-os",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4120,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Extension Service",
+   "code": "1000-0801",
+   "amount": 93750,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-su",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9500,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-os",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 74250,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-co",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0803",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Social Services",
+   "code": "1000-0803",
+   "amount": 18500,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0803-su",
+   "parent": "f1000-d0803",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0803-os",
+   "parent": "f1000-d0803",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3500,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Road Fund",
+   "code": "2000",
+   "amount": 2275567.67,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-ps",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1111567.67,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-su",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 771560,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-os",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 117440,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-co",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 275000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2901",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Unpaved Road Grant",
+   "code": "2901",
+   "amount": 75000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2901-su",
+   "parent": "f2901",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 75000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Automation",
+   "code": "3000",
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-su",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-os",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-co",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Automation",
+   "code": "3001",
+   "amount": 7967.01,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The ordinance also says to transfer $37,321.20 to County General to aid salary; that transfer is not in this total."
+  },
+  {
+   "id": "f3001-su",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-os",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1600,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-co",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 5367.01,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "District Court Automation Fund",
+   "code": "3003",
+   "amount": 7500,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3003-su",
+   "parent": "f3003",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3003-os",
+   "parent": "f3003",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3003-co",
+   "parent": "f3003",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Special Fund",
+   "code": "3004",
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "pp. 3–4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-su",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "pp. 3–4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-co",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "pp. 3–4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Recorder's Cost Fund",
+   "code": "3006",
+   "amount": 57080,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The ordinance also says to transfer $5,371.94 to County General to pay salaries; that transfer is not in this total."
+  },
+  {
+   "id": "f3006-su",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-os",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 53080,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Library Fund",
+   "code": "3008",
+   "amount": 166000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-ps",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 166000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Solid Waste Fund",
+   "code": "3009",
+   "amount": 578795,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-su",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 17500,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-os",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 561295,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "freappraisal",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Reappraisal Fund",
+   "code": null,
+   "amount": 76608,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The whole amount is a transfer, paid monthly to County General, so it is counted again in County General."
+  },
+  {
+   "id": "freappraisal-tr",
+   "parent": "freappraisal",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 76608,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Child Support Collections Fund",
+   "code": "3012",
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-os",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Operations & Maintenance",
+   "code": "3017",
+   "amount": 996996.49,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "pp. 4–5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-ps",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 667796.49,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "pp. 4–5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-su",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 173000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "pp. 4–5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-os",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 156200,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "pp. 4–5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County 911 Fund",
+   "code": "3020",
+   "amount": 432589.36,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-ps",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 346389.36,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-su",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 65000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-os",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 21200,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Indigent Defense Fund",
+   "code": "3026",
+   "amount": 37800,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026-ps",
+   "parent": "f3026",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 36000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026-su",
+   "parent": "f3026",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026-os",
+   "parent": "f3026",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1300,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Probation Fee Fund",
+   "code": "3031",
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-os",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3036",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Recycling Fund",
+   "code": "3036",
+   "amount": 88509.75,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "pp. 5–6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3036-ps",
+   "parent": "f3036",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 46359.75,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "pp. 5–6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3036-su",
+   "parent": "f3036",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 11525,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "pp. 5–6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3036-os",
+   "parent": "f3036",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 30625,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "pp. 5–6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Hot Check Fund",
+   "code": "3400",
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-su",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3500",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Recycling Grant",
+   "code": "3500",
+   "amount": 23000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The ordinance lists this under Capital Outlay and adds \"transfer funds to Recycling for payroll\"; the application page (p. 92) puts the $23,000 under Personal Services."
+  },
+  {
+   "id": "f3500-co",
+   "parent": "f3500",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 23000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3504",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Court Security Grant",
+   "code": "3504",
+   "amount": 18000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3504-su",
+   "parent": "f3504",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 18000,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3512",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Officer Grant 2020",
+   "code": "3512",
+   "amount": 3576,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3512-ps",
+   "parent": "f3512",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 3576,
+   "status": "sourced",
+   "source": {
+    "doc": "lincolnar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }

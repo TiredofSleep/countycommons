@@ -1,25 +1,3233 @@
 {
-  "meta": {
-    "document": "Lawrence County — no appropriation document ingested yet",
-    "title": "Lawrence County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Lawrence County 2026 adopted budget",
+  "title": "Lawrence County — the money trail",
+  "year": 2026,
+  "grand_total": 10644257.64,
+  "note": "This is Lawrence County's 2026 budget, set by Ordinance 2025-30 (November 10, 2025) and filed with the state. Office and fund amounts come from the ordinance; the categories come from the county's budget detail. The General Fund total includes $100,000 sent to the E-911 and Public Defender funds, so those dollars also appear in those funds."
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General Fund",
+   "code": "1000",
+   "amount": 5807975.87,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed total is $5,807,975.87; the lines listed add to $5,810,985.87. The $3,010 gap matches Elections ($72,235) and Small Claims ($49,086.74) as shown in the summary on p. 46."
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Lawrence County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-0100",
+   "amount": 206516.19,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-ps",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 114896.19,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-su",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6675,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-os",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 84945,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "1000-0101",
+   "amount": 275599.17,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-ps",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 224999.17,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-su",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 8800,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-os",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 41800,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Clerk",
+   "code": "1000-0102",
+   "amount": 179588.17,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-ps",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 171288.17,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-su",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-os",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4300,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Treasurer",
+   "code": "1000-0103",
+   "amount": 138552.96,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-ps",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 125452.96,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-su",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7100,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-os",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Tax Collector",
+   "code": "1000-0104",
+   "amount": 211954.37,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-ps",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 180204.37,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-su",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6500,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-os",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 25250,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Tax Assessor",
+   "code": "1000-0105",
+   "amount": 326753.03,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-ps",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 229753.03,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-su",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 11500,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-os",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 75500,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-co",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Equalization Board",
+   "code": "1000-0106",
+   "amount": 2704,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-ps",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 4,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-os",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2700,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 125203.02,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-ps",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 122603.02,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-su",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-os",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2100,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse Maintenance",
+   "code": "1000-0108",
+   "amount": 357512.21,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-ps",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 58388.21,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-su",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 64550,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-os",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 232524,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-ds",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 2050,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Elections",
+   "code": "1000-0109",
+   "amount": 75235,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-ps",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 51210,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-su",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7500,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-os",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 16525,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0110",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "East AR Planning & Development",
+   "code": "1000-0110",
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0110-os",
+   "parent": "f1000-d0110",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0112",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Miscellaneous",
+   "code": "1000-0112",
+   "amount": 4480,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0112-os",
+   "parent": "f1000-d0112",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4480,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Revenue Office/Western District",
+   "code": "1000-0117",
+   "amount": 4800,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117-os",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4800,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Health Department",
+   "code": "1000-0300",
+   "amount": 47428,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-su",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10718,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-os",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 36710,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff",
+   "code": "1000-0400",
+   "amount": 2964768.78,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-ps",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2584568.78,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-su",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 181500,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-os",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 118200,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-ds",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 50500,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-co",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court (Jury)",
+   "code": "1000-0401",
+   "amount": 8200,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-su",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 400,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-os",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7800,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court Judge",
+   "code": "1000-0406",
+   "amount": 18350,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406-su",
+   "parent": "f1000-d0406",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3300,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406-os",
+   "parent": "f1000-d0406",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 15050,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court",
+   "code": "1000-0409",
+   "amount": 197075.64,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-ps",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 162435.64,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-su",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 19540,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-os",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 15100,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0413",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Small Claims",
+   "code": "1000-0413",
+   "amount": 49096.74,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The ordinance appropriates $49,096.74; the categories in the budget detail (pp. 18–19) add to $49,086.74."
+  },
+  {
+   "id": "f1000-d0413-ps",
+   "parent": "f1000-d0413",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 49086.74,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court Juvenile",
+   "code": "1000-0415",
+   "amount": 139146.56,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415-ps",
+   "parent": "f1000-d0415",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 68853.56,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415-su",
+   "parent": "f1000-d0415",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5700,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415-os",
+   "parent": "f1000-d0415",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 64593,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney",
+   "code": "1000-0416",
+   "amount": 40514.52,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-os",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 40514.52,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Coroner",
+   "code": "1000-0419",
+   "amount": 26154.8,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-ps",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 24154.8,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-su",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 900,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-os",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1100,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0421",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "State Police",
+   "code": "1000-0421",
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0421-su",
+   "parent": "f1000-d0421",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2740,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0421-os",
+   "parent": "f1000-d0421",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1260,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0430",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Deputy Prosecuting Attorney",
+   "code": "1000-0430",
+   "amount": 101093.9,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0430-ps",
+   "parent": "f1000-d0430",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 80343.9,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0430-su",
+   "parent": "f1000-d0430",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 8100,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0430-os",
+   "parent": "f1000-d0430",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 12650,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Office of Emergency Services",
+   "code": "1000-0500",
+   "amount": 77044.83,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-ps",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 54204.83,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-su",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 16000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-os",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6840,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0602",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Lawrence County Fair",
+   "code": "1000-0602",
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0602-os",
+   "parent": "f1000-d0602",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veteran's Services",
+   "code": "1000-0800",
+   "amount": 21880.98,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-ps",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 20080.98,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-su",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-os",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1300,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Extension Office",
+   "code": "1000-0801",
+   "amount": 99333,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-os",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 99333,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0802",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Emergency Fund",
+   "code": "1000-0802",
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0802-os",
+   "parent": "f1000-d0802",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-x3020",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "E-911 (transfer)",
+   "code": "3020-0501",
+   "amount": 75000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Listed inside the General Fund total; this money goes to fund 3020, which spends it, so it is counted twice. Article 6 (p. 55) lists this transfer as $75,000.00."
+  },
+  {
+   "id": "f1000-x3024",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Public Defender (transfer)",
+   "code": "3024-0417",
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Listed inside the General Fund total; this money goes to fund 3024, which spends it, so it is counted twice. Article 6 (p. 55) lists this transfer as $20,000.00."
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Road Fund",
+   "code": "2000",
+   "amount": 2302848.21,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-ps",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 897854.35,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-su",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 775250,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-os",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 404743.86,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-ds",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 72000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-co",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 153000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Motor Fuel Tax Fund",
+   "code": "2003",
+   "amount": 99000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003-su",
+   "parent": "f2003",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 99000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Automation",
+   "code": "3000",
+   "amount": 31500,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-su",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9500,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-os",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 22000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Automation",
+   "code": "3001",
+   "amount": 40000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-su",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-os",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 34000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Amendment 79",
+   "code": "3004",
+   "amount": 10045,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-su",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10045,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk's Automation",
+   "code": "3005",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-su",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-os",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7500,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Court Recorder",
+   "code": "3006",
+   "amount": 156635.54,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-ps",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 114735.54,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-su",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-os",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 16900,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3011",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Reappraisal Cost",
+   "code": "3011",
+   "amount": 228788.45,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3011-ps",
+   "parent": "f3011",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 184888.45,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3011-su",
+   "parent": "f3011",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3850,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3011-os",
+   "parent": "f3011",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 31150,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3011-co",
+   "parent": "f3011",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 8900,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Child Support",
+   "code": "3012",
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-su",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Control/Drug Dog",
+   "code": "3015",
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015-su",
+   "parent": "f3015",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015-os",
+   "parent": "f3015",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Maintenance",
+   "code": "3017",
+   "amount": 98972.5,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-ps",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 77972.5,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-su",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-os",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-co",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3018",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Booking Fee",
+   "code": "3018",
+   "amount": 5200,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3018-su",
+   "parent": "f3018",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5200,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Boat Fund",
+   "code": "3019",
+   "amount": 4700,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-su",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-os",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1700,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "E-911",
+   "code": "3020",
+   "amount": 565508.45,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-ps",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 480908.45,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-su",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 31500,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-os",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 53100,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Public Defender",
+   "code": "3024",
+   "amount": 33300,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The ordinance appropriates $33,300.00; the categories in the budget detail (pp. 26–27) add to $35,700.00."
+  },
+  {
+   "id": "f3024-su",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024-os",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 31700,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Adult Drug Court",
+   "code": "3028",
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028-su",
+   "parent": "f3028",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028-os",
+   "parent": "f3028",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Probation Fees",
+   "code": "3031",
+   "amount": 1400,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-su",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1400,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Late Assessment Fee Fund",
+   "code": "3042",
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042-su",
+   "parent": "f3042",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Operation & Maintenance",
+   "code": "3400",
+   "amount": 361350,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-su",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 243250,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-os",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 112100,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-co",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3505",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Rails to Trails",
+   "code": "3505",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3505-os",
+   "parent": "f3505",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Saddle Club Arena",
+   "code": "3402",
+   "amount": 5975,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402-su",
+   "parent": "f3402",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4800,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402-os",
+   "parent": "f3402",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1175,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3526",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Officer Grant",
+   "code": "3526",
+   "amount": 4319.05,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3526-ps",
+   "parent": "f3526",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 3296.64,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3526-su",
+   "parent": "f3526",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1022.41,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3528",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Peer Services Specialist Grant",
+   "code": "3528",
+   "amount": 50552.92,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3528-ps",
+   "parent": "f3528",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 50552.92,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3530",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Court Grant",
+   "code": "3530",
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No budget detail pages for this fund; only the ordinance total."
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Library",
+   "code": "3008",
+   "amount": 806186.65,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-ps",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 342436.65,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-su",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 255000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-os",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 164750,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-co",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 44000,
+   "status": "sourced",
+   "source": {
+    "doc": "lawrencear-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }
