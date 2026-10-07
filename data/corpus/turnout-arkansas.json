@@ -1,1177 +1,520 @@
 {
-"source_url": "https://arkansas.tally-enr.com/ (Arkansas Secretary of State official election night reporting; data API https://enr-results-api.totalresults.com/Turnout/GetTurnout?cId=arkansas&electionID=<id>), linked from https://www.sos.arkansas.gov/elections/research/election-results",
-"retrieved": "2026-09-30",
+"source_url": "https://arkansas.tally-enr.com/ (Arkansas Secretary of State official election night reporting; data API https://enr-results-api.totalresults.com/Turnout/GetTurnout?cId=arkansas&electionID=<id>, election list Election/GetElectionList). Every election the system holds with county turnout, 2012–2026, including runoffs and special elections. The system has no county turnout for the 2016 general, 2018 primary, 2020 runoff and 2021 special.",
+"retrieved": "2026-10-06",
 "elections": [
 {
-"id": "2024-general",
-"name": "Nov 5, 2024 General Election",
-"api_election_id": "1846",
+"id": "2026-special-0818",
+"name": "Aug 18, 2026 2026 Primary Special Election",
+"api_election_id": "4b025e66-db9f-4e01-a7b8-3d06d87bccda",
 "isOfficial": true,
-"lastUpdated": "2025-12-16T19:41:49.5225815Z",
+"lastUpdated": "2026-09-21T16:27:51.8262116Z",
 "statewide": {
-"registered": 1828129,
-"ballots": 1190172,
-"pct": 65.1
+"registered": 46173,
+"ballots": 4799,
+"pct": 10.39
 },
 "counties": {
-"Arkansas": {
-"registered": 9076,
-"ballots": 5577,
-"pct": 61.45
-},
 "Ashley": {
-"registered": 10325,
-"ballots": 7054,
-"pct": 68.32
-},
-"Baxter": {
-"registered": 30878,
-"ballots": 21050,
-"pct": 68.17
-},
-"Benton": {
-"registered": 192494,
-"ballots": 129545,
-"pct": 67.3
-},
-"Boone": {
-"registered": 25203,
-"ballots": 17198,
-"pct": 68.24
+"registered": 10194,
+"ballots": 1033,
+"pct": 10.13
 },
 "Bradley": {
-"registered": 5169,
-"ballots": 3225,
-"pct": 62.39
-},
-"Calhoun": {
-"registered": 2951,
-"ballots": 2103,
-"pct": 71.26
-},
-"Carroll": {
-"registered": 16629,
-"ballots": 11579,
-"pct": 69.63
+"registered": 4968,
+"ballots": 762,
+"pct": 15.34
 },
 "Chicot": {
-"registered": 5669,
-"ballots": 3515,
-"pct": 62
-},
-"Clark": {
-"registered": 12819,
-"ballots": 7708,
-"pct": 60.13
-},
-"Clay": {
-"registered": 7643,
-"ballots": 4981,
-"pct": 65.17
-},
-"Cleburne": {
-"registered": 18215,
-"ballots": 12808,
-"pct": 70.32
+"registered": 5586,
+"ballots": 303,
+"pct": 5.42
 },
 "Cleveland": {
-"registered": 4853,
-"ballots": 3386,
-"pct": 69.77
-},
-"Columbia": {
-"registered": 12146,
-"ballots": 7980,
-"pct": 65.7
-},
-"Conway": {
-"registered": 12509,
-"ballots": 8594,
-"pct": 68.7
-},
-"Craighead": {
-"registered": 58218,
-"ballots": 37455,
-"pct": 64.34
-},
-"Crawford": {
-"registered": 36295,
-"ballots": 23934,
-"pct": 65.94
-},
-"Crittenden": {
-"registered": 28301,
-"ballots": 14781,
-"pct": 52.23
-},
-"Cross": {
-"registered": 9656,
-"ballots": 6578,
-"pct": 68.12
-},
-"Dallas": {
-"registered": 4193,
-"ballots": 2333,
-"pct": 55.64
-},
-"Desha": {
-"registered": 6974,
-"ballots": 3518,
-"pct": 50.44
+"registered": 4544,
+"ballots": 1040,
+"pct": 22.89
 },
 "Drew": {
-"registered": 10675,
-"ballots": 6394,
-"pct": 59.9
-},
-"Faulkner": {
-"registered": 78220,
-"ballots": 54764,
-"pct": 70.01
-},
-"Franklin": {
-"registered": 10699,
-"ballots": 7004,
-"pct": 65.46
-},
-"Fulton": {
-"registered": 7361,
-"ballots": 5075,
-"pct": 68.94
-},
-"Garland": {
-"registered": 63801,
-"ballots": 42538,
-"pct": 66.67
+"registered": 9283,
+"ballots": 901,
+"pct": 9.71
 },
 "Grant": {
-"registered": 11414,
-"ballots": 8108,
-"pct": 71.04
-},
-"Greene": {
-"registered": 23856,
-"ballots": 15879,
-"pct": 66.56
-},
-"Hempstead": {
-"registered": 9089,
-"ballots": 6109,
-"pct": 67.21
-},
-"Hot Spring": {
-"registered": 18424,
-"ballots": 12326,
-"pct": 66.9
-},
-"Howard": {
-"registered": 7449,
-"ballots": 4490,
-"pct": 60.28
-},
-"Independence": {
-"registered": 21094,
-"ballots": 14090,
-"pct": 66.8
-},
-"Izard": {
-"registered": 10478,
-"ballots": 5954,
-"pct": 56.82
-},
-"Jackson": {
-"registered": 7443,
-"ballots": 4807,
-"pct": 64.58
+"registered": 1754,
+"ballots": 91,
+"pct": 5.19
 },
 "Jefferson": {
-"registered": 37136,
-"ballots": 21732,
-"pct": 58.52
-},
-"Johnson": {
-"registered": 14505,
-"ballots": 9094,
-"pct": 62.7
-},
-"Lafayette": {
-"registered": 3519,
-"ballots": 2345,
-"pct": 66.64
-},
-"Lawrence": {
-"registered": 8516,
-"ballots": 5723,
-"pct": 67.2
-},
-"Lee": {
-"registered": 4029,
-"ballots": 2561,
-"pct": 63.56
+"registered": 6243,
+"ballots": 287,
+"pct": 4.6
 },
 "Lincoln": {
-"registered": 5103,
-"ballots": 3387,
-"pct": 66.37
-},
-"Little River": {
-"registered": 6995,
-"ballots": 4924,
-"pct": 70.39
-},
-"Logan": {
-"registered": 14082,
-"ballots": 8249,
-"pct": 58.58
-},
-"Lonoke": {
-"registered": 50475,
-"ballots": 30723,
-"pct": 60.87
-},
-"Madison": {
-"registered": 11478,
-"ballots": 7546,
-"pct": 65.74
-},
-"Marion": {
-"registered": 11511,
-"ballots": 7892,
-"pct": 68.56
-},
-"Miller": {
-"registered": 27701,
-"ballots": 15846,
-"pct": 57.2
-},
-"Mississippi": {
-"registered": 20039,
-"ballots": 10768,
-"pct": 53.74
-},
-"Monroe": {
-"registered": 3855,
-"ballots": 2448,
-"pct": 63.5
-},
-"Montgomery": {
-"registered": 5296,
-"ballots": 3729,
-"pct": 70.41
-},
-"Nevada": {
-"registered": 5740,
-"ballots": 2928,
-"pct": 51.01
-},
-"Newton": {
-"registered": 6133,
-"ballots": 3789,
-"pct": 61.78
-},
-"Ouachita": {
-"registered": 15935,
-"ballots": 8665,
-"pct": 54.38
-},
-"Perry": {
-"registered": 6982,
-"ballots": 4597,
-"pct": 65.84
-},
-"Phillips": {
-"registered": 8852,
-"ballots": 5299,
-"pct": 59.86
-},
-"Pike": {
-"registered": 6439,
-"ballots": 4372,
-"pct": 67.9
-},
-"Poinsett": {
-"registered": 12372,
-"ballots": 7116,
-"pct": 57.52
-},
-"Polk": {
-"registered": 12143,
-"ballots": 8325,
-"pct": 68.56
-},
-"Pope": {
-"registered": 35133,
-"ballots": 24323,
-"pct": 69.23
-},
-"Prairie": {
-"registered": 4697,
-"ballots": 3216,
-"pct": 68.47
-},
-"Pulaski": {
-"registered": 240849,
-"ballots": 155292,
-"pct": 64.48
-},
-"Randolph": {
-"registered": 10522,
-"ballots": 6657,
-"pct": 63.27
-},
-"Saline": {
-"registered": 80841,
-"ballots": 57944,
-"pct": 71.68
-},
-"Scott": {
-"registered": 4942,
-"ballots": 3396,
-"pct": 68.72
-},
-"Searcy": {
-"registered": 6224,
-"ballots": 3899,
-"pct": 62.64
-},
-"Sebastian": {
-"registered": 72188,
-"ballots": 45688,
-"pct": 63.29
-},
-"Sevier": {
-"registered": 7404,
-"ballots": 4741,
-"pct": 64.03
-},
-"Sharp": {
-"registered": 11059,
-"ballots": 7474,
-"pct": 67.58
-},
-"St. Francis": {
-"registered": 10425,
-"ballots": 6031,
-"pct": 57.85
-},
-"Stone": {
-"registered": 8652,
-"ballots": 6060,
-"pct": 70.04
-},
-"Union": {
-"registered": 27366,
-"ballots": 15524,
-"pct": 56.73
-},
-"Van Buren": {
-"registered": 11775,
-"ballots": 7649,
-"pct": 64.96
-},
-"Washington": {
-"registered": 146840,
-"ballots": 97917,
-"pct": 66.68
-},
-"White": {
-"registered": 46235,
-"ballots": 31027,
-"pct": 67.11
-},
-"Woodruff": {
-"registered": 4185,
-"ballots": 2327,
-"pct": 55.6
-},
-"Yell": {
-"registered": 9737,
-"ballots": 6509,
-"pct": 66.85
+"registered": 3601,
+"ballots": 382,
+"pct": 10.61
 }
 }
 },
 {
-"id": "2022-general",
-"name": "Nov 8, 2022 General Election",
-"api_election_id": "1844",
+"id": "2026-special-0804",
+"name": "Aug 4, 2026 Special General House 44",
+"api_election_id": "e7ecbe00-7138-4d7d-b740-8b51e25b32e8",
 "isOfficial": true,
-"lastUpdated": "2025-12-16T20:01:52.3236434Z",
+"lastUpdated": "2026-08-14T22:01:56.9852593Z",
 "statewide": {
-"registered": 1799136,
-"ballots": 914227,
-"pct": 50.81
+"registered": 17626,
+"ballots": 41,
+"pct": 0.23
 },
 "counties": {
-"Arkansas": {
-"registered": 8851,
-"ballots": 4521,
-"pct": 51.08
-},
-"Ashley": {
-"registered": 10845,
-"ballots": 5496,
-"pct": 50.68
-},
-"Baxter": {
-"registered": 30281,
-"ballots": 15785,
-"pct": 52.13
-},
-"Benton": {
-"registered": 181381,
-"ballots": 91522,
-"pct": 50.46
-},
-"Boone": {
-"registered": 25723,
-"ballots": 12840,
-"pct": 49.92
-},
-"Bradley": {
-"registered": 5289,
-"ballots": 2656,
-"pct": 50.22
-},
-"Calhoun": {
-"registered": 3059,
-"ballots": 1601,
-"pct": 52.34
-},
-"Carroll": {
-"registered": 15149,
-"ballots": 9099,
-"pct": 60.06
-},
-"Chicot": {
-"registered": 5944,
-"ballots": 3438,
-"pct": 57.84
-},
-"Clark": {
-"registered": 12349,
-"ballots": 6205,
-"pct": 50.25
-},
-"Clay": {
-"registered": 7779,
-"ballots": 3994,
-"pct": 51.34
-},
-"Cleburne": {
-"registered": 18370,
-"ballots": 10111,
-"pct": 55.04
-},
-"Cleveland": {
-"registered": 4672,
-"ballots": 2844,
-"pct": 60.87
-},
-"Columbia": {
-"registered": 12253,
-"ballots": 6152,
-"pct": 50.21
-},
-"Conway": {
-"registered": 11775,
-"ballots": 6820,
-"pct": 57.92
-},
-"Craighead": {
-"registered": 58120,
-"ballots": 27919,
-"pct": 48.04
-},
-"Crawford": {
-"registered": 35927,
-"ballots": 18080,
-"pct": 50.32
-},
-"Crittenden": {
-"registered": 32731,
-"ballots": 10899,
-"pct": 33.3
-},
-"Cross": {
-"registered": 9946,
-"ballots": 5000,
-"pct": 50.27
-},
-"Dallas": {
-"registered": 3990,
-"ballots": 2106,
-"pct": 52.78
-},
-"Desha": {
-"registered": 7100,
-"ballots": 3149,
-"pct": 44.35
-},
-"Drew": {
-"registered": 10930,
-"ballots": 5345,
-"pct": 48.9
-},
-"Faulkner": {
-"registered": 77561,
-"ballots": 40537,
-"pct": 52.26
-},
-"Franklin": {
-"registered": 9942,
-"ballots": 5552,
-"pct": 55.84
-},
-"Fulton": {
-"registered": 7534,
-"ballots": 4024,
-"pct": 53.41
-},
-"Garland": {
-"registered": 64997,
-"ballots": 33593,
-"pct": 51.68
-},
-"Grant": {
-"registered": 11303,
-"ballots": 6327,
-"pct": 55.98
-},
-"Greene": {
-"registered": 22248,
-"ballots": 11650,
-"pct": 52.36
-},
-"Hempstead": {
-"registered": 8736,
-"ballots": 4760,
-"pct": 54.49
-},
-"Hot Spring": {
-"registered": 18513,
-"ballots": 10014,
-"pct": 54.09
-},
-"Howard": {
-"registered": 7187,
-"ballots": 3676,
-"pct": 51.15
-},
-"Independence": {
-"registered": 21402,
-"ballots": 10646,
-"pct": 49.74
-},
-"Izard": {
-"registered": 9621,
-"ballots": 4641,
-"pct": 48.24
-},
-"Jackson": {
-"registered": 8126,
-"ballots": 4070,
-"pct": 50.09
-},
-"Jefferson": {
-"registered": 36187,
-"ballots": 17814,
-"pct": 49.23
-},
-"Johnson": {
-"registered": 12979,
-"ballots": 7044,
-"pct": 54.27
-},
-"Lafayette": {
-"registered": 3950,
-"ballots": 2005,
-"pct": 50.76
-},
-"Lawrence": {
-"registered": 8508,
-"ballots": 4679,
-"pct": 55
-},
-"Lee": {
-"registered": 4509,
-"ballots": 2059,
-"pct": 45.66
-},
-"Lincoln": {
-"registered": 5363,
-"ballots": 2793,
-"pct": 52.08
-},
-"Little River": {
-"registered": 7262,
-"ballots": 3858,
-"pct": 53.13
-},
-"Logan": {
-"registered": 13081,
-"ballots": 6301,
-"pct": 48.17
-},
-"Lonoke": {
-"registered": 46974,
-"ballots": 22624,
-"pct": 48.16
-},
-"Madison": {
-"registered": 10489,
-"ballots": 5885,
-"pct": 56.11
-},
-"Marion": {
-"registered": 11057,
-"ballots": 6050,
-"pct": 54.72
-},
-"Miller": {
-"registered": 26546,
-"ballots": 11336,
-"pct": 42.7
-},
-"Mississippi": {
-"registered": 19391,
-"ballots": 8937,
-"pct": 46.09
-},
-"Monroe": {
-"registered": 3998,
-"ballots": 2274,
-"pct": 56.88
-},
-"Montgomery": {
-"registered": 5151,
-"ballots": 3209,
-"pct": 62.3
-},
-"Nevada": {
-"registered": 5757,
-"ballots": 2492,
-"pct": 43.29
-},
-"Newton": {
-"registered": 6027,
-"ballots": 3113,
-"pct": 51.65
-},
-"Ouachita": {
-"registered": 15112,
-"ballots": 7087,
-"pct": 46.9
-},
-"Perry": {
-"registered": 6534,
-"ballots": 3854,
-"pct": 58.98
-},
-"Phillips": {
-"registered": 9771,
-"ballots": 4473,
-"pct": 45.78
-},
-"Pike": {
-"registered": 6142,
-"ballots": 3748,
-"pct": 61.02
-},
-"Poinsett": {
-"registered": 11801,
-"ballots": 5637,
-"pct": 47.77
-},
-"Polk": {
-"registered": 12183,
-"ballots": 6953,
-"pct": 57.07
-},
 "Pope": {
-"registered": 36286,
-"ballots": 17740,
-"pct": 48.89
-},
-"Prairie": {
-"registered": 4717,
-"ballots": 2696,
-"pct": 57.15
-},
-"Pulaski": {
-"registered": 241375,
-"ballots": 124940,
-"pct": 51.76
-},
-"Randolph": {
-"registered": 10439,
-"ballots": 5403,
-"pct": 51.76
-},
-"Saline": {
-"registered": 78593,
-"ballots": 43434,
-"pct": 55.26
-},
-"Scott": {
-"registered": 5278,
-"ballots": 2992,
-"pct": 56.69
-},
-"Searcy": {
-"registered": 5778,
-"ballots": 3207,
-"pct": 55.5
-},
-"Sebastian": {
-"registered": 70913,
-"ballots": 34601,
-"pct": 48.79
-},
-"Sevier": {
-"registered": 7542,
-"ballots": 3697,
-"pct": 49.02
-},
-"Sharp": {
-"registered": 11146,
-"ballots": 6087,
-"pct": 54.61
-},
-"St. Francis": {
-"registered": 9877,
-"ballots": 5142,
-"pct": 52.06
-},
-"Stone": {
-"registered": 9400,
-"ballots": 5177,
-"pct": 55.07
-},
-"Union": {
-"registered": 26498,
-"ballots": 11916,
-"pct": 44.97
+"registered": 17032,
+"ballots": 39,
+"pct": 0.23
 },
 "Van Buren": {
-"registered": 11200,
-"ballots": 6318,
-"pct": 56.41
-},
-"Washington": {
-"registered": 142653,
-"ballots": 71132,
-"pct": 49.86
-},
-"White": {
-"registered": 45037,
-"ballots": 23300,
-"pct": 51.74
-},
-"Woodruff": {
-"registered": 4036,
-"ballots": 2115,
-"pct": 52.4
-},
-"Yell": {
-"registered": 9962,
-"ballots": 5033,
-"pct": 50.52
+"registered": 594,
+"ballots": 2,
+"pct": 0.34
 }
 }
 },
 {
-"id": "2024-primary",
-"name": "Mar 5, 2024 Preferential Primary",
-"api_election_id": "1845",
+"id": "2026-special-0630",
+"name": "Jun 30, 2026 Special Primary Runoff House 44",
+"api_election_id": "fefa84d5-388a-4de9-9ade-acd50e0a8b1d",
 "isOfficial": true,
-"lastUpdated": "2025-12-16T19:14:23.721528Z",
+"lastUpdated": "2026-07-20T16:50:20.726773Z",
 "statewide": {
-"registered": 1747557,
-"ballots": 360746,
-"pct": 20.64
+"registered": 16468,
+"ballots": 303,
+"pct": 1.84
+},
+"counties": {
+"Pope": {
+"registered": 16468,
+"ballots": 280,
+"pct": 1.7
+}
+}
+},
+{
+"id": "2026-special-0602",
+"name": "Jun 2, 2026 Special Primary House 44",
+"api_election_id": "4dfe2063-3126-4eb4-ae59-1468c9d6c9cd",
+"isOfficial": true,
+"lastUpdated": "2026-06-19T12:10:29.3868731Z",
+"statewide": {
+"registered": 17044,
+"ballots": 1964,
+"pct": 11.52
+},
+"counties": {
+"Pope": {
+"registered": 16455,
+"ballots": 1926,
+"pct": 11.7
+},
+"Van Buren": {
+"registered": 589,
+"ballots": 38,
+"pct": 6.45
+}
+}
+},
+{
+"id": "2026-runoff",
+"name": "Mar 31, 2026 2026 Primary Runoff",
+"api_election_id": "b412bdef-f97a-45bc-b3ec-6761d28caf9e",
+"isOfficial": true,
+"lastUpdated": "2026-04-29T16:33:43.7228911Z",
+"statewide": {
+"registered": 1796393,
+"ballots": 92299,
+"pct": 5.14
 },
 "counties": {
 "Arkansas": {
-"registered": 8980,
-"ballots": 2109,
-"pct": 23.49
+"registered": 8058,
+"ballots": 176,
+"pct": 2.18
 },
 "Ashley": {
-"registered": 10042,
-"ballots": 1869,
-"pct": 18.61
+"registered": 10133,
+"ballots": 233,
+"pct": 2.3
 },
 "Baxter": {
-"registered": 29457,
-"ballots": 6885,
-"pct": 23.37
+"registered": 30379,
+"ballots": 5616,
+"pct": 18.49
 },
 "Benton": {
-"registered": 180333,
-"ballots": 33946,
-"pct": 18.82
+"registered": 196303,
+"ballots": 3675,
+"pct": 1.87
 },
 "Boone": {
-"registered": 23989,
-"ballots": 5132,
-"pct": 21.39
+"registered": 25377,
+"ballots": 3927,
+"pct": 15.47
 },
 "Bradley": {
-"registered": 5071,
-"ballots": 836,
-"pct": 16.49
+"registered": 4782,
+"ballots": 113,
+"pct": 2.36
 },
 "Calhoun": {
-"registered": 2856,
-"ballots": 1009,
-"pct": 35.33
+"registered": 2898,
+"ballots": 90,
+"pct": 3.11
 },
 "Carroll": {
-"registered": 15730,
-"ballots": 3566,
-"pct": 22.67
+"registered": 16982,
+"ballots": 1820,
+"pct": 10.72
 },
 "Chicot": {
-"registered": 5585,
-"ballots": 854,
-"pct": 15.29
+"registered": 5495,
+"ballots": 52,
+"pct": 0.95
 },
 "Clark": {
-"registered": 12520,
-"ballots": 3249,
-"pct": 25.95
+"registered": 12555,
+"ballots": 339,
+"pct": 2.7
 },
 "Clay": {
-"registered": 7298,
-"ballots": 1854,
-"pct": 25.4
+"registered": 7486,
+"ballots": 1460,
+"pct": 19.5
 },
 "Cleburne": {
-"registered": 17584,
-"ballots": 5753,
-"pct": 32.72
+"registered": 14731,
+"ballots": 715,
+"pct": 4.85
 },
 "Cleveland": {
-"registered": 4706,
-"ballots": 1129,
-"pct": 23.99
-},
-"Columbia": {
-"registered": 11551,
-"ballots": 2124,
-"pct": 18.39
-},
-"Conway": {
-"registered": 11965,
-"ballots": 2297,
-"pct": 19.2
-},
-"Craighead": {
-"registered": 55565,
-"ballots": 8744,
-"pct": 15.74
-},
-"Crawford": {
-"registered": 34694,
-"ballots": 8057,
-"pct": 23.22
-},
-"Crittenden": {
-"registered": 27344,
-"ballots": 4644,
-"pct": 16.98
-},
-"Cross": {
-"registered": 9347,
-"ballots": 2710,
-"pct": 28.99
-},
-"Dallas": {
-"registered": 4028,
-"ballots": 667,
-"pct": 16.56
-},
-"Desha": {
-"registered": 7001,
-"ballots": 813,
-"pct": 11.61
-},
-"Drew": {
-"registered": 10344,
-"ballots": 1661,
-"pct": 16.06
-},
-"Faulkner": {
-"registered": 74700,
-"ballots": 15386,
-"pct": 20.6
-},
-"Franklin": {
-"registered": 9997,
-"ballots": 2105,
-"pct": 21.06
-},
-"Fulton": {
-"registered": 6979,
-"ballots": 1662,
-"pct": 23.81
-},
-"Garland": {
-"registered": 61251,
-"ballots": 12857,
-"pct": 20.99
-},
-"Grant": {
-"registered": 10970,
-"ballots": 2101,
-"pct": 19.15
-},
-"Greene": {
-"registered": 22591,
-"ballots": 5939,
-"pct": 26.29
-},
-"Hempstead": {
-"registered": 8853,
-"ballots": 2738,
-"pct": 30.93
-},
-"Hot Spring": {
-"registered": 17644,
-"ballots": 3522,
-"pct": 19.96
-},
-"Howard": {
-"registered": 7258,
-"ballots": 1501,
-"pct": 20.68
-},
-"Independence": {
-"registered": 20428,
-"ballots": 3698,
-"pct": 18.1
-},
-"Izard": {
-"registered": 10067,
-"ballots": 2355,
-"pct": 23.39
-},
-"Jackson": {
-"registered": 7216,
-"ballots": 1649,
-"pct": 22.85
-},
-"Jefferson": {
-"registered": 36267,
-"ballots": 9375,
-"pct": 25.85
-},
-"Johnson": {
-"registered": 13757,
-"ballots": 2554,
-"pct": 18.57
-},
-"Lafayette": {
-"registered": 3303,
-"ballots": 714,
-"pct": 21.62
-},
-"Lawrence": {
-"registered": 8189,
-"ballots": 1734,
-"pct": 21.17
-},
-"Lee": {
-"registered": 3957,
-"ballots": 1607,
-"pct": 40.61
-},
-"Lincoln": {
-"registered": 4908,
-"ballots": 840,
-"pct": 17.11
-},
-"Little River": {
-"registered": 6641,
-"ballots": 1439,
-"pct": 21.67
-},
-"Logan": {
-"registered": 13635,
-"ballots": 2367,
-"pct": 17.36
-},
-"Lonoke": {
-"registered": 48869,
-"ballots": 6775,
-"pct": 13.86
-},
-"Madison": {
-"registered": 10971,
-"ballots": 2418,
-"pct": 22.04
-},
-"Marion": {
-"registered": 10905,
-"ballots": 3005,
-"pct": 27.56
-},
-"Miller": {
-"registered": 26475,
-"ballots": 4579,
-"pct": 17.3
-},
-"Mississippi": {
-"registered": 19524,
-"ballots": 3918,
-"pct": 20.07
-},
-"Monroe": {
-"registered": 3760,
-"ballots": 972,
-"pct": 25.85
-},
-"Montgomery": {
-"registered": 4887,
-"ballots": 1022,
-"pct": 20.91
-},
-"Nevada": {
-"registered": 5674,
-"ballots": 1106,
-"pct": 19.49
-},
-"Newton": {
-"registered": 6006,
-"ballots": 1216,
-"pct": 20.25
-},
-"Ouachita": {
-"registered": 15505,
-"ballots": 2171,
-"pct": 14
-},
-"Perry": {
-"registered": 6782,
-"ballots": 1932,
-"pct": 28.49
-},
-"Phillips": {
-"registered": 8564,
-"ballots": 2517,
-"pct": 29.39
-},
-"Pike": {
-"registered": 6221,
-"ballots": 1309,
-"pct": 21.04
-},
-"Poinsett": {
-"registered": 11884,
-"ballots": 2404,
-"pct": 20.23
-},
-"Polk": {
-"registered": 11719,
-"ballots": 2376,
-"pct": 20.27
-},
-"Pope": {
-"registered": 33510,
-"ballots": 8084,
-"pct": 24.12
-},
-"Prairie": {
-"registered": 4564,
-"ballots": 1138,
-"pct": 24.93
-},
-"Pulaski": {
-"registered": 230851,
-"ballots": 48444,
-"pct": 20.98
-},
-"Randolph": {
-"registered": 10170,
-"ballots": 1680,
-"pct": 16.52
-},
-"Saline": {
-"registered": 77068,
-"ballots": 18076,
-"pct": 23.45
-},
-"Scott": {
-"registered": 4672,
-"ballots": 1278,
-"pct": 27.35
-},
-"Searcy": {
-"registered": 6052,
-"ballots": 1698,
-"pct": 28.06
-},
-"Sebastian": {
-"registered": 68820,
-"ballots": 13976,
-"pct": 20.31
-},
-"Sevier": {
-"registered": 7128,
-"ballots": 961,
-"pct": 13.48
-},
-"Sharp": {
-"registered": 10542,
-"ballots": 2397,
-"pct": 22.74
-},
-"St. Francis": {
-"registered": 10079,
-"ballots": 2155,
-"pct": 21.38
-},
-"Stone": {
-"registered": 8205,
-"ballots": 2381,
-"pct": 29.02
-},
-"Union": {
-"registered": 26915,
-"ballots": 3201,
-"pct": 11.89
-},
-"Van Buren": {
-"registered": 11364,
-"ballots": 2588,
+"registered": 4404,
+"ballots": 1003,
 "pct": 22.77
 },
+"Columbia": {
+"registered": 11584,
+"ballots": 195,
+"pct": 1.68
+},
+"Conway": {
+"registered": 12605,
+"ballots": 418,
+"pct": 3.32
+},
+"Craighead": {
+"registered": 57789,
+"ballots": 1069,
+"pct": 1.85
+},
+"Crawford": {
+"registered": 35604,
+"ballots": 791,
+"pct": 2.22
+},
+"Crittenden": {
+"registered": 29439,
+"ballots": 639,
+"pct": 2.17
+},
+"Cross": {
+"registered": 9069,
+"ballots": 306,
+"pct": 3.37
+},
+"Dallas": {
+"registered": 4255,
+"ballots": 463,
+"pct": 10.88
+},
+"Desha": {
+"registered": 5965,
+"ballots": 15,
+"pct": 0.25
+},
+"Drew": {
+"registered": 9712,
+"ballots": 196,
+"pct": 2.02
+},
+"Faulkner": {
+"registered": 77161,
+"ballots": 1981,
+"pct": 2.57
+},
+"Franklin": {
+"registered": 10560,
+"ballots": 745,
+"pct": 7.05
+},
+"Fulton": {
+"registered": 7085,
+"ballots": 211,
+"pct": 2.98
+},
+"Garland": {
+"registered": 64290,
+"ballots": 1326,
+"pct": 2.06
+},
+"Grant": {
+"registered": 11638,
+"ballots": 1477,
+"pct": 12.69
+},
+"Greene": {
+"registered": 22402,
+"ballots": 728,
+"pct": 3.25
+},
+"Hempstead": {
+"registered": 9051,
+"ballots": 962,
+"pct": 10.63
+},
+"Hot Spring": {
+"registered": 18362,
+"ballots": 327,
+"pct": 1.78
+},
+"Howard": {
+"registered": 6984,
+"ballots": 147,
+"pct": 2.1
+},
+"Independence": {
+"registered": 20697,
+"ballots": 930,
+"pct": 4.49
+},
+"Izard": {
+"registered": 9840,
+"ballots": 311,
+"pct": 3.16
+},
+"Jackson": {
+"registered": 7033,
+"ballots": 168,
+"pct": 2.39
+},
+"Jefferson": {
+"registered": 37793,
+"ballots": 5265,
+"pct": 13.93
+},
+"Johnson": {
+"registered": 15125,
+"ballots": 2647,
+"pct": 17.5
+},
+"Lafayette": {
+"registered": 3675,
+"ballots": 117,
+"pct": 3.18
+},
+"Lawrence": {
+"registered": 8581,
+"ballots": 261,
+"pct": 3.04
+},
+"Lee": {
+"registered": 3949,
+"ballots": 22,
+"pct": 0.56
+},
+"Lincoln": {
+"registered": 4971,
+"ballots": 795,
+"pct": 15.99
+},
+"Little River": {
+"registered": 7092,
+"ballots": 1311,
+"pct": 18.49
+},
+"Logan": {
+"registered": 13095,
+"ballots": 1994,
+"pct": 15.23
+},
+"Lonoke": {
+"registered": 45550,
+"ballots": 1248,
+"pct": 2.74
+},
+"Madison": {
+"registered": 11088,
+"ballots": 2726,
+"pct": 24.59
+},
+"Marion": {
+"registered": 11520,
+"ballots": 461,
+"pct": 4.0
+},
+"Miller": {
+"registered": 28627,
+"ballots": 2389,
+"pct": 8.35
+},
+"Mississippi": {
+"registered": 18996,
+"ballots": 203,
+"pct": 1.07
+},
+"Monroe": {
+"registered": 3916,
+"ballots": 72,
+"pct": 1.84
+},
+"Montgomery": {
+"registered": 5239,
+"ballots": 173,
+"pct": 3.3
+},
+"Nevada": {
+"registered": 4649,
+"ballots": 118,
+"pct": 2.54
+},
+"Newton": {
+"registered": 6142,
+"ballots": 181,
+"pct": 2.95
+},
+"Ouachita": {
+"registered": 13234,
+"ballots": 253,
+"pct": 1.91
+},
+"Perry": {
+"registered": 6811,
+"ballots": 354,
+"pct": 5.2
+},
+"Phillips": {
+"registered": 8022,
+"ballots": 103,
+"pct": 1.28
+},
+"Pike": {
+"registered": 6153,
+"ballots": 212,
+"pct": 3.45
+},
+"Poinsett": {
+"registered": 10920,
+"ballots": 259,
+"pct": 2.37
+},
+"Polk": {
+"registered": 11959,
+"ballots": 445,
+"pct": 3.72
+},
+"Pope": {
+"registered": 33467,
+"ballots": 927,
+"pct": 2.77
+},
+"Prairie": {
+"registered": 4840,
+"ballots": 248,
+"pct": 5.12
+},
+"Pulaski": {
+"registered": 233909,
+"ballots": 7721,
+"pct": 3.3
+},
+"Randolph": {
+"registered": 10535,
+"ballots": 331,
+"pct": 3.14
+},
+"St. Francis": {
+"registered": 9552,
+"ballots": 101,
+"pct": 1.06
+},
+"Saline": {
+"registered": 82154,
+"ballots": 6970,
+"pct": 8.48
+},
+"Scott": {
+"registered": 4775,
+"ballots": 753,
+"pct": 15.77
+},
+"Searcy": {
+"registered": 6513,
+"ballots": 1447,
+"pct": 22.22
+},
+"Sebastian": {
+"registered": 70964,
+"ballots": 1855,
+"pct": 2.61
+},
+"Sevier": {
+"registered": 7555,
+"ballots": 132,
+"pct": 1.75
+},
+"Sharp": {
+"registered": 10835,
+"ballots": 422,
+"pct": 3.89
+},
+"Stone": {
+"registered": 9462,
+"ballots": 1898,
+"pct": 20.06
+},
+"Union": {
+"registered": 23473,
+"ballots": 292,
+"pct": 1.24
+},
+"Van Buren": {
+"registered": 11027,
+"ballots": 2108,
+"pct": 19.12
+},
 "Washington": {
-"registered": 138120,
-"ballots": 25853,
-"pct": 18.72
+"registered": 148851,
+"ballots": 7127,
+"pct": 4.79
 },
 "White": {
-"registered": 43706,
-"ballots": 10643,
-"pct": 24.35
+"registered": 46900,
+"ballots": 3886,
+"pct": 8.29
 },
 "Woodruff": {
-"registered": 4125,
-"ballots": 587,
-"pct": 14.23
+"registered": 4285,
+"ballots": 106,
+"pct": 2.47
 },
 "Yell": {
-"registered": 9319,
-"ballots": 1835,
-"pct": 19.69
+"registered": 9481,
+"ballots": 1742,
+"pct": 18.37
 }
 }
 },
 {
 "id": "2026-primary",
-"name": "Mar 3, 2026 Preferential Primary",
+"name": "Mar 3, 2026 Preferential Primary Election",
 "api_election_id": "7f77a178-af02-40ec-92db-c5cc50882c68",
 "isOfficial": true,
 "lastUpdated": "2026-07-02T17:04:00Z",
@@ -1555,6 +898,4766 @@
 "registered": 9437,
 "ballots": 3099,
 "pct": 32.84
+}
+}
+},
+{
+"id": "2026-special-0303",
+"name": "Mar 3, 2026 2026 Special General",
+"api_election_id": "55355810-8dde-40ff-a1d2-5b8675226873",
+"isOfficial": true,
+"lastUpdated": "2026-04-29T16:34:44.3186537Z",
+"statewide": {
+"registered": 20935,
+"ballots": 7043,
+"pct": 33.64
+},
+"counties": {
+"Pulaski": {
+"registered": 20935,
+"ballots": 7043,
+"pct": 33.64
+}
+}
+},
+{
+"id": "2026-special-0203",
+"name": "Feb 3, 2026 2026 Special Runoff Election",
+"api_election_id": "d70c4503-44b5-4942-ba21-814aacb4caee",
+"isOfficial": true,
+"lastUpdated": "2026-04-29T16:35:04.9731476Z",
+"statewide": {
+"registered": 52075,
+"ballots": 5585,
+"pct": 10.72
+},
+"counties": {
+"Logan": {
+"registered": 12069,
+"ballots": 1907,
+"pct": 15.8
+},
+"Franklin": {
+"registered": 8680,
+"ballots": 1234,
+"pct": 14.22
+},
+"Sebastian": {
+"registered": 19273,
+"ballots": 1714,
+"pct": 8.89
+},
+"Johnson": {
+"registered": 12053,
+"ballots": 730,
+"pct": 6.06
+}
+}
+},
+{
+"id": "2026-special-0106",
+"name": "Jan 6, 2026 2026 January Special Election (unofficial results)",
+"api_election_id": "232c8b44-41a9-48d0-99bd-68eeb1bd6692",
+"isOfficial": false,
+"lastUpdated": "2026-04-29T16:35:18.584202Z",
+"statewide": {
+"registered": 73144,
+"ballots": 6937,
+"pct": 9.48
+},
+"counties": {
+"Logan": {
+"registered": 12069,
+"ballots": 1928,
+"pct": 15.97
+},
+"Franklin": {
+"registered": 8680,
+"ballots": 1447,
+"pct": 16.67
+},
+"Sebastian": {
+"registered": 19226,
+"ballots": 1843,
+"pct": 9.59
+},
+"Pulaski": {
+"registered": 20982,
+"ballots": 805,
+"pct": 3.84
+},
+"Johnson": {
+"registered": 12187,
+"ballots": 914,
+"pct": 7.5
+}
+}
+},
+{
+"id": "2024-general",
+"name": "Nov 5, 2024 General Election",
+"api_election_id": "1846",
+"isOfficial": true,
+"lastUpdated": "2025-12-16T19:41:49.5225815Z",
+"statewide": {
+"registered": 1828129,
+"ballots": 1190172,
+"pct": 65.1
+},
+"counties": {
+"Arkansas": {
+"registered": 9076,
+"ballots": 5577,
+"pct": 61.45
+},
+"Ashley": {
+"registered": 10325,
+"ballots": 7054,
+"pct": 68.32
+},
+"Baxter": {
+"registered": 30878,
+"ballots": 21050,
+"pct": 68.17
+},
+"Benton": {
+"registered": 192494,
+"ballots": 129545,
+"pct": 67.3
+},
+"Boone": {
+"registered": 25203,
+"ballots": 17198,
+"pct": 68.24
+},
+"Bradley": {
+"registered": 5169,
+"ballots": 3225,
+"pct": 62.39
+},
+"Calhoun": {
+"registered": 2951,
+"ballots": 2103,
+"pct": 71.26
+},
+"Carroll": {
+"registered": 16629,
+"ballots": 11579,
+"pct": 69.63
+},
+"Chicot": {
+"registered": 5669,
+"ballots": 3515,
+"pct": 62.0
+},
+"Clark": {
+"registered": 12819,
+"ballots": 7708,
+"pct": 60.13
+},
+"Clay": {
+"registered": 7643,
+"ballots": 4981,
+"pct": 65.17
+},
+"Cleburne": {
+"registered": 18215,
+"ballots": 12808,
+"pct": 70.32
+},
+"Cleveland": {
+"registered": 4853,
+"ballots": 3386,
+"pct": 69.77
+},
+"Columbia": {
+"registered": 12146,
+"ballots": 7980,
+"pct": 65.7
+},
+"Conway": {
+"registered": 12509,
+"ballots": 8594,
+"pct": 68.7
+},
+"Craighead": {
+"registered": 58218,
+"ballots": 37455,
+"pct": 64.34
+},
+"Crawford": {
+"registered": 36295,
+"ballots": 23934,
+"pct": 65.94
+},
+"Crittenden": {
+"registered": 28301,
+"ballots": 14781,
+"pct": 52.23
+},
+"Cross": {
+"registered": 9656,
+"ballots": 6578,
+"pct": 68.12
+},
+"Dallas": {
+"registered": 4193,
+"ballots": 2333,
+"pct": 55.64
+},
+"Desha": {
+"registered": 6974,
+"ballots": 3518,
+"pct": 50.44
+},
+"Drew": {
+"registered": 10675,
+"ballots": 6394,
+"pct": 59.9
+},
+"Faulkner": {
+"registered": 78220,
+"ballots": 54764,
+"pct": 70.01
+},
+"Franklin": {
+"registered": 10699,
+"ballots": 7004,
+"pct": 65.46
+},
+"Fulton": {
+"registered": 7361,
+"ballots": 5075,
+"pct": 68.94
+},
+"Garland": {
+"registered": 63801,
+"ballots": 42538,
+"pct": 66.67
+},
+"Grant": {
+"registered": 11414,
+"ballots": 8108,
+"pct": 71.04
+},
+"Greene": {
+"registered": 23856,
+"ballots": 15879,
+"pct": 66.56
+},
+"Hempstead": {
+"registered": 9089,
+"ballots": 6109,
+"pct": 67.21
+},
+"Hot Spring": {
+"registered": 18424,
+"ballots": 12326,
+"pct": 66.9
+},
+"Howard": {
+"registered": 7449,
+"ballots": 4490,
+"pct": 60.28
+},
+"Independence": {
+"registered": 21094,
+"ballots": 14090,
+"pct": 66.8
+},
+"Izard": {
+"registered": 10478,
+"ballots": 5954,
+"pct": 56.82
+},
+"Jackson": {
+"registered": 7443,
+"ballots": 4807,
+"pct": 64.58
+},
+"Jefferson": {
+"registered": 37136,
+"ballots": 21732,
+"pct": 58.52
+},
+"Johnson": {
+"registered": 14505,
+"ballots": 9094,
+"pct": 62.7
+},
+"Lafayette": {
+"registered": 3519,
+"ballots": 2345,
+"pct": 66.64
+},
+"Lawrence": {
+"registered": 8516,
+"ballots": 5723,
+"pct": 67.2
+},
+"Lee": {
+"registered": 4029,
+"ballots": 2561,
+"pct": 63.56
+},
+"Lincoln": {
+"registered": 5103,
+"ballots": 3387,
+"pct": 66.37
+},
+"Little River": {
+"registered": 6995,
+"ballots": 4924,
+"pct": 70.39
+},
+"Logan": {
+"registered": 14082,
+"ballots": 8249,
+"pct": 58.58
+},
+"Lonoke": {
+"registered": 50475,
+"ballots": 30723,
+"pct": 60.87
+},
+"Madison": {
+"registered": 11478,
+"ballots": 7546,
+"pct": 65.74
+},
+"Marion": {
+"registered": 11511,
+"ballots": 7892,
+"pct": 68.56
+},
+"Miller": {
+"registered": 27701,
+"ballots": 15846,
+"pct": 57.2
+},
+"Mississippi": {
+"registered": 20039,
+"ballots": 10768,
+"pct": 53.74
+},
+"Monroe": {
+"registered": 3855,
+"ballots": 2448,
+"pct": 63.5
+},
+"Montgomery": {
+"registered": 5296,
+"ballots": 3729,
+"pct": 70.41
+},
+"Nevada": {
+"registered": 5740,
+"ballots": 2928,
+"pct": 51.01
+},
+"Newton": {
+"registered": 6133,
+"ballots": 3789,
+"pct": 61.78
+},
+"Ouachita": {
+"registered": 15935,
+"ballots": 8665,
+"pct": 54.38
+},
+"Perry": {
+"registered": 6982,
+"ballots": 4597,
+"pct": 65.84
+},
+"Phillips": {
+"registered": 8852,
+"ballots": 5299,
+"pct": 59.86
+},
+"Pike": {
+"registered": 6439,
+"ballots": 4372,
+"pct": 67.9
+},
+"Poinsett": {
+"registered": 12372,
+"ballots": 7116,
+"pct": 57.52
+},
+"Polk": {
+"registered": 12143,
+"ballots": 8325,
+"pct": 68.56
+},
+"Pope": {
+"registered": 35133,
+"ballots": 24323,
+"pct": 69.23
+},
+"Prairie": {
+"registered": 4697,
+"ballots": 3216,
+"pct": 68.47
+},
+"Pulaski": {
+"registered": 240849,
+"ballots": 155292,
+"pct": 64.48
+},
+"Randolph": {
+"registered": 10522,
+"ballots": 6657,
+"pct": 63.27
+},
+"Saline": {
+"registered": 80841,
+"ballots": 57944,
+"pct": 71.68
+},
+"Scott": {
+"registered": 4942,
+"ballots": 3396,
+"pct": 68.72
+},
+"Searcy": {
+"registered": 6224,
+"ballots": 3899,
+"pct": 62.64
+},
+"Sebastian": {
+"registered": 72188,
+"ballots": 45688,
+"pct": 63.29
+},
+"Sevier": {
+"registered": 7404,
+"ballots": 4741,
+"pct": 64.03
+},
+"Sharp": {
+"registered": 11059,
+"ballots": 7474,
+"pct": 67.58
+},
+"St. Francis": {
+"registered": 10425,
+"ballots": 6031,
+"pct": 57.85
+},
+"Stone": {
+"registered": 8652,
+"ballots": 6060,
+"pct": 70.04
+},
+"Union": {
+"registered": 27366,
+"ballots": 15524,
+"pct": 56.73
+},
+"Van Buren": {
+"registered": 11775,
+"ballots": 7649,
+"pct": 64.96
+},
+"Washington": {
+"registered": 146840,
+"ballots": 97917,
+"pct": 66.68
+},
+"White": {
+"registered": 46235,
+"ballots": 31027,
+"pct": 67.11
+},
+"Woodruff": {
+"registered": 4185,
+"ballots": 2327,
+"pct": 55.6
+},
+"Yell": {
+"registered": 9737,
+"ballots": 6509,
+"pct": 66.85
+}
+}
+},
+{
+"id": "2024-primary",
+"name": "Mar 5, 2024 Primary Election",
+"api_election_id": "1845",
+"isOfficial": true,
+"lastUpdated": "2025-12-16T19:14:23.721528Z",
+"statewide": {
+"registered": 1747557,
+"ballots": 360746,
+"pct": 20.64
+},
+"counties": {
+"Arkansas": {
+"registered": 8980,
+"ballots": 2109,
+"pct": 23.49
+},
+"Ashley": {
+"registered": 10042,
+"ballots": 1869,
+"pct": 18.61
+},
+"Baxter": {
+"registered": 29457,
+"ballots": 6885,
+"pct": 23.37
+},
+"Benton": {
+"registered": 180333,
+"ballots": 33946,
+"pct": 18.82
+},
+"Boone": {
+"registered": 23989,
+"ballots": 5132,
+"pct": 21.39
+},
+"Bradley": {
+"registered": 5071,
+"ballots": 836,
+"pct": 16.49
+},
+"Calhoun": {
+"registered": 2856,
+"ballots": 1009,
+"pct": 35.33
+},
+"Carroll": {
+"registered": 15730,
+"ballots": 3566,
+"pct": 22.67
+},
+"Chicot": {
+"registered": 5585,
+"ballots": 854,
+"pct": 15.29
+},
+"Clark": {
+"registered": 12520,
+"ballots": 3249,
+"pct": 25.95
+},
+"Clay": {
+"registered": 7298,
+"ballots": 1854,
+"pct": 25.4
+},
+"Cleburne": {
+"registered": 17584,
+"ballots": 5753,
+"pct": 32.72
+},
+"Cleveland": {
+"registered": 4706,
+"ballots": 1129,
+"pct": 23.99
+},
+"Columbia": {
+"registered": 11551,
+"ballots": 2124,
+"pct": 18.39
+},
+"Conway": {
+"registered": 11965,
+"ballots": 2297,
+"pct": 19.2
+},
+"Craighead": {
+"registered": 55565,
+"ballots": 8744,
+"pct": 15.74
+},
+"Crawford": {
+"registered": 34694,
+"ballots": 8057,
+"pct": 23.22
+},
+"Crittenden": {
+"registered": 27344,
+"ballots": 4644,
+"pct": 16.98
+},
+"Cross": {
+"registered": 9347,
+"ballots": 2710,
+"pct": 28.99
+},
+"Dallas": {
+"registered": 4028,
+"ballots": 667,
+"pct": 16.56
+},
+"Desha": {
+"registered": 7001,
+"ballots": 813,
+"pct": 11.61
+},
+"Drew": {
+"registered": 10344,
+"ballots": 1661,
+"pct": 16.06
+},
+"Faulkner": {
+"registered": 74700,
+"ballots": 15386,
+"pct": 20.6
+},
+"Franklin": {
+"registered": 9997,
+"ballots": 2105,
+"pct": 21.06
+},
+"Fulton": {
+"registered": 6979,
+"ballots": 1662,
+"pct": 23.81
+},
+"Garland": {
+"registered": 61251,
+"ballots": 12857,
+"pct": 20.99
+},
+"Grant": {
+"registered": 10970,
+"ballots": 2101,
+"pct": 19.15
+},
+"Greene": {
+"registered": 22591,
+"ballots": 5939,
+"pct": 26.29
+},
+"Hempstead": {
+"registered": 8853,
+"ballots": 2738,
+"pct": 30.93
+},
+"Hot Spring": {
+"registered": 17644,
+"ballots": 3522,
+"pct": 19.96
+},
+"Howard": {
+"registered": 7258,
+"ballots": 1501,
+"pct": 20.68
+},
+"Independence": {
+"registered": 20428,
+"ballots": 3698,
+"pct": 18.1
+},
+"Izard": {
+"registered": 10067,
+"ballots": 2355,
+"pct": 23.39
+},
+"Jackson": {
+"registered": 7216,
+"ballots": 1649,
+"pct": 22.85
+},
+"Jefferson": {
+"registered": 36267,
+"ballots": 9375,
+"pct": 25.85
+},
+"Johnson": {
+"registered": 13757,
+"ballots": 2554,
+"pct": 18.57
+},
+"Lafayette": {
+"registered": 3303,
+"ballots": 714,
+"pct": 21.62
+},
+"Lawrence": {
+"registered": 8189,
+"ballots": 1734,
+"pct": 21.17
+},
+"Lee": {
+"registered": 3957,
+"ballots": 1607,
+"pct": 40.61
+},
+"Lincoln": {
+"registered": 4908,
+"ballots": 840,
+"pct": 17.11
+},
+"Little River": {
+"registered": 6641,
+"ballots": 1439,
+"pct": 21.67
+},
+"Logan": {
+"registered": 13635,
+"ballots": 2367,
+"pct": 17.36
+},
+"Lonoke": {
+"registered": 48869,
+"ballots": 6775,
+"pct": 13.86
+},
+"Madison": {
+"registered": 10971,
+"ballots": 2418,
+"pct": 22.04
+},
+"Marion": {
+"registered": 10905,
+"ballots": 3005,
+"pct": 27.56
+},
+"Miller": {
+"registered": 26475,
+"ballots": 4579,
+"pct": 17.3
+},
+"Mississippi": {
+"registered": 19524,
+"ballots": 3918,
+"pct": 20.07
+},
+"Monroe": {
+"registered": 3760,
+"ballots": 972,
+"pct": 25.85
+},
+"Montgomery": {
+"registered": 4887,
+"ballots": 1022,
+"pct": 20.91
+},
+"Nevada": {
+"registered": 5674,
+"ballots": 1106,
+"pct": 19.49
+},
+"Newton": {
+"registered": 6006,
+"ballots": 1216,
+"pct": 20.25
+},
+"Ouachita": {
+"registered": 15505,
+"ballots": 2171,
+"pct": 14.0
+},
+"Perry": {
+"registered": 6782,
+"ballots": 1932,
+"pct": 28.49
+},
+"Phillips": {
+"registered": 8564,
+"ballots": 2517,
+"pct": 29.39
+},
+"Pike": {
+"registered": 6221,
+"ballots": 1309,
+"pct": 21.04
+},
+"Poinsett": {
+"registered": 11884,
+"ballots": 2404,
+"pct": 20.23
+},
+"Polk": {
+"registered": 11719,
+"ballots": 2376,
+"pct": 20.27
+},
+"Pope": {
+"registered": 33510,
+"ballots": 8084,
+"pct": 24.12
+},
+"Prairie": {
+"registered": 4564,
+"ballots": 1138,
+"pct": 24.93
+},
+"Pulaski": {
+"registered": 230851,
+"ballots": 48444,
+"pct": 20.98
+},
+"Randolph": {
+"registered": 10170,
+"ballots": 1680,
+"pct": 16.52
+},
+"Saline": {
+"registered": 77068,
+"ballots": 18076,
+"pct": 23.45
+},
+"Scott": {
+"registered": 4672,
+"ballots": 1278,
+"pct": 27.35
+},
+"Searcy": {
+"registered": 6052,
+"ballots": 1698,
+"pct": 28.06
+},
+"Sebastian": {
+"registered": 68820,
+"ballots": 13976,
+"pct": 20.31
+},
+"Sevier": {
+"registered": 7128,
+"ballots": 961,
+"pct": 13.48
+},
+"Sharp": {
+"registered": 10542,
+"ballots": 2397,
+"pct": 22.74
+},
+"St. Francis": {
+"registered": 10079,
+"ballots": 2155,
+"pct": 21.38
+},
+"Stone": {
+"registered": 8205,
+"ballots": 2381,
+"pct": 29.02
+},
+"Union": {
+"registered": 26915,
+"ballots": 3201,
+"pct": 11.89
+},
+"Van Buren": {
+"registered": 11364,
+"ballots": 2588,
+"pct": 22.77
+},
+"Washington": {
+"registered": 138120,
+"ballots": 25853,
+"pct": 18.72
+},
+"White": {
+"registered": 43706,
+"ballots": 10643,
+"pct": 24.35
+},
+"Woodruff": {
+"registered": 4125,
+"ballots": 587,
+"pct": 14.23
+},
+"Yell": {
+"registered": 9319,
+"ballots": 1835,
+"pct": 19.69
+}
+}
+},
+{
+"id": "2022-general",
+"name": "Nov 8, 2022 General Election",
+"api_election_id": "1844",
+"isOfficial": true,
+"lastUpdated": "2025-12-16T20:01:52.3236434Z",
+"statewide": {
+"registered": 1799136,
+"ballots": 914227,
+"pct": 50.81
+},
+"counties": {
+"Arkansas": {
+"registered": 8851,
+"ballots": 4521,
+"pct": 51.08
+},
+"Ashley": {
+"registered": 10845,
+"ballots": 5496,
+"pct": 50.68
+},
+"Baxter": {
+"registered": 30281,
+"ballots": 15785,
+"pct": 52.13
+},
+"Benton": {
+"registered": 181381,
+"ballots": 91522,
+"pct": 50.46
+},
+"Boone": {
+"registered": 25723,
+"ballots": 12840,
+"pct": 49.92
+},
+"Bradley": {
+"registered": 5289,
+"ballots": 2656,
+"pct": 50.22
+},
+"Calhoun": {
+"registered": 3059,
+"ballots": 1601,
+"pct": 52.34
+},
+"Carroll": {
+"registered": 15149,
+"ballots": 9099,
+"pct": 60.06
+},
+"Chicot": {
+"registered": 5944,
+"ballots": 3438,
+"pct": 57.84
+},
+"Clark": {
+"registered": 12349,
+"ballots": 6205,
+"pct": 50.25
+},
+"Clay": {
+"registered": 7779,
+"ballots": 3994,
+"pct": 51.34
+},
+"Cleburne": {
+"registered": 18370,
+"ballots": 10111,
+"pct": 55.04
+},
+"Cleveland": {
+"registered": 4672,
+"ballots": 2844,
+"pct": 60.87
+},
+"Columbia": {
+"registered": 12253,
+"ballots": 6152,
+"pct": 50.21
+},
+"Conway": {
+"registered": 11775,
+"ballots": 6820,
+"pct": 57.92
+},
+"Craighead": {
+"registered": 58120,
+"ballots": 27919,
+"pct": 48.04
+},
+"Crawford": {
+"registered": 35927,
+"ballots": 18080,
+"pct": 50.32
+},
+"Crittenden": {
+"registered": 32731,
+"ballots": 10899,
+"pct": 33.3
+},
+"Cross": {
+"registered": 9946,
+"ballots": 5000,
+"pct": 50.27
+},
+"Dallas": {
+"registered": 3990,
+"ballots": 2106,
+"pct": 52.78
+},
+"Desha": {
+"registered": 7100,
+"ballots": 3149,
+"pct": 44.35
+},
+"Drew": {
+"registered": 10930,
+"ballots": 5345,
+"pct": 48.9
+},
+"Faulkner": {
+"registered": 77561,
+"ballots": 40537,
+"pct": 52.26
+},
+"Franklin": {
+"registered": 9942,
+"ballots": 5552,
+"pct": 55.84
+},
+"Fulton": {
+"registered": 7534,
+"ballots": 4024,
+"pct": 53.41
+},
+"Garland": {
+"registered": 64997,
+"ballots": 33593,
+"pct": 51.68
+},
+"Grant": {
+"registered": 11303,
+"ballots": 6327,
+"pct": 55.98
+},
+"Greene": {
+"registered": 22248,
+"ballots": 11650,
+"pct": 52.36
+},
+"Hempstead": {
+"registered": 8736,
+"ballots": 4760,
+"pct": 54.49
+},
+"Hot Spring": {
+"registered": 18513,
+"ballots": 10014,
+"pct": 54.09
+},
+"Howard": {
+"registered": 7187,
+"ballots": 3676,
+"pct": 51.15
+},
+"Independence": {
+"registered": 21402,
+"ballots": 10646,
+"pct": 49.74
+},
+"Izard": {
+"registered": 9621,
+"ballots": 4641,
+"pct": 48.24
+},
+"Jackson": {
+"registered": 8126,
+"ballots": 4070,
+"pct": 50.09
+},
+"Jefferson": {
+"registered": 36187,
+"ballots": 17814,
+"pct": 49.23
+},
+"Johnson": {
+"registered": 12979,
+"ballots": 7044,
+"pct": 54.27
+},
+"Lafayette": {
+"registered": 3950,
+"ballots": 2005,
+"pct": 50.76
+},
+"Lawrence": {
+"registered": 8508,
+"ballots": 4679,
+"pct": 55.0
+},
+"Lee": {
+"registered": 4509,
+"ballots": 2059,
+"pct": 45.66
+},
+"Lincoln": {
+"registered": 5363,
+"ballots": 2793,
+"pct": 52.08
+},
+"Little River": {
+"registered": 7262,
+"ballots": 3858,
+"pct": 53.13
+},
+"Logan": {
+"registered": 13081,
+"ballots": 6301,
+"pct": 48.17
+},
+"Lonoke": {
+"registered": 46974,
+"ballots": 22624,
+"pct": 48.16
+},
+"Madison": {
+"registered": 10489,
+"ballots": 5885,
+"pct": 56.11
+},
+"Marion": {
+"registered": 11057,
+"ballots": 6050,
+"pct": 54.72
+},
+"Miller": {
+"registered": 26546,
+"ballots": 11336,
+"pct": 42.7
+},
+"Mississippi": {
+"registered": 19391,
+"ballots": 8937,
+"pct": 46.09
+},
+"Monroe": {
+"registered": 3998,
+"ballots": 2274,
+"pct": 56.88
+},
+"Montgomery": {
+"registered": 5151,
+"ballots": 3209,
+"pct": 62.3
+},
+"Nevada": {
+"registered": 5757,
+"ballots": 2492,
+"pct": 43.29
+},
+"Newton": {
+"registered": 6027,
+"ballots": 3113,
+"pct": 51.65
+},
+"Ouachita": {
+"registered": 15112,
+"ballots": 7087,
+"pct": 46.9
+},
+"Perry": {
+"registered": 6534,
+"ballots": 3854,
+"pct": 58.98
+},
+"Phillips": {
+"registered": 9771,
+"ballots": 4473,
+"pct": 45.78
+},
+"Pike": {
+"registered": 6142,
+"ballots": 3748,
+"pct": 61.02
+},
+"Poinsett": {
+"registered": 11801,
+"ballots": 5637,
+"pct": 47.77
+},
+"Polk": {
+"registered": 12183,
+"ballots": 6953,
+"pct": 57.07
+},
+"Pope": {
+"registered": 36286,
+"ballots": 17740,
+"pct": 48.89
+},
+"Prairie": {
+"registered": 4717,
+"ballots": 2696,
+"pct": 57.15
+},
+"Pulaski": {
+"registered": 241375,
+"ballots": 124940,
+"pct": 51.76
+},
+"Randolph": {
+"registered": 10439,
+"ballots": 5403,
+"pct": 51.76
+},
+"Saline": {
+"registered": 78593,
+"ballots": 43434,
+"pct": 55.26
+},
+"Scott": {
+"registered": 5278,
+"ballots": 2992,
+"pct": 56.69
+},
+"Searcy": {
+"registered": 5778,
+"ballots": 3207,
+"pct": 55.5
+},
+"Sebastian": {
+"registered": 70913,
+"ballots": 34601,
+"pct": 48.79
+},
+"Sevier": {
+"registered": 7542,
+"ballots": 3697,
+"pct": 49.02
+},
+"Sharp": {
+"registered": 11146,
+"ballots": 6087,
+"pct": 54.61
+},
+"St. Francis": {
+"registered": 9877,
+"ballots": 5142,
+"pct": 52.06
+},
+"Stone": {
+"registered": 9400,
+"ballots": 5177,
+"pct": 55.07
+},
+"Union": {
+"registered": 26498,
+"ballots": 11916,
+"pct": 44.97
+},
+"Van Buren": {
+"registered": 11200,
+"ballots": 6318,
+"pct": 56.41
+},
+"Washington": {
+"registered": 142653,
+"ballots": 71132,
+"pct": 49.86
+},
+"White": {
+"registered": 45037,
+"ballots": 23300,
+"pct": 51.74
+},
+"Woodruff": {
+"registered": 4036,
+"ballots": 2115,
+"pct": 52.4
+},
+"Yell": {
+"registered": 9962,
+"ballots": 5033,
+"pct": 50.52
+}
+}
+},
+{
+"id": "2022-primary",
+"name": "May 24, 2022 Primary Election",
+"api_election_id": "1843",
+"isOfficial": true,
+"lastUpdated": "2025-12-16T20:20:20.6007299Z",
+"statewide": {
+"registered": 1762024,
+"ballots": 457856,
+"pct": 25.98
+},
+"counties": {
+"Arkansas": {
+"registered": 8806,
+"ballots": 2927,
+"pct": 33.24
+},
+"Ashley": {
+"registered": 10779,
+"ballots": 2836,
+"pct": 26.31
+},
+"Baxter": {
+"registered": 29513,
+"ballots": 8794,
+"pct": 29.8
+},
+"Benton": {
+"registered": 174947,
+"ballots": 34401,
+"pct": 19.66
+},
+"Boone": {
+"registered": 25200,
+"ballots": 6667,
+"pct": 26.46
+},
+"Bradley": {
+"registered": 5288,
+"ballots": 1290,
+"pct": 24.39
+},
+"Calhoun": {
+"registered": 3053,
+"ballots": 845,
+"pct": 27.68
+},
+"Carroll": {
+"registered": 14702,
+"ballots": 5124,
+"pct": 34.85
+},
+"Chicot": {
+"registered": 5789,
+"ballots": 1731,
+"pct": 29.9
+},
+"Clark": {
+"registered": 12161,
+"ballots": 3071,
+"pct": 25.25
+},
+"Clay": {
+"registered": 7624,
+"ballots": 2457,
+"pct": 32.23
+},
+"Cleburne": {
+"registered": 18029,
+"ballots": 6028,
+"pct": 33.44
+},
+"Cleveland": {
+"registered": 4622,
+"ballots": 1835,
+"pct": 39.7
+},
+"Columbia": {
+"registered": 12173,
+"ballots": 3585,
+"pct": 29.45
+},
+"Conway": {
+"registered": 11631,
+"ballots": 3885,
+"pct": 33.4
+},
+"Craighead": {
+"registered": 56903,
+"ballots": 12031,
+"pct": 21.14
+},
+"Crawford": {
+"registered": 35242,
+"ballots": 10626,
+"pct": 30.15
+},
+"Crittenden": {
+"registered": 32270,
+"ballots": 4145,
+"pct": 12.84
+},
+"Cross": {
+"registered": 9856,
+"ballots": 3220,
+"pct": 32.67
+},
+"Dallas": {
+"registered": 3974,
+"ballots": 1239,
+"pct": 31.18
+},
+"Desha": {
+"registered": 7084,
+"ballots": 2175,
+"pct": 30.7
+},
+"Drew": {
+"registered": 10903,
+"ballots": 2905,
+"pct": 26.64
+},
+"Faulkner": {
+"registered": 75842,
+"ballots": 20037,
+"pct": 26.42
+},
+"Franklin": {
+"registered": 9788,
+"ballots": 3510,
+"pct": 35.86
+},
+"Fulton": {
+"registered": 7364,
+"ballots": 2733,
+"pct": 37.11
+},
+"Garland": {
+"registered": 63954,
+"ballots": 14204,
+"pct": 22.21
+},
+"Grant": {
+"registered": 11161,
+"ballots": 3534,
+"pct": 31.66
+},
+"Greene": {
+"registered": 21780,
+"ballots": 6987,
+"pct": 32.08
+},
+"Hempstead": {
+"registered": 8026,
+"ballots": 2846,
+"pct": 35.46
+},
+"Hot Spring": {
+"registered": 17800,
+"ballots": 5217,
+"pct": 29.31
+},
+"Howard": {
+"registered": 7097,
+"ballots": 2571,
+"pct": 36.23
+},
+"Independence": {
+"registered": 21079,
+"ballots": 6267,
+"pct": 29.73
+},
+"Izard": {
+"registered": 9361,
+"ballots": 3337,
+"pct": 35.65
+},
+"Jackson": {
+"registered": 8004,
+"ballots": 2684,
+"pct": 33.53
+},
+"Jefferson": {
+"registered": 35868,
+"ballots": 9867,
+"pct": 27.51
+},
+"Johnson": {
+"registered": 12357,
+"ballots": 4570,
+"pct": 36.98
+},
+"Lafayette": {
+"registered": 3859,
+"ballots": 1102,
+"pct": 28.56
+},
+"Lawrence": {
+"registered": 8341,
+"ballots": 2894,
+"pct": 34.7
+},
+"Lee": {
+"registered": 4447,
+"ballots": 1668,
+"pct": 37.51
+},
+"Lincoln": {
+"registered": 5334,
+"ballots": 1624,
+"pct": 30.45
+},
+"Little River": {
+"registered": 7123,
+"ballots": 2391,
+"pct": 33.57
+},
+"Logan": {
+"registered": 12764,
+"ballots": 4173,
+"pct": 32.69
+},
+"Lonoke": {
+"registered": 46318,
+"ballots": 9704,
+"pct": 20.95
+},
+"Madison": {
+"registered": 10201,
+"ballots": 3928,
+"pct": 38.51
+},
+"Marion": {
+"registered": 10810,
+"ballots": 3652,
+"pct": 33.78
+},
+"Miller": {
+"registered": 26004,
+"ballots": 5675,
+"pct": 21.82
+},
+"Mississippi": {
+"registered": 18929,
+"ballots": 2962,
+"pct": 15.65
+},
+"Monroe": {
+"registered": 3943,
+"ballots": 1007,
+"pct": 25.54
+},
+"Montgomery": {
+"registered": 5080,
+"ballots": 2194,
+"pct": 43.19
+},
+"Nevada": {
+"registered": 5746,
+"ballots": 1588,
+"pct": 27.64
+},
+"Newton": {
+"registered": 5977,
+"ballots": 2265,
+"pct": 37.9
+},
+"Ouachita": {
+"registered": 14980,
+"ballots": 2678,
+"pct": 17.88
+},
+"Perry": {
+"registered": 6397,
+"ballots": 2402,
+"pct": 37.55
+},
+"Phillips": {
+"registered": 9566,
+"ballots": 2475,
+"pct": 25.87
+},
+"Pike": {
+"registered": 5703,
+"ballots": 2312,
+"pct": 40.54
+},
+"Poinsett": {
+"registered": 11632,
+"ballots": 2703,
+"pct": 23.24
+},
+"Polk": {
+"registered": 11889,
+"ballots": 2921,
+"pct": 24.57
+},
+"Pope": {
+"registered": 35764,
+"ballots": 10395,
+"pct": 29.07
+},
+"Prairie": {
+"registered": 4685,
+"ballots": 1861,
+"pct": 39.72
+},
+"Pulaski": {
+"registered": 238029,
+"ballots": 59576,
+"pct": 25.03
+},
+"Randolph": {
+"registered": 10283,
+"ballots": 3320,
+"pct": 32.29
+},
+"Saline": {
+"registered": 76941,
+"ballots": 20215,
+"pct": 26.27
+},
+"Scott": {
+"registered": 5159,
+"ballots": 1878,
+"pct": 36.4
+},
+"Searcy": {
+"registered": 5659,
+"ballots": 2525,
+"pct": 44.62
+},
+"Sebastian": {
+"registered": 69460,
+"ballots": 18629,
+"pct": 26.82
+},
+"Sevier": {
+"registered": 7411,
+"ballots": 1715,
+"pct": 23.14
+},
+"Sharp": {
+"registered": 10950,
+"ballots": 3991,
+"pct": 36.45
+},
+"St. Francis": {
+"registered": 9692,
+"ballots": 2437,
+"pct": 25.14
+},
+"Stone": {
+"registered": 9116,
+"ballots": 3182,
+"pct": 34.91
+},
+"Union": {
+"registered": 26262,
+"ballots": 4859,
+"pct": 18.5
+},
+"Van Buren": {
+"registered": 11018,
+"ballots": 3673,
+"pct": 33.34
+},
+"Washington": {
+"registered": 138474,
+"ballots": 29598,
+"pct": 21.37
+},
+"White": {
+"registered": 44254,
+"ballots": 12665,
+"pct": 28.62
+},
+"Woodruff": {
+"registered": 3960,
+"ballots": 1173,
+"pct": 29.62
+},
+"Yell": {
+"registered": 9834,
+"ballots": 3665,
+"pct": 37.27
+}
+}
+},
+{
+"id": "2020-general",
+"name": "Nov 3, 2020 General Election",
+"api_election_id": "1841",
+"isOfficial": true,
+"lastUpdated": "2025-12-16T21:10:47.9174647Z",
+"statewide": {
+"registered": 1828811,
+"ballots": 1223777,
+"pct": 66.92
+},
+"counties": {
+"Arkansas": {
+"registered": 10197,
+"ballots": 6313,
+"pct": 61.91
+},
+"Ashley": {
+"registered": 11371,
+"ballots": 7956,
+"pct": 69.97
+},
+"Baxter": {
+"registered": 29981,
+"ballots": 21114,
+"pct": 70.42
+},
+"Benton": {
+"registered": 170022,
+"ballots": 120444,
+"pct": 70.84
+},
+"Boone": {
+"registered": 25018,
+"ballots": 17157,
+"pct": 68.58
+},
+"Bradley": {
+"registered": 5285,
+"ballots": 3654,
+"pct": 69.14
+},
+"Calhoun": {
+"registered": 3462,
+"ballots": 2192,
+"pct": 63.32
+},
+"Carroll": {
+"registered": 16914,
+"ballots": 11835,
+"pct": 69.97
+},
+"Chicot": {
+"registered": 6222,
+"ballots": 4118,
+"pct": 66.18
+},
+"Clark": {
+"registered": 12147,
+"ballots": 8430,
+"pct": 69.4
+},
+"Clay": {
+"registered": 7966,
+"ballots": 5200,
+"pct": 65.28
+},
+"Cleburne": {
+"registered": 18008,
+"ballots": 12725,
+"pct": 70.66
+},
+"Cleveland": {
+"registered": 4607,
+"ballots": 3603,
+"pct": 78.21
+},
+"Columbia": {
+"registered": 13069,
+"ballots": 8580,
+"pct": 65.65
+},
+"Conway": {
+"registered": 11714,
+"ballots": 8736,
+"pct": 74.58
+},
+"Craighead": {
+"registered": 57905,
+"ballots": 38676,
+"pct": 66.79
+},
+"Crawford": {
+"registered": 35425,
+"ballots": 24218,
+"pct": 68.36
+},
+"Crittenden": {
+"registered": 31776,
+"ballots": 16402,
+"pct": 51.62
+},
+"Cross": {
+"registered": 10258,
+"ballots": 6968,
+"pct": 67.93
+},
+"Dallas": {
+"registered": 4507,
+"ballots": 2649,
+"pct": 58.78
+},
+"Desha": {
+"registered": 7114,
+"ballots": 4193,
+"pct": 58.94
+},
+"Drew": {
+"registered": 11538,
+"ballots": 6922,
+"pct": 59.99
+},
+"Faulkner": {
+"registered": 76849,
+"ballots": 54588,
+"pct": 71.03
+},
+"Franklin": {
+"registered": 9712,
+"ballots": 7140,
+"pct": 73.52
+},
+"Fulton": {
+"registered": 7557,
+"ballots": 5146,
+"pct": 68.1
+},
+"Garland": {
+"registered": 66072,
+"ballots": 44407,
+"pct": 67.21
+},
+"Grant": {
+"registered": 12028,
+"ballots": 8209,
+"pct": 68.25
+},
+"Greene": {
+"registered": 22386,
+"ballots": 16141,
+"pct": 72.1
+},
+"Hempstead": {
+"registered": 10280,
+"ballots": 6869,
+"pct": 66.82
+},
+"Hot Spring": {
+"registered": 18179,
+"ballots": 12587,
+"pct": 69.24
+},
+"Howard": {
+"registered": 7298,
+"ballots": 4846,
+"pct": 66.4
+},
+"Independence": {
+"registered": 21841,
+"ballots": 14547,
+"pct": 66.6
+},
+"Izard": {
+"registered": 8957,
+"ballots": 5837,
+"pct": 65.17
+},
+"Jackson": {
+"registered": 7886,
+"ballots": 5102,
+"pct": 64.7
+},
+"Jefferson": {
+"registered": 44259,
+"ballots": 25253,
+"pct": 57.06
+},
+"Johnson": {
+"registered": 16654,
+"ballots": 9603,
+"pct": 57.66
+},
+"Lafayette": {
+"registered": 4366,
+"ballots": 2687,
+"pct": 61.54
+},
+"Lawrence": {
+"registered": 8425,
+"ballots": 5880,
+"pct": 69.79
+},
+"Lee": {
+"registered": 5013,
+"ballots": 2869,
+"pct": 57.23
+},
+"Lincoln": {
+"registered": 6378,
+"ballots": 3893,
+"pct": 61.04
+},
+"Little River": {
+"registered": 7117,
+"ballots": 5201,
+"pct": 73.08
+},
+"Logan": {
+"registered": 12144,
+"ballots": 8252,
+"pct": 67.95
+},
+"Lonoke": {
+"registered": 49741,
+"ballots": 30675,
+"pct": 61.67
+},
+"Madison": {
+"registered": 10239,
+"ballots": 7379,
+"pct": 72.07
+},
+"Marion": {
+"registered": 10683,
+"ballots": 7432,
+"pct": 69.57
+},
+"Miller": {
+"registered": 24805,
+"ballots": 16570,
+"pct": 66.8
+},
+"Mississippi": {
+"registered": 20482,
+"ballots": 12364,
+"pct": 60.37
+},
+"Monroe": {
+"registered": 4258,
+"ballots": 2826,
+"pct": 66.37
+},
+"Montgomery": {
+"registered": 5037,
+"ballots": 3889,
+"pct": 77.21
+},
+"Nevada": {
+"registered": 5753,
+"ballots": 3385,
+"pct": 58.84
+},
+"Newton": {
+"registered": 6582,
+"ballots": 4013,
+"pct": 60.97
+},
+"Ouachita": {
+"registered": 15927,
+"ballots": 9673,
+"pct": 60.73
+},
+"Perry": {
+"registered": 6429,
+"ballots": 4655,
+"pct": 72.41
+},
+"Phillips": {
+"registered": 10633,
+"ballots": 6272,
+"pct": 58.99
+},
+"Pike": {
+"registered": 5650,
+"ballots": 4253,
+"pct": 75.27
+},
+"Poinsett": {
+"registered": 12306,
+"ballots": 7548,
+"pct": 61.34
+},
+"Polk": {
+"registered": 12118,
+"ballots": 8519,
+"pct": 70.3
+},
+"Pope": {
+"registered": 35073,
+"ballots": 24505,
+"pct": 69.87
+},
+"Prairie": {
+"registered": 4971,
+"ballots": 3503,
+"pct": 70.47
+},
+"Pulaski": {
+"registered": 260623,
+"ballots": 170870,
+"pct": 65.56
+},
+"Randolph": {
+"registered": 10640,
+"ballots": 6832,
+"pct": 64.21
+},
+"Saline": {
+"registered": 77465,
+"ballots": 57165,
+"pct": 73.79
+},
+"Scott": {
+"registered": 5104,
+"ballots": 3577,
+"pct": 70.08
+},
+"Searcy": {
+"registered": 5259,
+"ballots": 4036,
+"pct": 76.74
+},
+"Sebastian": {
+"registered": 72823,
+"ballots": 47291,
+"pct": 64.94
+},
+"Sevier": {
+"registered": 7457,
+"ballots": 5227,
+"pct": 70.1
+},
+"Sharp": {
+"registered": 11295,
+"ballots": 7600,
+"pct": 67.29
+},
+"St. Francis": {
+"registered": 11582,
+"ballots": 7138,
+"pct": 61.63
+},
+"Stone": {
+"registered": 8836,
+"ballots": 5955,
+"pct": 67.39
+},
+"Union": {
+"registered": 27917,
+"ballots": 16605,
+"pct": 59.48
+},
+"Van Buren": {
+"registered": 10712,
+"ballots": 7838,
+"pct": 73.17
+},
+"Washington": {
+"registered": 140765,
+"ballots": 94783,
+"pct": 67.33
+},
+"White": {
+"registered": 44917,
+"ballots": 31006,
+"pct": 69.03
+},
+"Woodruff": {
+"registered": 4527,
+"ballots": 2484,
+"pct": 54.87
+},
+"Yell": {
+"registered": 10295,
+"ballots": 6767,
+"pct": 65.73
+}
+}
+},
+{
+"id": "2020-primary",
+"name": "Mar 3, 2020 Preferential Primary Election",
+"api_election_id": "1839",
+"isOfficial": true,
+"lastUpdated": "2025-12-16T21:34:46.9599186Z",
+"statewide": {
+"registered": 1740172,
+"ballots": 487409,
+"pct": 28.01
+},
+"counties": {
+"Arkansas": {
+"registered": 9976,
+"ballots": 2065,
+"pct": 20.7
+},
+"Ashley": {
+"registered": 11083,
+"ballots": 3817,
+"pct": 34.44
+},
+"Baxter": {
+"registered": 28631,
+"ballots": 8330,
+"pct": 29.09
+},
+"Benton": {
+"registered": 156549,
+"ballots": 42990,
+"pct": 27.46
+},
+"Boone": {
+"registered": 23625,
+"ballots": 4780,
+"pct": 20.23
+},
+"Bradley": {
+"registered": 5105,
+"ballots": 1636,
+"pct": 32.05
+},
+"Calhoun": {
+"registered": 3412,
+"ballots": 722,
+"pct": 21.16
+},
+"Carroll": {
+"registered": 15944,
+"ballots": 4386,
+"pct": 27.51
+},
+"Chicot": {
+"registered": 6015,
+"ballots": 2209,
+"pct": 36.72
+},
+"Clark": {
+"registered": 11770,
+"ballots": 3392,
+"pct": 28.82
+},
+"Clay": {
+"registered": 7703,
+"ballots": 1751,
+"pct": 22.73
+},
+"Cleburne": {
+"registered": 17275,
+"ballots": 4558,
+"pct": 26.38
+},
+"Cleveland": {
+"registered": 4413,
+"ballots": 1415,
+"pct": 32.06
+},
+"Columbia": {
+"registered": 12566,
+"ballots": 3135,
+"pct": 24.95
+},
+"Conway": {
+"registered": 11021,
+"ballots": 4051,
+"pct": 36.76
+},
+"Craighead": {
+"registered": 54387,
+"ballots": 16471,
+"pct": 30.28
+},
+"Crawford": {
+"registered": 33629,
+"ballots": 9459,
+"pct": 28.13
+},
+"Crittenden": {
+"registered": 30491,
+"ballots": 4990,
+"pct": 16.37
+},
+"Cross": {
+"registered": 9890,
+"ballots": 2548,
+"pct": 25.76
+},
+"Dallas": {
+"registered": 4477,
+"ballots": 1144,
+"pct": 25.55
+},
+"Desha": {
+"registered": 7022,
+"ballots": 2273,
+"pct": 32.37
+},
+"Drew": {
+"registered": 11075,
+"ballots": 3156,
+"pct": 28.5
+},
+"Faulkner": {
+"registered": 73133,
+"ballots": 18252,
+"pct": 24.96
+},
+"Franklin": {
+"registered": 9174,
+"ballots": 3367,
+"pct": 36.7
+},
+"Fulton": {
+"registered": 7153,
+"ballots": 1833,
+"pct": 25.63
+},
+"Garland": {
+"registered": 62797,
+"ballots": 19677,
+"pct": 31.33
+},
+"Grant": {
+"registered": 11628,
+"ballots": 0,
+"pct": 0.0
+},
+"Greene": {
+"registered": 20487,
+"ballots": 6604,
+"pct": 32.24
+},
+"Hempstead": {
+"registered": 9770,
+"ballots": 2713,
+"pct": 27.77
+},
+"Hot Spring": {
+"registered": 17374,
+"ballots": 6059,
+"pct": 34.87
+},
+"Howard": {
+"registered": 6966,
+"ballots": 1674,
+"pct": 24.03
+},
+"Independence": {
+"registered": 21196,
+"ballots": 5340,
+"pct": 25.19
+},
+"Izard": {
+"registered": 8501,
+"ballots": 2459,
+"pct": 28.93
+},
+"Jackson": {
+"registered": 7707,
+"ballots": 2414,
+"pct": 31.32
+},
+"Jefferson": {
+"registered": 43394,
+"ballots": 13541,
+"pct": 31.2
+},
+"Johnson": {
+"registered": 16042,
+"ballots": 4192,
+"pct": 26.13
+},
+"Lafayette": {
+"registered": 4224,
+"ballots": 847,
+"pct": 20.05
+},
+"Lawrence": {
+"registered": 7878,
+"ballots": 2910,
+"pct": 36.94
+},
+"Lee": {
+"registered": 4974,
+"ballots": 1120,
+"pct": 22.52
+},
+"Lincoln": {
+"registered": 6250,
+"ballots": 1803,
+"pct": 28.85
+},
+"Little River": {
+"registered": 6799,
+"ballots": 2169,
+"pct": 31.9
+},
+"Logan": {
+"registered": 11555,
+"ballots": 3871,
+"pct": 33.5
+},
+"Lonoke": {
+"registered": 47693,
+"ballots": 8640,
+"pct": 18.12
+},
+"Madison": {
+"registered": 9727,
+"ballots": 2734,
+"pct": 28.11
+},
+"Marion": {
+"registered": 10092,
+"ballots": 2537,
+"pct": 25.14
+},
+"Miller": {
+"registered": 23180,
+"ballots": 6645,
+"pct": 28.67
+},
+"Mississippi": {
+"registered": 20028,
+"ballots": 4477,
+"pct": 22.35
+},
+"Monroe": {
+"registered": 4163,
+"ballots": 1261,
+"pct": 30.29
+},
+"Montgomery": {
+"registered": 4723,
+"ballots": 1780,
+"pct": 37.69
+},
+"Nevada": {
+"registered": 5636,
+"ballots": 1076,
+"pct": 19.09
+},
+"Newton": {
+"registered": 6499,
+"ballots": 1122,
+"pct": 17.26
+},
+"Ouachita": {
+"registered": 15508,
+"ballots": 3612,
+"pct": 23.29
+},
+"Perry": {
+"registered": 6156,
+"ballots": 2003,
+"pct": 32.54
+},
+"Phillips": {
+"registered": 10368,
+"ballots": 2526,
+"pct": 24.36
+},
+"Pike": {
+"registered": 5252,
+"ballots": 1418,
+"pct": 27.0
+},
+"Poinsett": {
+"registered": 11951,
+"ballots": 2621,
+"pct": 21.93
+},
+"Polk": {
+"registered": 11533,
+"ballots": 4575,
+"pct": 39.67
+},
+"Pope": {
+"registered": 33612,
+"ballots": 11192,
+"pct": 33.3
+},
+"Prairie": {
+"registered": 4869,
+"ballots": 1230,
+"pct": 25.26
+},
+"Pulaski": {
+"registered": 249481,
+"ballots": 74878,
+"pct": 30.01
+},
+"Randolph": {
+"registered": 10316,
+"ballots": 2777,
+"pct": 26.92
+},
+"Saline": {
+"registered": 73589,
+"ballots": 23283,
+"pct": 31.64
+},
+"Scott": {
+"registered": 4860,
+"ballots": 1618,
+"pct": 33.29
+},
+"Searcy": {
+"registered": 4923,
+"ballots": 1630,
+"pct": 33.11
+},
+"Sebastian": {
+"registered": 69589,
+"ballots": 19823,
+"pct": 28.49
+},
+"Sevier": {
+"registered": 6658,
+"ballots": 1508,
+"pct": 22.65
+},
+"Sharp": {
+"registered": 10760,
+"ballots": 3433,
+"pct": 31.91
+},
+"St. Francis": {
+"registered": 11157,
+"ballots": 3344,
+"pct": 29.97
+},
+"Stone": {
+"registered": 8466,
+"ballots": 3268,
+"pct": 38.6
+},
+"Union": {
+"registered": 27288,
+"ballots": 5277,
+"pct": 19.34
+},
+"Van Buren": {
+"registered": 10094,
+"ballots": 3413,
+"pct": 33.81
+},
+"Washington": {
+"registered": 131726,
+"ballots": 39023,
+"pct": 29.62
+},
+"White": {
+"registered": 42663,
+"ballots": 10783,
+"pct": 25.27
+},
+"Woodruff": {
+"registered": 4621,
+"ballots": 1146,
+"pct": 24.8
+},
+"Yell": {
+"registered": 9930,
+"ballots": 2633,
+"pct": 26.52
+}
+}
+},
+{
+"id": "2018-general",
+"name": "Nov 6, 2018 General Election",
+"api_election_id": "1838",
+"isOfficial": true,
+"lastUpdated": "2025-12-16T21:49:01.250839Z",
+"statewide": {
+"registered": 1784014,
+"ballots": 898793,
+"pct": 50.38
+},
+"counties": {
+"Arkansas": {
+"registered": 10162,
+"ballots": 5003,
+"pct": 49.23
+},
+"Ashley": {
+"registered": 12718,
+"ballots": 6199,
+"pct": 48.74
+},
+"Baxter": {
+"registered": 29589,
+"ballots": 14508,
+"pct": 49.03
+},
+"Benton": {
+"registered": 159014,
+"ballots": 77919,
+"pct": 49.0
+},
+"Boone": {
+"registered": 24113,
+"ballots": 11696,
+"pct": 48.5
+},
+"Bradley": {
+"registered": 5474,
+"ballots": 2884,
+"pct": 52.69
+},
+"Calhoun": {
+"registered": 3421,
+"ballots": 1802,
+"pct": 52.67
+},
+"Carroll": {
+"registered": 16565,
+"ballots": 9019,
+"pct": 54.45
+},
+"Chicot": {
+"registered": 6355,
+"ballots": 3609,
+"pct": 56.79
+},
+"Clark": {
+"registered": 12079,
+"ballots": 6790,
+"pct": 56.21
+},
+"Clay": {
+"registered": 8236,
+"ballots": 4185,
+"pct": 50.81
+},
+"Cleburne": {
+"registered": 18728,
+"ballots": 9693,
+"pct": 51.76
+},
+"Cleveland": {
+"registered": 4922,
+"ballots": 2599,
+"pct": 52.8
+},
+"Columbia": {
+"registered": 14281,
+"ballots": 6429,
+"pct": 45.02
+},
+"Conway": {
+"registered": 11231,
+"ballots": 6520,
+"pct": 58.05
+},
+"Craighead": {
+"registered": 56430,
+"ballots": 26189,
+"pct": 46.41
+},
+"Crawford": {
+"registered": 34341,
+"ballots": 16950,
+"pct": 49.36
+},
+"Crittenden": {
+"registered": 29529,
+"ballots": 12082,
+"pct": 40.92
+},
+"Cross": {
+"registered": 10571,
+"ballots": 5860,
+"pct": 55.43
+},
+"Dallas": {
+"registered": 4339,
+"ballots": 2132,
+"pct": 49.14
+},
+"Desha": {
+"registered": 6986,
+"ballots": 3552,
+"pct": 50.84
+},
+"Drew": {
+"registered": 11017,
+"ballots": 5474,
+"pct": 49.69
+},
+"Faulkner": {
+"registered": 74991,
+"ballots": 38783,
+"pct": 51.72
+},
+"Franklin": {
+"registered": 9845,
+"ballots": 5326,
+"pct": 54.1
+},
+"Fulton": {
+"registered": 7100,
+"ballots": 3807,
+"pct": 53.62
+},
+"Garland": {
+"registered": 65871,
+"ballots": 32080,
+"pct": 48.7
+},
+"Grant": {
+"registered": 11474,
+"ballots": 5566,
+"pct": 48.51
+},
+"Greene": {
+"registered": 21566,
+"ballots": 11022,
+"pct": 51.11
+},
+"Hempstead": {
+"registered": 10692,
+"ballots": 4999,
+"pct": 46.75
+},
+"Hot Spring": {
+"registered": 18205,
+"ballots": 8794,
+"pct": 48.31
+},
+"Howard": {
+"registered": 7238,
+"ballots": 3538,
+"pct": 48.88
+},
+"Independence": {
+"registered": 21966,
+"ballots": 10218,
+"pct": 46.52
+},
+"Izard": {
+"registered": 8062,
+"ballots": 4511,
+"pct": 55.95
+},
+"Jackson": {
+"registered": 8340,
+"ballots": 4214,
+"pct": 50.53
+},
+"Jefferson": {
+"registered": 43090,
+"ballots": 20013,
+"pct": 46.44
+},
+"Johnson": {
+"registered": 15453,
+"ballots": 7459,
+"pct": 48.27
+},
+"Lafayette": {
+"registered": 4262,
+"ballots": 2151,
+"pct": 50.47
+},
+"Lawrence": {
+"registered": 9102,
+"ballots": 4819,
+"pct": 52.94
+},
+"Lee": {
+"registered": 5015,
+"ballots": 2154,
+"pct": 42.95
+},
+"Lincoln": {
+"registered": 6169,
+"ballots": 3053,
+"pct": 49.49
+},
+"Little River": {
+"registered": 7161,
+"ballots": 3964,
+"pct": 55.36
+},
+"Logan": {
+"registered": 12259,
+"ballots": 5552,
+"pct": 45.29
+},
+"Lonoke": {
+"registered": 45499,
+"ballots": 20685,
+"pct": 45.46
+},
+"Madison": {
+"registered": 10058,
+"ballots": 5621,
+"pct": 55.89
+},
+"Marion": {
+"registered": 10182,
+"ballots": 5188,
+"pct": 50.95
+},
+"Miller": {
+"registered": 27156,
+"ballots": 11484,
+"pct": 42.29
+},
+"Mississippi": {
+"registered": 22407,
+"ballots": 10835,
+"pct": 48.36
+},
+"Monroe": {
+"registered": 4566,
+"ballots": 2697,
+"pct": 59.07
+},
+"Montgomery": {
+"registered": 4890,
+"ballots": 2858,
+"pct": 58.45
+},
+"Nevada": {
+"registered": 5678,
+"ballots": 2536,
+"pct": 44.66
+},
+"Newton": {
+"registered": 6389,
+"ballots": 3491,
+"pct": 54.64
+},
+"Ouachita": {
+"registered": 16138,
+"ballots": 7508,
+"pct": 46.52
+},
+"Perry": {
+"registered": 6289,
+"ballots": 3734,
+"pct": 59.37
+},
+"Phillips": {
+"registered": 13051,
+"ballots": 5598,
+"pct": 42.89
+},
+"Pike": {
+"registered": 5486,
+"ballots": 3388,
+"pct": 61.76
+},
+"Poinsett": {
+"registered": 12410,
+"ballots": 6160,
+"pct": 49.64
+},
+"Polk": {
+"registered": 11981,
+"ballots": 6097,
+"pct": 50.89
+},
+"Pope": {
+"registered": 34486,
+"ballots": 18051,
+"pct": 52.34
+},
+"Prairie": {
+"registered": 4943,
+"ballots": 2886,
+"pct": 58.39
+},
+"Pulaski": {
+"registered": 248100,
+"ballots": 135549,
+"pct": 54.63
+},
+"Randolph": {
+"registered": 10528,
+"ballots": 5707,
+"pct": 54.21
+},
+"Saline": {
+"registered": 75819,
+"ballots": 41736,
+"pct": 55.05
+},
+"Scott": {
+"registered": 5122,
+"ballots": 2878,
+"pct": 56.19
+},
+"Searcy": {
+"registered": 5880,
+"ballots": 3242,
+"pct": 55.14
+},
+"Sebastian": {
+"registered": 71067,
+"ballots": 33287,
+"pct": 46.84
+},
+"Sevier": {
+"registered": 6742,
+"ballots": 3226,
+"pct": 47.85
+},
+"Sharp": {
+"registered": 11058,
+"ballots": 5713,
+"pct": 51.66
+},
+"St. Francis": {
+"registered": 12410,
+"ballots": 5941,
+"pct": 47.87
+},
+"Stone": {
+"registered": 8109,
+"ballots": 4483,
+"pct": 55.28
+},
+"Union": {
+"registered": 27746,
+"ballots": 12872,
+"pct": 46.39
+},
+"Van Buren": {
+"registered": 10508,
+"ballots": 6345,
+"pct": 60.38
+},
+"Washington": {
+"registered": 132411,
+"ballots": 66147,
+"pct": 49.96
+},
+"White": {
+"registered": 43954,
+"ballots": 22246,
+"pct": 50.61
+},
+"Woodruff": {
+"registered": 4545,
+"ballots": 2120,
+"pct": 46.64
+},
+"Yell": {
+"registered": 10444,
+"ballots": 5367,
+"pct": 51.39
+}
+}
+},
+{
+"id": "2016-primary",
+"name": "Mar 1, 2016 Preferential Primary Election",
+"api_election_id": "1835",
+"isOfficial": true,
+"lastUpdated": "2025-12-18T17:59:09.9216279Z",
+"statewide": {
+"registered": 1678829,
+"ballots": 644523,
+"pct": 38.39
+},
+"counties": {
+"Arkansas": {
+"registered": 10071,
+"ballots": 3763,
+"pct": 37.36
+},
+"Ashley": {
+"registered": 12295,
+"ballots": 5082,
+"pct": 41.33
+},
+"Baxter": {
+"registered": 27581,
+"ballots": 11130,
+"pct": 40.35
+},
+"Benton": {
+"registered": 132463,
+"ballots": 53496,
+"pct": 40.39
+},
+"Boone": {
+"registered": 23166,
+"ballots": 7655,
+"pct": 33.04
+},
+"Bradley": {
+"registered": 5270,
+"ballots": 2521,
+"pct": 47.84
+},
+"Calhoun": {
+"registered": 3279,
+"ballots": 1510,
+"pct": 46.05
+},
+"Carroll": {
+"registered": 14986,
+"ballots": 6517,
+"pct": 43.49
+},
+"Chicot": {
+"registered": 6199,
+"ballots": 2633,
+"pct": 42.47
+},
+"Clark": {
+"registered": 12048,
+"ballots": 4898,
+"pct": 40.65
+},
+"Clay": {
+"registered": 8018,
+"ballots": 3318,
+"pct": 41.38
+},
+"Cleburne": {
+"registered": 17598,
+"ballots": 8058,
+"pct": 45.79
+},
+"Cleveland": {
+"registered": 4741,
+"ballots": 2067,
+"pct": 43.6
+},
+"Columbia": {
+"registered": 13901,
+"ballots": 4571,
+"pct": 32.88
+},
+"Conway": {
+"registered": 10796,
+"ballots": 5296,
+"pct": 49.06
+},
+"Craighead": {
+"registered": 56667,
+"ballots": 18532,
+"pct": 32.7
+},
+"Crawford": {
+"registered": 31160,
+"ballots": 13268,
+"pct": 42.58
+},
+"Crittenden": {
+"registered": 29338,
+"ballots": 7798,
+"pct": 26.58
+},
+"Cross": {
+"registered": 10046,
+"ballots": 3566,
+"pct": 35.5
+},
+"Dallas": {
+"registered": 4277,
+"ballots": 1859,
+"pct": 43.47
+},
+"Desha": {
+"registered": 7755,
+"ballots": 2800,
+"pct": 36.11
+},
+"Drew": {
+"registered": 10085,
+"ballots": 4144,
+"pct": 41.09
+},
+"Faulkner": {
+"registered": 70896,
+"ballots": 25942,
+"pct": 36.59
+},
+"Franklin": {
+"registered": 9552,
+"ballots": 4415,
+"pct": 46.22
+},
+"Fulton": {
+"registered": 6344,
+"ballots": 2853,
+"pct": 44.97
+},
+"Garland": {
+"registered": 62725,
+"ballots": 21856,
+"pct": 34.84
+},
+"Grant": {
+"registered": 10504,
+"ballots": 4310,
+"pct": 41.03
+},
+"Greene": {
+"registered": 19484,
+"ballots": 8108,
+"pct": 41.61
+},
+"Hempstead": {
+"registered": 11344,
+"ballots": 3474,
+"pct": 30.62
+},
+"Hot Spring": {
+"registered": 18782,
+"ballots": 6938,
+"pct": 36.94
+},
+"Howard": {
+"registered": 6824,
+"ballots": 2350,
+"pct": 34.44
+},
+"Independence": {
+"registered": 20815,
+"ballots": 7688,
+"pct": 36.93
+},
+"Izard": {
+"registered": 7697,
+"ballots": 2927,
+"pct": 38.03
+},
+"Jackson": {
+"registered": 8215,
+"ballots": 2654,
+"pct": 32.31
+},
+"Jefferson": {
+"registered": 41276,
+"ballots": 17152,
+"pct": 41.55
+},
+"Johnson": {
+"registered": 14019,
+"ballots": 5128,
+"pct": 36.58
+},
+"Lafayette": {
+"registered": 4117,
+"ballots": 1484,
+"pct": 36.05
+},
+"Lawrence": {
+"registered": 8738,
+"ballots": 3482,
+"pct": 39.85
+},
+"Lee": {
+"registered": 4869,
+"ballots": 1756,
+"pct": 36.06
+},
+"Lincoln": {
+"registered": 5791,
+"ballots": 2161,
+"pct": 37.32
+},
+"Little River": {
+"registered": 6884,
+"ballots": 2965,
+"pct": 43.07
+},
+"Logan": {
+"registered": 12098,
+"ballots": 4629,
+"pct": 38.26
+},
+"Lonoke": {
+"registered": 41057,
+"ballots": 14696,
+"pct": 35.79
+},
+"Madison": {
+"registered": 9320,
+"ballots": 4939,
+"pct": 52.99
+},
+"Marion": {
+"registered": 9587,
+"ballots": 4658,
+"pct": 48.59
+},
+"Miller": {
+"registered": 24353,
+"ballots": 8784,
+"pct": 36.07
+},
+"Mississippi": {
+"registered": 20612,
+"ballots": 6784,
+"pct": 32.91
+},
+"Monroe": {
+"registered": 4408,
+"ballots": 2011,
+"pct": 45.62
+},
+"Montgomery": {
+"registered": 4703,
+"ballots": 2141,
+"pct": 45.52
+},
+"Nevada": {
+"registered": 5647,
+"ballots": 1974,
+"pct": 34.96
+},
+"Newton": {
+"registered": 5997,
+"ballots": 1806,
+"pct": 30.12
+},
+"Ouachita": {
+"registered": 16409,
+"ballots": 5665,
+"pct": 34.52
+},
+"Perry": {
+"registered": 6014,
+"ballots": 2799,
+"pct": 46.54
+},
+"Phillips": {
+"registered": 12752,
+"ballots": 4523,
+"pct": 35.47
+},
+"Pike": {
+"registered": 5213,
+"ballots": 2098,
+"pct": 40.25
+},
+"Poinsett": {
+"registered": 12138,
+"ballots": 3698,
+"pct": 30.47
+},
+"Polk": {
+"registered": 12020,
+"ballots": 5467,
+"pct": 45.48
+},
+"Pope": {
+"registered": 31954,
+"ballots": 12760,
+"pct": 39.93
+},
+"Prairie": {
+"registered": 4738,
+"ballots": 2413,
+"pct": 50.93
+},
+"Pulaski": {
+"registered": 236311,
+"ballots": 92774,
+"pct": 39.26
+},
+"Randolph": {
+"registered": 9951,
+"ballots": 3106,
+"pct": 31.21
+},
+"Saline": {
+"registered": 71254,
+"ballots": 29245,
+"pct": 41.04
+},
+"Scott": {
+"registered": 5149,
+"ballots": 2188,
+"pct": 42.49
+},
+"Searcy": {
+"registered": 5440,
+"ballots": 2852,
+"pct": 52.43
+},
+"Sebastian": {
+"registered": 71072,
+"ballots": 25840,
+"pct": 36.36
+},
+"Sevier": {
+"registered": 6378,
+"ballots": 2127,
+"pct": 33.35
+},
+"Sharp": {
+"registered": 10667,
+"ballots": 3977,
+"pct": 37.28
+},
+"St. Francis": {
+"registered": 13778,
+"ballots": 3922,
+"pct": 28.47
+},
+"Stone": {
+"registered": 7708,
+"ballots": 3604,
+"pct": 46.76
+},
+"Union": {
+"registered": 26843,
+"ballots": 7712,
+"pct": 28.73
+},
+"Van Buren": {
+"registered": 9493,
+"ballots": 4528,
+"pct": 47.7
+},
+"Washington": {
+"registered": 119929,
+"ballots": 47100,
+"pct": 39.27
+},
+"White": {
+"registered": 40994,
+"ballots": 15959,
+"pct": 38.93
+},
+"Woodruff": {
+"registered": 4406,
+"ballots": 1854,
+"pct": 42.08
+},
+"Yell": {
+"registered": 9820,
+"ballots": 3765,
+"pct": 38.34
+}
+}
+},
+{
+"id": "2014-general",
+"name": "Nov 4, 2014 General Election",
+"api_election_id": "1834",
+"isOfficial": true,
+"lastUpdated": "2025-12-18T18:00:52.1158234Z",
+"statewide": {
+"registered": 1690577,
+"ballots": 852642,
+"pct": 50.43
+},
+"counties": {
+"Arkansas": {
+"registered": 10196,
+"ballots": 5137,
+"pct": 50.38
+},
+"Ashley": {
+"registered": 11953,
+"ballots": 6303,
+"pct": 52.73
+},
+"Baxter": {
+"registered": 28488,
+"ballots": 15116,
+"pct": 53.06
+},
+"Benton": {
+"registered": 129175,
+"ballots": 63331,
+"pct": 49.03
+},
+"Boone": {
+"registered": 22268,
+"ballots": 11331,
+"pct": 50.88
+},
+"Bradley": {
+"registered": 5389,
+"ballots": 2923,
+"pct": 54.24
+},
+"Calhoun": {
+"registered": 3523,
+"ballots": 1650,
+"pct": 46.84
+},
+"Carroll": {
+"registered": 14887,
+"ballots": 8169,
+"pct": 54.87
+},
+"Chicot": {
+"registered": 6627,
+"ballots": 3541,
+"pct": 53.43
+},
+"Clark": {
+"registered": 12594,
+"ballots": 7007,
+"pct": 55.64
+},
+"Clay": {
+"registered": 8455,
+"ballots": 4070,
+"pct": 48.14
+},
+"Cleburne": {
+"registered": 17694,
+"ballots": 9959,
+"pct": 56.28
+},
+"Cleveland": {
+"registered": 4884,
+"ballots": 2747,
+"pct": 56.24
+},
+"Columbia": {
+"registered": 14168,
+"ballots": 8244,
+"pct": 58.19
+},
+"Conway": {
+"registered": 11053,
+"ballots": 6405,
+"pct": 57.95
+},
+"Craighead": {
+"registered": 54257,
+"ballots": 25489,
+"pct": 46.98
+},
+"Crawford": {
+"registered": 30438,
+"ballots": 16341,
+"pct": 53.69
+},
+"Crittenden": {
+"registered": 29560,
+"ballots": 10866,
+"pct": 36.76
+},
+"Cross": {
+"registered": 10606,
+"ballots": 5362,
+"pct": 50.56
+},
+"Dallas": {
+"registered": 4706,
+"ballots": 2400,
+"pct": 51.0
+},
+"Desha": {
+"registered": 7685,
+"ballots": 3492,
+"pct": 45.44
+},
+"Drew": {
+"registered": 10442,
+"ballots": 5264,
+"pct": 50.41
+},
+"Faulkner": {
+"registered": 69072,
+"ballots": 34138,
+"pct": 49.42
+},
+"Franklin": {
+"registered": 10002,
+"ballots": 5538,
+"pct": 55.37
+},
+"Fulton": {
+"registered": 7234,
+"ballots": 3438,
+"pct": 47.53
+},
+"Garland": {
+"registered": 64331,
+"ballots": 31085,
+"pct": 48.32
+},
+"Grant": {
+"registered": 10032,
+"ballots": 5379,
+"pct": 53.62
+},
+"Greene": {
+"registered": 20204,
+"ballots": 11215,
+"pct": 55.51
+},
+"Hempstead": {
+"registered": 11298,
+"ballots": 5433,
+"pct": 48.09
+},
+"Hot Spring": {
+"registered": 19082,
+"ballots": 9484,
+"pct": 49.7
+},
+"Howard": {
+"registered": 7092,
+"ballots": 3697,
+"pct": 52.13
+},
+"Independence": {
+"registered": 20051,
+"ballots": 10698,
+"pct": 53.35
+},
+"Izard": {
+"registered": 7503,
+"ballots": 4416,
+"pct": 58.86
+},
+"Jackson": {
+"registered": 10026,
+"ballots": 4193,
+"pct": 41.82
+},
+"Jefferson": {
+"registered": 43913,
+"ballots": 20291,
+"pct": 46.21
+},
+"Johnson": {
+"registered": 13269,
+"ballots": 6612,
+"pct": 49.83
+},
+"Lafayette": {
+"registered": 4070,
+"ballots": 2431,
+"pct": 59.73
+},
+"Lawrence": {
+"registered": 8600,
+"ballots": 4652,
+"pct": 54.09
+},
+"Lee": {
+"registered": 5184,
+"ballots": 2705,
+"pct": 52.18
+},
+"Lincoln": {
+"registered": 6175,
+"ballots": 3107,
+"pct": 50.32
+},
+"Little River": {
+"registered": 7156,
+"ballots": 4152,
+"pct": 58.02
+},
+"Logan": {
+"registered": 11719,
+"ballots": 6534,
+"pct": 55.76
+},
+"Lonoke": {
+"registered": 39642,
+"ballots": 19633,
+"pct": 49.53
+},
+"Madison": {
+"registered": 9304,
+"ballots": 5206,
+"pct": 55.95
+},
+"Marion": {
+"registered": 9764,
+"ballots": 5094,
+"pct": 52.17
+},
+"Miller": {
+"registered": 24384,
+"ballots": 11559,
+"pct": 47.4
+},
+"Mississippi": {
+"registered": 21478,
+"ballots": 10613,
+"pct": 49.41
+},
+"Monroe": {
+"registered": 4652,
+"ballots": 2430,
+"pct": 52.24
+},
+"Montgomery": {
+"registered": 5235,
+"ballots": 2950,
+"pct": 56.35
+},
+"Nevada": {
+"registered": 5650,
+"ballots": 2791,
+"pct": 49.4
+},
+"Newton": {
+"registered": 5998,
+"ballots": 0,
+"pct": 0.0
+},
+"Ouachita": {
+"registered": 16982,
+"ballots": 8060,
+"pct": 47.46
+},
+"Perry": {
+"registered": 6284,
+"ballots": 3630,
+"pct": 57.77
+},
+"Phillips": {
+"registered": 14262,
+"ballots": 5962,
+"pct": 41.8
+},
+"Pike": {
+"registered": 5498,
+"ballots": 3132,
+"pct": 56.97
+},
+"Poinsett": {
+"registered": 12606,
+"ballots": 6490,
+"pct": 51.48
+},
+"Polk": {
+"registered": 11606,
+"ballots": 6424,
+"pct": 55.35
+},
+"Pope": {
+"registered": 32179,
+"ballots": 17208,
+"pct": 53.48
+},
+"Prairie": {
+"registered": 4633,
+"ballots": 2684,
+"pct": 57.93
+},
+"Pulaski": {
+"registered": 243841,
+"ballots": 128291,
+"pct": 52.61
+},
+"Randolph": {
+"registered": 10207,
+"ballots": 5149,
+"pct": 50.45
+},
+"Saline": {
+"registered": 69347,
+"ballots": 39908,
+"pct": 57.55
+},
+"Scott": {
+"registered": 5496,
+"ballots": 3116,
+"pct": 56.7
+},
+"Searcy": {
+"registered": 5484,
+"ballots": 3116,
+"pct": 56.82
+},
+"Sebastian": {
+"registered": 73994,
+"ballots": 32029,
+"pct": 43.29
+},
+"Sevier": {
+"registered": 6616,
+"ballots": 3525,
+"pct": 53.28
+},
+"Sharp": {
+"registered": 11295,
+"ballots": 5737,
+"pct": 50.79
+},
+"St. Francis": {
+"registered": 13813,
+"ballots": 6135,
+"pct": 44.41
+},
+"Stone": {
+"registered": 7799,
+"ballots": 4556,
+"pct": 58.42
+},
+"Union": {
+"registered": 26109,
+"ballots": 12637,
+"pct": 48.4
+},
+"Van Buren": {
+"registered": 9592,
+"ballots": 5976,
+"pct": 62.3
+},
+"Washington": {
+"registered": 115749,
+"ballots": 54797,
+"pct": 47.34
+},
+"White": {
+"registered": 41685,
+"ballots": 22012,
+"pct": 52.81
+},
+"Woodruff": {
+"registered": 4386,
+"ballots": 2183,
+"pct": 49.77
+},
+"Yell": {
+"registered": 9946,
+"ballots": 5264,
+"pct": 52.93
+}
+}
+},
+{
+"id": "2014-primary",
+"name": "May 20, 2014 Preferential Primary Election",
+"api_election_id": "1833",
+"isOfficial": true,
+"lastUpdated": "2026-08-27T20:03:08.9400222Z",
+"statewide": {
+"registered": 1624187,
+"ballots": 346318,
+"pct": 21.32
+},
+"counties": {
+"Arkansas": {
+"registered": 9981,
+"ballots": 2823,
+"pct": 28.28
+},
+"Ashley": {
+"registered": 11574,
+"ballots": 1931,
+"pct": 16.68
+},
+"Baxter": {
+"registered": 27837,
+"ballots": 5374,
+"pct": 19.31
+},
+"Benton": {
+"registered": 124385,
+"ballots": 20900,
+"pct": 16.8
+},
+"Boone": {
+"registered": 21738,
+"ballots": 4078,
+"pct": 18.76
+},
+"Bradley": {
+"registered": 5253,
+"ballots": 908,
+"pct": 17.29
+},
+"Calhoun": {
+"registered": 3483,
+"ballots": 629,
+"pct": 18.06
+},
+"Carroll": {
+"registered": 14499,
+"ballots": 3925,
+"pct": 27.07
+},
+"Chicot": {
+"registered": 6362,
+"ballots": 2174,
+"pct": 34.17
+},
+"Clark": {
+"registered": 12135,
+"ballots": 4206,
+"pct": 34.66
+},
+"Clay": {
+"registered": 8273,
+"ballots": 1860,
+"pct": 22.48
+},
+"Cleburne": {
+"registered": 17375,
+"ballots": 5259,
+"pct": 30.27
+},
+"Cleveland": {
+"registered": 4751,
+"ballots": 1473,
+"pct": 31.0
+},
+"Columbia": {
+"registered": 12953,
+"ballots": 2448,
+"pct": 18.9
+},
+"Conway": {
+"registered": 10928,
+"ballots": 3465,
+"pct": 31.71
+},
+"Craighead": {
+"registered": 52421,
+"ballots": 7302,
+"pct": 13.93
+},
+"Crawford": {
+"registered": 29727,
+"ballots": 8314,
+"pct": 27.97
+},
+"Crittenden": {
+"registered": 27929,
+"ballots": 3774,
+"pct": 13.51
+},
+"Cross": {
+"registered": 10202,
+"ballots": 1219,
+"pct": 11.95
+},
+"Dallas": {
+"registered": 4646,
+"ballots": 1686,
+"pct": 36.29
+},
+"Desha": {
+"registered": 7438,
+"ballots": 1645,
+"pct": 22.12
+},
+"Drew": {
+"registered": 9970,
+"ballots": 1795,
+"pct": 18.0
+},
+"Faulkner": {
+"registered": 65685,
+"ballots": 12912,
+"pct": 19.66
+},
+"Franklin": {
+"registered": 9856,
+"ballots": 3433,
+"pct": 34.83
+},
+"Fulton": {
+"registered": 7080,
+"ballots": 1975,
+"pct": 27.9
+},
+"Garland": {
+"registered": 62684,
+"ballots": 13228,
+"pct": 21.1
+},
+"Grant": {
+"registered": 9784,
+"ballots": 1942,
+"pct": 19.85
+},
+"Greene": {
+"registered": 19714,
+"ballots": 3518,
+"pct": 17.85
+},
+"Hempstead": {
+"registered": 10576,
+"ballots": 2009,
+"pct": 19.0
+},
+"Hot Spring": {
+"registered": 18773,
+"ballots": 4471,
+"pct": 23.82
+},
+"Howard": {
+"registered": 6831,
+"ballots": 2790,
+"pct": 40.84
+},
+"Independence": {
+"registered": 19420,
+"ballots": 3175,
+"pct": 16.35
+},
+"Izard": {
+"registered": 7364,
+"ballots": 1376,
+"pct": 18.69
+},
+"Jackson": {
+"registered": 9930,
+"ballots": 2056,
+"pct": 20.7
+},
+"Jefferson": {
+"registered": 40829,
+"ballots": 11677,
+"pct": 28.6
+},
+"Johnson": {
+"registered": 12868,
+"ballots": 4116,
+"pct": 31.99
+},
+"Lafayette": {
+"registered": 3863,
+"ballots": 1129,
+"pct": 29.23
+},
+"Lawrence": {
+"registered": 8414,
+"ballots": 2315,
+"pct": 27.51
+},
+"Lee": {
+"registered": 5104,
+"ballots": 1469,
+"pct": 28.78
+},
+"Lincoln": {
+"registered": 5880,
+"ballots": 1967,
+"pct": 33.45
+},
+"Little River": {
+"registered": 6928,
+"ballots": 3475,
+"pct": 50.16
+},
+"Logan": {
+"registered": 11487,
+"ballots": 3669,
+"pct": 31.94
+},
+"Lonoke": {
+"registered": 38139,
+"ballots": 8279,
+"pct": 21.71
+},
+"Madison": {
+"registered": 9125,
+"ballots": 1680,
+"pct": 18.41
+},
+"Marion": {
+"registered": 9567,
+"ballots": 2482,
+"pct": 25.94
+},
+"Miller": {
+"registered": 22897,
+"ballots": 2810,
+"pct": 12.27
+},
+"Mississippi": {
+"registered": 20600,
+"ballots": 4659,
+"pct": 22.62
+},
+"Monroe": {
+"registered": 4577,
+"ballots": 1766,
+"pct": 38.58
+},
+"Montgomery": {
+"registered": 5185,
+"ballots": 987,
+"pct": 19.04
+},
+"Nevada": {
+"registered": 5299,
+"ballots": 941,
+"pct": 17.76
+},
+"Newton": {
+"registered": 5918,
+"ballots": 605,
+"pct": 10.22
+},
+"Ouachita": {
+"registered": 16627,
+"ballots": 4824,
+"pct": 29.01
+},
+"Perry": {
+"registered": 6111,
+"ballots": 2283,
+"pct": 37.36
+},
+"Phillips": {
+"registered": 13603,
+"ballots": 3337,
+"pct": 24.53
+},
+"Pike": {
+"registered": 5478,
+"ballots": 1867,
+"pct": 34.08
+},
+"Poinsett": {
+"registered": 12031,
+"ballots": 2057,
+"pct": 17.1
+},
+"Polk": {
+"registered": 11216,
+"ballots": 1788,
+"pct": 15.94
+},
+"Pope": {
+"registered": 31462,
+"ballots": 7382,
+"pct": 23.46
+},
+"Prairie": {
+"registered": 4537,
+"ballots": 1500,
+"pct": 33.06
+},
+"Pulaski": {
+"registered": 227049,
+"ballots": 41459,
+"pct": 18.26
+},
+"Randolph": {
+"registered": 9957,
+"ballots": 1554,
+"pct": 15.61
+},
+"Saline": {
+"registered": 67301,
+"ballots": 17913,
+"pct": 26.62
+},
+"Scott": {
+"registered": 5382,
+"ballots": 2113,
+"pct": 39.26
+},
+"Searcy": {
+"registered": 5367,
+"ballots": 2299,
+"pct": 42.84
+},
+"Sebastian": {
+"registered": 72366,
+"ballots": 13179,
+"pct": 18.21
+},
+"Sevier": {
+"registered": 6433,
+"ballots": 1279,
+"pct": 19.88
+},
+"Sharp": {
+"registered": 11165,
+"ballots": 2961,
+"pct": 26.52
+},
+"St. Francis": {
+"registered": 13474,
+"ballots": 2376,
+"pct": 17.63
+},
+"Stone": {
+"registered": 7650,
+"ballots": 3065,
+"pct": 40.07
+},
+"Union": {
+"registered": 25003,
+"ballots": 2452,
+"pct": 9.81
+},
+"Van Buren": {
+"registered": 9293,
+"ballots": 3019,
+"pct": 32.49
+},
+"Washington": {
+"registered": 109749,
+"ballots": 18674,
+"pct": 17.02
+},
+"White": {
+"registered": 40739,
+"ballots": 9889,
+"pct": 24.27
+},
+"Woodruff": {
+"registered": 4258,
+"ballots": 1947,
+"pct": 45.73
+},
+"Yell": {
+"registered": 9699,
+"ballots": 3002,
+"pct": 30.95
+}
+}
+},
+{
+"id": "2012-general",
+"name": "Nov 6, 2012 General Election",
+"api_election_id": "1832",
+"isOfficial": true,
+"lastUpdated": "2026-08-27T20:03:04.2933604Z",
+"statewide": {
+"registered": 1618328,
+"ballots": 1078548,
+"pct": 66.65
+},
+"counties": {
+"Arkansas": {
+"registered": 9414,
+"ballots": 6584,
+"pct": 69.94
+},
+"Ashley": {
+"registered": 10963,
+"ballots": 7967,
+"pct": 72.67
+},
+"Baxter": {
+"registered": 27608,
+"ballots": 19502,
+"pct": 70.64
+},
+"Benton": {
+"registered": 116099,
+"ballots": 79713,
+"pct": 68.66
+},
+"Boone": {
+"registered": 21176,
+"ballots": 15537,
+"pct": 73.37
+},
+"Bradley": {
+"registered": 5211,
+"ballots": 3682,
+"pct": 70.66
+},
+"Calhoun": {
+"registered": 3630,
+"ballots": 2192,
+"pct": 60.39
+},
+"Carroll": {
+"registered": 13813,
+"ballots": 10286,
+"pct": 74.47
+},
+"Chicot": {
+"registered": 6742,
+"ballots": 4435,
+"pct": 65.78
+},
+"Clark": {
+"registered": 11663,
+"ballots": 8511,
+"pct": 72.97
+},
+"Clay": {
+"registered": 9220,
+"ballots": 5196,
+"pct": 56.36
+},
+"Cleburne": {
+"registered": 16986,
+"ballots": 11748,
+"pct": 69.16
+},
+"Cleveland": {
+"registered": 4693,
+"ballots": 3308,
+"pct": 70.49
+},
+"Columbia": {
+"registered": 13207,
+"ballots": 9546,
+"pct": 72.28
+},
+"Conway": {
+"registered": 11109,
+"ballots": 7850,
+"pct": 70.66
+},
+"Craighead": {
+"registered": 56089,
+"ballots": 31992,
+"pct": 57.04
+},
+"Crawford": {
+"registered": 31196,
+"ballots": 20718,
+"pct": 66.41
+},
+"Crittenden": {
+"registered": 26532,
+"ballots": 16844,
+"pct": 63.49
+},
+"Cross": {
+"registered": 10098,
+"ballots": 6754,
+"pct": 66.88
+},
+"Dallas": {
+"registered": 4528,
+"ballots": 3124,
+"pct": 68.99
+},
+"Desha": {
+"registered": 7232,
+"ballots": 4469,
+"pct": 61.79
+},
+"Drew": {
+"registered": 9398,
+"ballots": 6677,
+"pct": 71.05
+},
+"Faulkner": {
+"registered": 67682,
+"ballots": 41835,
+"pct": 61.81
+},
+"Franklin": {
+"registered": 9280,
+"ballots": 6577,
+"pct": 70.87
+},
+"Fulton": {
+"registered": 7022,
+"ballots": 4611,
+"pct": 65.67
+},
+"Garland": {
+"registered": 62545,
+"ballots": 40946,
+"pct": 65.47
+},
+"Grant": {
+"registered": 8902,
+"ballots": 6544,
+"pct": 73.51
+},
+"Greene": {
+"registered": 19677,
+"ballots": 13972,
+"pct": 71.01
+},
+"Hempstead": {
+"registered": 10151,
+"ballots": 6990,
+"pct": 68.86
+},
+"Hot Spring": {
+"registered": 17731,
+"ballots": 11410,
+"pct": 64.35
+},
+"Howard": {
+"registered": 6562,
+"ballots": 4507,
+"pct": 68.68
+},
+"Independence": {
+"registered": 19376,
+"ballots": 12526,
+"pct": 64.65
+},
+"Izard": {
+"registered": 6955,
+"ballots": 5376,
+"pct": 77.3
+},
+"Jackson": {
+"registered": 9701,
+"ballots": 6071,
+"pct": 62.58
+},
+"Jefferson": {
+"registered": 40120,
+"ballots": 27676,
+"pct": 68.98
+},
+"Johnson": {
+"registered": 11722,
+"ballots": 8216,
+"pct": 70.09
+},
+"Lafayette": {
+"registered": 4267,
+"ballots": 2941,
+"pct": 68.92
+},
+"Lawrence": {
+"registered": 8587,
+"ballots": 5636,
+"pct": 65.63
+},
+"Lee": {
+"registered": 5280,
+"ballots": 3507,
+"pct": 66.42
+},
+"Lincoln": {
+"registered": 5686,
+"ballots": 3788,
+"pct": 66.62
+},
+"Little River": {
+"registered": 6983,
+"ballots": 5113,
+"pct": 73.22
+},
+"Logan": {
+"registered": 10720,
+"ballots": 7433,
+"pct": 69.34
+},
+"Lonoke": {
+"registered": 35453,
+"ballots": 24227,
+"pct": 68.34
+},
+"Madison": {
+"registered": 8865,
+"ballots": 6695,
+"pct": 75.52
+},
+"Marion": {
+"registered": 9911,
+"ballots": 6790,
+"pct": 68.51
+},
+"Miller": {
+"registered": 21433,
+"ballots": 15450,
+"pct": 72.09
+},
+"Mississippi": {
+"registered": 20954,
+"ballots": 13522,
+"pct": 64.53
+},
+"Monroe": {
+"registered": 4667,
+"ballots": 3267,
+"pct": 70.0
+},
+"Montgomery": {
+"registered": 5415,
+"ballots": 3468,
+"pct": 64.04
+},
+"Nevada": {
+"registered": 4985,
+"ballots": 3426,
+"pct": 68.73
+},
+"Newton": {
+"registered": 5744,
+"ballots": 3719,
+"pct": 64.75
+},
+"Ouachita": {
+"registered": 16105,
+"ballots": 10428,
+"pct": 64.75
+},
+"Perry": {
+"registered": 5801,
+"ballots": 3979,
+"pct": 68.59
+},
+"Phillips": {
+"registered": 13686,
+"ballots": 8012,
+"pct": 58.54
+},
+"Pike": {
+"registered": 5610,
+"ballots": 3828,
+"pct": 68.24
+},
+"Poinsett": {
+"registered": 12023,
+"ballots": 7633,
+"pct": 63.49
+},
+"Polk": {
+"registered": 10904,
+"ballots": 7803,
+"pct": 71.56
+},
+"Pope": {
+"registered": 33603,
+"ballots": 20563,
+"pct": 61.19
+},
+"Prairie": {
+"registered": 4484,
+"ballots": 3172,
+"pct": 70.74
+},
+"Pulaski": {
+"registered": 237234,
+"ballots": 160095,
+"pct": 67.48
+},
+"Randolph": {
+"registered": 9844,
+"ballots": 6059,
+"pct": 61.55
+},
+"Saline": {
+"registered": 66402,
+"ballots": 47357,
+"pct": 71.32
+},
+"Scott": {
+"registered": 6178,
+"ballots": 3691,
+"pct": 59.74
+},
+"Searcy": {
+"registered": 5418,
+"ballots": 3763,
+"pct": 69.45
+},
+"Sebastian": {
+"registered": 68423,
+"ballots": 43644,
+"pct": 63.79
+},
+"Sevier": {
+"registered": 6431,
+"ballots": 4383,
+"pct": 68.15
+},
+"Sharp": {
+"registered": 11213,
+"ballots": 7407,
+"pct": 66.06
+},
+"St. Francis": {
+"registered": 13771,
+"ballots": 8422,
+"pct": 61.16
+},
+"Stone": {
+"registered": 7592,
+"ballots": 5433,
+"pct": 71.56
+},
+"Union": {
+"registered": 24229,
+"ballots": 17160,
+"pct": 70.82
+},
+"Van Buren": {
+"registered": 8750,
+"ballots": 6508,
+"pct": 74.38
+},
+"Washington": {
+"registered": 107201,
+"ballots": 70932,
+"pct": 66.17
+},
+"White": {
+"registered": 46938,
+"ballots": 26653,
+"pct": 56.78
+},
+"Woodruff": {
+"registered": 4097,
+"ballots": 2709,
+"pct": 66.12
+},
+"Yell": {
+"registered": 9408,
+"ballots": 6040,
+"pct": 64.2
+}
+}
+},
+{
+"id": "2012-primary",
+"name": "May 22, 2012 Preferential Primary Election (unofficial results)",
+"api_election_id": "1831",
+"isOfficial": false,
+"lastUpdated": "2026-08-27T20:02:58.4971554Z",
+"statewide": {
+"registered": 1538619,
+"ballots": 335885,
+"pct": 21.83
+},
+"counties": {
+"Arkansas": {
+"registered": 9095,
+"ballots": 1898,
+"pct": 20.87
+},
+"Ashley": {
+"registered": 10479,
+"ballots": 3517,
+"pct": 33.56
+},
+"Baxter": {
+"registered": 26781,
+"ballots": 4041,
+"pct": 15.09
+},
+"Benton": {
+"registered": 107188,
+"ballots": 26656,
+"pct": 24.87
+},
+"Boone": {
+"registered": 20101,
+"ballots": 3424,
+"pct": 17.03
+},
+"Bradley": {
+"registered": 5060,
+"ballots": 1564,
+"pct": 30.91
+},
+"Calhoun": {
+"registered": 3522,
+"ballots": 1393,
+"pct": 39.55
+},
+"Carroll": {
+"registered": 13181,
+"ballots": 2611,
+"pct": 19.81
+},
+"Chicot": {
+"registered": 6587,
+"ballots": 994,
+"pct": 15.09
+},
+"Clark": {
+"registered": 11043,
+"ballots": 3065,
+"pct": 27.76
+},
+"Clay": {
+"registered": 9021,
+"ballots": 2713,
+"pct": 30.07
+},
+"Cleburne": {
+"registered": 16478,
+"ballots": 5036,
+"pct": 30.56
+},
+"Cleveland": {
+"registered": 4558,
+"ballots": 1708,
+"pct": 37.47
+},
+"Columbia": {
+"registered": 12509,
+"ballots": 3705,
+"pct": 29.62
+},
+"Conway": {
+"registered": 10687,
+"ballots": 2774,
+"pct": 25.96
+},
+"Craighead": {
+"registered": 52699,
+"ballots": 9667,
+"pct": 18.34
+},
+"Crawford": {
+"registered": 29701,
+"ballots": 5679,
+"pct": 19.12
+},
+"Crittenden": {
+"registered": 25142,
+"ballots": 5745,
+"pct": 22.85
+},
+"Cross": {
+"registered": 9737,
+"ballots": 2252,
+"pct": 23.13
+},
+"Dallas": {
+"registered": 4442,
+"ballots": 1561,
+"pct": 35.14
+},
+"Desha": {
+"registered": 7107,
+"ballots": 2632,
+"pct": 37.03
+},
+"Drew": {
+"registered": 8977,
+"ballots": 3669,
+"pct": 40.87
+},
+"Faulkner": {
+"registered": 62374,
+"ballots": 11581,
+"pct": 18.57
+},
+"Franklin": {
+"registered": 8843,
+"ballots": 2362,
+"pct": 26.71
+},
+"Fulton": {
+"registered": 6682,
+"ballots": 1682,
+"pct": 25.17
+},
+"Garland": {
+"registered": 60011,
+"ballots": 12083,
+"pct": 20.13
+},
+"Grant": {
+"registered": 8550,
+"ballots": 2939,
+"pct": 34.37
+},
+"Greene": {
+"registered": 18718,
+"ballots": 4959,
+"pct": 26.49
+},
+"Hempstead": {
+"registered": 9592,
+"ballots": 1526,
+"pct": 15.91
+},
+"Hot Spring": {
+"registered": 17137,
+"ballots": 4757,
+"pct": 27.76
+},
+"Howard": {
+"registered": 6306,
+"ballots": 1509,
+"pct": 23.93
+},
+"Independence": {
+"registered": 18549,
+"ballots": 2466,
+"pct": 13.29
+},
+"Izard": {
+"registered": 7813,
+"ballots": 1899,
+"pct": 24.31
+},
+"Jackson": {
+"registered": 9473,
+"ballots": 1906,
+"pct": 20.12
+},
+"Jefferson": {
+"registered": 37464,
+"ballots": 11007,
+"pct": 29.38
+},
+"Johnson": {
+"registered": 11197,
+"ballots": 3814,
+"pct": 34.06
+},
+"Lafayette": {
+"registered": 4102,
+"ballots": 822,
+"pct": 20.04
+},
+"Lawrence": {
+"registered": 8347,
+"ballots": 2012,
+"pct": 24.1
+},
+"Lee": {
+"registered": 5127,
+"ballots": 1257,
+"pct": 24.52
+},
+"Lincoln": {
+"registered": 5579,
+"ballots": 2129,
+"pct": 38.16
+},
+"Little River": {
+"registered": 6743,
+"ballots": 3076,
+"pct": 45.62
+},
+"Logan": {
+"registered": 10422,
+"ballots": 2416,
+"pct": 23.18
+},
+"Lonoke": {
+"registered": 33241,
+"ballots": 6383,
+"pct": 19.2
+},
+"Madison": {
+"registered": 8197,
+"ballots": 2096,
+"pct": 25.57
+},
+"Marion": {
+"registered": 9432,
+"ballots": 1272,
+"pct": 13.49
+},
+"Miller": {
+"registered": 19897,
+"ballots": 4050,
+"pct": 20.35
+},
+"Mississippi": {
+"registered": 19982,
+"ballots": 4010,
+"pct": 20.07
+},
+"Monroe": {
+"registered": 4477,
+"ballots": 1466,
+"pct": 32.75
+},
+"Montgomery": {
+"registered": 5270,
+"ballots": 1054,
+"pct": 20.0
+},
+"Nevada": {
+"registered": 4798,
+"ballots": 1720,
+"pct": 35.85
+},
+"Newton": {
+"registered": 5572,
+"ballots": 0,
+"pct": 0.0
+},
+"Ouachita": {
+"registered": 15515,
+"ballots": 2902,
+"pct": 18.7
+},
+"Perry": {
+"registered": 5590,
+"ballots": 1563,
+"pct": 27.96
+},
+"Phillips": {
+"registered": 13364,
+"ballots": 3543,
+"pct": 26.51
+},
+"Pike": {
+"registered": 5457,
+"ballots": 2554,
+"pct": 46.8
+},
+"Poinsett": {
+"registered": 11600,
+"ballots": 2998,
+"pct": 25.84
+},
+"Polk": {
+"registered": 10507,
+"ballots": 2233,
+"pct": 21.25
+},
+"Pope": {
+"registered": 32095,
+"ballots": 5251,
+"pct": 16.36
+},
+"Prairie": {
+"registered": 4397,
+"ballots": 1327,
+"pct": 30.18
+},
+"Pulaski": {
+"registered": 223771,
+"ballots": 38483,
+"pct": 17.2
+},
+"Randolph": {
+"registered": 9496,
+"ballots": 2269,
+"pct": 23.89
+},
+"Saline": {
+"registered": 63126,
+"ballots": 13645,
+"pct": 21.62
+},
+"Scott": {
+"registered": 6080,
+"ballots": 1735,
+"pct": 28.54
+},
+"Searcy": {
+"registered": 5227,
+"ballots": 1874,
+"pct": 35.85
+},
+"Sebastian": {
+"registered": 65763,
+"ballots": 11913,
+"pct": 18.12
+},
+"Sevier": {
+"registered": 6196,
+"ballots": 2578,
+"pct": 41.61
+},
+"Sharp": {
+"registered": 10793,
+"ballots": 1672,
+"pct": 15.49
+},
+"St. Francis": {
+"registered": 13394,
+"ballots": 3079,
+"pct": 22.99
+},
+"Stone": {
+"registered": 7355,
+"ballots": 2902,
+"pct": 39.46
+},
+"Union": {
+"registered": 23152,
+"ballots": 4195,
+"pct": 18.12
+},
+"Van Buren": {
+"registered": 8332,
+"ballots": 2194,
+"pct": 26.33
+},
+"Washington": {
+"registered": 100544,
+"ballots": 20620,
+"pct": 20.51
+},
+"White": {
+"registered": 45827,
+"ballots": 7487,
+"pct": 16.34
+},
+"Woodruff": {
+"registered": 3994,
+"ballots": 1601,
+"pct": 40.09
+},
+"Yell": {
+"registered": 9054,
+"ballots": 2710,
+"pct": 29.93
 }
 }
 }

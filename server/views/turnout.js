@@ -34,7 +34,7 @@ function turnoutPage(data) {
       return `<tr><td><b>${esc(e.name)}</b><br><span class="soft" style="font-size:12.5px">${n(c.ballots)} of ${n(c.registered)} registered voters${all.length > 10 ? ` · ${rank} of ${all.length} counties` : ''}</span></td>
 <td><b class="num">${c.pct.toFixed(1)}%</b>${bar(c.pct)}<span class="soft" style="font-size:12px">statewide ${s.pct.toFixed(1)}%</span>${bar(s.pct, 'ink-soft')}</td></tr>`;
     }).join('');
-    const big = t.elections.find(e => Object.keys(e.counties).length > 10);
+    const big = t.elections.find(e => /general/.test(e.id) && Object.keys(e.counties).length > 10) || t.elections.find(e => Object.keys(e.counties).length > 10);
     let spread = '';
     if (big) {
       const all = Object.entries(big.counties).sort((a, b) => b[1].pct - a[1].pct);
