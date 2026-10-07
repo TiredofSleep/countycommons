@@ -1,0 +1,138 @@
+{
+ "updated": "2026-10-06",
+ "where": "A home in the City and County of Denver.",
+ "input_label": "Actual (market) value of your home (from the Assessor)",
+ "assess_ratio": 0.0625,
+ "rate_unit": "mills",
+ "home_default": 600000,
+ "hide_homestead": true,
+ "exemptions": {},
+ "tags": {
+  "debt": "Paying off bonds (debt)",
+  "county": "County services",
+  "city": "City services",
+  "schools": "Schools",
+  "other": "Other districts"
+ },
+ "split_note": "Denver’s levies are split as the Assessor lists them, including bond principal, bond interest and school bond redemption.",
+ "rollback_title": "The “no-raise” rate",
+ "rollback_sub": "how this state handles it",
+ "rollback_note": "Colorado has no yearly no-raise rate; limits on property tax growth come from the state constitution (TABOR) and state law.",
+ "hearing": "Mill levies are certified each December for the next year’s bills.",
+ "limits": [
+  "Colorado’s homestead exemption for seniors and disabled veterans, and any 2026 residential value reduction, aren’t modeled."
+ ],
+ "ratio_note": "Colorado taxes a home on a share of its value: 6.25% for local governments and 7.05% for schools (tax year 2025).",
+ "authorities": [
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "City and County of Denver",
+   "mills": 26.328,
+   "status": "tax year 2025, paid in 2026",
+   "src": {
+    "url": "https://www.denvergov.org/files/assets/public/v/1/finance/documents/assessor/2026/2025-abstract.pdf",
+    "label": "Denver Assessor — 2025 Abstract, Summary of Levies"
+   },
+   "slices": [
+    [
+     "General fund",
+     9.628,
+     "city"
+    ],
+    [
+     "Bond principal",
+     4.768,
+     "debt"
+    ],
+    [
+     "Bond interest",
+     1.732,
+     "debt"
+    ],
+    [
+     "Capital maintenance",
+     2.576,
+     "city"
+    ],
+    [
+     "Social services",
+     2.473,
+     "city"
+    ],
+    [
+     "Library",
+     1.544,
+     "city"
+    ],
+    [
+     "Police pension",
+     1.185,
+     "city"
+    ],
+    [
+     "Developmental disabilities",
+     1.03,
+     "city"
+    ],
+    [
+     "Fire pension",
+     0.994,
+     "city"
+    ],
+    [
+     "Affordable housing",
+     0.398,
+     "city"
+    ]
+   ]
+  },
+  {
+   "kind": "school",
+   "rollback": null,
+   "name": "Denver Public Schools",
+   "assess_ratio": 0.0705,
+   "mills": 52.274,
+   "status": "tax year 2025, paid in 2026",
+   "src": {
+    "url": "https://www.denvergov.org/files/assets/public/v/1/finance/documents/assessor/2026/2025-abstract.pdf",
+    "label": "Denver Assessor — 2025 Abstract, Summary of Levies"
+   },
+   "slices": [
+    [
+     "General fund",
+     38.935,
+     "schools"
+    ],
+    [
+     "Voter-approved mill levy override",
+     9.339,
+     "schools"
+    ],
+    [
+     "Bond redemption",
+     4,
+     "debt"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "Mile High Flood District",
+   "mills": 1,
+   "status": "tax year 2025",
+   "src": {
+    "url": "https://www.denvergov.org/files/assets/public/v/1/finance/documents/assessor/2026/2025-abstract.pdf",
+    "label": "Denver Assessor — 2025 Abstract, Summary of Levies"
+   },
+   "slices": [
+    [
+     "Flood control",
+     1,
+     "other"
+    ]
+   ]
+  }
+ ]
+}

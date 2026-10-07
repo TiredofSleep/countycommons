@@ -1,0 +1,124 @@
+{
+ "updated": "2026-10-06",
+ "where": "A homestead in the City of Tyler, Tyler ISD and the Tyler Junior College district.",
+ "input_label": "Appraised value of your home (from the appraisal district)",
+ "rate_unit": "per100",
+ "home_default": 300000,
+ "tags": {
+  "schools": "Running the schools",
+  "debt": "Paying off bonds (debt)",
+  "county": "County services",
+  "city": "City services",
+  "college": "Community college",
+  "health": "Hospital and health district",
+  "roads": "Roads and bridges",
+  "fire": "Fire and EMS"
+ },
+ "split_note": "Each unit’s rate is split into its maintenance-and-operations (M&O) part and its interest-and-sinking (I&S) part — the I&S part pays debt.",
+ "rollback_title": "The “no-new-revenue” rate",
+ "rollback_sub": "Texas’s no-raise rate",
+ "rollback_note": "Texas’s version of the “no-raise” rate is the no-new-revenue rate: the rate that would bring each taxing unit the same tax as last year from the same properties. Texas law makes each unit publish it; going above the higher voter-approval rate generally needs an election.",
+ "hearing": "Texas taxing units adopt rates each August and September after public hearings; school districts and colleges set their own.",
+ "exemptions": {},
+ "limits": [
+  "Homestead exemptions shown are the general ones; over-65, disabled and veteran exemptions and school tax ceilings aren’t modeled."
+ ],
+ "authorities": [
+  {
+   "kind": "other",
+   "rollback": 8.21251,
+   "name": "Tyler ISD",
+   "mills": 8.35,
+   "status": "adopted Aug 2026",
+   "src": {
+    "url": "https://smith.truthintaxes.com/hearing-attachments/smith/TY-ISD/Tyler%20ISD%20Notice%20of%20Public%20Meeting%20to%20Discuss%20Budget%20and%20Proposed%20Tax%20Rate.pdf",
+    "label": "Tyler ISD notice, M&O 0.6403 + I&S 0.1947"
+   },
+   "hs_exempt": {
+    "amount": 140000
+   },
+   "slices": [
+    [
+     "Tyler ISD — operations (M&O)",
+     0.6403,
+     "schools"
+    ],
+    [
+     "Tyler ISD — debt (I&S)",
+     0.1947,
+     "debt"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": 3.5764,
+   "name": "Smith County",
+   "mills": 3.74088,
+   "status": "2026 rate",
+   "src": {
+    "url": "https://smith.truthintaxes.com/tax-worksheets/smith/Signed%20-%20Smith%20County%20with%20hyperlink.pdf",
+    "label": "Smith County 2026 rate worksheet (Form 50-856)"
+   },
+   "hs_exempt": null,
+   "slices": [
+    [
+     "Smith County — operations (M&O)",
+     0.298807,
+     "county"
+    ],
+    [
+     "Smith County — debt (I&S)",
+     0.075281,
+     "debt"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": 2.32965,
+   "name": "City of Tyler",
+   "mills": 2.42063,
+   "status": "2026 rate",
+   "src": {
+    "url": "https://smith.truthintaxes.com/tax-worksheets/smith/Signed%20-%20City%20of%20Tyler%20with%20hyperlink.pdf",
+    "label": "City of Tyler 2026 rate worksheet"
+   },
+   "hs_exempt": {
+    "pct": 0.1,
+    "min": 5000
+   },
+   "slices": [
+    [
+     "City of Tyler — operations (M&O)",
+     0.242063,
+     "city"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": 1.84161,
+   "name": "Tyler Junior College",
+   "mills": 2.10312,
+   "status": "2026 rate",
+   "src": {
+    "url": "https://smith.truthintaxes.com/tax-worksheets/smith/Signed%20-%20Tyler%20Junior%20College%20with%20hyperlink.pdf",
+    "label": "TJC 2026 rate worksheet"
+   },
+   "hs_exempt": null,
+   "slices": [
+    [
+     "Tyler Junior College — operations (M&O)",
+     0.162017,
+     "college"
+    ],
+    [
+     "Tyler Junior College — debt (I&S)",
+     0.048295,
+     "debt"
+    ]
+   ]
+  }
+ ]
+}

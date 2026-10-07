@@ -1,0 +1,159 @@
+{
+ "updated": "2026-10-06",
+ "where": "A home in San Francisco.",
+ "input_label": "Assessed value of your home (from the Assessor)",
+ "assess_ratio": 1,
+ "rate_unit": "per100",
+ "home_default": 900000,
+ "hide_homestead": false,
+ "homestead_label": "I live in it (homeowners’ exemption)",
+ "exemptions": {
+  "other": 7000
+ },
+ "tags": {
+  "debt": "Paying off bonds (debt)",
+  "county": "County services",
+  "city": "City services",
+  "schools": "Schools",
+  "other": "Other districts"
+ },
+ "split_note": "California’s base rate is 1% (Proposition 13); the rest is voter-approved debt, shown as debt.",
+ "rollback_title": "The “no-raise” rate",
+ "rollback_sub": "how this state handles it",
+ "rollback_note": "California has no yearly no-raise rate: Proposition 13 caps the base rate at 1% and limits assessed value growth to 2% a year until a home sells.",
+ "hearing": "",
+ "limits": [
+  "Parcel taxes and special assessments on the same bill aren’t rates and aren’t included.",
+  "The FY2026-27 rates weren’t posted yet when checked."
+ ],
+ "authorities": [
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "City and County of San Francisco",
+   "mills": 10.0969325,
+   "status": "FY2025-26",
+   "src": {
+    "url": "https://sfbos.archive.sf.gov/sites/default/files/r0447-25.pdf",
+    "label": "Board of Supervisors Resolution 447-25 — FY2025-26 tax rates"
+   },
+   "slices": [
+    [
+     "City and County of San Francisco — Proposition 13 share",
+     0.89918319,
+     "city"
+    ],
+    [
+     "City and County of San Francisco — voter-approved bonds",
+     0.11051006,
+     "debt"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "San Francisco Unified School District",
+   "mills": 1.1702862,
+   "status": "FY2025-26",
+   "src": {
+    "url": "https://sfbos.archive.sf.gov/sites/default/files/r0447-25.pdf",
+    "label": "Board of Supervisors Resolution 447-25 — FY2025-26 tax rates"
+   },
+   "slices": [
+    [
+     "San Francisco Unified School District — Proposition 13 share",
+     0.07698857,
+     "schools"
+    ],
+    [
+     "San Francisco Unified School District — voter-approved bonds",
+     0.04004005,
+     "debt"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "San Francisco Community College District",
+   "mills": 0.3137736,
+   "status": "FY2025-26",
+   "src": {
+    "url": "https://sfbos.archive.sf.gov/sites/default/files/r0447-25.pdf",
+    "label": "Board of Supervisors Resolution 447-25 — FY2025-26 tax rates"
+   },
+   "slices": [
+    [
+     "San Francisco Community College District — Proposition 13 share",
+     0.01444422,
+     "other"
+    ],
+    [
+     "San Francisco Community College District — voter-approved bonds",
+     0.01693314,
+     "debt"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "BART",
+   "mills": 0.2152528,
+   "status": "FY2025-26",
+   "src": {
+    "url": "https://sfbos.archive.sf.gov/sites/default/files/r0447-25.pdf",
+    "label": "Board of Supervisors Resolution 447-25 — FY2025-26 tax rates"
+   },
+   "slices": [
+    [
+     "BART — Proposition 13 share",
+     0.00632528,
+     "other"
+    ],
+    [
+     "BART — voter-approved bonds",
+     0.0152,
+     "debt"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "Bay Area Air Quality Management District",
+   "mills": 0.0208539,
+   "status": "FY2025-26",
+   "src": {
+    "url": "https://sfbos.archive.sf.gov/sites/default/files/r0447-25.pdf",
+    "label": "Board of Supervisors Resolution 447-25 — FY2025-26 tax rates"
+   },
+   "slices": [
+    [
+     "Bay Area Air Quality Management District — Proposition 13 share",
+     0.00208539,
+     "other"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "San Francisco County Office of Education",
+   "mills": 0.0097335,
+   "status": "FY2025-26",
+   "src": {
+    "url": "https://sfbos.archive.sf.gov/sites/default/files/r0447-25.pdf",
+    "label": "Board of Supervisors Resolution 447-25 — FY2025-26 tax rates"
+   },
+   "slices": [
+    [
+     "San Francisco County Office of Education — Proposition 13 share",
+     0.00097335,
+     "schools"
+    ]
+   ]
+  }
+ ]
+}

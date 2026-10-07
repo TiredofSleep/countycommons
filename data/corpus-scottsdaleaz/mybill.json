@@ -1,0 +1,224 @@
+{
+ "updated": "2026-10-06",
+ "where": "A home in the City of Scottsdale, in Scottsdale Unified School District.",
+ "input_label": "Limited property value of your home (from the Assessor)",
+ "assess_ratio": 0.1,
+ "rate_unit": "per100",
+ "home_default": 450000,
+ "hide_homestead": true,
+ "exemptions": {},
+ "tags": {
+  "debt": "Paying off bonds (debt)",
+  "county": "County services",
+  "city": "City services",
+  "schools": "Schools",
+  "other": "Other districts",
+  "secondary": "School bonds and voter-approved overrides"
+ },
+ "split_note": "Arizona splits rates into primary (operations) and secondary (bonds, voter-approved overrides and special districts).",
+ "rollback_title": "The “no-raise” rate",
+ "rollback_sub": "how this state handles it",
+ "rollback_note": "Arizona’s Truth in Taxation law makes a city or county that raises its primary levy above the prior year’s (new construction aside) publish a notice and hold a hearing; no yearly rate is published for every unit here.",
+ "hearing": "",
+ "limits": [
+  "Arizona’s homeowner rebate (state aid to education, A.R.S. §15-972) lowers the school primary tax on an owner-occupied home and isn’t modeled; the Treasurer lists this area’s approximate residential primary rate after it as $3.8289 instead of $4.9466 per $100."
+ ],
+ "ratio_note": "Arizona assesses an owner-occupied home at 10% of its limited property value (A.R.S. §42-15003).",
+ "authorities": [
+  {
+   "kind": "school",
+   "rollback": null,
+   "name": "Scottsdale Unified School District",
+   "mills": 32.298,
+   "status": "tax year 2025",
+   "src": {
+    "url": "https://pets.maricopa.gov/DocumentCenter/View/109591/Tax-Rate-2025-PDF",
+    "label": "Maricopa County Treasurer — 2025 tax rates (area 481400)"
+   },
+   "slices": [
+    [
+     "Scottsdale Unified School District — primary (operations)",
+     2.2384,
+     "schools"
+    ],
+    [
+     "Scottsdale Unified School District — secondary (bonds, overrides, districts)",
+     0.9914,
+     "secondary"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "Maricopa County",
+   "mills": 11.591,
+   "status": "tax year 2025",
+   "src": {
+    "url": "https://pets.maricopa.gov/DocumentCenter/View/109591/Tax-Rate-2025-PDF",
+    "label": "Maricopa County Treasurer — 2025 tax rates (area 481400)"
+   },
+   "slices": [
+    [
+     "Maricopa County — primary (operations)",
+     1.1591,
+     "county"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "Maricopa Community Colleges",
+   "mills": 10.828,
+   "status": "tax year 2025",
+   "src": {
+    "url": "https://pets.maricopa.gov/DocumentCenter/View/109591/Tax-Rate-2025-PDF",
+    "label": "Maricopa County Treasurer — 2025 tax rates (area 481400)"
+   },
+   "slices": [
+    [
+     "Maricopa Community Colleges — primary (operations)",
+     1.06,
+     "other"
+    ],
+    [
+     "Maricopa Community Colleges — secondary (bonds, overrides, districts)",
+     0.0228,
+     "debt"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "City of Scottsdale",
+   "mills": 9.124,
+   "status": "tax year 2025",
+   "src": {
+    "url": "https://pets.maricopa.gov/DocumentCenter/View/109591/Tax-Rate-2025-PDF",
+    "label": "Maricopa County Treasurer — 2025 tax rates (area 481400)"
+   },
+   "slices": [
+    [
+     "City of Scottsdale — primary (operations)",
+     0.4891,
+     "city"
+    ],
+    [
+     "City of Scottsdale — secondary (bonds, overrides, districts)",
+     0.4233,
+     "debt"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "Maricopa Special Health Care District",
+   "mills": 2.914,
+   "status": "tax year 2025",
+   "src": {
+    "url": "https://pets.maricopa.gov/DocumentCenter/View/109591/Tax-Rate-2025-PDF",
+    "label": "Maricopa County Treasurer — 2025 tax rates (area 481400)"
+   },
+   "slices": [
+    [
+     "Maricopa Special Health Care District — secondary (bonds, overrides, districts)",
+     0.2914,
+     "other"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "Flood Control District",
+   "mills": 1.428,
+   "status": "tax year 2025",
+   "src": {
+    "url": "https://pets.maricopa.gov/DocumentCenter/View/109591/Tax-Rate-2025-PDF",
+    "label": "Maricopa County Treasurer — 2025 tax rates (area 481400)"
+   },
+   "slices": [
+    [
+     "Flood Control District — secondary (bonds, overrides, districts)",
+     0.1428,
+     "other"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "Central Arizona Water Conservation District",
+   "mills": 1.4,
+   "status": "tax year 2025",
+   "src": {
+    "url": "https://pets.maricopa.gov/DocumentCenter/View/109591/Tax-Rate-2025-PDF",
+    "label": "Maricopa County Treasurer — 2025 tax rates (area 481400)"
+   },
+   "slices": [
+    [
+     "Central Arizona Water Conservation District — secondary (bonds, overrides, districts)",
+     0.14,
+     "other"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "East Valley Institute of Technology",
+   "mills": 0.5,
+   "status": "tax year 2025",
+   "src": {
+    "url": "https://pets.maricopa.gov/DocumentCenter/View/109591/Tax-Rate-2025-PDF",
+    "label": "Maricopa County Treasurer — 2025 tax rates (area 481400)"
+   },
+   "slices": [
+    [
+     "East Valley Institute of Technology — secondary (bonds, overrides, districts)",
+     0.05,
+     "other"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "County Library District",
+   "mills": 0.462,
+   "status": "tax year 2025",
+   "src": {
+    "url": "https://pets.maricopa.gov/DocumentCenter/View/109591/Tax-Rate-2025-PDF",
+    "label": "Maricopa County Treasurer — 2025 tax rates (area 481400)"
+   },
+   "slices": [
+    [
+     "County Library District — secondary (bonds, overrides, districts)",
+     0.0462,
+     "other"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "Fire District Assistance",
+   "mills": 0.076,
+   "status": "tax year 2025",
+   "src": {
+    "url": "https://pets.maricopa.gov/DocumentCenter/View/109591/Tax-Rate-2025-PDF",
+    "label": "Maricopa County Treasurer — 2025 tax rates (area 481400)"
+   },
+   "slices": [
+    [
+     "Fire District Assistance — secondary (bonds, overrides, districts)",
+     0.0076,
+     "other"
+    ]
+   ]
+  }
+ ]
+}

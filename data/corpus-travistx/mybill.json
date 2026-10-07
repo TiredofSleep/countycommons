@@ -1,0 +1,163 @@
+{
+ "updated": "2026-10-06",
+ "where": "A homestead in the City of Austin and Austin ISD.",
+ "input_label": "Appraised value of your home (from the appraisal district)",
+ "rate_unit": "per100",
+ "home_default": 300000,
+ "tags": {
+  "schools": "Running the schools",
+  "debt": "Paying off bonds (debt)",
+  "county": "County services",
+  "city": "City services",
+  "college": "Community college",
+  "health": "Hospital and health district",
+  "roads": "Roads and bridges",
+  "fire": "Fire and EMS"
+ },
+ "split_note": "Each unit’s rate is split into its maintenance-and-operations (M&O) part and its interest-and-sinking (I&S) part — the I&S part pays debt.",
+ "rollback_title": "The “no-new-revenue” rate",
+ "rollback_sub": "Texas’s no-raise rate",
+ "rollback_note": "Texas’s version of the “no-raise” rate is the no-new-revenue rate: the rate that would bring each taxing unit the same tax as last year from the same properties. Texas law makes each unit publish it; going above the higher voter-approval rate generally needs an election.",
+ "hearing": "Texas taxing units adopt rates each August and September after public hearings; school districts and colleges set their own.",
+ "exemptions": {},
+ "limits": [
+  "Homestead exemptions shown are the general ones; over-65, disabled and veteran exemptions and school tax ceilings aren’t modeled.",
+  "Homes inside a municipal utility district or emergency services district pay more; this example has neither."
+ ],
+ "authorities": [
+  {
+   "kind": "other",
+   "rollback": 9.452,
+   "name": "Austin ISD",
+   "mills": 9.184,
+   "status": "adopted Sept 24, 2026 (district resolution); the county table was still blank",
+   "src": {
+    "url": "https://austin-isd.community.diligentoneplatform.com/document/791f5716-ba36-4b59-9258-065505ce589b/",
+    "label": "Austin ISD 2026 tax rate resolution"
+   },
+   "hs_exempt": {
+    "amount": 140000
+   },
+   "slices": [
+    [
+     "Austin ISD — operations (M&O)",
+     0.7954,
+     "schools"
+    ],
+    [
+     "Austin ISD — debt (I&S)",
+     0.123,
+     "debt"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": 5.35466,
+   "name": "City of Austin",
+   "mills": 5.79948,
+   "status": "2026 adopted",
+   "src": {
+    "url": "https://www.traviscountytx.gov/tax-rates",
+    "label": "Travis County Tax Office — 2026 Truth-in-Taxation rate table"
+   },
+   "hs_exempt": {
+    "pct": 0.2,
+    "min": 5000
+   },
+   "slices": [
+    [
+     "City of Austin — operations (M&O)",
+     0.444636,
+     "city"
+    ],
+    [
+     "City of Austin — debt (I&S)",
+     0.135312,
+     "debt"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": 3.78179,
+   "name": "Travis County",
+   "mills": 3.8621,
+   "status": "2026 adopted",
+   "src": {
+    "url": "https://www.traviscountytx.gov/tax-rates",
+    "label": "Travis County Tax Office — 2026 Truth-in-Taxation rate table"
+   },
+   "hs_exempt": {
+    "pct": 0.2,
+    "min": 5000
+   },
+   "slices": [
+    [
+     "Travis County — operations (M&O)",
+     0.339737,
+     "county"
+    ],
+    [
+     "Travis County — debt (I&S)",
+     0.046473,
+     "debt"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": 1.18633,
+   "name": "Central Health (Travis County Healthcare District)",
+   "mills": 1.32863,
+   "status": "2026 adopted",
+   "src": {
+    "url": "https://www.traviscountytx.gov/tax-rates",
+    "label": "Travis County Tax Office — 2026 Truth-in-Taxation rate table"
+   },
+   "hs_exempt": {
+    "pct": 0.2,
+    "min": 5000
+   },
+   "slices": [
+    [
+     "Central Health (Travis County Healthcare District) — operations (M&O)",
+     0.123603,
+     "health"
+    ],
+    [
+     "Central Health (Travis County Healthcare District) — debt (I&S)",
+     0.00926,
+     "debt"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": 1.05924,
+   "name": "Austin Community College",
+   "mills": 1.03643,
+   "status": "2026 adopted",
+   "src": {
+    "url": "https://www.traviscountytx.gov/tax-rates",
+    "label": "Travis County Tax Office — 2026 Truth-in-Taxation rate table"
+   },
+   "hs_exempt": {
+    "pct": 0.01,
+    "min": 5000
+   },
+   "slices": [
+    [
+     "Austin Community College — operations (M&O)",
+     0.09,
+     "college"
+    ],
+    [
+     "Austin Community College — debt (I&S)",
+     0.013643,
+     "debt"
+    ]
+   ]
+  }
+ ]
+}

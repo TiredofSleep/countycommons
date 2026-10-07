@@ -1,0 +1,156 @@
+{
+ "updated": "2026-10-06",
+ "where": "A typical home in the City of Fort Collins (Larimer County).",
+ "input_label": "Actual (market) value of your home (from the Assessor)",
+ "assess_ratio": 0.0625,
+ "rate_unit": "mills",
+ "home_default": 550000,
+ "hide_homestead": true,
+ "exemptions": {},
+ "tags": {
+  "debt": "Paying off bonds (debt)",
+  "county": "County services",
+  "city": "City services",
+  "schools": "Schools",
+  "other": "Other districts"
+ },
+ "split_note": "Each government’s share is one slice unless it publishes a debt split.",
+ "rollback_title": "The “no-raise” rate",
+ "rollback_sub": "how this state handles it",
+ "rollback_note": "Colorado has no yearly no-raise rate; limits on property tax growth come from the state constitution (TABOR) and state law.",
+ "hearing": "",
+ "limits": [
+  "Which districts apply depends on the address; homes in south Fort Collins also pay South Fort Collins Sanitation (0.466 mills).",
+  "Poudre School District’s debt-versus-operating split isn’t published in the abstract."
+ ],
+ "ratio_note": "Colorado taxes a home on 6.25% of its value for local governments and 7.05% for schools (tax year 2025).",
+ "authorities": [
+  {
+   "kind": "school",
+   "rollback": null,
+   "name": "Poudre School District R-1",
+   "mills": 54.09,
+   "assess_ratio": 0.0705,
+   "status": "tax year 2025, paid in 2026",
+   "src": {
+    "url": "https://www.larimer.gov/sites/default/files/larimer-county-abstract-assessments-and-levies-2025.pdf",
+    "label": "Larimer County Assessor — 2025 Abstract of Assessments and Levies"
+   },
+   "slices": [
+    [
+     "Schools (operating and debt split not published)",
+     1,
+     "schools"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "Larimer County",
+   "mills": 22.496,
+   "status": "tax year 2025, paid in 2026",
+   "src": {
+    "url": "https://www.larimer.gov/sites/default/files/larimer-county-abstract-assessments-and-levies-2025.pdf",
+    "label": "Larimer County Assessor — 2025 Abstract of Assessments and Levies"
+   },
+   "slices": [
+    [
+     "County services",
+     1,
+     "county"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "City of Fort Collins",
+   "mills": 9.797,
+   "status": "tax year 2025, paid in 2026",
+   "src": {
+    "url": "https://www.larimer.gov/sites/default/files/larimer-county-abstract-assessments-and-levies-2025.pdf",
+    "label": "Larimer County Assessor — 2025 Abstract of Assessments and Levies"
+   },
+   "slices": [
+    [
+     "City services",
+     1,
+     "city"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "Poudre River Public Library District",
+   "mills": 3.02,
+   "status": "tax year 2025, paid in 2026",
+   "src": {
+    "url": "https://www.larimer.gov/sites/default/files/larimer-county-abstract-assessments-and-levies-2025.pdf",
+    "label": "Larimer County Assessor — 2025 Abstract of Assessments and Levies"
+   },
+   "slices": [
+    [
+     "Library",
+     1,
+     "other"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "Health District of Northern Larimer County",
+   "mills": 2.183,
+   "status": "tax year 2025, paid in 2026",
+   "src": {
+    "url": "https://www.larimer.gov/sites/default/files/larimer-county-abstract-assessments-and-levies-2025.pdf",
+    "label": "Larimer County Assessor — 2025 Abstract of Assessments and Levies"
+   },
+   "slices": [
+    [
+     "Health district",
+     1,
+     "other"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "Northern Colorado Water Conservancy District",
+   "mills": 1,
+   "status": "tax year 2025, paid in 2026",
+   "src": {
+    "url": "https://www.larimer.gov/sites/default/files/larimer-county-abstract-assessments-and-levies-2025.pdf",
+    "label": "Larimer County Assessor — 2025 Abstract of Assessments and Levies"
+   },
+   "slices": [
+    [
+     "Water supply",
+     1,
+     "other"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "Larimer County Pest Control",
+   "mills": 0.142,
+   "status": "tax year 2025, paid in 2026",
+   "src": {
+    "url": "https://www.larimer.gov/sites/default/files/larimer-county-abstract-assessments-and-levies-2025.pdf",
+    "label": "Larimer County Assessor — 2025 Abstract of Assessments and Levies"
+   },
+   "slices": [
+    [
+     "Pest control",
+     1,
+     "other"
+    ]
+   ]
+  }
+ ]
+}

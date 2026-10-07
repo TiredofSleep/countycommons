@@ -1,0 +1,143 @@
+{
+ "updated": "2026-10-06",
+ "where": "A homestead in the City of Bastrop, Bastrop ISD and Bastrop County ESD #3.",
+ "input_label": "Appraised value of your home (from the appraisal district)",
+ "rate_unit": "per100",
+ "home_default": 300000,
+ "tags": {
+  "schools": "Running the schools",
+  "debt": "Paying off bonds (debt)",
+  "county": "County services",
+  "city": "City services",
+  "college": "Community college",
+  "health": "Hospital and health district",
+  "roads": "Roads and bridges",
+  "fire": "Fire and EMS"
+ },
+ "split_note": "Each unit’s rate is split into its maintenance-and-operations (M&O) part and its interest-and-sinking (I&S) part — the I&S part pays debt.",
+ "rollback_title": "The “no-new-revenue” rate",
+ "rollback_sub": "Texas’s no-raise rate",
+ "rollback_note": "Texas’s version of the “no-raise” rate is the no-new-revenue rate: the rate that would bring each taxing unit the same tax as last year from the same properties. Texas law makes each unit publish it; going above the higher voter-approval rate generally needs an election.",
+ "hearing": "Texas taxing units adopt rates each August and September after public hearings; school districts and colleges set their own.",
+ "exemptions": {},
+ "limits": [
+  "Homestead exemptions shown are the general ones; over-65, disabled and veteran exemptions and school tax ceilings aren’t modeled.",
+  "Bastrop ISD’s 1.0809 is above its voter-approval rate; voters decide the extra on November 3 (facts only on this site)."
+ ],
+ "authorities": [
+  {
+   "kind": "other",
+   "rollback": 10.6438,
+   "name": "Bastrop ISD",
+   "mills": 10.809,
+   "status": "2026 rate — part depends on the November 3 voter-approval election",
+   "src": {
+    "url": "https://bastrop.countytaxrates.com/tax",
+    "label": "Bastrop County Truth-in-Taxation portal, 2026"
+   },
+   "hs_exempt": {
+    "amount": 140000
+   },
+   "slices": [
+    [
+     "Bastrop ISD — operations (M&O)",
+     0.6799,
+     "schools"
+    ],
+    [
+     "Bastrop ISD — debt (I&S)",
+     0.401,
+     "debt"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": 5.118,
+   "name": "City of Bastrop",
+   "mills": 5.118,
+   "status": "2026 rate per the county portal",
+   "src": {
+    "url": "https://www.cityofbastrop.org/upload/page/0368/docs/City%20of%20Bastrop%2050-212.pdf",
+    "label": "City of Bastrop notice (Form 50-212)"
+   },
+   "hs_exempt": null,
+   "slices": [
+    [
+     "City of Bastrop — operations (M&O)",
+     0.2947,
+     "city"
+    ],
+    [
+     "City of Bastrop — debt (I&S)",
+     0.2171,
+     "debt"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": 3.3654,
+   "name": "Bastrop County",
+   "mills": 3.774,
+   "status": "adopted Sept 14, 2026",
+   "src": {
+    "url": "https://www.bastropcounty.gov/upload/page/0184/docs/Current/Order%20Setting%20Tax%20Rate%20FY26-27.pdf",
+    "label": "Bastrop County order setting the 2026 tax rate"
+   },
+   "hs_exempt": null,
+   "slices": [
+    [
+     "Bastrop County — operations (M&O)",
+     0.3107,
+     "county"
+    ],
+    [
+     "Bastrop County — debt (I&S)",
+     0.0667,
+     "debt"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": 0.7444,
+   "name": "Bastrop County Road & Bridge",
+   "mills": 0.78,
+   "status": "adopted Sept 14, 2026",
+   "src": {
+    "url": "https://www.bastropcounty.gov/upload/page/0184/docs/Current/Order%20Setting%20Tax%20Rate%20FY26-27.pdf",
+    "label": "Bastrop County order setting the 2026 tax rate"
+   },
+   "hs_exempt": {
+    "amount": 3000
+   },
+   "slices": [
+    [
+     "Bastrop County Road & Bridge — operations (M&O)",
+     0.078,
+     "roads"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": 0.9844,
+   "name": "Bastrop County ESD #3",
+   "mills": 1,
+   "status": "2026 rate",
+   "src": {
+    "url": "https://bcesd3.specialdistrict.org/files/55324565d/ESD3+50-212.pdf",
+    "label": "ESD #3 notice (Form 50-212)"
+   },
+   "hs_exempt": null,
+   "slices": [
+    [
+     "Bastrop County ESD #3 — operations (M&O)",
+     0.1,
+     "fire"
+    ]
+   ]
+  }
+ ]
+}

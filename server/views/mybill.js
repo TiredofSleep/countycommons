@@ -13,10 +13,18 @@ const dollars = (x) => '$' + Math.round(x).toLocaleString('en-US');
 function compute(b, value, homestead, place) {
   const ratio = b.assess_ratio || 1;
   const ex = b.exemptions || {};
-  const taxable = (kind) => Math.max(0, value * ratio - (homestead ? (ex[kind] || 0) : 0));
+  // A government's own homestead exemption (hs_exempt) wins over the bill-wide
+  // one: a flat amount, a share of value with a floor (Texas), or both.
+  const exemptOf = (a, base) => {
+    if (!homestead) return 0;
+    if (a.hs_exempt === undefined) return ex[a.kind] || 0;
+    const h = a.hs_exempt || {};
+    return (h.amount || 0) + (h.pct ? Math.max(base * h.pct, h.min || 0) : 0);
+  };
   const authorities = place ? place.authorities : b.authorities;
   const govs = authorities.map(a => {
-    const tv = taxable(a.kind);
+    const base = value * (a.assess_ratio || ratio);
+    const tv = Math.max(0, base - exemptOf(a, base));
     const parts = a.parts || [{ label: null, mills: a.mills, slices: a.slices, slices_note: a.slices_note }];
     let tax = 0;
     const slices = [];
@@ -59,7 +67,7 @@ function myBillPage(data, query) {
   const places = b.places || null;
   const place = places ? (places.find(p => p.id === query.place) || places.find(p => p.id === b.default_place) || places[0]) : null;
   const r = compute(b, value, homestead, place);
-  const rateText = (m) => b.rate_unit === 'per100' ? `$${(m / 10).toFixed(4)} per $100` : `${m.toFixed(m < 1 ? 4 : 2)} mills`;
+  const rateText = (m) => b.rate_unit === 'per100' ? `$${(m / 10).toFixed(4)} per $100` : b.rate_unit === 'per1000' ? `$${m.toFixed(2)} per $1,000` : `${m.toFixed(m < 1 ? 4 : 2)} mills`;
   const per100 = (x) => r.total ? x / r.total * 100 : 0;
   const bar = (pct) => `<div style="background:var(--rule-soft);height:9px;max-width:300px;margin:3px 0 0"><div style="width:${Math.min(100, pct)}%;height:9px;background:var(--accent)"></div></div>`;
 
@@ -70,7 +78,7 @@ function myBillPage(data, query) {
     <select name="place" style="font-family:var(--mono);font-size:14px;padding:8px 10px;border:1.5px solid var(--ink);background:var(--paper);color:var(--ink);margin-top:3px;width:100%;max-width:100%;box-sizing:border-box">${places.map(p => `<option value="${esc(p.id)}"${p === place ? ' selected' : ''}>${esc(p.label)}</option>`).join('')}</select></label>` : ''}
   <label class="src" style="max-width:none">${esc(b.input_label || 'Assessed value (from your TRIM notice)')}<br>
     <input name="value" type="number" min="0" step="1000" value="${value}" style="font-family:var(--mono);font-size:15px;padding:8px 10px;border:1.5px solid var(--ink);background:var(--paper);color:var(--ink);margin-top:3px;width:11em;max-width:100%"></label>
-  <label class="src" style="max-width:none;display:flex;gap:6px;align-items:center"><input type="checkbox" name="hs" value="1"${homestead ? ' checked' : ''}> It’s my homestead</label>
+  ${b.hide_homestead ? '<input type="hidden" name="hs" value="1">' : `<label class="src" style="max-width:none;display:flex;gap:6px;align-items:center"><input type="checkbox" name="hs" value="1"${homestead ? ' checked' : ''}> ${esc(b.homestead_label || 'It’s my homestead')}</label>`}
   <button type="submit" style="font-family:var(--mono);font-size:14px;padding:9px 16px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);cursor:pointer">Explain my bill</button>
 </form>`;
 
@@ -118,7 +126,7 @@ ${form}
 
 <section>
 <h2>${dollars(r.total - r.credit)} a year <span class="sub">— about ${dollars((r.total - r.credit) / 12)} a month</span></h2>
-<p class="src" style="max-width:none">On ${r.ratio !== 1 ? `a market value of ${dollars(value)} — taxed on ${Math.round(r.ratio * 100)}% of it, ${dollars(value * r.ratio)}` : `an assessed value of ${dollars(value)}`}${homestead ? ', as a homestead' : ', not a homestead'}${place ? `, in ${esc(place.label)}` : ''}.${r.credit ? ` Taxes levied: ${dollars(r.total)}, less the ${dollars(r.credit)} ${esc(b.credit.label)}.` : ''} An estimate from published rates — your own tax notice is the final word.</p>
+<p class="src" style="max-width:none">On ${r.ratio !== 1 ? `a market value of ${dollars(value)} — taxed on ${+(r.ratio * 100).toFixed(2)}% of it, ${dollars(value * r.ratio)}` : `an assessed value of ${dollars(value)}`}${b.hide_homestead ? '' : (homestead ? ', as a homestead' : ', not a homestead')}${place ? `, in ${esc(place.label)}` : ''}.${b.ratio_note ? ' ' + esc(b.ratio_note) : ''}${r.credit ? ` Taxes levied: ${dollars(r.total)}, less the ${dollars(r.credit)} ${esc(b.credit.label)}.` : ''} An estimate from published rates — your own tax notice is the final word.</p>
 ${r.credit && b.credit.note ? `<p class="src" style="max-width:none">${esc(b.credit.note)}</p>` : ''}
 <h3 style="margin-top:14px">Of every $100 you pay</h3>
 ${govRows}

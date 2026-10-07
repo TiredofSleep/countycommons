@@ -1,0 +1,95 @@
+{
+ "updated": "2026-10-06",
+ "where": "A homestead in Loving County, in Wink-Loving ISD, outside the water district.",
+ "input_label": "Appraised value of your home (from the appraisal district)",
+ "rate_unit": "per100",
+ "home_default": 300000,
+ "tags": {
+  "schools": "Running the schools",
+  "debt": "Paying off bonds (debt)",
+  "county": "County services",
+  "city": "City services",
+  "college": "Community college",
+  "health": "Hospital and health district",
+  "roads": "Roads and bridges",
+  "fire": "Fire and EMS"
+ },
+ "split_note": "Each unit’s rate is split into its maintenance-and-operations (M&O) part and its interest-and-sinking (I&S) part — the I&S part pays debt.",
+ "rollback_title": "The “no-new-revenue” rate",
+ "rollback_sub": "Texas’s no-raise rate",
+ "rollback_note": "Texas’s version of the “no-raise” rate is the no-new-revenue rate: the rate that would bring each taxing unit the same tax as last year from the same properties. Texas law makes each unit publish it; going above the higher voter-approval rate generally needs an election.",
+ "hearing": "Texas taxing units adopt rates each August and September after public hearings; school districts and colleges set their own.",
+ "exemptions": {},
+ "limits": [
+  "Homestead exemptions shown are the general ones; over-65, disabled and veteran exemptions and school tax ceilings aren’t modeled.",
+  "Wink-Loving ISD’s 2026 no-new-revenue rate wasn’t readable in the posted records. Homes in the Loving County water district (WCID #1) pay more; its 2026 rate wasn’t confirmed."
+ ],
+ "authorities": [
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "Wink-Loving ISD",
+   "mills": 7.942,
+   "status": "2026 rate",
+   "src": {
+    "url": "https://lovingcad.org/Forms/GetDocument?subPath=Data%20Records&fileName=1790800383_2026+Tax+Rates.pdf",
+    "label": "Loving CAD — 2026 Tax Rates and Exemptions"
+   },
+   "hs_exempt": {
+    "amount": 140000,
+    "pct": 0.2,
+    "min": 5000
+   },
+   "slices": [
+    [
+     "Wink-Loving ISD — operations (M&O)",
+     0.6689,
+     "schools"
+    ],
+    [
+     "Wink-Loving ISD — debt (I&S)",
+     0.1253,
+     "debt"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": 5.35701,
+   "name": "Loving County",
+   "mills": 5.5115,
+   "status": "2026 rate",
+   "src": {
+    "url": "https://lovingcad.org/Forms/GetDocument?subPath=Data%20Records&fileName=1790800383_2026+Tax+Rates.pdf",
+    "label": "Loving CAD — 2026 Tax Rates and Exemptions"
+   },
+   "hs_exempt": null,
+   "slices": [
+    [
+     "Loving County — operations (M&O)",
+     0.55115,
+     "county"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": 0.8811,
+   "name": "Loving County Road & Bridge",
+   "mills": 0.9524,
+   "status": "2026 rate",
+   "src": {
+    "url": "https://lovingcad.org/Forms/GetDocument?subPath=Data%20Records&fileName=1790800383_2026+Tax+Rates.pdf",
+    "label": "Loving CAD — 2026 Tax Rates and Exemptions"
+   },
+   "hs_exempt": null,
+   "slices": [
+    [
+     "Loving County Road & Bridge — operations (M&O)",
+     0.09524,
+     "roads"
+    ]
+   ]
+  }
+ ]
+}

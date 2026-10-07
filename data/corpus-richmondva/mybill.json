@@ -1,0 +1,45 @@
+{
+ "updated": "2026-10-06",
+ "where": "A home in the City of Richmond.",
+ "input_label": "Assessed value of your home",
+ "assess_ratio": 1,
+ "rate_unit": "per100",
+ "home_default": 400000,
+ "hide_homestead": true,
+ "exemptions": {},
+ "tags": {
+  "debt": "Paying off bonds (debt)",
+  "county": "County services",
+  "city": "City services",
+  "schools": "Schools",
+  "other": "Other districts"
+ },
+ "split_note": "Each government’s share is one slice unless it publishes a debt split.",
+ "rollback_title": "The “no-raise” rate",
+ "rollback_sub": "how this state handles it",
+ "rollback_note": "Virginia requires a locality to advertise a lowered rate when reassessment raises its tax base. Richmond skipped reassessment in 2026, so no lowered rate applies to FY2027.",
+ "hearing": "City Council sets the rate with the budget each spring.",
+ "limits": [
+  "Richmond’s tax relief for older and disabled owners isn’t modeled."
+ ],
+ "authorities": [
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "City of Richmond",
+   "mills": 12,
+   "status": "FY2027 (unchanged since 2008)",
+   "src": {
+    "url": "https://www.rva.gov/finance/real-estate",
+    "label": "City of Richmond — Real Estate Tax"
+   },
+   "slices": [
+    [
+     "City services (Richmond has no separate county; schools are funded by the city)",
+     1,
+     "city"
+    ]
+   ]
+  }
+ ]
+}

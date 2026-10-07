@@ -1,0 +1,84 @@
+{
+ "updated": "2026-10-06",
+ "where": "A home in Nashville’s Urban Services District.",
+ "input_label": "Appraised value of your home (from the Assessor)",
+ "assess_ratio": 0.25,
+ "rate_unit": "per100",
+ "home_default": 400000,
+ "hide_homestead": true,
+ "exemptions": {},
+ "tags": {
+  "debt": "Paying off bonds (debt)",
+  "county": "County services",
+  "city": "City services",
+  "schools": "Schools",
+  "other": "Other districts"
+ },
+ "split_note": "Metro publishes its rate split by fund, including debt service.",
+ "rollback_title": "The “no-raise” rate",
+ "rollback_sub": "how this state handles it",
+ "rollback_note": "Tennessee sets a “certified” (revenue-neutral) rate after each reappraisal. After the 2025 reappraisal it was $2.222 per $100 for the Urban Services District; Metro set $2.814, which is $0.592 above it. The rate is unchanged for 2026; the next reappraisal is 2028.",
+ "hearing": "The Metro Council sets the rate with the budget each June.",
+ "limits": [
+  "Tennessee’s tax relief and freeze programs for older, disabled and veteran owners aren’t modeled."
+ ],
+ "ratio_note": "Tennessee assesses homes at 25% of appraised value.",
+ "authorities": [
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "Metro Nashville — General Services District",
+   "mills": 27.82,
+   "status": "tax year 2026 (unchanged)",
+   "src": {
+    "url": "https://www.nashville.gov/sites/default/files/2025-10/FY26_RevenueOverview.pdf",
+    "label": "Metro Nashville FY26 Revenue Overview — rate by fund"
+   },
+   "slices": [
+    [
+     "General services",
+     1.389,
+     "city"
+    ],
+    [
+     "Schools",
+     0.901,
+     "schools"
+    ],
+    [
+     "General debt service",
+     0.389,
+     "debt"
+    ],
+    [
+     "School debt service",
+     0.103,
+     "debt"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "Metro Nashville — Urban Services District",
+   "mills": 0.32,
+   "status": "tax year 2026 (unchanged)",
+   "src": {
+    "url": "https://www.nashville.gov/sites/default/files/2025-10/FY26_RevenueOverview.pdf",
+    "label": "Metro Nashville FY26 Revenue Overview — rate by fund"
+   },
+   "slices": [
+    [
+     "Urban services",
+     0.006,
+     "city"
+    ],
+    [
+     "Urban debt service",
+     0.026,
+     "debt"
+    ]
+   ]
+  }
+ ]
+}

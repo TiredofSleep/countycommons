@@ -1,0 +1,45 @@
+{
+ "updated": "2026-10-06",
+ "where": "A home in Arlington County.",
+ "input_label": "Assessed value of your home",
+ "assess_ratio": 1,
+ "rate_unit": "per100",
+ "home_default": 400000,
+ "hide_homestead": true,
+ "exemptions": {},
+ "tags": {
+  "debt": "Paying off bonds (debt)",
+  "county": "County services",
+  "city": "City services",
+  "schools": "Schools",
+  "other": "Other districts"
+ },
+ "split_note": "Each government’s share is one slice unless it publishes a debt split.",
+ "rollback_title": "The “no-raise” rate",
+ "rollback_sub": "how this state handles it",
+ "rollback_note": "Virginia requires a lowered (equalized) rate to be advertised when reassessment raises the tax base. Arlington’s equalized rate wasn’t found in an official notice, so it isn’t shown.",
+ "hearing": "The County Board sets the rate each April.",
+ "limits": [
+  "The stormwater utility fee ($268 per equivalent residential unit in 2026) is billed with the real estate tax but isn’t a property tax and isn’t included."
+ ],
+ "authorities": [
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "Arlington County",
+   "mills": 10.53,
+   "status": "adopted April 22, 2026 (CY2026)",
+   "src": {
+    "url": "https://www.arlingtonva.us/About-Arlington/Newsroom/Articles/2026/Arlington-County-Board-adopts-FY-2027-Budget",
+    "label": "Arlington County Board adopts FY2027 budget"
+   },
+   "slices": [
+    [
+     "County services (Arlington is a county with no separate cities; schools are funded by the county)",
+     1,
+     "county"
+    ]
+   ]
+  }
+ ]
+}

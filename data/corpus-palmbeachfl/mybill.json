@@ -1,0 +1,196 @@
+{
+ "updated": "2026-10-06",
+ "where": "A homestead in the City of West Palm Beach (which runs its own library and fire department, so the county library and fire-rescue districts aren’t on this bill).",
+ "input_label": "Assessed value (from your TRIM notice)",
+ "home_default": 400000,
+ "exemptions": {
+  "school": 25000,
+  "other": 51411,
+  "note": "Florida’s 2026 homestead exemption: $25,000 off school taxes and $51,411 off all others (Florida Dept. of Revenue)."
+ },
+ "tags": {
+  "county": "County services",
+  "debt": "Paying off bonds (debt)",
+  "schools": "Running the schools",
+  "water": "Water management",
+  "children": "Children’s Services Council",
+  "health": "Health Care District",
+  "city": "City services"
+ },
+ "split_note": "Each government’s share is one slice, except voted debt levies, which are shown as debt.",
+ "rollback_note": "The rolled-back rate is the “no-raise” rate: the rate that would bring each government the same property tax as last year from the same properties. Florida’s Truth in Millage law makes each one publish it; if the adopted rate is higher, its ad must call it a tax increase.",
+ "hearing": "Rates are set at two September hearings. Palm Beach County adopted 4.5000 operating and 0.0210 debt on September 15, 2026; the other rates shown are the July proposals (the ceilings).",
+ "limits": [
+  "Except for the county, rates are the July proposed (not-to-exceed) rates; final September rates may be the same or lower.",
+  "Amendment 3 on the November 3 ballot would change Florida’s homestead exemptions (facts only on this site)."
+ ],
+ "authorities": [
+  {
+   "kind": "other",
+   "rollback": 7.6915,
+   "name": "City of West Palm Beach",
+   "mills": 8.1308,
+   "status": "not-to-exceed rate approved July 2026",
+   "src": {
+    "url": "https://pbcpao.gov/pdf/taxroll/2026_Proposed_Rollback_025_Final_Millage_Rates.pdf",
+    "label": "Palm Beach County Property Appraiser — 2026 proposed and rolled-back millage"
+   },
+   "slices": [
+    [
+     "City services",
+     1,
+     "city"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "City of West Palm Beach — voted debt",
+   "mills": 0.0533,
+   "status": "proposed (TRIM) July 2026",
+   "src": {
+    "url": "https://pbcpao.gov/pdf/taxroll/2026_Proposed_Rollback_025_Final_Millage_Rates.pdf",
+    "label": "Palm Beach County Property Appraiser — 2026 proposed and rolled-back millage"
+   },
+   "slices": [
+    [
+     "Voter-approved city bonds",
+     1,
+     "debt"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": 4.2678,
+   "name": "Palm Beach County",
+   "mills": 4.5,
+   "status": "adopted Sept 15, 2026",
+   "src": {
+    "url": "https://pbcpao.gov/pdf/taxroll/2026_Proposed_Rollback_025_Final_Millage_Rates.pdf",
+    "label": "Palm Beach County Property Appraiser — 2026 proposed and rolled-back millage"
+   },
+   "slices": [
+    [
+     "County services",
+     1,
+     "county"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "Palm Beach County — voted debt",
+   "mills": 0.021,
+   "status": "adopted Sept 15, 2026",
+   "src": {
+    "url": "https://pbcpao.gov/pdf/taxroll/2026_Proposed_Rollback_025_Final_Millage_Rates.pdf",
+    "label": "Palm Beach County Property Appraiser — 2026 proposed and rolled-back millage"
+   },
+   "slices": [
+    [
+     "Voter-approved county bonds",
+     1,
+     "debt"
+    ]
+   ]
+  },
+  {
+   "kind": "school",
+   "rollback": 6.0575,
+   "name": "School District of Palm Beach County",
+   "mills": 6.287,
+   "status": "tentative July 29, 2026",
+   "src": {
+    "url": "https://pbcpao.gov/pdf/taxroll/2026_Proposed_Rollback_025_Final_Millage_Rates.pdf",
+    "label": "Palm Beach County Property Appraiser — 2026 proposed and rolled-back millage"
+   },
+   "slices": [
+    [
+     "State-required local effort",
+     3.039,
+     "schools"
+    ],
+    [
+     "Local school levies (capital, discretionary and the voter-approved mill)",
+     3.248,
+     "schools"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": 0.6205,
+   "name": "Health Care District",
+   "mills": 0.6561,
+   "status": "proposed (TRIM) July 2026",
+   "src": {
+    "url": "https://pbcpao.gov/pdf/taxroll/2026_Proposed_Rollback_025_Final_Millage_Rates.pdf",
+    "label": "Palm Beach County Property Appraiser — 2026 proposed and rolled-back millage"
+   },
+   "slices": [
+    [
+     "Health Care District",
+     1,
+     "health"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": 0.4642,
+   "name": "Children’s Services Council",
+   "mills": 0.4908,
+   "status": "proposed (TRIM) July 2026",
+   "src": {
+    "url": "https://pbcpao.gov/pdf/taxroll/2026_Proposed_Rollback_025_Final_Millage_Rates.pdf",
+    "label": "Palm Beach County Property Appraiser — 2026 proposed and rolled-back millage"
+   },
+   "slices": [
+    [
+     "Children’s Services Council",
+     1,
+     "children"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": 0.2195,
+   "name": "South Florida Water Management District (three levies)",
+   "mills": 0.2301,
+   "status": "proposed (TRIM) July 2026",
+   "src": {
+    "url": "https://pbcpao.gov/pdf/taxroll/2026_Proposed_Rollback_025_Final_Millage_Rates.pdf",
+    "label": "Palm Beach County Property Appraiser — 2026 proposed and rolled-back millage"
+   },
+   "slices": [
+    [
+     "Water management and Everglades restoration",
+     1,
+     "water"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": 0.0257,
+   "name": "Florida Inland Navigation District",
+   "mills": 0.027,
+   "status": "proposed (TRIM) July 2026",
+   "src": {
+    "url": "https://pbcpao.gov/pdf/taxroll/2026_Proposed_Rollback_025_Final_Millage_Rates.pdf",
+    "label": "Palm Beach County Property Appraiser — 2026 proposed and rolled-back millage"
+   },
+   "slices": [
+    [
+     "Intracoastal Waterway",
+     1,
+     "water"
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "updated": "2026-10-06",
+ "where": "A home in Cambridge (Middlesex County’s government was abolished in 1997; cities levy the property tax).",
+ "input_label": "Assessed value of your home (from the Assessor)",
+ "assess_ratio": 1,
+ "rate_unit": "per1000",
+ "home_default": 1841000,
+ "hide_homestead": false,
+ "homestead_label": "I live in it (residential exemption)",
+ "exemptions": {
+  "other": 510208
+ },
+ "tags": {
+  "debt": "Paying off bonds (debt)",
+  "county": "County services",
+  "city": "City services",
+  "schools": "Schools",
+  "other": "Other districts"
+ },
+ "split_note": "Each government’s share is one slice unless it publishes a debt split.",
+ "rollback_title": "The “no-raise” rate",
+ "rollback_sub": "how this state handles it",
+ "rollback_note": "Massachusetts has no yearly no-raise rate; Proposition 2½ caps how much a city’s total levy can grow each year (2.5% plus new growth) unless voters approve an override. Cambridge’s FY2026 levy is about $172.9 million below its limit.",
+ "hearing": "",
+ "limits": [
+  "The 3% Community Preservation Act surcharge on the bill isn’t included."
+ ],
+ "authorities": [
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "City of Cambridge",
+   "mills": 6.67,
+   "status": "FY2026",
+   "src": {
+    "url": "https://www.cambridgema.gov/-/media/Files/financedepartment/propertytaxnewsletters/FY26/fy26taxrateletter.pdf",
+    "label": "Cambridge FY26 tax rate letter"
+   },
+   "slices": [
+    [
+     "City services, including schools",
+     1,
+     "city"
+    ]
+   ]
+  }
+ ]
+}

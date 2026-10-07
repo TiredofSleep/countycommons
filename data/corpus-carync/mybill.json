@@ -1,0 +1,63 @@
+{
+ "updated": "2026-10-06",
+ "where": "A home in the Town of Cary, Wake County.",
+ "input_label": "Assessed (appraised) value of your home",
+ "assess_ratio": 1,
+ "rate_unit": "per100",
+ "home_default": 400000,
+ "hide_homestead": true,
+ "exemptions": {},
+ "tags": {
+  "debt": "Paying off bonds (debt)",
+  "county": "County services",
+  "city": "City services",
+  "schools": "Schools",
+  "other": "Other districts"
+ },
+ "split_note": "Each government’s share is one slice unless it publishes a debt split.",
+ "rollback_title": "The “no-raise” rate",
+ "rollback_sub": "how this state handles it",
+ "rollback_note": "North Carolina publishes a “revenue-neutral” rate only in a revaluation year. Wake County’s next revaluation takes effect January 1, 2027, so none applies to FY2027.",
+ "hearing": "Wake County and Cary adopt their rates with the budget each June.",
+ "limits": [
+  "North Carolina’s elderly, disabled and veteran relief programs aren’t modeled."
+ ],
+ "authorities": [
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "Wake County",
+   "mills": 5.371,
+   "status": "adopted June 1, 2026 (FY2027)",
+   "src": {
+    "url": "https://www.wake.gov/news/wake-county-commissioners-adopt-228-billion-fiscal-year-2027-budget",
+    "label": "Wake County — FY2027 budget adopted"
+   },
+   "slices": [
+    [
+     "County services (including school operations funding)",
+     1,
+     "county"
+    ]
+   ]
+  },
+  {
+   "kind": "other",
+   "rollback": null,
+   "name": "Town of Cary",
+   "mills": 3.675,
+   "status": "adopted June 25, 2026 (FY2027)",
+   "src": {
+    "url": "https://www.carync.gov/Home/Components/News/News/17119/715",
+    "label": "Town of Cary — FY2027 budget adopted"
+   },
+   "slices": [
+    [
+     "Town services",
+     1,
+     "city"
+    ]
+   ]
+  }
+ ]
+}
