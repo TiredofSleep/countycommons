@@ -271,6 +271,21 @@ app.use((req, res, next) => {
 // an honest "not built yet" page instead of an empty $0 tree, so the public never
 // lands on a hollow site. Admin/owner routes pass through (a host can still log in
 // and build it); the network directory and the selector stay reachable as exits.
+// Pages that already carry real, cited content on an un-built county (state
+// tax rates, state turnout counts, the closest prisons) stay open past the guard.
+const STARTER_PAGES = {
+  '/mybill': ['Your tax bill, explained', 'every tax rate on a home here, from the state’s millage report'],
+  '/turnout': ['Voter turnout', 'official counts from the state'],
+  '/justice': ['Jails & prisons', 'the closest state prisons and ideas from elsewhere'],
+  '/coverage': ['How complete is this county?', 'what’s gathered so far and what isn’t']
+};
+function starterReady(data) {
+  const c = data.county || {};
+  return Object.keys(STARTER_PAGES).filter(href =>
+    href === '/mybill' ? !!(c.has_mybill && data.myBill) :
+    href === '/justice' ? !!data.prisonsNear :
+    href === '/turnout' ? !!(data.turnout && (data.turnout.elections || []).some(e => e.counties && e.counties[c.turnout_county || String(c.name || '').replace(/ County$/, '')])) : true);
+}
 function starterPage(data) {
   const { layout } = require('./views/layout');
   const { county } = data;
@@ -284,6 +299,7 @@ function starterPage(data) {
     <p class="src" style="margin:4px 0 0"><b>${esc(county.name)}'s adopted budget is captured.</b> <a href="${esc(budgetDoc.source_url)}" rel="noopener">Open the appropriation ordinance ↗</a> — the county's real budget document. It isn't parsed into a walkable, cited money trail yet, but the source is here for anyone to read now.</p>
   </div>
 </section>` : '';
+  const ready = starterReady(data).map(href => [href, ...STARTER_PAGES[href]]);
   const body = `
 <header class="page">
   <div class="eyebrow">${esc(county.name)}, ${esc(county.state)}</div>
@@ -291,6 +307,10 @@ function starterPage(data) {
   <div class="src" style="max-width:60ch">County Commons hasn't turned ${esc(county.name)} into a walkable money trail yet. ${budgetDoc ? 'But its adopted budget document is already captured below.' : 'This is a starter site, holding the county’s spot on the network until its budget is loaded.'} When it's parsed, this page becomes a money trail with every dollar cited to its source, like the counties already live.</div>
 </header>
 ${docBlock}
+${ready.length ? `<section>
+  <h2>Already here for ${esc(county.name)}</h2>
+  <ul>${ready.map(([href, label, sub]) => `<li><a href="${href}">${label}</a> — ${sub}</li>`).join('')}</ul>
+</section>` : ''}
 <section>
   <p>See the counties and cities that <b>are</b> live — from big-city budgets to a 64-person county — on <a href="/gate">the county selector</a> or the <a href="/counties">full directory</a>.</p>
   <p class="src">Want ${esc(county.name)} built out, or want to host it? Reach the project at ${county.contact_email ? `<a href="mailto:${esc(county.contact_email)}">${esc(county.contact_email)}</a>` : 'the contact on any live county page'}.</p>
@@ -303,7 +323,11 @@ app.use((req, res, next) => {
   const p = req.path;
   if (p.startsWith('/admin') || p.startsWith('/owner') || p.startsWith('/gate') || p.startsWith('/enter') ||
       p.startsWith('/counties') || p === '/health' || p === '/robots.txt' || /\.[a-z0-9]+$/i.test(p)) return next();
-  try { return res.send(starterPage(load(req.tenantKey))); } catch (e) { return next(); }
+  try {
+    const data = load(req.tenantKey);
+    if (starterReady(data).includes(p)) return next();
+    return res.send(starterPage(data));
+  } catch (e) { return next(); }
 });
 
 // Admin guard: for /admin routes, require an admin cookie for THIS county.
