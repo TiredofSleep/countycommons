@@ -1,14 +1,24 @@
 {
-  "documents": [
-    {
-      "id": "benton-2026",
-      "title": "Benton County 2026 budget (as reported)",
-      "jurisdiction": "bentonar",
-      "layer": "appropriation",
-      "source_url": "https://bentoncountyar.gov/comptroller/",
-      "retrieved_at": "2026-08-21",
-      "status": "ingested",
-      "note": "Figures as reported in local news of the Quorum Court’s 2026 budget adoption. The full ordinance is public record; the artransparency.gov copy blocks automated access, so line-item ingestion awaits a direct pull."
-    }
-  ]
+ "documents": [
+  {
+   "id": "bentonar-budget-2026",
+   "title": "Benton County 2026 budget, as filed with the state",
+   "jurisdiction": "bentonar",
+   "layer": "appropriation",
+   "source_url": "https://artransparency.gov/wp-content/uploads/2026/05/Benton-County.pdf",
+   "retrieved_at": "2026-10-06",
+   "status": "ingested",
+   "note": "Posted on the Arkansas Transparency portal (artransparency.gov) in May 2026. 94 pages. Amounts are the Schedule 2 category columns (Total Personnel Svcs., Supplies, Other Svcs & Charges, Capital, Debt) and 'Total Dept.' for 2026 column."
+  },
+  {
+   "id": "benton-2026",
+   "title": "Benton County 2026 budget (as reported)",
+   "jurisdiction": "bentonar",
+   "layer": "appropriation",
+   "source_url": "https://bentoncountyar.gov/comptroller/",
+   "retrieved_at": "2026-08-21",
+   "status": "ingested",
+   "note": "Figures as reported in local news of the Quorum Court’s 2026 budget adoption. The full ordinance is public record; the artransparency.gov copy blocks automated access, so line-item ingestion awaits a direct pull."
+  }
+ ]
 }

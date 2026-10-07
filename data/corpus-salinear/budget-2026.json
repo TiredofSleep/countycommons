@@ -1,25 +1,7247 @@
 {
-  "meta": {
-    "document": "Saline County — no appropriation document ingested yet",
-    "title": "Saline County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Saline County 2026 adopted budget",
+  "title": "Saline County — the money trail",
+  "year": 2026,
+  "grand_total": 74159348.24,
+  "note": "This is Saline County's 2026 budget as adopted by the quorum court in Appropriation Ordinance 2025-20 (December 15, 2025). Fund and department amounts are the ordinance's appropriations; the split into categories comes from the 'Request 2026' column of the county's 2026 budget pages and adds up exactly to them. Some funds move money to other county funds (transfers out, $4,182,000.00 in all), so those dollars show up in both funds."
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General Fund",
+   "code": "1000",
+   "amount": 25778327.2,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "pp. 4–5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Saline County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-0100",
+   "amount": 315363.23,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-ps",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 239803.23,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-sup",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9500,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 78"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-osc",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 66060,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 78"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "1000-0101",
+   "amount": 612514.64,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-ps",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 536244.64,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-sup",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 34000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 80"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-osc",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 36270,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 80"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-tr",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 80"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Clerk",
+   "code": "1000-0102",
+   "amount": 736287.07,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-ps",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 582584.07,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 81"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-sup",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 17001,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 82"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-osc",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 134202,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 82"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-cap",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 82"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Treasurer",
+   "code": "1000-0103",
+   "amount": 302665.3,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-ps",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 248140.3,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 83"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-sup",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9500,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 84"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-osc",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 45025,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 84"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Tax Collector",
+   "code": "1000-0104",
+   "amount": 1289100.68,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-ps",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 951700.68,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 85"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-sup",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 38500,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 86"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-osc",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 248900,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 86"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-cap",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 50000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 86"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Tax Assessor",
+   "code": "1000-0105",
+   "amount": 760755.02,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-ps",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 571230.02,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 87"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-sup",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 99500,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 88"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-osc",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 66025,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 88"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-cap",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 24000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 88"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Board of Equalization",
+   "code": "1000-0106",
+   "amount": 29063.5,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-ps",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 27062.5,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 89"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-sup",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 90"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-osc",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 90"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 365039.47,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-ps",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 259629.47,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-sup",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 8300,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 92"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-osc",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 55110,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 92"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-cap",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 92"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-tr",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 40000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 92"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Maintenance Department",
+   "code": "1000-0108",
+   "amount": 1120560.33,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-ps",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 684562.01,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 93"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-sup",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 33900,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 94"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-osc",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 34625,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 94"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-debt",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 367473.32,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 94"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Election Worker Pay - Election Commission",
+   "code": "1000-0109",
+   "amount": 386740,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-ps",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 34240,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 95"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-osc",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 350500,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 96"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-tr",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 96"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0113",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Financial Management",
+   "code": "1000-0113",
+   "amount": 965484.52,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0113-ps",
+   "parent": "f1000-d0113",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 651484.52,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 97"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0113-sup",
+   "parent": "f1000-d0113",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 66000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 98"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0113-osc",
+   "parent": "f1000-d0113",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 247900,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 98"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0113-cap",
+   "parent": "f1000-d0113",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 100,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 98"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0115",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Information Technology Department",
+   "code": "1000-0115",
+   "amount": 486092,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0115-sup",
+   "parent": "f1000-d0115",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3452,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 100"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0115-osc",
+   "parent": "f1000-d0115",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 457240,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 100"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0115-cap",
+   "parent": "f1000-d0115",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 25400,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 100"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0116",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Grants-In-Aid",
+   "code": "1000-0116",
+   "amount": 100000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0116-osc",
+   "parent": "f1000-d0116",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 100000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 101"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Communications Department",
+   "code": "1000-0117",
+   "amount": 165841.74,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117-ps",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 107056.74,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 102"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117-sup",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6500,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 103"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117-osc",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 41765,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 103"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117-cap",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10520,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 103"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0120",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Civil Attorney",
+   "code": "1000-0120",
+   "amount": 166576.92,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0120-ps",
+   "parent": "f1000-d0120",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 157186.92,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 104"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0120-sup",
+   "parent": "f1000-d0120",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3750,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 105"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0120-osc",
+   "parent": "f1000-d0120",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5640,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 105"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0127",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Funding for Reimbursement Grants",
+   "code": "1000-0127",
+   "amount": 40000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0127-tr",
+   "parent": "f1000-d0127",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 40000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 106"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0130",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse Maintenance",
+   "code": "1000-0130",
+   "amount": 267000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0130-sup",
+   "parent": "f1000-d0130",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 148000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 107"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0130-osc",
+   "parent": "f1000-d0130",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 119000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 107"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0131",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Saline County Complex Maint.",
+   "code": "1000-0131",
+   "amount": 122501,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0131-sup",
+   "parent": "f1000-d0131",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 50500,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 108"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0131-osc",
+   "parent": "f1000-d0131",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 67001,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 108"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0131-cap",
+   "parent": "f1000-d0131",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 108"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0133",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Historical Society-Odd Fellows Building",
+   "code": "1000-0133",
+   "amount": 14300,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0133-sup",
+   "parent": "f1000-d0133",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10500,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 109"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0133-osc",
+   "parent": "f1000-d0133",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3800,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 109"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0134",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Saline County Complex Maint.",
+   "code": "1000-0134",
+   "amount": 14800,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0134-sup",
+   "parent": "f1000-d0134",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5300,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 110"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0134-osc",
+   "parent": "f1000-d0134",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 9500,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 110"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0135",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "GIS/EQ Building Maintenance",
+   "code": "1000-0135",
+   "amount": 7950,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0135-sup",
+   "parent": "f1000-d0135",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 111"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0135-osc",
+   "parent": "f1000-d0135",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5450,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 111"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0136",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Vote Here (Bush) Building Maint.",
+   "code": "1000-0136",
+   "amount": 18200,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0136-sup",
+   "parent": "f1000-d0136",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6500,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 112"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0136-osc",
+   "parent": "f1000-d0136",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 11700,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 112"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0144",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Tax Collector-Bryant",
+   "code": "1000-0144",
+   "amount": 199036.97,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0144-ps",
+   "parent": "f1000-d0144",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 180336.97,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 113"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0144-sup",
+   "parent": "f1000-d0144",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 114"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0144-osc",
+   "parent": "f1000-d0144",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6700,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 114"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0144-cap",
+   "parent": "f1000-d0144",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 114"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0155",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Tax Assessor-Bryant",
+   "code": "1000-0155",
+   "amount": 91393.74,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0155-ps",
+   "parent": "f1000-d0155",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 82643.74,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 115"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0155-sup",
+   "parent": "f1000-d0155",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3250,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 116"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0155-osc",
+   "parent": "f1000-d0155",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5500,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 116"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0156",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Tax Assessor-GIS",
+   "code": "1000-0156",
+   "amount": 971005.88,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0156-ps",
+   "parent": "f1000-d0156",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 773249.88,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 117"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0156-sup",
+   "parent": "f1000-d0156",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 37725,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 118"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0156-osc",
+   "parent": "f1000-d0156",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 147031,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 118"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0156-cap",
+   "parent": "f1000-d0156",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 12000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 118"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0156-tr",
+   "parent": "f1000-d0156",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 118"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0157",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Assessor-County Apprl-Part State Funding",
+   "code": "1000-0157",
+   "amount": 668363,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0157-sup",
+   "parent": "f1000-d0157",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 668363,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 119"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0197",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Central Arkansas Planning & Development Dis",
+   "code": "1000-0197",
+   "amount": 4508,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0197-osc",
+   "parent": "f1000-d0197",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4508,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 120"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Health Unit",
+   "code": "1000-0300",
+   "amount": 40000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-sup",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 30300,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 121"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-osc",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 9700,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 121"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0350",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Health Department Building Maint.",
+   "code": "1000-0350",
+   "amount": 74750,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0350-sup",
+   "parent": "f1000-d0350",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 17500,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 122"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0350-osc",
+   "parent": "f1000-d0350",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 57250,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 122"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff",
+   "code": "1000-0400",
+   "amount": 6650683.89,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-ps",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 5343133.89,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-sup",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 556000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-osc",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 370550,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-cap",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 375000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-tr",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court-Juvenile",
+   "code": "1000-0401",
+   "amount": 858171.72,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-ps",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 807571.72,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 126"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-sup",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-osc",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 43600,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court-Security",
+   "code": "1000-0402",
+   "amount": 750996.56,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-ps",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 730616.56,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 128"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-sup",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9510,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-osc",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 8370,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-cap",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court-Third Division",
+   "code": "1000-0403",
+   "amount": 13952,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403-sup",
+   "parent": "f1000-d0403",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7875,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 130"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403-osc",
+   "parent": "f1000-d0403",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6077,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 130"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0404",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court-Fourth Division",
+   "code": "1000-0404",
+   "amount": 13515,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0404-sup",
+   "parent": "f1000-d0404",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 131"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0404-osc",
+   "parent": "f1000-d0404",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7515,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 131"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0405",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court-First Division",
+   "code": "1000-0405",
+   "amount": 15625,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0405-sup",
+   "parent": "f1000-d0405",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6400,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 132"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0405-osc",
+   "parent": "f1000-d0405",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 9225,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 132"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court-Benton Division",
+   "code": "1000-0409",
+   "amount": 658525.91,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-ps",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 545575.91,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 133"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-sup",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 14450,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 134"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-osc",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 98500,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 134"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0410",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court-Bryant Division",
+   "code": "1000-0410",
+   "amount": 271100,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0410-osc",
+   "parent": "f1000-d0410",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 271100,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 135"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney",
+   "code": "1000-0416",
+   "amount": 654222.63,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-ps",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 588115.63,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 136"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-sup",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 137"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-osc",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 56107,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 137"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0417",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Public Defender Supplement",
+   "code": "1000-0417",
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0417-tr",
+   "parent": "f1000-d0417",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 138"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Jail Supplement",
+   "code": "1000-0418",
+   "amount": 3000000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-tr",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 3000000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 139"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Coroner",
+   "code": "1000-0419",
+   "amount": 395892.03,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-ps",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 300042.03,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 140"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-sup",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 31500,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 141"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-osc",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 19350,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 141"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-cap",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 45000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 141"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0451",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney-Reimb. Salaries",
+   "code": "1000-0451",
+   "amount": 171581.15,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0451-ps",
+   "parent": "f1000-d0451",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 171581.15,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 142"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0452",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff-Federal Grant Match",
+   "code": "1000-0452",
+   "amount": 5078.4,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0452-ps",
+   "parent": "f1000-d0452",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 4678.4,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 143"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0452-osc",
+   "parent": "f1000-d0452",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 400,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 144"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0453",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff Reserves",
+   "code": "1000-0453",
+   "amount": 4500,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0453-ps",
+   "parent": "f1000-d0453",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 3400,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 145"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0453-sup",
+   "parent": "f1000-d0453",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1050,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 146"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0453-osc",
+   "parent": "f1000-d0453",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 40,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 146"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0453-cap",
+   "parent": "f1000-d0453",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 146"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0454",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Saline County Chaplain Assn.",
+   "code": "1000-0454",
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0454-ps",
+   "parent": "f1000-d0454",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 147"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0456",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court Building Maint.",
+   "code": "1000-0456",
+   "amount": 60750,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0456-sup",
+   "parent": "f1000-d0456",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 26950,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 148"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0456-osc",
+   "parent": "f1000-d0456",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 28800,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 148"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0456-cap",
+   "parent": "f1000-d0456",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 148"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0457",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff Administration Building",
+   "code": "1000-0457",
+   "amount": 108800,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0457-sup",
+   "parent": "f1000-d0457",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 22800,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 149"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0457-osc",
+   "parent": "f1000-d0457",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 86000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 149"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0458",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "OEM/Judicial Building Maint.",
+   "code": "1000-0458",
+   "amount": 92000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0458-sup",
+   "parent": "f1000-d0458",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 32000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 150"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0458-osc",
+   "parent": "f1000-d0458",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 60000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 150"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0459",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Smith Building-Circuit Court Division",
+   "code": "1000-0459",
+   "amount": 49000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0459-sup",
+   "parent": "f1000-d0459",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 26000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 151"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0459-osc",
+   "parent": "f1000-d0459",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 23000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 151"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0462",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court-Second Division",
+   "code": "1000-0462",
+   "amount": 9950,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0462-sup",
+   "parent": "f1000-d0462",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6200,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 152"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0462-osc",
+   "parent": "f1000-d0462",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3750,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 152"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Office of Emergency Management (OEM)",
+   "code": "1000-0500",
+   "amount": 361119.97,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-ps",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 136469.97,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 153"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-sup",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 49000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 154"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-osc",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 120650,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 154"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-cap",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 55000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 154"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0501",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Communications-911 Salaries",
+   "code": "1000-0501",
+   "amount": 1000000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0501-tr",
+   "parent": "f1000-d0501",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 1000000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 155"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veterans Service Officer",
+   "code": "1000-0800",
+   "amount": 162113.53,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-ps",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 150163.53,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 156"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-sup",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5700,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 157"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-osc",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6250,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 157"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Cooperative Extension",
+   "code": "1000-0801",
+   "amount": 68000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-osc",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 68000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 158"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0802",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Paupers & Welfare",
+   "code": "1000-0802",
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0802-osc",
+   "parent": "f1000-d0802",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 159"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0810",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Soil Conservation",
+   "code": "1000-0810",
+   "amount": 15756.4,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0810-ps",
+   "parent": "f1000-d0810",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 15756.4,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 160"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0812",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Central Arkansas Development Council",
+   "code": "1000-0812",
+   "amount": 11000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0812-osc",
+   "parent": "f1000-d0812",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 11000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 161"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0850",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "DHS Building Maint.",
+   "code": "1000-0850",
+   "amount": 23600,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0850-sup",
+   "parent": "f1000-d0850",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 15600,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 162"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0850-osc",
+   "parent": "f1000-d0850",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 162"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1005",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Federal Coronavirus Fund",
+   "code": "1005",
+   "amount": 360000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The ordinance adopts this fund as one amount; the department split under it is from the 'Request 2026' column of the attached proposed budget, which adds exactly to the adopted amount."
+  },
+  {
+   "id": "f1005-d0130",
+   "parent": "f1005",
+   "section": "appropriations",
+   "name": "Courthouse Maintenance",
+   "code": "1005-0130",
+   "amount": 300000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 163"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1005-d0130-sup",
+   "parent": "f1005-d0130",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 300000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 163"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1005-d0713",
+   "parent": "f1005",
+   "section": "appropriations",
+   "name": "JDC Department",
+   "code": "1005-0713",
+   "amount": 60000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 165"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1005-d0713-ps",
+   "parent": "f1005-d0713",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 164"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1005-d0713-osc",
+   "parent": "f1005-d0713",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 50000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 165"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "ARPA Revenue Replacement Fund",
+   "code": "1006",
+   "amount": 2425450.58,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f1006-d0192",
+   "parent": "f1006",
+   "section": "appropriations",
+   "name": "AWIN Project - ARP Department",
+   "code": "1006-0192",
+   "amount": 797778,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1006-d0192-cap",
+   "parent": "f1006-d0192",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 797778,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 166"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1006-d0194",
+   "parent": "f1006",
+   "section": "appropriations",
+   "name": "Jail Addition - ARP Department",
+   "code": "1006-0194",
+   "amount": 1627672.58,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1006-d0194-sup",
+   "parent": "f1006-d0194",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 240168.58,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 167"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1006-d0194-osc",
+   "parent": "f1006-d0194",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 167"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1006-d0194-cap",
+   "parent": "f1006-d0194",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1367504,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 167"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1007",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Local Assistance Tribal Consistency (LATC) Fund",
+   "code": "1007",
+   "amount": 100000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1007-ps",
+   "parent": "f1007",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 169"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1007-osc",
+   "parent": "f1007",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 99500,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 170"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800",
+   "parent": null,
+   "section": "appropriations",
+   "name": "ARPA Interest Fund",
+   "code": "1800",
+   "amount": 365000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800-cap",
+   "parent": "f1800",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 365000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 171"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1801",
+   "parent": null,
+   "section": "appropriations",
+   "name": "SUT General Fund",
+   "code": "1801",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1801-sup",
+   "parent": "f1801",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1100,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 172"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1801-osc",
+   "parent": "f1801",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3900,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 172"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Road Fund",
+   "code": "2000",
+   "amount": 14283056.97,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-ps",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 4058643.97,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 174"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-sup",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2833000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 175"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-osc",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3987403,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 175"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-cap",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 3404010,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 176"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Additional Motor Fuel Tax Fund",
+   "code": "2003",
+   "amount": 1000000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003-sup",
+   "parent": "f2003",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 177"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Automation Fund",
+   "code": "3000",
+   "amount": 135663.57,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-ps",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 84563.57,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 178"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-sup",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7500,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 179"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-osc",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 32600,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 179"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-cap",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 179"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-tr",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 179"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Automation Fund",
+   "code": "3001",
+   "amount": 556985,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-sup",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 539985,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 180"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-osc",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 17000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 180"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Automation Fund",
+   "code": "3002",
+   "amount": 30300,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-sup",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 181"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-osc",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 13300,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 181"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-cap",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 181"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Amendment 79 Fund",
+   "code": "3004",
+   "amount": 49151,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-sup",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 49151,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 182"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk's Automation Fund",
+   "code": "3005",
+   "amount": 56472.15,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-ps",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 56272.15,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 183"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-sup",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 100,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 184"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-osc",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 100,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 184"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Recorder Cost Fund",
+   "code": "3006",
+   "amount": 1037187.34,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-ps",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 629377.34,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 185"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-sup",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7110,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 186"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-osc",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 379700,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 186"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-cap",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 186"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-tr",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 11000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 186"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Library Fund",
+   "code": "3008",
+   "amount": 5000000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-osc",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5000000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 187"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Child Support Collection Fund",
+   "code": "3012",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-sup",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 188"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-osc",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 188"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff Drug Control Fund",
+   "code": "3015",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015-sup",
+   "parent": "f3015",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 189"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015-osc",
+   "parent": "f3015",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 9000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 189"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Fund",
+   "code": "3017",
+   "amount": 5132871.4,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The ordinance adopts this fund as one amount; the department split under it is from the 'Request 2026' column of the attached proposed budget, which adds exactly to the adopted amount."
+  },
+  {
+   "id": "f3017-d0418",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "County Jail",
+   "code": "3017-0418",
+   "amount": 4761371.4,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 191"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0418-ps",
+   "parent": "f3017-d0418",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 3297371.4,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 190"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0418-sup",
+   "parent": "f3017-d0418",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 689000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 191"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0418-osc",
+   "parent": "f3017-d0418",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 775000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 191"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0463",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Jail Maintenance",
+   "code": "3017-0463",
+   "amount": 356500,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 192"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0463-sup",
+   "parent": "f3017-d0463",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 165500,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 192"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0463-osc",
+   "parent": "f3017-d0463",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 141000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 192"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0463-cap",
+   "parent": "f3017-d0463",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 50000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 192"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0464",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Solar Field Maintenance",
+   "code": "3017-0464",
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 193"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0464-sup",
+   "parent": "f3017-d0464",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 193"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0464-osc",
+   "parent": "f3017-d0464",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 14000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 193"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Rescue Fund",
+   "code": "3019",
+   "amount": 10980,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-osc",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10980,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 194"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "911 Emergency Fund",
+   "code": "3020",
+   "amount": 2933747.14,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-ps",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2446197.14,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 195"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-sup",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 110250,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 196"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-osc",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 322300,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 196"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-cap",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 50000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 196"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-tr",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 196"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Public Defender Fund",
+   "code": "3024",
+   "amount": 97946.63,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024-ps",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 50661.63,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 197"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024-sup",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 23000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 198"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024-osc",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 24285,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 198"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3025",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Victim Witness Fund",
+   "code": "3025",
+   "amount": 69900,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3025-osc",
+   "parent": "f3025",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 69900,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 199"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Adult Drug Court Fund",
+   "code": "3028",
+   "amount": 18000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028-osc",
+   "parent": "f3028",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 18000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 200"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Fees Fund",
+   "code": "3031",
+   "amount": 77728,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-ps",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 7728,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 201"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-osc",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 34000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 202"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-tr",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 36000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 202"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk Commissions Fund",
+   "code": "3039",
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039-sup",
+   "parent": "f3039",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 203"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Late Assessment Fee Fund",
+   "code": "3042",
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042-sup",
+   "parent": "f3042",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 204"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3046",
+   "parent": null,
+   "section": "appropriations",
+   "name": "American Rescue Plan Fund",
+   "code": "3046",
+   "amount": 4031039.14,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3046-d0191",
+   "parent": "f3046",
+   "section": "appropriations",
+   "name": "ARP Water Project Department",
+   "code": "3046-0191",
+   "amount": 4031038.14,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3046-d0191-ps",
+   "parent": "f3046-d0191",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 205"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3046-d0191-sup",
+   "parent": "f3046-d0191",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 206"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3046-d0191-osc",
+   "parent": "f3046-d0191",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3201038.14,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 206"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3046-d0191-cap",
+   "parent": "f3046-d0191",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 800000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 206"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3046-d0192",
+   "parent": "f3046",
+   "section": "appropriations",
+   "name": "ARP AWIN Project Department",
+   "code": "3046-0192",
+   "amount": 1,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3046-d0192-cap",
+   "parent": "f3046-d0192",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 207"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3048",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Adult Drug Court - Opioid Settlement Grant Fund",
+   "code": "3048",
+   "amount": 11723.94,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3048-sup",
+   "parent": "f3048",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 200,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 209"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3048-osc",
+   "parent": "f3048",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 11523.94,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 209"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3049",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Passport Acceptance Facility Fee Fund",
+   "code": "3049",
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3049-ps",
+   "parent": "f3049",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 3692.1,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 210"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3049-sup",
+   "parent": "f3049",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3600,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 211"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3049-osc",
+   "parent": "f3049",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7707.9,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 211"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400",
+   "parent": null,
+   "section": "appropriations",
+   "name": "District Court Cost Fund",
+   "code": "3400",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-tr",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 212"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3401",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Bond Forfeiture Fund",
+   "code": "3401",
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3401-osc",
+   "parent": "f3401",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 213"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff's Bail Bond Fund",
+   "code": "3402",
+   "amount": 288000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402-sup",
+   "parent": "f3402",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 92000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 214"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402-osc",
+   "parent": "f3402",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 26000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 214"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402-cap",
+   "parent": "f3402",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 170000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 214"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3403",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Planning Board Fund",
+   "code": "3403",
+   "amount": 53107.1,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3403-ps",
+   "parent": "f3403",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 4757.1,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 215"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3403-sup",
+   "parent": "f3403",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 216"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3403-osc",
+   "parent": "f3403",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 44350,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 216"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Recorder Computers-25% Fund",
+   "code": "3404",
+   "amount": 320000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404-sup",
+   "parent": "f3404",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 65000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 217"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404-osc",
+   "parent": "f3404",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 225000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 217"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404-cap",
+   "parent": "f3404",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 217"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3405",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emergency Fund",
+   "code": "3405",
+   "amount": 210000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3405-osc",
+   "parent": "f3405",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 110000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 218"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3405-cap",
+   "parent": "f3405",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 100000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 218"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3406",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Voluntary Tax Warning System Fund",
+   "code": "3406",
+   "amount": 65000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3406-sup",
+   "parent": "f3406",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 219"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3406-osc",
+   "parent": "f3406",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 50000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 219"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3406-cap",
+   "parent": "f3406",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 219"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3409",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Animal Control Fund",
+   "code": "3409",
+   "amount": 87552.02,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3409-ps",
+   "parent": "f3409",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 52552.02,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 220"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3409-osc",
+   "parent": "f3409",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 35000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 221"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3410",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Saline County Fairgrounds Grant",
+   "code": "3410",
+   "amount": 17,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3410-sup",
+   "parent": "f3410",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 17,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 222"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3411",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Improvement Fund",
+   "code": "3411",
+   "amount": 707922,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3411-sup",
+   "parent": "f3411",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 587922,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 223"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3411-osc",
+   "parent": "f3411",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 70000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 223"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3411-cap",
+   "parent": "f3411",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 50000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 223"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3412",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff's Federal Drug Control Fund",
+   "code": "3412",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3412-osc",
+   "parent": "f3412",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 224"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3413",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff's Fine and Restitution Installment Payment Fees Fund",
+   "code": "3413",
+   "amount": 35000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3413-sup",
+   "parent": "f3413",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 225"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3413-osc",
+   "parent": "f3413",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 34000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 225"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3414",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk's Fine and Restitution Payment Fees Fund",
+   "code": "3414",
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3414-sup",
+   "parent": "f3414",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 226"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3415",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Law Enforcement Protection Services & Detention Center Fund",
+   "code": "3415",
+   "amount": 150000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3415-sup",
+   "parent": "f3415",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 122000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 227"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3415-osc",
+   "parent": "f3415",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 26000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 227"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3415-cap",
+   "parent": "f3415",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 227"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3416",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Saline County Airport Special Project Fund",
+   "code": "3416",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3416-sup",
+   "parent": "f3416",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9999,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 228"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3416-osc",
+   "parent": "f3416",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 228"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3513",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Miscellaneous State Grants Fund",
+   "code": "3513",
+   "amount": 105000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3513-osc",
+   "parent": "f3513",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 105000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 230"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3516",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Rapid DNA System Pilot Program Grant",
+   "code": "3516",
+   "amount": 550000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3516-sup",
+   "parent": "f3516",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 310000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 232"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3516-osc",
+   "parent": "f3516",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 200000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 232"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3516-cap",
+   "parent": "f3516",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 40000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 232"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3737",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff DUI/Seatbelt Program Grant",
+   "code": "3737",
+   "amount": 102600,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3737-ps",
+   "parent": "f3737",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 64000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 233"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3737-sup",
+   "parent": "f3737",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 38600,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 234"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3746",
+   "parent": null,
+   "section": "appropriations",
+   "name": "ARREST Federal Grant",
+   "code": "3746",
+   "amount": 150575.05,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The ordinance adopts this fund as one amount; the department split under it is from the 'Request 2026' column of the attached proposed budget, which adds exactly to the adopted amount."
+  },
+  {
+   "id": "f3746-d0100",
+   "parent": "f3746",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "3746-0100",
+   "amount": 3083,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 235"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3746-d0100-osc",
+   "parent": "f3746-d0100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3083,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 235"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3746-d0400",
+   "parent": "f3746",
+   "section": "appropriations",
+   "name": "ICJR - Sheriff Dept",
+   "code": "3746-0400",
+   "amount": 72394.05,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 237"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3746-d0400-ps",
+   "parent": "f3746-d0400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 65389.05,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 236"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3746-d0400-osc",
+   "parent": "f3746-d0400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7005,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 237"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3746-d0416",
+   "parent": "f3746",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney",
+   "code": "3746-0416",
+   "amount": 31827,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 239"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3746-d0416-ps",
+   "parent": "f3746-d0416",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 31827,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 238"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3746-d0811",
+   "parent": "f3746",
+   "section": "appropriations",
+   "name": "Safe Haven",
+   "code": "3746-0811",
+   "amount": 43271,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 240"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3746-d0811-osc",
+   "parent": "f3746-d0811",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 43271,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 240"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3759",
+   "parent": null,
+   "section": "appropriations",
+   "name": "STOP Federal Grant",
+   "code": "3759",
+   "amount": 65357.03,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3759-ps",
+   "parent": "f3759",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 65357.03,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 241"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4801",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sales and Use Bond Building & Replacement Fund",
+   "code": "4801",
+   "amount": 202000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4801-sup",
+   "parent": "f4801",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 140000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 243"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4801-osc",
+   "parent": "f4801",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 32000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 243"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4801-cap",
+   "parent": "f4801",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 243"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4802",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sales and Use Bond Construction Fund",
+   "code": "4802",
+   "amount": 6588014.32,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4802-sup",
+   "parent": "f4802",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6296994.32,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 244"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4802-osc",
+   "parent": "f4802",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 141000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 244"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4802-cap",
+   "parent": "f4802",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 150020,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 244"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6009",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Saline County Law Library Fund",
+   "code": "6009",
+   "amount": 9000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6009-sup",
+   "parent": "f6009",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 245"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6009-osc",
+   "parent": "f6009",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 8500,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 245"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f7001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Airport Commission Fund",
+   "code": "7001",
+   "amount": 825673.66,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f7001-ps",
+   "parent": "f7001",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 160675.66,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 246"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f7001-sup",
+   "parent": "f7001",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 561108,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 247"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f7001-osc",
+   "parent": "f7001",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 102890,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 247"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f7001-cap",
+   "parent": "f7001",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "salinear-budget-2026",
+    "page": "p. 247"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }

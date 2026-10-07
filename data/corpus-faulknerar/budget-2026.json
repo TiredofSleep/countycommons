@@ -1,25 +1,5015 @@
 {
-  "meta": {
-    "document": "Faulkner County — no appropriation document ingested yet",
-    "title": "Faulkner County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Faulkner County 2026 adopted budget",
+  "title": "Faulkner County — the money trail",
+  "year": 2026,
+  "grand_total": 72110702.04,
+  "note": "This is Faulkner County's 2026 budget as filed with the state. We used the 2026 appropriation for each fund and department. The fund totals add up to the county's printed total."
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General",
+   "code": "1000",
+   "amount": 16383000.29,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Faulkner County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-0100",
+   "amount": 1104773.62,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (pp. 15–17)."
+  },
+  {
+   "id": "f1000-d0100-ps",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 573132.2,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-sup",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 43000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-osc",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 478641.42,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-cap",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "1000-0101",
+   "amount": 772301.38,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (pp. 18–19)."
+  },
+  {
+   "id": "f1000-d0101-ps",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 651037.73,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-sup",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-osc",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 114263.65,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Clerk",
+   "code": "1000-0102",
+   "amount": 75000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (p. 20)."
+  },
+  {
+   "id": "f1000-d0102-osc",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 75000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 222778.66,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (pp. 21–22)."
+  },
+  {
+   "id": "f1000-d0107-ps",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 203331.22,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-sup",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2550,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-osc",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 16897.44,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Maintenance",
+   "code": "1000-0108",
+   "amount": 641499.58,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (pp. 23–24)."
+  },
+  {
+   "id": "f1000-d0108-ps",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 310042.61,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-sup",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 207000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-osc",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 84456.97,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-cap",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 40000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Elections / Voter Registration",
+   "code": "1000-0109",
+   "amount": 418390.67,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (pp. 25–26)."
+  },
+  {
+   "id": "f1000-d0109-ps",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 327685.27,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-sup",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 12500,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-osc",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 75705.4,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-cap",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0115",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "IT Department",
+   "code": "1000-0115",
+   "amount": 482786.36,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (pp. 27–28)."
+  },
+  {
+   "id": "f1000-d0115-ps",
+   "parent": "f1000-d0115",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 316316.57,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0115-sup",
+   "parent": "f1000-d0115",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 24000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0115-osc",
+   "parent": "f1000-d0115",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 112469.79,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0115-cap",
+   "parent": "f1000-d0115",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0304",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Grants-In Aid Health",
+   "code": "1000-0304",
+   "amount": 45059,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (p. 29)."
+  },
+  {
+   "id": "f1000-d0304-cs",
+   "parent": "f1000-d0304",
+   "section": "appropriations",
+   "name": "Contract services",
+   "code": null,
+   "amount": 45059,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as 'Contract Services'; it holds line 3103 Grants-in-Aid (a 3000-series line)."
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Sheriff",
+   "code": "1000-0400",
+   "amount": 5106028.3,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (pp. 30–33)."
+  },
+  {
+   "id": "f1000-d0400-ps",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 5106028.3,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court 1st Division",
+   "code": "1000-0401",
+   "amount": 158074.29,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (pp. 34–35)."
+  },
+  {
+   "id": "f1000-d0401-ps",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 113793.03,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-sup",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 11075,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-osc",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 29706.26,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-cap",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 3500,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court 2nd Division",
+   "code": "1000-0402",
+   "amount": 1009951.74,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (pp. 36–38)."
+  },
+  {
+   "id": "f1000-d0402-ps",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 916770.14,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-sup",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 33445,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-osc",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 59736.6,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court 3rd Division",
+   "code": "1000-0403",
+   "amount": 132466.7,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (pp. 39–40)."
+  },
+  {
+   "id": "f1000-d0403-ps",
+   "parent": "f1000-d0403",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 84410.44,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403-sup",
+   "parent": "f1000-d0403",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 12500,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403-osc",
+   "parent": "f1000-d0403",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 31556.26,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403-cap",
+   "parent": "f1000-d0403",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0404",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court 4th Division",
+   "code": "1000-0404",
+   "amount": 53687.7,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (pp. 41–42)."
+  },
+  {
+   "id": "f1000-d0404-ps",
+   "parent": "f1000-d0404",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2477.44,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0404-sup",
+   "parent": "f1000-d0404",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 14100,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0404-osc",
+   "parent": "f1000-d0404",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 33110.26,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0404-cap",
+   "parent": "f1000-d0404",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0405",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court 5th Division",
+   "code": "1000-0405",
+   "amount": 127641.7,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (pp. 43–44)."
+  },
+  {
+   "id": "f1000-d0405-ps",
+   "parent": "f1000-d0405",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 84410.44,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0405-sup",
+   "parent": "f1000-d0405",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 11200,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0405-osc",
+   "parent": "f1000-d0405",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 30031.26,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0405-cap",
+   "parent": "f1000-d0405",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court",
+   "code": "1000-0409",
+   "amount": 242102.06,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (pp. 45–46)."
+  },
+  {
+   "id": "f1000-d0409-ps",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 205102.06,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-sup",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-osc",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney",
+   "code": "1000-0416",
+   "amount": 1069021.28,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (pp. 48–50)."
+  },
+  {
+   "id": "f1000-d0416-ps",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 908941.8,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-sup",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 55100,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 49"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-osc",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 99979.48,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-cap",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0417",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Public Defender",
+   "code": "1000-0417",
+   "amount": 134786.47,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (p. 51)."
+  },
+  {
+   "id": "f1000-d0417-ps",
+   "parent": "f1000-d0417",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 111484.91,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0417-osc",
+   "parent": "f1000-d0417",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 23301.56,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Jail",
+   "code": "1000-0418",
+   "amount": 3151808.42,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (pp. 52–54)."
+  },
+  {
+   "id": "f1000-d0418-ps",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2614287.03,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-osc",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 537521.39,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Coroner",
+   "code": "1000-0419",
+   "amount": 539820.02,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (pp. 55–57)."
+  },
+  {
+   "id": "f1000-d0419-ps",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 387714.57,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-sup",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 30500,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-osc",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 44605.45,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-cap",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 77000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0429",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Victim Services / Domestic Violence",
+   "code": "1000-0429",
+   "amount": 243908.67,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (pp. 58–59)."
+  },
+  {
+   "id": "f1000-d0429-ps",
+   "parent": "f1000-d0429",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 210597.67,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0429-sup",
+   "parent": "f1000-d0429",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 8500,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0429-osc",
+   "parent": "f1000-d0429",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 22511,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0429-cap",
+   "parent": "f1000-d0429",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2300,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0433",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Jail Juvenile Grant",
+   "code": "1000-0433",
+   "amount": 66749.8,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (p. 60)."
+  },
+  {
+   "id": "f1000-d0433-ps",
+   "parent": "f1000-d0433",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 66749.8,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Office of Emergency Management",
+   "code": "1000-0500",
+   "amount": 261757.01,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (pp. 61–63)."
+  },
+  {
+   "id": "f1000-d0500-ps",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 141757.01,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-sup",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 72400,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-osc",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 37600,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-cap",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 63"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veterans Service",
+   "code": "1000-0800",
+   "amount": 175098.44,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (pp. 65–66)."
+  },
+  {
+   "id": "f1000-d0800-ps",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 151634.82,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 65"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-sup",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 65"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-osc",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 22463.62,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0803",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Grants-In Aid Social Services",
+   "code": "1000-0803",
+   "amount": 147508.42,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (p. 67)."
+  },
+  {
+   "id": "f1000-d0803-cs",
+   "parent": "f1000-d0803",
+   "section": "appropriations",
+   "name": "Contract services",
+   "code": null,
+   "amount": 147508.42,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as 'Contract Services'; it holds line 3103 Grants-in-Aid (a 3000-series line)."
+  },
+  {
+   "id": "f1002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Health Insurance",
+   "code": "1002-0121",
+   "amount": 4900000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1002-osc",
+   "parent": "f1002",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4900000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 68"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "ARPA Revenue Replacement",
+   "code": "1006",
+   "amount": 5747239.87,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1006-d0406",
+   "parent": "f1006",
+   "section": "appropriations",
+   "name": "Faulkner County Animal Shelter",
+   "code": "1006-0406",
+   "amount": 42156.67,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (p. 71)."
+  },
+  {
+   "id": "f1006-d0406-cap",
+   "parent": "f1006-d0406",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 42156.67,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 71"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1006-d0418",
+   "parent": "f1006",
+   "section": "appropriations",
+   "name": "Jail",
+   "code": "1006-0418",
+   "amount": 5705083.2,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (p. 72)."
+  },
+  {
+   "id": "f1006-d0418-cap",
+   "parent": "f1006-d0418",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 5705083.2,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 72"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1801",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Commissary",
+   "code": "1801-0426",
+   "amount": 708000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1801-sup",
+   "parent": "f1801",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 324000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1801-osc",
+   "parent": "f1801",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 384000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1805",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General Apportioned",
+   "code": "1805",
+   "amount": 3122181.58,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1805-d0103",
+   "parent": "f1805",
+   "section": "appropriations",
+   "name": "County Treasurer",
+   "code": "1805-0103",
+   "amount": 383526.7,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (p. 74)."
+  },
+  {
+   "id": "f1805-d0103-ps",
+   "parent": "f1805-d0103",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 383526.7,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 74"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1805-d0104",
+   "parent": "f1805",
+   "section": "appropriations",
+   "name": "County Collector",
+   "code": "1805-0104",
+   "amount": 673948.54,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (pp. 75–77)."
+  },
+  {
+   "id": "f1805-d0104-ps",
+   "parent": "f1805-d0104",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 497217.28,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 75"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1805-d0104-sup",
+   "parent": "f1805-d0104",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 19200,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1805-d0104-osc",
+   "parent": "f1805-d0104",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 157531.26,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1805-d0105",
+   "parent": "f1805",
+   "section": "appropriations",
+   "name": "County Assessor",
+   "code": "1805-0105",
+   "amount": 1769197.42,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (pp. 78–81)."
+  },
+  {
+   "id": "f1805-d0105-ps",
+   "parent": "f1805-d0105",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1502704.41,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1805-d0105-sup",
+   "parent": "f1805-d0105",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 109700,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1805-d0105-osc",
+   "parent": "f1805-d0105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 131793.01,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 81"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1805-d0105-cap",
+   "parent": "f1805-d0105",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 81"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1805-d0106",
+   "parent": "f1805",
+   "section": "appropriations",
+   "name": "Equalization Board",
+   "code": "1805-0106",
+   "amount": 15920.06,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (p. 82)."
+  },
+  {
+   "id": "f1805-d0106-ps",
+   "parent": "f1805-d0106",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 15320.06,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 82"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1805-d0106-sup",
+   "parent": "f1805-d0106",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 600,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 82"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1805-d0430",
+   "parent": "f1805",
+   "section": "appropriations",
+   "name": "County Civil Attorney",
+   "code": "1805-0430",
+   "amount": 279588.86,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (pp. 83–84)."
+  },
+  {
+   "id": "f1805-d0430-ps",
+   "parent": "f1805-d0430",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 237338.86,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 83"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1805-d0430-sup",
+   "parent": "f1805-d0430",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1400,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 83"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1805-d0430-osc",
+   "parent": "f1805-d0430",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 39350,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 84"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1805-d0430-cap",
+   "parent": "f1805-d0430",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 84"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Capital Improvements (Jail)",
+   "code": "1810",
+   "amount": 277738.5,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810-d0100",
+   "parent": "f1810",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1810-0100",
+   "amount": 145000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (p. 85)."
+  },
+  {
+   "id": "f1810-d0100-osc",
+   "parent": "f1810-d0100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 145000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 85"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810-d0418",
+   "parent": "f1810",
+   "section": "appropriations",
+   "name": "County Jail",
+   "code": "1810-0418",
+   "amount": 132738.5,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (p. 86)."
+  },
+  {
+   "id": "f1810-d0418-osc",
+   "parent": "f1810-d0418",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 132738.5,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 86"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Road",
+   "code": "2000-0200",
+   "amount": 12331627.36,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-ps",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 4061751.05,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 89"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-sup",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2411500,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 90"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-osc",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 921376.31,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-cap",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 4900000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-debt",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 37000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Automation",
+   "code": "3000-0119",
+   "amount": 99067.16,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-sup",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 13500,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 92"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-osc",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 50567.16,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 93"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-cap",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 35000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 93"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Automation",
+   "code": "3001-0118",
+   "amount": 364478.25,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-ps",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 253728.25,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 94"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-sup",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 35000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 94"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-osc",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 65750,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 95"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-cap",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 95"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Amendment 79",
+   "code": "3004-0112",
+   "amount": 47445.48,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-ps",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 33445.48,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 96"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-sup",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6500,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 96"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-osc",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7500,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 96"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk Cost",
+   "code": "3005-0117",
+   "amount": 47945.08,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-ps",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 43445.08,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 97"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-osc",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 98"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-cap",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 98"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Recorder's Cost",
+   "code": "3006-0120",
+   "amount": 1058846.21,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-ps",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 936632.05,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 100"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-sup",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 13500,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 100"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-osc",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 96214.16,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 101"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-cap",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 12500,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 101"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3007",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriffs Automation",
+   "code": "3007-0438",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3007-sup",
+   "parent": "f3007",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 102"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Library",
+   "code": "3008-0600",
+   "amount": 3115899.35,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-ps",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2360600.64,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 104"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-sup",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 341500,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 105"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-osc",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 370798.71,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 106"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-cap",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 43000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 106"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3011",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Reappraisal Cost",
+   "code": "3011-0110",
+   "amount": 825000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3011-osc",
+   "parent": "f3011",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 825000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 107"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Child Support",
+   "code": "3012-0114",
+   "amount": 7450,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-sup",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1250,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 108"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-osc",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4700,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 108"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-cap",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 108"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Operations & Maintenance",
+   "code": "3017-0439",
+   "amount": 419156.41,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-osc",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 419156.41,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 110"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3018",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Detention Facility",
+   "code": "3018-0437",
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3018-osc",
+   "parent": "f3018",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 111"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "911 / PSAP",
+   "code": "3020-0501",
+   "amount": 232911.62,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-sup",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 85000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 112"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-osc",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 97911.62,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 113"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-cap",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 50000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 113"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Public Defender",
+   "code": "3024-0417",
+   "amount": 59100,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024-sup",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 13700,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 114"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024-osc",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 41400,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 115"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024-cap",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 115"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Public Defender Investigator",
+   "code": "3026-0417",
+   "amount": 110351.88,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026-osc",
+   "parent": "f3026",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 110351.88,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 117"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3027",
+   "parent": null,
+   "section": "appropriations",
+   "name": "District Court Probation Fees",
+   "code": "3027-0408",
+   "amount": 94528.57,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3027-ps",
+   "parent": "f3027",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 77237.57,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 118"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3027-sup",
+   "parent": "f3027",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 118"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3027-osc",
+   "parent": "f3027",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 15291,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 119"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Court",
+   "code": "3028-0403",
+   "amount": 3335.03,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028-ps",
+   "parent": "f3028",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 3335.03,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 120"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Probation",
+   "code": "3031-0431",
+   "amount": 23235.82,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-sup",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1642.36,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 121"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-osc",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 21593.46,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 121"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Tax Assessor - Late Assessment Fees",
+   "code": "3042-0105",
+   "amount": 50000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042-cap",
+   "parent": "f3042",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 50000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 122"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3044",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Control - Prosecuting Attorney",
+   "code": "3044-0416",
+   "amount": 19255.9,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3044-cap",
+   "parent": "f3044",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 19255.9,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 123"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3046",
+   "parent": null,
+   "section": "appropriations",
+   "name": "American Rescue Plan",
+   "code": "3046",
+   "amount": 2347680.58,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3046-d0100",
+   "parent": "f3046",
+   "section": "appropriations",
+   "name": "ARP-County Judge",
+   "code": "3046-0100",
+   "amount": 216466.28,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (p. 124)."
+  },
+  {
+   "id": "f3046-d0100-ps",
+   "parent": "f3046-d0100",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 61319.07,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3046-d0100-osc",
+   "parent": "f3046-d0100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 155147.21,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3046-d0704",
+   "parent": "f3046",
+   "section": "appropriations",
+   "name": "ARP-Conway Corporation",
+   "code": "3046-0704",
+   "amount": 486927.84,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (p. 128)."
+  },
+  {
+   "id": "f3046-d0704-cap",
+   "parent": "f3046-d0704",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 486927.84,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 128"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3046-d0708",
+   "parent": "f3046",
+   "section": "appropriations",
+   "name": "ARP-City of Wooster",
+   "code": "3046-0708",
+   "amount": 160010.12,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (p. 132)."
+  },
+  {
+   "id": "f3046-d0708-cap",
+   "parent": "f3046-d0708",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 160010.12,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 132"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3046-d0709",
+   "parent": "f3046",
+   "section": "appropriations",
+   "name": "ARP-City of Mayflower",
+   "code": "3046-0709",
+   "amount": 1079750,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (p. 133)."
+  },
+  {
+   "id": "f3046-d0709-cap",
+   "parent": "f3046-d0709",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1079750,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 133"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3046-d0710",
+   "parent": "f3046",
+   "section": "appropriations",
+   "name": "ARP-Stop DV",
+   "code": "3046-0710",
+   "amount": 171111.15,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (p. 134)."
+  },
+  {
+   "id": "f3046-d0710-cs",
+   "parent": "f3046-d0710",
+   "section": "appropriations",
+   "name": "Contract services",
+   "code": null,
+   "amount": 171111.15,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 134"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as 'Contract Services'; it holds line 3103 Grants-in-Aid (a 3000-series line). Subtotal printed as 'Contracts Services' under this heading."
+  },
+  {
+   "id": "f3046-d0716",
+   "parent": "f3046",
+   "section": "appropriations",
+   "name": "ARP-Community Action Program of Central AR",
+   "code": "3046-0716",
+   "amount": 208415.19,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (p. 139)."
+  },
+  {
+   "id": "f3046-d0716-cs",
+   "parent": "f3046-d0716",
+   "section": "appropriations",
+   "name": "Contract services",
+   "code": null,
+   "amount": 208415.19,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 139"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as 'Contract Services'; it holds line 3103 Grants-in-Aid (a 3000-series line). Subtotal printed as 'Contracts Services' under this heading."
+  },
+  {
+   "id": "f3046-d0722",
+   "parent": "f3046",
+   "section": "appropriations",
+   "name": "Conway Corporation Water",
+   "code": "3046-0722",
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (p. 145)."
+  },
+  {
+   "id": "f3046-d0722-cap",
+   "parent": "f3046-d0722",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 145"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Subtotal printed as 'Contracts Services' under this heading."
+  },
+  {
+   "id": "f3048",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Adult Drug Court",
+   "code": "3048-0403",
+   "amount": 14035.38,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3048-osc",
+   "parent": "f3048",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 14035.38,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 146"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3049",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Passport Acceptance Facility",
+   "code": "3049-0117",
+   "amount": 31500,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3049-sup",
+   "parent": "f3049",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9500,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 147"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3049-osc",
+   "parent": "f3049",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 22000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 147"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emergency Squad",
+   "code": "3400-0520",
+   "amount": 153715.43,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-sup",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 46100,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 148"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-osc",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 32615.43,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 149"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-cap",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 75000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 149"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3401",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Museum",
+   "code": "3401-0604",
+   "amount": 80950.58,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3401-ps",
+   "parent": "f3401",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 67412.32,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 150"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3401-osc",
+   "parent": "f3401",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 13538.26,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 150"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Road Sales Tax",
+   "code": "3402-0201",
+   "amount": 9215000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402-sup",
+   "parent": "f3402",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3425000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 151"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402-osc",
+   "parent": "f3402",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 500000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 151"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402-cap",
+   "parent": "f3402",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 5290000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 151"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Animal Welfare & Control",
+   "code": "3404-0406",
+   "amount": 496484,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404-sup",
+   "parent": "f3404",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 82100,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 152"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404-osc",
+   "parent": "f3404",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 414384,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 153"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3407",
+   "parent": null,
+   "section": "appropriations",
+   "name": "CJST / County Jail",
+   "code": "3407",
+   "amount": 8280072.83,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3407-d0421",
+   "parent": "f3407",
+   "section": "appropriations",
+   "name": "CJST / County Jail",
+   "code": "3407-0421",
+   "amount": 5205396.16,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (pp. 155–158)."
+  },
+  {
+   "id": "f3407-d0421-ps",
+   "parent": "f3407-d0421",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 3636396.16,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 157"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3407-d0421-sup",
+   "parent": "f3407-d0421",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 985000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 158"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3407-d0421-osc",
+   "parent": "f3407-d0421",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 584000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 158"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3407-d0436",
+   "parent": "f3407",
+   "section": "appropriations",
+   "name": "CJST / Deputies",
+   "code": "3407-0436",
+   "amount": 3074676.67,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Categories from the department's application pages (pp. 159–161)."
+  },
+  {
+   "id": "f3407-d0436-ps",
+   "parent": "f3407-d0436",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1488550.65,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 160"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3407-d0436-sup",
+   "parent": "f3407-d0436",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 731000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 160"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3407-d0436-osc",
+   "parent": "f3407-d0436",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 465126.02,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 161"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3407-d0436-cap",
+   "parent": "f3407-d0436",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 390000,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 161"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3411",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Teen Court",
+   "code": "3411-0440",
+   "amount": 7252,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3411-sup",
+   "parent": "f3411",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2950,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 162"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3411-osc",
+   "parent": "f3411",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4302,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 162"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3412",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Court Programs",
+   "code": "3412-0412",
+   "amount": 1319,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3412-sup",
+   "parent": "f3412",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1075.97,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 163"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3412-osc",
+   "parent": "f3412",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 243.03,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 163"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3413",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Soil Conservation",
+   "code": "3413-0801",
+   "amount": 60610,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3413-sup",
+   "parent": "f3413",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10500,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 164"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3413-osc",
+   "parent": "f3413",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 50110,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 164"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3414",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Extension Office",
+   "code": "3414-0806",
+   "amount": 73886,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3414-osc",
+   "parent": "f3414",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 73886,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 165"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3505",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Courts Grant",
+   "code": "3505-0434",
+   "amount": 48471.29,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3505-ps",
+   "parent": "f3505",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 25167.37,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 170"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3505-sup",
+   "parent": "f3505",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 16855.9,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 170"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3505-osc",
+   "parent": "f3505",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6448.02,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 170"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3513",
+   "parent": null,
+   "section": "appropriations",
+   "name": "JAG Grant",
+   "code": "3513-0513",
+   "amount": 4860.31,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3513-osc",
+   "parent": "f3513",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4860.31,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 174"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3514",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Court Grant Non Fed/State",
+   "code": "3514-0434",
+   "amount": 250,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3514-osc",
+   "parent": "f3514",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 250,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 175"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3528",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Peer Service Specialty Court Grant",
+   "code": "3528-0403",
+   "amount": 56128.25,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3528-ps",
+   "parent": "f3528",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 56128.25,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 181"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3531",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Rapid DNA Grant",
+   "code": "3531-0400",
+   "amount": 461731.47,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3531-sup",
+   "parent": "f3531",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 314132.31,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 183"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3531-osc",
+   "parent": "f3531",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 147599.16,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 183"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3533",
+   "parent": null,
+   "section": "appropriations",
+   "name": "BJA Grant (ADCE)",
+   "code": "3533-0403",
+   "amount": 269102.33,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3533-ps",
+   "parent": "f3533",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 75737.33,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 184"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3533-sup",
+   "parent": "f3533",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 400,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 184"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3533-osc",
+   "parent": "f3533",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 191465,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 185"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3533-cap",
+   "parent": "f3533",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 185"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3550",
+   "parent": null,
+   "section": "appropriations",
+   "name": "BJA Grant (FREE-C)",
+   "code": "3550-0403",
+   "amount": 424858.23,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3550-ps",
+   "parent": "f3550",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 163613.14,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 186"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3550-sup",
+   "parent": "f3550",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6056.09,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 186"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3550-osc",
+   "parent": "f3550",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 255189,
+   "status": "sourced",
+   "source": {
+    "doc": "faulknerar-budget-2026",
+    "page": "p. 187"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }
