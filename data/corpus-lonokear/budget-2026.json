@@ -1,25 +1,3989 @@
 {
-  "meta": {
-    "document": "Lonoke County — no appropriation document ingested yet",
-    "title": "Lonoke County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Lonoke County 2026 adopted budget",
+  "title": "Lonoke County — the money trail",
+  "note": "This is Lonoke County's 2026 operating budget, dated November 20, 2025, which the quorum court adopted by ordinance and filed with the state. Amounts come from each office's 2026 appropriation page. The Jail Maintenance fund ($150,000) and Jail Employment fund ($237,000) send money to the Law Enforcement fund, so those dollars are counted in both places.",
+  "grand_total": 54583074.02,
+  "year": 2026
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General Fund",
+   "code": "1000",
+   "amount": 6847735.18,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "pp. 2–169"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total is printed; this is the sum of its departments."
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Lonoke County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge Office",
+   "code": "1000-100",
+   "amount": 105447.28,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d100-ps",
+   "parent": "f1000-d100",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 79673.04,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d100-sup",
+   "parent": "f1000-d100",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6299.46,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d100-oth",
+   "parent": "f1000-d100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 14974.78,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d100-cap",
+   "parent": "f1000-d100",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 4500,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Building and Maintenance",
+   "code": "1000-108",
+   "amount": 566740.5,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d108-ps",
+   "parent": "f1000-d108",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 276340.5,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d108-sup",
+   "parent": "f1000-d108",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 60000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d108-oth",
+   "parent": "f1000-d108",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 45400,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d108-cap",
+   "parent": "f1000-d108",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 185000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d110",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Central Ark. Planning and Development",
+   "code": "1000-110",
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d110-oth",
+   "parent": "f1000-d110",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Health Dept.",
+   "code": "1000-300",
+   "amount": 46440,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d300-sup",
+   "parent": "f1000-d300",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 14250,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d300-oth",
+   "parent": "f1000-d300",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 32190,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Screeton Fines - City Court Exp.",
+   "code": "1000-409",
+   "amount": 288857.39,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d409-oth",
+   "parent": "f1000-d409",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 288857.39,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d425",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Civil Attorney",
+   "code": "1000-425",
+   "amount": 70980,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d425-oth",
+   "parent": "f1000-d425",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 70980,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Office of Emergency Management",
+   "code": "1000-500",
+   "amount": 117037.14,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d500-ps",
+   "parent": "f1000-d500",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 89937.14,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d500-sup",
+   "parent": "f1000-d500",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5850,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d500-oth",
+   "parent": "f1000-d500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 21250,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veteran's Services",
+   "code": "1000-800",
+   "amount": 29283.29,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d800-ps",
+   "parent": "f1000-d800",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 20803.29,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d800-sup",
+   "parent": "f1000-d800",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3250,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d800-oth",
+   "parent": "f1000-d800",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5230,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Agriculture Extension Office",
+   "code": "1000-801",
+   "amount": 182359.63,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d801-oth",
+   "parent": "f1000-d801",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 182359.63,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d802",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Paupers & Welfare",
+   "code": "1000-802",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d802-oth",
+   "parent": "f1000-d802",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "1000-101",
+   "amount": 722042.95,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d101-ps",
+   "parent": "f1000-d101",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 600150.52,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d101-sup",
+   "parent": "f1000-d101",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 22300,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d101-oth",
+   "parent": "f1000-d101",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 99592.43,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-107",
+   "amount": 126514.78,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 64"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d107-ps",
+   "parent": "f1000-d107",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 121425.47,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 64"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d107-oth",
+   "parent": "f1000-d107",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5089.31,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 64"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Elections",
+   "code": "1000-109",
+   "amount": 145900,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d109-ps",
+   "parent": "f1000-d109",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d109-oth",
+   "parent": "f1000-d109",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 141900,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d117",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Tax Refunds",
+   "code": "1000-117",
+   "amount": 22000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 69"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d117-oth",
+   "parent": "f1000-d117",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 22000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 69"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d118",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Cobra",
+   "code": "1000-118",
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 70"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d118-ps",
+   "parent": "f1000-d118",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 70"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d420",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Constables",
+   "code": "1000-420",
+   "amount": 180,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 71"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d420-ps",
+   "parent": "f1000-d420",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 180,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 71"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Clerk",
+   "code": "1000-102",
+   "amount": 527067.77,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 81"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d102-ps",
+   "parent": "f1000-d102",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 471001.18,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 80"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d102-sup",
+   "parent": "f1000-d102",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 20500,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 80"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d102-oth",
+   "parent": "f1000-d102",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 35566.59,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 81"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Treasurer",
+   "code": "1000-103",
+   "amount": 340495.97,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 94"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d103-ps",
+   "parent": "f1000-d103",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 286257.25,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 93"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d103-sup",
+   "parent": "f1000-d103",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 21000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 93"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d103-oth",
+   "parent": "f1000-d103",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 33238.72,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 94"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Tax Collector",
+   "code": "1000-104",
+   "amount": 736238.59,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 104"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d104-ps",
+   "parent": "f1000-d104",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 517538.59,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 103"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d104-sup",
+   "parent": "f1000-d104",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 44500,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 103"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d104-oth",
+   "parent": "f1000-d104",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 174200,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 104"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Assessor",
+   "code": "1000-105",
+   "amount": 1075649.36,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 112"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d105-ps",
+   "parent": "f1000-d105",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 821234.27,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 111"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d105-sup",
+   "parent": "f1000-d105",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 52500,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 111"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d105-oth",
+   "parent": "f1000-d105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 201915.09,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 112"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d106",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Board of Equalization",
+   "code": "1000-106",
+   "amount": 2810,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 115"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d106-ps",
+   "parent": "f1000-d106",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 210,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 115"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d106-oth",
+   "parent": "f1000-d106",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2600,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 115"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court Div. I",
+   "code": "1000-401",
+   "amount": 116912.34,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d401-ps",
+   "parent": "f1000-d401",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 54843.53,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d401-sup",
+   "parent": "f1000-d401",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d401-oth",
+   "parent": "f1000-d401",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 42068.81,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d404",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court Jury Fees",
+   "code": "1000-404",
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 128"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Only a total appropriation is printed (one jurors and witnesses line), so there are no category totals."
+  },
+  {
+   "id": "f1000-d402",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court Div. II",
+   "code": "1000-402",
+   "amount": 88840.7,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 138"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d402-ps",
+   "parent": "f1000-d402",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 53380.7,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 138"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d402-sup",
+   "parent": "f1000-d402",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 14500,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 138"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d402-oth",
+   "parent": "f1000-d402",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 20960,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 138"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d403",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court Div. III",
+   "code": "1000-403",
+   "amount": 89036,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 144"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d403-ps",
+   "parent": "f1000-d403",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 51036,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 144"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d403-sup",
+   "parent": "f1000-d403",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 14000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 144"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d403-oth",
+   "parent": "f1000-d403",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 24000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 144"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d414",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Probation",
+   "code": "1000-414",
+   "amount": 645215.28,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 153"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d414-ps",
+   "parent": "f1000-d414",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 575245.28,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 152"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d414-sup",
+   "parent": "f1000-d414",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 13000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 152"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d414-oth",
+   "parent": "f1000-d414",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 52970,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 153"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d414-cap",
+   "parent": "f1000-d414",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 153"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney",
+   "code": "1000-416",
+   "amount": 571100.48,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 161"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d416-ps",
+   "parent": "f1000-d416",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 418700.48,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 160"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d416-sup",
+   "parent": "f1000-d416",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 67800,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 160"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d416-oth",
+   "parent": "f1000-d416",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 84600,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 161"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d417",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Public Defender",
+   "code": "1000-417",
+   "amount": 15225,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 166"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d417-sup",
+   "parent": "f1000-d417",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9700,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 166"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d417-oth",
+   "parent": "f1000-d417",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5525,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 166"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Coroner",
+   "code": "1000-419",
+   "amount": 162860.73,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 169"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d419-ps",
+   "parent": "f1000-d419",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 139310.73,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 168"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d419-sup",
+   "parent": "f1000-d419",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 168"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d419-oth",
+   "parent": "f1000-d419",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 14550,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 169"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "ARPA Revenue Replacement Fund",
+   "code": "1006",
+   "amount": 8085900.52,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The book has two pages for this fund. Page 24 shows $8,085,900.52, which matches its list of projects (General Heat & Air $200,000.00; Justice Center $7,725,707.50; CAPDD $160,193.02). Page 25 shows $8,655,489.31 with the note 'This amount is different b/c of spending before budget was approved.' We use page 24 and do not count both."
+  },
+  {
+   "id": "f1006-oth",
+   "parent": "f1006",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 8085900.52,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Housing Bond Account Fund",
+   "code": "1800",
+   "amount": 3809.77,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800-misc",
+   "parent": "f1800",
+   "section": "appropriations",
+   "name": "Miscellaneous",
+   "code": null,
+   "amount": 3809.77,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Road and Bridge",
+   "code": "2000",
+   "amount": 20126288.95,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-ps",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2621614.92,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-sup",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 8602500,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-oth",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5631144.17,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-cap",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 3271029.86,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Additional Motor Fuel Tax (Act 416)",
+   "code": "2003",
+   "amount": 1259400.25,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003-misc",
+   "parent": "f2003",
+   "section": "appropriations",
+   "name": "Miscellaneous",
+   "code": null,
+   "amount": 1259400.25,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Solid Waste",
+   "code": "3009",
+   "amount": 1220027.43,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-ps",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 709627.43,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-sup",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 113000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-oth",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 332400,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-cap",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 65000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emergency Rescue (Boating Safety)",
+   "code": "3019",
+   "amount": 24720,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-sup",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2520,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-oth",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6200,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-cap",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 16000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emergency 911",
+   "code": "3020",
+   "amount": 1761135.4,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-ps",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 170376.59,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-sup",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 276934.9,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-oth",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1313823.91,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3503",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Court Room Renovation Fund",
+   "code": "3503",
+   "amount": 27.3,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 49"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3503-misc",
+   "parent": "f3503",
+   "section": "appropriations",
+   "name": "Miscellaneous",
+   "code": null,
+   "amount": 27.3,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 49"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3504",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Courthouse Renovation Fund",
+   "code": "3504",
+   "amount": 201.42,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3504-misc",
+   "parent": "f3504",
+   "section": "appropriations",
+   "name": "Miscellaneous",
+   "code": null,
+   "amount": 201.42,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3505",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Lonoke Co. Veterans Memorial Grant Fund",
+   "code": "3505",
+   "amount": 1052.38,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3505-misc",
+   "parent": "f3505",
+   "section": "appropriations",
+   "name": "Miscellaneous",
+   "code": null,
+   "amount": 1052.38,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4901",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Furlow Wastewater Grant Fund",
+   "code": "4901",
+   "amount": 1152.8,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4901-misc",
+   "parent": "f4901",
+   "section": "appropriations",
+   "name": "Miscellaneous",
+   "code": null,
+   "amount": 1152.8,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f5800",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Brownsville Branch Project",
+   "code": "5800",
+   "amount": 5755.78,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f5800-misc",
+   "parent": "f5800",
+   "section": "appropriations",
+   "name": "Miscellaneous",
+   "code": null,
+   "amount": 5755.78,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk's Cost Fund",
+   "code": "3005",
+   "amount": 34000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-oth",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 34000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3010",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk's Operating Fund",
+   "code": "3010",
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 75"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3010-sup",
+   "parent": "f3010",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 75"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3038",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Voting System Grant",
+   "code": "3038",
+   "amount": 1200,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3038-oth",
+   "parent": "f3038",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1200,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Recorder's Cost Fund",
+   "code": "3006",
+   "amount": 297051.51,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 84"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-ps",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 225541.51,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 84"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-sup",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 55885,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 84"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-oth",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 15625,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 84"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk Child Support",
+   "code": "3012",
+   "amount": 2150,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 88"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The page also prints 'TOTAL CAPITAL OUTLAYS $2,150.00', but it lists no capital items and the total appropriation is $2,150.00, so that line repeats the other-services total; it is left out."
+  },
+  {
+   "id": "f3012-oth",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2150,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 88"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk's Commissioner's Fund",
+   "code": "3039",
+   "amount": 1817.92,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 90"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039-oth",
+   "parent": "f3039",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1817.92,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 90"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurers Automation Fund",
+   "code": "3000",
+   "amount": 305407.22,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 98"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-ps",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 118407.22,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 97"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-sup",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 80000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 97"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-oth",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 107000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 98"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Automation Fund",
+   "code": "3001",
+   "amount": 357228.13,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 106"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Only page 2 of this form is in the filed document (p. 106). It prints the other-services total ($139,000.00) and the total appropriation ($357,228.13); page 1 with personal services and supplies is missing, so the categories shown do not add up to the total."
+  },
+  {
+   "id": "f3001-oth",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 139000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 106"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Property Tax Relief Fund",
+   "code": "3004",
+   "amount": 41042,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 116"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-ps",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 35692,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 116"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-sup",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4650,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 116"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-oth",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 700,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 116"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3011",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Reappraisal Cost Fund",
+   "code": "3011",
+   "amount": 323208,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 120"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3011-oth",
+   "parent": "f3011",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 323208,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 120"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Late Assessment Fee Fund",
+   "code": "3042",
+   "amount": 18900,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 122"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042-sup",
+   "parent": "f3042",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 18900,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 122"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Automation Fund",
+   "code": "3002",
+   "amount": 50653.26,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-cap",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 50653.26,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3410",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Court Improvement Team Grant Fund",
+   "code": "3410",
+   "amount": 18449.88,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 131"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3410-misc",
+   "parent": "f3410",
+   "section": "appropriations",
+   "name": "Miscellaneous",
+   "code": null,
+   "amount": 18449.88,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 131"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3517",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Grant",
+   "code": "3517",
+   "amount": 20178.59,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 133"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3517-misc",
+   "parent": "f3517",
+   "section": "appropriations",
+   "name": "Miscellaneous",
+   "code": null,
+   "amount": 20178.59,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 133"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3520",
+   "parent": null,
+   "section": "appropriations",
+   "name": "CIP Grant",
+   "code": "3520",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 135"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3520-misc",
+   "parent": "f3520",
+   "section": "appropriations",
+   "name": "Miscellaneous",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 135"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3048",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Opioid Settlement Grant Fund",
+   "code": "3048",
+   "amount": 15877.06,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 141"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3048-misc",
+   "parent": "f3048",
+   "section": "appropriations",
+   "name": "Miscellaneous",
+   "code": null,
+   "amount": 15877.06,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 141"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3501",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Court Security Fund",
+   "code": "3501",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 147"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3501-misc",
+   "parent": "f3501",
+   "section": "appropriations",
+   "name": "Miscellaneous",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 147"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3513",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Court Mini Grant",
+   "code": "3513",
+   "amount": 341.11,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 149"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3513-misc",
+   "parent": "f3513",
+   "section": "appropriations",
+   "name": "Miscellaneous",
+   "code": null,
+   "amount": 341.11,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 149"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Probation Fees Fund",
+   "code": "3031",
+   "amount": 22000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 157"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-sup",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 157"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-oth",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 18000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 157"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Library",
+   "code": "3008",
+   "amount": 2230240,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 174"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-ps",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1344800,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 173"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-sup",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 173940,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 173"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-oth",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 711500,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 174"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3408",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Library Sales Tax Fund",
+   "code": "3408",
+   "amount": 500000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 180"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3408-oth",
+   "parent": "f3408",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 500000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 180"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3413",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Law Enforcement Fund",
+   "code": "3413",
+   "amount": 9916018.76,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "pp. 183–190"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total is printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3413-d400",
+   "parent": "f3413",
+   "section": "appropriations",
+   "name": "Sheriff's Office",
+   "code": "3413-400",
+   "amount": 5721066.35,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 184"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3413-d400-ps",
+   "parent": "f3413-d400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 4130653.47,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 183"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3413-d400-sup",
+   "parent": "f3413-d400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 689738.46,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 183"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3413-d400-oth",
+   "parent": "f3413-d400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 600247.54,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 184"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3413-d400-cap",
+   "parent": "f3413-d400",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 300426.88,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 184"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3413-d418",
+   "parent": "f3413",
+   "section": "appropriations",
+   "name": "Jail",
+   "code": "3413-418",
+   "amount": 4194952.41,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 190"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3413-d418-ps",
+   "parent": "f3413-d418",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 3026788.44,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 189"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3413-d418-sup",
+   "parent": "f3413-d418",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 411805.61,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 189"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3413-d418-oth",
+   "parent": "f3413-d418",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 669733.36,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 189"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3413-d418-cap",
+   "parent": "f3413-d418",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 86625,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 190"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff's Radio Fund",
+   "code": "3014",
+   "amount": 222762.8,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 194"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014-oth",
+   "parent": "f3014",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 222762.8,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 194"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff's Drug Control Fund",
+   "code": "3015",
+   "amount": 25262.87,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 196"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015-oth",
+   "parent": "f3015",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 25262.87,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 196"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Operation & Maintenance Fund",
+   "code": "3017",
+   "amount": 150000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 198"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-tr",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 150000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 198"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3029",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Public Safety Child Protection",
+   "code": "3029",
+   "amount": 7222.05,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 200"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3029-misc",
+   "parent": "f3029",
+   "section": "appropriations",
+   "name": "Miscellaneous",
+   "code": null,
+   "amount": 7222.05,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 200"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff's Special Crimes Unit",
+   "code": "3402",
+   "amount": 134777.59,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 202"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402-ps",
+   "parent": "f3402",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 123774.97,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 202"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402-oth",
+   "parent": "f3402",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 11002.62,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 202"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff Federal Forfeiture Fund",
+   "code": "3404",
+   "amount": 4740.56,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 206"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404-misc",
+   "parent": "f3404",
+   "section": "appropriations",
+   "name": "Miscellaneous",
+   "code": null,
+   "amount": 4740.56,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 206"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3405",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriffs Commissary Fund",
+   "code": "3405",
+   "amount": 158939.88,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 208"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3405-sup",
+   "parent": "f3405",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 154141.93,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 208"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3405-oth",
+   "parent": "f3405",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4797.95,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 208"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3406",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff Fan Fund",
+   "code": "3406",
+   "amount": 95,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 210"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Only an unlabeled $95.00 subtotal and the total appropriation are printed, so there are no category totals."
+  },
+  {
+   "id": "f3407",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Our Safe Kids Program Fund",
+   "code": "3407",
+   "amount": 409.82,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 212"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3407-misc",
+   "parent": "f3407",
+   "section": "appropriations",
+   "name": "Miscellaneous",
+   "code": null,
+   "amount": 409.82,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 212"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3409",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Employment Fund",
+   "code": "3409",
+   "amount": 237000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 214"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3409-tr",
+   "parent": "f3409",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 237000,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 214"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3511",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff's Grant Fund",
+   "code": "3511",
+   "amount": 966.7,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 216"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The 'TOTAL APPROPRIATION' line on this page is blank; this is its printed other-services total."
+  },
+  {
+   "id": "f3511-oth",
+   "parent": "f3511",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 966.7,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 216"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3515",
+   "parent": null,
+   "section": "appropriations",
+   "name": "PACT Grant",
+   "code": "3515",
+   "amount": 130262.38,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 218"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3515-ps",
+   "parent": "f3515",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 100105.58,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 218"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3515-sup",
+   "parent": "f3515",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 16420.16,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 218"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3515-oth",
+   "parent": "f3515",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 13736.64,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 218"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4800",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Detention Center Repairs",
+   "code": "4800",
+   "amount": 1663.75,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 222"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4800-oth",
+   "parent": "f4800",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1663.75,
+   "status": "sourced",
+   "source": {
+    "doc": "lonokear-budget-2026",
+    "page": "p. 222"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }

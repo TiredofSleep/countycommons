@@ -1,14 +1,24 @@
 {
-  "documents": [
-    {
-      "id": "marionar-ordinance",
-      "title": "Marion County adopted appropriation budget",
-      "jurisdiction": "marionar",
-      "layer": "appropriation",
-      "source_url": "https://artransparency.gov/wp-content/uploads/2025/04/Marion-County.pdf",
-      "retrieved_at": "2026-08-21",
-      "status": "captured",
-      "note": "The county’s adopted appropriation ordinance/budget, as posted on the Arkansas Transparency portal (a scanned document). Captured and linked here; the line-item figures are not yet parsed into a walkable money trail."
-    }
-  ]
+ "documents": [
+  {
+   "id": "marionar-budget-2026",
+   "title": "Marion County 2026 budget, as filed with the state",
+   "jurisdiction": "marionar",
+   "layer": "appropriation",
+   "source_url": "https://artransparency.gov/wp-content/uploads/2026/05/Marion-County.pdf",
+   "retrieved_at": "2026-10-06",
+   "status": "ingested",
+   "note": "Posted on the Arkansas Transparency portal (artransparency.gov) in May 2026. 42 pages. Amounts are the 2026 Department Final Budget Summary (pp. 6–9): Personal Services, Supplies, Other Charges, Capital Outlay, Debt Service, Transfers Out, Total for each fund-department; '**' rows give fund totals column. The document is a scan; it was read with optical character recognition, and every parent total was checked against its parts."
+  },
+  {
+   "id": "marionar-ordinance",
+   "title": "Marion County adopted appropriation budget (2025 copy)",
+   "jurisdiction": "marionar",
+   "layer": "appropriation",
+   "source_url": "https://artransparency.gov/wp-content/uploads/2025/04/Marion-County.pdf",
+   "retrieved_at": "2026-08-21",
+   "status": "superseded",
+   "note": "The county’s adopted appropriation ordinance/budget, as posted on the Arkansas Transparency portal (a scanned document). Captured and linked here; the line-item figures are not yet parsed into a walkable money trail."
+  }
+ ]
 }

@@ -1,25 +1,3305 @@
 {
-  "meta": {
-    "document": "Montgomery County — no appropriation document ingested yet",
-    "title": "Montgomery County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Montgomery County 2026 adopted budget",
+  "title": "Montgomery County — the money trail",
+  "note": "This is Montgomery County's 2026 budget as adopted by the quorum court on December 8, 2025, and filed with the state. Amounts come from the 2026 column of the budget summary and each office's line-item pages, plus a second ordinance that funds smaller special accounts. County General moves $53,900 to other county funds and E911 moves $80,000 to the Law Enforcement Sales Tax fund, so those dollars are counted in both places.",
+  "grand_total": 10373162.91,
+  "year": 2026
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General Fund",
+   "code": "1000",
+   "amount": 3209164.01,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Montgomery County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d0116",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Contract & Dues",
+   "code": "1000-0116",
+   "amount": 36461.28,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Only the department total is printed for this page of contracts and dues; all of its lines are other services and charges."
+  },
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-0100",
+   "amount": 99260.08,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-ps",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 73310.08,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-sup",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3500,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-oth",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 20950,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-cap",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "1000-0101",
+   "amount": 317436.92,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 63"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-ps",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 237686.92,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-sup",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10600,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-oth",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 69150,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 63"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Treasurer",
+   "code": "1000-0103",
+   "amount": 128631.39,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-ps",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 120281.39,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 64"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-sup",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2550,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 65"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-oth",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5800,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Collector",
+   "code": "1000-0104",
+   "amount": 166749.69,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 71"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-ps",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 145299.69,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 68"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-sup",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5750,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 69"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-oth",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 15700,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 71"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Assessor",
+   "code": "1000-0105",
+   "amount": 260372.39,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 75"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-ps",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 188672.39,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 72"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-sup",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 43500,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-oth",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 28200,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 75"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Equalization Board",
+   "code": "1000-0106",
+   "amount": 82460,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-ps",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 3360,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-oth",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 79100,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 49850,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 83"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-ps",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 48650,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 80"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-oth",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1200,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 83"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse",
+   "code": "1000-0108",
+   "amount": 89800,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 87"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-ps",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 20100,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 84"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-sup",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 22300,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 85"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-oth",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 47400,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 87"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Elections",
+   "code": "1000-0109",
+   "amount": 89585,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-ps",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 54480,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 88"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-sup",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6500,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 89"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-oth",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 28605,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse Annex",
+   "code": "1000-0111",
+   "amount": 42164,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 95"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111-ps",
+   "parent": "f1000-d0111",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 5464,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 92"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111-sup",
+   "parent": "f1000-d0111",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 8200,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 93"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111-oth",
+   "parent": "f1000-d0111",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 25500,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 95"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111-cap",
+   "parent": "f1000-d0111",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 95"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Health Unit",
+   "code": "1000-0300",
+   "amount": 44200,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 99"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-ps",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 4300,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 96"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-sup",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 11100,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 97"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-oth",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 18800,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 99"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-cap",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 99"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Sheriff",
+   "code": "1000-0400",
+   "amount": 885977.35,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 103"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-ps",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 655227.35,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 100"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-sup",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 103000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 101"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-oth",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 62750,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 103"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-cap",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 65000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 103"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court",
+   "code": "1000-0401",
+   "amount": 76947,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 107"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-ps",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 43500,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 104"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-sup",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3380,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 105"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-oth",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 30067,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 107"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court",
+   "code": "1000-0409",
+   "amount": 166658.02,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 111"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-ps",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 145068.02,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 108"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-sup",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 8600,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 109"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-oth",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 12090,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 111"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-cap",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 900,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 111"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney",
+   "code": "1000-0416",
+   "amount": 212789.46,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 115"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-ps",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 139008.46,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 112"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-sup",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 12250,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 113"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-oth",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 61531,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 115"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Coroner",
+   "code": "1000-0419",
+   "amount": 48510.03,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 119"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-ps",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 32490.03,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 116"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-sup",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 11900,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 117"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-oth",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4120,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 119"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Lake Patrol",
+   "code": "1000-0422",
+   "amount": 94098.85,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 123"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422-ps",
+   "parent": "f1000-d0422",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 59598.85,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 120"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422-sup",
+   "parent": "f1000-d0422",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 33500,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 121"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422-oth",
+   "parent": "f1000-d0422",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 123"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0423",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Forest Patrol",
+   "code": "1000-0423",
+   "amount": 94098.85,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0423-ps",
+   "parent": "f1000-d0423",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 59598.85,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0423-sup",
+   "parent": "f1000-d0423",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 33500,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0423-oth",
+   "parent": "f1000-d0423",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "DEM",
+   "code": "1000-0500",
+   "amount": 69771.5,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 131"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-ps",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 43771.5,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 128"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-sup",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10500,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-oth",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 14500,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 131"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-cap",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 131"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veteran's Office",
+   "code": "1000-0800",
+   "amount": 37582.2,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 135"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-ps",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 33532.2,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 132"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-sup",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1200,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 133"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-oth",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2850,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 135"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Extension Office",
+   "code": "1000-0801",
+   "amount": 61860,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 139"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-ps",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 52500,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 136"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-oth",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 9360,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 139"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d8888",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Transfer Out",
+   "code": "1000-8888",
+   "amount": 53900,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d8888-t1",
+   "parent": "f1000-d8888",
+   "section": "appropriations",
+   "name": "Transfer out (Jail)",
+   "code": null,
+   "amount": 50000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d8888-t2",
+   "parent": "f1000-d8888",
+   "section": "appropriations",
+   "name": "Transfer out (Library)",
+   "code": null,
+   "amount": 3900,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Maintenance Reserve",
+   "code": "1001-0108",
+   "amount": 100000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1001-oth",
+   "parent": "f1001",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 50000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 143"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1001-cap",
+   "parent": "f1001",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 50000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 143"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1007",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Local Assistance & Tribal Consistency (LATC)",
+   "code": "1007-0100",
+   "amount": 127647,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1007-ps",
+   "parent": "f1007",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 12647,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 144"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1007-oth",
+   "parent": "f1007",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 147"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1007-cap",
+   "parent": "f1007",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 90000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 147"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Road Department",
+   "code": "2000-0200",
+   "amount": 3002511.18,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-ps",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1426211.18,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 148"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-sup",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1121000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 149"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-oth",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 105300,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 151"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-cap",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 350000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 151"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Motor Fuel Tax Fund (MFTF)",
+   "code": "2003-0200",
+   "amount": 180000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003-sup",
+   "parent": "f2003",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 180000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 153"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Automation",
+   "code": "3000-0103",
+   "amount": 26200,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-sup",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5900,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 157"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-oth",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 13300,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 159"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-cap",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 159"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Amendment 79 Fund",
+   "code": "3004-0105",
+   "amount": 14892,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-ps",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 11892,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 160"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-sup",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 161"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Recorder's Cost Fund (CRCF)",
+   "code": "3006-0101",
+   "amount": 106307.5,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-ps",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 54107.5,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 164"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-sup",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5200,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 165"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-oth",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 32000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 167"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-cap",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 167"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Library",
+   "code": "3008-0600",
+   "amount": 100683.38,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-ps",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 80233.38,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 168"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-sup",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2800,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 169"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-oth",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 17650,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 171"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Solid Waste",
+   "code": "3009-0701",
+   "amount": 1347308.44,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-ps",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 515768.34,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 172"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-sup",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 245600,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 173"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-oth",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 275940.1,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 175"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-cap",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 310000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 175"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3018",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Detention Facility",
+   "code": "3018-0418",
+   "amount": 100000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3018-oth",
+   "parent": "f3018",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 100000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 179"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emergency Fund 911",
+   "code": "3020-0501",
+   "amount": 243729.26,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-ps",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 45899.26,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 180"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-sup",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 22800,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 181"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-oth",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 55030,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 183"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-cap",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 40000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 183"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-tr",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 80000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 183"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Indigent Attorney",
+   "code": "3026-0401",
+   "amount": 7253,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026-ps",
+   "parent": "f3026",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 184"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026-sup",
+   "parent": "f3026",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 800,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 185"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026-oth",
+   "parent": "f3026",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3953,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 187"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3455",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Law Enforcement Sales Tax",
+   "code": "3455-0418",
+   "amount": 1643697.14,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3455-ps",
+   "parent": "f3455",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1354697.14,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 188"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3455-sup",
+   "parent": "f3455",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 148300,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 189"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3455-oth",
+   "parent": "f3455",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 140700,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 191"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1005",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Cares Act Fund",
+   "code": "1005",
+   "amount": 22,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total is printed; this is the sum of the line items the special-fund ordinance appropriates."
+  },
+  {
+   "id": "f1005-l2001",
+   "parent": "f1005",
+   "section": "appropriations",
+   "name": "General office supplies",
+   "code": "1005.0100.2001",
+   "amount": 22,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Automation Fund",
+   "code": "3001",
+   "amount": 29000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total is printed; this is the sum of the line items the special-fund ordinance appropriates."
+  },
+  {
+   "id": "f3001-l2024",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Maintenance and service contracts",
+   "code": "3001.0104.2024",
+   "amount": 19000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-l4004",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Machinery and equipment",
+   "code": "3001.0104.4004",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Automation Fund",
+   "code": "3002",
+   "amount": 26000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "pp. 7–8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total is printed; this is the sum of the line items the special-fund ordinance appropriates."
+  },
+  {
+   "id": "f3002-l2001",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "General office supplies",
+   "code": "3002.0401.2001",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "pp. 7–8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-l3102",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Computer software and maintenance",
+   "code": "3002.0401.3102",
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "pp. 7–8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-l4004",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Machinery and equipment",
+   "code": "3002.0401.4004",
+   "amount": 13500,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "pp. 7–8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "District Court Automation Fund",
+   "code": "3003",
+   "amount": 39500,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total is printed; this is the sum of the line items the special-fund ordinance appropriates."
+  },
+  {
+   "id": "f3003-l2001",
+   "parent": "f3003",
+   "section": "appropriations",
+   "name": "General office supplies",
+   "code": "3003.0409.2001",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3003-l2002",
+   "parent": "f3003",
+   "section": "appropriations",
+   "name": "Small equipment",
+   "code": "3003.0409.2002",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3003-l3023",
+   "parent": "f3003",
+   "section": "appropriations",
+   "name": "Internet connection",
+   "code": "3003.0409.3023",
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3003-l3102",
+   "parent": "f3003",
+   "section": "appropriations",
+   "name": "Computer software support and maintenance",
+   "code": "3003.0409.3102",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3003-l4004",
+   "parent": "f3003",
+   "section": "appropriations",
+   "name": "Machinery and equipment",
+   "code": "3003.0409.4004",
+   "amount": 18000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Child Support Cost Fund",
+   "code": "3012",
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total is printed; this is the sum of the line items the special-fund ordinance appropriates."
+  },
+  {
+   "id": "f3012-l3010",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Printing",
+   "code": "3012.0101.3010",
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-l3021",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Postage",
+   "code": "3012.0101.3021",
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Control Fund",
+   "code": "3015",
+   "amount": 12000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total is printed; this is the sum of the line items the special-fund ordinance appropriates."
+  },
+  {
+   "id": "f3015-l3093",
+   "parent": "f3015",
+   "section": "appropriations",
+   "name": "Miscellaneous law enforcement",
+   "code": "3015.0400.3093",
+   "amount": 12000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3016",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Breathalyzer Fund",
+   "code": "3016",
+   "amount": 4500,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total is printed; this is the sum of the line items the special-fund ordinance appropriates."
+  },
+  {
+   "id": "f3016-l2001",
+   "parent": "f3016",
+   "section": "appropriations",
+   "name": "General office supplies",
+   "code": "3016.0400.2001",
+   "amount": 4500,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Operation and Maintenance Fund",
+   "code": "3017",
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total is printed; this is the sum of the line items the special-fund ordinance appropriates."
+  },
+  {
+   "id": "f3017-l3100",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Other miscellaneous",
+   "code": "3017.0418.3100",
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Boating Safety Fund",
+   "code": "3019",
+   "amount": 13500,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total is printed; this is the sum of the line items the special-fund ordinance appropriates."
+  },
+  {
+   "id": "f3019-l3093",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Misc. law enforcement",
+   "code": "3019.0400.3093",
+   "amount": 13500,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Court Fund",
+   "code": "3028",
+   "amount": 3500,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total is printed; this is the sum of the line items the special-fund ordinance appropriates."
+  },
+  {
+   "id": "f3028-l2001",
+   "parent": "f3028",
+   "section": "appropriations",
+   "name": "General office supplies",
+   "code": "3028.0401.2001",
+   "amount": 3500,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3029",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Public Safety Fund",
+   "code": "3029",
+   "amount": 400,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total is printed; this is the sum of the line items the special-fund ordinance appropriates."
+  },
+  {
+   "id": "f3029-l3093",
+   "parent": "f3029",
+   "section": "appropriations",
+   "name": "Misc. law enforcement",
+   "code": "3029.0400.3093",
+   "amount": 400,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Court Fund",
+   "code": "3031",
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total is printed; this is the sum of the line items the special-fund ordinance appropriates."
+  },
+  {
+   "id": "f3031-l2001",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "General office supplies",
+   "code": "3031.0414.2001",
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk Commissioner Fee Fund",
+   "code": "3039",
+   "amount": 700,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total is printed; this is the sum of the line items the special-fund ordinance appropriates."
+  },
+  {
+   "id": "f3039-l2001",
+   "parent": "f3039",
+   "section": "appropriations",
+   "name": "General office supplies",
+   "code": "3039.0101.2001",
+   "amount": 700,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Late Assessment Fee Fund",
+   "code": "3042",
+   "amount": 800,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total is printed; this is the sum of the line items the special-fund ordinance appropriates."
+  },
+  {
+   "id": "f3042-l2001",
+   "parent": "f3042",
+   "section": "appropriations",
+   "name": "General office supplies",
+   "code": "3042.0105.2001",
+   "amount": 800,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3048",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Adult Drug Court - Opioid Settlement Fund",
+   "code": "3048",
+   "amount": 2788,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total is printed; this is the sum of the line items the special-fund ordinance appropriates."
+  },
+  {
+   "id": "f3048-l3103",
+   "parent": "f3048",
+   "section": "appropriations",
+   "name": "Grants in aid",
+   "code": "3048.0116.3103",
+   "amount": 2788,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6009",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Law Library Fund",
+   "code": "6009",
+   "amount": 3060,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total is printed; this is the sum of the line items the special-fund ordinance appropriates."
+  },
+  {
+   "id": "f6009-l3102",
+   "parent": "f6009",
+   "section": "appropriations",
+   "name": "Computer software support and maintenance",
+   "code": "6009.0411.3102",
+   "amount": 3060,
+   "status": "sourced",
+   "source": {
+    "doc": "montgomeryar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }

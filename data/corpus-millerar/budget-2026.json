@@ -1,25 +1,3863 @@
 {
-  "meta": {
-    "document": "Miller County — no appropriation document ingested yet",
-    "title": "Miller County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Miller County 2026 adopted budget",
+  "title": "Miller County — the money trail",
+  "note": "This is Miller County's 2026 budget as adopted by the quorum court on December 22, 2025, and filed with the state. Each office shows two printed totals: salaries and benefits, and operations (supplies, services and equipment). Some funds move money to other county funds, such as County General's $500,000 transfer out and the Crime Case Coordinator fund's $80,000, so those dollars also show up in the funds that receive them.",
+  "grand_total": 26109332.72,
+  "year": 2026
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General Fund",
+   "code": "1000",
+   "amount": 8707545,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Miller County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-0100",
+   "amount": 160679,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-sal",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 141926,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-op",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 18753,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "1000-0101",
+   "amount": 388269,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-sal",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 326069,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-op",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 62200,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Clerk",
+   "code": "1000-0102",
+   "amount": 224483,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-sal",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 166283,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-op",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 58200,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Board Of Equalization",
+   "code": "1000-0106",
+   "amount": 6700,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-op",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 6700,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 137671,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-sal",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 131306,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-op",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 6365,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Building Maintenance",
+   "code": "1000-0108",
+   "amount": 235847,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-sal",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 186597,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-op",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 49250,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Elections Division",
+   "code": "1000-0109",
+   "amount": 235763,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-sal",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 135763,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-op",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 100000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Human Resources",
+   "code": "1000-0117",
+   "amount": 162779,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117-sal",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 131679,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117-op",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 31100,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0120",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Miscellaneous",
+   "code": "1000-0120",
+   "amount": 885004,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0120-sal",
+   "parent": "f1000-d0120",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 17000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0120-op",
+   "parent": "f1000-d0120",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 868004,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Health Department",
+   "code": "1000-0300",
+   "amount": 85419,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-sal",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 18007,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-op",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 67412,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff Department",
+   "code": "1000-0400",
+   "amount": 2736785,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-sal",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 2366685,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-op",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 370100,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Judge - Jones",
+   "code": "1000-0401",
+   "amount": 80653,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-sal",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 60103,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-op",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 20550,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Judge - Haltom",
+   "code": "1000-0402",
+   "amount": 70239,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-sal",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 55184,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-op",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 15055,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Judge - Autrey",
+   "code": "1000-0403",
+   "amount": 75169,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403-sal",
+   "parent": "f1000-d0403",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 57644,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403-op",
+   "parent": "f1000-d0403",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 17525,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0404",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Bailiff Services",
+   "code": "1000-0404",
+   "amount": 172836,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0404-sal",
+   "parent": "f1000-d0404",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 170286,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0404-op",
+   "parent": "f1000-d0404",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 2550,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0405",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Court Supplemental Funding",
+   "code": "1000-0405",
+   "amount": 47000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0405-op",
+   "parent": "f1000-d0405",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 47000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court",
+   "code": "1000-0409",
+   "amount": 393933,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-sal",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 336933,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-op",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 57000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Probation",
+   "code": "1000-0414",
+   "amount": 145046,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-sal",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 135346,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-op",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 9700,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Diversion",
+   "code": "1000-0415",
+   "amount": 114858,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415-sal",
+   "parent": "f1000-d0415",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 105808,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415-op",
+   "parent": "f1000-d0415",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 9050,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney",
+   "code": "1000-0416",
+   "amount": 659664,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-sal",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 599464,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-op",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 60200,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Coroner",
+   "code": "1000-0419",
+   "amount": 102782,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-sal",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 77642,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-op",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 25140,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff Narcotics",
+   "code": "1000-0422",
+   "amount": 183135,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422-sal",
+   "parent": "f1000-d0422",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 165135,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422-op",
+   "parent": "f1000-d0422",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 18000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0423",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff School Resource Officer",
+   "code": "1000-0423",
+   "amount": 81755,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0423-sal",
+   "parent": "f1000-d0423",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 81755,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0424",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff Stop Grant",
+   "code": "1000-0424",
+   "amount": 83855,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 47"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0424-sal",
+   "parent": "f1000-d0424",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 83855,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 47"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0426",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Overdose Response Team SO",
+   "code": "1000-0426",
+   "amount": 118837,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0426-sal",
+   "parent": "f1000-d0426",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 113990,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0426-op",
+   "parent": "f1000-d0426",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 4847,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0430",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff - ICE",
+   "code": "1000-0430",
+   "amount": 11915,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 49"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0430-sal",
+   "parent": "f1000-d0430",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 11915,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 49"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0432",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff Grant - STEP",
+   "code": "1000-0432",
+   "amount": 29513,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 49"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0432-sal",
+   "parent": "f1000-d0432",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 29513,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 49"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0433",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff Grant - BVP",
+   "code": "1000-0433",
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0433-op",
+   "parent": "f1000-d0433",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0434",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff Grant - JAG",
+   "code": "1000-0434",
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0434-op",
+   "parent": "f1000-d0434",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0435",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff Grant - LLEBG",
+   "code": "1000-0435",
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0435-op",
+   "parent": "f1000-d0435",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0436",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff - DPS Public Safety Equip",
+   "code": "1000-0436",
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0436-op",
+   "parent": "f1000-d0436",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Office Of Emergency Management",
+   "code": "1000-0500",
+   "amount": 134778,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-sal",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 50828,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-op",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 83950,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0504",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse Security",
+   "code": "1000-0504",
+   "amount": 219678,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0504-sal",
+   "parent": "f1000-d0504",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 210678,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0504-op",
+   "parent": "f1000-d0504",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 9000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veteran's Services",
+   "code": "1000-0800",
+   "amount": 136600,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-sal",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 120200,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-op",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 16400,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Extension Office",
+   "code": "1000-0801",
+   "amount": 66400,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-sal",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 65000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-op",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 1400,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d8888",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Transfer Out",
+   "code": "1000-8888",
+   "amount": 500000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d8888-op",
+   "parent": "f1000-d8888",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 500000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor Commission",
+   "code": "1800-0105",
+   "amount": 1135877,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800-sal",
+   "parent": "f1800",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 500177,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800-op",
+   "parent": "f1800",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 635700,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1805",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer Commission",
+   "code": "1805-0103",
+   "amount": 352745,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1805-sal",
+   "parent": "f1805",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 225445,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1805-op",
+   "parent": "f1805",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 127300,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector Commission",
+   "code": "1810-0104",
+   "amount": 640236,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810-sal",
+   "parent": "f1810",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 417736,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810-op",
+   "parent": "f1810",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 222500,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Road Department",
+   "code": "2000-0200",
+   "amount": 4966343,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-sal",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 2767993,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-op",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 2198350,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Road Department (Additional Motor Fuel Tax)",
+   "code": "2003-0200",
+   "amount": 300000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 63"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003-op",
+   "parent": "f2003",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 300000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 63"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer Automation",
+   "code": "3000-0103",
+   "amount": 66159,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 64"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-sal",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 11159,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 64"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-op",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 55000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 64"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector Automation",
+   "code": "3001-0105",
+   "amount": 178000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 65"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-op",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 178000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 65"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Automation",
+   "code": "3002-0405",
+   "amount": 150000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 65"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-op",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 150000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 65"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "District Court Automation",
+   "code": "3003-0409",
+   "amount": 4500,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3003-op",
+   "parent": "f3003",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 4500,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Tax Assessor Relief",
+   "code": "3004-0105",
+   "amount": 106000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-op",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 106000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk Automation",
+   "code": "3005-0101",
+   "amount": 74800,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-sal",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 11975,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-op",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 62825,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Recorder Cost - Act 768",
+   "code": "3006-0102",
+   "amount": 619928,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 68"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-sal",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 377878,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 68"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-op",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 242050,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 68"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk Child Support",
+   "code": "3012-0102",
+   "amount": 200,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 69"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-op",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 200,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 69"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Drug Control",
+   "code": "3015-0400",
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 69"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015-op",
+   "parent": "f3015",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 69"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Maintenance & Operation Fund",
+   "code": "3017",
+   "amount": 5717703,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0418",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Jail Maintenance & Operation (0418)",
+   "code": "3017-0418",
+   "amount": 5218718,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 71"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The page labels this amount 'FUND TOTAL', but it is the total for department 0418 only; the fund total ($5,717,703.00, p. 73) also includes department 0425."
+  },
+  {
+   "id": "f3017-d0418-sal",
+   "parent": "f3017-d0418",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 3326703,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 71"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0418-op",
+   "parent": "f3017-d0418",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 1892015,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 71"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0425",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Jail Maintenance & Operation (0425)",
+   "code": "3017-0425",
+   "amount": 498985,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Overtime, social security and retirement lines are listed in this block's operations column, so they are part of its Operation Total."
+  },
+  {
+   "id": "f3017-d0425-op",
+   "parent": "f3017-d0425",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 498985,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Boating Safety (Search & Rescue)",
+   "code": "3019-0500",
+   "amount": 5550,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-op",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 5550,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "911 Emergency",
+   "code": "3020-0501",
+   "amount": 648577,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 74"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-sal",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 556077,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 74"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-op",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 92500,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 74"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3022",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Highway Vehicle Fines",
+   "code": "3022-0400",
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 75"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3022-op",
+   "parent": "f3022",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 75"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Indigent Criminal Defense",
+   "code": "3024-0417",
+   "amount": 70869,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 75"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024-sal",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 28869,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 75"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024-op",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 42000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 75"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3025",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Crime Case Coordinator",
+   "code": "3025-0416",
+   "amount": 80000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3025-op",
+   "parent": "f3025",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 80000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Court Fund",
+   "code": "3028-0406",
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028-op",
+   "parent": "f3028",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3029",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Child Protection",
+   "code": "3029-0400",
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3029-op",
+   "parent": "f3029",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Probation & Fees",
+   "code": "3031-0425",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-op",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3035",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Criminal Justice",
+   "code": "3035-0400",
+   "amount": 13500,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3035-op",
+   "parent": "f3035",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 13500,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039",
+   "parent": null,
+   "section": "appropriations",
+   "name": "CRC Commissioners Fee",
+   "code": "3039-0102",
+   "amount": 2700,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039-op",
+   "parent": "f3039",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 2700,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Late Assessment Fee",
+   "code": "3042-0105",
+   "amount": 9000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 78"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042-op",
+   "parent": "f3042",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 9000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 78"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3401",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Capital Improvement",
+   "code": "3401-0111",
+   "amount": 300000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 78"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3401-op",
+   "parent": "f3401",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 300000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 78"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Smith Park",
+   "code": "3404-0601",
+   "amount": 42245,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404-op",
+   "parent": "f3404",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 42245,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3406",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Economic Development",
+   "code": "3406-0112",
+   "amount": 140000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3406-op",
+   "parent": "f3406",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 140000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3500",
+   "parent": null,
+   "section": "appropriations",
+   "name": "State Grant Fund",
+   "code": "3500-0116",
+   "amount": 447840,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 80"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3500-op",
+   "parent": "f3500",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 447840,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 80"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3501",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Court Security Grant",
+   "code": "3501-0421",
+   "amount": 688,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 80"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3501-op",
+   "parent": "f3501",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 688,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 80"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3048",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Adult Drug - Opioid",
+   "code": "3048-0401",
+   "amount": 21782.72,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 81"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3048-op",
+   "parent": "f3048",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 21782.72,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 81"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3049",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Passport Acceptance Fee",
+   "code": "3049-0101",
+   "amount": 4950,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 81"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3049-op",
+   "parent": "f3049",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 4950,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 81"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3418",
+   "parent": null,
+   "section": "appropriations",
+   "name": "MCVFD Fire Marshall",
+   "code": "3418-0502",
+   "amount": 15300,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 82"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3418-op",
+   "parent": "f3418",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 15300,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 82"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3419",
+   "parent": null,
+   "section": "appropriations",
+   "name": "MCVFD Administrative Board",
+   "code": "3419-0502",
+   "amount": 80375,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 83"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3419-sal",
+   "parent": "f3419",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 15075,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 83"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3419-op",
+   "parent": "f3419",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 65300,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 83"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3420",
+   "parent": null,
+   "section": "appropriations",
+   "name": "MCVFD - Mandeville",
+   "code": "3420-0502",
+   "amount": 69810,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 84"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3420-sal",
+   "parent": "f3420",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 4200,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 84"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3420-op",
+   "parent": "f3420",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 65610,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 84"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3421",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Mcvfd - Mandeville -act 833",
+   "code": "3421-0502",
+   "amount": 22000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 84"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Only a fund total is printed (one Act 833 line), so there are no category totals."
+  },
+  {
+   "id": "f3422",
+   "parent": null,
+   "section": "appropriations",
+   "name": "MCVFD - Genoa",
+   "code": "3422-0502",
+   "amount": 90600,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 85"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3422-sal",
+   "parent": "f3422",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 200,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 85"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3422-op",
+   "parent": "f3422",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 90400,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 85"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3423",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Mcvfd - Genoa - Act 833",
+   "code": "3423-0502",
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 85"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Only a fund total is printed (one Act 833 line), so there are no category totals."
+  },
+  {
+   "id": "f3424",
+   "parent": null,
+   "section": "appropriations",
+   "name": "MCVFD - Booker Bridge",
+   "code": "3424-0502",
+   "amount": 139950,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 86"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3424-sal",
+   "parent": "f3424",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 200,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 86"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3424-op",
+   "parent": "f3424",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 139750,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 86"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3425",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Mcvfd - Booker Bridge - Act 833",
+   "code": "3425-0502",
+   "amount": 40000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 86"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Only a fund total is printed (one Act 833 line), so there are no category totals."
+  },
+  {
+   "id": "f3426",
+   "parent": null,
+   "section": "appropriations",
+   "name": "MCVFD - Trinity",
+   "code": "3426-0502",
+   "amount": 122713,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 87"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3426-sal",
+   "parent": "f3426",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 4200,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 87"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3426-op",
+   "parent": "f3426",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 118513,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 87"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3427",
+   "parent": null,
+   "section": "appropriations",
+   "name": "MCVFD - Trinity - Act 833",
+   "code": "3427-0502",
+   "amount": 50000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 88"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Only a fund total is printed (one Act 833 line), so there are no category totals."
+  },
+  {
+   "id": "f3428",
+   "parent": null,
+   "section": "appropriations",
+   "name": "MCVFD - Boggy Creek",
+   "code": "3428-0502",
+   "amount": 89727,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 89"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3428-sal",
+   "parent": "f3428",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 200,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 89"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3428-op",
+   "parent": "f3428",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 89527,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 89"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3429",
+   "parent": null,
+   "section": "appropriations",
+   "name": "MCVFD - Boggy Creek - Act 833",
+   "code": "3429",
+   "amount": 50000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 89"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "This page prints no fund code; fund 3429 is how the revenue schedule (p. 17) lists 'Act 833 - Boggy Creek'. Only a fund total is printed (one Act 833 line), so there are no category totals."
+  },
+  {
+   "id": "f3430",
+   "parent": null,
+   "section": "appropriations",
+   "name": "MCVFD - Bright Star",
+   "code": "3430-0502",
+   "amount": 69700,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 90"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3430-sal",
+   "parent": "f3430",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 200,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 90"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3430-op",
+   "parent": "f3430",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 69500,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 90"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3431",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Mcvfd - Bright Star - Act 833",
+   "code": "3431-0502",
+   "amount": 17000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 90"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Only a fund total is printed (one Act 833 line), so there are no category totals."
+  },
+  {
+   "id": "f3432",
+   "parent": null,
+   "section": "appropriations",
+   "name": "MCVFD - Satellite",
+   "code": "3432-0502",
+   "amount": 109200,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3432-sal",
+   "parent": "f3432",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 200,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3432-op",
+   "parent": "f3432",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 109000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3433",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Mcvfd - Satellite - Act 833",
+   "code": "3433-0502",
+   "amount": 41000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Only a fund total is printed (one Act 833 line), so there are no category totals."
+  },
+  {
+   "id": "f3436",
+   "parent": null,
+   "section": "appropriations",
+   "name": "MCVFD - Doddridge",
+   "code": "3436-0502",
+   "amount": 123220,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 92"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3436-sal",
+   "parent": "f3436",
+   "section": "appropriations",
+   "name": "Salaries and benefits",
+   "code": null,
+   "amount": 200,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 92"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3436-op",
+   "parent": "f3436",
+   "section": "appropriations",
+   "name": "Operations",
+   "code": null,
+   "amount": 123020,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 92"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3437",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Mcvfd - Doddridge - Act 833",
+   "code": "3437-0502",
+   "amount": 90000,
+   "status": "sourced",
+   "source": {
+    "doc": "millerar-budget-2026",
+    "page": "p. 93"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Only a fund total is printed (one Act 833 line), so there are no category totals."
+  }
+ ]
 }
