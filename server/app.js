@@ -137,6 +137,7 @@ app.get('/sitemap.xml', (req, res) => {
     if (cfg.has_taxes_debt) paths.push('/taxes');
     if (cfg.has_whatif) paths.push('/whatif');
     if (cfg.has_taxlab) paths.push('/taxlab');
+    if (cfg.has_mybill) paths.push('/mybill');
     if (cfg.has_commonwealth) paths.push('/commonwealth');
     for (const p of paths) urls.push(base + p);
   } else if (r.action === 'serve') {
@@ -477,6 +478,10 @@ app.get('/whatif', (req, res) => {
   if (!data.whatIf || !data.market) return res.redirect('/budget');
   res.send(whatIfPage(data, req.query));
 });
+
+// Your tax bill, explained — where each dollar of a household's property tax goes.
+const { myBillPage } = require('./views/mybill');
+app.get('/mybill', (req, res) => res.send(myBillPage(load(req.tenantKey), req.query)));
 
 // The tax lab — raise or lower a tax and see the household, budget, debt, and
 // legal effects. Budget lines to size a cut against come from the county's own

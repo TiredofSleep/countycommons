@@ -40,6 +40,7 @@ function siteMap(county, current) {
     ['The budget', [
       ['/tour', '▶ Take the 2-minute tour'],
       ['/budget', 'The money trail'],
+      county && county.has_mybill ? ['/mybill', 'Your tax bill, explained'] : null,
       muni ? ['/places', 'Cities & towns'] : null,
       county && county.has_taxes_debt ? ['/taxes', 'Taxes & debt'] : null,
       ['/grants', 'Grants — money we could go get'],
@@ -107,6 +108,10 @@ function layout({ title, current, body, county, description }) {
   // Counties with a municipalities layer (e.g. Middlesex, MA, where county
   // government was abolished) get a "Cities & towns" item after the money trail.
   const navItems = NAV.slice();
+  if (county && county.has_mybill) {
+    const i = navItems.findIndex(([h]) => h === '/budget');
+    navItems.splice(i + 1, 0, ['/mybill', 'My bill']);
+  }
   if (county && county.has_municipalities) {
     const i = navItems.findIndex(([h]) => h === '/budget');
     navItems.splice(i + 1, 0, ['/places', 'Cities & towns']);

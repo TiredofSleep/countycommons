@@ -1,0 +1,450 @@
+{
+ "updated": "2026-10-06",
+ "exemptions": {
+  "school": 25000,
+  "other": 51411,
+  "note": "Florida’s 2026 homestead exemption: $25,000 off school taxes and $51,411 off all others, for homes assessed at about $76,000 or more (Brevard County Property Appraiser).",
+  "src": {
+   "doc": "bcpao-amendment3"
+  }
+ },
+ "tags": {
+  "police": "Police and sheriff",
+  "jail": "The jail",
+  "fire": "Fire, EMS and emergencies",
+  "courts": "Courts",
+  "classroom": "Classrooms and teaching",
+  "buildings": "School buildings",
+  "admin": "Running the governments",
+  "roads": "Roads, streets and parks",
+  "parks": "Roads, streets and parks",
+  "reserves": "Savings set aside",
+  "interest": "Interest",
+  "debt": "Paying down debt",
+  "water": "Water and waterways",
+  "nature": "Conservation land",
+  "library": "Libraries",
+  "health": "Mosquito control",
+  "other": "Everything else"
+ },
+ "rollback_note": "The rolled-back rate is the “no-raise” rate: the rate that would bring each government the same property tax as last year from the same properties (new construction aside). Because values rise, keeping the same rate usually raises more money. Florida’s Truth in Millage law makes each government publish it, and if the adopted rate is higher, its ad must call it a tax increase.",
+ "where": "A home inside the Town of Melbourne Beach (tax district 34X0).",
+ "home_default": 300000,
+ "hearing": "Rates are set every September. Melbourne Beach’s two hearings in 2026 were September 3 and 16; Brevard County’s September 8 and 22; the School Board’s August 11 and September 10.",
+ "authorities": [
+  {
+   "id": "town",
+   "name": "Town of Melbourne Beach",
+   "kind": "other",
+   "mills": 4.6,
+   "rollback": 4.3987,
+   "status": "adopted September 16, 2026",
+   "src": {
+    "doc": "mb-fy27-budget",
+    "page": "PDF p. 23"
+   },
+   "link": "https://melbournebeachfl.countycommons.us/budget",
+   "slices_note": "Spread the way the town’s General Fund is budgeted to spend in FY2027, plus its transfers for the town-hall bond and stormwater (FY2027 budget, PDF p. 24).",
+   "slices": [
+    [
+     "Police",
+     1677353,
+     "police"
+    ],
+    [
+     "Volunteer fire department",
+     782710,
+     "fire"
+    ],
+    [
+     "Town hall — buildings, insurance, streetlights",
+     574836,
+     "admin"
+    ],
+    [
+     "Public works — streets, parks, trees",
+     455124,
+     "roads"
+    ],
+    [
+     "Town manager",
+     354406,
+     "admin"
+    ],
+    [
+     "Town commission and clerk",
+     278169,
+     "admin"
+    ],
+    [
+     "Finance office and audit",
+     275897,
+     "admin"
+    ],
+    [
+     "Town attorney",
+     160042,
+     "admin"
+    ],
+    [
+     "Code enforcement",
+     90748,
+     "admin"
+    ],
+    [
+     "Stormwater and other transfers",
+     88028,
+     "water"
+    ],
+    [
+     "Town planner",
+     55000,
+     "admin"
+    ],
+    [
+     "Town hall bond — principal",
+     100000,
+     "debt"
+    ],
+    [
+     "Town hall bond — interest",
+     13550,
+     "interest"
+    ],
+    [
+     "Town hall bond — fees",
+     2700,
+     "debt"
+    ]
+   ]
+  },
+  {
+   "id": "county",
+   "name": "Brevard County — general fund",
+   "kind": "other",
+   "mills": 2.8625,
+   "rollback": 2.8129,
+   "status": "proposed July 2026; the Board set final rates September 22, 2026 (Resolution 26-090)",
+   "src": {
+    "doc": "brevard-proposed-2027",
+    "page": "p. 21"
+   },
+   "link": "https://brevardfl.countycommons.us/budget",
+   "slices_note": "Spread the way the county’s general fund is budgeted to spend in FY2026-27 ($373,953,300, county budget book p. 6; the Sheriff’s programs pp. 394–409).",
+   "slices": [
+    [
+     "Sheriff — patrol",
+     68923262,
+     "police"
+    ],
+    [
+     "The county jail",
+     65947297,
+     "jail"
+    ],
+    [
+     "Roads and infrastructure",
+     57834511,
+     "roads"
+    ],
+    [
+     "Other elected officers (tax collector, property appraiser, elections, clerk)",
+     33916443,
+     "admin"
+    ],
+    [
+     "Money moved to other county departments and funds",
+     35696898,
+     "other"
+    ],
+    [
+     "Public safety (EMS, emergency management and more)",
+     33402946,
+     "fire"
+    ],
+    [
+     "Savings set aside (operating reserves)",
+     29038669,
+     "reserves"
+    ],
+    [
+     "State-required payments (“mandates”)",
+     13530831,
+     "other"
+    ],
+    [
+     "Court security (Sheriff)",
+     10540459,
+     "courts"
+    ],
+    [
+     "Payments to redevelopment districts (TIF)",
+     7146529,
+     "other"
+    ],
+    [
+     "9-1-1 dispatch (Sheriff)",
+     6225359,
+     "police"
+    ],
+    [
+     "Animal services (Sheriff)",
+     5778022,
+     "other"
+    ],
+    [
+     "Court operations",
+     3825362,
+     "courts"
+    ],
+    [
+     "Debt payments (principal and interest)",
+     2146712,
+     "debt"
+    ]
+   ]
+  },
+  {
+   "id": "library",
+   "name": "Brevard County library district",
+   "kind": "other",
+   "mills": 0.324,
+   "rollback": 0.3168,
+   "status": "proposed July 2026; the Board set final rates September 22, 2026 (Resolution 26-090)",
+   "src": {
+    "doc": "brevard-proposed-2027",
+    "page": "p. 21"
+   },
+   "slices": [
+    [
+     "Public libraries",
+     1,
+     "library"
+    ]
+   ]
+  },
+  {
+   "id": "mosquito",
+   "name": "Brevard mosquito control",
+   "kind": "other",
+   "mills": 0.1339,
+   "rollback": 0.1309,
+   "status": "proposed July 2026; the Board set final rates September 22, 2026 (Resolution 26-090)",
+   "src": {
+    "doc": "brevard-proposed-2027",
+    "page": "p. 21"
+   },
+   "slices": [
+    [
+     "Mosquito control",
+     1,
+     "health"
+    ]
+   ]
+  },
+  {
+   "id": "sbrec",
+   "name": "South Brevard recreation district",
+   "kind": "other",
+   "mills": 0.3144,
+   "rollback": 0.2934,
+   "status": "proposed July 2026; the Board set final rates September 22, 2026 (Resolution 26-090)",
+   "src": {
+    "doc": "brevard-proposed-2027",
+    "page": "p. 21"
+   },
+   "slices": [
+    [
+     "Parks and recreation in south Brevard",
+     1,
+     "parks"
+    ]
+   ]
+  },
+  {
+   "id": "eel",
+   "name": "Environmentally endangered lands (voted 2024)",
+   "kind": "other",
+   "mills": 0.0457,
+   "rollback": 0.0448,
+   "status": "proposed July 2026; the Board set final rates September 22, 2026 (Resolution 26-090)",
+   "src": {
+    "doc": "brevard-proposed-2027",
+    "page": "p. 21"
+   },
+   "slices": [
+    [
+     "Buying and caring for conservation land",
+     1,
+     "nature"
+    ]
+   ]
+  },
+  {
+   "id": "eel-debt",
+   "name": "Environmentally endangered lands — voted debt",
+   "kind": "other",
+   "mills": 0.0262,
+   "rollback": null,
+   "status": "proposed July 2026; the Board set final rates September 22, 2026 (Resolution 26-090)",
+   "src": {
+    "doc": "brevard-proposed-2027",
+    "page": "p. 21"
+   },
+   "slices": [
+    [
+     "Repaying voter-approved conservation land bonds",
+     1,
+     "debt"
+    ]
+   ]
+  },
+  {
+   "id": "schools",
+   "name": "Brevard Public Schools",
+   "kind": "school",
+   "mills": 6.302,
+   "rollback": 6.2201,
+   "status": "proposed July 28, 2026; the Board’s final hearing was September 10, 2026",
+   "src": {
+    "doc": "bps-fy27-proposed",
+    "page": "p. 14"
+   },
+   "link": "https://brevardfl.countycommons.us/budget",
+   "note": "Of the 6.302 mills, 3.054 are set by the state Legislature, 0.748 by the School Board, 1.0 by voters (renewal on the November 3 ballot), and 1.5 for buildings.",
+   "parts": [
+    {
+     "label": "Running the schools (4.802 mills)",
+     "mills": 4.802,
+     "slices_note": "Spread the way the district’s General Fund is budgeted to spend ($775,481,666, district book p. 21).",
+     "slices": [
+      [
+       "Classroom instruction",
+       491395702,
+       "classroom"
+      ],
+      [
+       "Buildings — utilities, custodians, repairs",
+       107590678,
+       "buildings"
+      ],
+      [
+       "Teaching support — curriculum, training, technology, media",
+       50147782,
+       "classroom"
+      ],
+      [
+       "Principals’ offices",
+       45772746,
+       "admin"
+      ],
+      [
+       "Counselors, nurses, psychologists",
+       28845345,
+       "classroom"
+      ],
+      [
+       "District administration — board, finance, HR, technology",
+       23421405,
+       "admin"
+      ],
+      [
+       "Buses",
+       18485924,
+       "other"
+      ],
+      [
+       "Before- and after-school care, meals and other services",
+       9822084,
+       "other"
+      ]
+     ]
+    },
+    {
+     "label": "Buildings and their debt (1.5 mills)",
+     "mills": 1.5,
+     "slices_note": "Spread the way the district budgets its 1.5-mill capital tax ($119,338,075, district book pp. 27–29).",
+     "slices": [
+      [
+       "Moved to the general fund for upkeep and insurance",
+       51573000,
+       "buildings"
+      ],
+      [
+       "Building and equipment projects",
+       31826075,
+       "buildings"
+      ],
+      [
+       "Paying down building debt (principal and fees)",
+       24776600,
+       "debt"
+      ],
+      [
+       "Interest on building debt",
+       11162400,
+       "interest"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": "find",
+   "name": "Florida Inland Navigation District",
+   "kind": "other",
+   "mills": 0.027,
+   "rollback": null,
+   "status": "2025 rate; the 2026 rate isn’t gathered yet",
+   "src": {
+    "doc": "bcpao-millage-2025",
+    "page": "code 34X0"
+   },
+   "slices": [
+    [
+     "Intracoastal Waterway upkeep and grants",
+     1,
+     "water"
+    ]
+   ]
+  },
+  {
+   "id": "sebastian",
+   "name": "Sebastian Inlet District",
+   "kind": "other",
+   "mills": 0.1555,
+   "rollback": null,
+   "status": "2025 rate; the 2026 rate isn’t gathered yet",
+   "src": {
+    "doc": "bcpao-millage-2025",
+    "page": "code 34X0"
+   },
+   "slices": [
+    [
+     "Keeping Sebastian Inlet open",
+     1,
+     "water"
+    ]
+   ]
+  },
+  {
+   "id": "sjrwmd",
+   "name": "St. Johns River Water Management District",
+   "kind": "other",
+   "mills": 0.1793,
+   "rollback": null,
+   "status": "2025 rate; the 2026 rate isn’t gathered yet",
+   "src": {
+    "doc": "bcpao-millage-2025",
+    "page": "code 34X0"
+   },
+   "slices": [
+    [
+     "Regional water supply and protection",
+     1,
+     "water"
+    ]
+   ]
+  }
+ ]
+}
