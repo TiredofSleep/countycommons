@@ -1,21 +1,30 @@
 {
-  "run_at": "2026-08-21T23:38:19.945Z",
+  "run_at": "2026-10-07T03:12:06.683Z",
   "corpus_year": 2026,
-  "grand_total": 12235317,
+  "grand_total": 14434336.48,
   "summary": {
-    "total_checks": 7,
-    "passed": 7,
+    "total_checks": 8,
+    "passed": 8,
     "failed": 0
   },
   "checks": [
+    {
+      "node": "f2000",
+      "name": "Road Department",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4660531,
+      "computed": 4660531,
+      "detail": "2 children sum to the parent total exactly."
+    },
     {
       "node": "__grand_total__",
       "name": "Ordinance grand total",
       "kind": "grand-total",
       "ok": true,
-      "expected": 12235317,
-      "computed": 12235317,
-      "detail": "2 top-level funds sum to the ordinance's stated total exactly."
+      "expected": 14434336.48,
+      "computed": 14434336.479999999,
+      "detail": "30 top-level funds sum to the ordinance's stated total exactly."
     },
     {
       "node": "__activity_chain__",

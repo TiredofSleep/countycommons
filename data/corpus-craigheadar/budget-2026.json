@@ -1,27 +1,1757 @@
 {
-  "meta": {
-    "document": "Craighead County 2026 Budget",
-    "title": "Craighead County — the money trail",
-    "grand_total": 59808691,
-    "year": 2026,
-    "note": "Craighead County’s total 2026 adopted budget, $59,808,691 (KAIT8) — about $10M less than 2025 after the courthouse annex finished. The fund-by-fund detail is a records request away (docket)."
+ "meta": {
+  "document": "Craighead County 2026 adopted budget",
+  "title": "Craighead County — the money trail",
+  "year": 2026,
+  "grand_total": 59784096.05,
+  "note": "This is Craighead County's 2026 budget as adopted by the quorum court's appropriation ordinance and filed with the state as a scanned copy. We use the 'budgeted amount' for each office and fund in the ordinance's list of maximum amounts, checked against each office's budget page. County General includes $4,553,500.00 of 'interfund transfers' to other county funds, so those dollars may be counted again in the fund that receives them."
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General Fund",
+   "code": "1000",
+   "amount": 28810743.76,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "pp. 3–4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed total is $28,810,743.76; the departments listed add to $28,810,743.77."
   },
-  "nodes": [
-    {
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "source": {
-        "doc": "craighead-2026",
-        "page": null
-      },
-      "status": "partial",
-      "id": "all",
-      "parent": null,
-      "name": "All county funds (2026 adopted)",
-      "code": null,
-      "amount": 59808691
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-0100",
+   "amount": 589961.39,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "1000-0101",
+   "amount": 814156.67,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Clerk",
+   "code": "1000-0102",
+   "amount": 397473.35,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Treasurer",
+   "code": "1000-0103",
+   "amount": 246922.17,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Collector",
+   "code": "1000-0104",
+   "amount": 532760.73,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Assessor",
+   "code": "1000-0105",
+   "amount": 1735058.75,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Equalization Board",
+   "code": "1000-0106",
+   "amount": 15426.11,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 312515.67,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Building Maintenance",
+   "code": "1000-0108",
+   "amount": 1132607.32,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Election Commission",
+   "code": "1000-0109",
+   "amount": 299262.43,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0110",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Planning Board",
+   "code": "1000-0110",
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0114",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Computer Services",
+   "code": "1000-0114",
+   "amount": 500388.7,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Lake City Clerk",
+   "code": "1000-0117",
+   "amount": 14558.5,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0118",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Soil Conservation Dist.",
+   "code": "1000-0118",
+   "amount": 11000,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0119",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Crowley's Ridge Dev Council",
+   "code": "1000-0119",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0120",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Economic Development",
+   "code": "1000-0120",
+   "amount": 143250,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0124",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Association of Arkansas Counties",
+   "code": "1000-0124",
+   "amount": 4122,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0125",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Interfund Transfers",
+   "code": "1000-0125",
+   "amount": 4553500,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0126",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "East Ark. Planning & Dev. Dist (2020 Census)",
+   "code": "1000-0126",
+   "amount": 20021.58,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0127",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "COBRA & Retiree Health Insurance",
+   "code": "1000-0127",
+   "amount": 12000,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Health Unit",
+   "code": "1000-0300",
+   "amount": 47467.3,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0308",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "St. Bernards Healthcare",
+   "code": "1000-0308",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Sheriff",
+   "code": "1000-0400",
+   "amount": 5389072.58,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Trial Court Administrator",
+   "code": "1000-0401",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Trial Court Administrator I",
+   "code": "1000-0402",
+   "amount": 10,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Trial Court Administrator II",
+   "code": "1000-0403",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0404",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Trial Court Administrator III",
+   "code": "1000-0404",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0405",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Trial Court Administrator IV",
+   "code": "1000-0405",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Trial Court Administrator V",
+   "code": "1000-0406",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0407",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Trial Court Administrator VI",
+   "code": "1000-0407",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0408",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Trial Court Administrator VII",
+   "code": "1000-0408",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court",
+   "code": "1000-0409",
+   "amount": 1324342.32,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Court",
+   "code": "1000-0414",
+   "amount": 655028.45,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney",
+   "code": "1000-0416",
+   "amount": 35473.39,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Jail",
+   "code": "1000-0418",
+   "amount": 7336164.97,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Coroner",
+   "code": "1000-0419",
+   "amount": 250684.08,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0420",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Constable",
+   "code": "1000-0420",
+   "amount": 4884.19,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court",
+   "code": "1000-0422",
+   "amount": 950301.31,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0424",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Drug Task Force",
+   "code": "1000-0424",
+   "amount": 220507.95,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0425",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Deputy Prosecuting Atty.",
+   "code": "1000-0425",
+   "amount": 389387.68,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0435",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Victim/Witness Assistance",
+   "code": "1000-0435",
+   "amount": 289346.45,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Office of Emergency Management",
+   "code": "1000-0500",
+   "amount": 172726.51,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veterans Service",
+   "code": "1000-0800",
+   "amount": 167418.02,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Extension Office",
+   "code": "1000-0801",
+   "amount": 133977.7,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0802",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Paupers & Welfare",
+   "code": "1000-0802",
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0804",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Consolidated Youth Services",
+   "code": "1000-0804",
+   "amount": 465.5,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0805",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Senior Citizens",
+   "code": "1000-0805",
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0808",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Disabled American Veterans",
+   "code": "1000-0808",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Employee Insurance Fund",
+   "code": "1002",
+   "amount": 2743869,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1892",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Capital Fund",
+   "code": "1892",
+   "amount": 3651530,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Road Department Fund",
+   "code": "2000",
+   "amount": 11476648.78,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Additional Motor Fuel Tax Fund (Act 416 of 2019)",
+   "code": "2003",
+   "amount": 377000,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2998",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Crowley's Ridge Gravel Trail TAP Grant",
+   "code": "2998",
+   "amount": 156010,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Automation Fund",
+   "code": "3000",
+   "amount": 105814.8,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector Automation Fund",
+   "code": "3001",
+   "amount": 503646.75,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Automation Fund",
+   "code": "3002",
+   "amount": 99510,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "WD District Court Automation Fund",
+   "code": "3003",
+   "amount": 126108.94,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessors Amendment 79 Fund (Property Tax Relief)",
+   "code": "3004",
+   "amount": 154760,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk's Cost Fund",
+   "code": "3005",
+   "amount": 71200,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Recorder's Cost Fund (Circuit Clerk)",
+   "code": "3006",
+   "amount": 987034.32,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Public Library Fund (1 Mill Tax)",
+   "code": "3008",
+   "amount": 744742,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Child Support Cost Fund (Circuit Clerk)",
+   "code": "3012",
+   "amount": 8420,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Communication Facility & Equipment Fund (Sheriff)",
+   "code": "3014",
+   "amount": 383853.56,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Control Fund (Sheriff)",
+   "code": "3015",
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Operation & Maintenance Fund (Cost Defrayment)",
+   "code": "3017",
+   "amount": 336630,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3018",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Detention Facility Fund (Booking & Adm Fee)",
+   "code": "3018",
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Boating Safety Fund (Sheriff) (Emergency Rescue Water)",
+   "code": "3019",
+   "amount": 26010,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emergency 911 Fund",
+   "code": "3020",
+   "amount": 239056.4,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Indigent Criminal Defense Fund (Public Defender)",
+   "code": "3026",
+   "amount": 139094.41,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Adult Drug Court Fee Fund (Circuit Court)",
+   "code": "3028",
+   "amount": 1800,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3029",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Public Safety Fund (District Court)",
+   "code": "3029",
+   "amount": 437.49,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Probation Fee Fund (Services and Supplies)",
+   "code": "3031",
+   "amount": 37819.1,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk Commission Fee Fund",
+   "code": "3039",
+   "amount": 5600,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Late Assessment Fee Fund",
+   "code": "3042",
+   "amount": 31995,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3045",
+   "parent": null,
+   "section": "appropriations",
+   "name": "District Court Specialty Court Fund",
+   "code": "3045",
+   "amount": 51000,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3046",
+   "parent": null,
+   "section": "appropriations",
+   "name": "American Rescue Plan Fund",
+   "code": "3046",
+   "amount": 3998765.74,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "American Rescue Plan money budgeted as grants-in-aid (dept 0116)."
+  },
+  {
+   "id": "f3048",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Adult Drug Court-Opioid Settlement",
+   "code": "3048",
+   "amount": 28899.7,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3490",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Abuse Resistance Education Fund (D.A.R.E.)",
+   "code": "3490",
+   "amount": 6500,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3492",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff Federal Drug Forfeiture Fund",
+   "code": "3492",
+   "amount": 300,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3494",
+   "parent": null,
+   "section": "appropriations",
+   "name": "ED District Court Automation Fund",
+   "code": "3494",
+   "amount": 7120,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3501",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Detention Facilities Grant Fund",
+   "code": "3501",
+   "amount": 31167,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3508",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Officer Supplemental Grant Funding",
+   "code": "3508",
+   "amount": 8921,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3521",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Homeland Security Grant Program",
+   "code": "3521",
+   "amount": 311963.65,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3522",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Veteran Treatment Ct Discretionary Grant Program",
+   "code": "3522",
+   "amount": 301918.72,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3523",
+   "parent": null,
+   "section": "appropriations",
+   "name": "STAR Court Discretionary Grant Program",
+   "code": "3523",
+   "amount": 319283.32,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3526",
+   "parent": null,
+   "section": "appropriations",
+   "name": "STAR Court Peer Recovery Program",
+   "code": "3526",
+   "amount": 39525.45,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3527",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Supplemental Juvenile Court Funding",
+   "code": "3527",
+   "amount": 7480,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3530",
+   "parent": null,
+   "section": "appropriations",
+   "name": "DPS Public Safety Equipment Grant",
+   "code": "3530",
+   "amount": 10,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3532",
+   "parent": null,
+   "section": "appropriations",
+   "name": "BJA FY22 Adult Drug Court Discretionary Grant Program",
+   "code": "3532",
+   "amount": 233508.16,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3533",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Craighead County Saferoom Project Grant Fund",
+   "code": "3533",
+   "amount": 10,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3549",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Craighead County STAR Court Grant Fund",
+   "code": "3549",
+   "amount": 60070,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3578",
+   "parent": null,
+   "section": "appropriations",
+   "name": "District Court DWI Court Fund (Grant)",
+   "code": "3578",
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3583",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Court Improvement Program (CIP) Grant",
+   "code": "3583",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3589",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Crisis Stabilization Unit Grant Fund",
+   "code": "3589",
+   "amount": 1080000,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6009",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Law Library Fund",
+   "code": "6009",
+   "amount": 63544,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6400",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jonesboro Public Library Fund",
+   "code": "6400",
+   "amount": 1949775,
+   "status": "sourced",
+   "source": {
+    "doc": "craigheadar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }

@@ -1,21 +1,39 @@
 {
-  "run_at": "2026-10-07T03:12:07.736Z",
+  "run_at": "2026-10-07T03:12:07.397Z",
   "corpus_year": 2026,
-  "grand_total": 59784096.05,
+  "grand_total": 17979197.2,
   "summary": {
-    "total_checks": 7,
-    "passed": 7,
+    "total_checks": 9,
+    "passed": 9,
     "failed": 0
   },
   "checks": [
+    {
+      "node": "f1000",
+      "name": "County General Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 8196630.25,
+      "computed": 8196630.25,
+      "detail": "37 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1007",
+      "name": "LATC Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 14000,
+      "computed": 14000,
+      "detail": "1 children sum to the parent total exactly."
+    },
     {
       "node": "__grand_total__",
       "name": "Ordinance grand total",
       "kind": "grand-total",
       "ok": true,
-      "expected": 59784096.05,
-      "computed": 59784096.050000004,
-      "detail": "49 top-level funds sum to the ordinance's stated total exactly."
+      "expected": 17979197.2,
+      "computed": 17979197.2,
+      "detail": "39 top-level funds sum to the ordinance's stated total exactly."
     },
     {
       "node": "__activity_chain__",

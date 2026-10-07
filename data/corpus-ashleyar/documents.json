@@ -1,14 +1,24 @@
 {
-  "documents": [
-    {
-      "id": "ashley-2026",
-      "title": "Ashley County 2026 budget (as reported)",
-      "jurisdiction": "ashleyar",
-      "layer": "appropriation",
-      "source_url": "https://www.ashleycountyledger.com/news/county-approves-7-million-budget/",
-      "retrieved_at": "2026-08-21",
-      "status": "ingested",
-      "note": "Figures as reported in local news of the Quorum Court’s 2026 budget adoption. The full ordinance is public record; the artransparency.gov copy blocks automated access, so line-item ingestion awaits a direct pull."
-    }
-  ]
+ "documents": [
+  {
+   "id": "ashleyar-budget-2026",
+   "title": "Ashley County 2026 budget, as filed with the state",
+   "jurisdiction": "ashleyar",
+   "layer": "appropriation",
+   "source_url": "https://artransparency.gov/wp-content/uploads/2026/05/Ashley-County.pdf",
+   "retrieved_at": "2026-10-06",
+   "status": "ingested",
+   "note": "Posted on the Arkansas Transparency portal (artransparency.gov) in May 2026. 115 pages. Amounts are the 'APPROPRIATION' (only amount column) on the 2026 department pages; Appropriation Summary used as a cross-check and for the County General total column. The document is a scan; it was read with optical character recognition, and every parent total was checked against its parts."
+  },
+  {
+   "id": "ashley-2026",
+   "title": "Ashley County 2026 budget (as reported)",
+   "jurisdiction": "ashleyar",
+   "layer": "appropriation",
+   "source_url": "https://www.ashleycountyledger.com/news/county-approves-7-million-budget/",
+   "retrieved_at": "2026-08-21",
+   "status": "ingested",
+   "note": "Figures as reported in local news of the Quorum Court’s 2026 budget adoption. The full ordinance is public record; the artransparency.gov copy blocks automated access, so line-item ingestion awaits a direct pull."
+  }
+ ]
 }

@@ -1,43 +1,1217 @@
 {
-  "meta": {
-    "document": "Ashley County 2026 Budget",
-    "title": "Ashley County — the money trail",
-    "grand_total": 12235317,
-    "year": 2026,
-    "note": "Ashley County’s two main funds for 2026 — General Fund and Road & Bridge — as reported by the Ashley County Ledger. Smaller funds exist but were not itemized in the public report; that is on the docket."
+ "meta": {
+  "document": "Ashley County 2026 adopted budget",
+  "title": "Ashley County — the money trail",
+  "year": 2026,
+  "grand_total": 14434336.48,
+  "note": "This is Ashley County's 2026 budget book as filed with the state, a scanned copy with an appropriation summary and one 'Appropriation for 2026' page per office. We use each office's page total. County General shows its printed summary total of $6,409,281.00, but its office pages add to $7,947,084.00, because the summary lists the jail at only $63,297. Five funds list transfers out ($1,822,092.58 in all) without saying where the money goes, so some of those dollars may be counted again in another fund."
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General",
+   "code": "1000",
+   "amount": 6409281,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed total (Appropriation Summary, p. 8) is $6,409,281.00; the department pages listed add to $7,947,084.00. The summary lists County Jail at $63,297.00 (the same as Coroner) and Sheriff at $2,068,196.00, but the Jail page (p. 45) prints $1,476,515.00 and the Sheriff page (p. 36) prints $2,192,781.00; both pages' line items add to those totals."
   },
-  "nodes": [
-    {
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "source": {
-        "doc": "ashley-2026",
-        "page": null
-      },
-      "status": "partial",
-      "id": "gf",
-      "parent": null,
-      "name": "General Fund",
-      "code": null,
-      "amount": 7584786
-    },
-    {
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "docket_ref": null,
-      "source": {
-        "doc": "ashley-2026",
-        "page": null
-      },
-      "status": "partial",
-      "id": "road",
-      "parent": null,
-      "name": "Road & Bridge Fund",
-      "code": null,
-      "amount": 4650531
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge's Office",
+   "code": "1000-0100",
+   "amount": 115530,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk's Office",
+   "code": "1000-0101",
+   "amount": 296434,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Clerk's Office",
+   "code": "1000-0102",
+   "amount": 252655,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Treasurer's Office",
+   "code": "1000-0103",
+   "amount": 177076,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Collector's Office",
+   "code": "1000-0104",
+   "amount": 341045,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Assessor's Office",
+   "code": "1000-0105",
+   "amount": 461824,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Board of Equalization",
+   "code": "1000-0106",
+   "amount": 3853,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 66891,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse",
+   "code": "1000-0108",
+   "amount": 296145,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Summary label: 'Courthouse (w/o emergency)'."
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Election Commission",
+   "code": "1000-0109",
+   "amount": 161818,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Crossett Annex Building",
+   "code": "1000-0111",
+   "amount": 20500,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Emergency Fund",
+   "code": "1000-0117",
+   "amount": 367575,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0150",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Legals",
+   "code": "1000-0150",
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Health Units (Crossett & Hamburg)",
+   "code": "1000-0300",
+   "amount": 72800,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff / Law Enforcement",
+   "code": "1000-0400",
+   "amount": 2192781,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The Appropriation Summary (p. 8) lists $2,068,196.00; this page total of $2,192,781.00 equals its line items."
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court",
+   "code": "1000-0401",
+   "amount": 39000,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Judge",
+   "code": "1000-0402",
+   "amount": 16300,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Hamburg District Court",
+   "code": "1000-0409",
+   "amount": 61098,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0410",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Crossett District Court",
+   "code": "1000-0410",
+   "amount": 71488,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "10th Judicial Juvenile Court",
+   "code": "1000-0414",
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney's Office",
+   "code": "1000-0416",
+   "amount": 91860,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0417",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Public Defender's Office",
+   "code": "1000-0417",
+   "amount": 6312,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Jail",
+   "code": "1000-0418",
+   "amount": 1476515,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The Appropriation Summary (p. 8) lists $63,297.00, the same figure as Coroner; this page total of $1,476,515.00 equals its line items."
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Coroner",
+   "code": "1000-0419",
+   "amount": 63297,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 47"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Office of Emergency Management",
+   "code": "1000-0500",
+   "amount": 124519,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 49"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0602",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Fair Association",
+   "code": "1000-0602",
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0603",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Ashley County Museum",
+   "code": "1000-0603",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0700",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Solid Waste",
+   "code": "1000-0700",
+   "amount": 432511,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0701",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Landfill",
+   "code": "1000-0701",
+   "amount": 540143,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veteran's Service",
+   "code": "1000-0800",
+   "amount": 66814,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Extension Service",
+   "code": "1000-0801",
+   "amount": 66800,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0802",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Paupers & Welfare",
+   "code": "1000-0802",
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0803",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Area Agency on Aging",
+   "code": "1000-0803",
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0804",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Options, Inc",
+   "code": "1000-0804",
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0806",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "DHS Building",
+   "code": "1000-0806",
+   "amount": 18000,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 63"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Road Department",
+   "code": "2000",
+   "amount": 4660531,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The road page (p. 96) shows a $5,000.00 transfer out to Soil Conservation and subtracts it, so the department total is $4,655,531.00."
+  },
+  {
+   "id": "f2000-d0200",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Road Department",
+   "code": "2000-0200",
+   "amount": 4655531,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 96"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-d0201",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Soil Conservation",
+   "code": "2000-0201",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 98"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1007",
+   "parent": null,
+   "section": "appropriations",
+   "name": "LATC Fund",
+   "code": "1007-0116",
+   "amount": 20965.54,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 64"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "All of it is a transfer out (p. 64)."
+  },
+  {
+   "id": "f1860",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Garbage Fees - Other Counties",
+   "code": "1860-0703",
+   "amount": 141727,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 65"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1865",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Landfill Water Project",
+   "code": "1865-0701",
+   "amount": 462527.04,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "All of it is a transfer out (p. 66)."
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Automation",
+   "code": "3000-0103",
+   "amount": 37314,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Tax Collector's Automation",
+   "code": "3001-0104",
+   "amount": 5500,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 69"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Automation",
+   "code": "3002-0401",
+   "amount": 5501,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 70"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Amendment #79",
+   "code": "3004-0105",
+   "amount": 8350,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 71"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk's Cost Fund",
+   "code": "3005-0101",
+   "amount": 18000,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk's Recorder's Cost Fund",
+   "code": "3006-0102",
+   "amount": 123867,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 74"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3007",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Law Enforcement Automation",
+   "code": "3007-0400",
+   "amount": 1,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3010",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk Act 745 of 2007",
+   "code": "3010-0101",
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3011",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Reappraisal Cost Fund",
+   "code": "3011-0105",
+   "amount": 140212,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 78"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Child Support Collection Cost Fund",
+   "code": "3012-0114",
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff's Communication Facility & Equipment Fund",
+   "code": "3014-0400",
+   "amount": 47250,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 80"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Control Fund",
+   "code": "3015-0400",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 81"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3018",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Jail Operation & Maintenance Fund",
+   "code": "3018-0418",
+   "amount": 876105,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 82"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Includes $668,000.00 of transfers out and $208,105.00 for a jail health contract (p. 82)."
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Boating Safety",
+   "code": "3019-0502",
+   "amount": 2600,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 83"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "All of it is a transfer out (p. 83)."
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "911/ETS",
+   "code": "3020-0501",
+   "amount": 364328,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 84"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3027",
+   "parent": null,
+   "section": "appropriations",
+   "name": "District Court Probation Fee Fund",
+   "code": "3027-0409",
+   "amount": 12000,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 86"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Intake/Probation Fee Fund",
+   "code": "3031-0414",
+   "amount": 28154,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 87"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk Commissioner's Fund",
+   "code": "3039-0102",
+   "amount": 1,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 88"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Late Assessment Fee Fund",
+   "code": "3042-0105",
+   "amount": 250,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 89"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3049",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Passport Acceptance Facility Fund",
+   "code": "3049-0102",
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 90"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Hospital Sales Tax",
+   "code": "3404-0302",
+   "amount": 668000,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "All of it is a transfer out (p. 91)."
+  },
+  {
+   "id": "f3525",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Peer Recovery Grant - T French",
+   "code": "3525-0803",
+   "amount": 50000,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 92"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3527",
+   "parent": null,
+   "section": "appropriations",
+   "name": "OEM Grant",
+   "code": "3527-0500",
+   "amount": 10960.9,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 93"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Road Fuel Tax Fund",
+   "code": "2003-0200",
+   "amount": 156000,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 99"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Library",
+   "code": "3008-0600",
+   "amount": 176411,
+   "status": "sourced",
+   "source": {
+    "doc": "ashleyar-budget-2026",
+    "page": "p. 94"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }

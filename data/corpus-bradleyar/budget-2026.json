@@ -1,25 +1,1037 @@
 {
-  "meta": {
-    "document": "Bradley County — no appropriation document ingested yet",
-    "title": "Bradley County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Bradley County 2026 adopted budget",
+  "title": "Bradley County — the money trail",
+  "year": 2026,
+  "grand_total": 8943851.08,
+  "note": "This is Bradley County's 2026 annual budget, adopted by Ordinance 2025-12 on December 15, 2025, and filed with the state as a scanned copy. We use its one amount column, labeled 'Amount Requested Next Year', which the ordinance adopts as the budget. Thirteen funds send their money to other county funds (mostly County General, plus Road and Solid Waste), so $867,194.47 is counted twice: once where it starts and again where it is spent."
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General Fund",
+   "code": "1000",
+   "amount": 2520754.14,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "pp. 8–24"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Bradley County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-0100",
+   "amount": 52054.83,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "1000-0101",
+   "amount": 201412.56,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Clerk",
+   "code": "1000-0102",
+   "amount": 225476.15,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Treasurer",
+   "code": "1000-0103",
+   "amount": 91272.09,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Tax Collector",
+   "code": "1000-0104",
+   "amount": 181773.23,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Assessor",
+   "code": "1000-0105",
+   "amount": 346474.4,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff",
+   "code": "1000-0400",
+   "amount": 599294.62,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Board of Equalization",
+   "code": "1000-0106",
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 26029.71,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse",
+   "code": "1000-0108",
+   "amount": 70032.27,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Election",
+   "code": "1000-0109",
+   "amount": 45526,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Building",
+   "code": "1000-0111",
+   "amount": 55658,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "General Misc.",
+   "code": "1000-0117",
+   "amount": 14711,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0120",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Service Building",
+   "code": "1000-0120",
+   "amount": 16900,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0121",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Vacant Lot",
+   "code": "1000-0121",
+   "amount": 4100,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Health",
+   "code": "1000-0300",
+   "amount": 22300,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court",
+   "code": "1000-0401",
+   "amount": 7975,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court",
+   "code": "1000-0409",
+   "amount": 70443.5,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Intake",
+   "code": "1000-0415",
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney",
+   "code": "1000-0416",
+   "amount": 33240,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0417",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Public Defender",
+   "code": "1000-0417",
+   "amount": 5112,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Jail",
+   "code": "1000-0418",
+   "amount": 183364.12,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Coroner",
+   "code": "1000-0419",
+   "amount": 23827.5,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Civil Attorney",
+   "code": "1000-0422",
+   "amount": 18138.78,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Office of Emergency Management",
+   "code": "1000-0500",
+   "amount": 54723.16,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0600",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Library",
+   "code": "1000-0600",
+   "amount": 17635,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0601",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Park and Recreation",
+   "code": "1000-0601",
+   "amount": 76804.6,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0603",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Bradley County Historical Museum",
+   "code": "1000-0603",
+   "amount": 2400,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veterans Service",
+   "code": "1000-0800",
+   "amount": 11465.62,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Extension Office",
+   "code": "1000-0801",
+   "amount": 42110,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Road",
+   "code": "2000",
+   "amount": 2921322.47,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "pp. 25–27"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Automation",
+   "code": "3000",
+   "amount": 18375,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Automation",
+   "code": "3001",
+   "amount": 24000,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Recorder's Cost Fund",
+   "code": "3006",
+   "amount": 96547.5,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Library Fund",
+   "code": "3008",
+   "amount": 259780.5,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Solid Waste Fund",
+   "code": "3009",
+   "amount": 795832.36,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "pp. 34–35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emergency 911 Fund",
+   "code": "3020",
+   "amount": 227253.97,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Probation",
+   "code": "3031",
+   "amount": 16000,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Hospital Fund",
+   "code": "3404",
+   "amount": 1050000,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3407",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff's Drug Buy Fund",
+   "code": "3407",
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Paid for by a $1,000 transfer from County General."
+  },
+  {
+   "id": "f6016",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Act 833",
+   "code": "6016",
+   "amount": 47918.72,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Distribution to fire departments."
+  },
+  {
+   "id": "f3410",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Hospital Maintenance",
+   "code": "3410",
+   "amount": 54867.52,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Transfer to Bradley County Medical Center for maintenance."
+  },
+  {
+   "id": "f1801",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's 4% Commission",
+   "code": "1801",
+   "amount": 43004.43,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Transfer to the Collector's unapportioned account."
+  },
+  {
+   "id": "f1805",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Landfill",
+   "code": "1805",
+   "amount": 250000,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "This fund’s whole 2026 budget is a transfer. Transfers out: $150,000.00 to County General and $100,000.00 to Solid Waste."
+  },
+  {
+   "id": "f3005",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk's Cost Fund",
+   "code": "3005",
+   "amount": 12524.94,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "This fund’s whole 2026 budget is a transfer. Transfer to County General for software maintenance."
+  },
+  {
+   "id": "f3408",
+   "parent": null,
+   "section": "appropriations",
+   "name": "District Court Fund",
+   "code": "3408",
+   "amount": 37602.14,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "This fund’s whole 2026 budget is a transfer. Transfer out to County General."
+  },
+  {
+   "id": "f3017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Maintenance",
+   "code": "3017",
+   "amount": 94034.04,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "This fund’s whole 2026 budget is a transfer. Transfer out to County General."
+  },
+  {
+   "id": "f3022",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emergency Vehicle Fund",
+   "code": "3022",
+   "amount": 8232.43,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "This fund’s whole 2026 budget is a transfer. Transfer to County General for sheriff vehicle maintenance."
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Amendment 79",
+   "code": "3004",
+   "amount": 15816.82,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "This fund’s whole 2026 budget is a transfer. Transfer to County General for software maintenance."
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Automation",
+   "code": "3002",
+   "amount": 5728.04,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "This fund’s whole 2026 budget is a transfer. Transfer to County General."
+  },
+  {
+   "id": "f3039",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Commission Fee Fund",
+   "code": "3039",
+   "amount": 842.47,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "This fund’s whole 2026 budget is a transfer. Transfer to County General. The budget page prints $842.47 as the transfer and $892.47 as income; the ordinance (p. 4) lists $892.47."
+  },
+  {
+   "id": "f1800",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Search and Rescue",
+   "code": "1800",
+   "amount": 3480,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "This fund’s whole 2026 budget is a transfer. Transfer to County General."
+  },
+  {
+   "id": "f3406",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Late Assessment Fee Fund",
+   "code": "3406",
+   "amount": 3198.41,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "This fund’s whole 2026 budget is a transfer. Transfer to County General."
+  },
+  {
+   "id": "f2003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Additional Motor Fuel Tax Fund",
+   "code": "2003",
+   "amount": 292974,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "This fund’s whole 2026 budget is a transfer. Transfer to the County Road Fund."
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Boating Safety Fund",
+   "code": "3019",
+   "amount": 4590.97,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "This fund’s whole 2026 budget is a transfer. Transfer to County General."
+  },
+  {
+   "id": "f3400",
+   "parent": null,
+   "section": "appropriations",
+   "name": "10th Circuit Court Excess Funds",
+   "code": "3400",
+   "amount": 138170.21,
+   "status": "sourced",
+   "source": {
+    "doc": "bradleyar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "This fund’s whole 2026 budget is a transfer. Transfer to County General (printed as line 3400-8901)."
+  }
+ ]
 }
