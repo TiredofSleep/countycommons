@@ -20,34 +20,54 @@ function loadStore() {
   catch (e) { return { submissions: [] }; }
 }
 
-// RULE 8 in a code path, not just policy: screen every submission against the
-// charter bright lines and flag matches for the human reviewer. This never
-// auto-rejects — a person still decides — but the risk is surfaced by code, so
-// a candidate/ballot-measure/conduct question can't slip through unnoticed.
-const BRIGHT_LINES = [
-  { flag: 'possible-candidate', re: /\b(candidate|vote for|vote against|unseat|defeat|elect|re-?elect|running for|(for|against) (sheriff|judge|mayor|office))\b/i },
-  { flag: 'possible-ballot-measure', re: /\b(ballot measure|referendum|initiative|proposition|on the ballot|millage vote|bond issue)\b/i },
-  { flag: 'possible-named-conduct', re: /\b(corrupt|crook|resign|fired|stole|lying|incompetent|should be removed)\b/i }
-];
+// RULE 8 in a code path, not just policy (NEVER.md, October 2026 amendment).
+// Elected officials and candidates may be named and their conduct raised;
+// non-elected staff may not; nobody campaigns here, and no resident vote picks
+// a race's winner or decides a live ballot measure. Priorities and solutions
+// treat a flag as a hard stop; the question box flags for a human reviewer.
+const people = require('./lib/people');
 
-function screen(question) {
+const CAMPAIGN = /\b(vote for|vote against|unseat|defeat|elect|re-?elect|endorse|campaign (for|against))\b/i;
+const BALLOT_MEASURE = /\b(ballot measure|referendum|initiative|proposition|on the ballot|millage vote|bond issue)\b/i;
+const CONDUCT = /\b(corrupt|crook|resign|fired|stole|lying|incompetent|should be removed)\b/i;
+// Conduct words next to these are aimed at staff, even under an elected office's name.
+const STAFF = /\b(deput(y|ies)|employees?|staff(ers?)?|dispatchers?|jailers?|officers?|secretar(y|ies)|assistants?|workers?)\b/i;
+
+function defaultCounty() {
+  try { return JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'config', 'county.json'), 'utf8')); }
+  catch (e) { return null; }
+}
+
+// screen(text, county, { vote }) → flags ([] when clean). `vote` marks text
+// that would become a resident yes/no vote, which may never name a candidate
+// in a live race (that would be polling the race).
+function screen(text, county, opts) {
+  county = county || defaultCounty();
+  const vote = !!(opts && opts.vote);
+  const t = String(text || '');
   const flags = [];
-  for (const b of BRIGHT_LINES) if (b.re.test(question)) flags.push(b.flag);
-  // Election blackout window (from config/county.json), if one is set.
-  try {
-    const county = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'config', 'county.json'), 'utf8'));
-    const now = new Date().toISOString().slice(0, 10);
-    for (const w of ((county.calendar || {}).election_blackouts || [])) {
-      if (w.start && w.end && now >= w.start && now <= w.end) flags.push('in-election-blackout');
-    }
-  } catch (e) { /* no config or no windows set */ }
+  const r = people.roster(county);
+  if (CAMPAIGN.test(t)) flags.push('campaigning');
+  if (BALLOT_MEASURE.test(t)) flags.push('possible-ballot-measure');
+  if (people.named(t, r.appointed).length) flags.push('names-non-elected-staff');
+  if (CONDUCT.test(t)) {
+    const atElected = people.named(t, r.elected).length || people.ELECTED_TITLE.test(t);
+    if (!atElected) flags.push('conduct-not-aimed-at-an-elected-office');
+    else if (STAFF.test(t)) flags.push('conduct-aimed-at-staff');
+  }
+  if (vote && people.named(t, r.candidates).length) flags.push('names-a-candidate-in-a-live-race');
+  // Election blackout window (from the county's config), if one is set.
+  const now = new Date().toISOString().slice(0, 10);
+  for (const w of (((county || {}).calendar || {}).election_blackouts || [])) {
+    if (w.start && w.end && now >= w.start && now <= w.end) flags.push('in-election-blackout');
+  }
   return flags;
 }
 
 function submit({ question, name, contact }) {
   const store = loadStore();
   const q = String(question).slice(0, 1000);
-  const flags = screen(q);
+  const flags = screen(q, null, { vote: true });
   const entry = {
     id: crypto.randomBytes(8).toString('hex'),
     ts: new Date().toISOString(),

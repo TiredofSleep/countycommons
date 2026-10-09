@@ -131,7 +131,7 @@ app.get('/sitemap.xml', (req, res) => {
   if (r.action === 'serve' && directory.isFeatured(r.key)) {
     let cfg = {}; try { cfg = load(r.key).county; } catch (e) {}
     const base = `https://${host}`;
-    const paths = ['/', '/tour', '/budget', '/priorities', '/issues', '/outcomes', '/help', '/calendar', '/participate', '/docket', '/documents', '/vendors', '/audits', '/verify', '/methodology', '/guide', '/stance', '/story', '/counties', '/cases', '/research', '/receipts', '/food', '/sovereignty', '/engine', '/commons', '/blueprint', '/almanac', '/feed', '/frontier', '/growops', '/water', '/justice', '/coverage', '/turnout', '/grants', '/kindred', '/field', '/never', '/security', '/traffic'];
+    const paths = ['/', '/tour', '/budget', '/priorities', '/issues', '/outcomes', '/help', '/calendar', '/participate', '/docket', '/documents', '/vendors', '/audits', '/verify', '/methodology', '/guide', '/stance', '/story', '/counties', '/cases', '/research', '/receipts', '/food', '/sovereignty', '/engine', '/commons', '/blueprint', '/almanac', '/feed', '/frontier', '/growops', '/water', '/justice', '/coverage', '/elections', '/turnout', '/grants', '/kindred', '/field', '/never', '/security', '/traffic'];
     if (cfg.has_municipalities) paths.push('/places');
     if (cfg.has_compare) paths.push('/compare/counties', '/compare/spending');
     if (cfg.has_taxes_debt) paths.push('/taxes');
@@ -273,7 +273,9 @@ app.use((req, res, next) => {
 // and build it); the network directory and the selector stay reachable as exits.
 // Pages that already carry real, cited content on an un-built county (state
 // tax rates, state turnout counts, the closest prisons) stay open past the guard.
+// Elections pass through too: when and where to vote doesn't wait on a budget.
 const STARTER_PAGES = {
+  '/elections': ['When and how to vote', 'election dates, polling hours and the ID rule'],
   '/mybill': ['Your tax bill, explained', 'every tax rate on a home here, from the state’s millage report'],
   '/turnout': ['Voter turnout', 'official counts from the state'],
   '/justice': ['Jails & prisons', 'the closest state prisons and ideas from elsewhere'],
@@ -549,6 +551,10 @@ app.get('/grants', (req, res) => {
 const { turnoutPage } = require('./views/turnout');
 app.get('/turnout', (req, res) => res.send(turnoutPage(load(req.tenantKey))));
 
+// Elections — when, where, and how to vote. Dates and rules per state, sourced.
+const { electionsPage } = require('./views/elections');
+app.get('/elections', (req, res) => res.send(electionsPage(load(req.tenantKey))));
+
 // How complete is this county? — the six pillars, here and across the network.
 const { coveragePage } = require('./views/coverage');
 app.get('/coverage', (req, res) => res.send(coveragePage(load(req.tenantKey), req.tenantKey)));
@@ -685,7 +691,8 @@ app.post('/issues/ask', writeLimit, express.urlencoded({ extended: false }), (re
   const back = '/issues?level=' + encodeURIComponent(level);
   const r = require('./questions').ask({
     scope, city, state: data.county && data.county.state, tenant: req.tenantKey,
-    wording: req.body && req.body.wording, context: req.body && req.body.context, participant
+    wording: req.body && req.body.wording, context: req.body && req.body.context, participant,
+    county: data.county
   });
   if (r.error === 'bright-line') return res.redirect(back + '&blocked=' + encodeURIComponent((r.flags || []).join(', ')) + '#ask');
   if (r.error) return res.redirect(back + '#ask');
@@ -1107,9 +1114,10 @@ app.post('/admin/questions/resident/remove', requireAdmin, express.urlencoded({ 
 app.post('/admin/questions/open', requireAdmin, express.urlencoded({ extended: false }), (req, res) => {
   const wording = String((req.body && req.body.wording) || '').trim().slice(0, 300);
   if (!wording) return res.redirect('/admin/questions');
-  // The charter bright lines are a bone: no candidates, no ballot measures, no
-  // named-individual conduct. A host cannot open a question that trips them.
-  const flags = submissions.screen(wording);
+  // The charter bright lines are a bone (NEVER.md): no votes on races or live
+  // ballot measures, no campaigning, nothing about non-elected staff. A host
+  // cannot open a question that trips them.
+  const flags = submissions.screen(wording, load(req.access.tenant).county, { vote: true });
   if (flags.length) return res.redirect('/admin/questions?blocked=' + encodeURIComponent(flags.join(', ')));
   const slug = wording.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40)
     || 'question';

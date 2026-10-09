@@ -10,7 +10,7 @@
 // secret-ballot votes this store holds titles and reasons in the open. What
 // stays private is who backed what: support is a count keyed by the same
 // per-sitting participant token as votes, never a name. Bright-line screened
-// (no candidates, no named-individual conduct) like every resident submission.
+// (no campaigning, nothing about non-elected staff) like every resident submission.
 
 const fs = require('fs');
 const path = require('path');
@@ -30,21 +30,6 @@ function save(s) {
   fs.renameSync(tmp, STORE);
 }
 
-// Does the text name a specific official from this county's roster? Priorities
-// are about the work and the dollars, never a person — so naming an official
-// (by full name) trips the named-individual bright line. Full-name match keeps
-// false positives low; common surnames as words (Angle, King) don't fire.
-function namesAnOfficial(text, county) {
-  const t = ' ' + String(text || '').toLowerCase() + ' ';
-  const roster = [];
-  for (const o of (county && county.officials) || []) if (o.name) roster.push(o.name);
-  for (const j of (((county && county.quorum_court) || {}).justices) || []) if (j.name) roster.push(j.name);
-  return roster.some(full => {
-    const name = full.toLowerCase().replace(/["'".]/g, '').trim();
-    return name.split(/\s+/).length >= 2 && t.includes(name);
-  });
-}
-
 // Propose a priority. Returns { id } or { error, flags? }. Priorities publish
 // to the public board immediately (no human queue like question-submissions),
 // so a bright-line hit is a hard stop here, not just a flag for a reviewer.
@@ -61,12 +46,12 @@ function propose({ tenant, kind, title, why, node_ref, participant, county, targ
   target = level;
   state = state || (county && county.state) || null;
   if (!title || !why) return { error: 'missing' };
-  // The charter bright lines are a bone: no candidates, no active-ballot
-  // measures, no named-individual conduct. Keyword screen + this county's
-  // official roster; anything flagged is refused, never published.
+  // The charter bright lines are a bone (NEVER.md): no campaigning, no live
+  // ballot measures, no naming or conduct posts about non-elected staff.
+  // Elected officials and candidates may be named. Anything flagged is
+  // refused, never published.
   const text = title + ' ' + why;
-  const flags = require('./submissions').screen(text);
-  if (namesAnOfficial(text, county)) flags.push('names-an-official');
+  const flags = require('./submissions').screen(text, county);
   if (flags.length) return { error: 'bright-line', flags };
 
   const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40) || 'priority';

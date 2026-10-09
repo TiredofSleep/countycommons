@@ -197,7 +197,7 @@ ${IDEAS.map(([g, items]) => `<p class="src" style="margin:10px 0 4px"><b>${esc(g
 
   const proposeForm = `
 <form method="POST" action="/priorities/propose" style="margin-top:8px">
-  ${o.blocked ? `<p class="src" style="color:var(--dead)"><b>That can't go up as written.</b> This platform never hosts questions about candidates, active ballot measures, or a named person's conduct (${esc(o.blocked)}). Say it about the work or the dollars, not a person, and it's welcome.</p>` : ''}
+  ${o.blocked ? `<p class="src" style="color:var(--dead)"><b>That can't go up as written.</b> This platform never carries campaign language, live ballot measures, or posts aimed at non-elected staff (${esc(o.blocked)}). Elected officials can be named — say it about them, the work, or the dollars, and it's welcome.</p>` : ''}
   <input type="hidden" name="level" value="${esc(current.id)}">
   <p class="src" style="margin:0 0 10px;border-left:3px solid var(--accent);padding-left:10px">Posting to the <b>${esc(current.label)}</b> board${current.body ? ` — aimed at ${esc(current.body)}` : ''}. ${levels.length > 1 ? `Wrong level? <a href="#board">Switch above.</a>` : ''}</p>
   <fieldset style="border:1.5px solid var(--rule);padding:12px;margin:0 0 10px">

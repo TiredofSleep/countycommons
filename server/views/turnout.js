@@ -85,7 +85,7 @@ ${local}
   }
 
   return layout({
-    title: `Voter turnout — ${county.platform_name}`, current: '/turnout', body, county,
+    title: `Voter turnout — ${county.platform_name}`, current: '/elections', body, county,
     description: `How many registered voters in ${county.name} actually voted — official counts for recent elections, against the statewide turnout and other counties.`
   });
 }

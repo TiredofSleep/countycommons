@@ -24,7 +24,7 @@ function rulesDialog(county) {
     <li><b>Announcing is the loud version — and always your choice.</b> The count is anonymous, period. If you want to be heard by name, check the announce box when you register: your name, town, and answer go on the question page, petition-style — and unchecking takes them down. Self-signed and unverified until the tiers arrive; misused names removed on request, with removals logged.</li>
     <li><b>These counts are unofficial.</b> Not an election, not a referendum, not a petition. Their only weight is that the counting is published and checkable.</li>
     <li><b>At ${require('../lib/threshold').deliveryThreshold(county)} responses, the result travels.</b> We print the packet and hand-deliver it to the body that decides, and stamp the delivery publicly.</li>
-    <li><b>Bright lines.</b> No questions about candidates, active ballot measures, or the conduct of named individuals. The platform computes and cites; it never takes sides.</li>
+    <li><b>Bright lines.</b> No votes on races or on live ballot measures, no campaign language, and nothing aimed at non-elected staff. Elected officials and candidates can be named and their conduct raised; every candidate in a race gets the same treatment. The platform computes and cites; it never takes sides.</li>
     <li><b>Every count is checkable</b> — the tally is <a href="/verify">re-added in public</a> and the activity log is <a href="/security">hash-chained and anchored</a> where we can't rewrite it.</li>
   </ul>
   <form method="dialog" style="margin:0"><button data-close style="font-family:var(--mono);font-size:13px;padding:8px 16px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);cursor:pointer">Got it</button></form>

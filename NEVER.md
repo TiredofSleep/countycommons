@@ -12,7 +12,7 @@
 
 ## Data and persons
 
-**Ledgers get lit; persons stay dark.** Institutional and business transparency is the mission; individual human beings keep their privacy. No feature will ever publish an identifiable person's wages, purchases, debts, votes, or finances **without that person choosing it for themselves.** The platform never discloses your answer; you may choose to sign it publicly, petition-style, and un-choose it at any time. What is forbidden forever is the platform — or anyone else — publishing a person's data over their head. Aggregation floors are code, not settings.
+**Ledgers get lit; persons stay dark.** Institutional and business transparency is the mission; individual human beings keep their privacy. No feature will ever publish an identifiable person's wages, purchases, debts, votes, or finances **without that person choosing it for themselves.** The platform never discloses your answer; you may choose to sign it publicly, petition-style, and un-choose it at any time. What is forbidden forever is the platform — or anyone else — publishing a person's data over their head. Aggregation floors are code, not settings. (One group stands apart: people who hold or seek elected office. The money filings the law makes them file, and their votes as members of a public body, are public record. See "The civic work" below. Their secret ballots as voters stay as dark as anyone's.)
 
 *(Amendment, added when the public-signature feature shipped, per this file's own rule that changes be written down in public with the reasoning shown: the original line read "…debts, votes, or finances." The qualifier was added because residents asked to be able to sign their own answers by name, like a petition. The distinction that matters and that we hold to is direction and consent — the light points at ledgers and institutions, and points at a person only when that person turns it on themselves.)*
 
@@ -26,7 +26,13 @@
 
 ## The civic work
 
-**No candidates, no ballot measures, no named individuals — ever.** The sponsored civic platform computes and cites; it never advocates, never endorses, never displays official endorsements, and never becomes opposition infrastructure. These lines tighten, not loosen, in election seasons.
+**No sides in a race — and the shield is for staff, not for officeholders.** The sponsored civic platform computes and cites; it never advocates, never endorses, never displays official endorsements, and never becomes anyone's campaign or opposition infrastructure. It never runs a resident vote on who should win a race, or on a measure already on a ballot.
+
+People who hold or seek elected office asked for public power, so the light reaches them. The platform may name them; show who is on the ballot and how each member voted; publish everything the law requires them to file about their money (financial-interest statements, campaign contribution and expenditure reports); and host residents' questions and priorities about their conduct in office. Every candidate in a race gets the same treatment: the same facts, the same format, in alphabetical order, and a filing gathered for one is sought for all. A record not yet in hand is shown as "not gathered yet" for each candidate alike, never only for one.
+
+Non-elected government employees are never named or singled out. No conduct posts about them, and no pay or records tied to their names. Their work is answered for by the elected people who direct it. These lines tighten, not loosen, in election seasons.
+
+*(Amendment, October 2026, written down here before the code changed, per this file's own rule. The original line read: "No candidates, no ballot measures, no named individuals — ever. The sponsored civic platform computes and cites; it never advocates, never endorses, never displays official endorsements, and never becomes opposition infrastructure. These lines tighten, not loosen, in election seasons." The reasoning: a voter can't weigh a race the platform won't name, and the money trail stops short if it can't reach the people who vote the money. The protection was meant for people who never asked for public power. That is non-elected staff and private residents, who stay covered by "Ledgers get lit; persons stay dark" above. It was never meant for those who did ask for it. Neutrality between candidates, and the bar on running votes on races and live ballot measures, are unchanged.)*
 
 ## The people
 

@@ -42,7 +42,7 @@ Calendar constraint: quorum court budget season is Oct–Nov. Launch Aug–Sept.
 5. **AI never advocates, never moderates alone.** Neutrality passes suggest wording; humans decide. Moderation pre-screen flags only; the moderation log is append-only and public.
 6. **Server-rendered HTML, minimal JS, WCAG AA.** Must be fast on old Android browsers. SQLite. One VPS.
 7. **`config/county.json` is the generalization seam.** Jurisdictions, officials, meeting calendar, data sources, election blackout windows, tier methods. A second county = a second config file + PDFs in inbox. Never hardcode Clark County specifics outside config.
-8. **Charter bright lines in code paths, not just policy:** no candidate issues, no active-ballot-measure issues, no named-individual conduct issues. Election blackout windows come from county.json.
+8. **Charter bright lines in code paths, not just policy:** no resident votes on races or on active ballot measures, no campaigning (vote for / against, unseat, re-elect), and no naming or conduct issues about non-elected staff. Elected officials and candidates may be named and their conduct raised, and their required financial filings are published, with every candidate in a race treated alike (NEVER.md, October 2026 amendment). Election blackout windows come from county.json.
 
 ## What is Brayden's, not code
 

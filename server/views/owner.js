@@ -84,13 +84,13 @@ ${rows}
 
 <section>
 <h2>Resident questions across the network <span class="sub">— ${residentQuestions.length}</span></h2>
-<p class="src" style="max-width:64ch">Every question residents proposed, at any level. Candidate, ballot-measure, and named-conduct questions are refused automatically before they reach here. County hosts moderate their own local ones; state and national questions are yours to open, close, or remove.</p>
+<p class="src" style="max-width:64ch">Every question residents proposed, at any level. Votes on races, live ballot measures, campaign language, and questions aimed at non-elected staff are refused automatically before they reach here. County hosts moderate their own local ones; state and national questions are yours to open, close, or remove.</p>
 ${residentQuestions.length ? residentQuestions.map(q => modRow(q, '/owner/questions', PROMOTE_AT, ownerScopeBadge(q))).join('') : '<p class="src">No resident questions yet.</p>'}
 </section>
 
 <section>
 <h2>Community priorities across the network <span class="sub">— ${allPriorities.length}</span></h2>
-<p class="src" style="max-width:64ch">Every priority residents posted, any county. Candidate, ballot-measure, and named-official posts are refused automatically. Hosts moderate their own county; this is your backstop for all of them.</p>
+<p class="src" style="max-width:64ch">Every priority residents posted, any county. Campaign posts, live ballot measures, and posts aimed at non-elected staff are refused automatically. Hosts moderate their own county; this is your backstop for all of them.</p>
 ${allPriorities.length ? allPriorities.map(p => `
 <div class="issue" style="display:block">
   <b>${esc(p.title)}</b> <span class="chip ${p.kind === 'reconsider' ? 'c-amb' : 'c-ok'}">${p.kind === 'reconsider' ? 'fresh look' : 'prioritize'}</span> <span class="src">· ${esc(p.tenant)} · ${p.support} backing</span>

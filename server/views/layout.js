@@ -13,7 +13,7 @@ const NAV = [
   ['/grants', 'Grants'],
   ['/water', 'Water'],
   ['/justice', 'Jails'],
-  ['/turnout', 'Turnout'],
+  ['/elections', 'Elections'],
   ['/docket', 'Docket'],
   ['/coverage', 'Coverage'],
   ['/help', 'Help'],
@@ -32,6 +32,7 @@ function siteMap(county, current) {
   const groups = [
     ['The votes', [
       ['/issues', 'Open questions'],
+      ['/elections', 'Elections — when, where, how'],
       ['/turnout', 'Voter turnout'],
       ['/priorities', 'Priorities board'],
       ['/outcomes', 'What came of it'],
