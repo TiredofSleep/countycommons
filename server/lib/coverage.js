@@ -10,6 +10,7 @@ const readJSON = (p) => { try { return JSON.parse(fs.readFileSync(path.join(ROOT
 // The pillars, in the order the site reads.
 const PILLARS = [
   { id: 'votes', label: 'The votes', href: '/issues' },
+  { id: 'elections', label: 'Elections', href: '/elections' },
   { id: 'turnout', label: 'Voter turnout', href: '/turnout' },
   { id: 'budget', label: 'The budget', href: '/budget' },
   { id: 'grants', label: 'Grants', href: '/grants' },
@@ -41,9 +42,13 @@ function forTenant(key, t) {
   const stTurn = readJSON('data/corpus/turnout-' + stateSlug + '.json');
   const cKey = String(cfg.name || '').replace(/ County$/, '');
   const hasTurnout = !!(stTurn && stTurn.elections.some(e => e.counties[cKey]));
+  const stElect = readJSON('data/corpus/elections-' + stateSlug + '.json');
+  const today = new Date().toISOString().slice(0, 10);
+  const hasDates = !!(stElect && (stElect.elections || []).some(e => e.date >= today));
   const hasStateGrants = fs.existsSync(path.join(ROOT, 'data/corpus/grants-' + stateSlug + '.json'));
 
   const s = {
+    elections: hasDates ? (cfg.election_office ? ['done', 'Dates sourced; local election office listed'] : ['partial', 'State dates sourced; local election office not listed']) : ['none', 'Election dates not gathered yet'],
     turnout: hasTurnout ? ['done', 'Official counts gathered'] : ['none', 'State counts not gathered yet'],
     grants: has('grants.json') ? ['done', 'Matched to local needs'] : hasStateGrants ? ['partial', 'State and federal programs listed; not matched locally'] : ['partial', 'Federal programs only'],
     votes: open ? ['done', `${open} open question${open === 1 ? '' : 's'} + the priorities board`] : ['partial', 'Priorities board open; no county questions yet'],

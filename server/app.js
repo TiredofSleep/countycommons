@@ -131,7 +131,7 @@ app.get('/sitemap.xml', (req, res) => {
   if (r.action === 'serve' && directory.isFeatured(r.key)) {
     let cfg = {}; try { cfg = load(r.key).county; } catch (e) {}
     const base = `https://${host}`;
-    const paths = ['/', '/tour', '/budget', '/priorities', '/issues', '/outcomes', '/help', '/calendar', '/participate', '/docket', '/documents', '/vendors', '/audits', '/verify', '/methodology', '/guide', '/stance', '/story', '/counties', '/cases', '/research', '/receipts', '/food', '/sovereignty', '/engine', '/commons', '/blueprint', '/almanac', '/feed', '/frontier', '/growops', '/water', '/justice', '/coverage', '/turnout', '/grants', '/kindred', '/field', '/never', '/security', '/traffic'];
+    const paths = ['/', '/tour', '/budget', '/priorities', '/issues', '/outcomes', '/help', '/calendar', '/participate', '/docket', '/documents', '/vendors', '/audits', '/verify', '/methodology', '/guide', '/stance', '/story', '/counties', '/cases', '/research', '/receipts', '/food', '/sovereignty', '/engine', '/commons', '/blueprint', '/almanac', '/feed', '/frontier', '/growops', '/water', '/justice', '/coverage', '/elections', '/turnout', '/grants', '/kindred', '/field', '/never', '/security', '/traffic'];
     if (cfg.has_municipalities) paths.push('/places');
     if (cfg.has_compare) paths.push('/compare/counties', '/compare/spending');
     if (cfg.has_taxes_debt) paths.push('/taxes');
@@ -270,6 +270,7 @@ app.use((req, res, next) => {
 // an honest "not built yet" page instead of an empty $0 tree, so the public never
 // lands on a hollow site. Admin/owner routes pass through (a host can still log in
 // and build it); the network directory and the selector stay reachable as exits.
+// Elections pass through too: when and where to vote doesn't wait on a budget.
 function starterPage(data) {
   const { layout } = require('./views/layout');
   const { county } = data;
@@ -301,7 +302,7 @@ app.use((req, res, next) => {
   if (directory.isFeatured(req.tenantKey)) return next();
   const p = req.path;
   if (p.startsWith('/admin') || p.startsWith('/owner') || p.startsWith('/gate') || p.startsWith('/enter') ||
-      p.startsWith('/counties') || p === '/health' || p === '/robots.txt' || /\.[a-z0-9]+$/i.test(p)) return next();
+      p.startsWith('/counties') || p === '/elections' || p === '/health' || p === '/robots.txt' || /\.[a-z0-9]+$/i.test(p)) return next();
   try { return res.send(starterPage(load(req.tenantKey))); } catch (e) { return next(); }
 });
 
@@ -519,6 +520,10 @@ app.get('/grants', (req, res) => {
 // Voter turnout — official counts only, for every county whose state is gathered.
 const { turnoutPage } = require('./views/turnout');
 app.get('/turnout', (req, res) => res.send(turnoutPage(load(req.tenantKey))));
+
+// Elections — when, where, and how to vote. Dates and rules per state, sourced.
+const { electionsPage } = require('./views/elections');
+app.get('/elections', (req, res) => res.send(electionsPage(load(req.tenantKey))));
 
 // How complete is this county? — the six pillars, here and across the network.
 const { coveragePage } = require('./views/coverage');
