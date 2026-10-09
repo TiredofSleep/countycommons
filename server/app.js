@@ -661,7 +661,8 @@ app.post('/issues/ask', writeLimit, express.urlencoded({ extended: false }), (re
   const back = '/issues?level=' + encodeURIComponent(level);
   const r = require('./questions').ask({
     scope, city, state: data.county && data.county.state, tenant: req.tenantKey,
-    wording: req.body && req.body.wording, context: req.body && req.body.context, participant
+    wording: req.body && req.body.wording, context: req.body && req.body.context, participant,
+    county: data.county
   });
   if (r.error === 'bright-line') return res.redirect(back + '&blocked=' + encodeURIComponent((r.flags || []).join(', ')) + '#ask');
   if (r.error) return res.redirect(back + '#ask');
@@ -1083,9 +1084,10 @@ app.post('/admin/questions/resident/remove', requireAdmin, express.urlencoded({ 
 app.post('/admin/questions/open', requireAdmin, express.urlencoded({ extended: false }), (req, res) => {
   const wording = String((req.body && req.body.wording) || '').trim().slice(0, 300);
   if (!wording) return res.redirect('/admin/questions');
-  // The charter bright lines are a bone: no candidates, no ballot measures, no
-  // named-individual conduct. A host cannot open a question that trips them.
-  const flags = submissions.screen(wording);
+  // The charter bright lines are a bone (NEVER.md): no votes on races or live
+  // ballot measures, no campaigning, nothing about non-elected staff. A host
+  // cannot open a question that trips them.
+  const flags = submissions.screen(wording, load(req.access.tenant).county, { vote: true });
   if (flags.length) return res.redirect('/admin/questions?blocked=' + encodeURIComponent(flags.join(', ')));
   const slug = wording.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40)
     || 'question';

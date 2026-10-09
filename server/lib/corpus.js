@@ -80,12 +80,8 @@ function load(tenantKey) {
     turnoutLocal = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'turnout-local.json'), 'utf8'));
   } catch (e) { /* not researched yet */ }
   // Elections: a state's dates and rules are shared (one file per state, like
-  // turnout); what's on a county's own ballot is its own and never inherited.
+  // turnout). A county's own races and election office live in its config.
   const elections = sharedRead('elections-' + String(county.state || '').toLowerCase().replace(/\s+/g, '-') + '.json');
-  let electionsLocal = null;
-  try {
-    electionsLocal = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'elections-local.json'), 'utf8'));
-  } catch (e) { /* not researched yet */ }
   // Grants: federal programs are shared by every county, state programs by every
   // county in that state; a county's own matches are its own and never inherited.
   const stateSlug = String(county.state || '').toLowerCase().replace(/\s+/g, '-');
@@ -148,7 +144,7 @@ function load(tenantKey) {
   if (verification) {
     for (const c of verification.checks) verifyByNode.set(c.node, c);
   }
-  const data = { budget, docket, documents, county, verification, comparisons, vendors, auditFindings, spending, taxDebt, whatIf, market, taxLab, commonwealth, water, waterGuide, justice, justiceGuide, prisonsNear, turnout, turnoutLocal, elections, electionsLocal, grants, grantsState, grantsGuide, stance, cases, help, calendar, research, issueDrafts, byId, childrenOf, verifyByNode };
+  const data = { budget, docket, documents, county, verification, comparisons, vendors, auditFindings, spending, taxDebt, whatIf, market, taxLab, commonwealth, water, waterGuide, justice, justiceGuide, prisonsNear, turnout, turnoutLocal, elections, grants, grantsState, grantsGuide, stance, cases, help, calendar, research, issueDrafts, byId, childrenOf, verifyByNode };
   // Lay this county's writable overlay (a local host's edits) on top of the
   // git-seeded corpus. Only whitelisted sections merge (see overlay.js); the
   // bones are never touched. Resolve to the default county when unkeyed.

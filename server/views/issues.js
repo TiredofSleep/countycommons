@@ -85,7 +85,7 @@ ${items || `<p class="src">No questions are open on the <b>${esc(current.label)}
 <section id="ask">
 <h2>Ask a question <span class="sub">— on the ${esc(current.label)} board</span></h2>
 ${opts.asked ? `<p style="color:var(--sourced)"><b>Proposed ✓</b> — your question is up for support below. When it reaches ${PROMOTE_AT} supporters, it opens for a live vote.</p>` : ''}
-${opts.blocked ? `<div class="issue" style="display:block;border-color:var(--dead)"><b style="color:var(--dead)">That question can't be asked.</b><p class="src" style="margin:6px 0 0">A charter bright line was matched (${esc(opts.blocked)}). County Commons never runs questions about candidates, active ballot measures, or a named person's conduct — those belong to elections and the courts. Ask about a policy or a dollar, not a person or a race.</p></div>` : ''}
+${opts.blocked ? `<div class="issue" style="display:block;border-color:var(--dead)"><b style="color:var(--dead)">That question can't be asked.</b><p class="src" style="margin:6px 0 0">A charter bright line was matched (${esc(opts.blocked)}). County Commons never runs a vote on who should win a race or on a measure already on the ballot, never carries campaign language, and never targets non-elected staff. Questions about an elected official's conduct are welcome — just don't make it a vote on a race.</p></div>` : ''}
 <p>Ask it in your own words. It's checked against the <a href="/never">bright lines</a>, then goes up for support; at ${PROMOTE_AT} supporters it opens for the whole level to answer.</p>
 <form method="POST" action="/issues/ask" style="display:flex;flex-direction:column;gap:8px;max-width:60ch">
   <input type="hidden" name="level" value="${esc(current.id)}">
@@ -260,7 +260,7 @@ ${draft.background ? `<p>${draft.background}</p>` : `<p>${esc(draft.context)}</p
 <section>
 <h2>Disclosures <span class="sub">— the platform holds itself to its own standard</span></h2>
 ${draft.disclosure ? `<p class="src">${draft.disclosure}</p>` : ''}
-<p class="src">Bright lines that apply to every question here: no candidate questions, no active-ballot-measure questions, no questions about named individuals' conduct. The raw submission and any wording history are logged in the platform's public repository.</p>
+<p class="src">Bright lines that apply to every question here: no votes on races or on live ballot measures, no campaign language, and nothing aimed at non-elected staff. Elected officials can be named. The raw submission and any wording history are logged in the platform's public repository.</p>
 </section>`;
 
   const q1 = String(draft.final_wording || '').replace(/\s+/g, ' ').trim();

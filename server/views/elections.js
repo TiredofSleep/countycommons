@@ -5,8 +5,9 @@ const { layout } = require('./layout');
 // (data/corpus/elections-<state>.json); the county's own election office lives in
 // its config, and what's on its own local ballot in elections-local.json. Every
 // date carries its source and a live passed / open now / days-to-go mark.
-// Bright line (NEVER.md): no candidates and no ballot measures are listed, rated,
-// or recommended here — offices only, and a link to the official sample ballot.
+// Bright line (NEVER.md, October 2026 amendment): candidates are listed, never
+// rated or recommended — every candidate in a race the same way, alphabetical,
+// with the money filings the law requires of them, sought for all alike.
 
 const DAY = 86400000;
 const iso = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
@@ -27,7 +28,7 @@ function mark(d, today) {
 }
 
 function electionsPage(data, now = new Date()) {
-  const { county, elections: st, electionsLocal: loc } = data;
+  const { county, elections: st } = data;
   const today = iso(now);
   const office = county.election_office || null;
   const place = county.name;
@@ -36,7 +37,7 @@ function electionsPage(data, now = new Date()) {
 <header class="page">
   <div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · elections</div>
   <h1>Voting in ${esc(place)}</h1>
-  <div class="src">${lead} This page never lists, rates, or recommends candidates or ballot measures — <a href="/never">a line this site holds</a>. For exactly what's on your ballot, use your official sample ballot.</div>
+  <div class="src">${lead} This page never rates or recommends a candidate or a ballot measure, and it shows every candidate in a race the same way — <a href="/never">a line this site holds</a>. For everything on your own ballot, use your official sample ballot.</div>
 </header>`;
 
   const officeBlock = office ? `
@@ -67,10 +68,43 @@ ${officeBlock}
   }
 
   const togo = daysUntil(next.date, today);
-  const onBallot = loc && (loc.on_ballot || []).filter(b => b.election === next.id);
-  const ballotBlock = onBallot && onBallot.length ? `
-<h3 style="margin-top:14px">On the local ballot</h3>
-${onBallot.map(b => `<p><b>${esc(b.body)}:</b> ${esc(b.text)}</p>${srcLine(b.src)}`).join('')}` : '';
+
+  // Local races: every candidate the same way — alphabetical by last name, the
+  // same columns, and each required filing shown as filed or "not gathered
+  // yet" for every candidate alike (NEVER.md, October 2026 amendment).
+  const filingDefs = st.filings || [];
+  const races = (county.races || []).filter(r => r.election === next.id);
+  const lastName = (n) => String(n || '').trim().split(/\s+/).pop().toLowerCase();
+  const filingCell = (c, f) => {
+    const x = (c.filings || {})[f.id];
+    return x && x.url ? `<a href="${esc(x.url)}" rel="noopener">${esc(x.label || 'filed')}</a>` : '<span class="chip">not gathered yet</span>';
+  };
+  const raceBlock = races.length ? `
+<section id="races">
+<h2>Local races <span class="sub">— the ones we've gathered</span></h2>
+<p class="src" style="max-width:none">Every candidate in a race is shown the same way, alphabetical by last name. Nothing here rates or recommends anyone. Your sample ballot lists every race you can vote in.</p>
+${races.map(r => {
+    const cands = (r.candidates || []).slice().sort((a, b) => lastName(a.name).localeCompare(lastName(b.name)));
+    return `<div class="issue" style="display:block">
+  <b>${esc(r.office)}</b>
+  ${r.note ? `<p style="font-size:14px;margin:4px 0 8px">${esc(r.note)}</p>` : ''}
+  <div style="overflow-x:auto;max-width:100%"><table class="plain"><thead><tr><th>Candidate</th><th>Party</th>${filingDefs.map(f => `<th>${esc(f.name)}</th>`).join('')}</tr></thead>
+  <tbody>${cands.map(c => `<tr><td>${esc(c.name)}${c.ballot_name && c.ballot_name !== c.name ? `<br><span class="soft" style="font-size:12px">on the ballot as ${esc(c.ballot_name)}</span>` : ''}</td><td>${esc(c.party || 'Nonpartisan')}</td>${filingDefs.map(f => `<td>${filingCell(c, f)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>
+  ${srcLine(r.src)}
+</div>`;
+  }).join('')}
+</section>` : '';
+
+  const moneyBlock = filingDefs.length ? `
+<section id="money">
+<h2>What they must file about their money</h2>
+<p>People who hold or seek elected office in ${esc(county.state)} have to put these on the public record. We post each one as filed, for every candidate alike, as we gather them (see <a href="/docket">the docket</a>).</p>
+${filingDefs.map(f => `<div class="issue" style="display:block">
+  <b>${esc(f.name)}</b>
+  <p style="font-size:14px;margin:4px 0 0"><b>Who:</b> ${esc(f.who)} <b>Where:</b> ${esc(f.where)} <b>When:</b> ${esc(f.when)}</p>
+  ${srcLine(f.src)}
+</div>`).join('')}
+</section>` : '';
 
   const dates = (next.dates || []).slice().sort((a, b) => a.date.localeCompare(b.date)).map(d => `
 <div class="issue" style="display:block">
@@ -88,9 +122,10 @@ ${onBallot.map(b => `<p><b>${esc(b.body)}:</b> ${esc(b.text)}</p>${srcLine(b.src
   <h2 style="margin:4px 0">${esc(next.name)} — ${esc(long(next.date))}</h2>
   ${next.hours ? `<p>Polls are open <b>${esc(next.hours)}</b> local time.</p>` : ''}
   ${next.what ? `<p style="font-size:14px">${esc(next.what)}</p>` : ''}
-  ${ballotBlock}
 </div>
 </section>
+${raceBlock}
+${moneyBlock}
 
 <section id="dates">
 <h2>Key dates <span class="sub">— marked against today, ${esc(short(today))}</span></h2>

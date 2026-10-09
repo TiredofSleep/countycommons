@@ -57,7 +57,7 @@ function solutionsSection(county, qid, solutions, opts) {
     : o.error === 'uncited'
     ? `<div class="issue" style="display:block;border-color:var(--dead)"><b style="color:var(--dead)">A solution needs at least one source.</b> <span class="src">Add a link or a plain reference — a document, a record, a study. Cited is the whole point.</span></div>`
     : o.blocked
-    ? `<div class="issue" style="display:block;border-color:var(--dead)"><b style="color:var(--dead)">That can't be filed as written.</b> <span class="src">A charter bright line was matched (${esc(o.blocked)}). Propose about the policy or the dollars, not a candidate, a ballot measure, or a named person.</span></div>`
+    ? `<div class="issue" style="display:block;border-color:var(--dead)"><b style="color:var(--dead)">That can't be filed as written.</b> <span class="src">A charter bright line was matched (${esc(o.blocked)}). Propose about the policy or the dollars — no campaign language, no live ballot measure, and nothing aimed at non-elected staff.</span></div>`
     : '';
 
   return `

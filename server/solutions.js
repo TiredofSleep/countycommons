@@ -8,8 +8,8 @@
 //
 // Like priorities, the solution TEXT is public advocacy (meant to be read), but
 // who voted yes/no is a private count keyed by the per-sitting participant token,
-// never a name. Same charter bright lines: no candidates, no active ballot
-// measures, no named-individual conduct — screened in code before it publishes.
+// never a name. Same charter bright lines: no campaigning, no live ballot
+// measures, nothing about non-elected staff — screened in code before it publishes.
 
 const fs = require('fs');
 const path = require('path');
@@ -48,17 +48,6 @@ function parseCitations(raw) {
     });
 }
 
-function namesAnOfficial(text, county) {
-  const t = ' ' + String(text || '').toLowerCase() + ' ';
-  const roster = [];
-  for (const o of (county && county.officials) || []) if (o.name) roster.push(o.name);
-  for (const j of (((county && county.quorum_court) || {}).justices) || []) if (j.name) roster.push(j.name);
-  return roster.some(full => {
-    const name = full.toLowerCase().replace(/["'".]/g, '').trim();
-    return name.split(/\s+/).length >= 2 && t.includes(name);
-  });
-}
-
 // File a solution under a question. Returns { id } or { error, flags? }.
 // Publishes immediately (like priorities) — bright-line hit is a hard stop.
 function file({ tenant, question_id, title, summary, citations, participant, county }) {
@@ -69,8 +58,7 @@ function file({ tenant, question_id, title, summary, citations, participant, cou
   if (!cites.length) return { error: 'uncited' };
 
   const text = title + ' ' + summary;
-  const flags = require('./submissions').screen(text);
-  if (namesAnOfficial(text, county)) flags.push('names-an-official');
+  const flags = require('./submissions').screen(text, county);
   if (flags.length) return { error: 'bright-line', flags };
 
   const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40) || 'solution';

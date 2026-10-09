@@ -8,8 +8,9 @@
 // The frame holds at every level: advisory signal to the body that decides —
 // local to the quorum court / city board, state to the legislature, national
 // to Congress. It informs the republic; it never replaces it. And the same
-// charter bright lines apply — no candidates, no ballot measures, no questions
-// about a named person's conduct — screened in code before a proposal is made.
+// charter bright lines apply — no votes on races or live ballot measures, no
+// campaigning, nothing about non-elected staff — screened in code before a
+// proposal is made.
 //
 // Store is gitignored operational data (like votes/signatures). Chain-first.
 
@@ -46,11 +47,11 @@ function save(store) {
 function today() { return new Date().toISOString().slice(0, 10); }
 
 // A resident proposes a question at a level. Returns {id} or {error, flags}.
-function ask({ scope, state, tenant, city, wording, context, participant }) {
+function ask({ scope, state, tenant, city, wording, context, participant, county }) {
   scope = SCOPES.has(scope) ? scope : 'local';
   wording = String(wording || '').trim().slice(0, 300);
   if (!wording) return { error: 'empty' };
-  const flags = screen(wording);
+  const flags = screen(wording, county, { vote: true });
   if (flags.length) return { error: 'bright-line', flags };
   const id = wording.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 36)
     + '-' + Math.abs(hash(wording + Date.now())).toString(36).slice(0, 4);

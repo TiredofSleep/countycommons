@@ -57,7 +57,7 @@ ${republicFrame(data.county)}
 </section>
 <section>
 <h2>House rules <span class="sub">— the frame everyone builds inside</span></h2>
-<p class="src">Your edits live in your county's own space and never touch another county. What you can't change — because it protects everyone — is how numbers are cited to their source, how votes are counted and kept private, and the charter lines (no candidates, no ballot measures, no questions about a named person's conduct). Every save here is logged publicly by your name.</p>
+<p class="src">Your edits live in your county's own space and never touch another county. What you can't change — because it protects everyone — is how numbers are cited to their source, how votes are counted and kept private, and the charter lines (no votes on races or live ballot measures, no campaigning, nothing aimed at non-elected staff). Every save here is logged publicly by your name.</p>
 </section>`;
   return shell(county, 'Your county', body);
 }
@@ -136,7 +136,7 @@ function adminQuestions(data, hostQuestions, residentQuestions, opts = {}) {
   const resSection = `
 <section>
 <h2>Questions your residents asked <span class="sub">— ${residentQuestions.length} local</span></h2>
-<p class="src" style="max-width:64ch">Residents propose county questions; at ${PROMOTE_AT} supporters they open on their own. You can open one early, close a live one, or remove one that shouldn't be here. Candidate, ballot-measure, and named-conduct questions are already refused automatically. State and national questions are moderated by the platform owner, not here.</p>
+<p class="src" style="max-width:64ch">Residents propose county questions; at ${PROMOTE_AT} supporters they open on their own. You can open one early, close a live one, or remove one that shouldn't be here. Votes on races, live ballot measures, campaign language, and questions aimed at non-elected staff are already refused automatically. State and national questions are moderated by the platform owner, not here.</p>
 ${residentQuestions.length ? residentQuestions.map(q => modRow(q, '/admin/questions/resident', PROMOTE_AT)).join('') : '<p class="src">No resident-asked questions in your county yet.</p>'}
 </section>`;
 
@@ -149,7 +149,7 @@ ${residentQuestions.length ? residentQuestions.map(q => modRow(q, '/admin/questi
 ${republicFrame(data.county)}
 ${opts.opened ? `<p class="src" style="color:var(--sourced)"><b>Question opened ✓</b> — live on <a href="/issues">Open questions</a> now.</p>` : ''}
 ${opts.closed ? `<p class="src" style="color:var(--sourced)"><b>Question closed.</b></p>` : ''}
-${opts.blocked ? `<div class="issue" style="display:block;border-color:var(--dead)"><b style="color:var(--dead)">That question can't be opened.</b><p class="src" style="margin:6px 0 0">A charter bright line was matched (${esc(opts.blocked)}). County Commons never runs questions about candidates, active ballot measures, or a named person's conduct — those belong to elections and the courts, not to an advisory poll. Reword it to ask about a policy or a dollar, not a person or a race.</p></div>` : ''}
+${opts.blocked ? `<div class="issue" style="display:block;border-color:var(--dead)"><b style="color:var(--dead)">That question can't be opened.</b><p class="src" style="margin:6px 0 0">A charter bright line was matched (${esc(opts.blocked)}). County Commons never runs a vote on who should win a race or on a measure already on the ballot, never carries campaign language, and never targets non-elected staff — races belong to elections, not to an advisory poll. Reword it to ask about a policy, a dollar, or an elected official's conduct, not who should win.</p></div>` : ''}
 ${opts.moderated ? `<p class="src" style="color:var(--sourced)"><b>Done ✓</b> — the resident question was ${esc(opts.moderated)}.</p>` : ''}
 ${resSection}
 
@@ -239,7 +239,7 @@ function adminPriorities(data, items, opts = {}) {
 <header class="page">
   <div class="eyebrow">${esc(county.name)} · host admin · priorities</div>
   <h1>Community priorities</h1>
-  <div class="src">What residents posted for ${esc(county.name)} to lean into or take a fresh look at — and your control surface for the accountability loop. ${threshold ? `At <b>${threshold}</b> backers a priority is ready to carry to the officials; you send it and record each step here.` : 'Record what the county does with each one here.'} Candidate, ballot-measure, and named-official posts are refused automatically. Every action is stamped in the public record by your name.</div>
+  <div class="src">What residents posted for ${esc(county.name)} to lean into or take a fresh look at — and your control surface for the accountability loop. ${threshold ? `At <b>${threshold}</b> backers a priority is ready to carry to the officials; you send it and record each step here.` : 'Record what the county does with each one here.'} Campaign posts, live ballot measures, and posts aimed at non-elected staff are refused automatically. Every action is stamped in the public record by your name.</div>
 </header>
 ${republicFrame(data.county)}
 ${opts.removed ? `<p class="src" style="color:var(--sourced)"><b>Removed ✓</b> — it's off the board.</p>` : ''}
