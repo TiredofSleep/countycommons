@@ -279,13 +279,15 @@ const STARTER_PAGES = {
   '/mybill': ['Your tax bill, explained', 'every tax rate on a home here, from the state’s millage report'],
   '/turnout': ['Voter turnout', 'official counts from the state'],
   '/justice': ['Jails & prisons', 'the closest state prisons and ideas from elsewhere'],
-  '/coverage': ['How complete is this county?', 'what’s gathered so far and what isn’t']
+  '/coverage': ['How complete is this county?', 'what’s gathered so far and what isn’t'],
+  '/docket': ['Dead ends & open questions', 'the documents still to get, and what each one would answer']
 };
 function starterReady(data) {
   const c = data.county || {};
   return Object.keys(STARTER_PAGES).filter(href =>
     href === '/mybill' ? !!(c.has_mybill && data.myBill) :
     href === '/justice' ? !!data.prisonsNear :
+    href === '/docket' ? !!(data.docket && (data.docket.issues || []).length) :
     href === '/turnout' ? !!(data.turnout && (data.turnout.elections || []).some(e => e.counties && e.counties[c.turnout_county || String(c.name || '').replace(/ County$/, '')])) : true);
 }
 function starterPage(data) {
@@ -298,7 +300,7 @@ function starterPage(data) {
 <section>
   <div class="issue" style="display:block;border-left:3px solid var(--accent)">
     <div class="eyebrow" style="color:var(--accent)">the document is here</div>
-    <p class="src" style="margin:4px 0 0"><b>${esc(county.name)}'s adopted budget is captured.</b> <a href="${esc(budgetDoc.source_url)}" rel="noopener">Open the appropriation ordinance ↗</a> — the county's real budget document. It isn't parsed into a walkable, cited money trail yet, but the source is here for anyone to read now.</p>
+    <p class="src" style="margin:4px 0 0"><b>${esc(county.name)}'s budget document is captured.</b> <a href="${esc(budgetDoc.source_url)}" rel="noopener">Open ${esc(budgetDoc.title)} ↗</a> — the county's real budget document. It isn't parsed into a walkable, cited money trail yet, but the source is here for anyone to read now.</p>
   </div>
 </section>` : '';
   const ready = starterReady(data).map(href => [href, ...STARTER_PAGES[href]]);
