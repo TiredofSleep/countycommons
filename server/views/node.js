@@ -118,7 +118,8 @@ ${kids.length ? `<section><h3>What's inside this number</h3>
 ${node.children_complete ? '' : '<p class="src">This list is not yet complete — more lines exist in the source document than have been ingested.</p>'}
 </section>` : ''}`;
 
-  return layout({ title: `${node.name} — ${money(node.amount)} — ${data.budget.meta.title}`, current: null, body, county });
+  const seo = require('../lib/seo');
+  return layout({ title: seo.lineTitle(data, node), current: null, body, county, description: seo.lineDescription(data, node) });
 }
 
 module.exports = { nodePage };

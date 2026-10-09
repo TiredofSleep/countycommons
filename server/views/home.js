@@ -151,9 +151,9 @@ ${rulesDialog(county)}
 </section>`;
 
   return layout({
-    title: `${county.platform_name} — rally your community to shape what government does`,
+    title: `${county.name}, ${county.state}: budget, property taxes, elections and public records · County Commons`,
     current: '/', body, county,
-    description: `${county.name}'s open, nonpartisan petition with receipts: see where public money goes, say what should change — locally, in your state, or nationally — rally your neighbors, and track what officials do.`
+    description: `${county.name}, ${county.state}, in public records: where the money goes line by line, your property tax bill explained, when and how to vote, and what officials do — every number cited, free, nonpartisan. Say what should change and rally your neighbors.`
   });
 }
 

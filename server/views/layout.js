@@ -1,3 +1,4 @@
+const reqctx = require('../lib/reqctx');
 const { esc } = require('../lib/corpus');
 
 // Page shell. No external requests of any kind — styles and the tiny
@@ -50,6 +51,7 @@ function siteMap(county, current) {
       ['/verify', 'The receipt — arithmetic checked'],
       ['/documents', 'The documents'],
       ['/methodology', 'How every number is sourced'],
+      ['/faq', 'Questions people ask — answered from the data'],
       ['/guide', 'The plain-words tour']
     ]],
     ['Public needs', [
@@ -105,7 +107,19 @@ function siteMap(county, current) {
 </details>`;
 }
 
-function layout({ title, current, body, county, description }) {
+// JSON-LD blocks; "<" is escaped so a value can never close the script tag.
+const ldTags = (list) => list.map(x => `<script type="application/ld+json">${JSON.stringify(x).replace(/</g, '\\u003c')}</script>`).join('\n');
+function layout({ title, current, body, county, description, jsonld }) {
+  // Search: every title names the place and state ("Travis County, Texas"),
+  // replacing the bare platform name a searcher wouldn't type.
+  const place = `${county.name}, ${county.state}`;
+  if (county.platform_name && title.endsWith(county.platform_name) && !title.includes(county.state)) {
+    title = title.slice(0, -county.platform_name.length) + `${place} · County Commons`;
+  } else if (!title.includes(county.state)) {
+    title = `${title} — ${place}`;
+  }
+  const canonical = reqctx.url();
+  const ld = [].concat(jsonld || []);
   // Counties with a municipalities layer (e.g. Middlesex, MA, where county
   // government was abolished) get a "Cities & towns" item after the money trail.
   const navItems = NAV.slice();
@@ -119,7 +133,7 @@ function layout({ title, current, body, county, description }) {
   }
   const nav = navItems.map(([href, label]) =>
     `<a href="${href}"${href === current ? ' aria-current="page"' : ''}>${esc(label)}</a>`).join('');
-  const desc = description || `${county.name}'s public money, made navigable — every number cited to its source document, every gap named.`;
+  const desc = description || `${county.name}, ${county.state}: public money made navigable — budgets, tax rates, elections and open records, every number cited to its source document, every gap named.`;
   const corrections = county.contact_email
     ? ` Spot an error? That's a gift: <a href="mailto:${esc(county.contact_email)}">${esc(county.contact_email)}</a>.`
     : '';
@@ -154,6 +168,9 @@ function layout({ title, current, body, county, description }) {
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="${esc(title)}">
 <meta name="twitter:description" content="${esc(desc)}">
+<meta property="og:url" content="${esc(canonical)}">
+<link rel="canonical" href="${esc(canonical)}">
+${ldTags(ld)}
 <link rel="stylesheet" href="/style.css?v=6">
 <link rel="icon" href="/favicon.svg">
 <script src="/app.js" defer></script>

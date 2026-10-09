@@ -93,7 +93,9 @@ ${section('Where it comes from', '— the thinner half of the record', 'revenue'
 ${section('Where it goes', `— ${money(budget.meta.grand_total)} appropriated`, 'appropriations')}
 ${section('Beside the county', '— separate governments, separate ledgers', 'adjacent')}`;
 
-  return layout({ title, current: '/', body, county });
+  const seo = require('../lib/seo');
+  return layout({ title: seo.budgetTitle(data), current: '/', body, county,
+    description: seo.budgetDescription(data), jsonld: seo.budgetDataset(data) });
 }
 
 module.exports = { treePage };

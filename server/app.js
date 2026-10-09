@@ -25,6 +25,7 @@ const { castVote } = require('./vote');
 
 const app = express();
 app.disable('x-powered-by');
+app.use(require('./lib/reqctx').middleware);
 // Caddy is the single reverse proxy in front of us; trust exactly one hop so
 // req.ip reflects the real client for the per-IP write throttle.
 app.set('trust proxy', 1);
@@ -123,8 +124,15 @@ app.get('/robots.txt', (req, res) => {
 
 // Per-host sitemap: a tenant lists its own pages; the apex lists every featured
 // county/city home so crawlers can discover the whole network.
-app.get('/sitemap.xml', (req, res) => {
+app.get(['/sitemap.xml', '/sitemap-index.xml'], (req, res) => {
   const directory = require('./lib/directory');
+  // One index of every site's sitemap, for a Search Console domain property.
+  if (req.path === '/sitemap-index.xml') {
+    const xi = ['<?xml version="1.0" encoding="UTF-8"?>', '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+      '  <sitemap><loc>https://countycommons.us/sitemap.xml</loc></sitemap>',
+      ...directory.featured().map(t => `  <sitemap><loc>https://${t.host}/sitemap.xml</loc></sitemap>`), '</sitemapindex>', ''].join('\n');
+    return res.type('application/xml').send(xi);
+  }
   const r = tenant.resolveHost(req.headers.host);
   const host = String(req.headers.host || 'countycommons.us').split(':')[0];
   const urls = [];
@@ -139,7 +147,15 @@ app.get('/sitemap.xml', (req, res) => {
     if (cfg.has_taxlab) paths.push('/taxlab');
     if (cfg.has_mybill) paths.push('/mybill');
     if (cfg.has_commonwealth) paths.push('/commonwealth');
+    paths.push('/faq');
     for (const p of paths) urls.push(base + p);
+    try {
+      const d = load(r.key);
+      if (d.budget.meta && d.budget.meta.grand_total > 0) {
+        urls.push(base + '/budget.csv');
+        for (const n of d.budget.nodes.slice(0, 45000)) urls.push(base + '/line/' + encodeURIComponent(n.id));
+      }
+    } catch (e) { /* no budget */ }
   } else if (r.action === 'serve') {
     urls.push(`https://${host}/`); // un-built starter
   } else {
@@ -178,12 +194,20 @@ function gatePage(msg, next) {
   <div style="margin:14px 0 0">
     <div class="eyebrow" style="margin:0 0 4px">${esc(g.state)}</div>
     <div style="display:flex;flex-wrap:wrap;gap:6px">
-      ${g.places.map(p => `<a href="/enter?to=${encodeURIComponent(p.key)}" style="text-decoration:none;font-size:14px;padding:7px 12px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink)">${esc(p.name)}</a>`).join('')}
+      ${g.places.map(p => `<a href="https://${esc(p.host)}/" style="text-decoration:none;font-size:14px;padding:7px 12px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink)">${esc(p.name)}</a>`).join('')}
     </div>
   </div>`).join('');
   return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>County Commons — select your county or city</title>
+<title>County Commons — county and city budgets, taxes and elections, every number cited</title>
+<meta name="description" content="Free, nonpartisan civic research hub: county and city budgets line by line, property tax bills explained, elections and open records for ${directory.featured().length} places — every number cited to its source document, with CSV downloads.">
+<link rel="canonical" href="https://countycommons.us/">
+<meta property="og:title" content="County Commons — public budgets, every number cited"><meta property="og:url" content="https://countycommons.us/"><meta property="og:type" content="website">
+<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': [
+  { '@type': 'Organization', '@id': 'https://countycommons.us/#org', name: 'County Commons', url: 'https://countycommons.us/', description: 'An independent, nonpartisan civic-transparency project. Not a government website.' },
+  { '@type': 'WebSite', name: 'County Commons', url: 'https://countycommons.us/', publisher: { '@id': 'https://countycommons.us/#org' } },
+  { '@type': 'DataCatalog', name: 'County Commons budget data', url: 'https://countycommons.us/', publisher: { '@id': 'https://countycommons.us/#org' }, dataset: directory.featured().map(t => ({ '@type': 'Dataset', name: `${t.name} budget`, url: `https://${t.host}/budget` })) }
+] }).replace(/</g, '\\u003c')}</script>
 <link rel="stylesheet" href="/style.css?v=5"><link rel="icon" href="/favicon.svg"></head><body><div class="wrap">
 <header class="page" style="max-width:720px;margin:7vh auto 0">
   <div class="eyebrow">County Commons</div>
@@ -276,6 +300,7 @@ app.use((req, res, next) => {
 // Elections pass through too: when and where to vote doesn't wait on a budget.
 const STARTER_PAGES = {
   '/elections': ['When and how to vote', 'election dates, polling hours and the ID rule'],
+  '/faq': ['Questions answered', 'property tax, voting and what’s been gathered, from public records'],
   '/mybill': ['Your tax bill, explained', 'every tax rate on a home here, from the state’s millage report'],
   '/turnout': ['Voter turnout', 'official counts from the state'],
   '/justice': ['Jails & prisons', 'the closest state prisons and ideas from elsewhere'],
@@ -388,6 +413,25 @@ app.get('/', (req, res) => {
 });
 const places = require('./lib/places');
 const { placesPage, cityBudgetPage } = require('./views/places');
+// Research downloads + the FAQ (search metadata lives in lib/seo.js).
+app.get('/budget.csv', (req, res) => {
+  const d = load(req.tenantKey), seo = require('./lib/seo');
+  res.type('text/csv; charset=utf-8').setHeader('Content-Disposition', `inline; filename="${req.tenantKey}-budget-${seo.year(d)}.csv"`);
+  res.send(seo.csv(d));
+});
+app.get('/budget.json', (req, res) => res.json(require('./lib/seo').json(load(req.tenantKey))));
+app.get('/faq', (req, res) => res.send(require('./views/faq').faqPage(load(req.tenantKey))));
+// llms.txt: a plain-text map of the site for AI search engines.
+app.get('/llms.txt', (req, res) => {
+  const d = load(req.tenantKey), seo = require('./lib/seo'), c = d.county, base = require('./lib/reqctx').url('');
+  const faq = require('./views/faq').faqItems(d);
+  const lines = [`# ${c.name}, ${c.state} — County Commons`, '',
+    '> An independent, nonpartisan civic-transparency site (not a government website). It computes and cites public records: the budget line by line, property tax rates, elections, and the open questions in the record. Every amount cites its source document and page.', '',
+    '## Key pages', `- [The money trail](${base}/budget): ${seo.budgetDescription(d)}`, `- [Budget data as CSV](${base}/budget.csv) and [JSON](${base}/budget.json)`,
+    `- [Your tax bill, explained](${base}/mybill)`, `- [Elections](${base}/elections)`, `- [Questions answered](${base}/faq)`, `- [The documents](${base}/documents)`,
+    `- [The arithmetic checks](${base}/verify)`, `- [Open questions](${base}/docket)`, '', '## Answers', ...faq.map(i => `- **${i.q}** ${i.text}`), ''];
+  res.type('text/plain; charset=utf-8').send(lines.join('\n'));
+});
 app.get('/budget', (req, res) => res.send(treePage(load(req.tenantKey), {
   pbOpen: !!require('./pb').openExerciseFor(req.tenantKey),
   hasPlaces: !!places.placesFor(req.tenantKey)
