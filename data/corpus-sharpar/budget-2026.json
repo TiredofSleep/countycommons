@@ -1,25 +1,3863 @@
 {
-  "meta": {
-    "document": "Sharp County — no appropriation document ingested yet",
-    "title": "Sharp County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Sharp County 2026 adopted budget",
+  "title": "Sharp County — the money trail",
+  "note": "This is Sharp County's 2026 budget, set by Appropriation Ordinance #2025-4 (Nov. 25, 2025) and filed with the state. Amounts are the ordinance's maximum appropriations, split into categories using the attached office budget pages. Some money moves between county funds (for example $500,000 from road savings to road checking if needed), so those dollars can appear in two funds.",
+  "grand_total": 10682375,
+  "year": 2026
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General Fund",
+   "code": "1000",
+   "amount": 3902714,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "pp. 1–2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Sharp County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-0100",
+   "amount": 81361,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-ps",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 74261,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-sup",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-oth",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6100,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "1000-0101",
+   "amount": 269422,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-ps",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 256192,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-sup",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1800,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-oth",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 11430,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Treasurer",
+   "code": "1000-0103",
+   "amount": 173843,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-ps",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 157400,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-sup",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3500,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-oth",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 12943,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Collector",
+   "code": "1000-0104",
+   "amount": 289587,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-ps",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 227340,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-sup",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-oth",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 53247,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Assessor",
+   "code": "1000-0105",
+   "amount": 307731,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-ps",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 219114,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-sup",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-oth",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 72617,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-cap",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 53995,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-ps",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 52395,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-sup",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 100,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-oth",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse Maintenance",
+   "code": "1000-0108",
+   "amount": 127980,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The categories add to $147,647.00. The page then subtracts $19,667.00 charged to the Collector, Treasurer and Assessor and prints 'Cost to General' $127,980.00, the amount the ordinance appropriates. Printed total is $127,980.00; the categories listed add to $147,647.00."
+  },
+  {
+   "id": "f1000-d0108-ps",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 51447,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-sup",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 19300,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-oth",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 76900,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Elections",
+   "code": "1000-0109",
+   "amount": 209213,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-ps",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 133013,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-sup",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 14000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-oth",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 62200,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0116",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Grants-In-Aid/Contracts",
+   "code": "1000-0116",
+   "amount": 56000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0116-oth",
+   "parent": "f1000-d0116",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 56000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f1000-d0117",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Attorney",
+   "code": "1000-0117",
+   "amount": 24824,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117-ps",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 24824,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f1000-d0118",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Audits/Insurance Deductibles",
+   "code": "1000-0118",
+   "amount": 8500,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Health Unit",
+   "code": "1000-0300",
+   "amount": 20520,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-ps",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 3640,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-sup",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2750,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-oth",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 14130,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff & Jail",
+   "code": "1000-0400",
+   "amount": 1364006,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The page also lists $206,869.00 in reimbursements (City of Sidney, Ozarka College, Highland School resource officers), for a 'Cost to General' of $1,157,137.00. The ordinance appropriates the full $1,364,006.00."
+  },
+  {
+   "id": "f1000-d0400-ps",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1099186,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-sup",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 67300,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-oth",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 53520,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-cap",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 104000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-tr",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 40000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court",
+   "code": "1000-0401",
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-oth",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f1000-d0402",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court #2 (Judge Huff)",
+   "code": "1000-0402",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-sup",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2800,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-oth",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7200,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Drug Court Peer Specialist",
+   "code": "1000-0403",
+   "amount": 55364,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403-ps",
+   "parent": "f1000-d0403",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 55364,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Chancery Court",
+   "code": "1000-0406",
+   "amount": 7132,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The page heading says '2025 BUDGET', but the block sits in the 2026 budget and matches the ordinance's 2026 amount."
+  },
+  {
+   "id": "f1000-d0406-sup",
+   "parent": "f1000-d0406",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406-oth",
+   "parent": "f1000-d0406",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5132,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court",
+   "code": "1000-0409",
+   "amount": 185000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-ps",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 159487,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-sup",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5400,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-oth",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 20113,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0410",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court Work Program",
+   "code": "1000-0410",
+   "amount": 69500,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0410-ps",
+   "parent": "f1000-d0410",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 49000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0410-sup",
+   "parent": "f1000-d0410",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 15500,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0410-oth",
+   "parent": "f1000-d0410",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0411",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court Probation Program",
+   "code": "1000-0411",
+   "amount": 55213,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0411-ps",
+   "parent": "f1000-d0411",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 51813,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0411-sup",
+   "parent": "f1000-d0411",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1900,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0411-oth",
+   "parent": "f1000-d0411",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Court",
+   "code": "1000-0414",
+   "amount": 114326,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 1"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-ps",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 84412,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-sup",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4950,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-oth",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 24964,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney",
+   "code": "1000-0416",
+   "amount": 36550,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-oth",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 36550,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f1000-d0417",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Public Defender (Ben)",
+   "code": "1000-0417",
+   "amount": 12000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0417-sup",
+   "parent": "f1000-d0417",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f1000-d0417-oth",
+   "parent": "f1000-d0417",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 11500,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f1000-d0405",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Public Defender (Amy)",
+   "code": "1000-0405",
+   "amount": 12000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0405-so",
+   "parent": "f1000-d0405",
+   "section": "appropriations",
+   "name": "Supplies & other services",
+   "code": null,
+   "amount": 12000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f1000-d0407",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Public Defender (Holly)",
+   "code": "1000-0407",
+   "amount": 12000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0407-so",
+   "parent": "f1000-d0407",
+   "section": "appropriations",
+   "name": "Supplies & other services",
+   "code": null,
+   "amount": 12000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f1000-d0408",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Public Defender (Justin)",
+   "code": "1000-0408",
+   "amount": 12000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0408-sup",
+   "parent": "f1000-d0408",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 325,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f1000-d0408-oth",
+   "parent": "f1000-d0408",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 11675,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Coroner",
+   "code": "1000-0419",
+   "amount": 46400,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-ps",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 25700,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-sup",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-oth",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 18700,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Deputy Prosecuting Attorney",
+   "code": "1000-0422",
+   "amount": 70281,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422-ps",
+   "parent": "f1000-d0422",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 54031,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422-sup",
+   "parent": "f1000-d0422",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422-oth",
+   "parent": "f1000-d0422",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 13250,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Office of Emergency Management",
+   "code": "1000-0500",
+   "amount": 29026,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-ps",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 23776,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-so",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Supplies & other services",
+   "code": null,
+   "amount": 5250,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0501",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Central Dispatch",
+   "code": "1000-0501",
+   "amount": 47000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0501-tr",
+   "parent": "f1000-d0501",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 47000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f1000-d0502",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Fire Services",
+   "code": "1000-0502",
+   "amount": 36760,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0502-ps",
+   "parent": "f1000-d0502",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 8360,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0502-oth",
+   "parent": "f1000-d0502",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 28400,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0603",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Fairgrounds",
+   "code": "1000-0603",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0603-sup",
+   "parent": "f1000-d0603",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veterans Service Office",
+   "code": "1000-0800",
+   "amount": 31200,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-ps",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 28360,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-sup",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1200,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-oth",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1640,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Extension Office",
+   "code": "1000-0801",
+   "amount": 39980,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-ps",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-oth",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 9980,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0802",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Paupers & Welfare",
+   "code": "1000-0802",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0802-oth",
+   "parent": "f1000-d0802",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0803",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Grants-In-Aid/Contracts Social Services",
+   "code": "1000-0803",
+   "amount": 12000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0803-oth",
+   "parent": "f1000-d0803",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 12000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f1002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Employee Insurance Account Fund",
+   "code": "1002",
+   "amount": 1600,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1002-oth",
+   "parent": "f1002",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1600,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Road Fund",
+   "code": "2000",
+   "amount": 3312024,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The 3000-series lines on p. 48 have no printed heading; they are shown as other services and charges. The $135,000.00 'Transfer to Road-Truck-Savings' moves money to another county fund."
+  },
+  {
+   "id": "f2000-ps",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1498974,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 47"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-sup",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1010000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 47"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-oth",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 158050,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-cap",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 300000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-debt",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 210000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-tr",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 135000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer Automation Fund",
+   "code": "3000",
+   "amount": 25500,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-sup",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-oth",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 17500,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector Automation Fund",
+   "code": "3001",
+   "amount": 70399,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-ps",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2899,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-sup",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-oth",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 42500,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-cap",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Automation Fund",
+   "code": "3002",
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-oth",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "District Court Automation Fund",
+   "code": "3003",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3003-oth",
+   "parent": "f3003",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor Property Tax Relief Amendment #79 Fund",
+   "code": "3004",
+   "amount": 11500,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-sup",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-oth",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Recorder's Fund",
+   "code": "3006",
+   "amount": 81450,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-ps",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 31250,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-sup",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 21000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-oth",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 29200,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff's Restitution/Assessment Fund",
+   "code": "3402",
+   "amount": 16000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402-sup",
+   "parent": "f3402",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 16000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Library Fund",
+   "code": "3008",
+   "amount": 304217,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-ps",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 171617,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-sup",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 30100,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-oth",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 102500,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3011",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Property Reappraisal Fund",
+   "code": "3011",
+   "amount": 316120,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3011-oth",
+   "parent": "f3011",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 316120,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Child Support Cost Collection Fund",
+   "code": "3012",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-sup",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-oth",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff Office Drug Control Fund",
+   "code": "3015",
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015-sup",
+   "parent": "f3015",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015-oth",
+   "parent": "f3015",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Maintenance & Operating Fund",
+   "code": "3017",
+   "amount": 100850,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-sup",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 89250,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-oth",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 11600,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Boating Safety Fund",
+   "code": "3019",
+   "amount": 5500,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-oth",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5500,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "911/Central Dispatch Fund",
+   "code": "3020",
+   "amount": 523696,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-ps",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 422846,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-sup",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 82350,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-oth",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 8500,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-cap",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Public Defender Fund",
+   "code": "3024",
+   "amount": 3500,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The $3,000.00 'Transfer to County General Fund' moves money to the General Fund, so it is counted twice in the all-funds total."
+  },
+  {
+   "id": "f3024-oth",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024-tr",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028",
+   "parent": null,
+   "section": "appropriations",
+   "name": "District Court Drug Test Fund",
+   "code": "3028",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028-oth",
+   "parent": "f3028",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Juvenile Division Fund",
+   "code": "3031",
+   "amount": 4700,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-sup",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3500,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-oth",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1200,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor Fees Fund",
+   "code": "3042",
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042-sup",
+   "parent": "f3042",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3406",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff's K-9 Fund",
+   "code": "3406",
+   "amount": 1030,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3406-sup",
+   "parent": "f3406",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 400,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3406-oth",
+   "parent": "f3406",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 630,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Local Law Enforcement Fund",
+   "code": "3404",
+   "amount": 20104,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404-sup",
+   "parent": "f3404",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f3404-oth",
+   "parent": "f3404",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 18104,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f4902",
+   "parent": null,
+   "section": "appropriations",
+   "name": "USDA Grant Fund",
+   "code": "4902",
+   "amount": 2,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4902-oth",
+   "parent": "f4902",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f3010",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk's Cost Fund",
+   "code": "3010",
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed under the heading 'Other Services & Charges', though two of its three lines are supply codes (2001, 2011)."
+  },
+  {
+   "id": "f3010-oth",
+   "parent": "f3010",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f3018",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Detention Facility Fund",
+   "code": "3018",
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3018-sup",
+   "parent": "f3018",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f3409",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff's Reserve Officer Fund",
+   "code": "3409",
+   "amount": 845,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed under the heading 'Supplies' (line 3093 Law Enforcement Equipment)."
+  },
+  {
+   "id": "f3409-sup",
+   "parent": "f3409",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 845,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 63"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f3039",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk Commission Fee Fund",
+   "code": "3039",
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039-sup",
+   "parent": "f3039",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f3408",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Economic Development Fund",
+   "code": "3408",
+   "amount": 2200,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The top line of the page says $2,000.00, but the lines and the bottom total add to $2,200.00, which is what the ordinance appropriates."
+  },
+  {
+   "id": "f3408-oth",
+   "parent": "f3408",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2200,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 63"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f2001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Road Investments Fund",
+   "code": "2001",
+   "amount": 500000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The only line is a $500,000.00 transfer to road checking 'if needed', so this money would be counted again in the Road Fund."
+  },
+  {
+   "id": "f2001-tr",
+   "parent": "f2001",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 500000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 49"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3499",
+   "parent": null,
+   "section": "appropriations",
+   "name": "1/4 Cent Jail Facility Fund Sales Tax",
+   "code": "3499",
+   "amount": 1017664,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The ordinance lists this as the Jail Facility Fund (3400); the budget page and revenue page number it 3499."
+  },
+  {
+   "id": "f3499-ps",
+   "parent": "f3499",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 702664,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 64"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3499-sup",
+   "parent": "f3499",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 153500,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 64"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3499-oth",
+   "parent": "f3499",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 154000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 64"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3499-cap",
+   "parent": "f3499",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 7500,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 64"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f2003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Additional Motor Fuel Wholesale Tax",
+   "code": "2003",
+   "amount": 130000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed under the heading 'Other Services & Charges', though the lines are asphalt, pipe, gravel and bridge material codes (2025-2031)."
+  },
+  {
+   "id": "f2003-oth",
+   "parent": "f2003",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 130000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 49"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f4907",
+   "parent": null,
+   "section": "appropriations",
+   "name": "School Daycare Grant",
+   "code": "4907",
+   "amount": 1360,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3600",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Automated Records Grant",
+   "code": "3600",
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3530",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Court Grant",
+   "code": "3530",
+   "amount": 11300,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1900",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Federal DOJ Grant for Juvenile Court",
+   "code": "1900",
+   "amount": 256500,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1900-ps",
+   "parent": "f1900",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 76000,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1900-sup",
+   "parent": "f1900",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1100,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1900-oth",
+   "parent": "f1900",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 179400,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3048",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Adult Drug Court - Opioid Settlement Grant (Huff)",
+   "code": "3048",
+   "amount": 7100,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3410",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Court Program Fees Fund",
+   "code": "3410",
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "sharpar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }

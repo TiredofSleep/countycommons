@@ -1,25 +1,3881 @@
 {
-  "meta": {
-    "document": "Perry County — no appropriation document ingested yet",
-    "title": "Perry County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Perry County 2026 adopted budget",
+  "title": "Perry County — the money trail",
+  "note": "This is Perry County's 2026 budget, adopted by Appropriation Ordinance #2025-20 on Dec. 8, 2025 and filed with the state. Amounts are the ordinance's maximum appropriations, split into categories using the county's budget detail report. A few funds only budget transfers (for example $200,000 from the LATC Fund), so some dollars may be counted in two funds.",
+  "grand_total": 9029071,
+  "year": 2026
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General Fund",
+   "code": "1000",
+   "amount": 3452478,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "pp. 2–3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Perry County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-0100",
+   "amount": 69495,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-ps",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 49680,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-sup",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3625,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-oth",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 16190,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "1000-0101",
+   "amount": 355969,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-ps",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 282919,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-sup",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 11250,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-oth",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 51800,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-cap",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Treasurer",
+   "code": "1000-0103",
+   "amount": 147663,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-ps",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 109778,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-sup",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4500,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-oth",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 33385,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 47"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Collector",
+   "code": "1000-0104",
+   "amount": 231863,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-ps",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 175950,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-sup",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10250,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-oth",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 45663,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 49"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Assessor",
+   "code": "1000-0105",
+   "amount": 331263,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-ps",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 159733,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-sup",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 21150,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-oth",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 150380,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Board of Equalization",
+   "code": "1000-0106",
+   "amount": 2625,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-ps",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 25,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-oth",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2600,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 63350,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-ps",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 60,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-sup",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-oth",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 62790,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse Maintenance",
+   "code": "1000-0108",
+   "amount": 91847,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-ps",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 7747,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-sup",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 13450,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-oth",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 52650,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-cap",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 18000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Election Commission",
+   "code": "1000-0109",
+   "amount": 135095,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-ps",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 68003,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-sup",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9080,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-oth",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 58012,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courts Building",
+   "code": "1000-0111",
+   "amount": 30425,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111-sup",
+   "parent": "f1000-d0111",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111-oth",
+   "parent": "f1000-d0111",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 17425,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111-cap",
+   "parent": "f1000-d0111",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0116",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Grant-in-Aid",
+   "code": "1000-0116",
+   "amount": 7921,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0116-oth",
+   "parent": "f1000-d0116",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7921,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Other County Expense",
+   "code": "1000-0117",
+   "amount": 68725,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The 'Original Budget' column of these group totals was not read by OCR; the 'Actual Balance' column, which prints the same numbers, was used."
+  },
+  {
+   "id": "f1000-d0117-ps",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 200,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117-sup",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 300,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117-oth",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 18225,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117-cap",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 50000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0119",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Old Theater Building",
+   "code": "1000-0119",
+   "amount": 22260,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0119-oth",
+   "parent": "f1000-d0119",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 22260,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 63"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Health Department",
+   "code": "1000-0300",
+   "amount": 34764,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-sup",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1350,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 64"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-oth",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 25414,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 64"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-cap",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 64"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Sheriff",
+   "code": "1000-0400",
+   "amount": 980984,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-ps",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 713918,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 65"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-sup",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 128000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 65"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-oth",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 71085,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-cap",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 47000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-debt",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 20981,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court",
+   "code": "1000-0401",
+   "amount": 58007,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-ps",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 45257,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 68"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-sup",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6250,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 68"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-oth",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6500,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 68"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court",
+   "code": "1000-0409",
+   "amount": 165565,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-ps",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 141785,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 69"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-sup",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3575,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 69"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-oth",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 20205,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 70"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Intake",
+   "code": "1000-0415",
+   "amount": 56687,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415-ps",
+   "parent": "f1000-d0415",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 47228,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 71"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415-sup",
+   "parent": "f1000-d0415",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1700,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 71"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415-oth",
+   "parent": "f1000-d0415",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7759,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 72"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney",
+   "code": "1000-0416",
+   "amount": 1849,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-sup",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-oth",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1349,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0417",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Public Defender",
+   "code": "1000-0417",
+   "amount": 11500,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0417-sup",
+   "parent": "f1000-d0417",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 700,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 74"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0417-oth",
+   "parent": "f1000-d0417",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10800,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 74"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Jail",
+   "code": "1000-0418",
+   "amount": 360055,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-ps",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 258605,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 75"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-sup",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 28600,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-oth",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 69850,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-cap",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-debt",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Coroner",
+   "code": "1000-0419",
+   "amount": 42277,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-ps",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 17141,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 78"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-sup",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4972,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 78"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-oth",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 20164,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0420",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Constable",
+   "code": "1000-0420",
+   "amount": 35,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0420-ps",
+   "parent": "f1000-d0420",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 35,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 80"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0423",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Attorney",
+   "code": "1000-0423",
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0423-oth",
+   "parent": "f1000-d0423",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 81"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Office of Emergency Management",
+   "code": "1000-0500",
+   "amount": 73415,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-ps",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 45467,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 82"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-sup",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6400,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 82"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-oth",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 14748,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 83"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-cap",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 6800,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 83"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0504",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Aplin/Nimrod Fire Department",
+   "code": "1000-0504",
+   "amount": 770,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0504-ps",
+   "parent": "f1000-d0504",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 770,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 84"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0505",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Cherry Hill Fire Department",
+   "code": "1000-0505",
+   "amount": 930,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0505-ps",
+   "parent": "f1000-d0505",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 930,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 85"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0506",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Harris Brake Fire Department",
+   "code": "1000-0506",
+   "amount": 630,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0506-ps",
+   "parent": "f1000-d0506",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 630,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 86"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0507",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Hollis Fire Department",
+   "code": "1000-0507",
+   "amount": 660,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0507-ps",
+   "parent": "f1000-d0507",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 660,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 87"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0508",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Stoney Point Fire Department",
+   "code": "1000-0508",
+   "amount": 480,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0508-ps",
+   "parent": "f1000-d0508",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 480,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 88"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0509",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Williams Junction Fire Department",
+   "code": "1000-0509",
+   "amount": 600,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0509-ps",
+   "parent": "f1000-d0509",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 600,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 89"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veteran's Service",
+   "code": "1000-0800",
+   "amount": 20319,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-ps",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 13178,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 90"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-sup",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1800,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 90"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-oth",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5341,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Extension Service",
+   "code": "1000-0801",
+   "amount": 43175,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-sup",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 800,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 92"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-oth",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 42375,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 92"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0804",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Senior Citizens",
+   "code": "1000-0804",
+   "amount": 16275,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0804-sup",
+   "parent": "f1000-d0804",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1100,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 93"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0804-oth",
+   "parent": "f1000-d0804",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 15175,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 93"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1007",
+   "parent": null,
+   "section": "appropriations",
+   "name": "LATC Fund",
+   "code": "1007",
+   "amount": 200000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The fund's whole budget is one 'Transfers' line, so this money is spent from whichever fund receives it."
+  },
+  {
+   "id": "f1007-tr",
+   "parent": "f1007",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 200000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 94"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1801",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Buy Fund",
+   "code": "1801",
+   "amount": 200,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1801-tr",
+   "parent": "f1801",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 200,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 95"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Road Fund",
+   "code": "2000",
+   "amount": 1784193,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-ps",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 985557,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 96"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-sup",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 322800,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 97"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-oth",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 371795,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 98"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-cap",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 26000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 98"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-debt",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 78041,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 98"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Road 1/2% Sales Tax Fund",
+   "code": "2003",
+   "amount": 455000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003-sup",
+   "parent": "f2003",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 155000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 99"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003-oth",
+   "parent": "f2003",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 150000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 99"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003-cap",
+   "parent": "f2003",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 150000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 99"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Automated Fund",
+   "code": "3000",
+   "amount": 42387,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-ps",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 8539,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 100"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-sup",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 100"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-oth",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5848,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 100"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-cap",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 100"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Automated Fund",
+   "code": "3001",
+   "amount": 26000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-sup",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 11000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 102"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-cap",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 102"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Automation Fund",
+   "code": "3002",
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-sup",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 103"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "District Court Cost Fund",
+   "code": "3003",
+   "amount": 9712,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3003-ps",
+   "parent": "f3003",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2712,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 104"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3003-sup",
+   "parent": "f3003",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 104"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3003-oth",
+   "parent": "f3003",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5500,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 104"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3003-debt",
+   "parent": "f3003",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 104"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Act 1892 of 2005 Property Tax Relief Fund",
+   "code": "3004",
+   "amount": 17500,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-sup",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7500,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 105"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-cap",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 105"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Recorder's Cost Fund",
+   "code": "3006",
+   "amount": 57080,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-sup",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9500,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 106"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-oth",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 27580,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 106"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-cap",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 106"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Library Fund",
+   "code": "3008",
+   "amount": 247500,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The fund's whole budget is one 'Transfers' line (to the library)."
+  },
+  {
+   "id": "f3008-tr",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 247500,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 107"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Solid Waste Fund",
+   "code": "3009",
+   "amount": 505224,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-ps",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 174925,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 108"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-sup",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 28500,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 109"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-oth",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 199799,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 110"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-cap",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 100000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 110"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-debt",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 110"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Act #599 Child Support Fund",
+   "code": "3012",
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-sup",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 111"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Control Fund",
+   "code": "3015",
+   "amount": 12000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015-oth",
+   "parent": "f3015",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 12000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 113"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3018",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Detention Fund",
+   "code": "3018",
+   "amount": 18203,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3018-ps",
+   "parent": "f3018",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 16203,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 114"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3018-sup",
+   "parent": "f3018",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 114"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Act #122 County Emergency Rescue Fund",
+   "code": "3019",
+   "amount": 2900,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-sup",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 115"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-oth",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1400,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 115"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "9-1-1 Fund",
+   "code": "3020",
+   "amount": 303869,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-ps",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 172571,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 116"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-sup",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 25200,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 116"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-oth",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 61098,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 117"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-cap",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 9000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 117"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-debt",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 36000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 117"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3022",
+   "parent": null,
+   "section": "appropriations",
+   "name": "ER Law Vehicle Fund",
+   "code": "3022",
+   "amount": 1800,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3022-cap",
+   "parent": "f3022",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1800,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 119"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3025",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Victim/Witness Fund",
+   "code": "3025",
+   "amount": 15960,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3025-oth",
+   "parent": "f3025",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 15960,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 120"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Indigent Criminal Defense (Public Defender) Fund",
+   "code": "3026",
+   "amount": 10090,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026-sup",
+   "parent": "f3026",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 121"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3026-oth",
+   "parent": "f3026",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 90,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 121"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Court Assessment Fee Fund",
+   "code": "3028",
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028-sup",
+   "parent": "f3028",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 122"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3029",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Public Safety Fund",
+   "code": "3029",
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3029-sup",
+   "parent": "f3029",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 123"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk's Commissioners Fee Fund",
+   "code": "3039",
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039-sup",
+   "parent": "f3039",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Late Assessment Fee Fund",
+   "code": "3042",
+   "amount": 2300,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042-sup",
+   "parent": "f3042",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2300,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3045",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Court Fund",
+   "code": "3045",
+   "amount": 50000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3045-ps",
+   "parent": "f3045",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 50000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 126"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3048",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Extension/4-H Program Fund",
+   "code": "3048",
+   "amount": 9000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The fund's whole budget is one 'Transfers Out' line."
+  },
+  {
+   "id": "f3048-tr",
+   "parent": "f3048",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 9000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3401",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Fund",
+   "code": "3401",
+   "amount": 327001,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3401-ps",
+   "parent": "f3401",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 164041,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 128"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3401-sup",
+   "parent": "f3401",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 102300,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 128"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3401-oth",
+   "parent": "f3401",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 60660,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3417",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Road 3/4% Sales Tax Fund",
+   "code": "3417",
+   "amount": 879000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3417-sup",
+   "parent": "f3417",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 615000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 130"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3417-oth",
+   "parent": "f3417",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 144000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 130"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3417-cap",
+   "parent": "f3417",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 120000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 130"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3505",
+   "parent": null,
+   "section": "appropriations",
+   "name": "EMS Service Fund",
+   "code": "3505",
+   "amount": 360500,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3505-sup",
+   "parent": "f3505",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 131"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3505-oth",
+   "parent": "f3505",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 252500,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 131"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3505-cap",
+   "parent": "f3505",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 100000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 131"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3510",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Forest Reserve Title 3 Fund",
+   "code": "3510",
+   "amount": 38674,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The fund's whole budget is one 'Transfers' line."
+  },
+  {
+   "id": "f3510-tr",
+   "parent": "f3510",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 38674,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 133"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3600",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Courthouse Sidewalk Project Fund",
+   "code": "3600",
+   "amount": 193000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3600-cap",
+   "parent": "f3600",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 193000,
+   "status": "sourced",
+   "source": {
+    "doc": "perryar-budget-2026",
+    "page": "p. 135"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }

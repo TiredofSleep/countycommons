@@ -1,25 +1,4223 @@
 {
-  "meta": {
-    "document": "Pope County — no appropriation document ingested yet",
-    "title": "Pope County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Pope County 2026 adopted budget",
+  "title": "Pope County — the money trail",
+  "year": 2026,
+  "grand_total": 36831969.22,
+  "note": "This is the county's 2026 budget (Ordinance 2025-O-053) as filed with the state. Fund and department amounts are the \"2026 Appropriated\" column of the ordinance's appropriation table; the categories come from each office's budget request, which adds to the same amount. Some dollars are counted twice: transfer lines move $801,471.78 between the county's own funds (for example $567,471.78 from the General Fund to 911), so that money also appears in the fund that receives it."
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General Fund",
+   "code": "1000",
+   "amount": 16165627.85,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Pope County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-0100",
+   "amount": 411516.22,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-ps",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 196301.22,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-sup",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10100,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-osc",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 205115,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "1000-0101",
+   "amount": 629984.53,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-ps",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 506174.53,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-sup",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 33360,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-osc",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 90450,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 49"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Clerk",
+   "code": "1000-0102",
+   "amount": 620199.71,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-ps",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 491839.22,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-sup",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 25950,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-osc",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 101410.49,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-cap",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Treasurer",
+   "code": "1000-0103",
+   "amount": 404512.83,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-ps",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 337142.83,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-sup",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 19600,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-osc",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 47770,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Tax Collector",
+   "code": "1000-0104",
+   "amount": 384034.18,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-ps",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 324575.69,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-sup",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4200,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-osc",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 55258.49,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Tax Assessor",
+   "code": "1000-0105",
+   "amount": 684948.68,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-ps",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 552223.68,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-sup",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 22500,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-osc",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 104225,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-cap",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Equalization Board",
+   "code": "1000-0106",
+   "amount": 13054,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-ps",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 12554,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-osc",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 202989,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-ps",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 168064,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 68"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-sup",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3005,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 68"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-osc",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 31920,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 68"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Building & Maintenance",
+   "code": "1000-0108",
+   "amount": 356034.32,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-ps",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 158051.32,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 70"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-sup",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 119600,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 70"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-osc",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 33383,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 71"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-cap",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 45000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 71"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Election Commission",
+   "code": "1000-0109",
+   "amount": 316945,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-ps",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 149675,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-sup",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 19050,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-osc",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 148220,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 74"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Tax Refund",
+   "code": "1000-0117",
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117-osc",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 78"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0118",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Pope County Conservation District",
+   "code": "1000-0118",
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0118-osc",
+   "parent": "f1000-d0118",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0122",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Reappraisal Cost Fund",
+   "code": "1000-0122",
+   "amount": 292632,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0122-osc",
+   "parent": "f1000-d0122",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 292632,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 80"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Health Department",
+   "code": "1000-0300",
+   "amount": 63550,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-ps",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 16200,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 81"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-sup",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 18150,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 81"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-osc",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 29200,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 81"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff",
+   "code": "1000-0400",
+   "amount": 4711593.85,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-ps",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 3605046.32,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 83"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-sup",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 397500,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 83"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-osc",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 271387.53,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 84"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-cap",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 437660,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 85"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court Division I (Dunham)",
+   "code": "1000-0401",
+   "amount": 88488.78,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-sup",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5937.73,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 87"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-osc",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 79551.05,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 88"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-cap",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 89"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court Division II (McCain)",
+   "code": "1000-0402",
+   "amount": 30350,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-sup",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3300,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 90"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-osc",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 22050,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 90"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-cap",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 90"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court Division III (Coker)",
+   "code": "1000-0403",
+   "amount": 17986.72,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403-sup",
+   "parent": "f1000-d0403",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1900,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403-osc",
+   "parent": "f1000-d0403",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 16086.72,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0404",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court Division IV (Patterson)",
+   "code": "1000-0404",
+   "amount": 17095,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0404-sup",
+   "parent": "f1000-d0404",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2600,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 92"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0404-osc",
+   "parent": "f1000-d0404",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 14495,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 92"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court",
+   "code": "1000-0409",
+   "amount": 228163,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-osc",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 228163,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 93"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Probation",
+   "code": "1000-0415",
+   "amount": 501802.88,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415-ps",
+   "parent": "f1000-d0415",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 442732.88,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 94"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415-sup",
+   "parent": "f1000-d0415",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 17800,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 94"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415-osc",
+   "parent": "f1000-d0415",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 41270,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 95"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney",
+   "code": "1000-0416",
+   "amount": 453394.27,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-ps",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 313865.67,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 97"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-sup",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 23000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 97"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-osc",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 116528.6,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 98"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Detention Center",
+   "code": "1000-0418",
+   "amount": 4236941.99,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-ps",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 3030364.54,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 101"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-sup",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 407445,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 101"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-osc",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 741132.45,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 102"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-cap",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 58000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 102"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Coroner",
+   "code": "1000-0419",
+   "amount": 190621.05,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-ps",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 104876.05,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 105"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-sup",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 48558.46,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 106"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-osc",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 37186.54,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 108"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0420",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Constable",
+   "code": "1000-0420",
+   "amount": 150,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0420-ps",
+   "parent": "f1000-d0420",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 150,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 110"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Housing",
+   "code": "1000-0422",
+   "amount": 115000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422-osc",
+   "parent": "f1000-d0422",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 115000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 111"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0423",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge Misc Law Enforcement",
+   "code": "1000-0423",
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0423-osc",
+   "parent": "f1000-d0423",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 112"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed; this is the one line item in this category."
+  },
+  {
+   "id": "f1000-d0424",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse Security",
+   "code": "1000-0424",
+   "amount": 167877.94,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0424-ps",
+   "parent": "f1000-d0424",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 158877.94,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 113"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0424-sup",
+   "parent": "f1000-d0424",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 113"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0424-osc",
+   "parent": "f1000-d0424",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 113"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0603",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Pope County Senior Citizens",
+   "code": "1000-0603",
+   "amount": 78036,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0603-sup",
+   "parent": "f1000-d0603",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 66800,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 116"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0603-osc",
+   "parent": "f1000-d0603",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 11236,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 116"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0604",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Potts Inn",
+   "code": "1000-0604",
+   "amount": 36414,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0604-ps",
+   "parent": "f1000-d0604",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 15264,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 117"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0604-sup",
+   "parent": "f1000-d0604",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 117"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0604-osc",
+   "parent": "f1000-d0604",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6150,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 117"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veteran's Service",
+   "code": "1000-0800",
+   "amount": 77460.49,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-ps",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 62195.49,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 119"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-sup",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2850,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 119"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-osc",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 12415,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 120"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Agri Extension",
+   "code": "1000-0801",
+   "amount": 113379.63,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-ps",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 98877.08,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 122"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-sup",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2883.46,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 122"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-osc",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 11619.09,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 123"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d8888",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "OEM Transfers",
+   "code": "1000-8888",
+   "amount": 118000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d8888-tr",
+   "parent": "f1000-d8888",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 118000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d8888-34",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Emergency Nine One One Trans.",
+   "code": "1000-8888",
+   "amount": 567471.78,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d8888-34-tr",
+   "parent": "f1000-d8888-34",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 567471.78,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 126"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Surplus Investment Fund",
+   "code": "1003",
+   "amount": 310000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 3"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1003-d0111",
+   "parent": "f1003",
+   "section": "appropriations",
+   "name": "Surplus Investment-County Bldg Maintenance",
+   "code": "1003-0111",
+   "amount": 300000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1003-d0111-cap",
+   "parent": "f1003-d0111",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 300000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1003-d0418",
+   "parent": "f1003",
+   "section": "appropriations",
+   "name": "Surplus Investment-Detention Center",
+   "code": "1003-0418",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1003-d0418-osc",
+   "parent": "f1003-d0418",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 128"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Road Fund",
+   "code": "2000",
+   "amount": 8261428.85,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-ps",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1971078.85,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-sup",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4517000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 130"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-osc",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 913350,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 131"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-cap",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 700000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 131"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-debt",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 160000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 131"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Additional Motor Fuel Tax Fund",
+   "code": "2003",
+   "amount": 260000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003-sup",
+   "parent": "f2003",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 260000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 134"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Automation Fund",
+   "code": "3000",
+   "amount": 124713,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-ps",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 31643,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 135"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-sup",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 19500,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 135"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-osc",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 73570,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 136"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Automation Fund",
+   "code": "3001",
+   "amount": 177307.63,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-ps",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 72157.63,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 138"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-sup",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 19300,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 138"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-osc",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 80850,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 139"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-cap",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 139"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Court Automation Fund",
+   "code": "3002",
+   "amount": 80416.84,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-d0401",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Circuit Court Automation-Dunham",
+   "code": "3002-0401",
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The form prints category subtotals of $12,250.00 (supplies) and $18,000.00 (other services), which add to $30,250.00, but its printed total and the appropriation are $30,000.00."
+  },
+  {
+   "id": "f3002-d0401-sup",
+   "parent": "f3002-d0401",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 12250,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 141"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-d0401-osc",
+   "parent": "f3002-d0401",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 18000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 141"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-d0402",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Circuit Court Automation-McCain",
+   "code": "3002-0402",
+   "amount": 10261.84,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-d0402-sup",
+   "parent": "f3002-d0402",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2502.12,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 143"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-d0402-osc",
+   "parent": "f3002-d0402",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7759.72,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 143"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-d0403",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Circuit Court Automation-Coker",
+   "code": "3002-0403",
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-d0403-sup",
+   "parent": "f3002-d0403",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1815.92,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 144"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-d0403-osc",
+   "parent": "f3002-d0403",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 18184.08,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 144"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-d0404",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Circuit Court Automation-Patterson",
+   "code": "3002-0404",
+   "amount": 20155,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-d0404-sup",
+   "parent": "f3002-d0404",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 145"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-d0404-osc",
+   "parent": "f3002-d0404",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 155,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 145"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-d0404-cap",
+   "parent": "f3002-d0404",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 145"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Amendment #79 Fund",
+   "code": "3004",
+   "amount": 19150,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-ps",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 4850,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 146"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-sup",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 146"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-osc",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 13300,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 146"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk's Cost Fund",
+   "code": "3005",
+   "amount": 50000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-sup",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 17000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 147"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-osc",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 27000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 147"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-tr",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 147"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Recorder's Cost Fund",
+   "code": "3006",
+   "amount": 427179.48,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-ps",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 276199.48,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 148"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-sup",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7290,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 148"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-osc",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 68690,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 149"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-tr",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 75000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 149"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Library Fund",
+   "code": "3008",
+   "amount": 1915821.09,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-ps",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1446910.46,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 151"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-sup",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 191800,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 152"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-osc",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 266110.63,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 153"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-cap",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 11000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 153"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk's Child Support Fund",
+   "code": "3012",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-tr",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 157"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Communications Facility and Equipment Fund",
+   "code": "3014",
+   "amount": 274100,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014-d0400",
+   "parent": "f3014",
+   "section": "appropriations",
+   "name": "Communications Facility & Equipment-Sheriff",
+   "code": "3014-0400",
+   "amount": 73500,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014-d0400-osc",
+   "parent": "f3014-d0400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 73500,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 158"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014-d0418",
+   "parent": "f3014",
+   "section": "appropriations",
+   "name": "Communications Facility & Equipment-Detention",
+   "code": "3014-0418",
+   "amount": 200600,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014-d0418-sup",
+   "parent": "f3014-d0418",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 191100,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 160"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014-d0418-osc",
+   "parent": "f3014-d0418",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6500,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 160"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014-d0418-cap",
+   "parent": "f3014-d0418",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 160"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Operation and Maintenance Fund",
+   "code": "3017",
+   "amount": 204690,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-sup",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 157600,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 161"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-osc",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 47090,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 162"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Boating Safety (Marine Rescue) Fund",
+   "code": "3019",
+   "amount": 11500,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-sup",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10900,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 163"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-osc",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 600,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 163"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emergency Nine One One Fund",
+   "code": "3020",
+   "amount": 2787407.43,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-d0500",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Emergency Nine One One/OEM",
+   "code": "3020-0500",
+   "amount": 217664.24,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-d0500-ps",
+   "parent": "f3020-d0500",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 115204.24,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 164"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-d0500-sup",
+   "parent": "f3020-d0500",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 18500,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 164"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-d0500-osc",
+   "parent": "f3020-d0500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 32960,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 165"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-d0500-cap",
+   "parent": "f3020-d0500",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 51000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 165"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-d0501",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Emergency Nine One One",
+   "code": "3020-0501",
+   "amount": 2494743.19,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-d0501-ps",
+   "parent": "f3020-d0501",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1921094.38,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 168"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-d0501-sup",
+   "parent": "f3020-d0501",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 95300,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 168"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-d0501-osc",
+   "parent": "f3020-d0501",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 478348.81,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 169"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-d0505",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Emergency Nine One One/Nuclear Monies",
+   "code": "3020-0505",
+   "amount": 75000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-d0505-sup",
+   "parent": "f3020-d0505",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 50200,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 171"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-d0505-osc",
+   "parent": "f3020-d0505",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 24800,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 171"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3021",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emergency Medical Service Fund",
+   "code": "3021",
+   "amount": 5502700.61,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3021-ps",
+   "parent": "f3021",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 4201025.61,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 173"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3021-sup",
+   "parent": "f3021",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 444800,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 173"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3021-osc",
+   "parent": "f3021",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 436875,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 175"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3021-cap",
+   "parent": "f3021",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 420000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 175"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Public Defender Fund",
+   "code": "3024",
+   "amount": 34336.58,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024-osc",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 34336.58,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 178"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Adult Drug Court Fund",
+   "code": "3028",
+   "amount": 55079.86,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028-sup",
+   "parent": "f3028",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5900,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 179"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028-osc",
+   "parent": "f3028",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 49179.86,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 180"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Juvenile Division Fund",
+   "code": "3031",
+   "amount": 44950,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-sup",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7400,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 181"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-osc",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 37550,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 182"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3035",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Criminal Justice Fund",
+   "code": "3035",
+   "amount": 58750,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3035-d0400",
+   "parent": "f3035",
+   "section": "appropriations",
+   "name": "Criminal Justice Fund/Sheriff",
+   "code": "3035-0400",
+   "amount": 50750,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3035-d0400-sup",
+   "parent": "f3035-d0400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5500,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 183"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3035-d0400-osc",
+   "parent": "f3035-d0400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 45250,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 183"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3035-d0418",
+   "parent": "f3035",
+   "section": "appropriations",
+   "name": "Criminal Justice Fund/Detention Ct",
+   "code": "3035-0418",
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3035-d0418-sup",
+   "parent": "f3035-d0418",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 185"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk Commissioner's Fee Fund",
+   "code": "3039",
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039-sup",
+   "parent": "f3039",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 186"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039-osc",
+   "parent": "f3039",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 186"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Late Assessment Fee Fund",
+   "code": "3042",
+   "amount": 8810,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042-sup",
+   "parent": "f3042",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3250,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 187"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042-osc",
+   "parent": "f3042",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5560,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 187"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3049",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Passport Acceptance Facility Fund",
+   "code": "3049",
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3049-tr",
+   "parent": "f3049",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 188"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400",
+   "parent": null,
+   "section": "appropriations",
+   "name": "District Court Cost Fund",
+   "code": "3400",
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-osc",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 189"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3408",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Harold & Jackie Neal Endowment Grant Fund",
+   "code": "3408",
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3408-sup",
+   "parent": "f3408",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 190"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3408-osc",
+   "parent": "f3408",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "popear-budget-2026",
+    "page": "p. 190"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }

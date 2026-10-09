@@ -1,25 +1,3179 @@
 {
-  "meta": {
-    "document": "Phillips County — no appropriation document ingested yet",
-    "title": "Phillips County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Phillips County 2026 adopted budget",
+  "title": "Phillips County — the money trail",
+  "year": 2026,
+  "grand_total": 6550316,
+  "note": "This is Phillips County's 2026 appropriation ordinance, as sent to the Association of Arkansas Counties and filed with the state. We use the amounts the ordinance appropriates for each office and fund (each fund may spend up to 90% of its projected revenue). No transfers between funds are listed."
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General Fund",
+   "code": "1000",
+   "amount": 3204729,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Phillips County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge's Office",
+   "code": "1000-0100",
+   "amount": 239880,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-ps",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 218480,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-su",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5600,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-os",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 15800,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk's Office",
+   "code": "1000-0101",
+   "amount": 298141,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-ps",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 241209,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-su",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-os",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 52932,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Circuit Clerk's Offices",
+   "code": "1000-0102",
+   "amount": 250056,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-ps",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 233081,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-su",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-os",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7975,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Treasurer's Office",
+   "code": "1000-0103",
+   "amount": 172834,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-ps",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 153072,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-su",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-os",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 16762,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Collector's Office",
+   "code": "1000-0104",
+   "amount": 164178,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-ps",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 106228,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-su",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 17500,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-os",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 40450,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Assessor's Office",
+   "code": "1000-0105",
+   "amount": 313094,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-ps",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 238036,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-su",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5800,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-os",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 69258,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Board of Equalization",
+   "code": "1000-0106",
+   "amount": 600,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-ps",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-os",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 100,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 4"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Quorum Court",
+   "code": "1000-0107",
+   "amount": 177364,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "pp. 4–5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-ps",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 173464,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "pp. 4–5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-os",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3900,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "pp. 4–5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse Maintenance",
+   "code": "1000-0108",
+   "amount": 155048,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-ps",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 120911,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-su",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 22000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-os",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 12137,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Election",
+   "code": "1000-0109",
+   "amount": 81368,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-ps",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 33868,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-su",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-os",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 45000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Buildings",
+   "code": "1000-0111",
+   "amount": 48500,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111-ps",
+   "parent": "f1000-d0111",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111-su",
+   "parent": "f1000-d0111",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9500,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111-os",
+   "parent": "f1000-d0111",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 32000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111-co",
+   "parent": "f1000-d0111",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0112",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Special Project",
+   "code": "1000-0112",
+   "amount": 63000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0112-os",
+   "parent": "f1000-d0112",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 63000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0140",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Co. Estevan Hall",
+   "code": "1000-0140",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0140-su",
+   "parent": "f1000-d0140",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0140-os",
+   "parent": "f1000-d0140",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0141",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Co. Public Housing",
+   "code": "1000-0141",
+   "amount": 600,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0141-su",
+   "parent": "f1000-d0141",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 600,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0142",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Co. Time Clock & Bank Services Fees",
+   "code": "1000-0142",
+   "amount": 1400,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0142-os",
+   "parent": "f1000-d0142",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1400,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Health Unit",
+   "code": "1000-0300",
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-os",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0301",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Ambulance Services",
+   "code": "1000-0301",
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0301-os",
+   "parent": "f1000-d0301",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Sheriff",
+   "code": "1000-0400",
+   "amount": 731440,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "pp. 5–6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-ps",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 578440,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "pp. 5–6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-su",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 107000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "pp. 5–6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-os",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 46000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "pp. 5–6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court",
+   "code": "1000-0401",
+   "amount": 42000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-su",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 12000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-os",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Fine Collection",
+   "code": "1000-0402",
+   "amount": 46766,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-ps",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 45386,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-su",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1300,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-os",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 80,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Chancery Court",
+   "code": "1000-0406",
+   "amount": 14100,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406-su",
+   "parent": "f1000-d0406",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9400,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406-os",
+   "parent": "f1000-d0406",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4700,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County District Court",
+   "code": "1000-0409",
+   "amount": 40000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-ps",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 40000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Co. Juvenile Probation",
+   "code": "1000-0414",
+   "amount": 63173,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-ps",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 57973,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-su",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 400,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-os",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4800,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Co. Juvenile Intake",
+   "code": "1000-0415",
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415-ps",
+   "parent": "f1000-d0415",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 18000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415-os",
+   "parent": "f1000-d0415",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Co. Prosecuting Atty.",
+   "code": "1000-0416",
+   "amount": 81667,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-ps",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 41071,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-su",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 35000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-os",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5596,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Co. Jail",
+   "code": "1000-0418",
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-os",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Co. Coroner",
+   "code": "1000-0419",
+   "amount": 68822,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-ps",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 57144,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-su",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4029,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-os",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7649,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0420",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Constable",
+   "code": "1000-0420",
+   "amount": 1200,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0420-ps",
+   "parent": "f1000-d0420",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1200,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County OEM",
+   "code": "1000-0500",
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-os",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0601",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Co Park & Recreation",
+   "code": "1000-0601",
+   "amount": 18000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0601-su",
+   "parent": "f1000-d0601",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0601-os",
+   "parent": "f1000-d0601",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County V. A.",
+   "code": "1000-0800",
+   "amount": 14998,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-ps",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 14998,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Co. Extension",
+   "code": "1000-0801",
+   "amount": 24000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-ps",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 24000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0802",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Co. Pauper & Welfare",
+   "code": "1000-0802",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0802-os",
+   "parent": "f1000-d0802",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0803",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Co. Grant in Aid VA/Social Serv.",
+   "code": "1000-0803",
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0803-su",
+   "parent": "f1000-d0803",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1550,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0803-os",
+   "parent": "f1000-d0803",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 950,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-d0200",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Co. Road Fund",
+   "code": "2000-0200",
+   "amount": 2101902,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-d0200-ps",
+   "parent": "f2000-d0200",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 905000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-d0200-su",
+   "parent": "f2000-d0200",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 620900,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-d0200-os",
+   "parent": "f2000-d0200",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 404002,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-d0200-co",
+   "parent": "f2000-d0200",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 172000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-d0103",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Co. Treasurer Automation Fund",
+   "code": "3000-0103",
+   "amount": 32850,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-d0103-ps",
+   "parent": "f3000-d0103",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 22218,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-d0103-su",
+   "parent": "f3000-d0103",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5400,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-d0103-os",
+   "parent": "f3000-d0103",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5232,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-d0104",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Co. Tax Collector Automation Fund",
+   "code": "3001-0104",
+   "amount": 84179,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-d0104-ps",
+   "parent": "f3001-d0104",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 56079,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-d0104-su",
+   "parent": "f3001-d0104",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-d0104-os",
+   "parent": "f3001-d0104",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 27600,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-d0400",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Co. Court Automation Fund",
+   "code": "3002-0400",
+   "amount": 2925,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-d0400-ops",
+   "parent": "f3002-d0400",
+   "section": "appropriations",
+   "name": "Other professional services",
+   "code": null,
+   "amount": 2925,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-d0105",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Co. Assessor Automation Fund",
+   "code": "3004-0105",
+   "amount": 3780,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-d0105-ps",
+   "parent": "f3004-d0105",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-d0105-os",
+   "parent": "f3004-d0105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 780,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-d0101",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Co. Clerk Automation Fund",
+   "code": "3005-0101",
+   "amount": 22312,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "pp. 8–9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-d0101-ps",
+   "parent": "f3005-d0101",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 15079,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "pp. 8–9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-d0101-su",
+   "parent": "f3005-d0101",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3100,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "pp. 8–9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-d0101-os",
+   "parent": "f3005-d0101",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4133,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "pp. 8–9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-d0102",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Co. Optical Scanning Fund",
+   "code": "3006-0102",
+   "amount": 114796,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-d0102-ps",
+   "parent": "f3006-d0102",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 94696,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-d0102-su",
+   "parent": "f3006-d0102",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-d0102-os",
+   "parent": "f3006-d0102",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10100,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0600",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Co. Library Fund",
+   "code": "3008-0600",
+   "amount": 216000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0600-os",
+   "parent": "f3008-d0600",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 216000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3011-d0105",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Co. Assessor Reappraisal Fund",
+   "code": "3011-0105",
+   "amount": 131229,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3011-d0105-ops",
+   "parent": "f3011-d0105",
+   "section": "appropriations",
+   "name": "Other professional services",
+   "code": null,
+   "amount": 131229,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-d0102",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Co. Circuit Clerk/Child Support",
+   "code": "3012-0102",
+   "amount": 360,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-d0102-su",
+   "parent": "f3012-d0102",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 360,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015-d0400",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Co. Sheriff Drug Control Fund",
+   "code": "3015-0400",
+   "amount": 2250,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015-d0400-su",
+   "parent": "f3015-d0400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2250,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0418",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Co. Jail Fund",
+   "code": "3017-0418",
+   "amount": 48276,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0418-os",
+   "parent": "f3017-d0418",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 48276,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-d0501",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Co. OEM, Rescue Fund",
+   "code": "3019-0501",
+   "amount": 16650,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-d0501-co",
+   "parent": "f3019-d0501",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 16650,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-d0501",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Co. 911 Fund",
+   "code": "3020-0501",
+   "amount": 350635,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-d0501-ps",
+   "parent": "f3020-d0501",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 285835,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-d0501-su",
+   "parent": "f3020-d0501",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-d0501-os",
+   "parent": "f3020-d0501",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 33800,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-d0501-me",
+   "parent": "f3020-d0501",
+   "section": "appropriations",
+   "name": "Machinery & equipment",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3022-d0501",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Co. Emergency Vehicle Fund",
+   "code": "3022-0501",
+   "amount": 4059,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3022-d0501-co",
+   "parent": "f3022-d0501",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 4059,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024-d0417",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Co. Public Defender Fund",
+   "code": "3024-0417",
+   "amount": 31572,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024-d0417-os",
+   "parent": "f3024-d0417",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 31572,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-d0414",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Co. Juvenile Probation Fee Fund",
+   "code": "3031-0414",
+   "amount": 23624,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-d0414-ps",
+   "parent": "f3031-d0414",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 17424,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-d0414-su",
+   "parent": "f3031-d0414",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3500,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-d0414-os",
+   "parent": "f3031-d0414",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2700,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3032-d0414",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Co. Juvenile Court Cost Fund",
+   "code": "3032-0414",
+   "amount": 4320,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3032-d0414-su",
+   "parent": "f3032-d0414",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3032-d0414-os",
+   "parent": "f3032-d0414",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2320,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039-d0102",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Co. Circuit Clerk Commission Fund",
+   "code": "3039-0102",
+   "amount": 90,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039-d0102-os",
+   "parent": "f3039-d0102",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 90,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402-d0601",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Co. Courthouse Park Fund",
+   "code": "3402-0601",
+   "amount": 3150,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402-d0601-ps",
+   "parent": "f3402-d0601",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402-d0601-os",
+   "parent": "f3402-d0601",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1150,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042-d0105",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Late Assessment Fee Fund",
+   "code": "3042-0105",
+   "amount": 4050,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042-d0105-os",
+   "parent": "f3042-d0105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4050,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3409-d0421",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Co. Grant-in-Aid Law Library Fund",
+   "code": "3409-0421",
+   "amount": 76500,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3409-d0421-su",
+   "parent": "f3409-d0421",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 20628,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3409-d0421-os",
+   "parent": "f3409-d0421",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 55872,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3410-d0418",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Co. Justice Complex Fund",
+   "code": "3410-0418",
+   "amount": 46719,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3410-d0418-os",
+   "parent": "f3410-d0418",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 46719,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3507-d0102",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Co. Circuit Clerk Grant Fund",
+   "code": "3507-0102",
+   "amount": 22,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3507-d0102-su",
+   "parent": "f3507-d0102",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 22,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6016-d0502",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Co. Rural Fire Department Fund",
+   "code": "6016-0502",
+   "amount": 23337,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "pp. 11–12"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6016-d0502-os",
+   "parent": "f6016-d0502",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 23337,
+   "status": "sourced",
+   "source": {
+    "doc": "phillipsar-budget-2026",
+    "page": "pp. 11–12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }

@@ -1,25 +1,2783 @@
 {
-  "meta": {
-    "document": "Prairie County — no appropriation document ingested yet",
-    "title": "Prairie County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Prairie County 2026 adopted budget",
+  "title": "Prairie County — the money trail",
+  "note": "This is Prairie County's 2026 budget, passed by the quorum court on Dec. 23, 2025 and filed with the state. Amounts come from the '2026 Request' column of each office's budget page, which the ordinance adopts. The General Fund jail page ($227,703.63) is money meant to be moved to the jail operations fund, so it may show up in both funds.",
+  "grand_total": 7000187.19,
+  "year": 2026
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General Fund",
+   "code": "1000",
+   "amount": 2900861.02,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "pp. 15–45"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total is printed on the department pages; this is the sum of its departments."
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Prairie County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-0100",
+   "amount": 38412.45,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-ps",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 36762.45,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-sup",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 75,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-oth",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1575,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County/Circuit Clerk",
+   "code": "1000-0101",
+   "amount": 240256.68,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-ps",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 218339.11,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-sup",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 21817.57,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-oth",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 100,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Fire and Extended Coverage",
+   "code": "1000-0102",
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-oth",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category heading is printed; these are 3000-series (other services and charges) lines."
+  },
+  {
+   "id": "f1000-d0103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Treasurer",
+   "code": "1000-0103",
+   "amount": 144262.77,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-ps",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 125220.17,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-sup",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6062.6,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-oth",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 12980,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Sheriff",
+   "code": "1000-0400",
+   "amount": 750815.05,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-ps",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 548115.05,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-sup",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 93000,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-oth",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 34700,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-debt",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 75000,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Collector",
+   "code": "1000-0104",
+   "amount": 217308.76,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-ps",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 149889.76,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-sup",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 49119,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-oth",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 18300,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0501",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County General Dispatch",
+   "code": "1000-0501",
+   "amount": 185838.41,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0501-ps",
+   "parent": "f1000-d0501",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 185838.41,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Assessor",
+   "code": "1000-0105",
+   "amount": 232747.62,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-ps",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 151694.22,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-sup",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 75373.4,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-oth",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5680,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Board of Equalization",
+   "code": "1000-0106",
+   "amount": 2501.25,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-ps",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2201.25,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f1000-d0106-oth",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 300,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court",
+   "code": "1000-0401",
+   "amount": 66716.5,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-ps",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 4056.73,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-sup",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 17159.77,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-oth",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 45500,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Chancery Probate Court",
+   "code": "1000-0406",
+   "amount": 21108.44,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406-ps",
+   "parent": "f1000-d0406",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 4028.67,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406-sup",
+   "parent": "f1000-d0406",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 17079.77,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court (Juvenile) Division Two",
+   "code": "1000-0414",
+   "amount": 200,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-sup",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 200,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed under the heading 'Personal Services', but its lines are supply codes (0414-2001, 0414-2002)."
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Reimburse Cities",
+   "code": "1000-0409",
+   "amount": 142920,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-oth",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 142920,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 35603.91,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-ps",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 30253.91,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-oth",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5350,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Court",
+   "code": "1000-0415",
+   "amount": 77316.29,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415-ps",
+   "parent": "f1000-d0415",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 71810.29,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415-sup",
+   "parent": "f1000-d0415",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 250,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415-oth",
+   "parent": "f1000-d0415",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5256,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney",
+   "code": "1000-0416",
+   "amount": 53194.59,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-ps",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 51619.59,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-oth",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1575,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Des Arc Courthouse",
+   "code": "1000-0108",
+   "amount": 49338.58,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The page lists the building's full supplies and other charges ($94,000.00) and splits them among the offices in the building; each office's share is in its own budget. This amount is the courthouse's own share (46.09%) plus its maintenance worker's pay, which the page prints as the 'Actual Budget'."
+  },
+  {
+   "id": "f1000-d0108-ps",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 6013.98,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-share",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Courthouse share (46.09%) of building supplies and other charges",
+   "code": null,
+   "amount": 43324.6,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Jail",
+   "code": "1000-0418",
+   "amount": 227703.63,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Every line on this page is blank; only the total is printed. The page says this money will need to be moved to the Jail Operations & Maintenance Fund (3017) during the year."
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Health Unit",
+   "code": "1000-0300",
+   "amount": 14300,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-ps",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1550,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-sup",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3150,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-oth",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 9600,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Coroner",
+   "code": "1000-0419",
+   "amount": 8838,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-ps",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 7038,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-oth",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1800,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0112",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Log Cabin",
+   "code": "1000-0112",
+   "amount": 800,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0112-oth",
+   "parent": "f1000-d0112",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 800,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "DeValls Bluff Courthouse",
+   "code": "1000-0117",
+   "amount": 13247.78,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The page lists the building's full supplies and other charges ($38,620.00) and splits them among the offices in the building; each office's share is in its own budget. This amount is the courthouse's own share (25.64%) plus its maintenance worker's pay, which the page prints as the 'Actual Budget'."
+  },
+  {
+   "id": "f1000-d0117-ps",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 3345.61,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117-share",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Courthouse share (25.64%) of building supplies and other charges",
+   "code": null,
+   "amount": 9902.17,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Election",
+   "code": "1000-0109",
+   "amount": 59210,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-ps",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 26000,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-sup",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3500,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-oth",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 29710,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Extension Service",
+   "code": "1000-0801",
+   "amount": 96156.14,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-ps",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2195.01,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-sup",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6461.13,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-oth",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 87500,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0116",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Grants and Aids",
+   "code": "1000-0116",
+   "amount": 8400,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0116-oth",
+   "parent": "f1000-d0116",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 8400,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category heading is printed; these are 3000-series (other services and charges) lines."
+  },
+  {
+   "id": "f1000-d0119",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Property Reappraisal",
+   "code": "1000-0119",
+   "amount": 68000,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0119-oth",
+   "parent": "f1000-d0119",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 68000,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veterans Service Officer",
+   "code": "1000-0800",
+   "amount": 17678.6,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-ps",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 17678.6,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff's Patrol",
+   "code": "1000-0422",
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422-oth",
+   "parent": "f1000-d0422",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Justice Building",
+   "code": "1000-0111",
+   "amount": 10690,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111-sup",
+   "parent": "f1000-d0111",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111-oth",
+   "parent": "f1000-d0111",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7690,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0450",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "State District Judge Contribution",
+   "code": "1000-0450",
+   "amount": 11612.7,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0450-oth",
+   "parent": "f1000-d0450",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 11612.7,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Office of Emergency Management",
+   "code": "1000-0500",
+   "amount": 75182.87,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-ps",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 31068.14,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-sup",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 400,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-oth",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 43714.73,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Library Fund",
+   "code": "3008",
+   "amount": 521737.2,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-ps",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 199937.2,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-sup",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 159800,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-oth",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 155000,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-debt",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Road Fund",
+   "code": "2000",
+   "amount": 2076732.86,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "pp. 48–49"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-ps",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 933092.86,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-sup",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 781000,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-oth",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 63640,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-cap",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 24000,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-debt",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 275000,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Communications Equipment Fund",
+   "code": "3014",
+   "amount": 4802.14,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014-oth",
+   "parent": "f3014",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4802.14,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Recorder's Fund (75% Account)",
+   "code": "3006",
+   "amount": 48485,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-ps",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 5385,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-sup",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 12000,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-oth",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 21100,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-cap",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Recorder's Fund (25% Account)",
+   "code": "3404",
+   "amount": 31635,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404-oth",
+   "parent": "f3404",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 31635,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No subtotal is printed for this category; this is the sum of its printed lines."
+  },
+  {
+   "id": "f6417",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Soil Conservation Tax",
+   "code": "6417",
+   "amount": 10939.81,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6417-oth",
+   "parent": "f6417",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10939.81,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Money",
+   "code": "3015",
+   "amount": 2671.37,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015-oth",
+   "parent": "f3015",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2671.37,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6009",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Law Library",
+   "code": "6009",
+   "amount": 6840,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The page prints most lines (including 3000-series postage, phone and travel lines) under one 'Supplies' heading; we kept the printed headings."
+  },
+  {
+   "id": "f6009-sup",
+   "parent": "f6009",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5440,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6009-oth",
+   "parent": "f6009",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1400,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Prisoner Welfare Maintenance",
+   "code": "3400",
+   "amount": 3618.99,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-oth",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3618.99,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Child Support Fees",
+   "code": "3012",
+   "amount": 2218.05,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-cap",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2218.05,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Public Defender",
+   "code": "3024",
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The page prints the county's 20% share of public defender expenses (line 0417-3091) under the 'Personal Services' heading; we kept the printed heading."
+  },
+  {
+   "id": "f3024-ps",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Boating Safety",
+   "code": "3019",
+   "amount": 1185.65,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-oth",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1185.65,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emergency 911 (Dispatch) Fund",
+   "code": "3020",
+   "amount": 242407.5,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-ps",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 179357.5,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-sup",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 25500,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-oth",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 37550,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Automation Fund",
+   "code": "3000",
+   "amount": 11700,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-sup",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2700,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-oth",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-cap",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3007",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff's Automation Fund",
+   "code": "3007",
+   "amount": 8500,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3007-sup",
+   "parent": "f3007",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 8500,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Automation",
+   "code": "3002",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 63"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-sup",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 63"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Operations Maintenance Fund",
+   "code": "3017",
+   "amount": 1070148.63,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "pp. 64–65"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-ps",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 779348.63,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 64"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-sup",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 172000,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 64"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-oth",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 118800,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 65"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3500",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Court Security Grant",
+   "code": "3500",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3500-oth",
+   "parent": "f3500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Amendment #79 Fund",
+   "code": "3004",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-oth",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Probation Fee",
+   "code": "3031",
+   "amount": 13703.97,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 68"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-oth",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 13703.97,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 68"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Automation Fund",
+   "code": "3001",
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 69"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-oth",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "prairiear-budget-2026",
+    "page": "p. 69"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }

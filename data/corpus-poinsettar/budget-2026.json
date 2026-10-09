@@ -1,25 +1,3053 @@
 {
-  "meta": {
-    "document": "Poinsett County — no appropriation document ingested yet",
-    "title": "Poinsett County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Poinsett County 2026 adopted budget",
+  "title": "Poinsett County — the money trail",
+  "note": "This is Poinsett County's 2026 budget, adopted by Appropriation Ordinance 2025-26 and filed with the state as a scanned copy. We use the budget amounts in the county's January 2026 budget detail report; every fund matches the ordinance, and together they equal its $14,481,266.82 in total expenditures. The General Fund also moves $2,302,065.60 to other county funds; that money is spent and counted in the funds that receive it, so it is not added again here.",
+  "grand_total": 14481266.82,
+  "year": 2026
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General Fund",
+   "code": "1000",
+   "amount": 3225697.99,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "pp. 42–83"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Poinsett County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-0100",
+   "amount": 214519.03,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-ps",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 169940.23,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-sup",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-osc",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 37578.8,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "1000-0101",
+   "amount": 375418.91,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-ps",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 315173.91,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-sup",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 24300,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-osc",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 35945,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Clerk",
+   "code": "1000-0102",
+   "amount": 158024.87,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-ps",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 154894.87,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-osc",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3130,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Treasurer",
+   "code": "1000-0103",
+   "amount": 175842.01,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-ps",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 162242.01,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 47"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-sup",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2250,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 47"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-osc",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 11350,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Tax Collector",
+   "code": "1000-0104",
+   "amount": 216457.74,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-ps",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 149167.74,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 49"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-sup",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 15750,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 49"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-osc",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 51540,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Assessor",
+   "code": "1000-0105",
+   "amount": 441695.26,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-ps",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 340600.26,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-sup",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 53400,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-osc",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 47695,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Equalization Board",
+   "code": "1000-0106",
+   "amount": 6591.88,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-ps",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 4041.88,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-sup",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-osc",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1550,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 110806.98,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-ps",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 85606.98,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-osc",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 25200,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse Maintenance",
+   "code": "1000-0108",
+   "amount": 215449.2,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-ps",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 91870.2,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-sup",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 21850,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 55"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-osc",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 91729,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-cap",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Election",
+   "code": "1000-0109",
+   "amount": 160204.35,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-ps",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 90408.35,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-sup",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7200,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-osc",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 62596,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse Annex Maintenance",
+   "code": "1000-0117",
+   "amount": 39661,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117-sup",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 14500,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117-osc",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 25161,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0118",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse Annex 2",
+   "code": "1000-0118",
+   "amount": 41274,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0118-sup",
+   "parent": "f1000-d0118",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 15300,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0118-osc",
+   "parent": "f1000-d0118",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 25974,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Health Department",
+   "code": "1000-0300",
+   "amount": 98334.05,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-sup",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 22200,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-osc",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 76134.05,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court",
+   "code": "1000-0401",
+   "amount": 37100,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 64"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-sup",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6500,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 63"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-osc",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 30600,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 64"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Lepanto District Court",
+   "code": "1000-0409",
+   "amount": 28049.53,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 65"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-osc",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 28049.53,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 65"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0410",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Harrisburg District Court",
+   "code": "1000-0410",
+   "amount": 32829.06,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0410-osc",
+   "parent": "f1000-d0410",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 32829.06,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0411",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Trumann District Court",
+   "code": "1000-0411",
+   "amount": 29682.99,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0411-osc",
+   "parent": "f1000-d0411",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 29682.99,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0412",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Marked Tree District Court",
+   "code": "1000-0412",
+   "amount": 33827.29,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 68"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0412-sup",
+   "parent": "f1000-d0412",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 431.65,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 68"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0412-osc",
+   "parent": "f1000-d0412",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 33395.64,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 68"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Court",
+   "code": "1000-0414",
+   "amount": 317083.61,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 70"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-ps",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 235483.61,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 69"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-sup",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 12000,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 69"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-osc",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 69600,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 70"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney",
+   "code": "1000-0416",
+   "amount": 174194.8,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 72"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-sup",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7500,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 71"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-osc",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 166694.8,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 71"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Coroner",
+   "code": "1000-0419",
+   "amount": 35424.41,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-ps",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 26957.41,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-sup",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5850,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-osc",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2617,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0420",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Constables",
+   "code": "1000-0420",
+   "amount": 41,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 74"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0420-ps",
+   "parent": "f1000-d0420",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 41,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 74"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0424",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Tyronza District Court",
+   "code": "1000-0424",
+   "amount": 22495.64,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0424-osc",
+   "parent": "f1000-d0424",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 22495.64,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Office of Emergency Management",
+   "code": "1000-0500",
+   "amount": 117308.85,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 78"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-ps",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 66392.52,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-sup",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 11950,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-osc",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 38966.33,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 78"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0502",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Fire Departments",
+   "code": "1000-0502",
+   "amount": 731,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0502-ps",
+   "parent": "f1000-d0502",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 131,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0502-osc",
+   "parent": "f1000-d0502",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 600,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veteran's Services",
+   "code": "1000-0800",
+   "amount": 57698.48,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 81"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-ps",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 46368.48,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 80"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-sup",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4700,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 80"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-osc",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6630,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 81"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Extension Office",
+   "code": "1000-0801",
+   "amount": 83550.8,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 82"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-sup",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 800,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 82"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-osc",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 82750.8,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 82"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0803",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Grants-in-Aid Social Services",
+   "code": "1000-0803",
+   "amount": 1401.25,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 83"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0803-osc",
+   "parent": "f1000-d0803",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1401.25,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 83"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Road Fund",
+   "code": "2000",
+   "amount": 3073963.9,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "pp. 90–92"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-ps",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1313365.64,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 90"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-sup",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 929500,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-osc",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 162839.26,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 92"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-cap",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 460000,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 92"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-debt",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 208259,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 92"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Fuel Tax Fund",
+   "code": "2003",
+   "amount": 140000,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 94"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003-sup",
+   "parent": "f2003",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 140000,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 94"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Automation Fund",
+   "code": "3000",
+   "amount": 22300,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 95"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-sup",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 12000,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 95"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-osc",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10300,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 95"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Automation Fund",
+   "code": "3001",
+   "amount": 69781.43,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "pp. 96–97"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-ps",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 54851.43,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 96"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-sup",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 96"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-osc",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7930,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 96"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Amendment 79 Fund",
+   "code": "3004",
+   "amount": 8943.4,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 99"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-ps",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 8943.4,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 99"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk's Cost Fund",
+   "code": "3005",
+   "amount": 26403.28,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 100"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-ps",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1453.28,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 100"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-sup",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 100"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-osc",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 16950,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 100"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Recorder's Cost Fund",
+   "code": "3006",
+   "amount": 253766.76,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "pp. 101–102"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-ps",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 163186.76,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 101"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-sup",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 16000,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 101"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-osc",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 74580,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 102"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Library Fund",
+   "code": "3008",
+   "amount": 563395.5,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "pp. 103–104"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-ps",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 297248.46,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 103"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-sup",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 94000,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 103"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-osc",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 82147.04,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 104"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-cap",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 90000,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 104"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Solid Waste Fund",
+   "code": "3009",
+   "amount": 35850,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 105"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-osc",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 35850,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 105"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3011",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Re-Appraisal Cost Fund",
+   "code": "3011",
+   "amount": 197607.36,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 106"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3011-osc",
+   "parent": "f3011",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 197607.36,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 106"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Child Support Cost Fund",
+   "code": "3012",
+   "amount": 3750,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 107"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-sup",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 107"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-osc",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2750,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 107"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Boating Safety Fund",
+   "code": "3019",
+   "amount": 1800,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 108"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-sup",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1300,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 108"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-cap",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 108"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emergency 911 Fund",
+   "code": "3020",
+   "amount": 824259.17,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "pp. 109–111"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-ps",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 673012.02,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 109"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-sup",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 40500,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 109"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-osc",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 110747.15,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 110"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Public Defender Fund",
+   "code": "3024",
+   "amount": 47750.91,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 112"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024-sup",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 112"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024-osc",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 45750.91,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 112"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Juvenile Division Fund",
+   "code": "3031",
+   "amount": 7700,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 113"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-sup",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 113"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-osc",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3700,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 113"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Late Assessment Fee Fund",
+   "code": "3042",
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 114"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042-sup",
+   "parent": "f3042",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 114"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3048",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Adult Drug Court - Opioid Settlement Grant Fund",
+   "code": "3048",
+   "amount": 13076.03,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 115"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3048-osc",
+   "parent": "f3048",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 13076.03,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 115"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Jail Fund",
+   "code": "3400",
+   "amount": 2567257.31,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "pp. 116–118"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-ps",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1384758.91,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 116"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-sup",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 340500,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 117"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-osc",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 771998.4,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 118"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-cap",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 70000,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 118"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Public Defender Investigator Fund",
+   "code": "3402",
+   "amount": 20,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 120"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402-osc",
+   "parent": "f3402",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 20,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 120"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3406",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff's Equipment Fund",
+   "code": "3406",
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 121"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3406-sup",
+   "parent": "f3406",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 121"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3408",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff's O & M Fund",
+   "code": "3408",
+   "amount": 2558200.21,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "pp. 123–125"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3408-ps",
+   "parent": "f3408",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1866427.16,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 123"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3408-sup",
+   "parent": "f3408",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 351000,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3408-osc",
+   "parent": "f3408",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 275773.05,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3408-cap",
+   "parent": "f3408",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 65000,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3410",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Main Street Park Fund",
+   "code": "3410",
+   "amount": 13000,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 126"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3410-sup",
+   "parent": "f3410",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4500,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 126"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3410-osc",
+   "parent": "f3410",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 8500,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 126"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3501",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Courthouse Grants Fund",
+   "code": "3501",
+   "amount": 485512,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3501-osc",
+   "parent": "f3501",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 485512,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 127"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3503",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Auto Records System Fund",
+   "code": "3503",
+   "amount": 17731.57,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 128"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3503-sup",
+   "parent": "f3503",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 17731.57,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 128"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3507",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Health Department Grant Fund",
+   "code": "3507",
+   "amount": 320000,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3507-osc",
+   "parent": "f3507",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 320000,
+   "status": "sourced",
+   "source": {
+    "doc": "poinsettar-budget-2026",
+    "page": "p. 129"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }

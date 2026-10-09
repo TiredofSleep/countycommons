@@ -1,14 +1,24 @@
 {
-  "documents": [
-    {
-      "id": "white-2026",
-      "title": "White County 2026 budget (as reported)",
-      "jurisdiction": "whitear",
-      "layer": "appropriation",
-      "source_url": "https://www.whitecountycitizen.com/news/white-county-quorum-court-approves-2026-budget-of-51-279-176-75-nearly-5-5/",
-      "retrieved_at": "2026-08-21",
-      "status": "ingested",
-      "note": "Figures as reported in local news of the Quorum Court’s 2026 budget adoption. The full ordinance is public record; the artransparency.gov copy blocks automated access, so line-item ingestion awaits a direct pull."
-    }
-  ]
+ "documents": [
+  {
+   "id": "whitear-budget-2026",
+   "title": "White County 2026 budget, as filed with the state",
+   "jurisdiction": "whitear",
+   "layer": "appropriation",
+   "source_url": "https://artransparency.gov/wp-content/uploads/2026/05/White-County.pdf",
+   "retrieved_at": "2026-10-06",
+   "status": "ingested",
+   "note": "Posted on the Arkansas Transparency portal (artransparency.gov) in May 2026. 188 pages. Amounts are the Ordinance Section 5 amounts (the only appropriation column) for funds and departments; the detail pages' TOTAL <category> rows for categories column. The document is a scan; it was read with optical character recognition, and every parent total was checked against its parts."
+  },
+  {
+   "id": "white-2026",
+   "title": "White County 2026 budget (as reported)",
+   "jurisdiction": "whitear",
+   "layer": "appropriation",
+   "source_url": "https://www.whitecountycitizen.com/news/white-county-quorum-court-approves-2026-budget-of-51-279-176-75-nearly-5-5/",
+   "retrieved_at": "2026-08-21",
+   "status": "ingested",
+   "note": "Figures as reported in local news of the Quorum Court’s 2026 budget adoption. The full ordinance is public record; the artransparency.gov copy blocks automated access, so line-item ingestion awaits a direct pull."
+  }
+ ]
 }

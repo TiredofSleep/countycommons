@@ -1,25 +1,1469 @@
 {
-  "meta": {
-    "document": "Pike County — no appropriation document ingested yet",
-    "title": "Pike County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Pike County 2026 adopted budget",
+  "title": "Pike County — the money trail",
+  "year": 2026,
+  "grand_total": 10598539.73,
+  "note": "This is Pike County's 2026 budget summary report, adopted by Ordinance 2025-16 and filed with the state. We use the 'Original Budget' column for each department. Some funds move money to other county funds (the 'Transfers Out' lines, $345,156.62 in all), so those dollars appear in both funds."
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General Fund",
+   "code": "1000",
+   "amount": 5275084.59,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "pp. 9–11"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Pike County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-0100",
+   "amount": 81794.3,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "1000-0101",
+   "amount": 171657.18,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Clerk",
+   "code": "1000-0102",
+   "amount": 142479.16,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Treasurer",
+   "code": "1000-0103",
+   "amount": 157164.29,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Tax Collector",
+   "code": "1000-0104",
+   "amount": 257378.53,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Assessor",
+   "code": "1000-0105",
+   "amount": 327031.49,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Board of Equalization",
+   "code": "1000-0106",
+   "amount": 1946.63,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 51028.17,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse Maintenance",
+   "code": "1000-0108",
+   "amount": 288087.37,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Election",
+   "code": "1000-0109",
+   "amount": 117615.5,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Buildings",
+   "code": "1000-0111",
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Health",
+   "code": "1000-0300",
+   "amount": 51286.3,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Sheriff",
+   "code": "1000-0400",
+   "amount": 1407699.63,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court-9W",
+   "code": "1000-0401",
+   "amount": 14711,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court",
+   "code": "1000-0409",
+   "amount": 144828.74,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Court",
+   "code": "1000-0414",
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Intake",
+   "code": "1000-0415",
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney",
+   "code": "1000-0416",
+   "amount": 171846.66,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Jail",
+   "code": "1000-0418",
+   "amount": 1409987.93,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Coroner",
+   "code": "1000-0419",
+   "amount": 25565.92,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Deputy Prosecuting Attorney",
+   "code": "1000-0422",
+   "amount": 31686.59,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Office of Emergency Management",
+   "code": "1000-0500",
+   "amount": 112911.75,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0502",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Fire Departments",
+   "code": "1000-0502",
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veterans Service",
+   "code": "1000-0800",
+   "amount": 22509.83,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Extension Office",
+   "code": "1000-0801",
+   "amount": 64220.5,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0803",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Grants-In-Aid - Social Services",
+   "code": "1000-0803",
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d8888",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Transfers Out",
+   "code": "1000-8888",
+   "amount": 172647.12,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Road Fund",
+   "code": "2000",
+   "amount": 2204714.92,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-d0200",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "County Road",
+   "code": "2000-0200",
+   "amount": 2204714.92,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2099",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Disaster Relief Road Fund",
+   "code": "2099",
+   "amount": 59437.17,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2099-d0200",
+   "parent": "f2099",
+   "section": "appropriations",
+   "name": "County Road",
+   "code": "2099-0200",
+   "amount": 59437.17,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Automation Fund",
+   "code": "3000",
+   "amount": 25500,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-d0103",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Treasurer",
+   "code": "3000-0103",
+   "amount": 25500,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Automation Fund",
+   "code": "3001",
+   "amount": 39500,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-d0104",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Tax Collector",
+   "code": "3001-0104",
+   "amount": 39500,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Automation Fund",
+   "code": "3002",
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-d0401",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Circuit Court",
+   "code": "3002-0401",
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessors Amendment No. 79 Fund",
+   "code": "3004",
+   "amount": 14500,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-d0105",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Assessor",
+   "code": "3004-0105",
+   "amount": 14500,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk's Cost Fund",
+   "code": "3005",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-d0101",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "3005-0101",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Recorder's Cost Fund",
+   "code": "3006",
+   "amount": 106291.87,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-d0102",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Circuit Court",
+   "code": "3006-0102",
+   "amount": 106291.87,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Library Fund",
+   "code": "3008",
+   "amount": 84704.95,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0600",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "County Library",
+   "code": "3008-0600",
+   "amount": 84704.95,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Solid Waste Fund",
+   "code": "3009",
+   "amount": 1792128.83,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-d0701",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Landfill",
+   "code": "3009-0701",
+   "amount": 1792128.83,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3011",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Reappraisal Cost Fund",
+   "code": "3011",
+   "amount": 95056,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3011-d0106",
+   "parent": "f3011",
+   "section": "appropriations",
+   "name": "Reappraisal Cost Fund",
+   "code": "3011-0106",
+   "amount": 95056,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Communication Facility and Equipment Fund",
+   "code": "3014",
+   "amount": 103000,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014-d0400",
+   "parent": "f3014",
+   "section": "appropriations",
+   "name": "Sheriff",
+   "code": "3014-0400",
+   "amount": 103000,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Operation and Maintenance Fund",
+   "code": "3017",
+   "amount": 50000,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0418",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "County Jail",
+   "code": "3017-0418",
+   "amount": 50000,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3018",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Detention Facility Fund",
+   "code": "3018",
+   "amount": 22000,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3018-d0418",
+   "parent": "f3018",
+   "section": "appropriations",
+   "name": "County Jail",
+   "code": "3018-0418",
+   "amount": 22000,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Emergency Rescue Fund",
+   "code": "3019",
+   "amount": 1550,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-d0103",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Treasurer",
+   "code": "3019-0103",
+   "amount": 1550,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emergency 911 Fund",
+   "code": "3020",
+   "amount": 141052.4,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-d0501",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Nine One One",
+   "code": "3020-0501",
+   "amount": 121052.4,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-d8888",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Transfers Out",
+   "code": "3020-8888",
+   "amount": 20000,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Public Defender Fund",
+   "code": "3024",
+   "amount": 17200,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024-d0417",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Public Defender",
+   "code": "3024-0417",
+   "amount": 17200,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Division Fund",
+   "code": "3031",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-d0414",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Juvenile Division Fund",
+   "code": "3031-0414",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3401",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Pike County 911 Equipment Fund",
+   "code": "3401",
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3401-d0501",
+   "parent": "f3401",
+   "section": "appropriations",
+   "name": "Nine One One",
+   "code": "3401-0501",
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Sales Tax Capital Improvements Fund",
+   "code": "3402",
+   "amount": 173000,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402-d0111",
+   "parent": "f3402",
+   "section": "appropriations",
+   "name": "County Buildings",
+   "code": "3402-0111",
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3402-d0418",
+   "parent": "f3402",
+   "section": "appropriations",
+   "name": "County Jail",
+   "code": "3402-0418",
+   "amount": 158000,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3403",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Pike Co. Sheriff's Disaster Fund",
+   "code": "3403",
+   "amount": 300,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3403-d0400",
+   "parent": "f3403",
+   "section": "appropriations",
+   "name": "Sheriff",
+   "code": "3403-0400",
+   "amount": 300,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3409",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff's K9 Fund",
+   "code": "3409",
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3409-d0400",
+   "parent": "f3409",
+   "section": "appropriations",
+   "name": "Sheriff",
+   "code": "3409-0400",
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3410",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Industrial Development Fund",
+   "code": "3410",
+   "amount": 176509.5,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3410-d0100",
+   "parent": "f3410",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "3410-0100",
+   "amount": 24000,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3410-d8888",
+   "parent": "f3410",
+   "section": "appropriations",
+   "name": "Transfers Out",
+   "code": "3410-8888",
+   "amount": 152509.5,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3525",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Arkansas Historic Preservation Grant Fund",
+   "code": "3525",
+   "amount": 152509.5,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3525-d0100",
+   "parent": "f3525",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "3525-0100",
+   "amount": 152509.5,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6009",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Law Library Fund",
+   "code": "6009",
+   "amount": 7500,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6009-d0401",
+   "parent": "f6009",
+   "section": "appropriations",
+   "name": "Circuit Court",
+   "code": "6009-0401",
+   "amount": 7500,
+   "status": "sourced",
+   "source": {
+    "doc": "pikear-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }

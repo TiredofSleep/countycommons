@@ -1,25 +1,4205 @@
 {
-  "meta": {
-    "document": "Scott County — no appropriation document ingested yet",
-    "title": "Scott County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Scott County 2026 adopted budget",
+  "title": "Scott County — the money trail",
+  "note": "This is Scott County's 2026 budget, adopted by Ordinance 2026-1 and filed with the state. Amounts come from the FY2026 column of each fund and office page in Exhibit A. Some money moves between county funds (for example $239,660.64 from the 911 Fund to the Jail fund), so those dollars appear in both funds.",
+  "grand_total": 12584613.97,
+  "year": 2026
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General Fund",
+   "code": "1000",
+   "amount": 3086601.35,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "pp. 18–43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total is printed on the department pages; this is the sum of its departments."
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Scott County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-0100",
+   "amount": 122461.81,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-ps",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 105411.81,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-sup",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1800,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-oth",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 13050,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-cap",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2200,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County & Circuit Clerk",
+   "code": "1000-0102",
+   "amount": 403101.92,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-ps",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 362851.92,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-sup",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9800,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-oth",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 30450,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Treasurer",
+   "code": "1000-0103",
+   "amount": 161312.64,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-ps",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 136749.01,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-sup",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4250,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-oth",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7105,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-cap",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 13208.63,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Tax Collector",
+   "code": "1000-0104",
+   "amount": 175548.87,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-ps",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 157548.87,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-sup",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-oth",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 16500,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Assessor",
+   "code": "1000-0105",
+   "amount": 284044.2,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-ps",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 246544.2,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-sup",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-oth",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 36000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Equalization Board",
+   "code": "1000-0106",
+   "amount": 1007,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-ps",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 757,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-oth",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 250,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 37529,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-ps",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 34929,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-sup",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 300,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-oth",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2300,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 24"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse Maintenance",
+   "code": "1000-0108",
+   "amount": 88176.44,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-ps",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 55676.44,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-sup",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-oth",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 28500,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Election Commission",
+   "code": "1000-0109",
+   "amount": 102242,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-ps",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 48862,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-sup",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3700,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-oth",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 45180,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-cap",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 4500,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 26"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Buildings/Services",
+   "code": "1000-0111",
+   "amount": 463148.57,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111-sup",
+   "parent": "f1000-d0111",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3600,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111-oth",
+   "parent": "f1000-d0111",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 445048.57,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0111-cap",
+   "parent": "f1000-d0111",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 14500,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0113",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Other County Expenses",
+   "code": "1000-0113",
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0113-oth",
+   "parent": "f1000-d0113",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 28"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Health Office",
+   "code": "1000-0300",
+   "amount": 4310,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-sup",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1200,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-oth",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3110,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Sheriff",
+   "code": "1000-0400",
+   "amount": 778526.27,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "pp. 30–31"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-ps",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 613349.27,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-sup",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 87825,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 30"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-oth",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 20352,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-cap",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 57000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court",
+   "code": "1000-0401",
+   "amount": 600,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-sup",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 300,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-oth",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 300,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court Juror & Witness",
+   "code": "1000-0402",
+   "amount": 11300,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-sup",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-oth",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10800,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Chancery Court (Yell County Reimbursement)",
+   "code": "1000-0406",
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406-sup",
+   "parent": "f1000-d0406",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 750,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406-oth",
+   "parent": "f1000-d0406",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1200,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406-cap",
+   "parent": "f1000-d0406",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 50,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court",
+   "code": "1000-0409",
+   "amount": 196330.81,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-ps",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 170480.81,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-sup",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4500,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-oth",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 13350,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-cap",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 35"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Court (Yell County Reimbursement)",
+   "code": "1000-0414",
+   "amount": 14347.97,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-ps",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 10491.01,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-sup",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 544,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-oth",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3312.96,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Intake Officer",
+   "code": "1000-0415",
+   "amount": 73241.89,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415-ps",
+   "parent": "f1000-d0415",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 66341.89,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415-sup",
+   "parent": "f1000-d0415",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415-oth",
+   "parent": "f1000-d0415",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5400,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 37"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney",
+   "code": "1000-0416",
+   "amount": 38174.39,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-ps",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 23174.39,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-oth",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Coroner",
+   "code": "1000-0419",
+   "amount": 19612.57,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-ps",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 16577.57,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-sup",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 750,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-oth",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 785,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-cap",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 39"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0420",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Constable",
+   "code": "1000-0420",
+   "amount": 4464.76,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0420-ps",
+   "parent": "f1000-d0420",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 4464.76,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Department of Emergency Management",
+   "code": "1000-0500",
+   "amount": 65786.52,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-ps",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 60686.52,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-sup",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 900,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-oth",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4200,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 41"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0502",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Fire Chief",
+   "code": "1000-0502",
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0502-ps",
+   "parent": "f1000-d0502",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veterans Service Office",
+   "code": "1000-0800",
+   "amount": 31333.72,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-ps",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 27203.72,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-sup",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 700,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-oth",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3430,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1007",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Local Assistance and Tribal Consistency Fund",
+   "code": "1007-0117",
+   "amount": 1155923.32,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Section 19 of the ordinance has the treasurer move money from this fund, as the clerk requests, to pay salaries; those salaries may also appear in other offices' budgets. No 'Total Department Budget' is printed; this is the sum of its category totals."
+  },
+  {
+   "id": "f1007-ps",
+   "parent": "f1007",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1155923.32,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 44"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1099",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Personal Pay Raises",
+   "code": "1099-0117",
+   "amount": 260000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Section 19 of the ordinance has the treasurer move money from this fund, as the clerk requests, to pay salaries; several funds' revenue pages show 'transfer for raises' coming in, so some of this money may be counted twice. No 'Total Department Budget' is printed; this is the sum of its category totals."
+  },
+  {
+   "id": "f1099-ps",
+   "parent": "f1099",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 260000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1807",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Circuit Fine Fee Account",
+   "code": "1807-0421",
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1807-sup",
+   "parent": "f1807",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as 'Total Other Services and Charges', but it closes the Supplies section (line 1807-0421-2001 General Supplies)."
+  },
+  {
+   "id": "f1807-oth",
+   "parent": "f1807",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 46"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1891",
+   "parent": null,
+   "section": "appropriations",
+   "name": "US Marshall Service Transportation",
+   "code": "1891-0418",
+   "amount": 3230,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 47"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1891-ps",
+   "parent": "f1891",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 3230,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 47"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1892",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Wheel Chair Vet Office",
+   "code": "1892-0803",
+   "amount": 100,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1892-oth",
+   "parent": "f1892",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 100,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1896",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Courthouse Reserve Fund",
+   "code": "1896-0112",
+   "amount": 58843.3,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 49"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1896-oth",
+   "parent": "f1896",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 58843.3,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 49"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1898",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Section 5-E Special Volunteer Tax Fund (Extension Office)",
+   "code": "1898-0801",
+   "amount": 33157.76,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1898-ps",
+   "parent": "f1898",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1898-oth",
+   "parent": "f1898",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3157.76,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1899",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Veterans Memorial Fund",
+   "code": "1899-0800",
+   "amount": 7274.37,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1899-oth",
+   "parent": "f1899",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7274.37,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 51"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1979",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Scott County Boys & Girls Clubs Grant",
+   "code": "1979-0602",
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1979-oth",
+   "parent": "f1979",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 53"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1981",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Comprehensive Juvenile Services Grant",
+   "code": "1981-0116",
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1981-oth",
+   "parent": "f1981",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1993",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Association of Arkansas Counties Grant",
+   "code": "1993-0116",
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1993-oth",
+   "parent": "f1993",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1994",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Conservation District Grant",
+   "code": "1994-0116",
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1994-oth",
+   "parent": "f1994",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1995",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Scott County Senior Citizens Grant",
+   "code": "1995-0116",
+   "amount": 18700,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1995-oth",
+   "parent": "f1995",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 18700,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1997",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Mansfield Senior Citizens Grant",
+   "code": "1997-0116",
+   "amount": 5500,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1997-oth",
+   "parent": "f1997",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5500,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 59"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1998",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sodie Davidson Park",
+   "code": "1998-0601",
+   "amount": 40500,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1998-sup",
+   "parent": "f1998",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5500,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1998-oth",
+   "parent": "f1998",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 35000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Road Department",
+   "code": "2000-0200",
+   "amount": 3149114.81,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "pp. 61–62"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-ps",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1234014.81,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-sup",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1386600,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-oth",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 63500,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-cap",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 465000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 62"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2898",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Road Disaster",
+   "code": "2898-0200",
+   "amount": 383274.26,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 63"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2898-sup",
+   "parent": "f2898",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 383274.26,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 63"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2899",
+   "parent": null,
+   "section": "appropriations",
+   "name": "FEMA",
+   "code": "2899-0200",
+   "amount": 269548.46,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 64"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2899-oth",
+   "parent": "f2899",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 269548.46,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 64"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Automation Fund",
+   "code": "3000-0103",
+   "amount": 38051.46,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 65"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-ps",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2051.46,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 65"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-sup",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 65"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-oth",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 65"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-cap",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 65"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Automation Fund",
+   "code": "3001-0104",
+   "amount": 35485.25,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-ps",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 11435.25,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-sup",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4500,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-oth",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-cap",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 4550,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 66"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Court Automation Fund",
+   "code": "3002-0405",
+   "amount": 700,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-sup",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-oth",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 200,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Property Tax Relief Trust Fund Amendment 79 (Assessor's Office)",
+   "code": "3004-0105",
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 68"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-oth",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 68"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Clerk Automation Fund",
+   "code": "3005-0102",
+   "amount": 16000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 69"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-sup",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4500,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 69"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-oth",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 11500,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 69"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Recorder's Fund",
+   "code": "3006-0102",
+   "amount": 66800,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 70"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-sup",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 70"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-oth",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 54300,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 70"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-cap",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 70"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Library",
+   "code": "3008-0600",
+   "amount": 50719.78,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 71"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-ps",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 48319.78,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 71"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-sup",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1900,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 71"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-cap",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 71"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Solid Waste",
+   "code": "3009-0700",
+   "amount": 721666.38,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 72"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-ps",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 296466.38,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 72"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-sup",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 79450,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 72"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-oth",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 215750,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 72"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-cap",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 130000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 72"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3010",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk Operating Fund (Marriage License)",
+   "code": "3010-0102",
+   "amount": 1035,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3010-sup",
+   "parent": "f3010",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 750,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3010-oth",
+   "parent": "f3010",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 285,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 73"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3011",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Reappraisal Cost Fund",
+   "code": "3011-0106",
+   "amount": 76236,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 74"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3011-oth",
+   "parent": "f3011",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 76236,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 74"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Child Support",
+   "code": "3012-0114",
+   "amount": 7400,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 75"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-sup",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 75"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-cap",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 5400,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 75"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Enforcement Fund",
+   "code": "3015-0400",
+   "amount": 21958,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015-oth",
+   "parent": "f3015",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 21958,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail",
+   "code": "3017-0418",
+   "amount": 1597738.41,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "pp. 77–78"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-ps",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1305668.33,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-sup",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 129200,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 78"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-oth",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 162870.08,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 78"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3018",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Detention Facility Fund ($20.00 Booking Fee)",
+   "code": "3018-0418",
+   "amount": 9597.78,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3018-sup",
+   "parent": "f3018",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6398.52,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3018-cap",
+   "parent": "f3018",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 3199.26,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Boating Safety Fund",
+   "code": "3019-0400",
+   "amount": 12891.15,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 80"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-oth",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 12891.15,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 80"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "911 Fund",
+   "code": "3020-0501",
+   "amount": 374287.68,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 81"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The page's column is headed 'FY2025', but it sits in the 2026 budget under '2026 TOTAL BUDGET'. Section 12 of the ordinance moves $239,660.64 of 911 money to the Jail fund (3017) for dispatcher salaries."
+  },
+  {
+   "id": "f3020-ps",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 241287.68,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 81"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-oth",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 83000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 81"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-cap",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 50000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 81"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Public Defender",
+   "code": "3024-0417",
+   "amount": 28492.71,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 82"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024-ps",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 11047.71,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 82"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024-sup",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1920,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 82"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024-oth",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 15525,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 82"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3025",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Victim Witness",
+   "code": "3025-0416",
+   "amount": 17400,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 83"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3025-oth",
+   "parent": "f3025",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 17400,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 83"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Court",
+   "code": "3028-0404",
+   "amount": 1962.38,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 84"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028-sup",
+   "parent": "f3028",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 562.38,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 84"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028-oth",
+   "parent": "f3028",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1400,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 84"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Probation",
+   "code": "3031-0403",
+   "amount": 3350,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 85"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-sup",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 200,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 85"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-oth",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3150,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 85"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3032",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Representation Fund",
+   "code": "3032-0414",
+   "amount": 3310.22,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 86"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3032-oth",
+   "parent": "f3032",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3310.22,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 86"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk Commissioners Fee Fund",
+   "code": "3039-0102",
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 87"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039-sup",
+   "parent": "f3039",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 87"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Late Assessment Fee",
+   "code": "3042-0105",
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 88"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042-oth",
+   "parent": "f3042",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 88"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3093",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff's Boating & Safety Fund",
+   "code": "3093-0400",
+   "amount": 1316.63,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 90"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3093-oth",
+   "parent": "f3093",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1316.63,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 90"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3495",
+   "parent": null,
+   "section": "appropriations",
+   "name": "District Court Special Expenses",
+   "code": "3495-0410",
+   "amount": 10650,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3495-ps",
+   "parent": "f3495",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1050,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "Printed as 'Total Other Services and Charges', but it closes the Personal Services section (part-time salary and payroll lines)."
+  },
+  {
+   "id": "f3495-oth",
+   "parent": "f3495",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 9600,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3501",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Arkansas Department of Safety Act 786 of 2021 Fund",
+   "code": "3501-0421",
+   "amount": 2314.43,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 92"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3501-oth",
+   "parent": "f3501",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2314.43,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 92"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3988",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Memorial Hall Grant",
+   "code": "3988-0116",
+   "amount": 9476.22,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 95"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3988-oth",
+   "parent": "f3988",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 9476.22,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 95"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3990",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Polling Site Grant",
+   "code": "3990-0116",
+   "amount": 19196.52,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 97"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3990-oth",
+   "parent": "f3990",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 19196.52,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 97"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3992",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Old Jail Grant",
+   "code": "3992-0116",
+   "amount": 1253.57,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 98"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3992-oth",
+   "parent": "f3992",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1253.57,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 98"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3993",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Fire Hydrants",
+   "code": "3993-0503",
+   "amount": 8359.71,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 99"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3993-oth",
+   "parent": "f3993",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 8359.71,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 99"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3995",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Title III Fund",
+   "code": "3995-0504",
+   "amount": 73596.9,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 101"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3995-oth",
+   "parent": "f3995",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 73596.9,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 101"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3996",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Old Courthouse Restoration Fund",
+   "code": "3996-0112",
+   "amount": 30982.52,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 102"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3996-cap",
+   "parent": "f3996",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 30982.52,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 102"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3997",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Title II",
+   "code": "3997-0200",
+   "amount": 826248.94,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 103"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3997-sup",
+   "parent": "f3997",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 826248.94,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 103"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff's Radio & Equipment Fund",
+   "code": "6017-0116",
+   "amount": 9368.7,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 105"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6017-oth",
+   "parent": "f6017",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 9368.7,
+   "status": "sourced",
+   "source": {
+    "doc": "scottar-budget-2026",
+    "page": "p. 105"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }

@@ -1,25 +1,7733 @@
 {
-  "meta": {
-    "document": "Sebastian County — no appropriation document ingested yet",
-    "title": "Sebastian County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Sebastian County 2026 adopted budget",
+  "title": "Sebastian County — the money trail",
+  "year": 2026,
+  "grand_total": 65424970,
+  "note": "This is Sebastian County's 2026 budget book, as filed with the state. We use its 'Budget Summary by Fund/Department' table, which shows the 2026 budget for each office split into salaries, supplies, other services, capital, debt and transfers. Some funds send money to other county funds (the 'Interfund Transfer' column, $2,022,601 in all), so those dollars appear in both funds."
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "General Fund",
+   "code": "1000",
+   "amount": 38126129,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Sebastian County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-0100",
+   "amount": 550307,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-ps",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 462364,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-su",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 22488,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-os",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 65455,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "1000-0101",
+   "amount": 375632,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-ps",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 315550,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-su",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 34578,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-os",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 25504,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Clerk",
+   "code": "1000-0102",
+   "amount": 1540945,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-ps",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1193544,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-su",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 34100,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-os",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 313301,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 288000,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-ps",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 283300,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-su",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2100,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-os",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2600,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Facilities Maint",
+   "code": "1000-0108",
+   "amount": 1171673,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-ps",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 419756,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-su",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 349289,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-os",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 394809,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-co",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 7819,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Election",
+   "code": "1000-0109",
+   "amount": 498023,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-ps",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 275003,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-su",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 22050,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-os",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 200970,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0110",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Human Resources",
+   "code": "1000-0110",
+   "amount": 358657,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0110-ps",
+   "parent": "f1000-d0110",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 304332,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0110-su",
+   "parent": "f1000-d0110",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 12800,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0110-os",
+   "parent": "f1000-d0110",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 41525,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0113",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Financial Administration",
+   "code": "1000-0113",
+   "amount": 452490,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0113-ps",
+   "parent": "f1000-d0113",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 431400,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0113-su",
+   "parent": "f1000-d0113",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7100,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0113-os",
+   "parent": "f1000-d0113",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 13990,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0114",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Clerk Child Support",
+   "code": "1000-0114",
+   "amount": 113207,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0114-ps",
+   "parent": "f1000-d0114",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 112624,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0114-su",
+   "parent": "f1000-d0114",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 233,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0114-os",
+   "parent": "f1000-d0114",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 350,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0115",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Information Systems",
+   "code": "1000-0115",
+   "amount": 849962,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0115-ps",
+   "parent": "f1000-d0115",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 655493,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0115-su",
+   "parent": "f1000-d0115",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 16620,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0115-os",
+   "parent": "f1000-d0115",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 132849,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0115-co",
+   "parent": "f1000-d0115",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 45000,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0116",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Grants-In-Aid",
+   "code": "1000-0116",
+   "amount": 177230,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0116-os",
+   "parent": "f1000-d0116",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 177230,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Purchasing",
+   "code": "1000-0117",
+   "amount": 281208,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117-ps",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 240433,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117-su",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5500,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0117-os",
+   "parent": "f1000-d0117",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 35275,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0119",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Other County Expenses",
+   "code": "1000-0119",
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0119-su",
+   "parent": "f1000-d0119",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0121",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Enterprise Network & Software",
+   "code": "1000-0121",
+   "amount": 460245,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0121-os",
+   "parent": "f1000-d0121",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 460245,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0129",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Fort Chaffee Redevelopment",
+   "code": "1000-0129",
+   "amount": 83229,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0129-os",
+   "parent": "f1000-d0129",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 83229,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0130",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Western Arkansas Intermodal",
+   "code": "1000-0130",
+   "amount": 21370,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0130-os",
+   "parent": "f1000-d0130",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 21370,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "City/County Health Center",
+   "code": "1000-0300",
+   "amount": 131667,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-su",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5300,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-os",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 126367,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0301",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Ambulance",
+   "code": "1000-0301",
+   "amount": 2319284,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0301-ps",
+   "parent": "f1000-d0301",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1424172,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0301-su",
+   "parent": "f1000-d0301",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 367680,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0301-os",
+   "parent": "f1000-d0301",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 125373,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0301-co",
+   "parent": "f1000-d0301",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 402059,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff Office",
+   "code": "1000-0400",
+   "amount": 5137114,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-ps",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 3877099,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-su",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 496871,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-os",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 260238,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-co",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 502906,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court Div I",
+   "code": "1000-0401",
+   "amount": 12192,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-su",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4792,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-os",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7400,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court Div II",
+   "code": "1000-0402",
+   "amount": 14028,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-su",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4068,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-os",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 9960,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court Div III",
+   "code": "1000-0403",
+   "amount": 42342,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403-su",
+   "parent": "f1000-d0403",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5752,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403-os",
+   "parent": "f1000-d0403",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 36590,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0404",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court Div V",
+   "code": "1000-0404",
+   "amount": 10170,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0404-su",
+   "parent": "f1000-d0404",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3690,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0404-os",
+   "parent": "f1000-d0404",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6480,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0405",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court Div VI",
+   "code": "1000-0405",
+   "amount": 14446,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0405-su",
+   "parent": "f1000-d0405",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6155,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0405-os",
+   "parent": "f1000-d0405",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 8291,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court Div VII",
+   "code": "1000-0406",
+   "amount": 14927,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406-su",
+   "parent": "f1000-d0406",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3620,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406-os",
+   "parent": "f1000-d0406",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 11307,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0407",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court Div IV",
+   "code": "1000-0407",
+   "amount": 54390,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0407-su",
+   "parent": "f1000-d0407",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5364,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0407-os",
+   "parent": "f1000-d0407",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 49026,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0410",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court Ft Smith Div",
+   "code": "1000-0410",
+   "amount": 672307,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0410-os",
+   "parent": "f1000-d0410",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 672307,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Probation",
+   "code": "1000-0414",
+   "amount": 810644,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-ps",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 768591,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-su",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 14909,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0414-os",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 27144,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Detention Center",
+   "code": "1000-0415",
+   "amount": 1215704,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415-ps",
+   "parent": "f1000-d0415",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1072484,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415-su",
+   "parent": "f1000-d0415",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 43335,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0415-os",
+   "parent": "f1000-d0415",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 99885,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney",
+   "code": "1000-0416",
+   "amount": 1316467,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-ps",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1226181,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-su",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 40260,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-os",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 50026,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0417",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Public Defender",
+   "code": "1000-0417",
+   "amount": 345554,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0417-ps",
+   "parent": "f1000-d0417",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 267005,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0417-su",
+   "parent": "f1000-d0417",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 28380,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0417-os",
+   "parent": "f1000-d0417",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 50169,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Adult Detention Center",
+   "code": "1000-0418",
+   "amount": 7336731,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-ps",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 5484222,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-su",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 433265,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0418-os",
+   "parent": "f1000-d0418",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1419244,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Coroner",
+   "code": "1000-0419",
+   "amount": 295574,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-ps",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 260506,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-su",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 18000,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-os",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 17068,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0420",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Constables",
+   "code": "1000-0420",
+   "amount": 28,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0420-ps",
+   "parent": "f1000-d0420",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 28,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse Security",
+   "code": "1000-0422",
+   "amount": 1278953,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422-ps",
+   "parent": "f1000-d0422",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1271129,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422-su",
+   "parent": "f1000-d0422",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0422-os",
+   "parent": "f1000-d0422",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4824,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0424",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff Traffic Division",
+   "code": "1000-0424",
+   "amount": 174290,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0424-ps",
+   "parent": "f1000-d0424",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 168040,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0424-su",
+   "parent": "f1000-d0424",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6250,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0425",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff Animal Control",
+   "code": "1000-0425",
+   "amount": 74736,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0425-ps",
+   "parent": "f1000-d0425",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 66886,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0425-su",
+   "parent": "f1000-d0425",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0425-os",
+   "parent": "f1000-d0425",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6350,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0426",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Communications",
+   "code": "1000-0426",
+   "amount": 721825,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0426-ps",
+   "parent": "f1000-d0426",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 703425,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0426-su",
+   "parent": "f1000-d0426",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0426-os",
+   "parent": "f1000-d0426",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 16400,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0428",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff Junior Deputy Prg",
+   "code": "1000-0428",
+   "amount": 6507,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0428-su",
+   "parent": "f1000-d0428",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0428-os",
+   "parent": "f1000-d0428",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3507,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0430",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Specialty Courts",
+   "code": "1000-0430",
+   "amount": 231162,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0430-ps",
+   "parent": "f1000-d0430",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 223742,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0430-su",
+   "parent": "f1000-d0430",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 850,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0430-os",
+   "parent": "f1000-d0430",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6570,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0431",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "JDC Teacher Grant",
+   "code": "1000-0431",
+   "amount": 293745,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0431-ps",
+   "parent": "f1000-d0431",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 293745,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0432",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "ADC Maintenance",
+   "code": "1000-0432",
+   "amount": 690908,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0432-ps",
+   "parent": "f1000-d0432",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 132742,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0432-su",
+   "parent": "f1000-d0432",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 151750,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0432-os",
+   "parent": "f1000-d0432",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 91309,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0432-co",
+   "parent": "f1000-d0432",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 315107,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0433",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "ADC Medical",
+   "code": "1000-0433",
+   "amount": 1401229,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0433-su",
+   "parent": "f1000-d0433",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1351156,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0433-os",
+   "parent": "f1000-d0433",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 50073,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0438",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney Fees",
+   "code": "1000-0438",
+   "amount": 41822,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0438-ps",
+   "parent": "f1000-d0438",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 41822,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0440",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "PA Grant",
+   "code": "1000-0440",
+   "amount": 61299,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0440-ps",
+   "parent": "f1000-d0440",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 61299,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0441",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "PA VW Clerical",
+   "code": "1000-0441",
+   "amount": 60107,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "A page number is printed over the supplies column on this row; by the row total it is $0."
+  },
+  {
+   "id": "f1000-d0441-ps",
+   "parent": "f1000-d0441",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 60107,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0443",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Drug Enforcement Task Force",
+   "code": "1000-0443",
+   "amount": 205993,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0443-ps",
+   "parent": "f1000-d0443",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 205993,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0444",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "JDC Maintenance",
+   "code": "1000-0444",
+   "amount": 13095,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0444-su",
+   "parent": "f1000-d0444",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7595,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0444-os",
+   "parent": "f1000-d0444",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5500,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0446",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courts Bldg Operations",
+   "code": "1000-0446",
+   "amount": 597952,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0446-ps",
+   "parent": "f1000-d0446",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 228675,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0446-su",
+   "parent": "f1000-d0446",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 115397,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0446-os",
+   "parent": "f1000-d0446",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 253880,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0449",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "SCAPP",
+   "code": "1000-0449",
+   "amount": 45417,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0449-su",
+   "parent": "f1000-d0449",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10547,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0449-os",
+   "parent": "f1000-d0449",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 34870,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0452",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Grant",
+   "code": "1000-0452",
+   "amount": 138999,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0452-ps",
+   "parent": "f1000-d0452",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 138599,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0452-su",
+   "parent": "f1000-d0452",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 400,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0454",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Video Arraignment",
+   "code": "1000-0454",
+   "amount": 4600,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0454-os",
+   "parent": "f1000-d0454",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4600,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0458",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Act 1256",
+   "code": "1000-0458",
+   "amount": 81890,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0458-os",
+   "parent": "f1000-d0458",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 81890,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0460",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courtroom Operations",
+   "code": "1000-0460",
+   "amount": 281643,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0460-ps",
+   "parent": "f1000-d0460",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 162248,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0460-su",
+   "parent": "f1000-d0460",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7885,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0460-os",
+   "parent": "f1000-d0460",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 111510,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0470",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Jail Commissary",
+   "code": "1000-0470",
+   "amount": 375000,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0470-su",
+   "parent": "f1000-d0470",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 375000,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0478",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Mental Health Court",
+   "code": "1000-0478",
+   "amount": 601032,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0478-ps",
+   "parent": "f1000-d0478",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 199827,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0478-su",
+   "parent": "f1000-d0478",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 360920,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0478-os",
+   "parent": "f1000-d0478",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 40285,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0505",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Dept of Emergency Mgmt",
+   "code": "1000-0505",
+   "amount": 187244,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0505-ps",
+   "parent": "f1000-d0505",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 103891,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0505-su",
+   "parent": "f1000-d0505",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 35975,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0505-os",
+   "parent": "f1000-d0505",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 47378,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0508",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Emergency Operation Center",
+   "code": "1000-0508",
+   "amount": 83169,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0508-su",
+   "parent": "f1000-d0508",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 33565,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0508-os",
+   "parent": "f1000-d0508",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 49604,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0510",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Rural Fire",
+   "code": "1000-0510",
+   "amount": 115126,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0510-ps",
+   "parent": "f1000-d0510",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 9796,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0510-su",
+   "parent": "f1000-d0510",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 27330,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0510-os",
+   "parent": "f1000-d0510",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 78000,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0515",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Safe Shelter",
+   "code": "1000-0515",
+   "amount": 6350,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0515-su",
+   "parent": "f1000-d0515",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2800,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0515-os",
+   "parent": "f1000-d0515",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3550,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0518",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Big Creek Rural Fire",
+   "code": "1000-0518",
+   "amount": 111959,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0518-os",
+   "parent": "f1000-d0518",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 111959,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0519",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Bonanza Rural Fire",
+   "code": "1000-0519",
+   "amount": 103803,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0519-os",
+   "parent": "f1000-d0519",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 103803,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0520",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Excelsior, Mt. Zion, Palestine",
+   "code": "1000-0520",
+   "amount": 36381,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0520-os",
+   "parent": "f1000-d0520",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 36381,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0521",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Greenwood Rural Fire",
+   "code": "1000-0521",
+   "amount": 26467,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0521-os",
+   "parent": "f1000-d0521",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 26467,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0522",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Hackett Rural Fire",
+   "code": "1000-0522",
+   "amount": 20979,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0522-os",
+   "parent": "f1000-d0522",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 20979,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0523",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Hartford Rural Fire",
+   "code": "1000-0523",
+   "amount": 20494,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0523-os",
+   "parent": "f1000-d0523",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 20494,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0524",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Huntington Rural Fire",
+   "code": "1000-0524",
+   "amount": 24746,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0524-os",
+   "parent": "f1000-d0524",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 24746,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0526",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Mansfield Rural Fire",
+   "code": "1000-0526",
+   "amount": 25786,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0526-os",
+   "parent": "f1000-d0526",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 25786,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0527",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Midland Rural Fire",
+   "code": "1000-0527",
+   "amount": 63237,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0527-os",
+   "parent": "f1000-d0527",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 63237,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0528",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Milltown Washburn Rural Fire",
+   "code": "1000-0528",
+   "amount": 17675,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0528-os",
+   "parent": "f1000-d0528",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 17675,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0529",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Riverdale Rural Fire",
+   "code": "1000-0529",
+   "amount": 87384,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0529-os",
+   "parent": "f1000-d0529",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 87384,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0530",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sugarloaf/Slaytonville Rural Fire",
+   "code": "1000-0530",
+   "amount": 123408,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0530-os",
+   "parent": "f1000-d0530",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 123408,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0531",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Whitebluff/Rhyhill Rural Fire",
+   "code": "1000-0531",
+   "amount": 28223,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0531-os",
+   "parent": "f1000-d0531",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 28223,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0601",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Ben Geren Park/Recreation",
+   "code": "1000-0601",
+   "amount": 879278,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0601-ps",
+   "parent": "f1000-d0601",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 482022,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0601-su",
+   "parent": "f1000-d0601",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 143205,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0601-os",
+   "parent": "f1000-d0601",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 196051,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0601-co",
+   "parent": "f1000-d0601",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 58000,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0604",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Ben Geren Park PS/GC",
+   "code": "1000-0604",
+   "amount": 978312,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0604-ps",
+   "parent": "f1000-d0604",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 664111,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0604-su",
+   "parent": "f1000-d0604",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 179916,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0604-os",
+   "parent": "f1000-d0604",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 134285,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0609",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Library",
+   "code": "1000-0609",
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0609-os",
+   "parent": "f1000-d0609",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0610",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Scott Seb Regnl Lib.",
+   "code": "1000-0610",
+   "amount": 24702,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0610-os",
+   "parent": "f1000-d0610",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 24702,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0620",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Ben Geren Community Complex",
+   "code": "1000-0620",
+   "amount": 111995,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0620-ps",
+   "parent": "f1000-d0620",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 54874,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0620-su",
+   "parent": "f1000-d0620",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 28291,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0620-os",
+   "parent": "f1000-d0620",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 28830,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veterans",
+   "code": "1000-0800",
+   "amount": 263619,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-ps",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 249744,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-su",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5500,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-os",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 8375,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Extension Service",
+   "code": "1000-0801",
+   "amount": 172090,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-su",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6500,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-os",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 165590,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0802",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Paupers and Welfare",
+   "code": "1000-0802",
+   "amount": 4500,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0802-os",
+   "parent": "f1000-d0802",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4500,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0804",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Seb Co Senior Citizens",
+   "code": "1000-0804",
+   "amount": 206251,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0804-os",
+   "parent": "f1000-d0804",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 206251,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Commission Fund",
+   "code": "1800",
+   "amount": 650255,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800-d0103",
+   "parent": "f1800",
+   "section": "appropriations",
+   "name": "Treasurer",
+   "code": "1800-0103",
+   "amount": 650255,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800-d0103-ps",
+   "parent": "f1800-d0103",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 307600,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800-d0103-su",
+   "parent": "f1800-d0103",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 12425,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800-d0103-os",
+   "parent": "f1800-d0103",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 36840,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800-d0103-co",
+   "parent": "f1800-d0103",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1200,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1800-d0103-tr",
+   "parent": "f1800-d0103",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 292190,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1801",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Commission Fund",
+   "code": "1801",
+   "amount": 1177916,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1801-d0104",
+   "parent": "f1801",
+   "section": "appropriations",
+   "name": "Collector",
+   "code": "1801-0104",
+   "amount": 1177916,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1801-d0104-ps",
+   "parent": "f1801-d0104",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 703941,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1801-d0104-su",
+   "parent": "f1801-d0104",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 25240,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1801-d0104-os",
+   "parent": "f1801-d0104",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 143675,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1801-d0104-tr",
+   "parent": "f1801-d0104",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 305060,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1802",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Commission Fund",
+   "code": "1802",
+   "amount": 3096931,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1802-d0105",
+   "parent": "f1802",
+   "section": "appropriations",
+   "name": "Assessor",
+   "code": "1802-0105",
+   "amount": 3096931,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1802-d0105-ps",
+   "parent": "f1802-d0105",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1804343,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1802-d0105-su",
+   "parent": "f1802-d0105",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 63350,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1802-d0105-os",
+   "parent": "f1802-d0105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 806807,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1802-d0105-tr",
+   "parent": "f1802-d0105",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 422431,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1804",
+   "parent": null,
+   "section": "appropriations",
+   "name": "District Court - GW Division",
+   "code": "1804",
+   "amount": 409572,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1804-d0409",
+   "parent": "f1804",
+   "section": "appropriations",
+   "name": "District Court GW Div.",
+   "code": "1804-0409",
+   "amount": 409572,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1804-d0409-ps",
+   "parent": "f1804-d0409",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 310363,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1804-d0409-su",
+   "parent": "f1804-d0409",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7970,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1804-d0409-os",
+   "parent": "f1804-d0409",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 21352,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1804-d0409-co",
+   "parent": "f1804-d0409",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2400,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1804-d0409-tr",
+   "parent": "f1804-d0409",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 67487,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1805",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sebastian County Law Library",
+   "code": "1805",
+   "amount": 50439,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1805-d0457",
+   "parent": "f1805",
+   "section": "appropriations",
+   "name": "Law Library",
+   "code": "1805-0457",
+   "amount": 50439,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1805-d0457-ps",
+   "parent": "f1805-d0457",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 50439,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810",
+   "parent": null,
+   "section": "appropriations",
+   "name": "HazMat Response Fund",
+   "code": "1810",
+   "amount": 60195,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810-d0506",
+   "parent": "f1810",
+   "section": "appropriations",
+   "name": "Haz-Mat Response",
+   "code": "1810-0506",
+   "amount": 60195,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810-d0506-su",
+   "parent": "f1810-d0506",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4500,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810-d0506-os",
+   "parent": "f1810-d0506",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 40695,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1810-d0506-co",
+   "parent": "f1810-d0506",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1901",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Miscellaneous Grants Fund",
+   "code": "1901",
+   "amount": 1550783,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1901-d0421",
+   "parent": "f1901",
+   "section": "appropriations",
+   "name": "Public Safety Equip Grant",
+   "code": "1901-0421",
+   "amount": 1427,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "A page number is printed over the supplies column on this row; by the row total it is $0."
+  },
+  {
+   "id": "f1901-d0421-co",
+   "parent": "f1901-d0421",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1427,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1901-d0465",
+   "parent": "f1901",
+   "section": "appropriations",
+   "name": "Court Security Grant",
+   "code": "1901-0465",
+   "amount": 12727,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1901-d0465-co",
+   "parent": "f1901-d0465",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 12727,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1901-d0513",
+   "parent": "f1901",
+   "section": "appropriations",
+   "name": "White Bluff/Rye Hill Fire Dept",
+   "code": "1901-0513",
+   "amount": 14608,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1901-d0513-co",
+   "parent": "f1901-d0513",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 14608,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1901-d0517",
+   "parent": "f1901",
+   "section": "appropriations",
+   "name": "Milltown/Washburn Fire Dept",
+   "code": "1901-0517",
+   "amount": 14599,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1901-d0517-co",
+   "parent": "f1901-d0517",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 14599,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1901-d0807",
+   "parent": "f1901",
+   "section": "appropriations",
+   "name": "Veterans Treatment Court Grant",
+   "code": "1901-0807",
+   "amount": 397422,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1901-d0807-su",
+   "parent": "f1901-d0807",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2238,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1901-d0807-os",
+   "parent": "f1901-d0807",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 395184,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1901-d0808",
+   "parent": "f1901",
+   "section": "appropriations",
+   "name": "Juv Accountability Block Grant",
+   "code": "1901-0808",
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1901-d0808-os",
+   "parent": "f1901-d0808",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1901-d0810",
+   "parent": "f1901",
+   "section": "appropriations",
+   "name": "Crisis Stabilization Unit",
+   "code": "1901-0810",
+   "amount": 1080000,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1901-d0810-os",
+   "parent": "f1901-d0810",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1080000,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1902",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Homeland Security Grants Fund",
+   "code": "1902",
+   "amount": 408496,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1902-d0445",
+   "parent": "f1902",
+   "section": "appropriations",
+   "name": "FY23 BOMB",
+   "code": "1902-0445",
+   "amount": 59789,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1902-d0445-co",
+   "parent": "f1902-d0445",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 59789,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1902-d0447",
+   "parent": "f1902",
+   "section": "appropriations",
+   "name": "FY23 SWAT",
+   "code": "1902-0447",
+   "amount": 79731,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1902-d0447-co",
+   "parent": "f1902-d0447",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 79731,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1902-d0448",
+   "parent": "f1902",
+   "section": "appropriations",
+   "name": "FY23 WMD",
+   "code": "1902-0448",
+   "amount": 21230,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1902-d0448-co",
+   "parent": "f1902-d0448",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 21230,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1902-d0455",
+   "parent": "f1902",
+   "section": "appropriations",
+   "name": "FY22 SWAT",
+   "code": "1902-0455",
+   "amount": 745,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1902-d0455-co",
+   "parent": "f1902-d0455",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 745,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1902-d0456",
+   "parent": "f1902",
+   "section": "appropriations",
+   "name": "FY22 WMD",
+   "code": "1902-0456",
+   "amount": 5243,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1902-d0456-co",
+   "parent": "f1902-d0456",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 5243,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1902-d0461",
+   "parent": "f1902",
+   "section": "appropriations",
+   "name": "FY22 BOMB",
+   "code": "1902-0461",
+   "amount": 7473,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1902-d0461-co",
+   "parent": "f1902-d0461",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 7473,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1902-d0467",
+   "parent": "f1902",
+   "section": "appropriations",
+   "name": "FY24 SWAT",
+   "code": "1902-0467",
+   "amount": 38004,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1902-d0467-co",
+   "parent": "f1902-d0467",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 38004,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1902-d0468",
+   "parent": "f1902",
+   "section": "appropriations",
+   "name": "FY24 BOMB",
+   "code": "1902-0468",
+   "amount": 137000,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1902-d0468-co",
+   "parent": "f1902-d0468",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 137000,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1902-d0469",
+   "parent": "f1902",
+   "section": "appropriations",
+   "name": "FY24 WMD",
+   "code": "1902-0469",
+   "amount": 59281,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1902-d0469-co",
+   "parent": "f1902-d0469",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 59281,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1903",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emergency Management Grants",
+   "code": "1903",
+   "amount": 10650,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1903-d0312",
+   "parent": "f1903",
+   "section": "appropriations",
+   "name": "EMS Trauma Grant",
+   "code": "1903-0312",
+   "amount": 55,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1903-d0312-co",
+   "parent": "f1903-d0312",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 55,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1903-d0317",
+   "parent": "f1903",
+   "section": "appropriations",
+   "name": "FY26 EMS Trauma Grant",
+   "code": "1903-0317",
+   "amount": 10595,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1903-d0317-co",
+   "parent": "f1903-d0317",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10595,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Road Fund",
+   "code": "2000",
+   "amount": 10395504,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-d0200",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "County Road",
+   "code": "2000-0200",
+   "amount": 10395504,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-d0200-ps",
+   "parent": "f2000-d0200",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 3141689,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-d0200-su",
+   "parent": "f2000-d0200",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4066116,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-d0200-os",
+   "parent": "f2000-d0200",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1510183,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-d0200-co",
+   "parent": "f2000-d0200",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 974747,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-d0200-tr",
+   "parent": "f2000-d0200",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 702769,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 285"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The summary table (p. 23) prints $702,770; the Road Fund worksheet (p. 285) prints $702,769.00, which matches the department total."
+  },
+  {
+   "id": "f2003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Add'l Motor Fuel Tax (Act 416)",
+   "code": "2003",
+   "amount": 241600,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003-d0203",
+   "parent": "f2003",
+   "section": "appropriations",
+   "name": "Add'l Motor Fuel Tax (Act 416)",
+   "code": "2003-0203",
+   "amount": 241600,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003-d0203-su",
+   "parent": "f2003-d0203",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 241600,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2800",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Road Fund Reserve",
+   "code": "2800",
+   "amount": 2519,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2800-d0201",
+   "parent": "f2800",
+   "section": "appropriations",
+   "name": "Road Capital Reserve",
+   "code": "2800-0201",
+   "amount": 2519,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2800-d0201-co",
+   "parent": "f2800-d0201",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2519,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Automation Fund",
+   "code": "3000",
+   "amount": 74206,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-d0125",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Treasurer Automation",
+   "code": "3000-0125",
+   "amount": 74206,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-d0125-su",
+   "parent": "f3000-d0125",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 43473,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-d0125-os",
+   "parent": "f3000-d0125",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 30733,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector Automation Fund",
+   "code": "3001",
+   "amount": 79690,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-d0126",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Collector's Automation Fund",
+   "code": "3001-0126",
+   "amount": 79690,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-d0126-su",
+   "parent": "f3001-d0126",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 24500,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-d0126-os",
+   "parent": "f3001-d0126",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 55190,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Court Automation Circuit Court",
+   "code": "3002",
+   "amount": 27407,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-d0124",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Court Automation Circuit Court",
+   "code": "3002-0124",
+   "amount": 27407,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-d0124-os",
+   "parent": "f3002-d0124",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-d0124-co",
+   "parent": "f3002-d0124",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 3600,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-d0124-tr",
+   "parent": "f3002-d0124",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 13807,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor Act 1892 of 2005",
+   "code": "3004",
+   "amount": 41770,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-d0127",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Assessor's Amendment 79",
+   "code": "3004-0127",
+   "amount": 41770,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-d0127-su",
+   "parent": "f3004-d0127",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5000,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-d0127-os",
+   "parent": "f3004-d0127",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 36770,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Recorder Fund",
+   "code": "3006",
+   "amount": 1450969,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-d0122",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "County Recorder",
+   "code": "3006-0122",
+   "amount": 1397569,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-d0122-ps",
+   "parent": "f3006-d0122",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 600630,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-d0122-su",
+   "parent": "f3006-d0122",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 118459,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-d0122-os",
+   "parent": "f3006-d0122",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 459623,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-d0122-tr",
+   "parent": "f3006-d0122",
+   "section": "appropriations",
+   "name": "Transfers",
+   "code": null,
+   "amount": 218857,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-d0123",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Automated Records Systems",
+   "code": "3006-0123",
+   "amount": 53400,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-d0123-os",
+   "parent": "f3006-d0123",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 53400,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Library Fund",
+   "code": "3008",
+   "amount": 1039051,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0600",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "Scott Seb Regional Library",
+   "code": "3008-0600",
+   "amount": 1039051,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0600-ps",
+   "parent": "f3008-d0600",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 397585,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0600-su",
+   "parent": "f3008-d0600",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 22486,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0600-os",
+   "parent": "f3008-d0600",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 43382,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0600-co",
+   "parent": "f3008-d0600",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 575598,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Communication Facility & Equip",
+   "code": "3014",
+   "amount": 187727,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014-d0427",
+   "parent": "f3014",
+   "section": "appropriations",
+   "name": "Sheriff Radio Equip Fund",
+   "code": "3014-0427",
+   "amount": 187727,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014-d0427-ps",
+   "parent": "f3014-d0427",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 43060,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014-d0427-su",
+   "parent": "f3014-d0427",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5300,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014-d0427-os",
+   "parent": "f3014-d0427",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 65075,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014-d0427-co",
+   "parent": "f3014-d0427",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 74292,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Asset Forfeiture Fund",
+   "code": "3015",
+   "amount": 28222,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015-d0429",
+   "parent": "f3015",
+   "section": "appropriations",
+   "name": "Drug Asset Forfeiture",
+   "code": "3015-0429",
+   "amount": 28222,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015-d0429-ps",
+   "parent": "f3015-d0429",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 24222,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3015-d0429-os",
+   "parent": "f3015-d0429",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Boating Safety Fund",
+   "code": "3019",
+   "amount": 2977,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-d0504",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "County Emergency Rescue",
+   "code": "3019-0504",
+   "amount": 2977,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-d0504-su",
+   "parent": "f3019-d0504",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 352,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-d0504-os",
+   "parent": "f3019-d0504",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2625,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "9-1-1",
+   "code": "3020",
+   "amount": 11760,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-d0501",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "911 Telephone System",
+   "code": "3020-0501",
+   "amount": 11760,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-d0501-su",
+   "parent": "f3020-d0501",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 11760,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Ct Juvenile Div/Juvenile Pr",
+   "code": "3031",
+   "amount": 7500,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-d0437",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Juvenile Probation Fees",
+   "code": "3031-0437",
+   "amount": 7500,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-d0437-os",
+   "parent": "f3031-d0437",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7500,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3046",
+   "parent": null,
+   "section": "appropriations",
+   "name": "American Rescue Plan Fund",
+   "code": "3046",
+   "amount": 1722128,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3046-d0112",
+   "parent": "f3046",
+   "section": "appropriations",
+   "name": "County Special Projects",
+   "code": "3046-0112",
+   "amount": 1365173,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3046-d0112-co",
+   "parent": "f3046-d0112",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1365173,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3046-d0118",
+   "parent": "f3046",
+   "section": "appropriations",
+   "name": "Consulting Firm",
+   "code": "3046-0118",
+   "amount": 356955,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3046-d0118-su",
+   "parent": "f3046-d0118",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 356955,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3048",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Ct - Opioid Settlement",
+   "code": "3048",
+   "amount": 15138,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3048-d0408",
+   "parent": "f3048",
+   "section": "appropriations",
+   "name": "Drug Ct - Opioid Settlement",
+   "code": "3048-0408",
+   "amount": 15138,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3048-d0408-os",
+   "parent": "f3048-d0408",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 15138,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Library Sales Tax",
+   "code": "3400",
+   "amount": 465382,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d0603",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Reg. Lib. Sales Tax",
+   "code": "3400-0603",
+   "amount": 416263,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d0603-su",
+   "parent": "f3400-d0603",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d0603-os",
+   "parent": "f3400-d0603",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 21000,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d0603-co",
+   "parent": "f3400-d0603",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 392263,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d0621",
+   "parent": "f3400",
+   "section": "appropriations",
+   "name": "Regional Library",
+   "code": "3400-0621",
+   "amount": 49119,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d0621-su",
+   "parent": "f3400-d0621",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6034,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d0621-os",
+   "parent": "f3400-d0621",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 29545,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3400-d0621-co",
+   "parent": "f3400-d0621",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 13540,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3401",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Federal Forfeiture",
+   "code": "3401",
+   "amount": 78304,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3401-d0423",
+   "parent": "f3401",
+   "section": "appropriations",
+   "name": "Federal Forfeiture",
+   "code": "3401-0423",
+   "amount": 78304,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3401-d0423-su",
+   "parent": "f3401-d0423",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3401-d0423-os",
+   "parent": "f3401-d0423",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 77804,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4800",
+   "parent": null,
+   "section": "appropriations",
+   "name": "General Fund Reserve",
+   "code": "4800",
+   "amount": 1765779,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4800-d0640",
+   "parent": "f4800",
+   "section": "appropriations",
+   "name": "Library Construction Project",
+   "code": "4800-0640",
+   "amount": 1765779,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4800-d0640-co",
+   "parent": "f4800-d0640",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1765779,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4801",
+   "parent": null,
+   "section": "appropriations",
+   "name": "General Fund Sales Tax",
+   "code": "4801",
+   "amount": 1690836,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4801-d0140",
+   "parent": "f4801",
+   "section": "appropriations",
+   "name": "County Projects",
+   "code": "4801-0140",
+   "amount": 1671711,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4801-d0140-co",
+   "parent": "f4801-d0140",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1671711,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4801-d0617",
+   "parent": "f4801",
+   "section": "appropriations",
+   "name": "Aquatics Facility",
+   "code": "4801-0617",
+   "amount": 19125,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4801-d0617-co",
+   "parent": "f4801-d0617",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 19125,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f5800",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Energy Project",
+   "code": "5800",
+   "amount": 551635,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f5800-d0165",
+   "parent": "f5800",
+   "section": "appropriations",
+   "name": "Energy Project",
+   "code": "5800-0165",
+   "amount": 419715,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f5800-d0165-ds",
+   "parent": "f5800-d0165",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 419715,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f5800-d0166",
+   "parent": "f5800",
+   "section": "appropriations",
+   "name": "Solar Project",
+   "code": "5800-0166",
+   "amount": 131920,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f5800-d0166-ds",
+   "parent": "f5800-d0166",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 131920,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff's Agency Fund",
+   "code": "6017",
+   "amount": 3500,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6017-d0490",
+   "parent": "f6017",
+   "section": "appropriations",
+   "name": "Law Enforce Training Act 372",
+   "code": "6017-0490",
+   "amount": 3500,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6017-d0490-os",
+   "parent": "f6017-d0490",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3500,
+   "status": "sourced",
+   "source": {
+    "doc": "sebastianar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }

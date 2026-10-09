@@ -1,21 +1,696 @@
 {
-  "run_at": "2026-08-21T23:38:20.285Z",
+  "run_at": "2026-10-09T01:23:28.885Z",
   "corpus_year": 2026,
-  "grand_total": 51279177,
+  "grand_total": 51279176.75,
   "summary": {
-    "total_checks": 7,
-    "passed": 7,
+    "total_checks": 82,
+    "passed": 82,
     "failed": 0
   },
   "checks": [
+    {
+      "node": "f1000",
+      "name": "County General Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 11440442.51,
+      "computed": 11440442.51,
+      "detail": "25 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0100",
+      "name": "County Judge",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 411428,
+      "computed": 411428,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0101",
+      "name": "County Clerk",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 843973.37,
+      "computed": 843973.37,
+      "detail": "4 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0102",
+      "name": "Circuit Clerk",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 460819.56,
+      "computed": 460819.56,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0103",
+      "name": "County Treasurer",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 294280.04,
+      "computed": 294280.04000000004,
+      "detail": "4 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0104",
+      "name": "Tax Collector",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 813502.67,
+      "computed": 813502.67,
+      "detail": "4 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0106",
+      "name": "Board of Equalization",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 11705,
+      "computed": 11705,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0107",
+      "name": "Quorum Court",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 219932.69,
+      "computed": 219932.69,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0108",
+      "name": "Courthouse Maintenance",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 433913.04,
+      "computed": 433913.04,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0109",
+      "name": "Election Commission",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 525886.99,
+      "computed": 525886.99,
+      "detail": "4 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0112",
+      "name": "Other County Expenses",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 1502839.91,
+      "computed": 1502839.9100000001,
+      "detail": "4 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0200",
+      "name": "County General Road Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 1150000,
+      "computed": 1150000,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0300",
+      "name": "County Health Department",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 128531.08,
+      "computed": 128531.08,
+      "detail": "4 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0400",
+      "name": "County General Law Enforcement",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 400000,
+      "computed": 400000,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0401",
+      "name": "Circuit Court First Division",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 59150,
+      "computed": 59150,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0402",
+      "name": "Circuit Court Third Division",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 116300,
+      "computed": 116300,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0403",
+      "name": "Circuit Court Second Division",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 67910,
+      "computed": 67910,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0404",
+      "name": "Circuit Court Facility Building Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 781200,
+      "computed": 781200,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0414",
+      "name": "Juvenile Probation",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 570567.41,
+      "computed": 570567.4099999999,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0416",
+      "name": "Prosecuting Attorney",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 326346.34,
+      "computed": 326346.33999999997,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0419",
+      "name": "Coroner",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 177838.58,
+      "computed": 177838.58000000002,
+      "detail": "4 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0500",
+      "name": "Office of Emergency Management",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 287898.26,
+      "computed": 287898.26,
+      "detail": "4 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1000-d0503",
+      "name": "Local Emergency Planning Commission",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 16950,
+      "computed": 16950,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1001",
+      "name": "County General Reserve Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 5946000,
+      "computed": 5946000,
+      "detail": "1 children sum to the parent total exactly."
+    },
+    {
+      "node": "f1801",
+      "name": "Cops in School Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 159543,
+      "computed": 159543,
+      "detail": "1 children sum to the parent total exactly."
+    },
+    {
+      "node": "f2000",
+      "name": "County Road Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 10108637.98,
+      "computed": 10108637.98,
+      "detail": "5 children sum to the parent total exactly."
+    },
+    {
+      "node": "f2003",
+      "name": "Additional Motor Fuel Tax Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 358971,
+      "computed": 358971,
+      "detail": "1 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3000",
+      "name": "Treasurer's Automation Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 40500,
+      "computed": 40500,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3001",
+      "name": "Tax Collector's Automated Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 209260,
+      "computed": 209260,
+      "detail": "4 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3002",
+      "name": "Circuit Court Automation Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 10500,
+      "computed": 10500,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3004",
+      "name": "Assessor Automation Fund (Amendment 79)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 71454.88,
+      "computed": 71454.88,
+      "detail": "4 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3005",
+      "name": "County Clerk's Automated Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 79500,
+      "computed": 79500,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3006",
+      "name": "Recorder's Cost Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 537982.29,
+      "computed": 537982.29,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3008",
+      "name": "White County Library Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 1475442,
+      "computed": 1475442,
+      "detail": "1 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3014",
+      "name": "Sheriff's Communication, Facility & Equipment Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 410000,
+      "computed": 410000,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3015",
+      "name": "Sheriff's Dept. State Drug Control Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 16500,
+      "computed": 16500,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3019",
+      "name": "Sheriff's Boat Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 13000,
+      "computed": 13000,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3020",
+      "name": "9-1-1 Emergency Services Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 2141385.29,
+      "computed": 2141385.29,
+      "detail": "4 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3024",
+      "name": "Public Defender Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 37200,
+      "computed": 37200,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3025",
+      "name": "Prosecutor Victim/Witness Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 156052.29,
+      "computed": 156052.29,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3028",
+      "name": "Adult Drug Court Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 10000,
+      "computed": 10000,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3031",
+      "name": "Juvenile Probation Fee Account Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 15500,
+      "computed": 15500,
+      "detail": "1 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3039",
+      "name": "Circuit Clerk Commissioners Fee Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 5000,
+      "computed": 5000,
+      "detail": "1 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3042",
+      "name": "Assessor's Late Assessment Fee Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 9000,
+      "computed": 9000,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3048",
+      "name": "Adult Drug Court Opioid Grant Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 27273.89,
+      "computed": 27273.89,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3403",
+      "name": "Volunteer Fire Departments Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 392000,
+      "computed": 392000,
+      "detail": "1 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3404",
+      "name": "Sheriff's Dept. Federal Drug Control Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 14000,
+      "computed": 14000,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3405",
+      "name": "Fire Protection Services Sales Tax Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4223000,
+      "computed": 4223000,
+      "detail": "1 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3406",
+      "name": "Federal Drug Control DOTT Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 2000,
+      "computed": 2000,
+      "detail": "1 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3508",
+      "name": "Arkansas Court Improvement Grant Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 2461.02,
+      "computed": 2461.02,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3513",
+      "name": "Strategy Against Violence on the Rise Grant Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 185187.66,
+      "computed": 185187.66,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3401",
+      "name": "Non-Mandated Services Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 718532.32,
+      "computed": 718532.3200000001,
+      "detail": "5 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3401-d0800",
+      "name": "Veterans Service Office",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 100619.32,
+      "computed": 100619.32,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3401-d0801",
+      "name": "Cooperative Extension Service",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 269760,
+      "computed": 269760,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3401-d0803",
+      "name": "Social Services Fund (Aging Program)",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 213500,
+      "computed": 213500,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3402",
+      "name": "Law Enforcement Tax Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 11166175.44,
+      "computed": 11166175.44,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3402-d0400",
+      "name": "Sheriff's Department",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 6235060.02,
+      "computed": 6235060.02,
+      "detail": "4 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3402-d0418",
+      "name": "Detention Center",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 4720365.42,
+      "computed": 4720365.42,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "f3402-d0422",
+      "name": "Firearms Training Facility",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 210750,
+      "computed": 210750,
+      "detail": "3 children sum to the parent total exactly."
+    },
+    {
+      "node": "f4800",
+      "name": "Capital Improvement Fund",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 1233700,
+      "computed": 1233700,
+      "detail": "15 children sum to the parent total exactly."
+    },
+    {
+      "node": "f4800-d0100",
+      "name": "County Judge",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 665000,
+      "computed": 665000,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f4800-d0101",
+      "name": "County Clerk",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 14000,
+      "computed": 14000,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f4800-d0102",
+      "name": "Circuit Clerk",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 17000,
+      "computed": 17000,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f4800-d0108",
+      "name": "Courthouse Maintenance",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 25000,
+      "computed": 25000,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f4800-d0109",
+      "name": "Election Commission",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 10000,
+      "computed": 10000,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f4800-d0200",
+      "name": "Road Department",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 300000,
+      "computed": 300000,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f4800-d0300",
+      "name": "Health Department",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 12000,
+      "computed": 12000,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f4800-d0400",
+      "name": "Sheriff's Department",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 103000,
+      "computed": 103000,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f4800-d0414",
+      "name": "Juvenile Probation",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 10000,
+      "computed": 10000,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f4800-d0416",
+      "name": "Prosecuting Attorney",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 9500,
+      "computed": 9500,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f4800-d0419",
+      "name": "Coroner's Office",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 27000,
+      "computed": 27000,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f4800-d0500",
+      "name": "Office of Emergency Management",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 10200,
+      "computed": 10200,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f4800-d0501",
+      "name": "9-1-1 Emergency Services",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 9000,
+      "computed": 9000,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f4800-d0800",
+      "name": "Veterans Service Office",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 9500,
+      "computed": 9500,
+      "detail": "2 children sum to the parent total exactly."
+    },
+    {
+      "node": "f4800-d0801",
+      "name": "Cooperative Extension Service",
+      "kind": "children-sum",
+      "ok": true,
+      "expected": 12500,
+      "computed": 12500,
+      "detail": "2 children sum to the parent total exactly."
+    },
     {
       "node": "__grand_total__",
       "name": "Ordinance grand total",
       "kind": "grand-total",
       "ok": true,
-      "expected": 51279177,
-      "computed": 51279177,
-      "detail": "1 top-level funds sum to the ordinance's stated total exactly."
+      "expected": 51279176.75,
+      "computed": 51279176.74999999,
+      "detail": "33 top-level funds sum to the ordinance's stated total exactly."
     },
     {
       "node": "__activity_chain__",

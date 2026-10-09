@@ -1,25 +1,3593 @@
 {
-  "meta": {
-    "document": "Woodruff County — no appropriation document ingested yet",
-    "title": "Woodruff County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Woodruff County 2026 adopted budget",
+  "title": "Woodruff County — the money trail",
+  "year": 2026,
+  "grand_total": 7073571.95,
+  "note": "This is the county's 2026 budget (Ordinance 2025-15) as filed with the state. Fund amounts come from the ordinance's table of approved appropriations by fund; the parts under each fund are added up from the line-item budget. The line-item budget's General Fund adds to $50,000 less than the ordinance table, so that gap is shown, not hidden."
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County General Fund",
+   "code": "1000",
+   "amount": 2488412.58,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The ordinance table (p. 2) appropriates $2,488,412.58 to this fund. The line-item budget prints a fund total of $2,438,412.58 (p. 13), and its departments add to that: $50,000.00 less than the ordinance table."
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Woodruff County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-0100",
+   "amount": 67850.15,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0100-ps",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 54650.15,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 10 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0100-sup",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5750,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 4 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0100-osc",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6450,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 8 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0100-cap",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "1000-0101",
+   "amount": 210591,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "pp. 5–6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0101-ps",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 162214,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 9 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0101-sup",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7100,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 5"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 6 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0101-osc",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 37277,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "pp. 5–6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 10 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0101-cap",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Clerk",
+   "code": "1000-0102",
+   "amount": 183365.69,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0102-ps",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 150865.69,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 9 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0102-sup",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 8900,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 5 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0102-osc",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 22100,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 10 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0102-cap",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Treasurer",
+   "code": "1000-0103",
+   "amount": 129803.99,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "pp. 6–7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0103-ps",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 114403.99,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 9 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0103-sup",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1900,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "pp. 6–7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 6 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0103-osc",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 9 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0103-cap",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 7500,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Collector",
+   "code": "1000-0104",
+   "amount": 177003.34,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0104-ps",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 148303.34,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 8 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0104-sup",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7500,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 2 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0104-osc",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 8 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0104-cap",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 11200,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Tax Assessor",
+   "code": "1000-0105",
+   "amount": 234538.21,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "pp. 7–8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0105-ps",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 139806.21,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 9 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0105-sup",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2625,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 7"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 4 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0105-osc",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 85107,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "pp. 7–8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 12 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0105-cap",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0106",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Board of Equalization",
+   "code": "1000-0106",
+   "amount": 1960,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0106-ps",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1760,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 2 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0106-sup",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 100,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0106-osc",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 100,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 67301.45,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0107-ps",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 58001.45,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 6 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0107-sup",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0107-osc",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 8800,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 5 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Courthouse Maintenance",
+   "code": "1000-0108",
+   "amount": 101827.22,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "pp. 8–9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0108-ps",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 30692,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 3 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0108-sup",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 29500,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 8"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 6 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0108-osc",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 41635.22,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "pp. 8–9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 12 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Election Expense",
+   "code": "1000-0109",
+   "amount": 89902,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0109-ps",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 31752,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 5 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0109-sup",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0109-osc",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 48150,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 11 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0111",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Annex",
+   "code": "1000-0111",
+   "amount": 99551.42,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "pp. 9–10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0111-ps",
+   "parent": "f1000-d0111",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 49960.02,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 9 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0111-sup",
+   "parent": "f1000-d0111",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 19000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 7 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0111-osc",
+   "parent": "f1000-d0111",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 28591.4,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 9"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 7 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0111-cap",
+   "parent": "f1000-d0111",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0116",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Soil and Water Grants in Aid",
+   "code": "1000-0116",
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0116-osc",
+   "parent": "f1000-d0116",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0304",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Health Department Grants in Aid",
+   "code": "1000-0304",
+   "amount": 22500.05,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0304-osc",
+   "parent": "f1000-d0304",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 22500.05,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff",
+   "code": "1000-0400",
+   "amount": 722157.21,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0400-ps",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 599057.21,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 10 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0400-sup",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 81000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 8 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0400-osc",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 41100,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 17 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0400-cap",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 2 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0402",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Probate Chancery",
+   "code": "1000-0402",
+   "amount": 7000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0402-sup",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0402-osc",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6500,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 10"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 2 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Municipal Court",
+   "code": "1000-0409",
+   "amount": 45850,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0409-osc",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 45850,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 2 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0414",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Courts",
+   "code": "1000-0414",
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0414-osc",
+   "parent": "f1000-d0414",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 25000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney",
+   "code": "1000-0416",
+   "amount": 53296.96,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0416-ps",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 50,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 4 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0416-osc",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 53246.96,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 3 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0417",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Public Defender",
+   "code": "1000-0417",
+   "amount": 16246.96,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0417-sup",
+   "parent": "f1000-d0417",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4800,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 2 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0417-osc",
+   "parent": "f1000-d0417",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 11446.96,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 5 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Coroner",
+   "code": "1000-0419",
+   "amount": 17505.7,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0419-ps",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 15005.7,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 4 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0419-sup",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 700,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 2 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0419-osc",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1800,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 4 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0420",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Constables",
+   "code": "1000-0420",
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0420-sup",
+   "parent": "f1000-d0420",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 11"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Office of Emergency Management",
+   "code": "1000-0500",
+   "amount": 34672.16,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "pp. 11–12"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0500-ps",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 17872.16,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "pp. 11–12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 10 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0500-sup",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4850,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 8 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0500-osc",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10950,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 11 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0500-cap",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0601",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Fairgrounds",
+   "code": "1000-0601",
+   "amount": 16420,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0601-osc",
+   "parent": "f1000-d0601",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 16420,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 2 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veterans Services",
+   "code": "1000-0800",
+   "amount": 15774.07,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0800-ps",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 12844.07,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 4 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0800-sup",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1350,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 2 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0800-osc",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1580,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 12"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 4 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Agricultural Agency Extension Office",
+   "code": "1000-0801",
+   "amount": 33520,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "pp. 12–13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0801-osc",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 33520,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "pp. 12–13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 5 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0802",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Paupers & Welfare",
+   "code": "1000-0802",
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0802-osc",
+   "parent": "f1000-d0802",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0804",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Senior Center",
+   "code": "1000-0804",
+   "amount": 30400,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0804-osc",
+   "parent": "f1000-d0804",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 30400,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 3 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0805",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Food Pantry",
+   "code": "1000-0805",
+   "amount": 8800,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0805-osc",
+   "parent": "f1000-d0805",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 8800,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 6 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0900",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Airport",
+   "code": "1000-0900",
+   "amount": 17075,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No department total is printed; this is the sum of its line items."
+  },
+  {
+   "id": "f1000-d0900-sup",
+   "parent": "f1000-d0900",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2750,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 2 line items printed for this category."
+  },
+  {
+   "id": "f1000-d0900-osc",
+   "parent": "f1000-d0900",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 14325,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 13"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 5 line items printed for this category."
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Road Fund",
+   "code": "2000",
+   "amount": 2112065.32,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-ps",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 731080.08,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 11 line items printed for this category."
+  },
+  {
+   "id": "f2000-sup",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 915000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 14"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 20 line items printed for this category."
+  },
+  {
+   "id": "f2000-osc",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 66500,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "pp. 14–15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 20 line items printed for this category."
+  },
+  {
+   "id": "f2000-cap",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 335000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 3 line items printed for this category."
+  },
+  {
+   "id": "f2000-debt",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 64485.24,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 4 line items printed for this category."
+  },
+  {
+   "id": "f2003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Motor Fuel Tax (Act 416 of 19)",
+   "code": "2003",
+   "amount": 155000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003-sup",
+   "parent": "f2003",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 85000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 2 line items printed for this category."
+  },
+  {
+   "id": "f2003-cap",
+   "parent": "f2003",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 70000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Automation Fund",
+   "code": "3000",
+   "amount": 20475,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-sup",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 5650,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 3 line items printed for this category."
+  },
+  {
+   "id": "f3000-osc",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 14325,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 6 line items printed for this category."
+  },
+  {
+   "id": "f3000-cap",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Automation Fund",
+   "code": "3001",
+   "amount": 69027.7,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-ps",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 12727.7,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 5 line items printed for this category."
+  },
+  {
+   "id": "f3001-sup",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6300,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 15"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 4 line items printed for this category."
+  },
+  {
+   "id": "f3001-osc",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 35500,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "pp. 15–16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 9 line items printed for this category."
+  },
+  {
+   "id": "f3001-cap",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 14500,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Tech. Fund",
+   "code": "3002",
+   "amount": 1225,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-sup",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 400,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f3002-osc",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 825,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 3 line items printed for this category."
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Automation Fund",
+   "code": "3004",
+   "amount": 900,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-sup",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 700,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f3004-osc",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 200,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 4 line items printed for this category."
+  },
+  {
+   "id": "f3005",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk's Automation Fund",
+   "code": "3005",
+   "amount": 4425,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-ps",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 25,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 4 line items printed for this category."
+  },
+  {
+   "id": "f3005-sup",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 300,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f3005-osc",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 4100,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 16"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 4 line items printed for this category."
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Recorder Cost Fund",
+   "code": "3006",
+   "amount": 44104.75,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-ps",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 11404.75,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "pp. 16–17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 10 line items printed for this category."
+  },
+  {
+   "id": "f3006-sup",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 3 line items printed for this category."
+  },
+  {
+   "id": "f3006-osc",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 24700,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 5 line items printed for this category."
+  },
+  {
+   "id": "f3007",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Sheriff's Automation Fund",
+   "code": "3007",
+   "amount": 945,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3007-sup",
+   "parent": "f3007",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 945,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f3009",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Landfill",
+   "code": "3009",
+   "amount": 92406.4,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3009-ps",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 22585.2,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 7 line items printed for this category."
+  },
+  {
+   "id": "f3009-sup",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 11900,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 5 line items printed for this category."
+  },
+  {
+   "id": "f3009-osc",
+   "parent": "f3009",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 57921.2,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 17"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 11 line items printed for this category."
+  },
+  {
+   "id": "f3011",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Reappraisal Cost Fund",
+   "code": "3011",
+   "amount": 61068,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3011-osc",
+   "parent": "f3011",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 61068,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Child Support Circuit Clerk",
+   "code": "3012",
+   "amount": 200,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-osc",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 200,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 3 line items printed for this category."
+  },
+  {
+   "id": "f3016",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Breathalyzer",
+   "code": "3016",
+   "amount": 4500,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3016-sup",
+   "parent": "f3016",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 300,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f3016-osc",
+   "parent": "f3016",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1200,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f3016-cap",
+   "parent": "f3016",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f3017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Operations",
+   "code": "3017",
+   "amount": 843675.08,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-ps",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 547969.08,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 10 line items printed for this category."
+  },
+  {
+   "id": "f3017-sup",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 135500,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 18"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 13 line items printed for this category."
+  },
+  {
+   "id": "f3017-osc",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 150206,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "pp. 18–19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 21 line items printed for this category."
+  },
+  {
+   "id": "f3017-cap",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 10000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Act 122 of 1987 (Rescue Boating Safety)",
+   "code": "3019",
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-osc",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1500,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "911",
+   "code": "3020",
+   "amount": 292067.2,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-ps",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 245867.2,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 11 line items printed for this category."
+  },
+  {
+   "id": "f3020-sup",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 25300,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 5 line items printed for this category."
+  },
+  {
+   "id": "f3020-osc",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 18900,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "pp. 19–20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 12 line items printed for this category."
+  },
+  {
+   "id": "f3020-cap",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f3021",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emergency Medical Services Fund",
+   "code": "3021",
+   "amount": 90000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3021-osc",
+   "parent": "f3021",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 90000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f3022",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emergency Vehicle Fund (No Liab Ins)",
+   "code": "3022",
+   "amount": 4000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3022-sup",
+   "parent": "f3022",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 2 line items printed for this category."
+  },
+  {
+   "id": "f3022-cap",
+   "parent": "f3022",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f3024",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Public Defender Act 1193",
+   "code": "3024",
+   "amount": 400,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3024-osc",
+   "parent": "f3024",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 400,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f3031",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Juvenile Probation Fee",
+   "code": "3031",
+   "amount": 800,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3031-osc",
+   "parent": "f3031",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 800,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 2 line items printed for this category."
+  },
+  {
+   "id": "f3039",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk's Commission Fund",
+   "code": "3039",
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039-sup",
+   "parent": "f3039",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f3042",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor Late Assessment Fee",
+   "code": "3042",
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042-sup",
+   "parent": "f3042",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f3401",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Enforcement",
+   "code": "3401",
+   "amount": 1900,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3401-sup",
+   "parent": "f3401",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f3401-osc",
+   "parent": "f3401",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 900,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f3403",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Beaver Eradication",
+   "code": "3403",
+   "amount": 23000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3403-osc",
+   "parent": "f3403",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 23000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f3405",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Economic Development-Sales Tax Revenue",
+   "code": "3405",
+   "amount": 409105.73,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3405-ps",
+   "parent": "f3405",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 126405.73,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 8 line items printed for this category."
+  },
+  {
+   "id": "f3405-sup",
+   "parent": "f3405",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 20"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f3405-osc",
+   "parent": "f3405",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 280700,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 12 line items printed for this category."
+  },
+  {
+   "id": "f3406",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Noncriminal Fingerprinting",
+   "code": "3406",
+   "amount": 175,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3406-osc",
+   "parent": "f3406",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 175,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f3507",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emergency Management Fund-West Nile",
+   "code": "3507",
+   "amount": 1316.64,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3507-osc",
+   "parent": "f3507",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1316.64,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 2 line items printed for this category."
+  },
+  {
+   "id": "f5000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Debt Services Fund",
+   "code": "5000",
+   "amount": 336678.76,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f5000-debt",
+   "parent": "f5000",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 336678.76,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 2 line items printed for this category."
+  },
+  {
+   "id": "f6009",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Law Library",
+   "code": "6009",
+   "amount": 4800,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6009-sup",
+   "parent": "f6009",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f6009-osc",
+   "parent": "f6009",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1800,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 2 line items printed for this category."
+  },
+  {
+   "id": "f6800",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Caney Creek/Hunter",
+   "code": "6800",
+   "amount": 24,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6800-osc",
+   "parent": "f6800",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 24,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f6801",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Second Creek Project",
+   "code": "6801",
+   "amount": 374.79,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6801-osc",
+   "parent": "f6801",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 374.79,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f6802",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Turkey Creek Project",
+   "code": "6802",
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6802-osc",
+   "parent": "f6802",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  },
+  {
+   "id": "f6804",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jackson-Woodruff Drainage District",
+   "code": "6804",
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 2"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f6804-osc",
+   "parent": "f6804",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6000,
+   "status": "sourced",
+   "source": {
+    "doc": "woodruffar-budget-2026",
+    "page": "p. 22"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No category totals are printed; this is the sum of the 1 line items printed for this category."
+  }
+ ]
 }

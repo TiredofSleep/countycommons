@@ -1,25 +1,4547 @@
 {
-  "meta": {
-    "document": "Washington County — no appropriation document ingested yet",
-    "title": "Washington County county budget",
-    "grand_total": 0,
-    "year": 2026,
-    "note": "No appropriation document has been ingested for this county yet."
+ "meta": {
+  "document": "Washington County 2026 adopted budget",
+  "title": "Washington County — the money trail",
+  "year": 2026,
+  "grand_total": 129707474,
+  "note": "This is the county's 2026 budget, adopted by Ordinance 2025-074 and filed with the state. Amounts are the \"2026 Requested\" column of the budget the ordinance adopts. Some money is counted twice: the Child Support and Adult Drug Court funds move $34,500 to other funds, and the $10,197,472 Employee Insurance Fund is paid from department budgets that already include health insurance."
+ },
+ "nodes": [
+  {
+   "id": "f1000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "General Fund",
+   "code": "1000",
+   "amount": 57369449,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "pp. 5–6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
   },
-  "nodes": [
-    {
-      "id": "root",
-      "parent": null,
-      "name": "Washington County — county budget",
-      "code": null,
-      "amount": 0,
-      "year": 2026,
-      "layer": "appropriation",
-      "section": "appropriations",
-      "source": null,
-      "docket_ref": null,
-      "status": "dead_end",
-      "note": "No budget document ingested yet. A dead end means \"not yet ingested and navigable,\" never \"hidden.\""
-    }
-  ]
+  {
+   "id": "f1000-d0100",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge",
+   "code": "1000-0100",
+   "amount": 487470,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-ps",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 452970,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-sup",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10750,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0100-osc",
+   "parent": "f1000-d0100",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 23750,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 19"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Clerk",
+   "code": "1000-0101",
+   "amount": 810575,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0101-ps",
+   "parent": "f1000-d0101",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 810575,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 21"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Clerk",
+   "code": "1000-0102",
+   "amount": 931926,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-ps",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 840926,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-sup",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 36000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0102-osc",
+   "parent": "f1000-d0102",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 55000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 23"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Treasurer",
+   "code": "1000-0103",
+   "amount": 321563,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0103-ps",
+   "parent": "f1000-d0103",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 321563,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 25"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Collector",
+   "code": "1000-0104",
+   "amount": 1623600,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0104-ps",
+   "parent": "f1000-d0104",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1623600,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 27"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Assessor",
+   "code": "1000-0105",
+   "amount": 3699250,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-ps",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 3195885,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-sup",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 95700,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0105-osc",
+   "parent": "f1000-d0105",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 407665,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 29"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Board of Equalization",
+   "code": "1000-0106",
+   "amount": 1924873,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-ps",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 16173,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-sup",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0106-osc",
+   "parent": "f1000-d0106",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1907700,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 31"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Quorum Court",
+   "code": "1000-0107",
+   "amount": 457467,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-ps",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 320927,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-sup",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0107-osc",
+   "parent": "f1000-d0107",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 136040,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 32"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Buildings & Grounds",
+   "code": "1000-0108",
+   "amount": 6575244,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-ps",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1465908,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-sup",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 343200,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 33"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-osc",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1365635,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-cap",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 2870500,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0108-debt",
+   "parent": "f1000-d0108",
+   "section": "appropriations",
+   "name": "Debt service",
+   "code": null,
+   "amount": 530001,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 34"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Election Commission",
+   "code": "1000-0109",
+   "amount": 1478321,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-ps",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1177560,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-sup",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 103500,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-osc",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 169530,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0109-cap",
+   "parent": "f1000-d0109",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 27731,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 36"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0110",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Planning",
+   "code": "1000-0110",
+   "amount": 475830,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0110-ps",
+   "parent": "f1000-d0110",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 352730,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0110-sup",
+   "parent": "f1000-d0110",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 28500,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0110-osc",
+   "parent": "f1000-d0110",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 94600,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 38"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0113",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Comptroller",
+   "code": "1000-0113",
+   "amount": 738207,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0113-ps",
+   "parent": "f1000-d0113",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 601357,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0113-sup",
+   "parent": "f1000-d0113",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 6300,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0113-osc",
+   "parent": "f1000-d0113",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 130550,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 40"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0115",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Information Technology",
+   "code": "1000-0115",
+   "amount": 3236430,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0115-ps",
+   "parent": "f1000-d0115",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1159060,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0115-sup",
+   "parent": "f1000-d0115",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 618400,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 42"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0115-osc",
+   "parent": "f1000-d0115",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 978970,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0115-cap",
+   "parent": "f1000-d0115",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 480000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 43"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0118",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Purchasing",
+   "code": "1000-0118",
+   "amount": 291243,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0118-ps",
+   "parent": "f1000-d0118",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 170943,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0118-sup",
+   "parent": "f1000-d0118",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3950,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0118-osc",
+   "parent": "f1000-d0118",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 116350,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 45"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0119",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Archives Records Management",
+   "code": "1000-0119",
+   "amount": 3500,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 47"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0119-sup",
+   "parent": "f1000-d0119",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 500,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 47"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0119-osc",
+   "parent": "f1000-d0119",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 47"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0120",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Grants",
+   "code": "1000-0120",
+   "amount": 273163,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0120-ps",
+   "parent": "f1000-d0120",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 220213,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0120-sup",
+   "parent": "f1000-d0120",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 9500,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0120-osc",
+   "parent": "f1000-d0120",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 43450,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 48"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0121",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Human Resources",
+   "code": "1000-0121",
+   "amount": 764757,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0121-ps",
+   "parent": "f1000-d0121",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 457657,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0121-sup",
+   "parent": "f1000-d0121",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 12900,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0121-osc",
+   "parent": "f1000-d0121",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 294200,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 50"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0122",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Attorney",
+   "code": "1000-0122",
+   "amount": 596298,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0122-ps",
+   "parent": "f1000-d0122",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 396483,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0122-sup",
+   "parent": "f1000-d0122",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 8000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0122-osc",
+   "parent": "f1000-d0122",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 191815,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 52"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0133",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Communications",
+   "code": "1000-0133",
+   "amount": 180300,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0133-ps",
+   "parent": "f1000-d0133",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 149068,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0133-sup",
+   "parent": "f1000-d0133",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 7900,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0133-osc",
+   "parent": "f1000-d0133",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 23332,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 54"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Health",
+   "code": "1000-0300",
+   "amount": 17169,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-sup",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 11769,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0300-osc",
+   "parent": "f1000-d0300",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5400,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 56"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0301",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Ambulance Service",
+   "code": "1000-0301",
+   "amount": 1120355,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0301-osc",
+   "parent": "f1000-d0301",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1120355,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 57"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0308",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Animal Shelter",
+   "code": "1000-0308",
+   "amount": 1096124,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0308-ps",
+   "parent": "f1000-d0308",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 876624,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0308-sup",
+   "parent": "f1000-d0308",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 121000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0308-osc",
+   "parent": "f1000-d0308",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 98500,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 58"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff",
+   "code": "1000-0400",
+   "amount": 15894543,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-ps",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 13560501,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-sup",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 1244727,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 60"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-osc",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 540915,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0400-cap",
+   "parent": "f1000-d0400",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 548400,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 61"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court I - Martin",
+   "code": "1000-0401",
+   "amount": 144885,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-ps",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 92540,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-sup",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 14200,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0401-osc",
+   "parent": "f1000-d0401",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 38145,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 67"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court II - Threet",
+   "code": "1000-0402",
+   "amount": 72656,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 69"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-sup",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 13350,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 69"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0402-osc",
+   "parent": "f1000-d0402",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 59306,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 69"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court III - Egan",
+   "code": "1000-0403",
+   "amount": 1804925,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 70"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403-ps",
+   "parent": "f1000-d0403",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1609925,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 70"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403-sup",
+   "parent": "f1000-d0403",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 53000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 70"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0403-osc",
+   "parent": "f1000-d0403",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 142000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 70"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0404",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court IV - Beaumont",
+   "code": "1000-0404",
+   "amount": 257892,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 72"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0404-ps",
+   "parent": "f1000-d0404",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 167240,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 72"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0404-sup",
+   "parent": "f1000-d0404",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 30000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 72"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0404-osc",
+   "parent": "f1000-d0404",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 60652,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 72"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0405",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court V - Bryan",
+   "code": "1000-0405",
+   "amount": 172198,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 74"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0405-ps",
+   "parent": "f1000-d0405",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 108978,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 74"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0405-sup",
+   "parent": "f1000-d0405",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 16565,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 74"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0405-osc",
+   "parent": "f1000-d0405",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 46655,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 74"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court VI - Durett",
+   "code": "1000-0406",
+   "amount": 75410,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406-sup",
+   "parent": "f1000-d0406",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 19575,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0406-osc",
+   "parent": "f1000-d0406",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 55835,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 76"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0407",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court VII - Taylor",
+   "code": "1000-0407",
+   "amount": 253462,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0407-ps",
+   "parent": "f1000-d0407",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 185452,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0407-sup",
+   "parent": "f1000-d0407",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 17250,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0407-osc",
+   "parent": "f1000-d0407",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 50760,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 77"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0408",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Circuit Court VIII - Warren",
+   "code": "1000-0408",
+   "amount": 1254900,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0408-ps",
+   "parent": "f1000-d0408",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1081182,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0408-sup",
+   "parent": "f1000-d0408",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 31100,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0408-osc",
+   "parent": "f1000-d0408",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 142618,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 79"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court of Fayetteville",
+   "code": "1000-0409",
+   "amount": 58134,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 81"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0409-osc",
+   "parent": "f1000-d0409",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 58134,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 81"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0410",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court of Springdale",
+   "code": "1000-0410",
+   "amount": 46505,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 82"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0410-osc",
+   "parent": "f1000-d0410",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 46505,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 82"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0411",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court of Prairie Grove",
+   "code": "1000-0411",
+   "amount": 32822,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 83"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0411-osc",
+   "parent": "f1000-d0411",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 32822,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 83"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0412",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court of West Fork",
+   "code": "1000-0412",
+   "amount": 31955,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 84"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0412-osc",
+   "parent": "f1000-d0412",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 31955,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 84"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0413",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "District Court of Elkins",
+   "code": "1000-0413",
+   "amount": 60085,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 85"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0413-osc",
+   "parent": "f1000-d0413",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 60085,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 85"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Prosecuting Attorney",
+   "code": "1000-0416",
+   "amount": 2599491,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 87"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-ps",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2344941,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 87"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-sup",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 49800,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 87"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0416-osc",
+   "parent": "f1000-d0416",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 204750,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 87"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0417",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Public Defender",
+   "code": "1000-0417",
+   "amount": 1265860,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 89"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0417-ps",
+   "parent": "f1000-d0417",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1062285,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 89"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0417-sup",
+   "parent": "f1000-d0417",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 37950,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 89"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0417-osc",
+   "parent": "f1000-d0417",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 165625,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 89"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Coroner",
+   "code": "1000-0419",
+   "amount": 770613,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-ps",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 648613,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-sup",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 70500,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0419-osc",
+   "parent": "f1000-d0419",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 51500,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 91"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0420",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Constables",
+   "code": "1000-0420",
+   "amount": 45,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 93"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0420-ps",
+   "parent": "f1000-d0420",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 15,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 93"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0420-osc",
+   "parent": "f1000-d0420",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 30,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 93"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0428",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Sheriff Work Release",
+   "code": "1000-0428",
+   "amount": 19595,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 94"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0428-sup",
+   "parent": "f1000-d0428",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 12775,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 94"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0428-osc",
+   "parent": "f1000-d0428",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 6820,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 94"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0440",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Court Reporting Services",
+   "code": "1000-0440",
+   "amount": 27300,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 95"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0440-osc",
+   "parent": "f1000-d0440",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 27300,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 95"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0444",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Juvenile Detention Center",
+   "code": "1000-0444",
+   "amount": 2306442,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 96"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0444-ps",
+   "parent": "f1000-d0444",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2114307,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 96"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0444-sup",
+   "parent": "f1000-d0444",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 100700,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 96"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0444-osc",
+   "parent": "f1000-d0444",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 91435,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 96"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Department of Emergency Management",
+   "code": "1000-0500",
+   "amount": 878768,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 99"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-ps",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 478088,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 98"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-sup",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 54700,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 98"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-osc",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 280980,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 99"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0500-cap",
+   "parent": "f1000-d0500",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 65000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 99"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0502",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Fire Departments",
+   "code": "1000-0502",
+   "amount": 1412500,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 101"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0502-ps",
+   "parent": "f1000-d0502",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 2500,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 101"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0502-osc",
+   "parent": "f1000-d0502",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1410000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 101"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0505",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "County Judge Emergency Budget",
+   "code": "1000-0505",
+   "amount": 300000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 102"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0505-sup",
+   "parent": "f1000-d0505",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 300000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 102"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Veteran Services",
+   "code": "1000-0800",
+   "amount": 259698,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 103"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-ps",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 220298,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 103"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-sup",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 15600,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 103"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0800-osc",
+   "parent": "f1000-d0800",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 23800,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 103"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801",
+   "parent": "f1000",
+   "section": "appropriations",
+   "name": "Extension Office",
+   "code": "1000-0801",
+   "amount": 265100,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 105"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1000-d0801-osc",
+   "parent": "f1000-d0801",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 265100,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 105"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Employee Insurance Fund",
+   "code": "1002",
+   "amount": 10197472,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1002-osc",
+   "parent": "f1002",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 10197472,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 108"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "ARPA Revenue Replacement",
+   "code": "1006",
+   "amount": 5500000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1006-cap",
+   "parent": "f1006",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 5500000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 109"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1825",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Animal Shelter Projects",
+   "code": "1825",
+   "amount": 13429,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f1825-sup",
+   "parent": "f1825",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 13429,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 110"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Road Fund",
+   "code": "2000",
+   "amount": 16738515,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-ps",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 9088511,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 111"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-sup",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 4922800,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 111"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-osc",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 2613044,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 112"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2000-cap",
+   "parent": "f2000",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 114160,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 112"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Road Additional Fuel Tax",
+   "code": "2003",
+   "amount": 769140,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f2003-sup",
+   "parent": "f2003",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 769140,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 117"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Treasurer's Automation Fund",
+   "code": "3000",
+   "amount": 181026,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-ps",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 158621,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 118"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-sup",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 10500,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 118"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3000-osc",
+   "parent": "f3000",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 11905,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 118"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Collector's Automation Fund",
+   "code": "3001",
+   "amount": 910763,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-ps",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 371412,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 120"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-sup",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 136200,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 120"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-osc",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 303151,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 120"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3001-cap",
+   "parent": "f3001",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 100000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 120"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Court Automation Fund",
+   "code": "3002",
+   "amount": 55600,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-sup",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 40000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 122"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3002-osc",
+   "parent": "f3002",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 15600,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 122"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Amendment 79 Fund",
+   "code": "3004",
+   "amount": 96100,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-sup",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 16000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 123"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3004-osc",
+   "parent": "f3004",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 80100,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 123"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "The page prints this category total without a \"TOTAL\" label."
+  },
+  {
+   "id": "f3005",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk's Cost Fund",
+   "code": "3005",
+   "amount": 114250,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-sup",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 36000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3005-osc",
+   "parent": "f3005",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 78250,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 124"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Recorder's Cost Fund",
+   "code": "3006",
+   "amount": 1812882,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-ps",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 1105882,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-sup",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 17250,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3006-osc",
+   "parent": "f3006",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 689750,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 125"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Library Fund",
+   "code": "3008",
+   "amount": 4404473,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3008-d0600",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "County Library",
+   "code": "3008-0600",
+   "amount": 4368473,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 128"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0600-ps",
+   "parent": "f3008-d0600",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 452876,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 128"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0600-sup",
+   "parent": "f3008-d0600",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 16000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 128"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0600-osc",
+   "parent": "f3008-d0600",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3899597,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 128"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0610",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "County Library - Greenland Branch",
+   "code": "3008-0610",
+   "amount": 18000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 130"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0610-sup",
+   "parent": "f3008-d0610",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 18000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 130"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0611",
+   "parent": "f3008",
+   "section": "appropriations",
+   "name": "County Library - Winslow Branch",
+   "code": "3008-0611",
+   "amount": 18000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 131"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3008-d0611-sup",
+   "parent": "f3008-d0611",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 18000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 131"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3010",
+   "parent": null,
+   "section": "appropriations",
+   "name": "County Clerk Operating Fund",
+   "code": "3010",
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3010-sup",
+   "parent": "f3010",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 15000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 132"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Child Support Cost Fund",
+   "code": "3012",
+   "amount": 7500,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3012-tr",
+   "parent": "f3012",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 7500,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 133"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Communication Facility/Equip",
+   "code": "3014",
+   "amount": 359300,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014-sup",
+   "parent": "f3014",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 159800,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 134"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3014-osc",
+   "parent": "f3014",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 199500,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 134"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Jail Operations & Maintenance",
+   "code": "3017",
+   "amount": 29744325,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": "No fund total printed; this is the sum of its departments."
+  },
+  {
+   "id": "f3017-d0418",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Jail Operations",
+   "code": "3017-0418",
+   "amount": 27070068,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 136"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0418-ps",
+   "parent": "f3017-d0418",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 20196514,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 135"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0418-sup",
+   "parent": "f3017-d0418",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 3377953,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 135"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0418-osc",
+   "parent": "f3017-d0418",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 3360319,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 136"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d0418-cap",
+   "parent": "f3017-d0418",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 135282,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 136"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d1418",
+   "parent": "f3017",
+   "section": "appropriations",
+   "name": "Jail Maintenance",
+   "code": "3017-1418",
+   "amount": 2674257,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 143"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d1418-sup",
+   "parent": "f3017-d1418",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 464134,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 143"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d1418-osc",
+   "parent": "f3017-d1418",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 1333511,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 143"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3017-d1418-cap",
+   "parent": "f3017-d1418",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 876612,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 143"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Boating Safety Fund",
+   "code": "3019",
+   "amount": 29425,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-sup",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 21725,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 144"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3019-osc",
+   "parent": "f3019",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 7700,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 144"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Emergency 911 Fund",
+   "code": "3020",
+   "amount": 618618,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-ps",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Personal services",
+   "code": null,
+   "amount": 89918,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 145"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-sup",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 32400,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 145"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3020-osc",
+   "parent": "f3020",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 496300,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 145"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Adult Drug Court Fund",
+   "code": "3028",
+   "amount": 27000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3028-tr",
+   "parent": "f3028",
+   "section": "appropriations",
+   "name": "Transfers out",
+   "code": null,
+   "amount": 27000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 147"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Circuit Clerk Commissioner Fee",
+   "code": "3039",
+   "amount": 9500,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3039-osc",
+   "parent": "f3039",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 9500,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 150"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Assessor's Late Assessment Fee Fund",
+   "code": "3042",
+   "amount": 38000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3042-cap",
+   "parent": "f3042",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 38000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 151"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Enforcement-State-Sheriff",
+   "code": "3404",
+   "amount": 19800,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404-sup",
+   "parent": "f3404",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 14600,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 153"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3404-osc",
+   "parent": "f3404",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5200,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 153"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3405",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Drug Enforcement-Federal-Sheriff",
+   "code": "3405",
+   "amount": 27100,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3405-sup",
+   "parent": "f3405",
+   "section": "appropriations",
+   "name": "Supplies",
+   "code": null,
+   "amount": 22000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 154"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3405-osc",
+   "parent": "f3405",
+   "section": "appropriations",
+   "name": "Other services and charges",
+   "code": null,
+   "amount": 5100,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 154"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3407",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Animal Shelter Howick Trust",
+   "code": "3407",
+   "amount": 148807,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f3407-cap",
+   "parent": "f3407",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 148807,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 156"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4800",
+   "parent": null,
+   "section": "appropriations",
+   "name": "Radio System Sales Tax",
+   "code": "4800",
+   "amount": 500000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 6"
+   },
+   "children_complete": true,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  },
+  {
+   "id": "f4800-cap",
+   "parent": "f4800",
+   "section": "appropriations",
+   "name": "Capital outlay",
+   "code": null,
+   "amount": 500000,
+   "status": "sourced",
+   "source": {
+    "doc": "washingtonar-budget-2026",
+    "page": "p. 157"
+   },
+   "children_complete": false,
+   "year": 2026,
+   "layer": "appropriation",
+   "docket_ref": null,
+   "note": null
+  }
+ ]
 }
