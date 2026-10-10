@@ -202,6 +202,7 @@ function gatePage(msg, next) {
 <title>County Commons — county and city budgets, taxes and elections, every number cited</title>
 <meta name="description" content="Free, nonpartisan civic research hub: county and city budgets line by line, property tax bills explained, elections and open records for ${directory.featured().length} places — every number cited to its source document, with CSV downloads.">
 <link rel="canonical" href="https://countycommons.us/">
+<meta name="msvalidate.01" content="FFA249793035B911D0EEDEC5B9CD8803">
 <meta property="og:title" content="County Commons — public budgets, every number cited"><meta property="og:url" content="https://countycommons.us/"><meta property="og:type" content="website">
 <script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': [
   { '@type': 'Organization', '@id': 'https://countycommons.us/#org', name: 'County Commons', url: 'https://countycommons.us/', description: 'An independent, nonpartisan civic-transparency project. Not a government website.' },

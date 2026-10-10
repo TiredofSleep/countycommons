@@ -161,6 +161,7 @@ function layout({ title, current, body, county, description, jsonld }) {
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
 <meta name="robots" content="index,follow">
+<meta name="msvalidate.01" content="FFA249793035B911D0EEDEC5B9CD8803">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="County Commons">
 <meta property="og:title" content="${esc(title)}">
