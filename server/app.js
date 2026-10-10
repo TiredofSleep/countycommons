@@ -139,7 +139,7 @@ app.get(['/sitemap.xml', '/sitemap-index.xml'], (req, res) => {
   if (r.action === 'serve' && directory.isFeatured(r.key)) {
     let cfg = {}; try { cfg = load(r.key).county; } catch (e) {}
     const base = `https://${host}`;
-    const paths = ['/', '/tour', '/budget', '/priorities', '/issues', '/outcomes', '/help', '/calendar', '/participate', '/docket', '/documents', '/vendors', '/audits', '/verify', '/methodology', '/guide', '/stance', '/story', '/counties', '/cases', '/research', '/receipts', '/food', '/sovereignty', '/engine', '/commons', '/blueprint', '/almanac', '/feed', '/frontier', '/growops', '/water', '/justice', '/coverage', '/elections', '/turnout', '/grants', '/kindred', '/field', '/never', '/security', '/traffic'];
+    const paths = ['/', '/tour', '/budget', '/priorities', '/issues', '/outcomes', '/help', '/calendar', '/participate', '/docket', '/documents', '/vendors', '/audits', '/verify', '/methodology', '/guide', '/stance', '/story', '/counties', '/cases', '/research', '/receipts', '/food', '/sovereignty', '/engine', '/commons', '/blueprint', '/almanac', '/feed', '/frontier', '/growops', '/water', '/justice', '/surveillance', '/coverage', '/elections', '/turnout', '/grants', '/kindred', '/field', '/never', '/security', '/traffic'];
     if (cfg.has_municipalities) paths.push('/places');
     if (cfg.has_compare) paths.push('/compare/counties', '/compare/spending');
     if (cfg.has_taxes_debt) paths.push('/taxes');
@@ -305,6 +305,7 @@ const STARTER_PAGES = {
   '/mybill': ['Your tax bill, explained', 'every tax rate on a home here, from the state’s millage report'],
   '/turnout': ['Voter turnout', 'official counts from the state'],
   '/justice': ['Jails & prisons', 'the closest state prisons and ideas from elsewhere'],
+  '/surveillance': ['Who’s watching', 'cameras, plate readers and the rules that govern them'],
   '/coverage': ['How complete is this county?', 'what’s gathered so far and what isn’t'],
   '/docket': ['Dead ends & open questions', 'the documents still to get, and what each one would answer']
 };
@@ -313,6 +314,7 @@ function starterReady(data) {
   return Object.keys(STARTER_PAGES).filter(href =>
     href === '/mybill' ? !!(c.has_mybill && data.myBill) :
     href === '/justice' ? !!data.prisonsNear :
+    href === '/surveillance' ? !!data.surveillanceGuide :
     href === '/docket' ? !!(data.docket && (data.docket.issues || []).length) :
     href === '/turnout' ? !!(data.turnout && (data.turnout.elections || []).some(e => e.counties && e.counties[c.turnout_county || String(c.name || '').replace(/ County$/, '')])) : true);
 }
@@ -612,6 +614,11 @@ app.get('/coverage', (req, res) => res.send(coveragePage(load(req.tenantKey), re
 
 // From holding to building — every county gets the page; the local section appears once researched.
 const { justicePage } = require('./views/justice');
+app.get('/surveillance', (req, res) => {
+  const data = load(req.tenantKey);
+  if (!data.surveillanceGuide) return res.redirect('/');
+  res.send(require('./views/surveillance').surveillancePage(data, req.tenantKey));
+});
 app.get('/justice', (req, res) => {
   const data = load(req.tenantKey);
   if (!data.justiceGuide) return res.redirect('/budget');

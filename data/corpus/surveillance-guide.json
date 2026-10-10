@@ -1,0 +1,501 @@
+{
+ "updated": "2026-10-10",
+ "tools": [
+  {
+   "id": "alpr",
+   "name": "License plate readers (ALPR), e.g. Flock Safety cameras",
+   "what": "Fixed or car-mounted cameras photograph passing license plates and log the plate, time, and place. Police can search past reads to track a car after a crime, or get an alert when a car on a 'hot list' (stolen, wanted, missing person) drives by. With Flock, the agency that owns the cameras decides who can search its data, including other agencies.",
+   "common_retention": "Flock's default is to delete reads on a rolling 30-day basis, unless a customer's policy or contract says otherwise. In August 2026 Flock urged agencies to cut this to 7 days (a suggestion, not a rule). Arkansas law caps most retention at 150 days.",
+   "src": [
+    {
+     "url": "https://flocksafety.com/lpr-policy",
+     "label": "Flock Safety: LPR usage and privacy policy (30-day default)"
+    },
+    {
+     "url": "https://www.wect.com/2026/08/14/flock-safety-ceo-apologizes-license-plate-reader-misuse-announces-policy-changes/",
+     "label": "WECT (Aug 2026): Flock CEO apologizes for misuse, recommends 7-day retention"
+    },
+    {
+     "url": "https://www.ncsl.org/technology-and-communication/automated-license-plate-readers-state-statutes",
+     "label": "NCSL: ALPR state statutes"
+    }
+   ]
+  },
+  {
+   "id": "body_cameras",
+   "name": "Police body cameras",
+   "what": "Small cameras worn on an officer's uniform record video and sound of contacts with the public. Each agency's policy says when officers must turn them on, who may watch the video, and when the public can get a copy.",
+   "common_retention": "Set by state law and agency policy. Texas requires agency policies to keep video at least 90 days. Florida requires recordings to be kept under its public records retention rules.",
+   "src": [
+    {
+     "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8356344/",
+     "label": "Lum et al. (2020), Campbell Systematic Reviews: body-worn cameras' effects"
+    },
+    {
+     "url": "https://texas.public.law/statutes/tex._occ._code_section_1701.655",
+     "label": "Tex. Occ. Code § 1701.655 (body camera policy, 90-day minimum)"
+    },
+    {
+     "url": "https://www.flsenate.gov/Laws/Statutes/2025/943.1718",
+     "label": "Fla. Stat. § 943.1718 (body cameras)"
+    }
+   ]
+  },
+  {
+   "id": "rtcc",
+   "name": "Public cameras and real-time crime centers (RTCC)",
+   "what": "A real-time crime center is a room inside a police agency where staff watch live feeds and data (cameras, plate readers, 911 calls, records) and pass details like suspect car descriptions to officers on the way to a call. The U.S. Justice Department describes them as central hubs for crime information.",
+   "common_retention": "Varies by agency; no common standard confirmed.",
+   "src": [
+    {
+     "url": "https://bja.ojp.gov/sites/g/files/xyckuh186/files/media/document/RealTimeCrimeCenterInformation.pdf",
+     "label": "Bureau of Justice Assistance: Real-time crime center information"
+    },
+    {
+     "url": "https://ojp.gov/library/publications/real-time-crime-centers-integrating-technology-enhance-public-safety",
+     "label": "OJP: Real-Time Crime Centers: Integrating Technology to Enhance Public Safety"
+    }
+   ]
+  },
+  {
+   "id": "facial_recognition",
+   "name": "Facial recognition",
+   "what": "Software compares a face from a photo or video (such as a store camera still) against large photo collections and returns possible matches for an officer to check. A 2023 federal audit found seven federal law enforcement agencies used these services, and six of them ran about 60,000 searches before requiring any training.",
+   "common_retention": "Not confirmed; depends on the vendor and agency.",
+   "src": [
+    {
+     "url": "https://www.gao.gov/products/GAO-23-105607",
+     "label": "GAO-23-105607 (Sept 2023): Facial recognition services at federal law enforcement agencies"
+    },
+    {
+     "url": "https://nvlpubs.nist.gov/nistpubs/ir/2019/NIST.IR.8280.pdf",
+     "label": "NIST IR 8280 (2019): Face recognition demographic effects"
+    }
+   ]
+  },
+  {
+   "id": "gunshot_detection",
+   "name": "Gunshot detection (ShotSpotter / SoundThinking)",
+   "what": "Microphones placed around a neighborhood listen for sounds like gunfire and send police an alert with an estimated location, often before anyone calls 911. Chicago signed a three-year, $33 million contract in 2018.",
+   "common_retention": "Not confirmed.",
+   "src": [
+    {
+     "url": "https://www.oversight.gov/reports/chicago-police-departments-use-shotspotter-technology",
+     "label": "Chicago Office of Inspector General (Aug 2021): CPD's use of ShotSpotter"
+    },
+    {
+     "url": "https://news.wttw.com/2021/08/24/shotspotter-alerts-rarely-lead-evidence-gun-crime-city-watchdog",
+     "label": "WTTW (Aug 2021): city watchdog report on ShotSpotter"
+    }
+   ]
+  },
+  {
+   "id": "drones",
+   "name": "Police drones, including drone-as-first-responder (DFR)",
+   "what": "Police fly small drones with cameras to look at crime scenes, crashes, searches, and emergencies. In a drone-as-first-responder program, a drone launches to a 911 call and streams video before officers arrive. Chula Vista, California has run one since 2018 and got a federal waiver in 2020 to fly beyond the pilot's line of sight.",
+   "common_retention": "Not confirmed; Texas and Florida limit when police may use drone images (see states).",
+   "src": [
+    {
+     "url": "https://nbcsandiego.com/news/local/cvpd-deploying-drones-as-first-responders-part-of-faa-pilot-program/169779",
+     "label": "NBC San Diego: Chula Vista PD deploys drones as first responders"
+    },
+    {
+     "url": "https://chulavistaca.gov/home/showpublisheddocument/21833/637448449053100000",
+     "label": "City of Chula Vista: drone program document"
+    },
+    {
+     "url": "https://www.sandiegobusiness.org/blog/edc-led-program-helps-chula-vista-pd-hit-new-drone-milestone/",
+     "label": "San Diego EDC: Chula Vista first to get beyond-line-of-sight waiver"
+    }
+   ]
+  },
+  {
+   "id": "doorbell",
+   "name": "Doorbell-camera partnerships (Ring and others)",
+   "what": "Home cameras like Ring record porches and streets. In January 2024 Ring ended the tool that let police ask users for video in its app; police can still use a warrant, and Ring keeps the right to share video without consent in limited emergencies. A planned Ring and Flock Safety link (announced October 2025) was cancelled in February 2026; Ring says it never launched and no customer video went to Flock.",
+   "common_retention": "Set by the homeowner's own camera plan; not a government record unless shared.",
+   "src": [
+    {
+     "url": "https://www.pbs.org/newshour/politics/ring-will-no-longer-allow-police-to-request-doorbell-camera-footage-from-users",
+     "label": "PBS NewsHour / AP (Jan 2024): Ring ends police footage requests"
+    },
+    {
+     "url": "https://blog.ring.com/about-ring/ring-and-flock-cancel-partnership/",
+     "label": "Ring blog (Feb 2026): Ring and Flock cancel partnership"
+    }
+   ]
+  },
+  {
+   "id": "cell_site_simulator",
+   "name": "Cell-site simulators (\"Stingrays\")",
+   "what": "A device that acts like a cell tower so nearby phones connect to it, letting police find or identify a phone. It can briefly disrupt service for other phones nearby. Since 2015, U.S. Justice Department agencies must get a warrant first in most cases, and may not collect calls, texts, or data stored on the phone.",
+   "common_retention": "Under the 2015 federal policy: delete data once the target phone is found (at least daily), or within 30 days when identifying an unknown phone. Local police rules vary.",
+   "src": [
+    {
+     "url": "https://www.justice.gov/opa/pr/justice-department-announces-enhanced-policy-use-cell-site-simulators",
+     "label": "U.S. DOJ (Sept 2015): enhanced policy for cell-site simulators"
+    },
+    {
+     "url": "https://www.justice.gov/file/803011/dl",
+     "label": "U.S. DOJ: cell-site simulator policy text"
+    }
+   ]
+  },
+  {
+   "id": "social_media_monitoring",
+   "name": "Social media monitoring software",
+   "what": "Software that scans, sorts, and saves large numbers of public social media posts by keyword, place, or person. The Brennan Center found local governments spending millions on these tools, and that few had public rules for how they are used.",
+   "common_retention": "Not confirmed.",
+   "src": [
+    {
+     "url": "https://www.brennancenter.org/our-work/analysis-opinion/cities-and-police-nationwide-spending-millions-social-media-monitoring",
+     "label": "Brennan Center: cities and police spending millions on social media monitoring"
+    },
+    {
+     "url": "https://www.brennancenter.org/our-work/research-reports/third-party-vendors-social-media-monitoring-tools-law-enforcement",
+     "label": "Brennan Center: vendors of social media monitoring tools"
+    }
+   ]
+  }
+ ],
+ "evidence": [
+  {
+   "claim": "A 2026 study of 216 police agencies found vehicle thefts fell about 11% in the year after Flock plate cameras went up; it is a working paper and has not been peer reviewed.",
+   "side": "benefit",
+   "src": [
+    {
+     "url": "https://doi.org/10.21428/cb6ab371.0dc24006",
+     "label": "Mourtgos & Adams (2026), Automated license plate readers, vehicle theft, and clearance (CrimRxiv working paper)"
+    }
+   ]
+  },
+  {
+   "claim": "A review of that same study notes car-theft arrests were already rising before the cameras went up, and recovery times did not improve when all stolen cars were counted, so the gains may not be caused by the cameras.",
+   "side": "mixed",
+   "src": [
+    {
+     "url": "https://ij.org/wp-content/uploads/2026/09/ALPR-and-crime-study-external-explainer-V7.pdf",
+     "label": "Institute for Justice (Sept 2026): explainer on the ALPR and vehicle theft working paper"
+    }
+   ]
+  },
+  {
+   "claim": "A 2019 study of a city network of nearly 100 plate readers found auto theft and robbery cases were solved more often after the network went up, but the change was not statistically significant.",
+   "side": "mixed",
+   "src": [
+    {
+     "url": "https://nij.ojp.gov/library/publications/impacts-large-scale-license-plate-reader-deployment-criminal-investigations",
+     "label": "Koper & Lum (2019), Police Quarterly, via National Institute of Justice"
+    }
+   ]
+  },
+  {
+   "claim": "A review of 30 body camera studies found cameras can lower complaints against officers, but it is unclear if that means better behavior or fewer reports, and it is uncertain whether they reduce use of force.",
+   "side": "benefit",
+   "src": [
+    {
+     "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8356344/",
+     "label": "Lum et al. (2020), Campbell Systematic Reviews"
+    }
+   ]
+  },
+  {
+   "claim": "In a randomized trial of 2,224 Washington, D.C. officers, body cameras had very small, statistically insignificant effects on use of force and complaints.",
+   "side": "mixed",
+   "src": [
+    {
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31064877/",
+     "label": "Yokum, Ravishankar & Coppock (2019), PNAS"
+    }
+   ]
+  },
+  {
+   "claim": "Chicago's inspector general found that 9.1% of police responses to ShotSpotter alerts (Jan 2020 to May 2021) turned up evidence of a gun crime.",
+   "side": "concern",
+   "src": [
+    {
+     "url": "https://www.oversight.gov/reports/chicago-police-departments-use-shotspotter-technology",
+     "label": "Chicago Office of Inspector General (Aug 2021)"
+    },
+    {
+     "url": "https://news.wttw.com/2021/08/24/shotspotter-alerts-rarely-lead-evidence-gun-crime-city-watchdog",
+     "label": "WTTW (Aug 2021)"
+    }
+   ]
+  },
+  {
+   "claim": "A study of Chicago and Kansas City found gunshot detection led to more bullet-casing evidence and gun recoveries, but no drop in shootings and no rise in cases solved.",
+   "side": "mixed",
+   "src": [
+    {
+     "url": "https://cssh.northeastern.edu/what-does-the-science-say-about-shotspotter/",
+     "label": "Northeastern University: What does the science say about ShotSpotter? (Piza research)"
+    }
+   ]
+  },
+  {
+   "claim": "Federal tests of 189 face recognition programs found false matches were often 10 to 100 times more common for some groups (higher for Black, Asian, and American Indian faces in many U.S. programs), while the most accurate programs showed much smaller gaps.",
+   "side": "mixed",
+   "src": [
+    {
+     "url": "https://nvlpubs.nist.gov/nistpubs/ir/2019/NIST.IR.8280.pdf",
+     "label": "NIST IR 8280 (Dec 2019)"
+    }
+   ]
+  },
+  {
+   "claim": "Detroit paid $300,000 in 2024 to a man wrongly arrested after a face recognition match, and agreed police can no longer arrest based only on such a match.",
+   "side": "concern",
+   "src": [
+    {
+     "url": "https://www.cbsnews.com/detroit/news/detroit-police-to-change-use-of-facial-recognition-technology-after-man-wrongfully-arrested",
+     "label": "CBS Detroit (2024)"
+    },
+    {
+     "url": "https://www.scrippsnews.com/us-news/detroit-police-can-no-longer-make-arrests-based-only-on-facial-recognition-results-after-lawsuit",
+     "label": "Scripps News (2024)"
+    }
+   ]
+  },
+  {
+   "claim": "An Illinois state audit in 2025 found U.S. Customs and Border Protection had accessed Illinois plate-reader data through a Flock pilot; Flock then halted federal pilots and set its system to reject searches using words like 'immigration'.",
+   "side": "concern",
+   "src": [
+    {
+     "url": "https://www.ksat.com/news/national/2025/08/25/license-plate-camera-company-halts-cooperation-with-federal-agencies-among-investigation-concerns/",
+     "label": "AP via KSAT (Aug 2025): Flock halts cooperation with federal agencies"
+    }
+   ]
+  }
+ ],
+ "oversight": [
+  {
+   "tool": "Community Control Over Police Surveillance (CCOPS) law",
+   "what": "A local law, based on an ACLU model, that lets the city council or county board decide if and how police use surveillance tools, with public input. The ACLU counts 26 places that have adopted one.",
+   "example": "Santa Clara County, California (2016), described by the county as the first of its kind in the nation.",
+   "src": [
+    {
+     "url": "https://www.aclu.org/issues/privacy-technology/surveillance-technologies/community-control-over-police-surveillance",
+     "label": "ACLU: Community Control Over Police Surveillance"
+    },
+    {
+     "url": "https://www.aclunc.org/news/santa-clara-county-passes-groundbreaking-law-shine-light-secret-surveillance",
+     "label": "ACLU of Northern California: Santa Clara County passes surveillance law (2016)"
+    }
+   ]
+  },
+  {
+   "tool": "Elected-body approval and written use policy before buying",
+   "what": "Before a department buys or keeps using a surveillance tool, elected officials must approve a written policy that says its purpose, allowed and banned uses, what data is kept, for how long, and who it is shared with. Officials must weigh benefits against costs, including privacy.",
+   "example": "Santa Clara County, California Board of Supervisors (2016).",
+   "src": [
+    {
+     "url": "https://privacy.santaclaracounty.gov/surveillance-technology",
+     "label": "County of Santa Clara: Surveillance technology"
+    },
+    {
+     "url": "https://d5.santaclaracounty.gov/node/2501",
+     "label": "County of Santa Clara: Cutting-edge surveillance ordinance approved"
+    }
+   ]
+  },
+  {
+   "tool": "Annual surveillance reports",
+   "what": "Each year, departments report in public how each tool was used and what controls are in place, and elected officials review the reports at a public meeting.",
+   "example": "A 2020 review found all 14 local surveillance laws it studied require annual reports; Santa Clara County, Oakland, Davis, and Seattle had completed them.",
+   "src": [
+    {
+     "url": "https://www.lawfaremedia.org/article/fourteen-places-have-passed-local-surveillance-laws-heres-how-theyre-doing",
+     "label": "Lawfare (Sept 2020): Fourteen places have passed local surveillance laws"
+    },
+    {
+     "url": "https://www.aclunc.org/docs/20180109_SCC_Annual_Reports.pdf",
+     "label": "Santa Clara County annual surveillance reports memo (Jan 2018)"
+    }
+   ]
+  },
+  {
+   "tool": "Independent audits by an inspector general",
+   "what": "Police publish an impact and use policy for each surveillance tool, the public can comment, and an independent inspector general checks every year whether police follow it.",
+   "example": "New York City's POST Act (Local Law 65 of 2020); the inspector general's 2022 report found many NYPD policies used general, boilerplate language.",
+   "src": [
+    {
+     "url": "https://www.nyc.gov/assets/doi/press-releases/2023/Feb/2022OIGNYPD.pdf",
+     "label": "NYC Department of Investigation: OIG-NYPD POST Act report"
+    },
+    {
+     "url": "https://www.nyc.gov/assets/doi/reports/pdf/2024/25PostActRelease_Rpt_05_30_2024.pdf",
+     "label": "NYC DOI (May 2024): second POST Act report"
+    }
+   ]
+  },
+  {
+   "tool": "Public transparency portals (Flock)",
+   "what": "A public web page an agency can choose to turn on that shows how many plate cameras it has, how many searches were run and why, hot-list alerts, retention, and its policy. The numbers are self-reported by the agency; the Rhode Island ACLU says many portals leave out key data.",
+   "example": "Kent County Sheriff's Office and Grand Rapids Police, Michigan (year not confirmed).",
+   "src": [
+    {
+     "url": "https://www.kentcountymi.gov/2043/Flock-Transparency",
+     "label": "Kent County, MI: Flock transparency"
+    },
+    {
+     "url": "https://www.fox17online.com/news/local-news/grand-rapids/grand-rapids-police-launch-online-transparency-portal-for-flock-camera-system",
+     "label": "FOX17: Grand Rapids police launch Flock transparency portal"
+    },
+    {
+     "url": "https://www.riaclu.org/?p=15774",
+     "label": "ACLU of Rhode Island: critique of transparency portals"
+    }
+   ]
+  },
+  {
+   "tool": "Shorter retention and limits on outside access",
+   "what": "An agency can keep plate data for fewer days and stop other agencies from searching it.",
+   "example": "Fort Smith, Arkansas Police (August 2026) cut plate retention from 30 days to 7 and stopped other agencies' access; Van Buren, Arkansas made similar changes.",
+   "src": [
+    {
+     "url": "https://talkbusiness.net/2026/08/fort-smith-police-department-evaluating-flock-camera-use-management/",
+     "label": "Talk Business & Politics (Aug 2026): Fort Smith PD evaluating Flock use"
+    },
+    {
+     "url": "https://talkbusiness.net/2026/09/van-buren-police-chief-makes-changes-to-flock-camera-policies/",
+     "label": "Talk Business & Politics (Sept 2026): Van Buren changes Flock policies"
+    }
+   ]
+  },
+  {
+   "tool": "State limits on data sharing",
+   "what": "A state law can bar sharing plate-reader data for certain purposes, and a state office can audit compliance.",
+   "example": "Illinois (2023 law) bars sharing plate-reader data to enforce immigration or abortion laws; the Secretary of State's 2025 audit led Flock to change its system.",
+   "src": [
+    {
+     "url": "https://www.ksat.com/news/national/2025/08/25/license-plate-camera-company-halts-cooperation-with-federal-agencies-among-investigation-concerns/",
+     "label": "AP via KSAT (Aug 2025)"
+    }
+   ]
+  },
+  {
+   "tool": "Required public drone-use reports",
+   "what": "Agencies must publish how often they flew drones, where, why, how many cases the drones helped, what was recorded about people who were not the target, and what the drones cost.",
+   "example": "Texas (since 2013) requires state agencies, and county and city agencies in places over 150,000 people, to report every two years; Harris County Sheriff's Office posts its reports.",
+   "src": [
+    {
+     "url": "https://texas.public.law/statutes/tex._gov't_code_section_423.008",
+     "label": "Tex. Gov't Code § 423.008"
+    },
+    {
+     "url": "https://www.harriscountyso.org/Documents/AboutUs/UASReports/2021-2022 Texas Govt Code Sec 423 Report.pdf",
+     "label": "Harris County Sheriff's Office: 2021-2022 drone report"
+    }
+   ]
+  },
+  {
+   "tool": "Warrant-first rules",
+   "what": "A policy that police must get a judge's warrant before using a tool, except in emergencies, plus rules to delete data and audits to check deletion.",
+   "example": "U.S. Department of Justice cell-site simulator policy (2015).",
+   "src": [
+    {
+     "url": "https://www.justice.gov/opa/pr/justice-department-announces-enhanced-policy-use-cell-site-simulators",
+     "label": "U.S. DOJ (Sept 2015)"
+    }
+   ]
+  },
+  {
+   "tool": "Rules set after a lawsuit",
+   "what": "A court settlement can set use rules, like banning arrests based only on a face match, requiring training, and reviewing past cases.",
+   "example": "Detroit, Michigan Police (2024 settlement in Williams v. City of Detroit).",
+   "src": [
+    {
+     "url": "https://www.cbsnews.com/detroit/news/detroit-police-to-change-use-of-facial-recognition-technology-after-man-wrongfully-arrested",
+     "label": "CBS Detroit (2024)"
+    }
+   ]
+  }
+ ],
+ "states": {
+  "Arkansas": {
+   "summary": "License plate readers: Ark. Code Ann. §§ 12-12-1801 to 12-12-1808 bans most uses except by police and a few others (parking, access control, some private property). Plate data may be kept up to 150 days (60 days for private landowners and businesses), longer only while tied to an investigation. Government may not sell, trade, or exchange the data; police may share evidence of a crime with other agencies, and others need a subpoena. Users must compile statistics every six months (plates scanned, matches, arrests) and keep them for 18 months for public review. Arkansas State Police rules limit use to 'legitimate law enforcement purposes', require a log of every disclosure, and send usage reports to the Arkansas Legislative Council quarterly. Body cameras: no statewide requirement to use them was found; a 2025 bill proposed one (final status not confirmed). Local context: in 2026 several Arkansas cities, including Searcy, paused or ended Flock contracts, and Fort Smith cut retention to 7 days.",
+   "src": [
+    {
+     "url": "https://www.ncsl.org/technology-and-communication/automated-license-plate-readers-state-statutes",
+     "label": "NCSL: ALPR state statutes (Arkansas entry)"
+    },
+    {
+     "url": "https://www.law.cornell.edu/regulations/arkansas/130-01-24-Ark-Code-R-002",
+     "label": "130.01.24 Ark. Code R. 002: Arkansas State Police license plate reader rules"
+    },
+    {
+     "url": "https://www.ky3.com/2025/01/27/arkansas-state-lawmaker-proposes-law-requiring-law-enforcement-have-body-cameras/",
+     "label": "KY3 (Jan 2025): Arkansas lawmaker proposes body camera requirement"
+    },
+    {
+     "url": "https://katv.com/news/searcy-joins-six-arkansas-cities-suspending-flock-cameras-amid-privacy-debates",
+     "label": "KATV (2026): Searcy joins six Arkansas cities suspending Flock cameras"
+    },
+    {
+     "url": "https://talkbusiness.net/2026/08/fort-smith-police-department-evaluating-flock-camera-use-management/",
+     "label": "Talk Business & Politics (Aug 2026): Fort Smith Flock changes"
+    }
+   ]
+  },
+  "Texas": {
+   "summary": "License plate readers: NCSL lists no general Texas statute on police ALPR retention or use. Drones: Tex. Gov't Code ch. 423 lists when images may lawfully be captured, including with a warrant, with the owner's consent, in pursuit of a suspect, to document a crime scene, at a death scene or serious crash, to search for a missing person, and in high-risk tactical operations. Images captured in violation cannot be used as evidence. State police agencies, and county and city agencies in places over 150,000 people, must publish a drone-use report every two years (§ 423.008). Body cameras: an agency that uses them must adopt a policy that covers when cameras are on, storage, and public access, and must keep video at least 90 days (Tex. Occ. Code § 1701.655); a 2021 law (the Botham Jean Act, H.B. 929) requires an officer actively in an investigation to keep the camera on.",
+   "src": [
+    {
+     "url": "https://www.ncsl.org/technology-and-communication/automated-license-plate-readers-state-statutes",
+     "label": "NCSL: ALPR state statutes"
+    },
+    {
+     "url": "https://texas.public.law/statutes/tex._gov't_code_section_423.002",
+     "label": "Tex. Gov't Code § 423.002"
+    },
+    {
+     "url": "https://texas.public.law/statutes/tex._gov't_code_section_423.008",
+     "label": "Tex. Gov't Code § 423.008"
+    },
+    {
+     "url": "https://texas.public.law/statutes/tex._occ._code_section_1701.655",
+     "label": "Tex. Occ. Code § 1701.655"
+    },
+    {
+     "url": "https://capitol.texas.gov/tlodocs/87R/billtext/html/HB00929F.htm",
+     "label": "Texas H.B. 929 (2021), enrolled text"
+    }
+   ]
+  },
+  "Florida": {
+   "summary": "License plate readers: Fla. Stat. §§ 316.0777 and 316.0778 make plate images and data with personal information confidential and exempt from public records (they may go to criminal justice agencies and, in some cases, the registered owner), direct the state to set a retention schedule, and bar using them to issue traffic tickets. Drones: Fla. Stat. § 934.50 bars police from using drones to gather evidence except in listed cases, such as with a warrant, to prevent imminent danger or search for a missing person, to watch crowds of 50 or more under a written policy, for traffic management (no tickets from drone images), and at crime or crash scenes; evidence gathered in violation cannot be used in court. Body cameras: not required, but an agency that uses them must have written policies, train staff, review its practices, and keep recordings under state public records rules (Fla. Stat. § 943.1718).",
+   "src": [
+    {
+     "url": "https://www.ncsl.org/technology-and-communication/automated-license-plate-readers-state-statutes",
+     "label": "NCSL: ALPR state statutes (Florida entry)"
+    },
+    {
+     "url": "https://www.flsenate.gov/Laws/Statutes/2025/934.50",
+     "label": "Fla. Stat. § 934.50 (drones)"
+    },
+    {
+     "url": "https://www.flsenate.gov/Laws/Statutes/2025/943.1718",
+     "label": "Fla. Stat. § 943.1718 (body cameras)"
+    }
+   ]
+  }
+ },
+ "flock_portals": [],
+ "not_confirmed": [
+  "Flock transparency portal URLs for any of the target places (Arkadelphia/Clark Co. AR, Hot Springs/Garland Co. AR, Little Rock/Pulaski Co. AR, Bentonville/Rogers/Benton Co. AR, Fayetteville/Springdale/Washington Co. AR, Melbourne Beach/Brevard Co. FL, Austin/Travis Co. TX, Tyler/Smith Co. TX). transparency.flocksafety.com returns a Cloudflare bot challenge (HTTP 403) to every automated request, including made-up slugs, so no URL could be confirmed to load, and no search indexed any portal for these agencies. A person should check in a normal browser.",
+  "Exact text of Ark. Code Ann. § 12-12-1804: sources disagree on whether the 150-day limit sits in § 12-12-1804 or § 12-12-1805; the summary relies on NCSL plus the Arkansas State Police rules, not the statute text.",
+  "Arkansas drone law (reported Act 597 of 2025 rewrite of Ark. Code § 5-60-103, critical-infrastructure and voyeurism provisions): only secondary sources found; left out.",
+  "Final status of Arkansas H.B. 1219 (2025) body camera mandate; one secondary source says it was withdrawn.",
+  "Any Arkansas, Texas, or Florida statute specifically governing police facial recognition: none found, and absence was not confirmed.",
+  "Absence of a Texas ALPR statute beyond NCSL's listing; any ALPR rules in Texas Transportation Code or DPS policy were not checked.",
+  "The specific Florida ALPR retention period in the state's general records schedule.",
+  "Typical retention periods for public CCTV/real-time crime center video, gunshot detection audio, and social media monitoring data.",
+  "Little Rock Flock figure (about 687,000 unique vehicles read in 30 days) and the statewide Arkansas camera count (1,051): seen only in search summaries of Arkansas Advocate/KATV; the Advocate page returned 403.",
+  "Seattle surveillance ordinance year and details (city page returned 404).",
+  "Launch year for the Kent County / Grand Rapids, Michigan Flock transparency portals.",
+  "Austin/Travis County current Flock status.",
+  "Rialto, California body camera trial (Ariel et al.) was not checked and is left out.",
+  "Current codified wording of Tex. Occ. Code § 1701.655 after H.B. 929 (the 90-day text seen is the 2015 version; H.B. 929 amended other parts)."
+ ]
+}

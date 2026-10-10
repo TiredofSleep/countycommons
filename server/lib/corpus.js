@@ -123,6 +123,10 @@ function load(tenantKey) {
   const market = sharedRead('market-returns.json');
   const waterGuide = sharedRead('water-guide.json');
   const justiceGuide = sharedRead('justice-guide.json');
+  // Surveillance: the shared guide, plus a county's own confirmed facts.
+  const surveillanceGuide = sharedRead('surveillance-guide.json');
+  let surveillance = null;
+  try { surveillance = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'surveillance.json'), 'utf8')); } catch (e) { /* not researched yet */ }
   let help = null;
   try {
     help = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'help.json'), 'utf8'));
@@ -148,7 +152,7 @@ function load(tenantKey) {
   if (verification) {
     for (const c of verification.checks) verifyByNode.set(c.node, c);
   }
-  const data = { budget, docket, documents, county, verification, comparisons, vendors, auditFindings, spending, taxDebt, whatIf, myBill, market, taxLab, commonwealth, water, waterGuide, justice, justiceGuide, prisonsNear, turnout, turnoutLocal, elections, grants, grantsState, grantsGuide, stance, cases, help, calendar, research, issueDrafts, byId, childrenOf, verifyByNode };
+  const data = { budget, docket, documents, county, verification, comparisons, vendors, auditFindings, spending, taxDebt, whatIf, myBill, market, taxLab, commonwealth, water, waterGuide, justice, justiceGuide, surveillance, surveillanceGuide, prisonsNear, turnout, turnoutLocal, elections, grants, grantsState, grantsGuide, stance, cases, help, calendar, research, issueDrafts, byId, childrenOf, verifyByNode };
   // Lay this county's writable overlay (a local host's edits) on top of the
   // git-seeded corpus. Only whitelisted sections merge (see overlay.js); the
   // bones are never touched. Resolve to the default county when unkeyed.

@@ -57,6 +57,7 @@ function siteMap(county, current) {
     ['Public needs', [
       ['/water', 'Our water'],
       ['/justice', 'Jails & prisons — from holding to building'],
+      ['/surveillance', 'Who’s watching — cameras, plate readers, the rules'],
       ['/help', 'Find help']
     ]],
     ['Dead ends & open questions', [
