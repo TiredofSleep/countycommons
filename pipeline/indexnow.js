@@ -1,7 +1,7 @@
 // Announce every published page to search engines via IndexNow (Bing, Yandex,
 // Naver, Seznam and others share submissions). Run after a deploy, on the server:
 //   node pipeline/indexnow.js            (all featured sites)
-//   node pipeline/indexnow.js clarkar    (one site)
+//   node pipeline/indexnow.js clarkar bentonar   (only these sites)
 // Nothing here is secret. Each run is appended to data/indexnow-log.json, which
 // the site publishes at /indexnow.json: what was announced, when, and what
 // the search engines answered.
