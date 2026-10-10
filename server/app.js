@@ -423,6 +423,10 @@ app.get('/budget.csv', (req, res) => {
 app.get('/budget.json', (req, res) => res.json(require('./lib/seo').json(load(req.tenantKey))));
 app.get('/faq', (req, res) => res.send(require('./views/faq').faqPage(load(req.tenantKey))));
 // llms.txt: a plain-text map of the site for AI search engines.
+// IndexNow: the public key file, and the public log of every announcement.
+const INDEXNOW_KEY = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'config', 'indexnow.json'), 'utf8')).key;
+app.get('/' + INDEXNOW_KEY + '.txt', (req, res) => res.type('text/plain').send(INDEXNOW_KEY));
+app.get('/indexnow.json', (req, res) => { let log = []; try { log = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'data', 'indexnow-log.json'), 'utf8')); } catch (e) {} res.json({ about: 'Every time this network announced its pages to search engines (IndexNow): when, which sites, how many pages, and the answer. Nothing about it is secret.', key_file: '/' + INDEXNOW_KEY + '.txt', runs: log }); });
 app.get('/llms.txt', (req, res) => {
   const d = load(req.tenantKey), seo = require('./lib/seo'), c = d.county, base = require('./lib/reqctx').url('');
   const faq = require('./views/faq').faqItems(d);
