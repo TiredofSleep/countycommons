@@ -57,6 +57,17 @@
         { "label": "Our story — why a dry cleaner built this", "url": "/story" },
         { "label": "The first open question", "url": "/issues" }
       ]
+    },
+    {
+      "claim": "Trust no one, check everything — this network is guarded by light, not locks.",
+      "evidence": "We build as if no lock lasts forever. Passwords leak, keys get stolen, and the codes that hide data today may be cracked tomorrow. So this platform does not ask you to trust that its doors are locked. It asks you to watch. Every number re-adds itself in public. Every change to the record is written into a chained log that shows if anything was rewritten. Every visit is counted in the open, with no names or addresses kept. Even what we tell search engines, and when, is published as it happens. Power that has to work in the light is power that can be checked. Locks still protect people where the law or safety requires it: a voter’s identity, if we ever verify one, and the connection between your phone and this site. But the platform’s own conduct is never hidden behind a lock. It is shown, logged, and open to audit by anyone.",
+      "sources": [
+        { "label": "The receipt — every total re-added in public", "url": "/verify" },
+        { "label": "Security — the chained activity log", "url": "/security" },
+        { "label": "The public traffic count", "url": "/traffic" },
+        { "label": "Every search-engine announcement, logged", "url": "/indexnow.json" },
+        { "label": "The code, public to the last line", "url": "https://github.com/TiredofSleep/countycommons" }
+      ]
     }
   ],
   "tradition": [
@@ -96,6 +107,10 @@
     {
       "objection": "These platforms fade when their champions move on.",
       "answer": "Porto Alegre's erosion is the honest scar in the record. The mitigation is architectural: open source, one cheap server, county specifics isolated in a config file, steady-state operations designed for under three hours a week, a succession envelope written before it's needed, and a stated win condition of being absorbed by a better steward. Built to survive indifference, not to require enthusiasm."
+    },
+    {
+      "objection": "Isn’t it risky to show everything? Won’t bad actors see how it works?",
+      "answer": "They can see how it works — and so can everyone watching them. Hiding how a system works mostly hides mistakes and abuse from the people they affect. Showing it means a change, a strange count, or a bad edit gets noticed by many eyes, fast. What stays private is people, not process: no one’s vote, name, or address is ever shown."
     }
   ],
   "closing": "None of this requires anyone to lose an argument. It requires the trail to be visible, the questions to be askable, and the counting to be checkable. We think a county that has those three things makes better decisions than one that doesn't — and that is the entire platform, stated as a belief. Everything else on this site is evidence."
