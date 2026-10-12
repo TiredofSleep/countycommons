@@ -27,7 +27,9 @@ function auditsPage(data) {
       description: `Auditor reports for ${county.name}, ${county.state} — quoted and cited as they're ingested.` });
   }
 
-  const chip = v => v === 'clean'
+  const chip = v => v === 'findings'
+    ? '<span class="chip c-dead">● findings reported</span>'
+    : v === 'clean'
     ? '<span class="chip c-ok">✓ no findings reported</span>'
     : v === 'recommendation'
       ? '<span class="chip c-part">◐ a recommendation, no findings</span>'

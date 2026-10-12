@@ -58,6 +58,13 @@ function faqItems(d) {
     const parts = [['dhs', 'DHS (SNAP, Medicaid, ARKids)'], ['revenue', 'the state revenue office (car tags, titles, driver’s licenses)'], ['health', 'the health unit']].map(([k, l]) => pick(k) ? `${l}: ${esc([pick(k).address, pick(k).city, pick(k).phone].filter(Boolean).join(', '))}` : '').filter(Boolean);
     if (parts.length) add(`Where is the DHS office, revenue office or health unit in ${c.name}?`, `${parts.join('; ')}. <a href="/offices">Every county and state office in ${esc(c.name)}</a>.`);
   }
+  const af = d.auditFindings && d.auditFindings.verdicts;
+  if (af && af.length) {
+    const v = af.find(x => x.verdict === 'findings') || af[0];
+    const q = v.quote.length > 320 ? v.quote.slice(0, 317).replace(/\s+\S*$/, '') + '…' : v.quote;
+    add(`What did the auditors find in ${c.name}?`,
+      `The latest state audit (${esc(v.year)}): ${af.some(x => x.verdict === 'findings') ? 'the auditors reported findings' : 'the auditors reported no findings'}. In their words: “${esc(q)}” <a href="/audits">Everything the auditors reported, with page numbers</a>.`);
+  }
   const docs = seo.hasBudget(d) ? seo.sourceDocs(d) : d.documents.documents.filter(x => x.status === 'ingested');
   if (docs.length) {
     add(`Where do these numbers come from?`,
