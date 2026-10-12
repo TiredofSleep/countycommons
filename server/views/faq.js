@@ -52,6 +52,12 @@ function faqItems(d) {
     add(`When is the next election in ${c.name}, and how do I vote?`,
       `The next election is the <b>${esc(next.name.toLowerCase())} on ${new Date(next.date + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}</b>.${ev ? ` ${esc(ev.label)} runs ${nice(ev.date)} to ${nice(ev.end)}.` : ''}${off ? ` Your election office is the ${esc(off.name)}${off.phone ? ` (${esc(off.phone)})` : ''}.` : ''} <a href="/elections">Dates, hours, ID rules and where to vote</a>.`);
   }
+  const so = d.stateOffices && d.stateOffices.counties && d.stateOffices.counties[c.name.replace(/ County$/, '')];
+  if (so) {
+    const pick = (k) => (so[k] || [])[0];
+    const parts = [['dhs', 'DHS (SNAP, Medicaid, ARKids)'], ['revenue', 'the state revenue office (car tags, titles, driver’s licenses)'], ['health', 'the health unit']].map(([k, l]) => pick(k) ? `${l}: ${esc([pick(k).address, pick(k).city, pick(k).phone].filter(Boolean).join(', '))}` : '').filter(Boolean);
+    if (parts.length) add(`Where is the DHS office, revenue office or health unit in ${c.name}?`, `${parts.join('; ')}. <a href="/offices">Every county and state office in ${esc(c.name)}</a>.`);
+  }
   const docs = seo.hasBudget(d) ? seo.sourceDocs(d) : d.documents.documents.filter(x => x.status === 'ingested');
   if (docs.length) {
     add(`Where do these numbers come from?`,

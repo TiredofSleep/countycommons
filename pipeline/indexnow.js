@@ -2,6 +2,7 @@
 // Naver, Seznam and others share submissions). Run after a deploy, on the server:
 //   node pipeline/indexnow.js                    (all featured sites)
 //   node pipeline/indexnow.js clarkar bentonar   (only these sites)
+//   node pipeline/indexnow.js --paths=/offices,/faq   (only these new pages, every site)
 // Nothing here is secret. Each run is appended to data/indexnow-log.json, which
 // the site publishes at /indexnow.json: what was announced, when, and what
 // the search engines answered.
@@ -34,21 +35,24 @@ async function post(host, urlList) {
   return status;
 }
 
-async function announce(host) {
-  const urls = await sitemapUrls(host);
+async function announce(host, paths) {
+  const urls = paths.length ? paths.map(p => `https://${host}${p}`) : await sitemapUrls(host);
   const status = [];
   for (let i = 0; i < urls.length; i += 10000) status.push(await post(host, urls.slice(i, i + 10000)));
   return { host, urls: urls.length, status };
 }
 
 (async () => {
-  const only = process.argv.slice(2);
+  const args = process.argv.slice(2);
+  const flag = args.find(a => a.startsWith('--paths='));
+  const paths = flag ? flag.slice(8).split(',').filter(Boolean) : [];
+  const only = args.filter(a => !a.startsWith('--'));
   const hosts = only.length
     ? directory.featured().filter(t => only.includes(t.key)).map(t => t.host)
     : ['countycommons.us', ...directory.featured().map(t => t.host)];
-  const run = { at: new Date().toISOString(), endpoint: 'https://api.indexnow.org/indexnow', sites: [] };
+  const run = { at: new Date().toISOString(), endpoint: 'https://api.indexnow.org/indexnow', paths: paths.length ? paths : 'whole sitemap', sites: [] };
   for (const h of hosts) {
-    try { run.sites.push(await announce(h)); } catch (e) { run.sites.push({ host: h, error: String(e.message || e) }); }
+    try { run.sites.push(await announce(h, h === 'countycommons.us' ? [] : paths)); } catch (e) { run.sites.push({ host: h, error: String(e.message || e) }); }
   }
   let log = []; try { log = JSON.parse(fs.readFileSync(LOG, 'utf8')); } catch (e) { /* first run */ }
   log.push(run);
