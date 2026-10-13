@@ -16,6 +16,7 @@ function atlasPage(data) {
   <h1>${esc(c.name)} by the numbers</h1>
   <div class="src">Schools, health, disaster risk, bridges and federal grants for ${esc(c.name)}, from national public records — each with its source. ${county.name !== c.name ? `${esc(county.name)} sits in ${esc(c.name)}, so these figures are countywide. ` : ''}The same page for every U.S. county is at <a href="${esc(c.url)}">countycommons.us/us</a>.</div>
 </header>
+${require('../lib/national-ranks').keyFacts(c, N)}
 ${B.schools(c, N)}
 ${B.health(c, N)}
 ${B.risk(c)}

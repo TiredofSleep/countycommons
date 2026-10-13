@@ -9,6 +9,7 @@ const fs = require('fs');
 const path = require('path');
 const { esc } = require('../lib/corpus');
 const B = require('../lib/national-blocks');
+const RK = require('../lib/national-ranks');
 
 const ROOT = path.join(__dirname, '..', '..');
 let NAT = null;
@@ -70,6 +71,7 @@ function countyPage(st, slug) {
 </header>
 
 ${c.site ? `<section><div class="issue" style="display:block;border-left:3px solid var(--accent)"><b>${esc(c.name)} has a full County Commons site.</b> <span class="src">The budget line by line, your tax bill explained, audits, local offices and elections: <a href="https://${esc(c.site)}/">${esc(c.site)} →</a></span></div></section>` : ''}
+${RK.keyFacts(c, N)}
 
 <section>
 <h2>Drinking water <span class="sub">— public water systems serving ${esc(c.name)}</span></h2>
@@ -101,7 +103,8 @@ ${el ? `<p><b>${esc(el.name)}: ${esc(el.date_long)}.</b> ${el.lines.map(esc).joi
 <section>
 <h2>Not here yet</h2>
 <p>The budget, property tax rates, audits, local officials and offices for ${esc(c.name)} come from the county's own records, which we haven't gathered — not gathered, never hidden. <a href="https://clarkar.countycommons.us/">See what a full county site looks like</a>, or ask to have ${esc(c.name)} built: brayden.ozark@gmail.com.</p>
-<p class="src">More of ${esc(S.name)}: <a href="/us/${esc(st.toLowerCase())}">every county in ${esc(S.name)}</a>.</p>
+<p class="src">More of ${esc(S.name)}: <a href="/us/${esc(st.toLowerCase())}">the state government and every county in ${esc(S.name)}</a>.</p>
+${RK.neighbors(c, N)}
 </section>`;
 
   return page({
