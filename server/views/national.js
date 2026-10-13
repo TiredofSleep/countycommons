@@ -112,18 +112,70 @@ function statePage(st) {
   const list = (N.byState[st] || []).slice().sort((a, b) => a.name.localeCompare(b.name));
   if (!list.length) return null;
   const S = N.states[st] || { name: st };
-  const built = list.filter(c => c.site).length;
+  const built = list.filter(c => c.site);
+  const I = (N.stateInfo || {})[st] || {};
+  const g = I.gov, f = I.fin, el = N.elections && N.elections[st];
+  const big = (x) => x >= 1e9 ? '$' + (x / 1e9).toFixed(1).replace(/\.0$/, '') + ' billion' : '$' + (x / 1e6).toFixed(1).replace(/\.0$/, '') + ' million';
+  // Census state finances: rows are [label, indent, dollars]. Spending by function
+  // is the block under "General expenditure, by function:", checked against
+  // the general-expenditure total.
+  let money = '';
+  if (f) {
+    const R = f.rows, get = (l) => { const r = R.find(x => x[0] === l); return r ? r[2] : null; };
+    const fi = R.findIndex(x => /by function/.test(x[0]));
+    const fns = [];
+    for (let i = fi + 1; i < R.length && R[i][1] >= 10; i++) if (R[i][2] !== null) fns.push(R[i]);
+    const genExp = (R.filter(x => x[0] === 'General expenditure')[0] || [])[2];
+    const fnSum = fns.reduce((s, x) => s + x[2], 0);
+    const per = (x) => I.pop2024 ? ` · ${'$' + num(x / I.pop2024)} per resident` : '';
+    const taxes = [['Individual income tax', 'Individual Income Taxes'], ['General sales tax', 'General Sales and Gross Receipts Taxes'], ['Selective sales taxes (fuel, tobacco, alcohol and others)', 'Selective Sales and Gross Receipts Taxes'], ['Corporate income tax', 'Corporations Net Income Taxes'], ['License taxes (vehicles, businesses, hunting and others)', 'License Taxes'], ['Property tax (state share)', 'Property Taxes'], ['Other taxes (severance, transfer and others)', 'Other Taxes']]
+      .map(([l, k]) => [l, get(k)]).filter(x => x[1]).sort((a, b) => b[1] - a[1]);
+    const totalExp = get('Total expenditure'), totalRev = get('Total revenue'), totTax = get('Total Taxes');
+    money = `
+<section id="money">
+<h2>The state's money <span class="sub">— ${esc(S.name)} state government, fiscal ${esc(f.year)}</span></h2>
+<p>The state government took in <b>${big(totalRev)}</b> and spent <b>${big(totalExp)}</b>${per(totalExp)}. It owed ${big(get('Debt at end of fiscal year') || 0)} in debt at year's end.</p>
+<h3 style="margin-top:12px">Of every $100 it spends</h3>
+${fns.slice().sort((a, b) => b[2] - a[2]).map(x => `<div style="display:flex;justify-content:space-between;gap:10px;padding:5px 0;border-bottom:1px solid var(--rule-soft)"><span>${esc(x[0])}</span><span class="num"><b>$${(x[2] / fnSum * 100).toFixed(2)}</b> <span class="soft" style="font-size:12.5px">· ${big(x[2])}</span></span></div>`).join('')}
+<p class="src" style="max-width:none">${fnSum === genExp ? `✓ These ${fns.length} functions add to the state's general expenditure, ${big(genExp)}, exactly.` : `These functions add to ${big(fnSum)}; the table's general expenditure is ${big(genExp || 0)}.`} “Public welfare” is mostly Medicaid. Money the state passes to counties, cities and school districts is counted in the function it pays for.</p>
+<h3 style="margin-top:12px">Where its money comes from</h3>
+<div style="display:flex;justify-content:space-between;gap:10px;padding:5px 0;border-bottom:1px solid var(--rule-soft)"><span><b>Taxes</b></span><span class="num"><b>${big(totTax)}</b></span></div>
+${taxes.map(([l, v]) => `<div style="display:flex;justify-content:space-between;gap:10px;padding:4px 0 4px 14px;border-bottom:1px solid var(--rule-soft);font-size:14.5px"><span>${esc(l)}</span><span class="num">${big(v)}</span></div>`).join('')}
+${[['From other governments (mostly federal aid)', 'Intergovernmental revenue'], ['Charges and fees (tuition, tolls, hospital charges)', 'Current charge'], ['Other general revenue (interest, rents, settlements)', 'Miscellaneous general revenue'], ['Pension and insurance trust earnings and contributions', 'Insurance trust revenue']].map(([l, k]) => get(k) ? `<div style="display:flex;justify-content:space-between;gap:10px;padding:5px 0;border-bottom:1px solid var(--rule-soft)"><span>${esc(l)}</span><span class="num">${big(get(k))}</span></div>` : '').join('')}
+<p class="src" style="max-width:none">Source: <a href="${esc(f.table)}" rel="noopener">${esc(f.source)}</a>. These are the state government's own books — counties, cities and school districts are separate.</p>
+</section>`;
+  } else {
+    money = `<section id="money"><h2>The state's money</h2><p>The Census Bureau's state government finance survey covers the 50 states; ${esc(S.name)}'s finances aren't in it — not gathered, never hidden.</p></section>`;
+  }
+  const agencies = g && g.agencies.length ? `<ul>${g.agencies.map(a => `<li><a href="${esc(a.url)}" rel="noopener">${esc(a.name)}</a></li>`).join('')}</ul>` : '';
   const body = `
 <header class="page">
   <div class="eyebrow">County Commons · ${esc(S.name)}</div>
-  <h1>Every county in ${esc(S.name)}</h1>
-  <div class="src">${list.length} counties. Each page gathers national public records — population, drinking water systems, the county jail and voting${built ? `; ${built} also ${built === 1 ? 'has' : 'have'} a full County Commons site (★) with the budget line by line` : ''}.</div>
+  <h1>${esc(S.name)}: state government and every county</h1>
+  <div class="src">The state's own money — what it collects and what it spends on — its official offices, how to vote, and a page for each of its ${list.length} counties. Every number from official public records, with sources.</div>
+  ${I.pop2024 ? `<p style="margin-top:10px"><b>${num(I.pop2024)}</b> people (2024 Census estimate${I.pop2020 ? `, ${pct(I.pop2024, I.pop2020)} since 2020` : ''}) · ${list.length} counties</p>` : ''}
 </header>
-<section><ul style="columns:2 220px;padding-left:18px">${list.map(c => `<li><a href="/us/${esc(st.toLowerCase())}/${esc(c.slug)}">${esc(c.name)}</a>${c.site ? ' ★' : ''} <span class="soft" style="font-size:12px">${c.pop2024 ? num(c.pop2024) : ''}</span></li>`).join('')}</ul></section>
-<section><p class="src"><a href="/us">Every state</a></p></section>`;
-  return page({ title: `${S.name} counties: public records for all ${list.length} · County Commons`,
-    description: `Public records for every county in ${S.name}: population, drinking water systems, county jail figures and how to vote, each cited.`,
-    canonical: `https://countycommons.us/us/${st.toLowerCase()}`, body });
+${money}
+<section id="government">
+<h2>State government <span class="sub">— official sites</span></h2>
+${g ? `<p>${g.website ? `Official state website: <a href="${esc(g.website)}" rel="noopener">${esc(g.website.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, ''))}</a>` : ''}${g.governor ? `<br>Governor: <a href="${esc(g.governor.url)}" rel="noopener">${esc(g.governor.name)}</a>` : ''}</p>${agencies}<p class="src">Source: <a href="${esc(g.src)}" rel="noopener">USA.gov state government directory</a>.</p>` : `<p>Not gathered yet — not hidden.</p>`}
+</section>
+<section id="voting">
+<h2>Voting</h2>
+${el ? `<p><b>${esc(el.name)}: ${esc(el.date_long)}.</b> ${el.lines.map(esc).join(' ')}</p><p class="src">Source: ${el.src.map(s => `<a href="${esc(s.url)}" rel="noopener">${esc(s.label)}</a>`).join(' · ')}</p>`
+    : `<p>Registration deadlines, early voting and polling places are on <a href="https://vote.gov/" rel="noopener">vote.gov</a>, which links to ${esc(S.name)}'s official election office.</p>`}
+</section>
+${built.length ? `<section><h2>Full County Commons sites in ${esc(S.name)}</h2><p>${built.map(c => `<a href="https://${esc(c.site)}/">${esc(c.name)}</a>`).join(' · ')} — the budget line by line, your tax bill, audits, offices and elections.</p></section>` : ''}
+<section id="counties">
+<h2>Every county in ${esc(S.name)} <span class="sub">— ${list.length}${built.length ? `; ★ has a full site` : ''}</span></h2>
+<ul style="columns:2 220px;padding-left:18px">${list.map(c => `<li><a href="/us/${esc(st.toLowerCase())}/${esc(c.slug)}">${esc(c.name)}</a>${c.site ? ' ★' : ''} <span class="soft" style="font-size:12px">${c.pop2024 ? num(c.pop2024) : ''}</span></li>`).join('')}</ul>
+<p class="src"><a href="/us">Every state</a></p>
+</section>`;
+  const desc = f ? (() => { const R = f.rows, gv = (l) => (R.find(x => x[0] === l) || [])[2]; return `${S.name} state government, fiscal ${f.year}: took in ${big(gv('Total revenue'))}, spent ${big(gv('Total expenditure'))} — by function, from Census records — plus official state offices, voting, and pages for all ${list.length} counties.`; })()
+    : `${S.name}: official offices, voting, and public-records pages for all ${list.length} counties.`;
+  return page({ title: `${S.name} state government: budget, spending, offices and all ${list.length} counties · County Commons`,
+    description: desc, canonical: `https://countycommons.us/us/${st.toLowerCase()}`, body,
+    jsonld: { '@context': 'https://schema.org', '@type': 'State', name: S.name, url: `https://countycommons.us/us/${st.toLowerCase()}`, containedInPlace: { '@type': 'Country', name: 'United States' } } });
 }
 
 function usPage() {
@@ -132,12 +184,12 @@ function usPage() {
   const body = `
 <header class="page">
   <div class="eyebrow">County Commons · the United States</div>
-  <h1>Every county in the United States</h1>
-  <div class="src">${num(N.counties.length)} counties and county equivalents, each with a page of national public records — population, drinking water, the county jail and how to vote — and ${N.counties.filter(c => c.site).length} with a full County Commons site. Pick a state.</div>
+  <h1>Every state and county in the United States</h1>
+  <div class="src">${num(N.counties.length)} counties and county equivalents, each with a page of national public records — population, drinking water, the county jail and how to vote — and ${N.counties.filter(c => c.site).length} with a full County Commons site. Each state has its own page too: what the state government collects and spends, its official offices, and how to vote. Pick a state.</div>
 </header>
 <section><ul style="columns:3 160px;padding-left:18px">${sts.map(s => `<li><a href="/us/${esc(s.toLowerCase())}">${esc((N.states[s] || {}).name || s)}</a> <span class="soft" style="font-size:12px">${N.byState[s].length}</span></li>`).join('')}</ul></section>
 <section><p class="src">Sources: U.S. Census Bureau (population estimates, gazetteer), U.S. EPA SDWIS (public water systems), Vera Institute of Justice (jail data), and state election offices. Built ${esc(N.generated || '')}.</p></section>`;
-  return page({ title: 'Every U.S. county: public records for all 3,000+ · County Commons',
+  return page({ title: 'Every U.S. state and county: budgets, public records and voting · County Commons',
     description: 'Public records for every county in the United States: population, drinking water systems, county jail figures and how to vote — each cited to its source.',
     canonical: 'https://countycommons.us/us', body });
 }

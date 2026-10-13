@@ -130,7 +130,22 @@ for (const t of Object.values(T)) {
   if (c && (!c.site || /County$/.test(cfg.name))) c.site = t.host;
 }
 
-const out = { generated: new Date().toISOString().slice(0, 10),
+// --- State level: Census state government finances + the USA.gov state directory
+// (asfin2023.json and usagov.json are made from the Census xlsx and the
+// usa.gov/states/<name> pages by the raw-folder prep step).
+const statePop = {};
+for (const r of pop) if (r[0] && P(r, 'SUMLEV') === '040') statePop[P(r, 'STNAME')] = { p24: +P(r, 'POPESTIMATE2024'), p20: +P(r, 'POPESTIMATE2020') };
+const readJ = (f) => { try { return JSON.parse(fs.readFileSync(path.join(RAW, f), 'utf8')); } catch (e) { return null; } };
+const fin = readJ('asfin2023.json'), usa = readJ('usagov.json') || {};
+const stateInfo = {};
+for (const [st, name] of Object.entries(stName)) {
+  const u = usa[name.toLowerCase().replace(/\s+/g, '-')] || null;
+  stateInfo[st] = { pop2024: (statePop[name] || {}).p24 || null, pop2020: (statePop[name] || {}).p20 || null,
+    gov: u ? { website: u.website || null, governor: u.governor || null, agencies: (u.agencies || []).slice(0, 16), src: u.url } : null,
+    fin: fin && fin.states[name] ? { year: fin.year, source: fin.source, url: fin.url, table: fin.table, rows: fin.states[name] } : null };
+}
+
+const out = { generated: new Date().toISOString().slice(0, 10), stateInfo,
   sources: { census: 'U.S. Census Bureau 2024 Gazetteer; Vintage 2024 population estimates', sdwis: 'EPA SDWIS via Envirofacts, pulled ' + new Date().toISOString().slice(0, 10), vera: 'Vera Institute of Justice, Incarceration Trends' },
   states: stName ? Object.fromEntries(Object.entries(stName).map(([a, n]) => [a, { name: n }])) : {}, elections, counties };
 fs.mkdirSync(path.join(ROOT, 'data', 'national'), { recursive: true });
