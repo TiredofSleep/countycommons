@@ -8,6 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 const { esc } = require('../lib/corpus');
+const B = require('../lib/national-blocks');
 
 const ROOT = path.join(__dirname, '..', '..');
 let NAT = null;
@@ -64,7 +65,7 @@ function countyPage(st, slug) {
 <header class="page">
   <div class="eyebrow">${esc(S.name)} · county ${esc(c.geoid)}</div>
   <h1>${esc(place)}: public records at a glance</h1>
-  <div class="src">What national public records say about ${esc(c.name)} — people, drinking water, the jail, and how to vote — each with its source. ${c.site ? '' : `A full County Commons site (the budget line by line, your tax bill, audits, local offices) isn't built for ${esc(c.name)} yet — not gathered, never hidden.`}</div>
+  <div class="src">What national public records say about ${esc(c.name)} — people, schools, health, drinking water, bridges, disaster risk, the jail, federal grants and how to vote — each with its source. ${c.site ? '' : `A full County Commons site (the budget line by line, your tax bill, audits, local offices) isn't built for ${esc(c.name)} yet — not gathered, never hidden.`}</div>
   ${facts.length ? `<p style="margin-top:10px">${facts.join('<br>')}</p>` : ''}
 </header>
 
@@ -85,6 +86,12 @@ ${j ? `<p>About <b>${num(j.pop)}</b> people were held in ${esc(c.name)}'s jail, 
     : `<p>No county jail figure in the national data for ${esc(c.name)} — not gathered, never hidden. Some counties share a regional jail or have none.</p>`}
 </section>
 
+${B.schools(c, N)}
+${B.health(c, N)}
+${B.risk(c)}
+${B.bridges(c)}
+${B.grants(c, N)}
+
 <section>
 <h2>Voting</h2>
 ${el ? `<p><b>${esc(el.name)}: ${esc(el.date_long)}.</b> ${el.lines.map(esc).join(' ')}</p><p class="src">Source: ${el.src.map(s => `<a href="${esc(s.url)}" rel="noopener">${esc(s.label)}</a>`).join(' · ')}</p>`
@@ -98,7 +105,7 @@ ${el ? `<p><b>${esc(el.name)}: ${esc(el.date_long)}.</b> ${el.lines.map(esc).joi
 </section>`;
 
   return page({
-    title: `${place}: population, drinking water, jail and voting — public records · County Commons`,
+    title: `${place}: schools, health, water, bridges, disaster risk, grants and voting · County Commons`,
     description: `${place}${c.pop2024 ? ` (${num(c.pop2024)} people)` : ''}: ${w && w.systems ? `${w.systems} public water systems, ` : ''}${j ? `jail population ${num(j.pop)} (${j.year}), ` : ''}and how to vote — each from official public records, with sources.`,
     canonical, body,
     jsonld: { '@context': 'https://schema.org', '@type': 'AdministrativeArea', name: place, identifier: c.geoid,

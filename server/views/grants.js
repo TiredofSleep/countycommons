@@ -70,6 +70,7 @@ ${loc.fits.map(f => `<div style="border-bottom:1px solid var(--rule-soft);paddin
   <h1>Money we could go get</h1>
   <div class="src">${esc(g.intro)} Dates and terms were read on ${esc(fmt(g.checked))}.</div>
 </header>
+${(() => { const n = require('../lib/national'); const c = n.forCounty(county); return c ? require('../lib/national-blocks').grants(c, n.meta(), { limit: 15 }) : ''; })()}
 
 <section id="deadlines">
 <h2>Deadlines coming up <span class="sub">— soonest first</span></h2>

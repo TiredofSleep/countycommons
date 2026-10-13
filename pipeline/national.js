@@ -130,6 +130,62 @@ for (const t of Object.values(T)) {
   if (c && (!c.site || /County$/.test(cfg.name))) c.site = t.host;
 }
 
+const readJ0 = (f) => { try { return JSON.parse(fs.readFileSync(path.join(RAW, f), 'utf8')); } catch (e) { return null; } };
+// --- Schools: Census school system finances, districts grouped by county of the
+// district office (schools2023.json from elsec23.xlsx; dollars in thousands).
+const byGeo = Object.fromEntries(counties.map(c => [c.geoid, c]));
+const sch = readJ0('schools2023.json');
+if (sch) for (const d of sch.districts) {
+  const c = byGeo[String(d.CONUM).padStart(5, '0')]; if (!c || !(d.V33 > 0)) continue;
+  c.schools = c.schools || { year: sch.year, districts: [] };
+  c.schools.districts.push({ name: String(d.NAME).replace(/\s+/g, ' ').trim(), nces: d.NCESID, enroll: d.V33,
+    rev: d.TOTALREV * 1000, fed: d.TFEDREV * 1000, state: d.TSTREV * 1000, local: d.TLOCREV * 1000, spend: d.TOTALEXP * 1000,
+    current: d.TCURELSC * 1000, capital: d.TCAPOUT * 1000, debt: d._19H * 1000 });
+}
+for (const c of counties) if (c.schools) c.schools.districts.sort((a, b) => b.enroll - a.enroll);
+
+// --- Health (County Health Rankings), disaster risk (FEMA NRI), federal grants (USAspending)
+const chr = readJ0('chr2025.json');
+if (chr) for (const c of counties) { const h = chr.data[c.geoid]; if (h) { c.health = h; } }
+const chrState = {};
+if (chr) for (const [f, v] of Object.entries(chr.data)) if (f.endsWith('000')) chrState[f.slice(0, 2)] = v;
+const HZ = { AVLN: 'Avalanche', CFLD: 'Coastal flooding', CWAV: 'Cold wave', DRGT: 'Drought', ERQK: 'Earthquake', HAIL: 'Hail', HWAV: 'Heat wave', HRCN: 'Hurricane', ISTM: 'Ice storm', LNDS: 'Landslide', LTNG: 'Lightning', IFLD: 'River and inland flooding', SWND: 'Strong wind', TRND: 'Tornado', TSUN: 'Tsunami', VLCN: 'Volcano', WFIR: 'Wildfire', WNTW: 'Winter weather' };
+for (const f of fs.readdirSync(RAW).filter(f => /^nri_\d+\.json$/.test(f))) {
+  for (const { attributes: a } of JSON.parse(fs.readFileSync(path.join(RAW, f), 'utf8')).features) {
+    const c = byGeo[a.STCOFIPS]; if (!c) continue;
+    const hz = Object.keys(HZ).map(k => ({ name: HZ[k], eal: a[k + '_EALT'] || 0, rating: a[k + '_RISKR'] })).filter(h => h.eal > 0).sort((x, y) => y.eal - x.eal).slice(0, 5);
+    c.risk = { rating: a.RISK_RATNG, pctl: a.RISK_SPCTL, eal: a.EAL_VALT, eal_rating: a.EAL_RATNG, sovi: a.SOVI_RATNG, resilience: a.RESL_RATNG, ver: a.NRI_VER, top: hz };
+  }
+}
+const usas = readJ0('usas_fy25.json');
+if (usas) for (const r of usas.results) { const c = byGeo[r.shape_code]; if (c) c.fedgrants = { fy: 2025, amount: r.aggregated_amount, per_capita: r.per_capita }; }
+
+// --- Bridges: FHWA National Bridge Inventory 2025, per-state delimited files
+const nbiDir = path.join(RAW, 'nbi');
+if (fs.existsSync(nbiDir)) for (const f of fs.readdirSync(nbiDir)) {
+  const lines = fs.readFileSync(path.join(nbiDir, f), 'latin1').split(/\r?\n/).filter(Boolean);
+  const split = (l) => { const o = []; let cur = '', q = false; for (const ch of l) { if (ch === "'") q = !q; else if (ch === ',' && !q) { o.push(cur); cur = ''; } else cur += ch; } o.push(cur); return o.map(x => x.trim()); };
+  const h = split(lines.shift()); const I = (k) => h.indexOf(k);
+  const iS = I('STATE_CODE_001'), iC = I('COUNTY_CODE_003'), iB = I('BRIDGE_CONDITION'), iF = I('FACILITY_CARRIED_007'), iX = I('FEATURES_DESC_006A'), iY = I('YEAR_BUILT_027'), iA = I('ADT_029'), iO = I('OTHER_STATE_CODE_098A');
+  for (const l of lines) {
+    const r = split(l); const geo = String(r[iS]).padStart(2, '0') + String(r[iC]).padStart(3, '0');
+    const c = byGeo[geo]; if (!c) continue;
+    const b = c.bridges = c.bridges || { year: 2025, total: 0, good: 0, fair: 0, poor: 0, worst: [] };
+    b.total++; const k = { G: 'good', F: 'fair', P: 'poor' }[r[iB]]; if (k) b[k]++;
+    if (r[iB] === 'P') b.worst.push({ road: r[iF], over: r[iX], built: +r[iY] || null, adt: +r[iA] || 0 });
+  }
+}
+for (const c of counties) if (c.bridges) c.bridges.worst = c.bridges.worst.sort((a, b) => b.adt - a.adt).slice(0, 6);
+
+// --- Open federal grants county governments can apply for (Grants.gov), research-only programs dropped
+const gg = readJ0('gg_posted.json');
+const RESEARCH = /clinical trial|\b(R0[0-9]|R2[0-9]|R3[0-9]|R6[0-9]|K[0-9]{2}|U[0-9]{2}|P[0-9]{2}|T32|F3[0-9])\b|research|fellowship|investigator/i;
+const FOREIGN = /-GHC|USAID|Department of State|Agency for International|Ghana|Kenya|Nigeria|Uganda|Tanzania|Zambia|Malawi|Mozambique|Ethiopia|Haiti|Ukraine|Vietnam|India|Philippines|Indonesia|global health|international/i;
+const today = new Date().toISOString().slice(0, 10);
+const grantsOpen = gg ? gg.data.oppHits.filter(o => o.closeDate && !/National Institutes of Health|National Science Foundation/i.test(o.agency) && !RESEARCH.test(o.title) && !FOREIGN.test(o.agency + ' ' + o.title))
+  .map(o => ({ id: o.id, number: o.number, title: o.title.replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim(), agency: o.agency, close: o.closeDate.replace(/^(\d\d)\/(\d\d)\/(\d{4})$/, '$3-$1-$2') }))
+  .filter(o => o.close >= today).sort((a, b) => a.close.localeCompare(b.close)) : [];
+
 // --- State level: Census state government finances + the USA.gov state directory
 // (asfin2023.json and usagov.json are made from the Census xlsx and the
 // usa.gov/states/<name> pages by the raw-folder prep step).
@@ -145,7 +201,7 @@ for (const [st, name] of Object.entries(stName)) {
     fin: fin && fin.states[name] ? { year: fin.year, source: fin.source, url: fin.url, table: fin.table, rows: fin.states[name] } : null };
 }
 
-const out = { generated: new Date().toISOString().slice(0, 10), stateInfo,
+const out = { generated: new Date().toISOString().slice(0, 10), stateInfo, chrState, grantsOpen, healthSrc: chr ? { year: chr.year, source: chr.source, url: chr.url } : null, schoolSrc: sch ? { year: sch.year, source: sch.source, table: sch.table } : null,
   sources: { census: 'U.S. Census Bureau 2024 Gazetteer; Vintage 2024 population estimates', sdwis: 'EPA SDWIS via Envirofacts, pulled ' + new Date().toISOString().slice(0, 10), vera: 'Vera Institute of Justice, Incarceration Trends' },
   states: stName ? Object.fromEntries(Object.entries(stName).map(([a, n]) => [a, { name: n }])) : {}, elections, counties };
 fs.mkdirSync(path.join(ROOT, 'data', 'national'), { recursive: true });

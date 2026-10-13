@@ -38,4 +38,6 @@ function jailBlock(n) {
 <p class="src">Source: <a href="https://github.com/vera-institute/incarceration-trends" rel="noopener">Vera Institute of Justice, Incarceration Trends</a>, built from federal Bureau of Justice Statistics jail surveys and jail records.</p>
 </section>`;
 }
-module.exports = { forCounty, waterBlock, jailBlock };
+// The whole national file (for blocks that need state comparisons and the open-grants list).
+function meta() { forCounty({ state: '' }); return NAT; }
+module.exports = { forCounty, waterBlock, jailBlock, meta };
