@@ -78,7 +78,8 @@ ${b.worst.length ? `<h3 style="margin-top:10px">Busiest bridges rated poor</h3><
 }
 
 function grants(c, N, opts = {}) {
-  const g = c.fedgrants, open = (N.grantsOpen || []).filter(o => o.close >= new Date().toISOString().slice(0, 10));
+  const cur = require('./grants-open').current(N.grantsOpen);
+  const g = c.fedgrants, open = cur.list;
   if (!g && !open.length) return '';
   return `
 <section id="federal-grants">
@@ -87,7 +88,7 @@ ${g ? `<p>Federal grants paid for <b>${big(g.amount)}</b> of work in ${esc(c.nam
 <p class="src" style="max-width:none">Source: <a href="https://www.usaspending.gov/search" rel="noopener">USAspending.gov</a>, grants by place of performance, fiscal ${g.fy} (Oct. ${g.fy - 1} to Sept. ${g.fy}). Search it by county to see each award.</p>` : ''}
 ${open.length ? `<h3 style="margin-top:12px">Open now: federal grants county governments can apply for</h3>
 <table class="plain"><tbody>${open.slice(0, opts.limit || 12).map(o => `<tr><td><a href="https://www.grants.gov/search-results-detail/${esc(o.id)}" rel="noopener">${esc(o.title)}</a><br><span class="soft" style="font-size:12px">${esc(o.agency)} · ${esc(o.number)}</span></td><td class="num">closes ${esc(o.close)}</td></tr>`).join('')}</tbody></table>
-<p class="src" style="max-width:none">From <a href="https://www.grants.gov/search-grants" rel="noopener">Grants.gov</a>: posted grants listing county governments as eligible, soonest deadline first; research-only and overseas programs left out. ${open.length > (opts.limit || 12) ? `${open.length} are open in all. ` : ''}Cities, towns, school districts and nonprofits have their own lists there.</p>` : ''}
+<p class="src" style="max-width:none">From <a href="https://www.grants.gov/search-grants" rel="noopener">Grants.gov</a>: posted grants listing county governments as eligible, soonest deadline first; research-only and overseas programs left out${cur.fetched ? `; list updated ${esc(cur.fetched.slice(0, 10))}, refreshed weekly` : ''}. ${open.length > (opts.limit || 12) ? `${open.length} are open in all. ` : ''}Cities, towns, school districts and nonprofits have their own lists there.</p>` : ''}
 </section>`;
 }
 

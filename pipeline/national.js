@@ -179,12 +179,7 @@ for (const c of counties) if (c.bridges) c.bridges.worst = c.bridges.worst.sort(
 
 // --- Open federal grants county governments can apply for (Grants.gov), research-only programs dropped
 const gg = readJ0('gg_posted.json');
-const RESEARCH = /clinical trial|\b(R0[0-9]|R2[0-9]|R3[0-9]|R6[0-9]|K[0-9]{2}|U[0-9]{2}|P[0-9]{2}|T32|F3[0-9])\b|research|fellowship|investigator/i;
-const FOREIGN = /-GHC|USAID|Department of State|Agency for International|Ghana|Kenya|Nigeria|Uganda|Tanzania|Zambia|Malawi|Mozambique|Ethiopia|Haiti|Ukraine|Vietnam|India|Philippines|Indonesia|global health|international/i;
-const today = new Date().toISOString().slice(0, 10);
-const grantsOpen = gg ? gg.data.oppHits.filter(o => o.closeDate && !/National Institutes of Health|National Science Foundation/i.test(o.agency) && !RESEARCH.test(o.title) && !FOREIGN.test(o.agency + ' ' + o.title))
-  .map(o => ({ id: o.id, number: o.number, title: o.title.replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim(), agency: o.agency, close: o.closeDate.replace(/^(\d\d)\/(\d\d)\/(\d{4})$/, '$3-$1-$2') }))
-  .filter(o => o.close >= today).sort((a, b) => a.close.localeCompare(b.close)) : [];
+const grantsOpen = gg ? require('../server/lib/grants-open').filter(gg.data.oppHits) : [];
 
 // --- State level: Census state government finances + the USA.gov state directory
 // (asfin2023.json and usagov.json are made from the Census xlsx and the
