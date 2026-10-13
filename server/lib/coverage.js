@@ -47,14 +47,15 @@ function forTenant(key, t) {
   const hasDates = !!(stElect && (stElect.elections || []).some(e => e.date >= today));
   const hasStateGrants = fs.existsSync(path.join(ROOT, 'data/corpus/grants-' + stateSlug + '.json'));
 
+  const nat = require('./national').forCounty(cfg);
   const s = {
     elections: hasDates ? (cfg.election_office ? ['done', 'Dates sourced; local election office listed'] : ['partial', 'State dates sourced; local election office not listed']) : ['none', 'Election dates not gathered yet'],
     turnout: hasTurnout ? ['done', 'Official counts gathered'] : ['none', 'State counts not gathered yet'],
     grants: has('grants.json') ? ['done', 'Matched to local needs'] : hasStateGrants ? ['partial', 'State and federal programs listed; not matched locally'] : ['partial', 'Federal programs only'],
     votes: open ? ['done', `${open} open question${open === 1 ? '' : 's'} + the priorities board`] : ['partial', 'Priorities board open; no county questions yet'],
     budget: hasBudget ? (checked ? ['done', 'Ingested and arithmetic-checked'] : ['partial', 'Ingested; a check needs attention']) : ['none', 'Not ingested yet'],
-    water: water ? ['done', 'Local system researched'] : ['partial', 'Options guide only; local system not researched'],
-    jails: justice && prisons ? ['done', 'Local jail researched; closest prisons mapped'] : prisons ? ['partial', 'Closest prisons mapped; local jail not researched'] : ['partial', 'World ideas only; local jail not researched'],
+    water: water ? ['done', 'Local system researched'] : nat && nat.water ? ['partial', 'EPA water systems listed; local reports not researched'] : ['partial', 'Options guide only; local system not researched'],
+    jails: justice && prisons ? ['done', 'Local jail researched; closest prisons mapped'] : prisons ? ['partial', nat && nat.jail ? 'Closest prisons and jail population mapped; local jail not researched' : 'Closest prisons mapped; local jail not researched'] : ['partial', nat && nat.jail ? 'Jail population mapped; local jail not researched' : 'World ideas only; local jail not researched'],
     docket: issues.length ? ['done', `${doneItems} complete · ${progressItems} in progress · ${openItems} open`] : ['none', 'No docket yet'],
     research: ['done', 'Shared research pages']
   };

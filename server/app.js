@@ -73,6 +73,14 @@ app.use((req, res, next) => {
     // flagship. This is why countycommons.us shows "select your county or city".
     const p = req.path;
     if (p === '/enter' || p.startsWith('/gate') || p === '/health' || p === '/robots.txt' || /\.[a-z0-9]+$/i.test(p)) return next();
+    // The national base template: every U.S. county at /us/<st>/<county>.
+    const us = p.match(/^\/us(?:\/([a-z]{2}))?(?:\/([a-z0-9-]+))?\/?$/);
+    if (us) {
+      const nv = require('./views/national');
+      traffic.note('__network__', req);
+      const html = !us[1] ? nv.usPage() : !us[2] ? nv.statePage(us[1].toUpperCase()) : nv.countyPage(us[1].toUpperCase(), us[2]);
+      return html ? res.send(html) : res.status(404).send(gatePage('No county at that address.', '/'));
+    }
     if (p === '/') {
       traffic.note('__network__', req); // count the landing + where it came from
       res.set('Content-Security-Policy', "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; frame-ancestors 'none'");
@@ -160,6 +168,7 @@ app.get(['/sitemap.xml', '/sitemap-index.xml'], (req, res) => {
     urls.push(`https://${host}/`); // un-built starter
   } else {
     urls.push('https://countycommons.us/');
+    for (const u of require('./views/national').sitemapUrls()) urls.push(u);
     for (const t of directory.featured()) urls.push(`https://${t.host}/`);
   }
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u => `  <url><loc>${u}</loc></url>`).join('\n')}\n</urlset>\n`;

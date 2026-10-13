@@ -89,6 +89,7 @@ ${grp.items.map(o => `
   <div class="src">Clean water is the one public service every person uses every day. This page shows ${w ? 'what the records say about ours, and ' : ''}the options for keeping it safe and affordable as we grow — each graded honestly: proven, piloted, or still in the lab. Updated ${esc((w && w.updated) || g.updated)}.</div>
 </header>
 ${local}
+${require("../lib/national").waterBlock(require("../lib/national").forCounty(county))}
 ${proposal}
 
 <section id="options">

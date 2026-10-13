@@ -3,6 +3,7 @@
 //   node pipeline/indexnow.js                    (all featured sites)
 //   node pipeline/indexnow.js clarkar bentonar   (only these sites)
 //   node pipeline/indexnow.js --paths=/offices,/faq   (only these new pages, every site)
+//   node pipeline/indexnow.js apex                 (the front door and the /us national pages)
 // Nothing here is secret. Each run is appended to data/indexnow-log.json, which
 // the site publishes at /indexnow.json: what was announced, when, and what
 // the search engines answered.
@@ -48,7 +49,7 @@ async function announce(host, paths) {
   const paths = flag ? flag.slice(8).split(',').filter(Boolean) : [];
   const only = args.filter(a => !a.startsWith('--'));
   const hosts = only.length
-    ? directory.featured().filter(t => only.includes(t.key)).map(t => t.host)
+    ? [...(only.includes('apex') ? ['countycommons.us'] : []), ...directory.featured().filter(t => only.includes(t.key)).map(t => t.host)]
     : ['countycommons.us', ...directory.featured().map(t => t.host)];
   const run = { at: new Date().toISOString(), endpoint: 'https://api.indexnow.org/indexnow', paths: paths.length ? paths : 'whole sitemap', sites: [] };
   for (const h of hosts) {
