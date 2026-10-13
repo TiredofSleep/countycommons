@@ -224,6 +224,7 @@ function gatePage(msg, next) {
   <h1>Select your county or city</h1>
   <p class="src" style="max-width:60ch">Public budget transparency, county by county — every dollar traced to its source document, the arithmetic checked in the open. Pick a place to begin. <b>County Commons is an independent community project — not a government website.</b></p>
   <p style="margin:2px 0 4px"><a href="/tour" style="display:inline-block;font-family:var(--mono);font-size:14px;font-weight:600;padding:9px 16px;border:1.5px solid var(--ink);background:var(--ink);color:var(--paper);text-decoration:none">▶ New here? Take the 2-minute tour</a></p>
+  <p class="src" style="margin:6px 0 0">Not listed? <a href="/us">Every county in the United States</a> has a page of public records — population, drinking water, the jail, and how to vote.</p>
   ${msg ? `<p class="src" style="color:var(--dead)">${esc(msg)}</p>` : ''}
   ${list || '<p class="src">No sites are published yet.</p>'}
   <details style="margin:22px 0 0;border-top:1px solid var(--rule);padding-top:12px">
