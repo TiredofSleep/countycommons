@@ -52,6 +52,12 @@ function faqItems(d) {
     add(`When is the next election in ${c.name}, and how do I vote?`,
       `The next election is the <b>${esc(next.name.toLowerCase())} on ${new Date(next.date + 'T12:00:00').toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}</b>.${ev ? ` ${esc(ev.label)} runs ${nice(ev.date)} to ${nice(ev.end)}.` : ''}${off ? ` Your election office is the ${esc(off.name)}${off.phone ? ` (${esc(off.phone)})` : ''}.` : ''} <a href="/elections">Dates, hours, ID rules and where to vote</a>.`);
   }
+  const evc = next && d.earlyVoting && d.earlyVoting.election === next.id && d.earlyVoting.counties[c.name.replace(/ County$/, '')];
+  const evd = next && (next.dates || []).find(x => /early/i.test(x.label) && x.end);
+  if (evc && evc.status === 'found' && evd && evd.end >= today) {
+    add(`Where can I vote early in ${c.name}?`,
+      `For the ${esc(next.name.toLowerCase())}, early voting runs ${nice(evd.date)} to ${nice(evd.end)} at ${evc.sites.map(s => `${esc(s.name)} (${esc([s.address, s.city].filter(Boolean).join(', '))})`).join('; ')}. ${esc(evd.detail)} <a href="/elections#early">Sites, maps and sources</a>.`);
+  }
   const so = d.stateOffices && d.stateOffices.counties && d.stateOffices.counties[c.name.replace(/ County$/, '')];
   if (so) {
     const pick = (k) => (so[k] || [])[0];

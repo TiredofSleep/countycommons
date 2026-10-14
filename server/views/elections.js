@@ -32,6 +32,8 @@ function electionsPage(data, now = new Date()) {
   const today = iso(now);
   const office = county.election_office || null;
   const place = county.name;
+  const evRec = data.earlyVoting && data.earlyVoting.counties && data.earlyVoting.counties[county.name.replace(/ County$/, '')];
+  const evPosted = !!(evRec && evRec.status === 'found' && (st && (st.elections || []).some(e => e.id === data.earlyVoting.election && e.date >= today)));
 
   const header = (lead) => `
 <header class="page">
@@ -43,7 +45,7 @@ function electionsPage(data, now = new Date()) {
   const officeBlock = office ? `
 <section id="where">
 <h2>Where to vote <span class="sub">— ${esc(office.name)}</span></h2>
-${office.early_voting ? `<p><b>Early voting:</b> ${esc(office.early_voting)}</p>` : ''}
+${office.early_voting && !evPosted ? `<p><b>Early voting:</b> ${esc(office.early_voting)}</p>` : ''}${evPosted ? `<p><b>Early voting:</b> <a href="#early">the sites posted for this election</a>.</p>` : ''}
 ${office.election_day ? `<p><b>Election Day:</b> ${esc(office.election_day)}</p>` : ''}
 <p class="src" style="max-width:none">${[office.address, office.phone, office.hours].filter(Boolean).map(esc).join(' · ')}${office.url ? `${office.address || office.phone || office.hours ? ' · ' : ''}<a href="${esc(office.url)}" rel="noopener">${esc(office.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, ''))}</a>` : ''}</p>
 ${srcLine(office.src)}
@@ -68,6 +70,34 @@ ${officeBlock}
   }
 
   const togo = daysUntil(next.date, today);
+
+  // Early-voting sites: what the county posted for this election, each with its
+  // source. A county we haven't found gets the clerk's number, never a guess.
+  const evAll = data.earlyVoting && data.earlyVoting.election === next.id ? data.earlyVoting : null;
+  const ev = evAll && evAll.counties[county.name.replace(/ County$/, '')];
+  const evDate = (next.dates || []).find(d => /early/i.test(d.label) && d.end);
+  const found = ev && ev.status === 'found' && ev.sites && ev.sites.length;
+  const dir = data.stateOfficials && data.stateOfficials.counties && data.stateOfficials.counties[county.name.replace(/ County$/, '')];
+  const clerk = dir && dir.officials.find(o => /clerk/i.test(o.office) && !/^circuit/i.test(o.office) && o.name);
+  const map = (s) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent([s.name, s.address, s.city, county.state].filter(Boolean).join(', '))}`;
+  const earlyBlock = !evAll || !evDate || evDate.end < today ? '' : found ? `
+<section id="early">
+<h2>Early voting sites <span class="sub">— ${esc(short(evDate.date))} to ${esc(short(evDate.end))}</span></h2>
+<p>${ev.sites.length === 1 ? `${esc(place)} has one early-voting site for this election:` : `${esc(place)} has ${ev.sites.length} early-voting sites for this election. A registered ${esc(place)} voter can use any of them.`}</p>
+${ev.sites.map(s => `
+<div class="issue" style="display:block">
+  <b>${esc(s.name)}</b>
+  <p class="src" style="max-width:none;margin:4px 0 0">${esc([s.address, s.city].filter(Boolean).join(', '))} · <a href="${esc(map(s))}" rel="noopener">map</a></p>
+  ${s.note ? `<p style="font-size:14px;margin:4px 0 0">${esc(s.note)}</p>` : ''}
+</div>`).join('')}
+<p style="font-size:14px">${esc(evDate.detail)}${ev.basis === 'state' && ev.sites.length > 1 ? ` The state's list doesn't say which days each site is open, and some counties run a site for only part of early voting — check with the county clerk${clerk && clerk.phone ? ` (<a href="tel:${esc(clerk.phone.replace(/[^\d+]/g, ''))}">${esc(clerk.phone)}</a>)` : ''} before you go.` : ''}</p>
+${srcLine(ev.src)}
+</section>` : `
+<section id="early">
+<h2>Early voting sites <span class="sub">— ${esc(short(evDate.date))} to ${esc(short(evDate.end))}</span></h2>
+<p>We haven't found ${esc(place)}'s posted early-voting sites for this election yet — not gathered, not hidden. In many ${esc(county.state)} counties, early voting is at the county clerk's office. ${clerk ? `Call the county clerk, ${esc(clerk.name)}${clerk.phone ? `, at <a href="tel:${esc(clerk.phone.replace(/[^\d+]/g, ''))}">${esc(clerk.phone)}</a>` : ''}${clerk.address ? ` (${esc(clerk.address)})` : ''}, to confirm where and when.` : 'Call the county clerk to confirm where and when.'}</p>
+<p style="font-size:14px">${esc(evDate.detail)}</p>
+</section>`;
 
   // Local races: every candidate the same way — alphabetical by last name, the
   // same columns, and each required filing shown as filed or "not gathered
@@ -124,6 +154,7 @@ ${filingDefs.map(f => `<div class="issue" style="display:block">
   ${next.what ? `<p style="font-size:14px">${esc(next.what)}</p>` : ''}
 </div>
 </section>
+${earlyBlock}
 ${raceBlock}
 ${moneyBlock}
 
@@ -148,8 +179,13 @@ ${related}
 </section>`;
 
   return layout({
-    title: `Elections — ${county.platform_name}`, current: '/elections', body, county,
-    description: `When, where, and how to vote in ${county.name}: the next election, key deadlines, early voting, ID rules, and how to check your registration.`
+    title: earlyBlock
+      ? `${county.name}, ${county.state} early voting${found ? ' sites' : ''} and election dates: ${next.name.toLowerCase()}, ${asDate(next.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })} · County Commons`
+      : `Elections — ${county.platform_name}`,
+    current: '/elections', body, county,
+    description: found
+      ? `Where to vote early in ${county.name}, ${county.state}: ${ev.sites.slice(0, 3).map(s => s.name).join('; ')}${ev.sites.length > 3 ? ` and ${ev.sites.length - 3} more` : ''}. Early voting ${short(evDate.date)} to ${short(evDate.end)}, hours, ID rules and key dates.`
+      : `When, where, and how to vote in ${county.name}: the next election, key deadlines, early voting, ID rules, and how to check your registration.`
   });
 }
 
