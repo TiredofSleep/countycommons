@@ -131,6 +131,23 @@ for (const t of Object.values(T)) {
 }
 
 const readJ0 = (f) => { try { return JSON.parse(fs.readFileSync(path.join(RAW, f), 'utf8')); } catch (e) { return null; } };
+// --- Cities, towns and named communities in each county (Census 2020
+// place-by-county file), so "what county is <town> in" lands on its county.
+const pc = path.join(RAW, 'place_county.txt');
+if (fs.existsSync(pc)) {
+  const lines = fs.readFileSync(pc, 'latin1').split(/\r?\n/).slice(1).map(l => l.split('|')).filter(r => r.length > 8);
+  const counts = {};
+  for (const r of lines) counts[r[0] + r[4]] = (counts[r[0] + r[4]] || []).concat(r[1] + r[2]);
+  const byGeoP = Object.fromEntries(counties.map(c => [c.geoid, c]));
+  for (const r of lines) {
+    const c = byGeoP[r[1] + r[2]]; if (!c) continue;
+    const kind = r[7] === 'INCORPORATED PLACE' ? 'inc' : 'cdp';
+    const others = (counts[r[0] + r[4]] || []).filter(g => g !== c.geoid).map(g => (byGeoP[g] || {}).name).filter(Boolean);
+    (c.places = c.places || []).push({ name: r[6], kind, also: others.length ? others : undefined });
+  }
+  for (const c of counties) if (c.places) c.places.sort((a, b) => (a.kind === b.kind ? 0 : a.kind === 'inc' ? -1 : 1) || a.name.localeCompare(b.name));
+}
+
 // --- Schools: Census school system finances, districts grouped by county of the
 // district office (schools2023.json from elsec23.xlsx; dollars in thousands).
 const byGeo = Object.fromEntries(counties.map(c => [c.geoid, c]));
@@ -157,6 +174,11 @@ for (const f of fs.readdirSync(RAW).filter(f => /^nri_\d+\.json$/.test(f))) {
     c.risk = { rating: a.RISK_RATNG, pctl: a.RISK_SPCTL, eal: a.EAL_VALT, eal_rating: a.EAL_RATNG, sovi: a.SOVI_RATNG, resilience: a.RESL_RATNG, ver: a.NRI_VER, top: hz };
   }
 }
+// American Rescue Plan Act money (USAspending disaster/emergency fund code V),
+// by recipient location, March 2021 to date — all ARPA programs, not just the
+// county government's own State and Local Fiscal Recovery Fund share.
+const arpa = readJ0('arpa_county.json');
+if (arpa) for (const r of arpa.results) { const c = byGeo[r.shape_code]; if (c) c.arpa = { amount: r.aggregated_amount, per_capita: r.per_capita }; }
 const usas = readJ0('usas_fy25.json');
 if (usas) for (const r of usas.results) { const c = byGeo[r.shape_code]; if (c) c.fedgrants = { fy: 2025, amount: r.aggregated_amount, per_capita: r.per_capita }; }
 
@@ -180,6 +202,36 @@ for (const c of counties) if (c.bridges) c.bridges.worst = c.bridges.worst.sort(
 // --- Open federal grants county governments can apply for (Grants.gov), research-only programs dropped
 const gg = readJ0('gg_posted.json');
 const grantsOpen = gg ? require('../server/lib/grants-open').filter(gg.data.oppHits) : [];
+
+// --- ARPA State and Local Fiscal Recovery Funds: each county government's
+// allocation and its projects, and each city or town's totals, from Treasury's
+// reporting data (slfrf.json, prepped from the workbook). Written to its own
+// file, data/national/arpa.json, loaded only by pages that show it.
+const sl = readJ0('slfrf.json');
+if (sl) {
+  const strip = (s) => norm(String(s).replace(/^(city|town|village|borough|township|municipality)\s+of\s+/i, '').replace(/\s+(city|town|village)$/i, ''));
+  const placeIdx = {};
+  for (const c of counties) for (const p of c.places || []) if (p.kind === 'inc') { const k = c.st + '|' + strip(p.name); (placeIdx[k] = placeIdx[k] || []).push(c.geoid); }
+  const A = { source: sl.source, url: sl.url, counties: {}, cities: {} };
+  const clean = (s) => String(s || '').replace(/\\n/g, ' ').replace(/\s+/g, ' ').trim();
+  for (const r of sl.recipients) {
+    const st = STATE_ABBR[String(r.state || '').trim()]; if (!st) continue;
+    const nm = String(r.name).replace(/,\s*[A-Za-z .]+$/, '').trim();
+    const isCounty = (/\b(county|parish)\b/i.test(nm) || (st === 'AK' && /\bborough\b/i.test(nm))) && !/^(city|town|village|borough)\s+of/i.test(nm);
+    if (isCounty) {
+      const c = counties.find(x => x.st === st && norm(x.name) === norm(nm)); if (!c) continue;
+      A.counties[c.geoid] = { name: r.name, allocation: r.allocation, obligated: r.obligated, spent: r.spent, n: r.n_projects, last: r.last,
+        cats: Object.entries(r.cats).filter(x => x[1] > 0).sort((a, b) => b[1] - a[1]).slice(0, 6),
+        projects: r.projects.slice(0, 8).map(p => ({ name: clean(p.name), cat: p.cat, obligated: p.obligated, spent: p.spent, status: p.status, desc: clean(p.desc).slice(0, 240) })) };
+    } else {
+      const geos = placeIdx[st + '|' + strip(nm)]; if (!geos) continue;
+      for (const g of geos) (A.cities[g] = A.cities[g] || []).push({ name: r.name.replace(/,\s*[A-Za-z .]+$/, ''), allocation: r.allocation, spent: r.spent, n: r.n_projects });
+    }
+  }
+  for (const g of Object.keys(A.cities)) A.cities[g].sort((a, b) => b.allocation - a.allocation);
+  fs.writeFileSync(path.join(ROOT, 'data', 'national', 'arpa.json'), JSON.stringify(A));
+  console.log(`arpa: ${Object.keys(A.counties).length} county governments, cities in ${Object.keys(A.cities).length} counties`);
+}
 
 // --- State level: Census state government finances + the USA.gov state directory
 // (asfin2023.json and usagov.json are made from the Census xlsx and the

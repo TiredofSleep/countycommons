@@ -52,7 +52,7 @@ function classifySource(referer, host) {
 }
 // Known crawlers/scrapers/tools — counted separately so human numbers stay clean.
 function isBot(ua) {
-  return /bot\b|crawl|spider|slurp|facebookexternalhit|facebot|bingpreview|headless|python-requests|curl|wget|httpx|go-http|Googlebot|APIs-Google|AhrefsBot|SemrushBot|DotBot|PetalBot|YandexBot|Applebot|Bytespider|GPTBot|ClaudeBot|CCBot|meta-externalagent|Discordbot|Slackbot|WhatsApp|TelegramBot|Twitterbot|LinkedInBot|Pinterest/i.test(ua || '');
+  return /bot\b|crawl|spider|slurp|facebookexternalhit|facebot|bingpreview|headless|python-requests|curl|wget|httpx|go-http|Googlebot|APIs-Google|AhrefsBot|SemrushBot|DotBot|PetalBot|YandexBot|Applebot|Bytespider|GPTBot|ClaudeBot|CCBot|meta-externalagent|Discordbot|Slackbot|WhatsApp|TelegramBot|Twitterbot|LinkedInBot|Pinterest|Yeti|Seznam|Baiduspider|Sogou|MJ12|Qwant|Mojeek|Exabot|ia_archiver|archive.org|Scrapy|node-fetch|axios|okhttp|Java\/|libwww|PhantomJS|Lighthouse|GoogleOther|Google-InspectionTool|Feedfetcher|Google-Read-Aloud|Amazonbot|ImagesiftBot|Barkrowler|BLEXBot|DataForSeo|serpstat|SEOkicks|Neevabot|YisouSpider|360Spider|coccoc|Daum|Yahoo! Slurp|^$/i.test(ua || '');
 }
 
 // Record one page view for a county. `req` supplies ONLY the Referer and

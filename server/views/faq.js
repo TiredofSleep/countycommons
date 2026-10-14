@@ -65,6 +65,22 @@ function faqItems(d) {
     add(`What did the auditors find in ${c.name}?`,
       `The latest state audit (${esc(v.year)}): ${af.some(x => x.verdict === 'findings') ? 'the auditors reported findings' : 'the auditors reported no findings'}. In their words: “${esc(q)}” <a href="/audits">Everything the auditors reported, with page numbers</a>.`);
   }
+  try {
+    const nrec = require('../lib/national').forCounty(c);
+    const A = nrec && require('../lib/national-blocks').arpaData().counties[nrec.geoid];
+    if (A) {
+      const b = (x) => '$' + (x >= 1e6 ? (x / 1e6).toFixed(1) + ' million' : Math.round(x).toLocaleString('en-US'));
+      const top = A.projects.slice(0, 3).map(p => `${esc(p.name)} (${b(p.obligated)})`).join('; ');
+      add(`How is ${nrec.name} spending its American Rescue Plan (ARPA) money?`,
+        `The county government was allocated ${b(A.allocation)} from the federal Fiscal Recovery Fund and had spent ${b(A.spent)} as of its latest report to Treasury.${top ? ` Its largest projects: ${top}.` : ''} <a href="/atlas#arpa">Every project and category</a>.`);
+    }
+  } catch (e) { /* no national record */ }
+  if (d.auditFindings && d.auditFindings.fiscal) {
+    const F = d.auditFindings.fiscal, k = require('../lib/fiscal-block').facts(F);
+    const m = (x) => (x < 0 ? '−$' : '$') + Math.abs(Math.round(x)).toLocaleString('en-US');
+    add(`Is ${c.name} in financial trouble?`,
+      `Here are the state auditors' own five-year figures, without a verdict: the general fund's year-end balance went from ${m(F.balance[F.years.length - 1])} (${k.from}) to ${m(F.balance[0])} (${k.to}), and spending was more than revenue in ${k.short.length} of ${F.years.length} years.${k.months !== null ? ` At ${k.to} spending, that balance covers about ${k.months.toFixed(1)} months.` : ''} <a href="/audits#fiscal">The year-by-year table and what the auditors found</a>.`);
+  }
   const docs = seo.hasBudget(d) ? seo.sourceDocs(d) : d.documents.documents.filter(x => x.status === 'ingested');
   if (docs.length) {
     add(`Where do these numbers come from?`,

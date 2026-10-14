@@ -74,12 +74,16 @@ ${auditFindings.minutes_finding ? `<section>
 <p>${esc(auditFindings.minutes_finding)}</p>
 </section>` : ''}
 
+${auditFindings.fiscal ? require('../lib/fiscal-block').block(auditFindings.fiscal, (() => { const d = auditFindings.fiscal.source.doc && documents.documents.find(x => x.id === auditFindings.fiscal.source.doc); return d ? `<a href="/documents#${esc(d.id)}">${esc(d.title)}</a>` : `<a href="${esc(auditFindings.fiscal.source.url)}" rel="noopener">the state audit report</a>`; })()) : ''}
 ${Array.isArray(auditFindings.limits) && auditFindings.limits.length ? `<section>
 <h2>What audits cannot tell you <span class="sub">— the honest limits</span></h2>
 ${auditFindings.limits.map(l => `<p class="src">· ${esc(l)}</p>`).join('')}
 </section>` : ''}`;
 
-  return layout({ title: `What the auditors flagged — ${county.platform_name}`, current: '/audits', body, county });
+  const yr = ((auditFindings.verdicts || [])[0] || {}).year || '';
+  const hasF = (auditFindings.verdicts || []).some(v => v.verdict === 'findings');
+  return layout({ title: `${county.name}, ${county.state} audit ${yr}: opinion, findings and material weaknesses · County Commons`, current: '/audits', body, county,
+    description: `What the state auditors found in ${county.name}, ${county.state} (${yr}): ${hasF ? 'the findings, in the auditors’ own words' : 'no findings reported'}, the opinion and internal-control verdict, and five years of general fund money in and out — quoted with page numbers.` });
 }
 
 module.exports = { auditsPage };

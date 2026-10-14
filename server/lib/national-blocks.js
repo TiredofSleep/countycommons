@@ -93,3 +93,48 @@ ${open.length ? `<h3 style="margin-top:12px">Open now: federal grants county gov
 }
 
 module.exports = { schools, health, risk, bridges, grants, big, num };
+
+// --- American Rescue Plan: the county government's Fiscal Recovery Fund
+// allocation and projects (Treasury), its cities' totals, and all ARPA
+// dollars that reached recipients in the county (USAspending).
+let ARPA = null;
+function arpaData() {
+  if (!ARPA) { try { ARPA = JSON.parse(require('fs').readFileSync(require('path').join(__dirname, '..', '..', 'data', 'national', 'arpa.json'), 'utf8')); } catch (e) { ARPA = { counties: {}, cities: {} }; } }
+  return ARPA;
+}
+function arpa(c) {
+  const A = arpaData(), g = A.counties[c.geoid], towns = A.cities[c.geoid] || [];
+  if (!g && !towns.length && !c.arpa) return '';
+  const pct = (a, b) => b > 0 ? Math.round(a / b * 100) + '%' : '';
+  return `
+<section id="arpa">
+<h2>American Rescue Plan money <span class="sub">— how ${esc(c.name)} is spending it</span></h2>
+${g ? `<p>The county government was allocated <b>${big(g.allocation)}</b> from the federal Fiscal Recovery Fund. As of its latest report it had committed ${big(g.obligated)} and spent <b>${big(g.spent)}</b> (${pct(g.spent, g.allocation)}) across ${g.n} project${g.n === 1 ? '' : 's'}.</p>
+${g.cats.length ? `<h3 style="margin-top:10px">Spent so far, by category</h3>${g.cats.map(([k, v]) => row(esc(k), big(v))).join('')}` : ''}
+${g.projects.length ? `<h3 style="margin-top:12px">The largest projects</h3>${g.projects.map(p => `
+<div class="issue" style="display:block">
+  <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><b>${esc(p.name)}</b><span class="num">${big(p.obligated)} committed · ${big(p.spent)} spent</span></div>
+  <p class="src" style="max-width:none;margin:4px 0 0">${esc(p.cat)}${p.status ? ` · ${esc(p.status)}` : ''}${p.desc ? ` — “${esc(p.desc)}${p.desc.length >= 240 ? '…' : ''}”` : ''}</p>
+</div>`).join('')}` : ''}` : `<p>No Fiscal Recovery Fund report from the county government is in Treasury's data — not gathered, never hidden.</p>`}
+${towns.length ? `<h3 style="margin-top:12px">Cities and towns in ${esc(c.name)}</h3>${towns.slice(0, 15).map(t => row(esc(t.name), `${big(t.allocation)} allocated · ${big(t.spent)} spent`)).join('')}${towns.length > 15 ? `<p class="src">And ${towns.length - 15} more.</p>` : ''}` : ''}
+${c.arpa ? `<p class="src" style="max-width:none">All American Rescue Plan programs together — school, hospital, housing, business and other aid as well — sent ${big(c.arpa.amount)} to recipients in ${esc(c.name)} (USAspending.gov, by recipient location).</p>` : ''}
+<p class="src" style="max-width:none">Sources: <a href="${esc(A.url || 'https://home.treasury.gov/')}" rel="noopener">${esc(A.source || 'U.S. Treasury Fiscal Recovery Funds reporting data')}</a> — descriptions are the government's own words in its reports; <a href="https://www.usaspending.gov/disaster/covid-19" rel="noopener">USAspending.gov</a>.</p>
+</section>`;
+}
+
+// --- Cities, towns and communities in the county (Census)
+function places(c) {
+  const p = c.places; if (!p || !p.length) return '';
+  const inc = p.filter(x => x.kind === 'inc'), cdp = p.filter(x => x.kind !== 'inc');
+  const li = (x) => `<li>${esc(x.name)}${x.also ? ` <span class="soft" style="font-size:12px">(also in ${esc(x.also.join(', '))})</span>` : ''}</li>`;
+  return `
+<section id="places">
+<h2>Cities and towns in ${esc(c.name)}</h2>
+${inc.length ? `<ul style="columns:2 220px;padding-left:18px">${inc.map(li).join('')}</ul>` : `<p>No incorporated cities or towns.</p>`}
+${cdp.length ? `<details><summary style="cursor:pointer">Unincorporated communities Census counts (${cdp.length})</summary><ul style="columns:2 220px;padding-left:18px">${cdp.map(li).join('')}</ul></details>` : ''}
+<p class="src" style="max-width:none">Source: <a href="https://www.census.gov/library/reference/code-lists/ansi.html" rel="noopener">U.S. Census Bureau, 2020 places by county</a>. A town listed with other counties crosses county lines.</p>
+</section>`;
+}
+module.exports.arpa = arpa;
+module.exports.places = places;
+module.exports.arpaData = arpaData;

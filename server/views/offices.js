@@ -25,6 +25,7 @@ const OFFICES = [
   ['Emergency management and 911', /emergency management|\bo\.?e\.?m\b|\b911\b|e-?911|communications? (center|facility)/i, 'Disaster planning and the 911 dispatch center.'],
   ['Veterans service officer', /veteran/i, 'Free help for veterans and families with VA benefits.'],
   ['Roads', /\broad\b/i, 'County roads and bridges.'],
+  ['Landfill and solid waste', /solid waste|landfill|sanitation|recycl/i, 'Trash, recycling, and the county landfill or transfer station.'],
   ['Library', /library/i, 'The county library system.'],
   ['Extension office (county share)', /extension/i, 'The county’s share of the cooperative extension office (farm, 4-H, food and family programs).']
 ];
@@ -96,7 +97,7 @@ ${state || `<p>We haven't gathered the state offices located in ${esc(county.nam
 </section>`;
 
   return layout({
-    title: `${county.name}, ${county.state} offices: county clerk, assessor, collector, sheriff and state offices — who to call · County Commons`,
+    title: `${county.name}, ${county.state} offices: tax collector, assessor, county clerk, sheriff, landfill, DHS office — who to call · County Commons`,
     current: '/offices', body, county,
     description: `Who to call in ${county.name}, ${county.state}: the county clerk, assessor, tax collector, treasurer, sheriff and other county offices — what each does and what it costs — plus state offices in the county.`
   });
