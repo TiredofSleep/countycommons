@@ -43,10 +43,15 @@ function officesPage(data) {
   const site = ((county.jurisdictions || [])[0] || {}).website;
   const eo = county.election_office;
   const hasBudget = seo.hasBudget(data);
+  const cname = county.name.replace(/ County$/, '');
+  const dir = data.stateOfficials && data.stateOfficials.counties && data.stateOfficials.counties[cname];
+  // Directory offices read "Judge", "Clerk and Circuit Clerk"; match them as county offices.
+  const dirOfficials = dir ? dir.officials.map(o => ({ ...o, office: 'County ' + o.office })) : [];
 
   const rows = OFFICES.map(([label, re, what]) => {
     const lines = hasBudget ? topMatches(data, re) : [];
-    const who = officials.filter(o => re.test(o.office || '') && o.name);
+    const own = officials.filter(o => re.test(o.office || '') && o.name);
+    const who = own.length ? own : dirOfficials.filter(o => re.test(o.office) && (o.name || o.vacant));
     const contact = label === 'County clerk' && eo ? [eo.address, eo.phone].filter(Boolean).join(' · ') : '';
     if (!lines.length && !who.length && !contact) return '';
     const sum = lines.reduce((s, n) => s + n.amount, 0);
@@ -54,14 +59,21 @@ function officesPage(data) {
 <div class="issue" style="display:block">
   <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><b>${esc(label)}</b>${lines.length ? `<span class="num">${seo.full(sum)} <span class="soft" style="font-size:12.5px">in ${seo.year(data)} budget lines named for it</span></span>` : ''}</div>
   ${AR ? `<p style="margin:4px 0 0;font-size:14.5px">${esc(what)}</p>` : ''}
-  ${who.length ? `<p class="src" style="max-width:none;margin:4px 0 0">${who.map(o => `${esc(o.office)}: ${esc(o.name)}`).join(' · ')}</p>` : ''}
+  ${who.map(o => `<p class="src" style="max-width:none;margin:4px 0 0">${esc(o.office)}: ${o.vacant ? 'vacant, per the directory' : `<b>${esc(o.name)}</b>`}${o.phone ? ` · <a href="tel:${esc(o.phone.replace(/[^\d+]/g, ''))}">${esc(o.phone)}</a>` : ''}${o.address ? ` · ${esc(o.address)}` : ''}</p>`).join('')}
   ${contact ? `<p class="src" style="max-width:none;margin:4px 0 0">${esc(contact)}</p>` : ''}
   ${lines.length ? `<p class="src" style="max-width:none;margin:4px 0 0">Budget: ${lines.slice(0, 4).map(n => `<a href="/line/${esc(n.id)}">${esc(n.name)}</a> ${seo.short(n.amount)}`).join(' · ')}${lines.length > 4 ? ` · and ${lines.length - 4} more` : ''}</p>` : ''}
 </div>`;
   }).filter(Boolean);
 
-  const cname = county.name.replace(/ County$/, '');
   const local = so && so.counties && so.counties[cname];
+  const srcDir = dir ? `<p class="src">Names, phones and addresses not in the county's own records here are from the <a href="${esc(dir.url)}" rel="noopener">${esc(data.stateOfficials.source.label)}</a> (checked ${esc(data.stateOfficials.retrieved)}). Elected officials are named; staff are not. New terms start January 1 after a November election.</p>` : '';
+  const court = dir && dir.justices.length ? `
+<section id="quorum-court">
+<h2>Quorum court <span class="sub">— the ${dir.justices.length} justices of the peace</span></h2>
+<p>The quorum court is ${esc(county.name)}'s legislative body. Its justices of the peace adopt the budget, set county tax rates within state limits, and pass county ordinances. Each one is elected from a district.</p>
+<p>${dir.justices.map(esc).join(' · ')}${dir.justices_vacant ? ` · and ${dir.justices_vacant} seat${dir.justices_vacant === 1 ? '' : 's'} listed as vacant` : ''}</p>
+<p class="src">Source: <a href="${esc(dir.url)}" rel="noopener">${esc(data.stateOfficials.source.label)}</a>, checked ${esc(data.stateOfficials.retrieved)}. The directory doesn't list districts; the county clerk can tell you which justice represents you.</p>
+</section>` : '';
   const state = local ? Object.entries(so.agencies || {}).map(([k, a]) => {
     const list = local[k] || [];
     if (!list.length) return '';
@@ -85,7 +97,9 @@ function officesPage(data) {
 <h2>County offices</h2>
 ${rows.length ? rows.join('') : `<p>We haven't matched ${esc(county.name)}'s offices yet — not gathered, not hidden.</p>`}
 ${hasBudget ? `<p class="src">Amounts add up the ${seo.year(data)} budget lines whose names match each office. An office can also be paid from lines named differently, so treat these as a floor — open each line to see its source page, or walk the whole <a href="/budget">money trail</a>.</p>` : ''}
+${srcDir}
 </section>
+${court}
 
 <section>
 <h2>State offices in ${esc(county.name)}</h2>
@@ -97,9 +111,13 @@ ${state || `<p>We haven't gathered the state offices located in ${esc(county.nam
 </section>`;
 
   return layout({
-    title: `${county.name}, ${county.state} offices: tax collector, assessor, county clerk, sheriff, landfill, DHS office — who to call · County Commons`,
+    title: dir
+      ? `${county.name}, ${county.state} elected officials and offices: county judge, clerk, assessor, collector, sheriff, quorum court — who to call · County Commons`
+      : `${county.name}, ${county.state} offices: tax collector, assessor, county clerk, sheriff, landfill, DHS office — who to call · County Commons`,
     current: '/offices', body, county,
-    description: `Who to call in ${county.name}, ${county.state}: the county clerk, assessor, tax collector, treasurer, sheriff and other county offices — what each does and what it costs — plus state offices in the county.`
+    description: dir
+      ? `${county.name}, ${county.state} elected officials with phone numbers: county judge${(dirOfficials.find(o => /Judge/.test(o.office)) || {}).name ? ' ' + dirOfficials.find(o => /Judge/.test(o.office)).name : ''}, county clerk, assessor, collector, treasurer, sheriff, coroner, and the ${dir.justices.length} quorum court justices — plus what each office costs and state offices in the county.`
+      : `Who to call in ${county.name}, ${county.state}: the county clerk, assessor, tax collector, treasurer, sheriff and other county offices — what each does and what it costs — plus state offices in the county.`
   });
 }
 

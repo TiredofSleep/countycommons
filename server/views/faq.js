@@ -58,6 +58,12 @@ function faqItems(d) {
     const parts = [['dhs', 'DHS (SNAP, Medicaid, ARKids)'], ['revenue', 'the state revenue office (car tags, titles, driver’s licenses)'], ['health', 'the health unit']].map(([k, l]) => pick(k) ? `${l}: ${esc([pick(k).address, pick(k).city, pick(k).phone].filter(Boolean).join(', '))}` : '').filter(Boolean);
     if (parts.length) add(`Where is the DHS office, revenue office or health unit in ${c.name}?`, `${parts.join('; ')}. <a href="/offices">Every county and state office in ${esc(c.name)}</a>.`);
   }
+  const dir = d.stateOfficials && d.stateOfficials.counties && d.stateOfficials.counties[c.name.replace(/ County$/, '')];
+  if (dir && dir.officials.length) {
+    const named = dir.officials.filter(o => o.name).map(o => `${esc(o.office.toLowerCase())}, ${esc(o.name)}${o.phone ? ` (${esc(o.phone)})` : ''}`);
+    add(`Who are the elected officials in ${c.name}?`,
+      `As listed by the ${esc(d.stateOfficials.source.label)}: ${named.join('; ')}.${dir.justices.length ? ` The quorum court has ${dir.justices.length} justices of the peace: ${dir.justices.map(esc).join(', ')}.` : ''} <a href="/offices">What each office does and costs</a>.`);
+  }
   const af = d.auditFindings && d.auditFindings.verdicts;
   if (af && af.length) {
     const v = af.find(x => x.verdict === 'findings') || af[0];

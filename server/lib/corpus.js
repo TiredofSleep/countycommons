@@ -127,6 +127,8 @@ function load(tenantKey) {
   const surveillanceGuide = sharedRead('surveillance-guide.json');
   // State offices located in each county (DHS, revenue, extension, health), one file per state.
   const stateOffices = sharedRead('offices-' + String(county.state || '').toLowerCase().replace(/\s+/g, '-') + '.json');
+  // Elected county officials and justices of the peace, from a statewide directory.
+  const stateOfficials = sharedRead('officials-' + String(county.state || '').toLowerCase().replace(/\s+/g, '-') + '.json');
   let surveillance = null;
   try { surveillance = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'surveillance.json'), 'utf8')); } catch (e) { /* not researched yet */ }
   let help = null;
@@ -154,7 +156,7 @@ function load(tenantKey) {
   if (verification) {
     for (const c of verification.checks) verifyByNode.set(c.node, c);
   }
-  const data = { budget, docket, documents, county, verification, comparisons, vendors, auditFindings, spending, taxDebt, whatIf, myBill, market, taxLab, commonwealth, water, waterGuide, justice, justiceGuide, surveillance, surveillanceGuide, stateOffices, prisonsNear, turnout, turnoutLocal, elections, grants, grantsState, grantsGuide, stance, cases, help, calendar, research, issueDrafts, byId, childrenOf, verifyByNode };
+  const data = { budget, docket, documents, county, verification, comparisons, vendors, auditFindings, spending, taxDebt, whatIf, myBill, market, taxLab, commonwealth, water, waterGuide, justice, justiceGuide, surveillance, surveillanceGuide, stateOffices, stateOfficials, prisonsNear, turnout, turnoutLocal, elections, grants, grantsState, grantsGuide, stance, cases, help, calendar, research, issueDrafts, byId, childrenOf, verifyByNode };
   // Lay this county's writable overlay (a local host's edits) on top of the
   // git-seeded corpus. Only whitelisted sections merge (see overlay.js); the
   // bones are never touched. Resolve to the default county when unkeyed.
