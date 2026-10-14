@@ -92,6 +92,7 @@ ${B.schools(c, N)}
 ${B.health(c, N)}
 ${B.risk(c)}
 ${B.bridges(c)}
+${B.housing(c)}
 ${B.grants(c, N)}
 ${B.arpa(c)}
 ${B.places(c)}
@@ -110,7 +111,7 @@ ${RK.neighbors(c, N)}
 </section>`;
 
   return page({
-    title: `${place}: schools, health, ARPA money, water, bridges, towns and voting · County Commons`,
+    title: `${place}: schools, health, rent, ARPA money, water, bridges, towns and voting · County Commons`,
     description: `${place}${c.pop2024 ? ` (${num(c.pop2024)} people)` : ''}: ${w && w.systems ? `${w.systems} public water systems, ` : ''}${j ? `jail population ${num(j.pop)} (${j.year}), ` : ''}and how to vote — each from official public records, with sources.`,
     canonical, body,
     jsonld: { '@context': 'https://schema.org', '@type': 'AdministrativeArea', name: place, identifier: c.geoid,

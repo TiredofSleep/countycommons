@@ -19,6 +19,7 @@ const MEASURES = [
   ['child poverty', c => c.health && c.health['Children in Poverty'], false, v => (v * 100).toFixed(1) + '%'],
   ['households with broadband internet', c => c.health && c.health['Broadband Access'], true, v => (v * 100).toFixed(1) + '%'],
   ['median household income', c => c.health && c.health['Median Household Income'], true, v => '$' + num(v)],
+  ['two-bedroom fair market rent', c => c.housing && c.housing.areas[0] && c.housing.areas[0].rent[2], null, v => '$' + num(v) + ' a month'],
   ['share of bridges rated poor', c => c.bridges && c.bridges.total >= 10 ? c.bridges.poor / c.bridges.total : null, false, v => (v * 100).toFixed(1) + '%'],
   ['federal grant dollars per resident', c => c.fedgrants && c.fedgrants.per_capita, null, v => '$' + num(v)],
   ['expected yearly losses from natural hazards', c => c.risk && c.risk.eal, false, v => v >= 1e6 ? '$' + (v / 1e6).toFixed(1) + ' million' : '$' + num(v)]

@@ -21,6 +21,7 @@ ${B.schools(c, N)}
 ${B.health(c, N)}
 ${B.risk(c)}
 ${B.bridges(c)}
+${B.housing(c)}
 ${B.grants(c, N)}
 ${B.arpa(c)}
 ${B.places(c)}
@@ -29,7 +30,7 @@ ${B.places(c)}
 <header class="page"><div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · by the numbers</div><h1>By the numbers</h1>
 <div class="src">National county figures aren't matched to ${esc(county.name)} yet — not gathered, never hidden.</div></header>`;
   return layout({
-    title: `${county.name}, ${county.state} by the numbers: schools, health, disaster risk, bridges and grants · County Commons`,
+    title: `${county.name}, ${county.state} by the numbers: schools, health, rent, disaster risk, bridges and grants · County Commons`,
     current: '/atlas', body, county,
     description: c ? `${c.name}, ${county.state}: school district budgets and spending per student, health and broadband, FEMA disaster risk, bridge conditions and federal grants — from national public records.` : undefined
   });

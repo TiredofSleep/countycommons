@@ -77,6 +77,23 @@ ${b.worst.length ? `<h3 style="margin-top:10px">Busiest bridges rated poor</h3><
 </section>`;
 }
 
+function housing(c) {
+  const h = c.housing; if (!h || !h.areas.length) return '';
+  const BR = ['Studio', '1 bedroom', '2 bedrooms', '3 bedrooms', '4 bedrooms'];
+  const a0 = h.areas[0], two = a0.rent[2], need = two * 12 / 0.3;
+  const mhi = c.health && c.health['Median Household Income'];
+  const chg = (a, i) => a.prev && a.prev[i] ? (a.rent[i] === a.prev[i] ? 'same' : `${a.rent[i] > a.prev[i] ? '+' : '−'}$${num(Math.abs(a.rent[i] - a.prev[i]))}`) : '';
+  const table = (a) => `<table class="plain"><thead><tr><th>Size</th><th class="num">Rent a month, FY${h.fy}</th><th class="num">Change from FY${h.fy - 1}</th></tr></thead><tbody>${a.rent.map((r, i) => `<tr><td>${BR[i]}</td><td class="num">$${num(r)}</td><td class="num">${chg(a, i)}</td></tr>`).join('')}</tbody></table>`;
+  const many = h.areas.length > 1;
+  return `
+<section id="housing">
+<h2>Housing costs <span class="sub">— what rent runs, FY${h.fy}</span></h2>
+<p>A modest two-bedroom rental in ${esc(c.name)} runs about <b>$${num(two)} a month</b>, including utilities${many ? ` in ${esc(a0.area)}, the area with the most people` : ''}. To pay that with no more than 30% of income — the line HUD uses for “affordable” — a household needs about <b>$${num(Math.round(need / 100) * 100)} a year</b>.${mhi ? ` The county's median household earns about $${num(mhi)}, so that rent would take about ${Math.round(two * 12 / mhi * 100)}% of its income.` : ''}</p>
+${many ? h.areas.map(a => `<h3 style="margin-top:12px">${esc(a.area)}${a.towns ? ` <span class="sub">— ${a.towns} town${a.towns === 1 ? '' : 's'} in ${esc(c.name)}</span>` : ''}</h3>${table(a)}`).join('') + (h.more ? `<p class="src">And ${h.more} smaller rent areas in the county.</p>` : '') : table(a0)}
+<p class="src" style="max-width:none">Source: <a href="https://www.huduser.gov/portal/datasets/fmr.html" rel="noopener">U.S. Department of Housing and Urban Development, Fair Market Rents</a>, FY${h.fy} (in effect since Oct. 1, ${h.fy - 1}) and FY${h.fy - 1}${!many && a0.metro ? `; ${esc(c.name)} is priced as part of the ${esc(a0.area)}` : ''}. A fair market rent is HUD's estimate of rent plus utilities for a standard, modest unit — about the 40th percentile of what recent movers paid. It sets how much a housing voucher (Section 8) will cover. ${mhi ? 'Median income: County Health Rankings 2025. ' : ''}For help with rent, call 211 or find your <a href="https://www.hud.gov/contactus/public-housing-contacts" rel="noopener">local public housing agency</a>.</p>
+</section>`;
+}
+
 function grants(c, N, opts = {}) {
   const cur = require('./grants-open').current(N.grantsOpen);
   const g = c.fedgrants, open = cur.list;
@@ -92,7 +109,7 @@ ${open.length ? `<h3 style="margin-top:12px">Open now: federal grants county gov
 </section>`;
 }
 
-module.exports = { schools, health, risk, bridges, grants, big, num };
+module.exports = { schools, health, risk, bridges, housing, grants, big, num };
 
 // --- American Rescue Plan: the county government's Fiscal Recovery Fund
 // allocation and projects (Treasury), its cities' totals, and all ARPA

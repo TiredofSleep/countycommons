@@ -73,6 +73,12 @@ function faqItems(d) {
   }
   try {
     const nrec = require('../lib/national').forCounty(c);
+    const H = nrec && nrec.housing && nrec.housing.areas[0];
+    if (H) {
+      const mhi = nrec.health && nrec.health['Median Household Income'];
+      add(`How much is rent in ${nrec.name}?`,
+        `HUD's fair market rent for fiscal ${nrec.housing.fy}: <b>$${H.rent[2].toLocaleString('en-US')} a month</b> for a two-bedroom, $${H.rent[1].toLocaleString('en-US')} for one bedroom, $${H.rent[3].toLocaleString('en-US')} for three — rent plus utilities for a modest unit${nrec.housing.areas.length > 1 ? `, in ${esc(H.area)}` : ''}. Paying the two-bedroom rent with 30% of income takes about $${(Math.round(H.rent[2] * 40 / 100) * 100).toLocaleString('en-US')} a year${mhi ? `; the median household earns about $${mhi.toLocaleString('en-US')}` : ''}. <a href="/atlas#housing">Every size, and the change from last year</a>.`);
+    }
     const A = nrec && require('../lib/national-blocks').arpaData().counties[nrec.geoid];
     if (A) {
       const b = (x) => '$' + (x >= 1e6 ? (x / 1e6).toFixed(1) + ' million' : Math.round(x).toLocaleString('en-US'));

@@ -199,6 +199,28 @@ if (fs.existsSync(nbiDir)) for (const f of fs.readdirSync(nbiDir)) {
 }
 for (const c of counties) if (c.bridges) c.bridges.worst = c.bridges.worst.sort((a, b) => b.adt - a.adt).slice(0, 6);
 
+// --- Housing: HUD Fair Market Rents, FY2027 (effective Oct. 1, 2026) and FY2026,
+// studio to four bedrooms (fmr2027.json, dumped from HUD's two xlsx files). New
+// England rents are set by town, so a county there can have several areas.
+const fmr = readJ0('fmr2027.json');
+if (fmr) {
+  const areas = (tab) => {
+    const h = tab.head, I = (k) => h.indexOf(k), iP = h.findIndex(k => /^pop20/.test(k)), by = {};
+    for (const r of tab.rows) {
+      const geo = String(r[I('fips')]).slice(0, 5), k = r[I('hud_area_code')];
+      const a = ((by[geo] = by[geo] || {})[k] = by[geo][k] || { area: r[I('hud_area_name')], metro: !!r[I('metro')], rent: [0, 1, 2, 3, 4].map(n => r[I('fmr_' + n)]), pop: 0, towns: 0 });
+      a.pop += +r[iP] || 0; if (r[I('county_town_name')]) a.towns++;
+    }
+    return by;
+  };
+  const now = areas(fmr.fy27), prev = areas(fmr.fy26);
+  for (const c of counties) {
+    const A = now[c.geoid]; if (!A) continue;
+    const list = Object.entries(A).map(([k, a]) => ({ ...a, prev: prev[c.geoid] && prev[c.geoid][k] ? prev[c.geoid][k].rent : null })).sort((x, y) => y.pop - x.pop);
+    c.housing = { fy: 2027, areas: list.slice(0, 5), more: Math.max(0, list.length - 5) };
+  }
+}
+
 // --- Open federal grants county governments can apply for (Grants.gov), research-only programs dropped
 const gg = readJ0('gg_posted.json');
 const grantsOpen = gg ? require('../server/lib/grants-open').filter(gg.data.oppHits) : [];
