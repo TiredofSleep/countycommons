@@ -33,6 +33,8 @@ function electionsPage(data, now = new Date()) {
   const office = county.election_office || null;
   const place = county.name;
   const evRec = data.earlyVoting && data.earlyVoting.counties && data.earlyVoting.counties[county.name.replace(/ County$/, '')];
+  const edNow = require('../lib/election-day').current(county.state);
+  const edPosted = edNow && st && (st.elections || []).some(e => e.id === edNow.election && e.date >= today) ? edNow.counties[county.name.replace(/ County$/, '')] || null : null;
   const evPosted = !!(evRec && evRec.status === 'found' && (st && (st.elections || []).some(e => e.id === data.earlyVoting.election && e.date >= today)));
 
   const header = (lead) => `
@@ -46,7 +48,7 @@ function electionsPage(data, now = new Date()) {
 <section id="where">
 <h2>Where to vote <span class="sub">— ${esc(office.name)}</span></h2>
 ${office.early_voting && !evPosted ? `<p><b>Early voting:</b> ${esc(office.early_voting)}</p>` : ''}${evPosted ? `<p><b>Early voting:</b> <a href="#early">the sites posted for this election</a>.</p>` : ''}
-${office.election_day ? `<p><b>Election Day:</b> ${esc(office.election_day)}</p>` : ''}
+${office.election_day && !edPosted ? `<p><b>Election Day:</b> ${esc(office.election_day)}</p>` : ''}${edPosted ? `<p><b>Election Day:</b> <a href="#election-day">${edPosted.vote_centers ? 'the vote centers' : 'the polling places'} for this election</a>.</p>` : ''}
 <p class="src" style="max-width:none">${[office.address, office.phone, office.hours].filter(Boolean).map(esc).join(' · ')}${office.url ? `${office.address || office.phone || office.hours ? ' · ' : ''}<a href="${esc(office.url)}" rel="noopener">${esc(office.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, ''))}</a>` : ''}</p>
 ${srcLine(office.src)}
 </section>` : `
@@ -70,6 +72,23 @@ ${officeBlock}
   }
 
   const togo = daysUntil(next.date, today);
+
+  // Election Day: vote centers (any site in the county) or precinct polling
+  // places (your own site only), from the state's list, refreshed daily.
+  const edAll = require('../lib/election-day').current(county.state);
+  const ed = edAll && edAll.election === next.id && edAll.counties[county.name.replace(/ County$/, '')];
+  const edRow = (s) => `<tr><td>${esc(s.name)}<br><span class="soft" style="font-size:12px">${esc([s.address, s.city].filter(Boolean).join(', '))}</span></td><td class="num"><a href="${esc(`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent([s.name, s.address, s.city, county.state].filter(Boolean).join(', '))}`)}" rel="noopener">map</a></td></tr>`;
+  const edTable = ed ? `<div style="overflow-x:auto;max-width:100%"><table class="plain"><tbody>${ed.sites.map(edRow).join('')}</tbody></table></div>` : '';
+  const voterView = '<a href="https://www.voterview.ar-nova.org/voterview" rel="noopener">VoterView</a>';
+  const edayBlock = !ed || !ed.sites.length ? '' : `
+<section id="election-day">
+<h2>Where to vote on Election Day <span class="sub">— ${esc(long(next.date))}${next.hours ? `, ${esc(next.hours)}` : ''}</span></h2>
+${ed.vote_centers
+    ? `<p>${esc(place)} uses <b>vote centers</b>: a registered ${esc(place)} voter can vote at any of these ${ed.sites.length} site${ed.sites.length === 1 ? '' : 's'}, whatever your precinct.</p>`
+    : `<p>${esc(place)} votes <b>by precinct</b> on Election Day: you have to vote at your own polling place. Look yours up on ${voterView}, the state's voter lookup, or call the county clerk. These are all ${ed.sites.length} polling places in the county.</p>`}
+${ed.sites.length > 20 ? `<details><summary>Show all ${ed.sites.length} ${ed.vote_centers ? 'vote centers' : 'polling places'}</summary>${edTable}</details>` : edTable}
+<p class="src" style="max-width:none">Source: <a href="${esc(edAll.source.url)}" rel="noopener">${esc(edAll.source.label)}</a>; list checked ${esc(new Date(edAll.fetched).toLocaleDateString('en-US', { timeZone: 'America/Chicago', month: 'short', day: 'numeric', year: 'numeric' }))}, refreshed daily until the election. Your sample ballot and ${voterView} have the final word for your address.</p>
+</section>`;
 
   // Early-voting sites: what the county posted for this election, each with its
   // source. A county we haven't found gets the clerk's number, never a guess.
@@ -155,6 +174,7 @@ ${filingDefs.map(f => `<div class="issue" style="display:block">
 </div>
 </section>
 ${earlyBlock}
+${edayBlock}
 ${raceBlock}
 ${moneyBlock}
 

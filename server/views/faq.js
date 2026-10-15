@@ -58,6 +58,15 @@ function faqItems(d) {
     add(`Where can I vote early in ${c.name}?`,
       `For the ${esc(next.name.toLowerCase())}, early voting runs ${nice(evd.date)} to ${nice(evd.end)} at ${evc.sites.map(s => `${esc(s.name)} (${esc([s.address, s.city].filter(Boolean).join(', '))})`).join('; ')}. ${esc(evd.detail)} <a href="/elections#early">Sites, maps and sources</a>.`);
   }
+  const edAll = next && require('../lib/election-day').current(c.state);
+  const edc = edAll && edAll.election === next.id && edAll.counties[c.name.replace(/ County$/, '')];
+  if (edc && edc.sites.length) {
+    const list = edc.sites.slice(0, 6).map(s => `${esc(s.name)} (${esc(s.address)})`).join('; ') + (edc.sites.length > 6 ? `; and ${edc.sites.length - 6} more` : '');
+    add(`Where do I vote on Election Day in ${c.name}?`,
+      edc.vote_centers
+        ? `${esc(c.name)} uses vote centers: on ${nice(next.date)}${next.hours ? `, ${esc(next.hours)}` : ''}, a registered voter can vote at any of its ${edc.sites.length}: ${list}. <a href="/elections#election-day">Every site, with maps</a>.`
+        : `${esc(c.name)} votes by precinct: on ${nice(next.date)} you vote at your own polling place, which the state's VoterView lookup shows. The county has ${edc.sites.length} polling places. <a href="/elections#election-day">Every polling place, with maps</a>.`);
+  }
   const so = d.stateOffices && d.stateOffices.counties && d.stateOffices.counties[c.name.replace(/ County$/, '')];
   if (so) {
     const pick = (k) => (so[k] || [])[0];
