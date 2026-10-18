@@ -60,6 +60,7 @@ function siteMap(county, current) {
       ['/surveillance', 'Who’s watching — cameras, plate readers, the rules'],
       ['/offices', 'Who to call — county and state offices'],
       ['/atlas', 'By the numbers — schools, health, disaster risk, bridges, grants'],
+      ['/compare', 'How it compares — beside similar counties and the rest of the state'],
       ['/what-works', 'What has worked — how the county compares, and options with a track record'],
       ['/help', 'Find help']
     ]],
