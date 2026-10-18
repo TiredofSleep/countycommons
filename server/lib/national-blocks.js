@@ -94,6 +94,48 @@ ${many ? h.areas.map(a => `<h3 style="margin-top:12px">${esc(a.area)}${a.towns ?
 </section>`;
 }
 
+// Voting, from the state's own file (data/corpus/elections-<state>.json), read
+// when the page is made so each date shows as passed, open now, or days away.
+const elCache = {};
+function stateElections(name) {
+  const p = require('path').join(__dirname, '..', '..', 'data', 'corpus', 'elections-' + String(name).toLowerCase().replace(/\s+/g, '-') + '.json');
+  const fs = require('fs');
+  let m; try { m = fs.statSync(p).mtimeMs; } catch (e) { return null; }
+  if (!elCache[p] || elCache[p].m !== m) { try { elCache[p] = { m, d: JSON.parse(fs.readFileSync(p, 'utf8')) }; } catch (e) { return null; } }
+  return elCache[p].d;
+}
+function voting(stateName, placeName) {
+  const e = stateElections(stateName);
+  const now = new Date(), today = now.toLocaleDateString('en-CA', { timeZone: 'America/Chicago' });
+  const next = e && (e.elections || []).filter(x => x.date >= today).sort((a, b) => a.date.localeCompare(b.date))[0];
+  if (!next) return `
+<section id="voting">
+<h2>Voting</h2>
+<p>Registration deadlines, early voting and polling places for ${esc(stateName)} are on the federal site <a href="https://vote.gov/" rel="noopener">vote.gov</a>, which links to the state's official election office.</p>
+</section>`;
+  const D = (s) => new Date(s + 'T12:00:00');
+  const fmt = (s) => D(s).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+  const days = (s) => Math.round((D(s) - D(today)) / 86400000);
+  const mark = (d) => { const end = d.end || d.date; if (end < today) return '<span class="chip">passed</span>'; if (d.date <= today) return `<span class="chip c-ok">${d.end ? 'open now' : 'today'}</span>`; const n = days(d.date); return `<span class="chip c-part">in ${n} day${n === 1 ? '' : 's'}</span>`; };
+  const cite = (s) => `<a href="${esc(s.url)}" rel="noopener">${esc(s.label || s.url)}</a>`;
+  const togo = days(next.date);
+  return `
+<section id="voting">
+<h2>Voting <span class="sub">— ${esc(/^[A-Z][a-z]+( [a-z]+)*$/.test(next.name) ? next.name.toLowerCase() : next.name)},${esc(D(next.date).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' }))}${togo > 0 ? ` · ${togo} day${togo === 1 ? '' : 's'} away` : togo === 0 ? ' · today' : ''}</span></h2>
+${next.hours ? `<p>Polls are open <b>${esc(next.hours)}</b>.${e.intro ? ` ${esc(e.intro)}` : ''}</p>` : e.intro ? `<p>${esc(e.intro)}</p>` : ''}
+${(next.dates || []).slice().sort((a, b) => a.date.localeCompare(b.date)).map(d => `
+<div class="issue" style="display:block">
+  <div style="display:flex;gap:8px;align-items:baseline;flex-wrap:wrap">${mark(d)} <span class="eyebrow">${esc(fmt(d.date))}${d.end ? ` – ${esc(fmt(d.end))}` : ''}</span></div>
+  <b style="display:block;margin-top:4px">${esc(d.label)}</b>
+  ${d.detail ? `<p style="font-size:14px;margin:4px 0 0">${esc(d.detail)}</p>` : ''}
+  ${(d.src || []).length ? `<p class="src" style="max-width:none;margin-top:4px">Source: ${d.src.map(cite).join(' · ')}</p>` : ''}
+</div>`).join('')}
+${e.id_rule ? `<p><b>What to bring:</b> ${esc(e.id_rule.text)}</p>` : ''}
+${(e.check || []).length ? `<p class="src" style="max-width:none">Check your registration and find your polling place: ${e.check.map(x => x.url ? `<a href="${esc(x.url)}" rel="noopener">${esc(x.label || x.text)}</a>` : esc(x.text)).join(' · ')}.</p>` : ''}
+<p class="src" style="max-width:none">${esc(stateName)} dates gathered ${esc(e.updated || '')} from the state's election office. Dates can change and local election offices set some hours and sites — they have the final word${placeName ? ` for ${esc(placeName)}` : ''}. This site never rates candidates or takes sides on ballot measures.</p>
+</section>`;
+}
+
 function grants(c, N, opts = {}) {
   const cur = require('./grants-open').current(N.grantsOpen);
   const g = c.fedgrants, open = cur.list;
@@ -109,7 +151,7 @@ ${open.length ? `<h3 style="margin-top:12px">Open now: federal grants county gov
 </section>`;
 }
 
-module.exports = { schools, health, risk, bridges, housing, grants, big, num };
+module.exports = { schools, health, risk, bridges, housing, grants, voting, stateElections, big, num };
 
 // --- American Rescue Plan: the county government's Fiscal Recovery Fund
 // allocation and projects (Treasury), its cities' totals, and all ARPA

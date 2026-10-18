@@ -99,11 +99,7 @@ ${B.places(c)}
 ${require('../lib/peers').block(c, N, { more: '/us/what-works' })}
 ${require('./whatworks').improveBlock(c, N, { more: '/us/what-works' })}
 
-<section>
-<h2>Voting</h2>
-${el ? `<p><b>${esc(el.name)}: ${esc(el.date_long)}.</b> ${el.lines.map(esc).join(' ')}</p><p class="src">Source: ${el.src.map(s => `<a href="${esc(s.url)}" rel="noopener">${esc(s.label)}</a>`).join(' · ')}</p>`
-    : `<p>Registration deadlines, early voting and polling places for ${esc(S.name)} are on the federal site <a href="https://vote.gov/" rel="noopener">vote.gov</a>, which links to the state's official election office.</p>`}
-</section>
+${B.voting(S.name, c.name)}
 
 <section>
 <h2>Not here yet</h2>
@@ -175,11 +171,7 @@ ${money}
 <h2>State government <span class="sub">— official sites</span></h2>
 ${g ? `<p>${g.website ? `Official state website: <a href="${esc(g.website)}" rel="noopener">${esc(g.website.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, ''))}</a>` : ''}${g.governor ? `<br>Governor: <a href="${esc(g.governor.url)}" rel="noopener">${esc(g.governor.name)}</a>` : ''}</p>${agencies}<p class="src">Source: <a href="${esc(g.src)}" rel="noopener">USA.gov state government directory</a>.</p>` : `<p>Not gathered yet — not hidden.</p>`}
 </section>
-<section id="voting">
-<h2>Voting</h2>
-${el ? `<p><b>${esc(el.name)}: ${esc(el.date_long)}.</b> ${el.lines.map(esc).join(' ')}</p><p class="src">Source: ${el.src.map(s => `<a href="${esc(s.url)}" rel="noopener">${esc(s.label)}</a>`).join(' · ')}</p>`
-    : `<p>Registration deadlines, early voting and polling places are on <a href="https://vote.gov/" rel="noopener">vote.gov</a>, which links to ${esc(S.name)}'s official election office.</p>`}
-</section>
+${B.voting(S.name)}
 ${built.length ? `<section><h2>Full County Commons sites in ${esc(S.name)}</h2><p>${built.map(c => `<a href="https://${esc(c.site)}/">${esc(c.name)}</a>`).join(' · ')} — the budget line by line, your tax bill, audits, offices and elections.</p></section>` : ''}
 <section id="counties">
 <h2>Every county in ${esc(S.name)} <span class="sub">— ${list.length}${built.length ? `; ★ has a full site` : ''}</span></h2>
