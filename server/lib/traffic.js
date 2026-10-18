@@ -37,6 +37,15 @@ function today() { return new Date().toISOString().slice(0, 10); }
 
 // Where a view came from — derived from the Referer header ONLY. We keep the
 // source bucket (a word like "Facebook"), never the full URL, never an IP.
+// A shared link can say where it was posted with ?via=<word> (e.g. a Facebook
+// post as ?via=fb). Only these words count; anything else is ignored. It names
+// the place a link was posted, never the person who clicked it.
+const VIA = { fb: 'Facebook post', facebook: 'Facebook post', text: 'Text message', sms: 'Text message', email: 'Email', flyer: 'Flyer or poster', qr: 'QR code', nextdoor: 'Nextdoor post', x: 'X/Twitter post', reddit: 'Reddit post', news: 'News story' };
+function viaSource(url) {
+  const m = String(url || '').match(/[?&]via=([a-z]+)/i);
+  return m ? VIA[m[1].toLowerCase()] || null : null;
+}
+
 function classifySource(referer, host) {
   if (!referer) return 'Direct';
   let h = '';
@@ -116,7 +125,7 @@ function note(tenantKey, req) {
     day.bots++;
     store.botTotal = (store.botTotal || 0) + 1;
   } else {
-    const s = classifySource(ref, host);
+    const s = viaSource(req.originalUrl || req.url) || classifySource(ref, host);
     day.bySource[s] = (day.bySource[s] || 0) + 1;
     store.totalsBySource = store.totalsBySource || {};
     store.totalsBySource[s] = (store.totalsBySource[s] || 0) + 1;

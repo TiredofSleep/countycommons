@@ -50,7 +50,7 @@ ${(() => {
   if (!hum && !sum.botTotal) return '<p class="src">No sources recorded yet — this starts counting from the update that added it.</p>';
   const rows = srcs.map(([s, n]) => `<tr><td>${esc(s)}</td><td class="num">${n.toLocaleString('en-US')}</td><td class="num">${hum ? Math.round((n / hum) * 100) : 0}%</td></tr>`).join('');
   return `<table class="plain"><thead><tr><th>Source</th><th class="num">Views</th><th class="num">Share</th></tr></thead><tbody>${rows}</tbody></table>
-  <p class="src"><b>${hum.toLocaleString('en-US')}</b> human views by source. Separately, <b>${(sum.botTotal || 0).toLocaleString('en-US')}</b> views were from bots and crawlers (search engines, link-preview scrapers) — counted apart so they don't inflate the human numbers. "Direct" means no referring link (typed, bookmarked, or an app that strips referrers); "Internal" means a click within the network.</p>`;
+  <p class="src"><b>${hum.toLocaleString('en-US')}</b> human views by source. Separately, <b>${(sum.botTotal || 0).toLocaleString('en-US')}</b> views were from bots and crawlers (search engines, link-preview scrapers) — counted apart so they don't inflate the human numbers. "Direct" means no referring link (typed, bookmarked, or an app that strips referrers — the Facebook app usually does); "Internal" means a click within the network. A link posted with a tag like ?via=fb is counted under where it was posted (here, "Facebook post") — the tag names the post, never the person.</p>`;
 })()}
 </section>
 
