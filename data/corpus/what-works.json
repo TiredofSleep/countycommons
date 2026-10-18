@@ -1,0 +1,913 @@
+{
+ "updated": "2026-10-17",
+ "intro": "This library lists approaches that other places have tried for each local problem, and what careful studies found. We do not say which one a county should pick. We report the evidence and its limits.",
+ "topics": {
+  "overdose": {
+   "title": "Drug overdose deaths",
+   "models": [
+    {
+     "name": "Naloxone education and distribution",
+     "what": "Health departments, clinics, pharmacies, and community groups hand out naloxone, a medicine that reverses an opioid overdose, and teach people how to use it. Police, fire crews, and EMS can carry it too.",
+     "found": "Communities that train bystanders and give out naloxone appear to have lower overdose death rates than communities that do not. Short trainings of 5 to 10 minutes can be enough, and take-home programs do not appear to raise drug use.",
+     "rating": {
+      "label": "Scientifically Supported",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/take-action-to-improve-health/what-works-for-health/strategies/naloxone-education-distribution-programs"
+     },
+     "where": "Studies cite programs in Massachusetts, New York, Ohio (Project DAWN), Baltimore, and Rhode Island.",
+     "who": "County health department, sheriff, EMS and fire, pharmacies, hospitals, local nonprofits",
+     "caveat": "Stigma has slowed access in some places. Rural areas have higher overdose death rates, and fewer trained responders use naloxone there. The page gives no program cost figures.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/take-action-to-improve-health/what-works-for-health/strategies/naloxone-education-distribution-programs",
+       "label": "What Works for Health: naloxone programs"
+      }
+     ]
+    },
+    {
+     "name": "Easier access to medicine for opioid use disorder",
+     "what": "Clinics, hospitals, and health centers add more places and prescribers for methadone, buprenorphine, or naltrexone, paired with counseling. Local groups can help pay for prescriber training.",
+     "found": "Methadone and buprenorphine, given with clinical oversight, increase the time people stay in treatment and reduce opioid overdose deaths. As of 2014, only 28% of people in treatment for heroin got these medicines. A Baltimore effort to fund doctor training was linked to fewer overdose deaths.",
+     "rating": {
+      "label": "Expert Opinion",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/medication-assisted-treatment-access-enhancement-initiatives"
+     },
+     "where": "Vermont's Hub and Spoke model; a Baltimore physician training effort.",
+     "who": "Health centers, hospitals, behavioral health clinics, county health department; only certified opioid treatment programs can give methadone",
+     "caveat": "The rating is only Expert Opinion for efforts to widen access, because most of the research is observational. The page says more evidence is needed on how well access programs work. Medicine works best with structured care and counseling.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/medication-assisted-treatment-access-enhancement-initiatives",
+       "label": "What Works for Health: medication access initiatives"
+      }
+     ]
+    },
+    {
+     "name": "Opioid use disorder medicine inside county jails",
+     "what": "A county jail offers methadone, buprenorphine, or naltrexone to people with opioid use disorder and connects them to a clinic when they are released.",
+     "found": "In a study of about 6,400 people in seven Massachusetts county jails, 60.2% of those treated in jail started community treatment within 30 days of release, compared with 17.6% of those not treated. Treatment in jail was linked to a 52% lower risk of fatal opioid overdose and a 12% lower risk of going back to jail.",
+     "rating": null,
+     "where": "Seven county jails in Massachusetts.",
+     "who": "Sheriff and jail staff, jail medical provider, county health department, community clinics",
+     "caveat": "This was an observational study, so it shows links, not proof of cause. It covers one state's pilot program.",
+     "src": [
+      {
+       "url": "https://nida.nih.gov/news-events/news-releases/2025/09/treating-opioid-addiction-in-jails-improves-treatment-engagement-reduces-overdose-deaths-reincarceration",
+       "label": "NIDA: treating opioid addiction in jails (NEJM study, 2025)"
+      }
+     ]
+    }
+   ]
+  },
+  "uninsured": {
+   "title": "Adults under 65 without health insurance",
+   "models": [
+    {
+     "name": "Enrollment outreach and sign-up help",
+     "what": "Trained helpers, such as navigators and certified application counselors, find people who qualify for coverage and walk them through applying. Reminders by mail, phone, and email can also help.",
+     "found": "Outreach and help raise health insurance enrollment among working-age adults and children, based on multiple studies. An Oregon study found that better materials and frequent reminders raised Medicaid enrollment across age, sex, language, and rural residence.",
+     "rating": {
+      "label": "Scientifically Supported",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/health-insurance-enrollment-outreach-support"
+     },
+     "where": "Minnesota's MNsure Navigators (help in 22 languages); Insure Duluth, a coalition of 15 organizations in Minnesota.",
+     "who": "Health departments, libraries, schools, health centers, churches, local nonprofits",
+     "caveat": "The page gives no effect sizes or dollar costs. Staff time, space, and funding are common limits. Outreach that depends on internet, phones, or rides can miss people, so using several methods is advised. It helps people who already qualify for coverage.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/health-insurance-enrollment-outreach-support",
+       "label": "What Works for Health: enrollment outreach and support"
+      }
+     ]
+    },
+    {
+     "name": "Federally qualified health centers",
+     "what": "Nonprofit community health centers get federal funds to give primary care to everyone, whether or not they have insurance. A community board runs each one.",
+     "found": "Health centers strongly increase access to primary care and do as well as or better than other providers on quality measures. In 2022 there were 1,373 centers serving 30.5 million patients. In 2019, 23% of their patients were uninsured.",
+     "rating": {
+      "label": "Scientifically Supported",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/federally-qualified-health-centers-fqhcs"
+     },
+     "where": "Urban and rural high-need communities across the U.S. and its territories.",
+     "who": "Nonprofit health organizations; counties and towns can partner with them and support shortage-area applications",
+     "caveat": "Centers rely mostly on federal funds and Medicaid payments, and funding has not kept pace with costs. The page says many underserved areas still have no center. The page gives no start-up or operating costs.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/federally-qualified-health-centers-fqhcs",
+       "label": "What Works for Health: federally qualified health centers"
+      }
+     ]
+    }
+   ]
+  },
+  "primary_care": {
+   "title": "Too few primary care doctors",
+   "models": [
+    {
+     "name": "Loan repayment and other pay incentives for clinicians",
+     "what": "Programs pay down a clinician's school debt in exchange for working a set number of years in an area with too few providers.",
+     "found": "Incentive programs appear to increase the number of providers who serve underserved areas, and participants tend to stay longer. A Maryland study found participating doctors stayed past their service commitment and saw more Medicare patients. Offers made at the end of training may work better than earlier ones.",
+     "rating": {
+      "label": "Some Evidence",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/financial-incentives-for-health-professionals-serving-underserved-areas"
+     },
+     "where": "National Health Service Corps (federal); state programs in North Dakota, Oklahoma, and New Hampshire.",
+     "who": "Mostly federal and state agencies. Local hospitals and counties can help clinicians apply and can add local support.",
+     "caveat": "The page says more evidence is needed. Some clinicians might have chosen these areas anyway, and some leave when the commitment ends. Evidence is weaker for nurses and allied health workers. Competitive pay and support staff may help keep clinicians.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/financial-incentives-for-health-professionals-serving-underserved-areas",
+       "label": "What Works for Health: financial incentives for health professionals"
+      }
+     ]
+    },
+    {
+     "name": "Federally qualified health centers",
+     "what": "A community health center opens in an area with too few providers. It gets federal funds and is run by a community board.",
+     "found": "Health centers strongly increase access to primary care. They do as well as or better than other providers on continuity of care and preventive services.",
+     "rating": {
+      "label": "Scientifically Supported",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/federally-qualified-health-centers-fqhcs"
+     },
+     "where": "Urban and rural high-need communities across the U.S.",
+     "who": "Nonprofit health organizations, with support from counties and towns",
+     "caveat": "New centers opened after 2010 were more often in high-poverty areas but not in rural ones. Funding depends on federal grants and Medicaid. Not every shortage area qualifies.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/federally-qualified-health-centers-fqhcs",
+       "label": "What Works for Health: federally qualified health centers"
+      }
+     ]
+    },
+    {
+     "name": "Community health workers",
+     "what": "Trained people from the community help patients get care, follow treatment plans, and find services. They work with clinics, health departments, and nonprofits.",
+     "found": "Community health workers improve access to care and healthy habits, with the strongest effects for heart disease prevention, diabetes, and cancer screening. One Pennsylvania program returned $2.00 for each dollar spent through fewer hospital stays.",
+     "rating": {
+      "label": "Some Evidence",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/community-health-workers"
+     },
+     "where": "Kentucky Homeplace (eastern Kentucky, since 1994); Alaska's Health Aide model; Arizona Health Start; University of Pennsylvania's IMPaCT.",
+     "who": "County health department, clinics, hospitals, community nonprofits",
+     "caveat": "Results vary by program. Pay is lower than many jobs and turnover is high, often because grants end. Savings are not proven for every use. A Detroit study found short-term savings were offset by costs.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/community-health-workers",
+       "label": "What Works for Health: community health workers"
+      }
+     ]
+    }
+   ]
+  },
+  "mental_health": {
+   "title": "Too few mental health providers and crisis services",
+   "models": [
+    {
+     "name": "Mental health care inside primary care",
+     "what": "A primary care clinic adds a care manager or counselor to its team, with a psychiatrist who gives advice. Patients get mental health care at the same visit place.",
+     "found": "Putting mental health care in primary care strongly improves mental health, especially depression symptoms. It also raises treatment follow-through and patient satisfaction. Care-manager models raise recovery rates in the short and long term.",
+     "rating": {
+      "label": "Scientifically Supported",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/behavioral-health-primary-care-integration"
+     },
+     "where": "Federally qualified health centers (since the 1970s); rural and urban practices; a pediatric program in the Bronx.",
+     "who": "Clinics, health centers, and hospitals, with county or local health partners",
+     "caveat": "It costs more than usual care, though studies found it worth the cost. It needs staff training and new roles. Stigma and distrust can keep people from seeking care even with coverage. The page reports few effect sizes.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/behavioral-health-primary-care-integration",
+       "label": "What Works for Health: behavioral health and primary care integration"
+      }
+     ]
+    },
+    {
+     "name": "Crisis phone and text lines",
+     "what": "Trained counselors answer calls or texts from people in distress and can follow up with people at high risk.",
+     "found": "Callers report less suicidal thinking, distress, and hopelessness by the end of the call. Follow-up calls to high-risk callers and to people leaving the hospital may cut later suicide attempts. Counselors trained in suicide intervention get better results than untrained ones.",
+     "rating": {
+      "label": "Some Evidence",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/crisis-lines"
+     },
+     "where": "The national Lifeline network (164 local crisis centers in 49 states); Crisis Support Services of Nevada.",
+     "who": "Local crisis centers, counties that fund or host them, hospitals",
+     "caveat": "Long-term effects are not yet confirmed. About half of people referred to services from a hotline actually reach them. Rural counties use crisis text services less, even though their suicide risk is higher.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/crisis-lines",
+       "label": "What Works for Health: crisis lines"
+      }
+     ]
+    },
+    {
+     "name": "Health-led response to some 911 calls (Denver STAR)",
+     "what": "A mental health clinician and a paramedic, not police, answer some low-risk 911 calls, such as welfare checks, public intoxication, and trespassing.",
+     "found": "In an eight-precinct, six-month pilot, reports of less serious crimes fell 34% in the pilot area compared with other areas. That is about 1,400 fewer offenses. Researchers found no rise in serious crime. The team handled nearly 750 incidents. The direct cost was $151 per response, compared with an estimated $646 for each minor offense handled by police.",
+     "rating": null,
+     "where": "Denver, Colorado.",
+     "who": "County or city 911 center, behavioral health agency, EMS, police",
+     "caveat": "This was a short pilot in one city and was not randomized. The study measured crime, not mental health outcomes. Costs cover direct costs only. The lead researcher said it is not something every 911 system should start tomorrow, because it needs careful training and teamwork with police.",
+     "src": [
+      {
+       "url": "https://www.sciencedaily.com/releases/2022/06/220608142938.htm",
+       "label": "ScienceDaily: Stanford study of Denver STAR (Science Advances, 2022)"
+      }
+     ]
+    },
+    {
+     "name": "Mental Health First Aid training",
+     "what": "Teachers, staff, and community members take an 8 to 12 hour course to learn how to spot signs of a mental health problem and help someone find care. Many people ask about it.",
+     "found": "Training raises knowledge and confidence, and it modestly lowers stigma. Effects last about six months. Studies found mixed effects on whether people actually help others, and no effects on the mental health of the people they help.",
+     "rating": {
+      "label": "Some Evidence",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/mental-health-first-aid"
+     },
+     "where": "More than 4.5 million people trained in the U.S. as of 2025.",
+     "who": "Schools, health departments, libraries, nonprofits, employers",
+     "caveat": "It does not add providers or crisis services. It is unclear whether it increases use of care. Its effect on gaps between groups is inconclusive, and in rural areas it depends on having local treatment to refer people to.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/mental-health-first-aid",
+       "label": "What Works for Health: Mental Health First Aid"
+      }
+     ]
+    }
+   ]
+  },
+  "child_poverty": {
+   "title": "Children in poverty",
+   "models": [
+    {
+     "name": "Earned Income Tax Credit outreach and free tax help",
+     "what": "Local groups run free tax preparation (such as the IRS VITA program) and outreach so working families claim the credit they have earned.",
+     "found": "The federal credit raises employment and income for single parents and reduces poverty. In 2018 it lifted about 3 million children out of poverty. In 2019, about 20% of eligible workers did not claim it.",
+     "rating": {
+      "label": "Scientifically Supported",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/earned-income-tax-credit-eitc"
+     },
+     "where": "Boston Medical Center's StreetCred, built into children's clinics; the page also lists state credits in 28 states and D.C. as of 2021.",
+     "who": "Local nonprofits, libraries, health systems, schools, and United Way chapters can run outreach and free tax help. The credit itself is set by federal and state law.",
+     "caveat": "Credit amounts are small, which limits the effect on poverty. State credits are usually smaller than the federal one. The work requirement can leave out some families. Outreach does not change the credit's rules.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/earned-income-tax-credit-eitc",
+       "label": "What Works for Health: Earned Income Tax Credit"
+      }
+     ]
+    },
+    {
+     "name": "Child care subsidies",
+     "what": "Government help pays part of child care costs for low-income working parents. Local agencies can simplify applications and reach eligible families.",
+     "found": "Subsidies increase work among mothers with low incomes, especially single mothers, and push families toward center-based care. A 2019 Urban Institute projection found that covering all eligible families below 150% of the poverty line would cut child poverty by 3%, about 400,000 children.",
+     "rating": {
+      "label": "Scientifically Supported",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/child-care-subsidies"
+     },
+     "where": "Federal Child Care and Development Fund; New Mexico raised provider payment rates in 2021.",
+     "who": "State, tribal, and territory agencies run the programs. Local agencies can help families apply.",
+     "caveat": "The same projection put the cost at about $9 billion. In 2020 only about 10% of potentially eligible children got a subsidy. Renewal rules can cause families to lose and regain help, which disrupts care and work.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/child-care-subsidies",
+       "label": "What Works for Health: child care subsidies"
+      }
+     ]
+    }
+   ]
+  },
+  "food_insecurity": {
+   "title": "Food insecurity",
+   "models": [
+    {
+     "name": "School breakfast programs",
+     "what": "Schools serve breakfast in ways that more students actually use, such as free breakfast for all, grab-and-go carts, breakfast in the classroom, or breakfast after the first bell.",
+     "found": "Free breakfast for all dramatically raises participation. Breakfast can reduce short-term hunger and marginal food insecurity, and state breakfast laws may reduce food insecurity among elementary-age children. It can also improve attendance. The page gives no specific percent drop.",
+     "rating": {
+      "label": "Scientifically Supported",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/school-breakfast-programs"
+     },
+     "where": "Studies took place in Dallas, Philadelphia, Arkansas (K-7 schools), and rural Minnesota high schools.",
+     "who": "School districts, with community partners; the federal School Breakfast Program pays per meal served",
+     "caveat": "Some studies find breakfast in the classroom does not raise grades more than regular breakfast. Stigma, short schedules, and logistics limit use. The federal rate for a free breakfast was $2.46 in 2025-26.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/school-breakfast-programs",
+       "label": "What Works for Health: school breakfast programs"
+      }
+     ]
+    },
+    {
+     "name": "Produce prescriptions",
+     "what": "A doctor or clinic gives patients vouchers or boxes for fresh fruits and vegetables, redeemed at farmers markets, grocery stores, or farm stands.",
+     "found": "Programs that include access to fresh produce appear to increase fruit and vegetable eating and reduce food insecurity. Children's programs may also raise food security and self-reported health in the household.",
+     "rating": {
+      "label": "Some Evidence",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/nutrition-prescriptions"
+     },
+     "where": "Wholesome Wave programs in Augusta and Athens, Georgia, and Hartford, Connecticut; the Navajo Nation's Fruit & Vegetable Prescription program.",
+     "who": "Clinics and health systems, farmers markets, grocery stores, local food networks",
+     "caveat": "Benefits may fade when the program ends or a market closes for the season. Time, training, and transportation are barriers. Long-term effects are not well documented. Insurance changes may be needed to pay for provider time.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/nutrition-prescriptions",
+       "label": "What Works for Health: nutrition prescriptions"
+      }
+     ]
+    },
+    {
+     "name": "Client-choice and healthy food at food pantries",
+     "what": "Food pantries let people choose their own food, add social services on site, and offer more fresh and healthy items.",
+     "found": "Pantries that use client choice and on-site social services are most effective at improving food security, especially for households with children. Nutrition education and recipe demonstrations can raise produce eating.",
+     "rating": {
+      "label": "Some Evidence",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/healthy-food-initiatives-in-food-pantries"
+     },
+     "where": "Studied in Arkansas, New York State, Utah, rural Missouri, and Rhode Island, among other places.",
+     "who": "Food banks and pantries, churches, health care providers, gleaning and farm partners",
+     "caveat": "Long-term effects are unclear. Perishable food, small staffs, and unpredictable donations make it hard. Success is often counted in pounds, not nutrition. The page notes that cuts to federal food aid may limit what pantries can do.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/healthy-food-initiatives-in-food-pantries",
+       "label": "What Works for Health: healthy food initiatives in food pantries"
+      }
+     ]
+    },
+    {
+     "name": "New grocery stores in areas with few stores (mixed results)",
+     "what": "Cities, counties, and lenders use loans, grants, tax breaks, or zoning to attract a grocery store to an area that lacks one. Many people ask about this approach.",
+     "found": "New stores increase access to healthy food. A Pittsburgh study linked a new supermarket to better food security. But other studies found no short-term change in what people bought or ate, so the page says a more complete strategy may be needed.",
+     "rating": {
+      "label": "Some Evidence",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/new-grocery-stores-in-underserved-areas"
+     },
+     "where": "Pennsylvania's Fresh Food Financing Initiative (88 projects), the model for the federal Healthy Food Financing Initiative.",
+     "who": "County or city economic development offices, lenders, state programs",
+     "caveat": "Healthy food can still cost more in these areas, so price supports may be needed. Nearby convenience stores may cut their healthy items. Long-term effects on diet and health still need confirming. The page gives no per-store costs.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/new-grocery-stores-in-underserved-areas",
+       "label": "What Works for Health: new grocery stores in underserved areas"
+      }
+     ]
+    }
+   ]
+  },
+  "broadband": {
+   "title": "Households without broadband",
+   "models": [
+    {
+     "name": "Build or support networks in unserved and underserved areas",
+     "what": "Local governments, co-ops, nonprofits, and internet providers extend high-speed service to places that lack it. Libraries and other trusted groups can help people sign up.",
+     "found": "Some evidence links broadband projects to higher adoption and more people working, with larger effects in rural areas. A review of studies found small but positive effects on rural income and jobs.",
+     "rating": {
+      "label": "Some Evidence",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/broadband-initiatives-for-unserved-and-underserved-areas"
+     },
+     "where": "Chattanooga, Tennessee community fiber network; DigitalC in Cleveland, Ohio; Mid-Atlantic Broadband Cooperative in Virginia.",
+     "who": "County and city governments, utility cooperatives, internet providers, libraries, nonprofits",
+     "caveat": "Access alone does not mean use. Price, devices, and digital skills are often barriers. Broadband may help little where the local economy is weak. About 44% of states had limits on municipal broadband as of 2022. Federal funding changed in 2025, and the page says some grants were ended. Evidence for this topic is thin, so only one approach is listed.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/broadband-initiatives-for-unserved-and-underserved-areas",
+       "label": "What Works for Health: broadband initiatives"
+      }
+     ]
+    }
+   ]
+  },
+  "housing": {
+   "title": "Severe housing problems and high rent burden",
+   "models": [
+    {
+     "name": "Home repair and rehab loans and grants",
+     "what": "Local governments and nonprofits give low-income homeowners loans or grants to fix heating, insulation, roofs, and other problems. Grants suit people who do not qualify for loans.",
+     "found": "Home improvements, especially warmth and insulation, show consistently positive effects on breathing problems, mental and physical health, and self-rated health. They are also linked to fewer school and work absences. A Milwaukee study found renovations raised nearby property values without displacement.",
+     "rating": {
+      "label": "Scientifically Supported",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/housing-rehabilitation-loan-grant-programs"
+     },
+     "where": "Boston Senior Home Repair Program; EmPOWER Maryland; MaineHousing's repair program; USDA Section 504 Home Repair for rural homeowners.",
+     "who": "County or city housing office, community action agency, nonprofits; USDA grants can go to state and local governments and nonprofits",
+     "caveat": "The page gives no effect sizes or costs. Some research links home improvement loans to more property crime. Loans add debt, so grants may suit older adults better. This helps owners, not renters.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/housing-rehabilitation-loan-grant-programs",
+       "label": "What Works for Health: housing rehab loan and grant programs"
+      }
+     ]
+    },
+    {
+     "name": "Debt advice for tenants behind on rent",
+     "what": "Housing counselors give renters free or low-cost advice on overdue rent and other debt. Landlords and housing agencies refer tenants early.",
+     "found": "Advice may reduce overdue rent and may help prevent evictions, especially when given early. A UK study estimated a 22% return on investment for landlords through less debt and related costs.",
+     "rating": {
+      "label": "Some Evidence",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/debt-advice-for-tenants-with-unpaid-rent"
+     },
+     "where": "HUD-funded housing counseling agencies across the U.S.; Homebase in New York City.",
+     "who": "Housing counseling agencies, public housing agencies, landlords, legal aid, local nonprofits",
+     "caveat": "The page says advice alone is not enough for tenants facing high rent burdens or lost income. It works best as part of a broader program. Long-term effects need more study. The eviction findings come mostly from European case studies.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/debt-advice-for-tenants-with-unpaid-rent",
+       "label": "What Works for Health: debt advice for tenants"
+      }
+     ]
+    },
+    {
+     "name": "Housing vouchers with moving help",
+     "what": "Federal housing vouchers help families pay rent. Local housing authorities can add counseling, help finding units, landlord outreach, and short-term money for deposits.",
+     "found": "Vouchers help families move to better neighborhoods and have fewer homeless episodes. In the Moving to Opportunity study, moving to low-poverty areas improved adults' physical and mental health. Boys who moved had poorer mental health and more delinquency.",
+     "rating": {
+      "label": "Some Evidence",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/housing-choice-voucher-program-section-8"
+     },
+     "where": "Baltimore Housing Mobility Program; Spartanburg Housing Authority in South Carolina.",
+     "who": "Local public housing authorities (federal money); policymakers can add protections against refusing voucher holders",
+     "caveat": "Wait lists often last years, and some landlords will not accept vouchers. Costs were about $18 billion nationally in 2017, and higher rents can raise costs. Effects differ by age and sex. The page was last updated in 2019.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/housing-choice-voucher-program-section-8",
+       "label": "What Works for Health: Housing Choice Voucher Program"
+      }
+     ]
+    }
+   ]
+  },
+  "jail": {
+   "title": "High jail population and pretrial detention",
+   "models": [
+    {
+     "name": "Court date reminders and clearer notices",
+     "what": "Courts send text, phone, or mail reminders about court dates and redesign summons forms so the date and place are easy to see. This cuts missed dates that lead to warrants and jail bookings.",
+     "found": "Two New York City field experiments found that a redesigned summons and text reminders cut missed court dates by 13 to 21%. Over three years this avoided about 30,000 arrest warrants. A national review of studies found court notifications gave small but real drops in missed court dates.",
+     "rating": {
+      "label": "Mixed (Promising for missed court dates; Ineffective for arrests)",
+      "by": "CrimeSolutions (U.S. Department of Justice), practice: pretrial interventions",
+      "url": "https://crimesolutions.ojp.gov/ratedpractices/pretrial-interventions-ensuring-appearance-court"
+     },
+     "where": "New York City; the studies in the national review came from Multnomah County, Oregon, and Nebraska.",
+     "who": "Courts, county clerk, prosecutors, sheriff",
+     "caveat": "The CrimeSolutions effect for notifications is small (effect size -0.07 across 4 studies), and that page is no longer updated. The New York studies were for low-level summonses, not all charges. Reminders do not change arrest rates.",
+     "src": [
+      {
+       "url": "https://collaborate.princeton.edu/en/publications/behavioral-nudges-reduce-failure-to-appear-for-court/",
+       "label": "Fishbane, Ouss and Shah, Science 2020 (New York City field experiments)"
+      },
+      {
+       "url": "https://crimesolutions.ojp.gov/ratedpractices/pretrial-interventions-ensuring-appearance-court",
+       "label": "CrimeSolutions: pretrial interventions for ensuring court appearance"
+      }
+     ]
+    },
+    {
+     "name": "Pretrial supervision and release conditions",
+     "what": "People who are released before trial are monitored and given services, such as check-ins, drug testing, or treatment, instead of staying in jail or paying money bail.",
+     "found": "A national review of studies found pretrial supervision gave a small but real drop in missed court dates (effect size -0.16 across 3 studies). Overall, pretrial interventions did not change arrest rates.",
+     "rating": {
+      "label": "Mixed (Promising for missed court dates; Ineffective for arrests)",
+      "by": "CrimeSolutions (U.S. Department of Justice), practice: pretrial interventions",
+      "url": "https://crimesolutions.ojp.gov/ratedpractices/pretrial-interventions-ensuring-appearance-court"
+     },
+     "where": "The page does not name specific places for supervision.",
+     "who": "Courts, county pretrial services office, sheriff, probation",
+     "caveat": "Only 3 to 8 studies back each strategy. Practices differ widely between places. In most studies the comparison group had lighter conditions, not none. The page is no longer updated. The evidence does not show a drop in jail population.",
+     "src": [
+      {
+       "url": "https://crimesolutions.ojp.gov/ratedpractices/pretrial-interventions-ensuring-appearance-court",
+       "label": "CrimeSolutions: pretrial interventions for ensuring court appearance"
+      }
+     ]
+    },
+    {
+     "name": "Pre-booking diversion (LEAD)",
+     "what": "Police send people suspected of low-level drug or sex-work offenses to case management and services instead of booking them into jail.",
+     "found": "In Seattle, participants had 56% lower odds of being arrested and 39% lower odds of being charged with a felony than similar people in a comparison group. The study included 318 people. Cost was about $899 per participant per month in the first 29 months.",
+     "rating": {
+      "label": "Promising",
+      "by": "CrimeSolutions (U.S. Department of Justice)",
+      "url": "https://crimesolutions.ojp.gov/law-enforcement-assisted-diversion-lead-program-seattle-washington"
+     },
+     "where": "Seattle, Washington.",
+     "who": "Police and sheriff, prosecutor, county health and social service agencies",
+     "caveat": "One study supports each rating, and it was not fully randomized. Only people suspected of low-level drug or sex-work offenses were eligible. The page says the evidence was too thin to rate criminal charges. Cost figures come from other studies that CrimeSolutions did not rate. The page is no longer updated.",
+     "src": [
+      {
+       "url": "https://crimesolutions.ojp.gov/law-enforcement-assisted-diversion-lead-program-seattle-washington",
+       "label": "CrimeSolutions: LEAD program, Seattle"
+      }
+     ]
+    },
+    {
+     "name": "Opioid use disorder medicine inside the jail",
+     "what": "The jail offers medicine for opioid use disorder and connects people to a clinic when they are released.",
+     "found": "In a study of about 6,400 people in seven Massachusetts county jails, treatment in jail was linked to a 12% lower risk of going back to jail and a 52% lower risk of fatal opioid overdose after release.",
+     "rating": null,
+     "where": "Seven county jails in Massachusetts.",
+     "who": "Sheriff and jail staff, jail medical provider, county health department",
+     "caveat": "This was an observational study, so it shows links, not proof of cause. It covers one state's pilot program. The effect on the size of the jail population was not the focus.",
+     "src": [
+      {
+       "url": "https://nida.nih.gov/news-events/news-releases/2025/09/treating-opioid-addiction-in-jails-improves-treatment-engagement-reduces-overdose-deaths-reincarceration",
+       "label": "NIDA: treating opioid addiction in jails (NEJM study, 2025)"
+      }
+     ]
+    }
+   ]
+  },
+  "bridges": {
+   "title": "Bridges rated poor",
+   "models": [
+    {
+     "name": "Regular bridge preservation (preventive maintenance)",
+     "what": "A road department seals, cleans, and repairs bridges on a schedule, before damage grows, instead of waiting to replace them.",
+     "found": "The Federal Highway Administration says preservation treatments often cost much less than major repair or replacement, and timely work can extend a bridge's life at a lower lifetime cost. The agency gives no dollar figures. It notes more than 30% of U.S. bridges are past their 50-year design life.",
+     "rating": null,
+     "where": "The article does not name specific places.",
+     "who": "County road department with the state DOT; federal-aid funds can pay for systematic preventive maintenance on eligible public-road bridges",
+     "caveat": "The case is mostly reasoning from agency guidance, not a measured study. Treatments must match the bridge and timing. Waiting makes later costs higher. Agencies should track spending to confirm savings. Evidence for this topic is thin.",
+     "src": [
+      {
+       "url": "https://www.fhwa.dot.gov/publications/focus/11sep/11sep01.cfm",
+       "label": "FHWA Focus: bridge preservation and preventive maintenance"
+      }
+     ]
+    },
+    {
+     "name": "Bundling small bridge projects into one contract",
+     "what": "An agency groups several similar bridge jobs, often 7 to 10 bridges, into one design and construction contract.",
+     "found": "Pennsylvania's DOT reported savings of up to 50% on design and up to 15% on construction compared with one-bridge projects. Indiana's DOT reports bundling frees up to $50 million a year for other projects.",
+     "rating": null,
+     "where": "Pennsylvania (PennDOT local bridge program); Indiana (INDOT).",
+     "who": "State DOT working with counties; county engineers",
+     "caveat": "These are best-case 'up to' numbers from the agencies' own reports in an FHWA newsletter, not an outside study. Savings depend on bundle size and how alike the bridges are. Evidence for this topic is thin.",
+     "src": [
+      {
+       "url": "https://www.fhwa.dot.gov/innovation/innovator/issue79/page_03.html",
+       "label": "FHWA Innovator: project bundling"
+      }
+     ]
+    }
+   ]
+  },
+  "unemployment": {
+   "title": "Unemployment and job training",
+   "models": [
+    {
+     "name": "Adult vocational training",
+     "what": "Community colleges, technical schools, and job centers teach job skills tied to jobs in demand, often with help for costs, child care, or transportation.",
+     "found": "Evidence strongly suggests adult vocational training raises employment and earnings. Earnings often drop during training and then rise above those of non-participants. Health care training showed the largest earnings gains in a study of California community colleges.",
+     "rating": {
+      "label": "Scientifically Supported",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/adult-vocational-training"
+     },
+     "where": "Job Corps centers in all 50 states, D.C., and Puerto Rico.",
+     "who": "Community colleges, technical schools, workforce boards, local employers",
+     "caveat": "A program without support services or pay (Jobstart) showed no effect on jobs or earnings. Programs with support services work better but likely cost more. Federal job training grants fell 40% from 2001 to 2017. The page gives no costs or effect sizes.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/adult-vocational-training",
+       "label": "What Works for Health: adult vocational training"
+      }
+     ]
+    },
+    {
+     "name": "Sector-based training with employers (Project QUEST, Year Up)",
+     "what": "Programs train people for jobs in a field where local employers are hiring, such as health care or IT, with coaching and sometimes paid internships. Employers help design the training.",
+     "found": "Randomized studies of Project QUEST in San Antonio reported earnings and job gains lasting up to 9 to 11 years. Year Up reported large earnings gains at five years. The federal What Works Clearinghouse rated both less favorably in 2021, and experts disagree about how to read the results.",
+     "rating": null,
+     "where": "Project QUEST in San Antonio, Texas; Year Up.",
+     "who": "Workforce boards, community colleges, employers, nonprofits",
+     "caveat": "This source is one expert's defense of the programs. Many results are only barely significant. Programs screen out people who are less ready for work. Cost is about $10,000 a year for Project QUEST and about $28,000 for Year Up, mostly for internship wages. How to run them cost-effectively at scale is unclear.",
+     "src": [
+      {
+       "url": "https://www.brookings.edu/articles/do-sectoral-training-programs-work-what-the-evidence-on-project-quest-and-year-up-really-shows/",
+       "label": "Brookings (Holzer): do sectoral training programs work?"
+      }
+     ]
+    },
+    {
+     "name": "Child care subsidies for working parents",
+     "what": "Government help pays child care so parents can take or keep jobs.",
+     "found": "Subsidies increase work among mothers with low incomes. Subsidized mothers appear to work more hours, stay in jobs longer, and earn more. The effect is strongest for single mothers.",
+     "rating": {
+      "label": "Scientifically Supported",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/child-care-subsidies"
+     },
+     "where": "Federal Child Care and Development Fund; New Mexico raised provider payment rates in 2021.",
+     "who": "State and tribal agencies run the programs. Local agencies can help families apply.",
+     "caveat": "Expanding help is costly. A 2019 projection put full expansion at about $9 billion. Renewal rules can cause families to lose help and then return. The result is about work by mothers, not the whole local jobless rate.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/child-care-subsidies",
+       "label": "What Works for Health: child care subsidies"
+      }
+     ]
+    }
+   ]
+  },
+  "hazards": {
+   "title": "Expected losses from natural hazards",
+   "models": [
+    {
+     "name": "Adopt and enforce modern building codes",
+     "what": "A county or city adopts current model building codes for flood, wind, earthquake, and fire, and has trained staff to check that builders follow them.",
+     "found": "The National Institute of Building Sciences study estimates that modern codes save about $11 for every $1 invested, compared with 1990s-era codes. An earlier report by the same group put the ratio at $6 to $1 for floods, $10 to $1 for hurricane wind, and $12 to $1 for earthquakes.",
+     "rating": null,
+     "where": "The sources give national averages and do not name places.",
+     "who": "County commission or city council, planning and building departments",
+     "caveat": "These are modeled estimates, not measured results, and they are national averages. They can be much higher or lower in a given place. Some building code choices are made at the state level.",
+     "src": [
+      {
+       "url": "https://nibs.org/?p=9053",
+       "label": "NIBS: Natural Hazard Mitigation Saves, 2019 report"
+      },
+      {
+       "url": "https://www.iccsafe.org/building-safety-journal/press-releases/new-national-institute-of-building-sciences-study-on-mitigation-finds-that-modern-regularly-updated-building-codes-save-lives-and-protect-property",
+       "label": "ICC: NIBS 2018 interim report, ratios by hazard"
+      }
+     ]
+    },
+    {
+     "name": "Federal hazard mitigation grants",
+     "what": "Local governments use federal grants to fund projects that reduce damage before a disaster, such as elevating or buying out flood-prone buildings and strengthening buildings. Check with your state emergency management agency about how to apply.",
+     "found": "The National Institute of Building Sciences estimates that federally funded mitigation grants return about $6 in benefits for every $1 of upfront cost. It estimates every state will see about $10 million in benefits, and most will see at least $1 billion.",
+     "rating": null,
+     "where": "The source reports national and state totals and does not name places.",
+     "who": "County emergency management, floodplain manager, city and county governments",
+     "caveat": "This is a modeled estimate averaged across flood, wind, earthquake, and fire. The source does not give a ratio for each hazard on that page. It was funded by HUD. Not every project qualifies, and planning is needed to apply.",
+     "src": [
+      {
+       "url": "https://nibs.org/?p=9053",
+       "label": "NIBS: Natural Hazard Mitigation Saves, 2019 report"
+      }
+     ]
+    }
+   ]
+  },
+  "water": {
+   "title": "Small drinking-water systems with violations",
+   "models": [
+    {
+     "name": "Hands-on operator help to improve treatment (Area-Wide Optimization Program)",
+     "what": "State staff or trained helpers work with water system operators on site to fix treatment problems and keep records, often without large construction projects.",
+     "found": "EPA reports that in one state, average maximum daily turbidity (cloudiness) fell from 0.27 to 0.10 NTU over 21 years, and the share of readings meeting the state's goal rose from 71.3% to 91.4%. In one system, disinfection by-product levels fell after technical help and a treatment change.",
+     "rating": null,
+     "where": "The EPA page describes one unnamed state's data.",
+     "who": "State drinking water program, county health department, EPA partners, water systems",
+     "caveat": "These are trends over time with no comparison group, so they do not prove the program caused the change. The page has no results for small systems. Older systems may need capital repairs. Evidence for this topic is thin.",
+     "src": [
+      {
+       "url": "https://epa.gov/dwstandardsregulations/optimization-program-drinking-water-systems",
+       "label": "EPA: Drinking Water Optimization Program"
+      }
+     ]
+    },
+    {
+     "name": "Joining or consolidating with a larger system (early evidence)",
+     "what": "A small system merges with, or is taken over by, a larger neighboring system or a regional utility.",
+     "found": "A California study of consolidations found a statistically significant drop in violations after consolidation, with no detectable change in operating costs, capital costs, or typical household water bills. These results are preliminary.",
+     "rating": null,
+     "where": "California.",
+     "who": "Water system boards, state drinking water agency, county or city governments",
+     "caveat": "The results come from a seminar abstract for a study that is not yet published, so they may change. It covers one state. Merging can reduce local control, and it is not always possible where systems are far apart. Evidence for this topic is thin.",
+     "src": [
+      {
+       "url": "https://commerce.uct.ac.za/wpe/events/does-consolidation-improve-drinking-water-system-performance-evidence-california",
+       "label": "Seminar abstract: Does consolidation improve drinking water system performance? Evidence from California (Montoya, preliminary)"
+      }
+     ]
+    }
+   ]
+  },
+  "schools": {
+   "title": "Student achievement and chronic absence",
+   "models": [
+    {
+     "name": "Attendance interventions for chronically absent students",
+     "what": "Schools, courts, and community groups work with students who miss many days, using steps like mentors, early warning systems, and health and family supports.",
+     "found": "Programs increase attendance by about one week on average and reduce unexcused absences. Court-based, school-based, and community-based programs all improved attendance.",
+     "rating": {
+      "label": "Scientifically Supported",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/attendance-interventions-for-chronically-absent-students"
+     },
+     "where": "New York City's Success Mentors program; Washington, D.C.'s truancy task force and youth re-engagement center.",
+     "who": "School districts, courts, community groups, county health and social services",
+     "caveat": "Programs vary, and it is not clear which parts work best. Absence has many causes. The page gives no program costs. Evidence on specific groups is limited.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/attendance-interventions-for-chronically-absent-students",
+       "label": "What Works for Health: attendance interventions"
+      }
+     ]
+    },
+    {
+     "name": "Mailed attendance reminders to parents",
+     "what": "A district mails parents a letter that says how many days their child has missed, sometimes compared with classmates. It is low cost.",
+     "found": "In a randomized study of about 14,000 students in 203 Philadelphia schools, chronic absence was 31.9% to 33.0% in mailed groups, compared with 36.0% for the comparison group. Harvard Magazine reports a cost of $5 to $10 per added day of attendance in the Philadelphia pilot.",
+     "rating": {
+      "label": "Meets standards without reservations (single randomized study)",
+      "by": "What Works Clearinghouse (U.S. Department of Education)",
+      "url": "https://ies.ed.gov/ncee/WWC/Study/94963"
+     },
+     "where": "Philadelphia; later studies in Chicago and 10 California districts, per Harvard Magazine.",
+     "who": "School districts",
+     "caveat": "The Clearinghouse rating rests on this one study. The drop is modest (a few percentage points). It targeted students already missing more days than typical. It will not fix absence caused by illness, housing, or transportation problems.",
+     "src": [
+      {
+       "url": "https://ies.ed.gov/ncee/WWC/Study/94963",
+       "label": "What Works Clearinghouse: Rogers and Feller attendance mailings study"
+      },
+      {
+       "url": "https://www.harvardmagazine.com/index%2Ephp/2018/04/truancy-letter",
+       "label": "Harvard Magazine: attendance postcards and replications"
+      }
+     ]
+    },
+    {
+     "name": "High-dosage tutoring",
+     "what": "Trained tutors work with small groups of students on reading or math several times a week, ideally during the school day.",
+     "found": "A review of dozens of randomized studies found a pooled effect of 0.37 standard deviations on learning in the original paper. Teacher and aide tutoring beat volunteer and parent tutoring, and in-school sessions beat after-school sessions. A later revised version reports a smaller average.",
+     "rating": null,
+     "where": "The source does not name places. Evidence for ESSA lists many tutoring programs rated Strong for math.",
+     "who": "School districts, with paid tutors or aides",
+     "caveat": "The source reports no costs. Results from small studies can be larger than results at scale. The original paper was not peer reviewed at that time.",
+     "src": [
+      {
+       "url": "https://www.nber.org/papers/w27476",
+       "label": "Nickow, Oreopoulos and Quan, NBER 2020: tutoring meta-analysis"
+      },
+      {
+       "url": "https://www.evidenceforessa.org/programs/math/",
+       "label": "Evidence for ESSA: math programs, including tutoring rated Strong"
+      }
+     ]
+    },
+    {
+     "name": "Community schools",
+     "what": "A school becomes a hub that offers health, family, and after-school services, with a full-time coordinator and local partners.",
+     "found": "The page reports strong evidence that community schools raise achievement and attendance more than regular public schools. More services and longer operation gave larger gains. Economic studies estimate a return of $4 to $15 per dollar.",
+     "rating": {
+      "label": "Scientifically Supported",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/community-schools"
+     },
+     "where": "Baltimore, Chicago, New York City, Cincinnati, Tulsa, and others named on the page.",
+     "who": "School districts, community service groups, county health and social agencies",
+     "caveat": "Funding is mixed and often short-term. Keeping partners working together takes ongoing effort. Attendance gains shrink as poverty rises. Schools alone cannot solve the effects of poverty.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/community-schools",
+       "label": "What Works for Health: community schools"
+      }
+     ]
+    }
+   ]
+  },
+  "turnout": {
+   "title": "Low voter turnout",
+   "models": [
+    {
+     "name": "Nonpartisan get-out-the-vote outreach",
+     "what": "Local groups and election offices send calls, texts, mail, or door visits that remind people about elections and how to vote. They do not say who to vote for.",
+     "found": "Get-out-the-vote efforts using calls, texts, mailers, and canvassing consistently raised turnout across multiple studies. The page gives few effect sizes. Calls were most cost-effective when brief, nonpartisan, and personal.",
+     "rating": {
+      "label": "Scientifically Supported",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/voter-turnout-initiatives"
+     },
+     "where": "Studies cited include Texas, Florida, Georgia, North Carolina, Ohio, and Milwaukee.",
+     "who": "County clerk or election office, League of Women Voters chapters, nonprofits, volunteers",
+     "caveat": "The size of the gain is unclear from the page. Outreach must stay nonpartisan. Reminders do not fix long lines, far-away polling places, or other barriers.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/voter-turnout-initiatives",
+       "label": "What Works for Health: voter turnout initiatives"
+      }
+     ]
+    },
+    {
+     "name": "Enough early-voting sites, hours and polling places",
+     "what": "Election offices choose how many early-voting sites and Election Day polling places to run, where, and for how long, within state law.",
+     "found": "The rated page reports strong evidence that early in-person voting and voting by mail raise turnout, and that fewer or farther-away polling places lower it.",
+     "rating": {
+      "label": "Scientifically Supported",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/voter-turnout-initiatives"
+     },
+     "where": "Eight states mail ballots to all registered voters (California, Colorado, Hawaii, Nevada, Oregon, Utah, Vermont, Washington as of 2022). Early voting exists in 46 states.",
+     "who": "Local election officials, within state law",
+     "caveat": "More sites cost more to staff. Merging polling places into vote centers can save money but may lengthen trips in rural areas. Many rules, including mail voting, are set by state law, not the county.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/voter-turnout-initiatives",
+       "label": "What Works for Health: voter turnout initiatives"
+      }
+     ]
+    },
+    {
+     "name": "Easier voter registration",
+     "what": "Online registration, same-day registration, automatic registration through state agencies, and registration drives at places like colleges, clinics, and tax-help sites. Some of these are set by state law.",
+     "found": "Automatic registration significantly increased registration and voting in states that use it. Same-day registration raised registration and voting among people ages 18 to 24. A program at income tax assistance centers doubled registration among people who were not registered.",
+     "rating": {
+      "label": "Scientifically Supported",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/voter-registration-initiatives"
+     },
+     "where": "Oregon's 2016 automatic registration law; Massachusetts General Hospital's registration kiosks.",
+     "who": "State and local election officials, state agencies such as the DMV, colleges, health groups, nonprofits",
+     "caveat": "Effects on voting may take years to show. Campus drives may mostly reach students who are already active. Errors in registration lists can wrongly remove eligible voters, so data accuracy matters.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/voter-registration-initiatives",
+       "label": "What Works for Health: voter registration initiatives"
+      }
+     ]
+    }
+   ]
+  },
+  "premature_death": {
+   "title": "Premature death and life expectancy",
+   "models": [
+    {
+     "name": "Tobacco quitlines",
+     "what": "A free phone service where counselors call people who want to quit smoking and give them several coaching sessions. Many pair it with nicotine patches or gum. Health providers can refer patients.",
+     "found": "The page reports strong evidence that proactive quitlines increase quitting. Three to five counseling sessions work better than one. Adding nicotine replacement raises quit rates, including for veterans and people with low incomes.",
+     "rating": {
+      "label": "Scientifically Supported",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/tobacco-quitlines"
+     },
+     "where": "All fifty states have quitlines.",
+     "who": "State quitlines (counties can promote them), health departments, clinics and hospitals that refer patients",
+     "caveat": "The page gives no quit rates or costs. It rates the effect on gaps between groups as no impact likely. Evidence for smokeless tobacco is more limited. The page was last updated in December 2021.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/tobacco-quitlines",
+       "label": "What Works for Health: tobacco quitlines"
+      }
+     ]
+    },
+    {
+     "name": "Chronic disease self-management programs",
+     "what": "Group classes or one-on-one coaching teach people with long-term conditions like diabetes, high blood pressure, or asthma how to manage them. Trained lay leaders or nurses run them.",
+     "found": "Programs improved health outcomes, including lower blood sugar in diabetes, lower blood pressure in hypertension, and fewer asthma attacks. They also increased healthy habits and quality of life.",
+     "rating": {
+      "label": "Scientifically Supported",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/chronic-disease-self-management-cdsm-programs"
+     },
+     "where": "The Chronic Disease Self-Management Program (CDSMP) and condition-specific programs from the National Council on Aging and CDC.",
+     "who": "Health departments, clinics, senior centers, extension offices, libraries",
+     "caveat": "The page reports no effect sizes. Programs may reduce some hospital stays, such as for COPD, but do not appear to lower overall hospital use. Strongest evidence for minority groups is short term. Its effect on gaps between groups is inconclusive. It does not prove a rise in life expectancy.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/chronic-disease-self-management-cdsm-programs",
+       "label": "What Works for Health: chronic disease self-management programs"
+      }
+     ]
+    },
+    {
+     "name": "Enhanced seat belt enforcement",
+     "what": "Police add extra or targeted patrols and publicity to enforce seat belt laws, such as Click It or Ticket campaigns. This targets crash deaths, a major cause of early death in rural areas.",
+     "found": "The page reports strong evidence that enhanced seat belt enforcement increases seat belt use and reduces fatal and non-fatal injuries. Programs were more effective in suburban and rural areas than in urban ones.",
+     "rating": {
+      "label": "Scientifically Supported",
+      "by": "County Health Rankings & Roadmaps, What Works for Health",
+      "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/enhanced-seat-belt-enforcement-programs"
+     },
+     "where": "Implemented at city, county, state, and national levels; Click It or Ticket is a common example.",
+     "who": "Sheriff and police departments, state highway safety offices",
+     "caveat": "The page gives no effect sizes. It is a retired page, last updated in 2015. The page rates the effect on gaps between groups as no impact likely. Enforcement choices are set by local law enforcement and state law.",
+     "src": [
+      {
+       "url": "https://www.countyhealthrankings.org/strategies-and-solutions/what-works-for-health/strategies/enhanced-seat-belt-enforcement-programs",
+       "label": "What Works for Health: enhanced seat belt enforcement"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

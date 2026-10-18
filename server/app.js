@@ -78,7 +78,7 @@ app.use((req, res, next) => {
     if (us) {
       const nv = require('./views/national');
       traffic.note('__network__', req);
-      const html = !us[1] ? nv.usPage() : !us[2] ? nv.statePage(us[1].toUpperCase()) : nv.countyPage(us[1].toUpperCase(), us[2]);
+      const html = !us[1] && us[2] === 'what-works' ? nv.whatWorksPage() : !us[1] && us[2] ? null : !us[1] ? nv.usPage() : !us[2] ? nv.statePage(us[1].toUpperCase()) : nv.countyPage(us[1].toUpperCase(), us[2]);
       return html ? res.send(html) : res.status(404).send(gatePage('No county at that address.', '/'));
     }
     if (p === '/') {
@@ -147,7 +147,7 @@ app.get(['/sitemap.xml', '/sitemap-index.xml'], (req, res) => {
   if (r.action === 'serve' && directory.isFeatured(r.key)) {
     let cfg = {}; try { cfg = load(r.key).county; } catch (e) {}
     const base = `https://${host}`;
-    const paths = ['/', '/tour', '/budget', '/priorities', '/issues', '/outcomes', '/help', '/calendar', '/participate', '/docket', '/documents', '/vendors', '/audits', '/verify', '/methodology', '/guide', '/stance', '/story', '/counties', '/cases', '/research', '/receipts', '/food', '/sovereignty', '/engine', '/commons', '/blueprint', '/almanac', '/feed', '/frontier', '/growops', '/water', '/justice', '/surveillance', '/offices', '/atlas', '/coverage', '/elections', '/turnout', '/grants', '/kindred', '/field', '/never', '/security', '/traffic'];
+    const paths = ['/', '/tour', '/budget', '/priorities', '/issues', '/outcomes', '/help', '/calendar', '/participate', '/docket', '/documents', '/vendors', '/audits', '/verify', '/methodology', '/guide', '/stance', '/story', '/counties', '/cases', '/research', '/receipts', '/food', '/sovereignty', '/engine', '/commons', '/blueprint', '/almanac', '/feed', '/frontier', '/growops', '/water', '/justice', '/surveillance', '/offices', '/atlas', '/what-works', '/coverage', '/elections', '/turnout', '/grants', '/kindred', '/field', '/never', '/security', '/traffic'];
     if (cfg.has_municipalities) paths.push('/places');
     if (cfg.has_compare) paths.push('/compare/counties', '/compare/spending');
     if (cfg.has_taxes_debt) paths.push('/taxes');
@@ -318,6 +318,7 @@ const STARTER_PAGES = {
   '/surveillance': ['Who’s watching', 'cameras, plate readers and the rules that govern them'],
   '/offices': ['Who to call', 'county and state offices, with addresses and phones'],
   '/atlas': ['By the numbers', 'schools, health, disaster risk, bridges and federal grants'],
+  '/what-works': ['What has worked', 'how the county compares with similar counties, and evidence-rated options'],
   '/coverage': ['How complete is this county?', 'what’s gathered so far and what isn’t'],
   '/docket': ['Dead ends & open questions', 'the documents still to get, and what each one would answer']
 };
@@ -628,6 +629,7 @@ app.get('/coverage', (req, res) => res.send(coveragePage(load(req.tenantKey), re
 // From holding to building — every county gets the page; the local section appears once researched.
 const { justicePage } = require('./views/justice');
 app.get('/atlas', (req, res) => res.send(require('./views/atlas').atlasPage(load(req.tenantKey))));
+app.get('/what-works', (req, res) => res.send(require('./views/whatworks').whatWorksPage(load(req.tenantKey))));
 app.get('/offices', (req, res) => res.send(require('./views/offices').officesPage(load(req.tenantKey))));
 app.get('/surveillance', (req, res) => {
   const data = load(req.tenantKey);

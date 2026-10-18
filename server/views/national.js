@@ -96,6 +96,8 @@ ${B.housing(c)}
 ${B.grants(c, N)}
 ${B.arpa(c)}
 ${B.places(c)}
+${require('../lib/peers').block(c, N, { more: '/us/what-works' })}
+${require('./whatworks').improveBlock(c, N, { more: '/us/what-works' })}
 
 <section>
 <h2>Voting</h2>
@@ -191,6 +193,20 @@ ${built.length ? `<section><h2>Full County Commons sites in ${esc(S.name)}</h2><
     jsonld: { '@context': 'https://schema.org', '@type': 'State', name: S.name, url: `https://countycommons.us/us/${st.toLowerCase()}`, containedInPlace: { '@type': 'Country', name: 'United States' } } });
 }
 
+function whatWorksPage() {
+  const N = nat();
+  const body = `
+<header class="page">
+  <div class="eyebrow">County Commons · the United States</div>
+  <h1>What has worked: local options with a track record</h1>
+  <div class="src">Overdose deaths, the uninsured, doctor shortages, child poverty, hunger, housing, jails, bridges, broadband, jobs, schools, water, disaster losses and voter turnout — for each, approaches that cities, counties, schools and health departments have tried and evaluators have measured. Every county page shows how it compares with counties like it, and the options for where it's furthest behind.</div>
+</header>
+${require('./whatworks').fullBody(null, N)}`;
+  return page({ title: 'What works for local government: evidence-rated options on overdoses, health, poverty, housing, jails and more · County Commons',
+    description: 'Local options with a measured track record — naloxone, crisis teams, tutoring, pretrial reminders, home visiting, hazard mitigation and more — with each clearinghouse rating, where it was done, and its limits.',
+    canonical: 'https://countycommons.us/us/what-works', body });
+}
+
 function usPage() {
   const N = nat();
   const sts = Object.keys(N.byState).sort((a, b) => (N.states[a] || {}).name.localeCompare((N.states[b] || {}).name));
@@ -209,7 +225,7 @@ function usPage() {
 
 function sitemapUrls() {
   const N = nat();
-  const out = ['https://countycommons.us/us'];
+  const out = ['https://countycommons.us/us', 'https://countycommons.us/us/what-works'];
   for (const st of Object.keys(N.byState)) {
     out.push(`https://countycommons.us/us/${st.toLowerCase()}`);
     for (const c of N.byState[st]) out.push(`https://countycommons.us/us/${st.toLowerCase()}/${c.slug}`);
@@ -217,4 +233,4 @@ function sitemapUrls() {
   return out;
 }
 
-module.exports = { countyPage, statePage, usPage, sitemapUrls };
+module.exports = { countyPage, statePage, usPage, whatWorksPage, sitemapUrls };
