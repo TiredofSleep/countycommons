@@ -30,7 +30,7 @@ function trafficPage(data, sum, reg) {
 <header class="page">
   <div class="eyebrow">${esc(county.platform_name)} · the traffic log</div>
   <h1>How much this is looked at</h1>
-  <div class="src">What we count, published: how many pages each county got by day, plus — in a single word — where a visit came from (a search engine, a link from Facebook, or direct) and whether it was a bot. We read the browser's referer and user-agent to sort a view into a bucket like "Facebook," then throw the details away: we keep the bucket, <b>never the full address, never an IP, never a cookie, nothing tied to a person</b> — by us or by anyone who ever gets hold of the file. It can tell you which counties people read and roughly how they found us; it cannot tell anyone who they were, because we never wrote that down. This is the surveillance we refuse, made auditable: there's nothing here but sums.</div>
+  <div class="src">What we count, published: how many pages each county got by day, plus — in a single word — where a visit came from (a search engine, a link from Facebook, or direct), what kind of software asked (a browser type like “Safari · phone,” a search crawler, or an AI assistant), and whether it was a bot. We read the browser's referer and user-agent to sort a view into buckets like "Facebook" and "Safari · phone," then throw the details away: we keep the buckets, <b>never the full address, never an IP, never a cookie, nothing tied to a person</b> — by us or by anyone who ever gets hold of the file. It can tell you which counties people read and roughly how they found us; it cannot tell anyone who they were, because we never wrote that down. This is the surveillance we refuse, made auditable: there's nothing here but sums.</div>
 </header>
 
 <section>
@@ -53,6 +53,25 @@ ${(() => {
   <p class="src"><b>${hum.toLocaleString('en-US')}</b> human views by source. Separately, <b>${(sum.botTotal || 0).toLocaleString('en-US')}</b> views were from bots and crawlers (search engines, link-preview scrapers) — counted apart so they don't inflate the human numbers. "Direct" means no referring link (typed, bookmarked, or an app that strips referrers); "Internal" means a click within the network.</p>`;
 })()}
 </section>
+
+${(() => {
+  const recent = (sum.days || []).slice(0, 7).filter(d => d.byAgent);
+  if (!recent.length) return '';
+  const add = (k) => { const m = {}; for (const d of recent) for (const [a, n] of Object.entries(d[k] || {})) m[a] = (m[a] || 0) + n; return Object.entries(m).sort((a, b) => b[1] - a[1]); };
+  const all = add('byAgent'), direct = add('directByAgent');
+  const tot = (l) => l.reduce((s, [, n]) => s + n, 0);
+  const table = (l, head) => { const t = tot(l); return `<table class="plain"><thead><tr><th>${head}</th><th class="num">Views</th><th class="num">Share</th></tr></thead><tbody>${l.slice(0, 15).map(([a, n]) => `<tr><td>${esc(a)}</td><td class="num">${n.toLocaleString('en-US')}</td><td class="num">${t ? Math.round(n / t * 100) : 0}%</td></tr>`).join('')}</tbody></table>`; };
+  return `
+<section id="software">
+<h2>What asked for the pages <span class="sub">— last ${recent.length} day${recent.length === 1 ? '' : 's'}</span></h2>
+<p>Every page request names the software asking for it. We sort that into one label from a fixed list — a browser and a device type, a search engine's crawler, or an AI assistant fetching a page because someone asked it a question — and keep only the label. No version numbers (just whether a browser is years out of date, a common sign of a script pretending to be a person), no IP, nothing about who.</p>
+${table(all, 'Everything that asked')}
+${direct.length ? `<h3 style="margin-top:14px">Visits with no referring link (“Direct”)</h3>
+<p class="src" style="max-width:none">The visits that arrive without saying where they came from — typed, bookmarked, opened from an app that hides the link, or fetched by software.</p>
+${table(direct, 'Direct visits')}` : ''}
+<p class="src" style="max-width:none">Started counting ${esc(recent[recent.length - 1].date)}. AI assistants that fetch a page for someone's question are labeled apart from AI training crawlers (GPTBot, ClaudeBot); in the totals above, any that name themselves a bot are counted with the bots, so human numbers stay on the low side.</p>
+</section>`;
+})()}
 
 <section>
 <h2>By day <span class="sub">— last ${(sum.days || []).length} day${(sum.days || []).length === 1 ? '' : 's'}</span></h2>
