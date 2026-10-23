@@ -163,7 +163,9 @@ ${PV.trailHtml(p)}
   return layout({
     title: `Sign: ${p.title}`,
     current: '/petitions', body, county,
-    description: `${p.support.toLocaleString('en-US')} ${county.name} ${p.support === 1 ? 'resident has' : 'residents have'} signed this petition to ${to}. Goal: ${goal.toLocaleString('en-US')}. Add your name.`
+    description: p.support < 5
+      ? `A petition to ${to}. Be one of the first ${county.name} residents to sign — at ${goal.toLocaleString('en-US')} signatures it’s delivered at a public meeting.`
+      : `${p.support.toLocaleString('en-US')} ${county.name} residents have signed this petition to ${to}. Goal: ${goal.toLocaleString('en-US')}. Add your name.`
   });
 }
 
