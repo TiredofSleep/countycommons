@@ -59,4 +59,34 @@ function tally(issue) {
   return { total: keep.size, floor: FLOOR, counts, connections, duplicates_removed: removed };
 }
 
-module.exports = { tally, FLOOR };
+// The copy of a petition handed to officials. Joins signatures (civic store)
+// with what signers volunteered (identity store) in memory, here and only
+// here, for the host's printable packet — never stored, logged or shown on a
+// public page. Duplicates collapse the same way as votes (same email or phone,
+// or the same name and town); a name appears only when its signer checked
+// "put my name on the copy delivered to officials".
+const PRIORITIES = path.join(__dirname, '..', 'data', 'priorities.json');
+function petitionPacket(id) {
+  const p = (loadJson(PRIORITIES, { priorities: {} }).priorities || {})[id];
+  if (!p) return null;
+  const regs = loadJson(IDENTS, { registrations: {} }).registrations || {};
+  const seen = new Set(); const byTown = {}; const names = []; let total = 0, removed = 0;
+  const entries = Object.entries(p.supporters || {}).sort((a, b) => String(a[1].at).localeCompare(String(b[1].at)));
+  for (const [part, s] of entries) {
+    const r = regs[part] || {};
+    const keys = [];
+    if (normEmail(r.email)) keys.push('e:' + normEmail(r.email));
+    if (normPhone(r.phone)) keys.push('p:' + normPhone(r.phone));
+    if (r.name && s.town) keys.push('n:' + String(r.name).trim().toLowerCase() + '|' + String(s.town).trim().toLowerCase());
+    if (keys.some(k => seen.has(k))) { removed++; continue; }
+    keys.forEach(k => seen.add(k));
+    total++;
+    const town = s.town || 'Town not given';
+    byTown[town] = (byTown[town] || 0) + 1;
+    if (s.deliver && r.name) names.push({ name: String(r.name).trim(), town: s.town || '' });
+  }
+  names.sort((a, b) => a.town.localeCompare(b.town) || a.name.localeCompare(b.name));
+  return { id, total, duplicates_removed: removed, by_town: Object.entries(byTown).sort((a, b) => b[1] - a[1]), names };
+}
+
+module.exports = { tally, petitionPacket, FLOOR };

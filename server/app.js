@@ -147,7 +147,7 @@ app.get(['/sitemap.xml', '/sitemap-index.xml'], (req, res) => {
   if (r.action === 'serve' && directory.isFeatured(r.key)) {
     let cfg = {}; try { cfg = load(r.key).county; } catch (e) {}
     const base = `https://${host}`;
-    const paths = ['/', '/tour', '/budget', '/priorities', '/issues', '/outcomes', '/help', '/calendar', '/participate', '/docket', '/documents', '/vendors', '/audits', '/verify', '/methodology', '/guide', '/stance', '/story', '/counties', '/cases', '/research', '/receipts', '/food', '/sovereignty', '/engine', '/commons', '/blueprint', '/almanac', '/feed', '/frontier', '/growops', '/water', '/justice', '/surveillance', '/offices', '/atlas', '/compare', '/what-works', '/coverage', '/elections', '/turnout', '/grants', '/kindred', '/field', '/never', '/security', '/traffic'];
+    const paths = ['/', '/tour', '/budget', '/petitions', '/issues', '/outcomes', '/help', '/calendar', '/participate', '/docket', '/documents', '/vendors', '/audits', '/verify', '/methodology', '/guide', '/stance', '/story', '/counties', '/cases', '/research', '/receipts', '/food', '/sovereignty', '/engine', '/commons', '/blueprint', '/almanac', '/feed', '/frontier', '/growops', '/water', '/justice', '/surveillance', '/offices', '/atlas', '/compare', '/what-works', '/coverage', '/elections', '/turnout', '/grants', '/kindred', '/field', '/never', '/security', '/traffic'];
     if (cfg.has_municipalities) paths.push('/places');
     if (cfg.has_compare) paths.push('/compare/counties', '/compare/spending');
     if (cfg.has_taxes_debt) paths.push('/taxes');
@@ -310,6 +310,7 @@ app.use((req, res, next) => {
 // tax rates, state turnout counts, the closest prisons) stay open past the guard.
 // Elections pass through too: when and where to vote doesn't wait on a budget.
 const STARTER_PAGES = {
+  '/petitions': ['Petitions', 'sign, start and share petitions to your elected officials'],
   '/elections': ['When and how to vote', 'election dates, polling hours and the ID rule'],
   '/faq': ['Questions answered', 'property tax, voting and what’s been gathered, from public records'],
   '/mybill': ['Your tax bill, explained', 'every tax rate on a home here, from the state’s millage report'],
@@ -371,7 +372,7 @@ app.use((req, res, next) => {
       p.startsWith('/counties') || p === '/health' || p === '/robots.txt' || /\.[a-z0-9]+$/i.test(p)) return next();
   try {
     const data = load(req.tenantKey);
-    if (starterReady(data).includes(p)) return next();
+    if (starterReady(data).includes(p) || p.startsWith('/petitions/')) return next();
     return res.send(starterPage(data));
   } catch (e) { return next(); }
 });
@@ -425,7 +426,8 @@ app.get('/', (req, res) => {
   res.send(homePage(data, {
     registeredFields: participant ? require('./identity').fieldsOf(participant) : [],
     justRegistered: req.query.registered === '1',
-    announceChecked: !!(participant && open.length && require('./signatures').mySignature(participant, open[0].id))
+    announceChecked: !!(participant && open.length && require('./signatures').mySignature(participant, open[0].id)),
+    petitions: require('./priorities').listByLevel({ tenant: req.tenantKey, state: data.county.state, level: 'county' }).slice(0, 3)
   }));
 });
 const places = require('./lib/places');
@@ -963,7 +965,9 @@ app.post('/yourbudget/:id', writeLimit, express.urlencoded({ extended: false }),
 const priorities = require('./priorities');
 const { prioritiesPage } = require('./views/priorities');
 
-app.get('/priorities', (req, res) => {
+// The priorities board is now the petitions board; old links keep working.
+app.get('/priorities', (req, res) => res.redirect(301, '/petitions' + (req.originalUrl.includes('?') ? req.originalUrl.slice(req.originalUrl.indexOf('?')) : '')));
+app.get('/priorities-board', (req, res) => {
   const data = load(req.tenantKey);
   const state = data.county.state;
   const level = (req.query.level || '').slice(0, 60) || 'county';
@@ -996,6 +1000,73 @@ app.post('/priorities/:id/support', writeLimit, express.urlencoded({ extended: f
   priorities.support(participant, req.params.id, (req.body && req.body.why) || '');
   const level = ((req.body && req.body.level) || '').slice(0, 60) || 'county';
   res.redirect('/priorities?level=' + encodeURIComponent(level) + '&supported=1#board');
+});
+
+// ---- petitions: the same priorities, as the clipboard everyone recognizes ----
+const PT = require('./views/petitions');
+const spam = require('./lib/spam');
+
+app.get('/petitions', (req, res) => {
+  const data = load(req.tenantKey);
+  const level = (req.query.level || '').slice(0, 60) || 'county';
+  res.send(PT.listPage(data, priorities.listByLevel({ tenant: req.tenantKey, state: data.county.state, level }), {
+    level, places: places.placesFor(req.tenantKey), mine: priorities.supportedBy(participantOf(req), req.tenantKey),
+    blocked: (req.query.blocked || '').slice(0, 200) || null, error: (req.query.error || '').slice(0, 40) || null,
+    idea: (req.query.idea || '').slice(0, 120)
+  }));
+});
+
+app.post('/petitions/start', writeLimit, express.urlencoded({ extended: false }), (req, res) => {
+  const b = req.body || {};
+  const level = (b.level || '').slice(0, 60) || 'county';
+  const base = '/petitions?level=' + encodeURIComponent(level);
+  if (b.website) return res.redirect(base); // the hidden field only a bot fills in
+  const participant = ensureParticipant(req, res);
+  const r = priorities.propose({ tenant: req.tenantKey, kind: 'prioritize', title: b.title, why: b.why, level, participant, county: load(req.tenantKey).county });
+  if (r.error === 'bright-line') return res.redirect(base + '&blocked=' + encodeURIComponent((r.flags || []).join(', ')) + '#start');
+  if (r.error) return res.redirect(base + '&error=' + encodeURIComponent(r.error) + '#start');
+  res.redirect('/petitions/' + encodeURIComponent(r.id) + '?started=1#sign');
+});
+
+app.get('/petitions/:id', (req, res, next) => {
+  const p = priorities.getPublic(req.params.id);
+  if (!p || p.tenant !== req.tenantKey && !['national', 'state'].includes(p.level)) return next();
+  const participant = participantOf(req);
+  const own = participant && (priorities.get(p.id).supporters || {})[participant];
+  const mine = !!(own && own.signed);
+  res.send(PT.petitionPage(load(req.tenantKey), p, { places: places.placesFor(req.tenantKey), mine, signed: req.query.signed === '1', error: (req.query.error || '').slice(0, 20) || null }));
+});
+
+app.post('/petitions/:id/sign', writeLimit, express.urlencoded({ extended: false }), (req, res) => {
+  const b = req.body || {};
+  const id = req.params.id;
+  const here = '/petitions/' + encodeURIComponent(id);
+  if (!priorities.getPublic(id)) return res.redirect('/petitions');
+  if (b.website) return res.redirect(here);
+  const name = String(b.name || '').trim(), town = String(b.town || '').trim();
+  if (!spam.plainName(name)) return res.redirect(here + '?error=' + (name ? 'junk' : 'name') + '#sign');
+  if (!spam.plainName(town)) return res.redirect(here + '?error=' + (town ? 'junk' : 'town') + '#sign');
+  const why = spam.isProbe(b.why) ? '' : b.why;
+  const email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(b.email || '').trim()) ? String(b.email).trim() : '';
+  const participant = ensureParticipant(req, res);
+  require('./identity').register(participant, { name, city: town, email });
+  priorities.support(participant, id, why, { town, deliver: b.deliver === '1' });
+  res.redirect(here + '?signed=1#share');
+});
+
+app.get('/petitions/:id/flyer', async (req, res, next) => {
+  const p = priorities.getPublic(req.params.id);
+  if (!p || p.tenant !== req.tenantKey && !['national', 'state'].includes(p.level)) return next();
+  const qr = await require('qrcode').toString(require('./lib/reqctx').url(`/petitions/${p.id}`) + '?via=qr', { type: 'svg', margin: 1, errorCorrectionLevel: 'M' });
+  res.send(PT.flyerPage(load(req.tenantKey), p, qr, { places: places.placesFor(req.tenantKey) }));
+});
+
+// The copy handed to officials — names appear here only, for signers who asked.
+app.get('/admin/petitions/:id/packet', requireAdmin, (req, res, next) => {
+  const p = priorities.getPublic(req.params.id);
+  if (!p || p.tenant !== req.access.tenant) return next();
+  res.set('Cache-Control', 'no-store');
+  res.send(PT.packetPage(load(req.tenantKey), p, require('./tally').petitionPacket(p.id), { places: places.placesFor(req.tenantKey) }));
 });
 
 // The accountability loop, in public: what the county did with each priority.

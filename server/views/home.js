@@ -25,6 +25,26 @@ function nextMeeting(calendar) {
   return null;
 }
 
+// Open petitions, first thing after the headline: the clipboard at the door.
+function petitionStrip(data, list) {
+  const PT = require('./petitions'), PV = require('./priorities');
+  const county = data.county;
+  if (!list.length) return `
+<section style="margin-top:6px"><div class="issue" style="display:block;border-left:3px solid var(--accent)">
+  <b>Petitions to ${esc(PT.addressee(data, PT.levelOf(data, null, 'county')))}</b>
+  <p style="margin:4px 0 6px">Like the clipboard at the courthouse door: one sentence saying what we want, and a line to sign. None are open yet — <a href="/petitions#start">start the first one</a>.</p>
+</div></section>`;
+  return `
+<section style="margin-top:6px">
+<h2 style="margin-top:0">Petitions <span class="sub">— sign what you agree with, share it with neighbors</span></h2>
+${list.map(p => {
+    const lvl = PT.levelOf(data, null, p.level), goal = PV.levelThreshold(lvl, county);
+    return `<div class="issue" style="display:block"><a href="/petitions/${esc(p.id)}" style="color:inherit;text-decoration:none"><b>${esc(p.title)}</b></a>${PV.progressBar(p.support, goal, null)}<p style="margin:6px 0 0"><a href="/petitions/${esc(p.id)}#sign">Read and sign →</a></p></div>`;
+  }).join('')}
+<p class="src"><a href="/petitions">All petitions</a> · <a href="/petitions#start">Start one</a> · ${esc(PT.honest(county))}</p>
+</section>`;
+}
+
 function homePage(data, opts = {}) {
   const { registeredFields = [], justRegistered = false, announceChecked = false } = opts;
   const { county, budget, documents, verification, docket, calendar, issueDrafts } = data;
@@ -78,10 +98,11 @@ function homePage(data, opts = {}) {
   <p class="src" style="max-width:60ch">Every dollar shown where it came from. Every voice counted honestly. Every claim you can check yourself — including this one.</p>
   ${vOk ? `<a href="/verify" style="text-decoration:none"><div class="stamp" title="Every branch of the budget re-adds to its stated total">${budgetPassed}/${budgetChecks.length} budget checks pass ✓</div></a>` : ''}
   <div style="margin:16px 0 2px;display:flex;gap:10px;flex-wrap:wrap;align-items:center">
-    <a href="/priorities" style="display:inline-block;font-family:var(--mono);font-size:clamp(15px,2.4vw,18px);font-weight:600;padding:16px 26px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);text-decoration:none;text-wrap:balance">Raise your voice — put a priority on the record →</a>
+    <a href="/petitions" style="display:inline-block;font-family:var(--mono);font-size:clamp(15px,2.4vw,18px);font-weight:600;padding:16px 26px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);text-decoration:none;text-wrap:balance">Sign or start a petition →</a>
     ${openQs.length ? `<a href="/issues/${esc(openQs[0].id)}" style="font-family:var(--mono);font-size:14px;font-weight:600;padding:14px 18px;border:2px solid var(--ink);color:var(--ink);text-decoration:none">or answer the open question →</a>` : ''}
   </div>
 </header>
+${petitionStrip(data, opts.petitions || [])}
 
 <section style="margin-top:8px">
 <h2 style="margin-top:0">See it in two minutes <span class="sub">— what this site lets you do</span></h2>

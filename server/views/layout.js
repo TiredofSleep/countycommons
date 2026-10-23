@@ -9,7 +9,7 @@ const { esc } = require('../lib/corpus');
 const NAV = [
   ['/', 'Home'],
   ['/issues', 'Votes'],
-  ['/priorities', 'Priorities'],
+  ['/petitions', 'Petitions'],
   ['/budget', 'Budget'],
   ['/grants', 'Grants'],
   ['/water', 'Water'],
@@ -35,7 +35,7 @@ function siteMap(county, current) {
       ['/issues', 'Open questions'],
       ['/elections', 'Elections — when, where, how'],
       ['/turnout', 'Voter turnout'],
-      ['/priorities', 'Priorities board'],
+      ['/petitions', 'Petitions — sign, start, share'],
       ['/outcomes', 'What came of it'],
       ['/participate', 'Get involved']
     ]],
@@ -149,7 +149,7 @@ function layout({ title, current, body, county, description, jsonld }) {
   // The call to action, on every page — the whole site funnels here. Suppressed
   // where it would be redundant (the priorities board itself) or out of place
   // (the host/owner consoles).
-  const noCta = ['/priorities', '/admin', '/owner'].includes(current);
+  const noCta = ['/priorities', '/petitions', '/admin', '/owner'].includes(current);
   const ctaBand = noCta ? '' : `
 <aside style="border:2px solid var(--ink);background:var(--card);padding:16px 18px;margin:26px 0 0;display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:space-between">
   <div style="min-width:220px;flex:1">

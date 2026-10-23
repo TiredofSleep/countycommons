@@ -46,6 +46,9 @@ function propose({ tenant, kind, title, why, node_ref, participant, county, targ
   target = level;
   state = state || (county && county.state) || null;
   if (!title || !why) return { error: 'missing' };
+  // Scanners and empty posts never reach the board.
+  const junk = require('./lib/spam').petitionProblem(title, why);
+  if (junk) return { error: junk };
   // The charter bright lines are a bone (NEVER.md): no campaigning, no live
   // ballot measures, no naming or conduct posts about non-elected staff.
   // Elected officials and candidates may be named. Anything flagged is
@@ -73,7 +76,10 @@ function propose({ tenant, kind, title, why, node_ref, participant, county, targ
 }
 
 // Back a priority (optionally with your own reason). One per participant.
-function support(participant, id, why) {
+// As a petition signature it can also carry the signer's town (shown only as a
+// count by town) and whether they want their name on the copy handed to
+// officials — the name itself lives in the identity store, never here.
+function support(participant, id, why, sig) {
   if (!participant) return null;
   const s = load();
   const p = s.priorities[id];
@@ -82,6 +88,12 @@ function support(participant, id, why) {
   const entry = { at: new Date().toISOString() };
   const w = String(why || '').trim().slice(0, 400);
   if (w) entry.why = w;
+  if (sig) {
+    const town = String(sig.town || '').trim().replace(/\s+/g, ' ').slice(0, 60);
+    if (town) entry.town = town;
+    if (sig.deliver) entry.deliver = true;
+    entry.signed = true;
+  }
   p.supporters[participant] = entry;
   chain.append('priority-support', { id });
   save(s);
@@ -153,6 +165,21 @@ function supportedBy(participant, tenant) {
 
 function levelOf(p) { return p.level || p.target || 'county'; }
 
+// Signatures by town — the public face of who signed, never names. Towns with
+// fewer than 3 signers fold into "other towns" so no one stands out.
+function townCounts(p) {
+  const raw = {};
+  for (const x of Object.values(p.supporters || {})) {
+    const t = x.town ? x.town.toLowerCase().replace(/\b\w/g, (c) => c.toUpperCase()) : 'Town not given';
+    raw[t] = (raw[t] || 0) + 1;
+  }
+  const out = {}; let other = 0;
+  for (const [t, n] of Object.entries(raw)) { if (n >= 3 || t === 'Town not given') out[t] = n; else other += n; }
+  if (other) out['Other towns'] = other;
+  return Object.entries(out).sort((a, b) => b[1] - a[1]);
+}
+const real = (p) => require('./lib/spam').looksReal(p);
+
 function enrich(p) {
   return {
     id: p.id, kind: p.kind, title: p.title, why: p.why, node_ref: p.node_ref,
@@ -160,6 +187,7 @@ function enrich(p) {
     tenant: p.tenant, created_at: p.created_at,
     support: Object.keys(p.supporters || {}).length,
     reasons: Object.values(p.supporters || {}).filter(x => x.why).map(x => x.why),
+    towns: townCounts(p),
     timeline: p.timeline || [], phase: phaseOf(p)
   };
 }
@@ -174,7 +202,7 @@ function enrich(p) {
 function listByLevel({ tenant, state, level }) {
   level = level || 'county';
   return Object.values(load().priorities)
-    .filter(p => p.status === 'open')
+    .filter(p => p.status === 'open' && real(p))
     .filter(p => {
       const lv = levelOf(p);
       if (level === 'national') return lv === 'national';
@@ -189,7 +217,7 @@ function listByLevel({ tenant, state, level }) {
 // The ranked community voice for a county (county-level only, back-compat).
 function listFor(tenant) {
   return Object.values(load().priorities)
-    .filter(p => p.status === 'open' && p.tenant === tenant && levelOf(p) === 'county')
+    .filter(p => p.status === 'open' && real(p) && p.tenant === tenant && levelOf(p) === 'county')
     .map(enrich)
     .sort((a, b) => b.support - a.support || String(b.created_at).localeCompare(String(a.created_at)));
 }
@@ -202,4 +230,6 @@ function listAll() {
     .sort((a, b) => String(b.created_at).localeCompare(String(a.created_at)));
 }
 
-module.exports = { propose, support, addOutcome, undoOutcome, phaseOf, get, setStatus, remove, mySupport, supportedBy, listFor, listByLevel, listAll };
+function getPublic(id) { const p = get(id); return p && p.status === 'open' && real(p) ? enrich(p) : null; }
+
+module.exports = { getPublic, propose, support, addOutcome, undoOutcome, phaseOf, get, setStatus, remove, mySupport, supportedBy, listFor, listByLevel, listAll };
