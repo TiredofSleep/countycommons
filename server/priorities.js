@@ -36,7 +36,7 @@ function save(s) {
 // The funnel levels a priority can live at: the whole nation, a state, a county,
 // or a specific city. Each level is its own space with its own set of votes and
 // its own count — people toggle through the funnel to move between them.
-function propose({ tenant, kind, title, why, node_ref, participant, county, target, level, state }) {
+function propose({ tenant, kind, title, why, node_ref, participant, county, target, level, state, by }) {
   title = String(title || '').trim().slice(0, 120);
   why = String(why || '').trim().slice(0, 600);
   kind = KINDS.has(kind) ? kind : 'prioritize';
@@ -68,7 +68,9 @@ function propose({ tenant, kind, title, why, node_ref, participant, county, targ
     created_at: now,
     // The proposer is the first backer; keyed by token, never shown.
     supporters: participant ? { [participant]: { at: now } } : {},
-    status: 'open'
+    status: 'open',
+    // Who started it, when it isn't an anonymous resident (stated on the page).
+    ...(by ? { by: String(by).slice(0, 160) } : {})
   };
   chain.append('priority', { id, tenant, kind });
   save(s);
@@ -184,7 +186,7 @@ function enrich(p) {
   return {
     id: p.id, kind: p.kind, title: p.title, why: p.why, node_ref: p.node_ref,
     level: levelOf(p), target: p.target || levelOf(p), state: p.state || null,
-    tenant: p.tenant, created_at: p.created_at,
+    tenant: p.tenant, created_at: p.created_at, by: p.by || null,
     support: Object.keys(p.supporters || {}).length,
     reasons: Object.values(p.supporters || {}).filter(x => x.why).map(x => x.why),
     towns: townCounts(p),

@@ -123,7 +123,7 @@ function petitionPage(data, p, opts) {
 <header class="page">
   <div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · petition</div>
   <h1 style="margin-bottom:6px">${esc(p.title)}</h1>
-  <div class="src" style="font-size:15px">A petition to <b>${esc(to)}</b>, started by a resident on ${esc(String(p.created_at).slice(0, 10))}.</div>
+  <div class="src" style="font-size:15px">A petition to <b>${esc(to)}</b>, started by ${p.by ? esc(p.by) : 'a resident'} on ${esc(String(p.created_at).slice(0, 10))}.</div>
 </header>
 <section>
 ${PV.progressBar(p.support, goal, null)}
