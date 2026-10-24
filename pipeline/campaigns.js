@@ -43,9 +43,16 @@ for (const camp of C.campaigns) {
       make(camp, { tenant: key, county, level: lvl.id, state: county.state });
     }
   } else if (camp.level === 'state') {
+    // Every state and D.C. — signable from every national county page, and from
+    // any county site in that state.
     const byState = {};
     for (const x of counties) if (x.county.state && !byState[x.county.state]) byState[x.county.state] = x;
-    for (const [state, x] of Object.entries(byState)) make(camp, { tenant: x.key, county: x.county, level: 'state', state });
+    let states = Object.keys(byState);
+    try { states = Object.values(JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'national', 'counties.json'), 'utf8')).states).map(s => s.name); } catch (e) { /* sites only */ }
+    for (const state of states) {
+      const x = byState[state] || { key: '__us__', county: { name: state, state } };
+      make(camp, { tenant: x.key, county: x.county, level: 'state', state });
+    }
   } else if (camp.level === 'national') {
     const x = counties.find(c => c.key === 'clarkar') || counties[0];
     make(camp, { tenant: x.key, county: x.county, level: 'national', state: null });

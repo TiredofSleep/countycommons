@@ -47,6 +47,13 @@ function siteNames() {
   } catch (e) {}
   return SITES;
 }
+function placeName(key) {
+  const S = siteNames();
+  if (S[key]) return `${S[key].name}, ${S[key].state}`;
+  const m = /^\/us\/([a-z]{2})\/([a-z0-9-]+)$/.exec(String(key));
+  if (m) { try { return require('./national').countyName(m[1], m[2]); } catch (e) { return null; } }
+  return null;
+}
 const siteUrl = (key, id) => `https://${key}.countycommons.us/petitions/${id}`;
 
 // "The same ask is open in 92 counties in 12 states — 1,240 signatures in all."
@@ -55,8 +62,8 @@ function sharedStrip(p) {
   const r = require('../priorities').campaignRollup(p.campaign);
   const S = siteNames();
   if (p.level === 'national' || p.level === 'state') {
-    const rows = r.bySite.filter(([k]) => S[k]).slice(0, 12);
-    return `<div class="issue" style="display:block;border-left:3px solid var(--accent)"><b>Signed from ${r.sitesSigning} count${r.sitesSigning === 1 ? 'y' : 'ies'} so far</b>${rows.length ? `<p class="src" style="max-width:none;margin:4px 0 0">${rows.map(([k, n]) => `${esc(S[k].name)}, ${esc(S[k].state)} <b>${n}</b>`).join(' · ')}</p>` : '<p class="src" style="margin:4px 0 0">Be the first from your county.</p>'}</div>`;
+    const rows = r.bySite.map(([k, n]) => [placeName(k), n]).filter(([k]) => k).slice(0, 12);
+    return `<div class="issue" style="display:block;border-left:3px solid var(--accent)"><b>Signed from ${r.sitesSigning} count${r.sitesSigning === 1 ? 'y' : 'ies'} so far</b>${rows.length ? `<p class="src" style="max-width:none;margin:4px 0 0">${rows.map(([k, n]) => `${esc(k)} <b>${n}</b>`).join(' · ')}</p>` : '<p class="src" style="margin:4px 0 0">Be the first from your county.</p>'}</div>`;
   }
   const states = new Set(r.copies.map(c => (S[c.tenant] || {}).state).filter(Boolean));
   return `<div class="issue" style="display:block;border-left:3px solid var(--accent)"><b>The same ask is open in ${r.copies.length} counties in ${states.size} state${states.size === 1 ? '' : 's'}</b> — ${r.total.toLocaleString('en-US')} signature${r.total === 1 ? '' : 's'} across all of them. Each county's petition goes to its own officials and counts toward its own goal; together they show how many places want the same thing. <a href="/petitions/shared/${esc(p.campaign)}">See every county →</a></div>`;
@@ -155,7 +162,7 @@ function petitionPage(data, p, opts) {
 </header>
 <section>
 ${PV.progressBar(p.support, goal, null)}
-<p class="src" style="margin:4px 0 0">${p.support >= goal ? 'The goal is reached — this petition is ready to be printed and delivered.' : `At ${goal.toLocaleString('en-US')} signatures it’s printed, with the count by town, and handed to ${esc(to)} at a public meeting.`}</p>
+<p class="src" style="margin:4px 0 0">${p.support >= goal ? 'The goal is reached — this petition is ready to be printed and delivered.' : `At ${goal.toLocaleString('en-US')} signatures it’s printed, with the count by ${lvl.kind === 'national' || lvl.kind === 'state' ? 'county' : 'town'}, and ${lvl.kind === 'national' || lvl.kind === 'state' ? `delivered to the offices of ${esc(to)}` : `handed to ${esc(to)} at a public meeting`}.`}</p>
 ${sharedStrip(p)}
 <h2 style="margin-top:16px">Why it matters</h2>
 <p style="white-space:pre-line">${esc(p.why)}</p>
@@ -278,4 +285,4 @@ function widerStrip(data, stateItems, nationalItems) {
 </div>`;
 }
 
-module.exports = { sharedPage, widerStrip, listPage, petitionPage, flyerPage, packetPage, addressee, levelOf, honest };
+module.exports = { placeName, sharedPage, widerStrip, listPage, petitionPage, flyerPage, packetPage, addressee, levelOf, honest };

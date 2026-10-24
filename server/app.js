@@ -73,6 +73,37 @@ app.use((req, res, next) => {
     // flagship. This is why countycommons.us shows "select your county or city".
     const p = req.path;
     if (p === '/enter' || p.startsWith('/gate') || p === '/health' || p === '/robots.txt' || /\.[a-z0-9]+$/i.test(p)) return next();
+    // State and national petitions, signable from every national county page.
+    const usPet = p.match(/^\/us\/petitions\/([a-z0-9-]{3,80})(\/sign)?$/);
+    if (usPet) {
+      const nv = require('./views/national');
+      const pet = priorities.getPublic(usPet[1]);
+      if (!pet || !['national', 'state'].includes(pet.level)) return res.status(404).send(gatePage('No petition at that address.', '/us'));
+      const countyPath = (s) => { const m = /^\/us\/([a-z]{2})\/([a-z0-9-]+)$/.exec(String(s || '')); return m && nv.countyName(m[1], m[2]) ? m[0] : ''; };
+      const here = '/us/petitions/' + pet.id;
+      if (!usPet[2] && req.method === 'GET') {
+        traffic.note('__network__', req);
+        const participant = participantOf(req);
+        const own = participant && (priorities.get(pet.id).supporters || {})[participant];
+        return res.send(nv.usPetitionPage(pet, { from: countyPath(req.query.from), mine: !!(own && own.signed), signed: req.query.signed === '1', error: String(req.query.error || '').slice(0, 20) }));
+      }
+      if (usPet[2] && req.method === 'POST') return writeLimit(req, res, () => express.urlencoded({ extended: false })(req, res, () => {
+        const b = req.body || {};
+        const from = countyPath(b.from);
+        const back = (q) => res.redirect(here + '?from=' + encodeURIComponent(from) + q + '#sign');
+        if (b.website) return back('');
+        if (!from) return back('&error=county');
+        const name = String(b.name || '').trim(), town = String(b.town || '').trim();
+        if (!spam.plainName(name)) return back('&error=' + (name ? 'junk' : 'name'));
+        if (!spam.plainName(town)) return back('&error=' + (town ? 'junk' : 'town'));
+        const email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(b.email || '').trim()) ? String(b.email).trim() : '';
+        const participant = ensureParticipant(req, res);
+        require('./identity').register(participant, { name, city: town, email });
+        priorities.support(participant, pet.id, '', { town, deliver: b.deliver === '1', site: from });
+        res.redirect(here + '?from=' + encodeURIComponent(from) + '&signed=1#share');
+      }));
+      return res.status(405).send('Method not allowed');
+    }
     // Help keep the national pages honest: their own drop-box and fix log.
     if (p === '/us/building' && req.method === 'GET') return res.send(require('./views/national').buildingPage());
     if (p === '/us/feedback') {
