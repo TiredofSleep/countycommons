@@ -72,6 +72,7 @@ function countyPage(st, slug) {
   const canonical = `https://countycommons.us/us/${st.toLowerCase()}/${slug}`;
   const el = c.st && N.elections && N.elections[st];
   const w = c.water, j = c.jail;
+  const QA = require('../lib/national-local').faq(c);
   const facts = [
     c.pop2024 ? `<b>${num(c.pop2024)}</b> people (2024 Census estimate${c.pop2020 ? `, ${pct(c.pop2024, c.pop2020)} since 2020` : ''})` : '',
     c.land_sqmi ? `${num(c.land_sqmi)} square miles of land${c.pop2024 ? ` · ${num(c.pop2024 / c.land_sqmi)} people per square mile` : ''}` : ''
@@ -120,6 +121,7 @@ ${require('../lib/national-local').libraries(c)}
 ${require('../lib/peers').block(c, N, { more: '/us/what-works' })}
 ${require('./whatworks').improveBlock(c, N, { more: '/us/what-works' })}
 
+${require('../lib/national-local').faqSection(QA, c)}
 ${B.voting(S.name, c.name)}
 
 <section>
@@ -131,11 +133,11 @@ ${RK.neighbors(c, N)}
 
   return page({
     title: `${place}: county spending, property tax, audit, jobs, schools, health, ARPA and voting · County Commons`,
-    description: `${place}${c.pop2024 ? ` (${num(c.pop2024)} people)` : ''}: ${w && w.systems ? `${w.systems} public water systems, ` : ''}${j ? `jail population ${num(j.pop)} (${j.year}), ` : ''}and how to vote — each from official public records, with sources.`,
+    description: (() => { const sm = require('../lib/national-local').summary(c); return `${place}${c.pop2024 ? ` (${num(c.pop2024)} people)` : ''}: ${sm ? sm + ' — plus ' : ''}schools, health, water, the jail, petitions and how to vote, from official public records with sources.`; })(),
     canonical, body,
-    jsonld: { '@context': 'https://schema.org', '@type': 'AdministrativeArea', name: place, identifier: c.geoid,
+    jsonld: [{ '@context': 'https://schema.org', '@type': 'AdministrativeArea', name: place, identifier: c.geoid,
       containedInPlace: { '@type': 'State', name: S.name }, url: canonical,
-      geo: c.lat ? { '@type': 'GeoCoordinates', latitude: c.lat, longitude: c.lon } : undefined }
+      geo: c.lat ? { '@type': 'GeoCoordinates', latitude: c.lat, longitude: c.lon } : undefined }, require('../lib/national-local').faqLd(QA)].filter(Boolean)
   });
 }
 

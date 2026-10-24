@@ -94,6 +94,13 @@ function faqItems(d) {
       add(`How much is rent in ${nrec.name}?`,
         `HUD's fair market rent for fiscal ${nrec.housing.fy}: <b>$${H.rent[2].toLocaleString('en-US')} a month</b> for a two-bedroom, $${H.rent[1].toLocaleString('en-US')} for one bedroom, $${H.rent[3].toLocaleString('en-US')} for three — rent plus utilities for a modest unit${nrec.housing.areas.length > 1 ? `, in ${esc(H.area)}` : ''}. Paying the two-bedroom rent with 30% of income takes about $${(Math.round(H.rent[2] * 40 / 100) * 100).toLocaleString('en-US')} a year${mhi ? `; the median household earns about $${mhi.toLocaleString('en-US')}` : ''}. <a href="/atlas#housing">Every size, and the change from last year</a>.`);
     }
+    // Jail spending, property tax, unemployment, the federal audit and libraries,
+    // from the national layers (the spending total only where we have no local budget).
+    if (nrec) for (const x of require('../lib/national-local').faq(nrec, '/atlas')) {
+      if (/^How much does .* spend( on its jail)?\?$/.test(x.q) && seo.hasBudget(d)) continue; // the county's own budget answers these
+      if (/property tax/.test(x.q) && d.myBill) continue;
+      add(x.q, `${esc(x.a)} <a href="${esc(x.href)}">More</a>.`);
+    }
     const A = nrec && require('../lib/national-blocks').arpaData().counties[nrec.geoid];
     if (A) {
       const b = (x) => '$' + (x >= 1e6 ? (x / 1e6).toFixed(1) + ' million' : Math.round(x).toLocaleString('en-US'));

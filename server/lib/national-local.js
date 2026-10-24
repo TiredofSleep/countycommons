@@ -140,4 +140,50 @@ ${src(I, 'Hours are the yearly total divided by weeks open — check with the li
 </section>`;
 }
 
-module.exports = { finance, audit, proptax, labor, libraries, read, opinionLine };
+// The questions people search, answered from the same data as the sections
+// above — plain text, each with a link to its section. Used for a visible Q&A
+// and FAQPage structured data on national county pages, and on county sites' /faq.
+function faq(c, base = '') {
+  const out = [];
+  const add = (q, a, anchor) => out.push({ q, a, href: `${base}#${anchor}` });
+  const L = read('local.json');
+  const F = L && L.finance && L.finance.counties[c.geoid];
+  if (F && F.gov) {
+    const g = F.gov, yr = L.finance.year, pop = g.pop || c.pop2024;
+    const top = PURPOSE.map(([k, l]) => [l.toLowerCase(), (g.fn || {})[k] || 0]).filter(x => x[1] > 0).sort((a, b) => b[1] - a[1]).slice(0, 3);
+    add(`How much does ${c.name} spend?`, `In ${yr}, ${c.name}'s government spent ${big(g.spend)}${pop ? ` (about $${num(g.spend / pop)} per resident)` : ''} and took in ${big(g.revenue)}. The biggest areas: ${top.map(([l, v]) => `${l} ${big(v)}`).join('; ')}.${g.estimated >= 50 ? ' Most of these figures are Census Bureau estimates because the county didn’t report.' : ''}`, 'county-money');
+    if ((g.fn || {}).jail) add(`How much does ${c.name} spend on its jail?`, `${c.name}'s government spent ${big(g.fn.jail)} on its jail and corrections in ${yr}, and ${big((g.fn || {}).police || 0)} on the sheriff and police, by the Census Bureau's national categories.`, 'county-money');
+  }
+  const P = L && L.proptax && L.proptax.counties[c.geoid];
+  if (P) add(`What is the property tax in ${c.name}?`, `The typical homeowner in ${c.name} pays about $${num(P.median_tax)} a year in property tax${P.median_value ? `, on a median home value of $${num(P.median_value)} (about ${(P.median_tax / P.median_value * 100).toFixed(2)}% of its value)` : ''}, according to the Census Bureau's American Community Survey (${L.proptax.years}).`, 'property-tax');
+  const B = read('labor.json'); const r = B && B.counties[c.geoid];
+  if (r) { const mon = new Date(B.month + '-15T12:00:00').toLocaleDateString('en-US', { month: 'long', year: 'numeric' }); add(`What is the unemployment rate in ${c.name}?`, `${r.rate.toFixed(1)}% in ${mon}${r.prior != null ? `, compared with ${r.prior.toFixed(1)}% a year earlier` : ''}, according to the Bureau of Labor Statistics (not seasonally adjusted).`, 'jobs'); }
+  const A = read('audits-fac.json'); const a = A && A.counties[c.geoid];
+  if (a) add(`Did ${c.name} pass its audit?`, `${opinionLine(a.opinion)} Its federal single audit for the year ending ${a.fy_end || a.year} reported ${a.findings.n ? `${a.findings.n} finding${a.findings.n === 1 ? '' : 's'} on its federal programs${a.findings.mw ? `, including ${a.findings.mw} material weakness${a.findings.mw === 1 ? '' : 'es'}` : ''}` : 'no findings on its federal programs'}.`, 'federal-audit');
+  const I = L && L.libraries && L.libraries.counties[c.geoid];
+  if (I && I.list.length) add(`Where are the public libraries in ${c.name}?`, `${c.name} has ${I.n} public librar${I.n === 1 ? 'y' : 'ies'}${I.mobile ? ` and ${I.mobile} bookmobile${I.mobile === 1 ? '' : 's'}` : ''}, including ${I.list.slice(0, 3).map(x => `${x.name} (${x.city})`).join(', ')}.`, 'libraries');
+  return out;
+}
+
+// One line of headline numbers, for search-result descriptions.
+function summary(c) {
+  const L = read('local.json'); const parts = [];
+  const g = L && L.finance && (L.finance.counties[c.geoid] || {}).gov;
+  if (g && g.estimated < 50) parts.push(`county government spent ${big(g.spend)} in ${L.finance.year}`);
+  const P = L && L.proptax && L.proptax.counties[c.geoid]; if (P) parts.push(`typical property tax $${num(P.median_tax)} a year`);
+  const B = read('labor.json'); const r = B && B.counties[c.geoid];
+  if (r) parts.push(`unemployment ${r.rate.toFixed(1)}% (${new Date(B.month + '-15T12:00:00').toLocaleDateString('en-US', { month: 'short', year: 'numeric' })})`);
+  return parts.join(', ');
+}
+
+function faqSection(items, c) {
+  if (!items.length) return '';
+  return `
+<section id="questions">
+<h2>Questions people ask about ${esc(c.name)}</h2>
+${items.map(x => `<div class="issue" style="display:block"><b>${esc(x.q)}</b><p style="margin:4px 0 0;font-size:14.5px">${esc(x.a)} <a href="${esc(x.href)}">More</a></p></div>`).join('')}
+</section>`;
+}
+const faqLd = (items) => items.length ? { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: items.map(x => ({ '@type': 'Question', name: x.q, acceptedAnswer: { '@type': 'Answer', text: x.a } })) } : null;
+
+module.exports = { finance, audit, proptax, labor, libraries, read, opinionLine, faq, faqSection, faqLd, summary };
