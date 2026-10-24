@@ -63,7 +63,26 @@ ${src(F, `The Census Bureau sorts every government’s money into the same natio
 </section>`;
 }
 
-const OPINION = { unmodified_opinion: 'a clean (“unmodified”) opinion', qualified_opinion: 'a qualified opinion — the auditor found something material it couldn’t sign off on', adverse_opinion: 'an adverse opinion — the statements were materially misstated', disclaimer_of_opinion: 'a disclaimer — the auditor couldn’t form an opinion' };
+const OPINION = { unmodified_opinion: 'a clean (“unmodified”) opinion', qualified_opinion: 'a qualified opinion — the auditor couldn’t sign off on something material (the report says what)', adverse_opinion: 'an adverse opinion — the auditor found the statements, or that part of them, don’t fairly present the finances (the report says why)', disclaimer_of_opinion: 'a disclaimer — the auditor couldn’t form an opinion (the report says why)' };
+// The auditor's opinion, in plain words. Two cautions it must carry:
+//  - Many counties keep their books on a cash or state-prescribed ("regulatory")
+//    basis rather than GAAP. Their auditors report "not GAAP", and often an
+//    "adverse" opinion on GAAP — which only says the books aren't kept the GAAP
+//    way, not that they're wrong.
+//  - Several opinions at once are opinions on different parts (funds or units)
+//    of the statements.
+function opinionLine(raw) {
+  const set = new Set(String(raw || '').split(',').map(s => s.trim()).filter(Boolean));
+  if (!set.size) return '';
+  const special = set.has('not_gaap');
+  if (special) {
+    const rest = [...set].filter(o => o !== 'not_gaap' && !(o === 'adverse_opinion'));
+    return `Its financial statements are kept on a special basis (cash or a state-prescribed method) rather than generally accepted accounting principles (GAAP), which is common for counties${set.has('adverse_opinion') ? ' — so the auditor’s “adverse” opinion on the GAAP basis means only that the books aren’t kept the GAAP way, not that they’re wrong' : ''}.${rest.length ? ` On the parts kept the standard way, the auditor gave ${rest.map(o => OPINION[o] || o.replace(/_/g, ' ')).join(' and ')}.` : ''}`;
+  }
+  const ops = [...set].map(o => OPINION[o] || o.replace(/_/g, ' '));
+  return set.size === 1 ? `Its auditor gave its financial statements ${ops[0]}.` : `Its auditor gave different parts of its financial statements different opinions: ${ops.join('; ')}.`;
+}
+
 function audit(c) {
   const A = read('audits-fac.json'); if (!A) return '';
   const a = A.counties[c.geoid];
@@ -72,13 +91,12 @@ function audit(c) {
 <h2>Federal audit</h2>
 <p>No federal single audit for ${esc(c.name)}’s government was found for ${A.years.join(' or ')}. Counties that spend less than $750,000 of federal money in a year don’t have to file one, and some file under a different name. <a href="${esc(A.url)}" rel="noopener">Search the Federal Audit Clearinghouse</a>.</p>
 </section>`;
-  const ops = String(a.opinion || '').split(',').map(o => OPINION[o.trim()] || o.replace(/_/g, ' ')).filter(Boolean);
   const f = a.findings;
   const flags = [a.weakness && 'a material weakness in internal control', a.noncompliance && 'material noncompliance', a.going_concern && 'doubt about whether it can keep operating (a “going concern” warning)'].filter(Boolean);
   return `
 <section id="federal-audit">
 <h2>Federal audit <span class="sub">— fiscal year ending ${esc(a.fy_end || String(a.year))}</span></h2>
-<p>${esc(c.name)}’s government spent <b>${a.expended ? big(a.expended) : 'an unreported amount'}</b> in federal money that year${ops.length ? `, and its auditor gave its financial statements ${ops.join('; ')}` : ''}.${flags.length ? ` The audit disclosed ${flags.join(', ')}.` : ''}</p>
+<p>${esc(c.name)}’s government spent <b>${a.expended ? big(a.expended) : 'an unreported amount'}</b> in federal money that year. ${opinionLine(a.opinion)}${flags.length ? ` The audit disclosed ${flags.join(', ')}.` : ''}</p>
 <p>${f.n ? `<b>${f.n} finding${f.n === 1 ? '' : 's'}</b> on its federal programs${[f.mw && `${f.mw} material weakness${f.mw === 1 ? '' : 'es'}`, f.repeat && `${f.repeat} repeated from an earlier year`, f.questioned && `${f.questioned} with questioned costs`].filter(Boolean).length ? ` — ${[f.mw && `${f.mw} material weakness${f.mw === 1 ? '' : 'es'}`, f.repeat && `${f.repeat} repeated from an earlier year`, f.questioned && `${f.questioned} with questioned costs`].filter(Boolean).join(', ')}` : ''}.` : 'No findings on its federal programs.'} <a href="https://app.fac.gov/dissemination/summary/${esc(a.report_id)}" rel="noopener">Read the audit</a>.</p>
 <p class="src" style="max-width:none">Source: <a href="${esc(A.url)}" rel="noopener">${esc(A.source)}</a>, report ${esc(a.report_id)}${a.firm ? `, audited by ${esc(a.firm)}` : ''}. A single audit is required when a government spends $750,000 or more of federal money in a year. A “material weakness” means a control problem serious enough that a big error could slip through; it isn’t a finding of wrongdoing.</p>
 </section>`;
@@ -122,4 +140,4 @@ ${src(I, 'Hours are the yearly total divided by weeks open — check with the li
 </section>`;
 }
 
-module.exports = { finance, audit, proptax, labor, libraries, read };
+module.exports = { finance, audit, proptax, labor, libraries, read, opinionLine };
