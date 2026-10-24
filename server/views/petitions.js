@@ -35,6 +35,33 @@ function levelOf(data, places, id) {
   return levels.find(l => l.id === id) || levels.find(l => l.kind === 'county') || levels.find(l => l.kind === 'city' || l.kind === 'town') || levels[0];
 }
 
+// County site key -> "Clark County, Arkansas", for shared-petition roll-ups.
+let SITES = null;
+function siteNames() {
+  if (SITES) return SITES;
+  const fs = require('fs'), path = require('path'), ROOT = path.join(__dirname, '..', '..');
+  SITES = {};
+  try {
+    const T = JSON.parse(fs.readFileSync(path.join(ROOT, 'config', 'tenants.json'), 'utf8')).tenants;
+    for (const [k, t] of Object.entries(T)) { try { const c = JSON.parse(fs.readFileSync(path.join(ROOT, t.configPath), 'utf8')); SITES[k] = { name: c.name, state: c.state }; } catch (e) {} }
+  } catch (e) {}
+  return SITES;
+}
+const siteUrl = (key, id) => `https://${key}.countycommons.us/petitions/${id}`;
+
+// "The same ask is open in 92 counties in 12 states — 1,240 signatures in all."
+function sharedStrip(p) {
+  if (!p.campaign) return '';
+  const r = require('../priorities').campaignRollup(p.campaign);
+  const S = siteNames();
+  if (p.level === 'national' || p.level === 'state') {
+    const rows = r.bySite.filter(([k]) => S[k]).slice(0, 12);
+    return `<div class="issue" style="display:block;border-left:3px solid var(--accent)"><b>Signed from ${r.sitesSigning} count${r.sitesSigning === 1 ? 'y' : 'ies'} so far</b>${rows.length ? `<p class="src" style="max-width:none;margin:4px 0 0">${rows.map(([k, n]) => `${esc(S[k].name)}, ${esc(S[k].state)} <b>${n}</b>`).join(' · ')}</p>` : '<p class="src" style="margin:4px 0 0">Be the first from your county.</p>'}</div>`;
+  }
+  const states = new Set(r.copies.map(c => (S[c.tenant] || {}).state).filter(Boolean));
+  return `<div class="issue" style="display:block;border-left:3px solid var(--accent)"><b>The same ask is open in ${r.copies.length} counties in ${states.size} state${states.size === 1 ? '' : 's'}</b> — ${r.total.toLocaleString('en-US')} signature${r.total === 1 ? '' : 's'} across all of them. Each county's petition goes to its own officials and counts toward its own goal; together they show how many places want the same thing. <a href="/petitions/shared/${esc(p.campaign)}">See every county →</a></div>`;
+}
+
 const signers = (n) => `${n.toLocaleString('en-US')} ${n === 1 ? 'signature' : 'signatures'}`;
 
 function card(data, p, places, mine) {
@@ -42,7 +69,7 @@ function card(data, p, places, mine) {
   const goal = PV.levelThreshold(lvl, data.county);
   return `
 <div class="issue" style="display:block">
-  <a href="/petitions/${esc(p.id)}" style="text-decoration:none;color:inherit"><b style="font-size:17px">${esc(p.title)}</b></a>
+  ${p.campaign ? '<span class="chip c-part" style="font-size:11px">shared across counties</span><br>' : ''}<a href="/petitions/${esc(p.id)}" style="text-decoration:none;color:inherit"><b style="font-size:17px">${esc(p.title)}</b></a>
   <p class="src" style="max-width:none;margin:4px 0 0">To ${esc(addressee(data, lvl))}</p>
   ${PV.progressBar(p.support, goal, null)}
   ${PV.statusLine(p)}
@@ -85,6 +112,7 @@ function listPage(data, items, opts) {
 ${PV.levelFunnel(levels, lvl.id, o.idea).replace(/\/priorities\?/g, '/petitions?').replace('the funnel — pick a level, each is its own board', 'who it goes to — pick a level')}
 <h2>${esc(lvl.label)} <span class="sub">— petitions to ${esc(addressee(data, lvl))}</span></h2>
 ${items.length ? items.map(p => card(data, p, o.places, o.mine && o.mine.has(p.id))).join('') : `<p>No petitions here yet. <a href="#start">Start the first one</a> — it takes a minute.</p>`}
+${o.wider ? o.wider : ''}
 </section>
 ${startForm(data, lvl, o)}
 <section><p class="src">Every petition here goes through the same lines as everything else on this site: no campaigning for candidates or ballot measures, and no naming county staff. Signatures are counted, not verified — one per browser — and the copy handed to officials removes duplicates. <a href="/outcomes">What came of past petitions</a>.</p></section>`;
@@ -128,6 +156,7 @@ function petitionPage(data, p, opts) {
 <section>
 ${PV.progressBar(p.support, goal, null)}
 <p class="src" style="margin:4px 0 0">${p.support >= goal ? 'The goal is reached — this petition is ready to be printed and delivered.' : `At ${goal.toLocaleString('en-US')} signatures it’s printed, with the count by town, and handed to ${esc(to)} at a public meeting.`}</p>
+${sharedStrip(p)}
 <h2 style="margin-top:16px">Why it matters</h2>
 <p style="white-space:pre-line">${esc(p.why)}</p>
 ${p.reasons.length ? `<h3>What signers added</h3>${p.reasons.slice(-6).reverse().map(r => `<p class="src" style="max-width:none;border-left:2px solid var(--rule);padding-left:10px">“${esc(r)}”</p>`).join('')}` : ''}
@@ -209,4 +238,44 @@ ${packet.names.length ? `<table><thead><tr><th>Name</th><th>Town</th></tr></thea
 </body></html>`;
 }
 
-module.exports = { listPage, petitionPage, flyerPage, packetPage, addressee, levelOf, honest };
+// One shared ask, every county: who's open, how many signed, where.
+function sharedPage(data, camp, r) {
+  const { county } = data;
+  const S = siteNames();
+  const rows = r.copies.map(c => ({ c, site: S[c.tenant] || { name: c.tenant, state: '' } }))
+    .sort((a, b) => b.c.support - a.c.support || a.site.state.localeCompare(b.site.state) || a.site.name.localeCompare(b.site.name));
+  const states = {}; for (const x of rows) { const st = x.site.state || '—'; states[st] = states[st] || { n: 0, sig: 0 }; states[st].n++; states[st].sig += x.c.support; }
+  const title = (camp.title || '').replace(/{county}/g, 'each county').replace(/{state}/g, 'each state');
+  const body = `
+<header class="page">
+  <div class="eyebrow">County Commons · a shared petition</div>
+  <h1>${esc(title)}</h1>
+  <div class="src">The same ask, open in <b>${rows.length}</b> counties in <b>${Object.keys(states).length}</b> states — <b>${r.total.toLocaleString('en-US')}</b> signature${r.total === 1 ? '' : 's'} in all. Each county's petition goes to that county's own officials and counts toward its own goal. Started by ${esc(camp.by || 'County Commons')}.</div>
+</header>
+<section>
+<h2>By state</h2>
+<p>${Object.entries(states).sort((a, b) => b[1].sig - a[1].sig || a[0].localeCompare(b[0])).map(([st, x]) => `${esc(st)}: ${x.n} count${x.n === 1 ? 'y' : 'ies'}, <b>${x.sig}</b> signed`).join(' · ')}</p>
+</section>
+<section>
+<h2>Every county</h2>
+<div style="overflow-x:auto;max-width:100%"><table class="plain"><thead><tr><th>County</th><th class="num">Signed</th><th>Goes to</th></tr></thead><tbody>
+${rows.map(x => `<tr><td><a href="${siteUrl(x.c.tenant, x.c.id)}">${esc(x.site.name)}, ${esc(x.site.state)}</a></td><td class="num">${x.c.support}</td><td class="src">${esc(x.c.phase === 'raised' ? 'not yet delivered' : x.c.phase)}</td></tr>`).join('')}
+</tbody></table></div>
+<p class="src">${esc(honest(county))} Signatures are counted, not verified — one per browser. <a href="/petitions">Petitions in ${esc(county.name)}</a>.</p>
+</section>`;
+  return layout({ title: `Shared petition: ${title} · County Commons`, current: '/petitions', body, county,
+    description: `The same petition open in ${rows.length} counties in ${Object.keys(states).length} states, ${r.total} signatures so far: ${title}.` });
+}
+
+// Under a county's board: the statewide and national petitions it can also sign.
+function widerStrip(data, stateItems, nationalItems) {
+  const { county } = data;
+  const li = (p) => `<li><a href="/petitions/${esc(p.id)}">${esc(p.title)}</a> <span class="soft" style="font-size:12.5px">· ${p.support} signed</span></li>`;
+  if (!stateItems.length && !nationalItems.length) return '';
+  return `<div class="issue" style="display:block;border-left:3px solid var(--accent)">
+  ${stateItems.length ? `<b>All of ${esc(county.state)}</b> <span class="soft" style="font-size:12.5px">— to ${esc(county.state)} lawmakers; every county in the state signs the same one</span><ul style="margin:4px 0 8px">${stateItems.map(li).join('')}</ul>` : ''}
+  ${nationalItems.length ? `<b>Nationwide</b> <span class="soft" style="font-size:12.5px">— to Congress; every county signs the same one</span><ul style="margin:4px 0 0">${nationalItems.map(li).join('')}</ul>` : ''}
+</div>`;
+}
+
+module.exports = { sharedPage, widerStrip, listPage, petitionPage, flyerPage, packetPage, addressee, levelOf, honest };

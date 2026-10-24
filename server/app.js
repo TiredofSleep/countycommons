@@ -1009,8 +1009,12 @@ const spam = require('./lib/spam');
 app.get('/petitions', (req, res) => {
   const data = load(req.tenantKey);
   const level = (req.query.level || '').slice(0, 60) || 'county';
+  const local = !['state', 'national'].includes(level);
+  const wider = local ? PT.widerStrip(data,
+    priorities.listByLevel({ tenant: req.tenantKey, state: data.county.state, level: 'state' }).slice(0, 5),
+    priorities.listByLevel({ tenant: req.tenantKey, state: data.county.state, level: 'national' }).slice(0, 5)) : '';
   res.send(PT.listPage(data, priorities.listByLevel({ tenant: req.tenantKey, state: data.county.state, level }), {
-    level, places: places.placesFor(req.tenantKey), mine: priorities.supportedBy(participantOf(req), req.tenantKey),
+    level, places: places.placesFor(req.tenantKey), mine: priorities.supportedBy(participantOf(req), req.tenantKey), wider,
     blocked: (req.query.blocked || '').slice(0, 200) || null, error: (req.query.error || '').slice(0, 40) || null,
     idea: (req.query.idea || '').slice(0, 120)
   }));
@@ -1026,6 +1030,14 @@ app.post('/petitions/start', writeLimit, express.urlencoded({ extended: false })
   if (r.error === 'bright-line') return res.redirect(base + '&blocked=' + encodeURIComponent((r.flags || []).join(', ')) + '#start');
   if (r.error) return res.redirect(base + '&error=' + encodeURIComponent(r.error) + '#start');
   res.redirect('/petitions/' + encodeURIComponent(r.id) + '?started=1#sign');
+});
+
+// One shared ask across every county (config/campaigns.json).
+app.get('/petitions/shared/:campaign', (req, res, next) => {
+  let C; try { C = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'config', 'campaigns.json'), 'utf8')); } catch (e) { return next(); }
+  const camp = (C.campaigns || []).find(c => c.id === req.params.campaign);
+  if (!camp || camp.hold) return next();
+  res.send(PT.sharedPage(load(req.tenantKey), { ...camp, by: C.started_by }, priorities.campaignRollup(camp.id)));
 });
 
 app.get('/petitions/:id', (req, res, next) => {
@@ -1050,7 +1062,7 @@ app.post('/petitions/:id/sign', writeLimit, express.urlencoded({ extended: false
   const email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(b.email || '').trim()) ? String(b.email).trim() : '';
   const participant = ensureParticipant(req, res);
   require('./identity').register(participant, { name, city: town, email });
-  priorities.support(participant, id, why, { town, deliver: b.deliver === '1' });
+  priorities.support(participant, id, why, { town, deliver: b.deliver === '1', site: req.tenantKey });
   res.redirect(here + '?signed=1#share');
 });
 

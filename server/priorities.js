@@ -36,7 +36,7 @@ function save(s) {
 // The funnel levels a priority can live at: the whole nation, a state, a county,
 // or a specific city. Each level is its own space with its own set of votes and
 // its own count — people toggle through the funnel to move between them.
-function propose({ tenant, kind, title, why, node_ref, participant, county, target, level, state, by }) {
+function propose({ tenant, kind, title, why, node_ref, participant, county, target, level, state, by, campaign }) {
   title = String(title || '').trim().slice(0, 120);
   why = String(why || '').trim().slice(0, 600);
   kind = KINDS.has(kind) ? kind : 'prioritize';
@@ -70,7 +70,9 @@ function propose({ tenant, kind, title, why, node_ref, participant, county, targ
     supporters: participant ? { [participant]: { at: now } } : {},
     status: 'open',
     // Who started it, when it isn't an anonymous resident (stated on the page).
-    ...(by ? { by: String(by).slice(0, 160) } : {})
+    ...(by ? { by: String(by).slice(0, 160) } : {}),
+    // A shared petition: the same ask open in many counties (config/campaigns.json).
+    ...(campaign ? { campaign: String(campaign).slice(0, 60) } : {})
   };
   chain.append('priority', { id, tenant, kind });
   save(s);
@@ -94,6 +96,7 @@ function support(participant, id, why, sig) {
     const town = String(sig.town || '').trim().replace(/\s+/g, ' ').slice(0, 60);
     if (town) entry.town = town;
     if (sig.deliver) entry.deliver = true;
+    if (sig.site) entry.site = String(sig.site).slice(0, 40); // which county site it was signed on
     entry.signed = true;
   }
   p.supporters[participant] = entry;
@@ -186,7 +189,7 @@ function enrich(p) {
   return {
     id: p.id, kind: p.kind, title: p.title, why: p.why, node_ref: p.node_ref,
     level: levelOf(p), target: p.target || levelOf(p), state: p.state || null,
-    tenant: p.tenant, created_at: p.created_at, by: p.by || null,
+    tenant: p.tenant, created_at: p.created_at, by: p.by || null, campaign: p.campaign || null,
     support: Object.keys(p.supporters || {}).length,
     reasons: Object.values(p.supporters || {}).filter(x => x.why).map(x => x.why),
     towns: townCounts(p),
@@ -232,6 +235,28 @@ function listAll() {
     .sort((a, b) => String(b.created_at).localeCompare(String(a.created_at)));
 }
 
+// A shared petition across the network: every open copy, its signatures, and
+// how many counties and states they span. Each copy still counts toward its own
+// county's goal; this only shows that the same ask is rising elsewhere.
+function campaignRollup(campaign) {
+  const copies = Object.values(load().priorities).filter(p => p.campaign === campaign && p.status === 'open' && real(p));
+  const by = {}; let total = 0;
+  for (const p of copies) {
+    for (const s of Object.values(p.supporters || {})) {
+      const site = (levelOf(p) === 'county' || /^city-/.test(levelOf(p))) ? p.tenant : (s.site || 'elsewhere');
+      by[site] = (by[site] || 0) + 1; total++;
+    }
+  }
+  return { campaign, copies: copies.map(enrich), total, bySite: Object.entries(by).sort((a, b) => b[1] - a[1]), sitesSigning: Object.keys(by).filter(k => k !== 'elsewhere').length };
+}
+function findCampaignCopy(campaign, { tenant, level, state }) {
+  return Object.values(load().priorities).find(p => p.campaign === campaign && levelOf(p) === level &&
+    (level === 'national' || (level === 'state' ? p.state === state : p.tenant === tenant))) || null;
+}
+
+// Link an existing petition into a shared campaign (e.g. one a resident started first).
+function tagCampaign(id, campaign) { const s = load(); if (!s.priorities[id]) return false; s.priorities[id].campaign = campaign; save(s); return true; }
+
 function getPublic(id) { const p = get(id); return p && p.status === 'open' && real(p) ? enrich(p) : null; }
 
-module.exports = { getPublic, propose, support, addOutcome, undoOutcome, phaseOf, get, setStatus, remove, mySupport, supportedBy, listFor, listByLevel, listAll };
+module.exports = { tagCampaign, campaignRollup, findCampaignCopy, getPublic, propose, support, addOutcome, undoOutcome, phaseOf, get, setStatus, remove, mySupport, supportedBy, listFor, listByLevel, listAll };

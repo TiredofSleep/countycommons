@@ -1,0 +1,150 @@
+{
+  "_about": "Shared petitions: the same ask, open in many places at once. County campaigns get one copy per county site, addressed to that county's own officials and counted toward its own goal; state campaigns get one copy per state; national ones a single copy. {county} and {state} are filled in. Posted by pipeline/campaigns.js (idempotent). 'hold' keeps a campaign from being posted until it's released.",
+  "started_by": "Brayden Sanders, founder of County Commons",
+  "campaigns": [
+    {
+      "id": "open-checkbook",
+      "level": "county",
+      "title": "Post every county payment online, every month, as searchable data",
+      "why": "Every check {county} writes is already a public record — but to see one, you have to file a request and wait. A monthly check register online (who was paid, how much, for what, from which fund) lets anyone follow the money without asking permission. Many counties and cities already do this. It costs little, because the county already keeps these records.",
+      "src": [
+        {
+          "url": "https://www.uspirg.org/resources/following-the-money/",
+          "label": "U.S. PIRG, Following the Money (state and local spending transparency)"
+        }
+      ]
+    },
+    {
+      "id": "pass-through-money",
+      "level": "county",
+      "title": "Disclose every award paid from county tax money that's handed to outside groups",
+      "why": "Some county tax money goes to outside organizations — economic development corporations, nonprofits, districts — and once it leaves, the county's bidding and public-records rules may not follow it. We ask {county} to post, for every dollar passed through: who received it, how much, what for, and what was promised in return. Public money should stay traceable all the way to the last receipt.",
+      "src": [],
+      "adopt": {
+        "clarkar": "publish-who-received-the-edccc-half-cent-278e"
+      }
+    },
+    {
+      "id": "camera-rules",
+      "level": "county",
+      "title": "Before buying or renewing license-plate cameras: a public hearing, the contract posted, and a yearly audit",
+      "why": "License-plate cameras record every car that passes, not just suspects, and the data can be shared with other agencies and companies. Before {county} buys or renews any, we ask for a public hearing, the contract and data-sharing rules posted online, a limit on how long the data is kept, and a yearly public report of how often it was searched and why. This isn't for or against cameras — it's about rules everyone can see.",
+      "src": [
+        {
+          "url": "/surveillance",
+          "label": "This county's page on cameras and plate readers"
+        }
+      ]
+    },
+    {
+      "id": "jail-numbers",
+      "level": "county",
+      "county_only": true,
+      "hold": true,
+      "title": "Publish the jail's numbers every month",
+      "why": "The county jail is one of the biggest costs in the budget. We ask {county} to post a short monthly report: how many people were held, how many were awaiting trial, the average stay, and how many were held for the state or federal government. Counties that track these numbers can see what's driving costs — and many already share them.",
+      "src": [
+        {
+          "url": "https://www.vera.org/projects/incarceration-trends",
+          "label": "Vera Institute, Incarceration Trends"
+        }
+      ]
+    },
+    {
+      "id": "court-reminders",
+      "level": "county",
+      "county_only": true,
+      "title": "Text people a reminder before their court date",
+      "why": "Many missed court dates are simple forgetting — and a missed date can mean a warrant, an arrest and days in jail. In New York City, text reminders and a clearer court notice cut missed court dates by 21–26% in a randomized study, at very low cost. We ask {county}'s courts and clerk to text reminders before every court date.",
+      "src": [
+        {
+          "url": "https://www.povertyactionlab.org/node/2395",
+          "label": "J-PAL summary of Fishbane, Ouss and Shah, Science (2020)"
+        }
+      ]
+    },
+    {
+      "id": "meetings-online",
+      "level": "county",
+      "title": "Post meeting agendas a week ahead, and video or minutes of every meeting, online",
+      "why": "Decisions about {county}'s money are made in public meetings, but working people can't always be there. We ask that every agenda be posted online at least a week before the meeting, with its supporting documents, and that video or full minutes of every meeting be posted afterward. If you can't attend, you should still be able to see what was decided and why.",
+      "src": []
+    },
+    {
+      "id": "state-open-checkbook",
+      "level": "state",
+      "title": "Require every county, city and school district in {state} to post its payments online",
+      "why": "Instead of a separate fight in every county, one state law can require every local government in {state} to post its check register online each month — who was paid, how much, and for what. The records already exist; this makes them easy to see.",
+      "src": [
+        {
+          "url": "https://www.uspirg.org/resources/following-the-money/",
+          "label": "U.S. PIRG, Following the Money"
+        }
+      ]
+    },
+    {
+      "id": "state-camera-data",
+      "level": "state",
+      "title": "Set statewide rules for license-plate camera data in {state}",
+      "why": "License-plate cameras are spreading fast, and the rules for their data differ town to town. We ask {state} lawmakers to set statewide limits: how long the data can be kept, who it can be shared with, a warrant or written reason to search it, and a yearly public report from every agency that uses it.",
+      "src": [
+        {
+          "url": "https://www.ncsl.org/technology-and-communication/automated-license-plate-readers-state-statutes",
+          "label": "National Conference of State Legislatures, license-plate reader laws by state"
+        }
+      ]
+    },
+    {
+      "id": "state-prison-training",
+      "level": "state",
+      "title": "Make every {state} prison an accredited school for earning a living",
+      "why": "Nearly everyone in prison comes home. We ask {state} to make every prison an accredited place to learn — job training and education that end in a recognized credential, open to everyone held there. A RAND review of decades of studies found people who took part in prison education had 43% lower odds of returning to prison than those who didn't, and that it can save money by keeping people from coming back.",
+      "src": [
+        {
+          "url": "https://www.rand.org/pubs/research_reports/RR266.html",
+          "label": "RAND, Evaluating the Effectiveness of Correctional Education (2013)"
+        }
+      ]
+    },
+    {
+      "id": "national-prison-training",
+      "level": "national",
+      "title": "Make every prison in America an accredited school for earning a living",
+      "why": "Nearly everyone in prison comes home. We ask Congress to require and fund accredited job training and education in every federal prison, and to help states do the same — training that ends in a recognized credential. A RAND review of decades of studies found people who took part in prison education had 43% lower odds of returning to prison than those who didn't.",
+      "src": [
+        {
+          "url": "https://www.rand.org/pubs/research_reports/RR266.html",
+          "label": "RAND, Evaluating the Effectiveness of Correctional Education (2013)"
+        }
+      ]
+    },
+    {
+      "id": "national-calls-and-visits",
+      "level": "national",
+      "title": "Keep calls from prison and jail affordable, and keep in-person visits",
+      "why": "Staying connected to family and friends is one of the best things for people inside and for the neighbors they come home to. A 2022 law passed with support from both parties let the FCC cap the price of prison and jail calls; the caps set in 2024 were raised in October 2025. We ask Congress and the FCC to keep calls affordable — and to keep in-person visits from being replaced by paid video.",
+      "src": [
+        {
+          "url": "https://docs.fcc.gov/public/attachments/FCC-25-75A1.pdf",
+          "label": "FCC order FCC 25-75 (October 2025)"
+        },
+        {
+          "url": "https://docs.fcc.gov/public/attachments/DOC-404087A1.txt",
+          "label": "FCC, July 2024 rate-cap order"
+        }
+      ]
+    },
+    {
+      "id": "national-trace-federal-money",
+      "level": "national",
+      "title": "Require project-by-project reporting of federal money sent to local governments",
+      "why": "Counties received $48.5 billion in federal pandemic relief. More than half was reported only as \"revenue replacement,\" so the public can't trace it to what it bought. We ask Congress to require that federal money sent to local governments be reported project by project — what it paid for, who was paid, and what it delivered.",
+      "src": [
+        {
+          "url": "https://home.treasury.gov/policy-issues/coronavirus/assistance-for-state-local-and-tribal-governments/state-and-local-fiscal-recovery-funds",
+          "label": "U.S. Treasury, State and Local Fiscal Recovery Funds reporting"
+        }
+      ]
+    }
+  ]
+}
