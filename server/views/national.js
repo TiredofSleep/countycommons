@@ -314,6 +314,36 @@ ${nat.length ? `<h3 style="margin-top:10px">Nationwide <span class="sub">— to 
 </section>`;
 }
 
+// Signing without a county page behind it (a link shared on Facebook): pick the
+// state and type the county; the server matches it to a real county.
+function countyChooser(p, f) {
+  const N = nat();
+  const st = p.level === 'state' ? Object.keys(N.states).find(k => N.states[k].name === p.state) : null;
+  const states = Object.entries(N.states).sort((a, b) => a[1].name.localeCompare(b[1].name));
+  const names = st ? (N.byState[st] || []).map(c => c.name) : [];
+  return `<form method="post" action="/us/petitions/${esc(p.id)}/sign" style="display:grid;gap:8px;max-width:520px">
+  <p style="margin:0">Your signature is counted for your county, so lawmakers see where people want it.</p>
+  ${st ? `<input type="hidden" name="st" value="${esc(st)}">` : `<label><b>Your state</b><select name="st" required style="${f}"><option value="">Choose…</option>${states.map(([k, s]) => `<option value="${esc(k)}">${esc(s.name)}</option>`).join('')}</select></label>`}
+  <label><b>Your county</b>${st ? ` <span class="soft">(in ${esc(p.state)})</span>` : ''}<input name="county_name" required maxlength="60" list="cc-counties" placeholder="e.g. Pulaski County" style="${f}"></label>
+  ${names.length ? `<datalist id="cc-counties">${names.map(n => `<option value="${esc(n)}">`).join('')}</datalist>` : ''}
+  <label><b>Your name</b><input name="name" required maxlength="60" autocomplete="name" style="${f}"></label>
+  <label><b>Your town</b><input name="town" required maxlength="60" autocomplete="address-level2" style="${f}"></label>
+  <label>Email <span class="soft">(optional — to hear when it’s delivered and answered)</span><input name="email" type="email" maxlength="120" style="${f}"></label>
+  <label style="display:flex;gap:8px;align-items:flex-start"><input type="checkbox" name="deliver" value="1" style="margin-top:4px"> <span>Put my name and town on the copy delivered to officials. <span class="soft">(Unchecked: counted by county only.)</span></span></label>
+  <div style="position:absolute;left:-9999px" aria-hidden="true"><input name="website" tabindex="-1" autocomplete="off"></div>
+  <button type="submit" style="justify-self:start;font-family:var(--mono);font-size:16px;font-weight:600;padding:12px 22px;background:var(--ink);color:var(--paper);border:0">Sign the petition</button>
+  <p class="src" style="margin:0">Your name, town and email are never shown on this site, sold or shared. The public sees only how many signed and from which counties.</p>
+</form>`;
+}
+// "/us/ar/pulaski" from a state code and a typed county name ("Pulaski", "Pulaski County").
+function matchCounty(st, typed) {
+  const N = nat(); const list = N.byState[String(st || '').toUpperCase()] || [];
+  const norm = (s) => String(s || '').toLowerCase().replace(/\b(county|parish|borough|census area|city and borough|municipality)\b/g, '').replace(/^st\.? /, 'saint ').replace(/[^a-z]/g, '');
+  const want = norm(typed); if (!want) return null;
+  const c = list.find(x => norm(x.name) === want);
+  return c ? `/us/${c.st.toLowerCase()}/${c.slug}` : null;
+}
+
 // The sign page for a state or national petition, on the national pages.
 function usPetitionPage(p, { from, mine, signed, error }) {
   const P = require('../priorities');
@@ -330,7 +360,7 @@ function usPetitionPage(p, { from, mine, signed, error }) {
   const pct = Math.min(100, Math.round(p.support / goal * 100));
   const f = 'font-size:16px;padding:8px;width:100%;box-sizing:border-box';
   const btn = 'font-family:var(--mono);font-size:14px;font-weight:600;padding:8px 14px;border:1.5px solid var(--ink);color:var(--ink);text-decoration:none';
-  const err = { name: 'Please add your name — like signing a paper petition.', town: 'Please add your town.', county: 'Please pick the county you live in from a county page.', junk: 'That didn’t look like a real signature.' }[error] || '';
+  const err = { name: 'Please add your name — like signing a paper petition.', town: 'Please add your town.', county: 'We couldn’t find that county in that state — check the spelling, like “Pulaski County”.', junk: 'That didn’t look like a real signature.' }[error] || '';
   const body = `
 <header class="page"><div class="eyebrow">County Commons · ${isCounty && home ? esc(home.name + ', ' + home.state) + ' petition' : p.level === 'national' ? 'national petition' : esc(p.state) + ' petition'}</div>
 <h1>${esc(p.title)}</h1>
@@ -355,7 +385,7 @@ ${fromName ? `<form method="post" action="/us/petitions/${esc(p.id)}/sign" style
   <div style="position:absolute;left:-9999px" aria-hidden="true"><input name="website" tabindex="-1" autocomplete="off"></div>
   <button type="submit" style="justify-self:start;font-family:var(--mono);font-size:16px;font-weight:600;padding:12px 22px;background:var(--ink);color:var(--paper);border:0">Sign the petition</button>
   <p class="src" style="margin:0">Your name, town and email are never shown on this site, sold or shared. The public sees only how many signed and from which counties.</p>
-</form>` : `<p>To sign, start from your county’s page so your signature counts for your county: <a href="/us">find your county</a>.</p>`}`}
+</form>` : countyChooser(p, f)}`}
 </section>
 <section id="share">
 <h2>Share it</h2>
@@ -365,4 +395,4 @@ ${fromName ? `<form method="post" action="/us/petitions/${esc(p.id)}/sign" style
   return page({ title: `Sign: ${p.title} · County Commons`, description: p.support < 5 ? `A petition to ${to}. Be one of the first to sign — counted by county, delivered at ${goal.toLocaleString('en-US')} signatures.` : `${p.support.toLocaleString('en-US')} people have signed this petition to ${to}. Goal: ${goal.toLocaleString('en-US')}.`, canonical: link, body });
 }
 
-module.exports = { countyByGeoid, petitionsBlock, usPetitionPage, countyName, feedbackPage, buildingPage, countyPage, statePage, usPage, whatWorksPage, sitemapUrls };
+module.exports = { matchCounty, countyByGeoid, petitionsBlock, usPetitionPage, countyName, feedbackPage, buildingPage, countyPage, statePage, usPage, whatWorksPage, sitemapUrls };

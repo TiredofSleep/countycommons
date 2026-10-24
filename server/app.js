@@ -91,7 +91,7 @@ app.use((req, res, next) => {
       if (usPet[2] && req.method === 'POST') return writeLimit(req, res, () => express.urlencoded({ extended: false })(req, res, () => {
         const b = req.body || {};
         const home = usCounty ? nv.countyByGeoid(String(pet.tenant).slice(3)) : null;
-        const from = home ? home.path : countyPath(b.from);
+        const from = home ? home.path : (countyPath(b.from) || nv.matchCounty(b.st, b.county_name) || '');
         const back = (q) => res.redirect(here + '?from=' + encodeURIComponent(from) + q + '#sign');
         if (b.website) return back('');
         if (!from) return back('&error=county');
