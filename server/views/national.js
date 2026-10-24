@@ -88,6 +88,10 @@ function countyPage(st, slug) {
 ${c.site ? `<section><div class="issue" style="display:block;border-left:3px solid var(--accent)"><b>${esc(c.name)} has a full County Commons site.</b> <span class="src">The budget line by line, your tax bill explained, audits, local offices and elections: <a href="https://${esc(c.site)}/">${esc(c.site)} →</a></span></div></section>` : ''}
 ${RK.keyFacts(c, N)}
 ${petitionsBlock(S.name, `/us/${st.toLowerCase()}/${slug}`, c.name)}
+${require('../lib/national-local').finance(c)}
+${require('../lib/national-local').audit(c)}
+${require('../lib/national-local').proptax(c)}
+${require('../lib/national-local').labor(c)}
 
 <section>
 <h2>Drinking water <span class="sub">— public water systems serving ${esc(c.name)}</span></h2>
@@ -112,6 +116,7 @@ ${B.housing(c)}
 ${B.grants(c, N)}
 ${B.arpa(c)}
 ${B.places(c)}
+${require('../lib/national-local').libraries(c)}
 ${require('../lib/peers').block(c, N, { more: '/us/what-works' })}
 ${require('./whatworks').improveBlock(c, N, { more: '/us/what-works' })}
 
@@ -125,7 +130,7 @@ ${RK.neighbors(c, N)}
 </section>`;
 
   return page({
-    title: `${place}: schools, health, rent, ARPA money, water, bridges, towns and voting · County Commons`,
+    title: `${place}: county spending, property tax, audit, jobs, schools, health, ARPA and voting · County Commons`,
     description: `${place}${c.pop2024 ? ` (${num(c.pop2024)} people)` : ''}: ${w && w.systems ? `${w.systems} public water systems, ` : ''}${j ? `jail population ${num(j.pop)} (${j.year}), ` : ''}and how to vote — each from official public records, with sources.`,
     canonical, body,
     jsonld: { '@context': 'https://schema.org', '@type': 'AdministrativeArea', name: place, identifier: c.geoid,

@@ -17,6 +17,10 @@ function atlasPage(data) {
   <div class="src">Schools, health, disaster risk, bridges and federal grants for ${esc(c.name)}, from national public records — each with its source. ${county.name !== c.name ? `${esc(county.name)} sits in ${esc(c.name)}, so these figures are countywide. ` : ''}The same page for every U.S. county is at <a href="${esc(c.url)}">countycommons.us/us</a>.</div>
 </header>
 ${require('../lib/national-ranks').keyFacts(c, N)}
+${require('../lib/national-local').finance(c)}
+${require('../lib/national-local').audit(c)}
+${require('../lib/national-local').proptax(c)}
+${require('../lib/national-local').labor(c)}
 ${B.schools(c, N)}
 ${B.health(c, N)}
 ${B.risk(c)}
@@ -25,6 +29,7 @@ ${B.housing(c)}
 ${B.grants(c, N)}
 ${B.arpa(c)}
 ${B.places(c)}
+${require('../lib/national-local').libraries(c)}
 ${require('../lib/peers').block(c, N, { more: '/what-works' })}
 ${require('./whatworks').improveBlock(c, N, { more: '/what-works' })}
 <section><p class="src">Related: <a href="/budget">The money trail</a> · <a href="/mybill">Your tax bill, explained</a> · <a href="/water">Water</a> · <a href="/justice">Jails & prisons</a> · <a href="/grants">Grants</a>. Spot an error? <a href="/feedback">Report it</a>.</p></section>`
