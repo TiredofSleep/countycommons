@@ -30,6 +30,7 @@ ${B.grants(c, N)}
 ${B.arpa(c)}
 ${B.places(c)}
 ${require('../lib/national-local').libraries(c)}
+${require('../lib/national-local').healthAccess(c)}
 ${require('../lib/peers').block(c, N, { more: '/what-works' })}
 ${require('./whatworks').improveBlock(c, N, { more: '/what-works' })}
 <section><p class="src">Related: <a href="/budget">The money trail</a> · <a href="/mybill">Your tax bill, explained</a> · <a href="/water">Water</a> · <a href="/justice">Jails & prisons</a> · <a href="/grants">Grants</a>. Spot an error? <a href="/feedback">Report it</a>.</p></section>`

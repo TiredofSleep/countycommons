@@ -140,6 +140,24 @@ ${src(I, 'Hours are the yearly total divided by weeks open — check with the li
 </section>`;
 }
 
+// Health care access: community health centers (anyone can go; fees by income)
+// and official doctor / mental-health shortage designations.
+function healthAccess(c) {
+  const L = read('local.json'); const H = L && L.health; if (!H) return '';
+  const r = H.counties[c.geoid] || { n: 0, centers: [], pc: null, mh: null };
+  const short = (x, what) => !x ? '' : `${x.whole ? `All of ${esc(c.name)}` : `Parts of ${esc(c.name)}${x.low_income ? ', or its low-income residents,' : ''}`} ${x.whole ? 'is' : 'are'} officially short of ${what} (shortage score ${x.score} on a 0–25 scale; higher means a worse shortage).`;
+  return `
+<section id="health-care">
+<h2>Health care access <span class="sub">— low-cost clinics and shortages</span></h2>
+${r.n ? `<p>${esc(c.name)} has <b>${r.n}</b> community health center site${r.n === 1 ? '' : 's'}. Anyone can go, insured or not; fees slide down with income.</p>
+<div style="overflow-x:auto;max-width:100%"><table class="plain"><tbody>${r.centers.map(x => `<tr><td>${esc(x.name)}<br><span class="soft" style="font-size:12px">${esc([x.address, x.city].filter(Boolean).join(', '))}${x.org && x.org !== x.name ? ` · run by ${esc(x.org)}` : ''}</span></td><td class="num" style="white-space:nowrap">${x.phone ? `<a href="tel:${esc(x.phone.replace(/[^\d]/g, ''))}">${esc(x.phone)}</a>` : ''}${x.hours_week ? `<br><span class="soft" style="font-size:12px">${x.hours_week} hours a week</span>` : ''}</td></tr>`).join('')}</tbody></table></div>
+${r.n > r.centers.length ? `<p class="src">And ${r.n - r.centers.length} more — <a href="https://findahealthcenter.hrsa.gov/" rel="noopener">find the nearest one</a>.</p>` : ''}`
+    : `<p>No community health center site is listed in ${esc(c.name)}. The nearest may be in a neighboring county — <a href="https://findahealthcenter.hrsa.gov/" rel="noopener">find one</a>.</p>`}
+${r.pc || r.mh ? `<p>${[short(r.pc, 'primary care doctors'), short(r.mh, 'mental health providers')].filter(Boolean).join(' ')} These designations let clinics here recruit through federal loan-repayment programs.</p>` : ''}
+${src(H, `Health center sites and Health Professional Shortage Areas, pulled ${esc(H.fetched)}. Shortage designations that cover a single facility (such as a prison or clinic) are left out`)}
+</section>`;
+}
+
 // The questions people search, answered from the same data as the sections
 // above — plain text, each with a link to its section. Used for a visible Q&A
 // and FAQPage structured data on national county pages, and on county sites' /faq.
@@ -160,6 +178,8 @@ function faq(c, base = '') {
   if (r) { const mon = new Date(B.month + '-15T12:00:00').toLocaleDateString('en-US', { month: 'long', year: 'numeric' }); add(`What is the unemployment rate in ${c.name}?`, `${r.rate.toFixed(1)}% in ${mon}${r.prior != null ? `, compared with ${r.prior.toFixed(1)}% a year earlier` : ''}, according to the Bureau of Labor Statistics (not seasonally adjusted).`, 'jobs'); }
   const A = read('audits-fac.json'); const a = A && A.counties[c.geoid];
   if (a) add(`Did ${c.name} pass its audit?`, `${opinionLine(a.opinion)} Its federal single audit for the year ending ${a.fy_end || a.year} reported ${a.findings.n ? `${a.findings.n} finding${a.findings.n === 1 ? '' : 's'} on its federal programs${a.findings.mw ? `, including ${a.findings.mw} material weakness${a.findings.mw === 1 ? '' : 'es'}` : ''}` : 'no findings on its federal programs'}.`, 'federal-audit');
+  const HC = L && L.health && L.health.counties[c.geoid];
+  if (HC && HC.n) add(`Where can I get low-cost health care in ${c.name}?`, `${c.name} has ${HC.n} community health center site${HC.n === 1 ? '' : 's'}, open to anyone with fees based on income, including ${HC.centers.slice(0, 3).map(x => `${x.name} (${x.city})`).join(', ')}.`, 'health-care');
   const I = L && L.libraries && L.libraries.counties[c.geoid];
   if (I && I.list.length) add(`Where are the public libraries in ${c.name}?`, `${c.name} has ${I.n} public librar${I.n === 1 ? 'y' : 'ies'}${I.mobile ? ` and ${I.mobile} bookmobile${I.mobile === 1 ? '' : 's'}` : ''}, including ${I.list.slice(0, 3).map(x => `${x.name} (${x.city})`).join(', ')}.`, 'libraries');
   return out;
@@ -186,4 +206,4 @@ ${items.map(x => `<div class="issue" style="display:block"><b>${esc(x.q)}</b><p 
 }
 const faqLd = (items) => items.length ? { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: items.map(x => ({ '@type': 'Question', name: x.q, acceptedAnswer: { '@type': 'Answer', text: x.a } })) } : null;
 
-module.exports = { finance, audit, proptax, labor, libraries, read, opinionLine, faq, faqSection, faqLd, summary };
+module.exports = { healthAccess, finance, audit, proptax, labor, libraries, read, opinionLine, faq, faqSection, faqLd, summary };

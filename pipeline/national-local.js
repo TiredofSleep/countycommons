@@ -111,5 +111,44 @@ if (fs.existsSync(imlsDir)) {
   console.log(`libraries: ${Object.keys(counties).length} counties, ${Object.values(counties).reduce((s, c) => s + c.n + c.mobile, 0)} outlets`);
 }
 
+// ---------- 4. Health care access (HRSA) ----------
+// Community health centers (open to anyone; fees on a sliding scale by income)
+// and official shortage designations for primary care and mental health.
+const hrsa = path.join(RAW, 'hrsa');
+if (fs.existsSync(hrsa)) {
+  const parse = (line) => { const o = []; let cur = '', q = false; for (const ch of line) { if (ch === '"') q = !q; else if (ch === ',' && !q) { o.push(cur); cur = ''; } else cur += ch; } o.push(cur); return o; };
+  const rows = (f) => { const L = fs.readFileSync(path.join(hrsa, f), 'latin1').split(/\r?\n/).filter(Boolean); const h = parse(L.shift()); return { h, I: (k) => h.indexOf(k), rows: L.map(parse) }; };
+  const title = (s) => String(s || '').toLowerCase().replace(/\b\w/g, (x) => x.toUpperCase());
+  const counties = {};
+  const C = (g) => (counties[g] = counties[g] || { centers: [], pc: null, mh: null });
+  const S = rows('Health_Center_Service_Delivery_and_LookAlike_Sites.csv');
+  for (const r of S.rows) {
+    const g = String(r[S.I('State and County Federal Information Processing Standard Code')] || '').padStart(5, '0');
+    if (!geos.has(g) || !/active/i.test(r[S.I('Site Status Description')] || '')) continue;
+    C(g).centers.push({ name: title(r[S.I('Site Name')]), address: title(r[S.I('Site Address')]), city: title(r[S.I('Site City')]), phone: r[S.I('Site Telephone Number')] || '', hours_week: +r[S.I('Operating Hours per Week')] || null, org: title(r[S.I('Health Center Name')]), web: r[S.I('Site Web Address')] || '' });
+  }
+  for (const [file, key] of [['BCD_HPSA_FCT_DET_PC.csv', 'pc'], ['BCD_HPSA_FCT_DET_MH.csv', 'mh']]) {
+    if (!fs.existsSync(path.join(hrsa, file))) continue;
+    const H = rows(file);
+    for (const r of H.rows) {
+      if (!/^designated$/i.test(r[H.I('HPSA Status')] || '')) continue;
+      const type = r[H.I('Designation Type')] || '';
+      if (!/geographic|population/i.test(type)) continue; // facility designations (prisons, clinics) describe one building, not the county
+      const g = String(r[H.I('State and County Federal Information Processing Standard Code')] || '').padStart(5, '0');
+      if (!geos.has(g)) continue;
+      const comp = r[H.I('HPSA Component Type Description')] || '';
+      const cur = C(g)[key] || { score: 0, whole: false, low_income: false, n: 0 };
+      cur.score = Math.max(cur.score, +r[H.I('HPSA Score')] || 0);
+      if (/single county|county subdivision/i.test(comp) && /geographic/i.test(type) && !/population/i.test(type)) cur.whole = cur.whole || /single county/i.test(comp);
+      if (/population/i.test(type)) cur.low_income = true;
+      cur.n++;
+      C(g)[key] = cur;
+    }
+  }
+  for (const c of Object.values(counties)) { c.centers.sort((a, b) => a.city.localeCompare(b.city) || a.name.localeCompare(b.name)); c.n = c.centers.length; c.centers = c.centers.slice(0, 10); }
+  out.health = { source: 'Health Resources and Services Administration (HRSA): health center sites and Health Professional Shortage Areas', url: 'https://data.hrsa.gov/data/download', fetched: new Date().toISOString().slice(0, 10), counties };
+  console.log(`health: ${Object.values(counties).filter(c => c.n).length} counties with health centers, ${Object.values(counties).filter(c => c.pc).length} with a primary-care shortage designation`);
+}
+
 fs.writeFileSync(path.join(ROOT, 'data', 'national', 'local.json'), JSON.stringify(out));
 console.log('wrote data/national/local.json', Math.round(fs.statSync(path.join(ROOT, 'data', 'national', 'local.json')).size / 1024) + ' KB');

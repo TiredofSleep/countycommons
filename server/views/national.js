@@ -118,6 +118,7 @@ ${B.grants(c, N)}
 ${B.arpa(c)}
 ${B.places(c)}
 ${require('../lib/national-local').libraries(c)}
+${require('../lib/national-local').healthAccess(c)}
 ${require('../lib/peers').block(c, N, { more: '/us/what-works' })}
 ${require('./whatworks').improveBlock(c, N, { more: '/us/what-works' })}
 
