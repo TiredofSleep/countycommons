@@ -78,7 +78,8 @@ app.use((req, res, next) => {
     if (usPet) {
       const nv = require('./views/national');
       const pet = priorities.getPublic(usPet[1]);
-      if (!pet || !['national', 'state'].includes(pet.level)) return res.status(404).send(gatePage('No petition at that address.', '/us'));
+      const usCounty = pet && pet.level === 'county' && String(pet.tenant).startsWith('us:');
+      if (!pet || !(['national', 'state'].includes(pet.level) || usCounty)) return res.status(404).send(gatePage('No petition at that address.', '/us'));
       const countyPath = (s) => { const m = /^\/us\/([a-z]{2})\/([a-z0-9-]+)$/.exec(String(s || '')); return m && nv.countyName(m[1], m[2]) ? m[0] : ''; };
       const here = '/us/petitions/' + pet.id;
       if (!usPet[2] && req.method === 'GET') {
@@ -89,7 +90,8 @@ app.use((req, res, next) => {
       }
       if (usPet[2] && req.method === 'POST') return writeLimit(req, res, () => express.urlencoded({ extended: false })(req, res, () => {
         const b = req.body || {};
-        const from = countyPath(b.from);
+        const home = usCounty ? nv.countyByGeoid(String(pet.tenant).slice(3)) : null;
+        const from = home ? home.path : countyPath(b.from);
         const back = (q) => res.redirect(here + '?from=' + encodeURIComponent(from) + q + '#sign');
         if (b.website) return back('');
         if (!from) return back('&error=county');

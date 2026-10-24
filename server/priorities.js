@@ -191,7 +191,7 @@ function enrich(p) {
   return {
     id: p.id, kind: p.kind, title: p.title, why: p.why, node_ref: p.node_ref,
     level: levelOf(p), target: p.target || levelOf(p), state: p.state || null,
-    tenant: p.tenant, created_at: p.created_at, by: p.by || null, campaign: p.campaign || null,
+    tenant: p.tenant, created_at: p.created_at, by: p.by || null, campaign: p.campaign || null, goal: p.goal || null, to: p.to || null,
     support: Object.keys(p.supporters || {}).length,
     reasons: Object.values(p.supporters || {}).filter(x => x.why).map(x => x.why),
     towns: townCounts(p),
@@ -245,7 +245,7 @@ function campaignRollup(campaign) {
   const by = {}; let total = 0;
   for (const p of copies) {
     for (const s of Object.values(p.supporters || {})) {
-      const site = (levelOf(p) === 'county' || /^city-/.test(levelOf(p))) ? p.tenant : (s.site || 'elsewhere');
+      const site = (levelOf(p) === 'county' || /^city-/.test(levelOf(p))) ? p.tenant : (s.site || 'elsewhere'); // county copies count where they live (a site key or us:<geoid>)
       by[site] = (by[site] || 0) + 1; total++;
     }
   }
@@ -256,9 +256,31 @@ function findCampaignCopy(campaign, { tenant, level, state }) {
     (level === 'national' || (level === 'state' ? p.state === state : p.tenant === tenant))) || null;
 }
 
+// Post many shared-petition copies at once (thousands of counties): the same
+// screens as propose(), one write. items: [{ id, tenant, title, why, level, state, county, by, campaign, goal, to }]
+function bulkPropose(items) {
+  const s = load(); const now = new Date().toISOString();
+  const spam = require('./lib/spam'); const sub = require('./submissions');
+  let posted = 0; const blocked = [];
+  for (const it of items) {
+    if (s.priorities[it.id]) continue;
+    const junk = spam.petitionProblem(it.title, it.why);
+    // Screen the words of the ask, not the county's own name ("Crook County" isn't an accusation).
+    const nameRe = it.county && it.county.name ? new RegExp(it.county.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi') : null;
+    const text = (it.title + ' ' + it.why).replace(nameRe || /$^/, 'the county');
+    const flags = junk ? [junk] : sub.screen(text, it.county);
+    if (flags.length) { blocked.push(`${it.id}: ${flags.join(', ')}`); continue; }
+    s.priorities[it.id] = { id: it.id, tenant: it.tenant, kind: 'prioritize', title: it.title, why: it.why, node_ref: null, level: it.level, target: it.level, state: it.state || null,
+      created_at: now, supporters: {}, status: 'open', by: it.by, campaign: it.campaign, ...(it.goal ? { goal: it.goal } : {}), ...(it.to ? { to: it.to } : {}) };
+    posted++;
+  }
+  if (posted) { chain.append('priority-bulk', { campaign: items[0] && items[0].campaign, posted }); save(s); }
+  return { posted, blocked };
+}
+
 // Link an existing petition into a shared campaign (e.g. one a resident started first).
 function tagCampaign(id, campaign) { const s = load(); if (!s.priorities[id]) return false; s.priorities[id].campaign = campaign; save(s); return true; }
 
 function getPublic(id) { const p = get(id); return p && p.status === 'open' && real(p) ? enrich(p) : null; }
 
-module.exports = { tagCampaign, campaignRollup, findCampaignCopy, getPublic, propose, support, addOutcome, undoOutcome, phaseOf, get, setStatus, remove, mySupport, supportedBy, listFor, listByLevel, listAll };
+module.exports = { bulkPropose, tagCampaign, campaignRollup, findCampaignCopy, getPublic, propose, support, addOutcome, undoOutcome, phaseOf, get, setStatus, remove, mySupport, supportedBy, listFor, listByLevel, listAll };

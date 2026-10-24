@@ -88,7 +88,7 @@ function countyPage(st, slug) {
 
 ${c.site ? `<section><div class="issue" style="display:block;border-left:3px solid var(--accent)"><b>${esc(c.name)} has a full County Commons site.</b> <span class="src">The budget line by line, your tax bill explained, audits, local offices and elections: <a href="https://${esc(c.site)}/">${esc(c.site)} →</a></span></div></section>` : ''}
 ${RK.keyFacts(c, N)}
-${petitionsBlock(S.name, `/us/${st.toLowerCase()}/${slug}`, c.name)}
+${petitionsBlock(S.name, `/us/${st.toLowerCase()}/${slug}`, c.name, c.geoid, c.site)}
 ${require('../lib/national-local').finance(c)}
 ${require('../lib/national-local').audit(c)}
 ${require('../lib/national-local').proptax(c)}
@@ -289,13 +289,15 @@ ${(() => { const rows = B.requestRows(); return rows.length ? `<div style="overf
 }
 
 // "/us/ar/clark" -> { name: "Clark County, Arkansas", url: "/us/ar/clark" }
+function countyByGeoid(geoid) { const N = nat(); if (!N._byGeo) { N._byGeo = {}; for (const c of N.counties) N._byGeo[c.geoid] = c; } const c = N._byGeo[geoid]; return c ? { name: c.name, state: (N.states[c.st] || {}).name || c.st, path: `/us/${c.st.toLowerCase()}/${c.slug}`, site: c.site || null } : null; }
 function countyName(st, slug) { const N = nat(); const c = (N.byState[String(st).toUpperCase()] || []).find(x => x.slug === slug); return c ? `${c.name}, ${(N.states[c.st] || {}).name || c.st}` : null; }
 
 // Petitions anyone can sign from a national page: the national ones and this
 // state's. County-level asks need a full county site (someone has to carry
 // them to the county's own meeting), so those are offered as a request.
-function petitionsBlock(stateName, countyPath, countyLabel) {
+function petitionsBlock(stateName, countyPath, countyLabel, geoid, site) {
   const P = require('../priorities');
+  const local = geoid ? P.listByLevel({ tenant: 'us:' + geoid, level: 'county' }) : [];
   const nat = P.listByLevel({ level: 'national' });
   const st = stateName ? P.listByLevel({ level: 'state', state: stateName }) : [];
   if (!nat.length && !st.length) return '';
@@ -304,9 +306,11 @@ function petitionsBlock(stateName, countyPath, countyLabel) {
   return `
 <section id="petitions">
 <h2>Petitions you can sign${countyLabel ? ` from ${esc(countyLabel)}` : ''} <span class="sub">— counted by county, delivered at the goal</span></h2>
+${local.length ? `<h3 style="margin-top:6px">${esc(countyLabel)} <span class="sub">— to ${esc(local[0].to || 'the county’s governing body')}</span></h3>${local.map(p => li(p, p.goal || 100)).join('')}` : ''}
+${site ? `<p class="src" style="max-width:none">${esc(countyLabel)} has a full County Commons site with more petitions to its own officials: <a href="https://${esc(site)}/petitions">${esc(site)}/petitions</a>.</p>` : ''}
 ${st.length ? `<h3 style="margin-top:6px">All of ${esc(stateName)} <span class="sub">— to ${esc(stateName)} lawmakers and the governor</span></h3>${st.map(p => li(p, 2500)).join('')}` : ''}
 ${nat.length ? `<h3 style="margin-top:10px">Nationwide <span class="sub">— to Congress</span></h3>${nat.map(p => li(p, 5000)).join('')}` : ''}
-<p class="src" style="max-width:none">Signatures are counted by the county they come from, so lawmakers can see where people want it. Petitions to county officials — an open checkbook, camera rules, meetings online and more — run on full county sites, where someone can carry them to the county’s own meeting.${countyPath ? ` <a href="/us/feedback?kind=request&from=${encodeURIComponent(countyPath)}">Request a full site${countyLabel ? ` for ${esc(countyLabel)}` : ''}</a>.` : ''}</p>
+<p class="src" style="max-width:none">Signatures are counted by the county they come from, so lawmakers can see where people want it. More county petitions — camera rules, court-date reminders, meetings online — run on full county sites, where someone can carry them to the county’s own meeting.${countyPath && !site ? ` <a href="/us/feedback?kind=request&from=${encodeURIComponent(countyPath)}">Request a full site${countyLabel ? ` for ${esc(countyLabel)}` : ''}</a>.` : ''}</p>
 </section>`;
 }
 
@@ -314,8 +318,11 @@ ${nat.length ? `<h3 style="margin-top:10px">Nationwide <span class="sub">— to 
 function usPetitionPage(p, { from, mine, signed, error }) {
   const P = require('../priorities');
   const r = p.campaign ? P.campaignRollup(p.campaign) : null;
-  const to = p.level === 'national' ? 'your members of Congress' : `${p.state} state legislators and the governor`;
-  const goal = p.level === 'national' ? 5000 : 2500;
+  const isCounty = p.level === 'county';
+  const home = isCounty ? countyByGeoid(String(p.tenant).slice(3)) : null;
+  if (home) from = home.path; // a county petition is signed by that county's residents
+  const to = isCounty ? (p.to || 'the county’s governing body') : p.level === 'national' ? 'your members of Congress' : `${p.state} state legislators and the governor`;
+  const goal = isCounty ? (p.goal || 100) : p.level === 'national' ? 5000 : 2500;
   const m = /^\/us\/([a-z]{2})\/([a-z0-9-]+)$/.exec(from || '');
   const fromName = m ? countyName(m[1], m[2]) : null;
   const link = `https://countycommons.us/us/petitions/${p.id}`;
@@ -325,13 +332,13 @@ function usPetitionPage(p, { from, mine, signed, error }) {
   const btn = 'font-family:var(--mono);font-size:14px;font-weight:600;padding:8px 14px;border:1.5px solid var(--ink);color:var(--ink);text-decoration:none';
   const err = { name: 'Please add your name — like signing a paper petition.', town: 'Please add your town.', county: 'Please pick the county you live in from a county page.', junk: 'That didn’t look like a real signature.' }[error] || '';
   const body = `
-<header class="page"><div class="eyebrow">County Commons · ${p.level === 'national' ? 'national petition' : esc(p.state) + ' petition'}</div>
+<header class="page"><div class="eyebrow">County Commons · ${isCounty && home ? esc(home.name + ', ' + home.state) + ' petition' : p.level === 'national' ? 'national petition' : esc(p.state) + ' petition'}</div>
 <h1>${esc(p.title)}</h1>
 <div class="src" style="font-size:15px">A petition to <b>${esc(to)}</b>, started by ${esc(p.by || 'a resident')}.</div></header>
 <section>
 <p><b>${p.support.toLocaleString('en-US')}</b> of <b>${goal.toLocaleString('en-US')}</b> signatures · ${pct}%</p>
 <div style="background:var(--rule);height:11px;border-radius:3px;overflow:hidden"><div style="width:${pct}%;height:100%;background:var(--accent)"></div></div>
-<p class="src">At ${goal.toLocaleString('en-US')} signatures it’s printed, with the count by county, and delivered to the offices of ${esc(to)} — and their answer is posted here.</p>
+<p class="src">At ${goal.toLocaleString('en-US')} signatures it’s printed, with the count by ${isCounty ? 'town' : 'county'}, and ${isCounty ? `sent by mail and email to ${esc(to)}` : `delivered to the offices of ${esc(to)}`} — and their answer is posted here.</p>
 ${places.length ? `<p class="src" style="max-width:none">Signed from: ${places.map(([k, n]) => `${esc(k)} <b>${n}</b>`).join(' · ')}</p>` : ''}
 <h2>Why it matters</h2><p style="white-space:pre-line">${esc(p.why)}</p>
 </section>
@@ -358,4 +365,4 @@ ${fromName ? `<form method="post" action="/us/petitions/${esc(p.id)}/sign" style
   return page({ title: `Sign: ${p.title} · County Commons`, description: p.support < 5 ? `A petition to ${to}. Be one of the first to sign — counted by county, delivered at ${goal.toLocaleString('en-US')} signatures.` : `${p.support.toLocaleString('en-US')} people have signed this petition to ${to}. Goal: ${goal.toLocaleString('en-US')}.`, canonical: link, body });
 }
 
-module.exports = { petitionsBlock, usPetitionPage, countyName, feedbackPage, buildingPage, countyPage, statePage, usPage, whatWorksPage, sitemapUrls };
+module.exports = { countyByGeoid, petitionsBlock, usPetitionPage, countyName, feedbackPage, buildingPage, countyPage, statePage, usPage, whatWorksPage, sitemapUrls };

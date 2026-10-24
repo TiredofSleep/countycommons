@@ -13,6 +13,50 @@ const PV = require('../server/views/priorities');
 const places = require('../server/lib/places');
 
 const post = process.argv.includes('--post');
+
+// --everywhere <campaign>: the county petition in EVERY U.S. county, not just
+// county sites — one copy per county (tenant "us:<geoid>"), signable from its
+// national page, addressed to that county's governing body and delivered by
+// mail and email at its goal. Counties with no county government are skipped.
+const everyIdx = process.argv.indexOf('--everywhere');
+if (everyIdx > 0) {
+  const campId = process.argv[everyIdx + 1];
+  const Cf = JSON.parse(fs.readFileSync(path.join(ROOT, 'config', 'campaigns.json'), 'utf8'));
+  const camp = Cf.campaigns.find(c => c.id === campId && c.level === 'county');
+  if (!camp) { console.error('no county campaign ' + campId); process.exit(1); }
+  const N = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'national', 'counties.json'), 'utf8'));
+  let L = null; try { L = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'national', 'local.json'), 'utf8')); } catch (e) { /* no finance layer */ }
+  const nat = require('../server/lib/national');
+  // counties already covered by a county site's own copy
+  const covered = new Set();
+  const Tn = JSON.parse(fs.readFileSync(path.join(ROOT, 'config', 'tenants.json'), 'utf8')).tenants;
+  const all = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'priorities.json'), 'utf8')).priorities;
+  for (const p of Object.values(all)) {
+    if (p.campaign !== campId || p.level !== 'county' || !Tn[p.tenant]) continue;
+    try { const c = nat.forCounty(JSON.parse(fs.readFileSync(path.join(ROOT, Tn[p.tenant].configPath), 'utf8'))); if (c) covered.add(c.geoid); } catch (e) { /* skip */ }
+  }
+  const BODY = { AR: 'Quorum Court', TX: 'Commissioners Court', KY: 'Fiscal Court', LA: 'Parish Council or Police Jury', TN: 'County Commission', AL: 'County Commission', WV: 'County Commission', MO: 'County Commission', GA: 'Board of Commissioners', CA: 'Board of Supervisors', AZ: 'Board of Supervisors', IA: 'Board of Supervisors', MS: 'Board of Supervisors', VA: 'Board of Supervisors', WI: 'Board of Supervisors', NJ: 'Board of County Commissioners', FL: 'Board of County Commissioners', OH: 'Board of County Commissioners', SC: 'County Council', DE: 'County Council', HI: 'County Council', AK: 'Borough Assembly' };
+  const thr = require('../server/lib/threshold');
+  const fillC = (t, c) => String(t).replace(/{county}/g, c.name).replace(/{state}/g, c.state);
+  const items = []; let skipped = 0;
+  for (const c of N.counties) {
+    if (covered.has(c.geoid)) continue;
+    const f = L && L.finance && L.finance.counties[c.geoid];
+    if (f && !f.gov) { skipped++; continue; } // no county government to deliver it to
+    const S = (N.states[c.st] || {}).name || c.st;
+    const body = / city$/i.test(c.name) ? 'City Council' : (BODY[c.st] || 'County Commission (its governing board)');
+    const to = `the ${c.name} ${body}`;
+    const county = { name: c.name, state: S, population: c.pop2024 };
+    items.push({ id: `${campId}-${c.geoid}`, tenant: `us:${c.geoid}`, level: 'county', state: S, county, by: Cf.started_by, campaign: campId, to,
+      title: fillC(camp.title, county), why: fillC(camp.why, county), goal: thr.deliveryInfo(county).value });
+  }
+  const fresh = items.filter(it => !all[it.id]).length;
+  if (!post) { console.log(`would post ${fresh} county copies of ${campId} (${items.length - fresh} already there; ${covered.size} counties already have a county site's copy; ${skipped} have no county government)`); process.exit(0); }
+  const r = P.bulkPropose(items);
+  console.log(`posted ${r.posted} county copies of ${campId}; ${covered.size} already on county sites; ${skipped} counties with no county government skipped`);
+  if (r.blocked.length) console.log('blocked:\n  ' + r.blocked.slice(0, 20).join('\n  '));
+  process.exit(0);
+}
 const C = JSON.parse(fs.readFileSync(path.join(ROOT, 'config', 'campaigns.json'), 'utf8'));
 const T = JSON.parse(fs.readFileSync(path.join(ROOT, 'config', 'tenants.json'), 'utf8')).tenants;
 const counties = Object.entries(T).map(([key, t]) => {

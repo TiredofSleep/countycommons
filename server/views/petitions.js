@@ -49,6 +49,7 @@ function siteNames() {
 }
 function placeName(key) {
   const S = siteNames();
+  if (/^us:\d{5}$/.test(String(key))) { const c = require('./national').countyByGeoid(String(key).slice(3)); return c ? `${c.name}, ${c.state}` : null; }
   if (S[key]) return `${S[key].name}, ${S[key].state}`;
   const m = /^\/us\/([a-z]{2})\/([a-z0-9-]+)$/.exec(String(key));
   if (m) { try { return require('./national').countyName(m[1], m[2]); } catch (e) { return null; } }
@@ -65,7 +66,7 @@ function sharedStrip(p) {
     const rows = r.bySite.map(([k, n]) => [placeName(k), n]).filter(([k]) => k).slice(0, 12);
     return `<div class="issue" style="display:block;border-left:3px solid var(--accent)"><b>Signed from ${r.sitesSigning} count${r.sitesSigning === 1 ? 'y' : 'ies'} so far</b>${rows.length ? `<p class="src" style="max-width:none;margin:4px 0 0">${rows.map(([k, n]) => `${esc(k)} <b>${n}</b>`).join(' · ')}</p>` : '<p class="src" style="margin:4px 0 0">Be the first from your county.</p>'}</div>`;
   }
-  const states = new Set(r.copies.map(c => (S[c.tenant] || {}).state).filter(Boolean));
+  const states = new Set(r.copies.map(c => (S[c.tenant] || {}).state || (/^us:/.test(c.tenant) ? (require('./national').countyByGeoid(c.tenant.slice(3)) || {}).state : null)).filter(Boolean));
   return `<div class="issue" style="display:block;border-left:3px solid var(--accent)"><b>The same ask is open in ${r.copies.length} counties in ${states.size} state${states.size === 1 ? '' : 's'}</b> — ${r.total.toLocaleString('en-US')} signature${r.total === 1 ? '' : 's'} across all of them. Each county's petition goes to its own officials and counts toward its own goal; together they show how many places want the same thing. <a href="/petitions/shared/${esc(p.campaign)}">See every county →</a></div>`;
 }
 
@@ -249,7 +250,7 @@ ${packet.names.length ? `<table><thead><tr><th>Name</th><th>Town</th></tr></thea
 function sharedPage(data, camp, r) {
   const { county } = data;
   const S = siteNames();
-  const rows = r.copies.map(c => ({ c, site: S[c.tenant] || { name: c.tenant, state: '' } }))
+  const rows = r.copies.map(c => { if (/^us:/.test(c.tenant)) { const h = require('./national').countyByGeoid(c.tenant.slice(3)) || {}; return { c, site: { name: h.name || c.tenant, state: h.state || '' }, url: `https://countycommons.us/us/petitions/${c.id}` }; } return { c, site: S[c.tenant] || { name: c.tenant, state: '' } }; })
     .sort((a, b) => b.c.support - a.c.support || a.site.state.localeCompare(b.site.state) || a.site.name.localeCompare(b.site.name));
   const states = {}; for (const x of rows) { const st = x.site.state || '—'; states[st] = states[st] || { n: 0, sig: 0 }; states[st].n++; states[st].sig += x.c.support; }
   const title = (camp.title || '').replace(/{county}/g, 'each county').replace(/{state}/g, 'each state');
@@ -266,8 +267,9 @@ function sharedPage(data, camp, r) {
 <section>
 <h2>Every county</h2>
 <div style="overflow-x:auto;max-width:100%"><table class="plain"><thead><tr><th>County</th><th class="num">Signed</th><th>Goes to</th></tr></thead><tbody>
-${rows.map(x => `<tr><td><a href="${siteUrl(x.c.tenant, x.c.id)}">${esc(x.site.name)}, ${esc(x.site.state)}</a></td><td class="num">${x.c.support}</td><td class="src">${esc(x.c.phase === 'raised' ? 'not yet delivered' : x.c.phase)}</td></tr>`).join('')}
+${rows.slice(0, 200).map(x => `<tr><td><a href="${x.url || siteUrl(x.c.tenant, x.c.id)}">${esc(x.site.name)}, ${esc(x.site.state)}</a></td><td class="num">${x.c.support}</td><td class="src">${esc(x.c.phase === 'raised' ? 'not yet delivered' : x.c.phase)}</td></tr>`).join('')}
 </tbody></table></div>
+${rows.length > 200 ? `<p class="src">Showing the 200 with the most signatures; ${(rows.length - 200).toLocaleString('en-US')} more counties have this petition open — find yours from <a href="https://countycommons.us/us">its county page</a>.</p>` : ''}
 <p class="src">${esc(honest(county))} Signatures are counted, not verified — one per browser. <a href="/petitions">Petitions in ${esc(county.name)}</a>.</p>
 </section>`;
   return layout({ title: `Shared petition: ${title} · County Commons`, current: '/petitions', body, county,
