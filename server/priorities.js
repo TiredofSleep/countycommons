@@ -58,9 +58,11 @@ function propose({ tenant, kind, title, why, node_ref, participant, county, targ
   if (flags.length) return { error: 'bright-line', flags };
 
   const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40) || 'priority';
-  const id = `${slug}-${crypto.randomBytes(2).toString('hex')}`;
   const now = new Date().toISOString();
   const s = load();
+  // Never reuse an id: shared petitions put the same title in ~90 counties.
+  let id;
+  do { id = `${slug}-${crypto.randomBytes(3).toString('hex')}`; } while (s.priorities[id]);
   s.priorities[id] = {
     id, tenant, kind, title, why,
     node_ref: node_ref || null,
