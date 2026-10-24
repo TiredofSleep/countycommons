@@ -86,7 +86,7 @@ app.use((req, res, next) => {
         const id = new Date().toISOString().slice(0, 19).replace(/[T:]/g, '-') + '-' + crypto.randomBytes(3).toString('hex');
         fs.writeFileSync(path.join(FEEDBACK_DIR, id + '.json'), JSON.stringify({
           id, ts: new Date().toISOString(), site: 'us', page: String(b.page || '').trim().slice(0, 300),
-          kind: ['correction', 'add', 'document', 'problem'].includes(b.kind) ? b.kind : 'other', message,
+          kind: ['correction', 'add', 'document', 'request', 'problem'].includes(b.kind) ? b.kind : 'other', message,
           source: String(b.source || '').trim().slice(0, 500), contact: String(b.contact || '').trim().slice(0, 200),
           credit: b.credit === '1' ? (String(b.credit_name || '').trim().slice(0, 80) || null) : null, screenshot: null
         }, null, 2));
@@ -1427,7 +1427,7 @@ app.post('/feedback', heavyLimit, (req, res) => {
       id, ts: new Date().toISOString(),
       page: (b.page || '').trim().slice(0, 300),
       site: req.tenantKey || null,
-      kind: ['correction', 'add', 'document', 'problem'].includes(b.kind) ? b.kind : 'other',
+      kind: ['correction', 'add', 'document', 'request', 'problem'].includes(b.kind) ? b.kind : 'other',
       message,
       source: (b.source || '').trim().slice(0, 500),
       credit: b.credit === '1' ? ((b.credit_name || '').trim().slice(0, 80) || null) : null,

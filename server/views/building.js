@@ -28,6 +28,12 @@ function buildingPage(data) {
   <div style="display:flex;gap:8px;flex-wrap:wrap"><a href="/feedback?kind=correction&from=/building" style="${btn}">Correct something</a><a href="/feedback?kind=add&from=/building" style="${btn}">Add information</a><a href="/feedback?kind=document&from=/building" style="${btn}">Send a document</a></div>
 </div>
 </section>
+<section id="requested">
+<h2>Built for every county <span class="sub">— the most-requested go next</span></h2>
+<p>County Commons is built out furthest for <a href="https://clarkar.countycommons.us/">Clark County, Arkansas</a>: the budget line by line, audits, petitions, offices and more. Every U.S. county has a starting page, and we build more for any county on request. Each request is counted here; the counties with the most requests get built next.</p>
+${(() => { const rows = B.requestRows(); return rows.length ? `<div style="overflow-x:auto;max-width:100%"><table class="plain"><thead><tr><th>County</th><th class="num">Requests</th></tr></thead><tbody>${rows.map(r => `<tr><td><a href="${esc(r.url)}">${esc(r.label)}</a></td><td class="num">${r.n}</td></tr>`).join('')}</tbody></table></div>` : '<p class="src">No requests yet — yours would be the first.</p>'; })()}
+<p><a href="/feedback?kind=request&from=/building" style="font-family:var(--mono);font-size:14px;font-weight:600;padding:9px 14px;border:1.5px solid var(--ink);color:var(--ink);background:var(--card);text-decoration:none">Request more for a county</a></p>
+</section>
 <section id="fixed">
 <h2>Fixed thanks to readers <span class="sub">— ${fixes.length}</span></h2>
 ${fixes.length ? fixes.map(f => `<div class="issue" style="display:block"><span class="eyebrow">${esc(f.date || '')}</span><p style="margin:4px 0 0">${esc(f.what)}</p><p class="src" style="margin:4px 0 0">${f.page ? `On <a href="${esc(f.page)}">${esc(f.page)}</a>` : ''}${f.credit ? ` · thanks to ${esc(f.credit)}` : ' · thanks to a reader'}</p></div>`).join('') : `<p>None yet. The first one could be yours — <a href="/feedback?kind=correction&from=/building">tell us what’s wrong</a>.</p>`}

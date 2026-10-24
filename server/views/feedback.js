@@ -12,6 +12,7 @@ const field = `font-family:var(--mono);font-size:14px;padding:8px 10px;border:1.
 const KINDS = {
   correction: { label: 'Correct something', h1: 'Correct something', ask: 'What’s wrong, and what should it say?', ph: 'The number, name, date or sentence that’s wrong — and what’s right, if you know.' },
   add: { label: 'Add information', h1: 'Add information', ask: 'What’s missing?', ph: 'A record, a meeting, an office, a program, a number — anything this county’s page should have.' },
+  request: { label: 'Request more for this county', h1: 'Request more for this county', ask: 'What would you like built here?', ph: 'The budget line by line, the audits, meeting minutes, the jail numbers, the school budget, a record you can’t find — anything.' },
   document: { label: 'Send a document', h1: 'Send a document', ask: 'What is it, and where did it come from?', ph: 'A budget, audit, contract, minutes, a records-request reply… Attach it below or paste a link.' },
   problem: { label: 'Something’s broken', h1: 'Hit a weird spot?', ask: 'What happened?', ph: 'What were you trying to do, and what did you see instead?' }
 };

@@ -37,4 +37,37 @@ function noteStats() {
   return { total: files.length, month: files.filter(f => f.slice(0, 10) >= since).length };
 }
 
-module.exports = { updates, lastUpdated, corrections, noteStats, CORRECTIONS, FEEDBACK };
+// Requests to build out a county, counted by county — the public demand signal
+// for what gets built next. Counts only; the notes stay private.
+//   key: a county site ("clarkar") or a national page ("/us/ar/clark")
+function requestCounts() {
+  let files = [];
+  try { files = fs.readdirSync(FEEDBACK).filter(f => f.endsWith('.json')); } catch (e) { return []; }
+  const by = {};
+  for (const f of files) {
+    let r; try { r = JSON.parse(fs.readFileSync(path.join(FEEDBACK, f), 'utf8')); } catch (e) { continue; }
+    if (r.kind !== 'request') continue;
+    const page = String(r.page || '');
+    const key = r.site && r.site !== 'us' ? r.site : (page.match(/^\/us\/[a-z]{2}\/[a-z0-9-]+/) || [null])[0];
+    if (key) by[key] = (by[key] || 0) + 1;
+  }
+  return Object.entries(by).sort((a, b) => b[1] - a[1]);
+}
+
+// The same counts with names and links, for the "most requested" list.
+function requestRows(limit = 15) {
+  let T = {};
+  try { T = JSON.parse(fs.readFileSync(path.join(ROOT, 'config', 'tenants.json'), 'utf8')).tenants; } catch (e) { /* none */ }
+  return requestCounts().slice(0, limit).map(([key, n]) => {
+    if (key.startsWith('/us/')) {
+      const [, , st, slug] = key.split('/');
+      const name = require('../views/national').countyName(st, slug);
+      return { label: name || key, url: `https://countycommons.us${key}`, n };
+    }
+    let name = key;
+    try { const c = JSON.parse(fs.readFileSync(path.join(ROOT, T[key].configPath), 'utf8')); name = `${c.name}, ${c.state}`; } catch (e) { /* keep key */ }
+    return { label: name, url: `https://${key}.countycommons.us/`, n };
+  });
+}
+
+module.exports = { updates, lastUpdated, corrections, noteStats, requestCounts, requestRows, CORRECTIONS, FEEDBACK };
