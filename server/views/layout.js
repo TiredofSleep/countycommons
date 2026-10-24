@@ -96,7 +96,7 @@ function siteMap(county, current) {
       ['/stance', 'Where we stand'],
       ['/never', 'What we will never do'],
       ['/security', 'How this is secured'],
-      ['/traffic', 'The traffic log'],
+      ['/traffic', 'The traffic log'], ['/building', 'Still building — what’s new, and fixes readers sent'], ['/feedback', 'Help keep this honest — correct or add something'],
       ['/story', 'Our story'],
       ['/feedback', 'Report a problem']
     ]]
@@ -153,10 +153,27 @@ function layout({ title, current, body, county, description, jsonld }) {
   const ctaBand = noCta ? '' : `
 <aside style="border:2px solid var(--ink);background:var(--card);padding:16px 18px;margin:26px 0 0;display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:space-between">
   <div style="min-width:220px;flex:1">
-    <div style="font-family:var(--mono);font-weight:600;font-size:15px">Ready to be heard?</div>
-    <div class="src" style="margin-top:3px;max-width:52ch">Say what your community should prioritize — in ${esc(county.name)}, in your state, or nationally — and rally your neighbors behind it. Free, and no account needed.</div>
+    <div style="font-family:var(--mono);font-weight:600;font-size:15px">Want something changed?</div>
+    <div class="src" style="margin-top:3px;max-width:52ch">Sign or start a petition to ${esc(county.name)} officials — or your state's, or Congress. At its goal it's delivered at a public meeting, and the answer is posted here. Free, no account.</div>
   </div>
-  <a href="/priorities" style="font-family:var(--mono);font-size:15px;font-weight:600;padding:14px 22px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);text-decoration:none;white-space:nowrap">Raise your voice →</a>
+  <a href="/petitions" style="font-family:var(--mono);font-size:15px;font-weight:600;padding:14px 22px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);text-decoration:none;white-space:nowrap">Petitions →</a>
+</aside>`;
+  // Help keep this honest — on nearly every page: correct it, add to it, send a
+  // document, with this page's address carried along. Plus proof of life.
+  const here = reqctx.current().path || '/';
+  const fb = (kind) => `/feedback?kind=${kind}&from=${encodeURIComponent(here)}`;
+  const last = (() => { try { return require('../lib/building').lastUpdated(); } catch (e) { return null; } })();
+  const btn = 'font-family:var(--mono);font-size:13.5px;font-weight:600;padding:8px 12px;border:1.5px solid var(--ink);color:var(--ink);background:var(--paper);text-decoration:none;white-space:nowrap';
+  const honestBand = ['/feedback', '/admin', '/owner'].includes(current) ? '' : `
+<aside aria-label="Help keep this honest" style="border:1.5px dashed var(--ink);padding:14px 16px;margin:18px 0 0">
+  <div style="font-family:var(--mono);font-weight:600;font-size:15px">Help keep this honest</div>
+  <p class="src" style="margin:4px 0 10px;max-width:62ch">See something wrong, out of date, or missing on this page? Tell us. A person reads every note, and fixes are logged in public${county.name ? ` — this site is still being built for ${esc(county.name)}, and residents make it better` : ''}.</p>
+  <div style="display:flex;gap:8px;flex-wrap:wrap">
+    <a href="${fb('correction')}" style="${btn}">Correct something</a>
+    <a href="${fb('add')}" style="${btn}">Add information</a>
+    <a href="${fb('document')}" style="${btn}">Send a document</a>
+    <a href="/building" style="${btn};border-style:dashed">What's new${last ? ` · updated ${esc(last)}` : ''}</a>
+  </div>
 </aside>`;
   return `<!DOCTYPE html>
 <html lang="en">
@@ -186,6 +203,7 @@ ${ldTags(ld)}
 <nav class="site" aria-label="Site">${nav}</nav>
 ${siteMap(county, current)}
 ${body}
+${honestBand}
 ${ctaBand}
 <footer>
 <b>${esc(county.platform_name)} is an independent, citizen-built project. It is not a government website</b> and has no affiliation with, or endorsement from, ${esc(county.name)}, its cities, or any government body.${officialLinks ? ` Official government sites — ${officialLinks}.` : ''}

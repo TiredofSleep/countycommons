@@ -26,6 +26,20 @@ const num = (x) => Math.round(x).toLocaleString('en-US');
 const pct = (a, b) => { const p = (a - b) / b * 100; return (p >= 0 ? '+' : '−') + Math.abs(p).toFixed(1) + '%'; };
 const ld = (x) => `<script type="application/ld+json">${JSON.stringify(x).replace(/</g, '\\u003c')}</script>`;
 
+// Help keep this honest — on every national page too.
+function honestBand(canonical) {
+  const here = String(canonical || '').replace(/^https?:\/\/[^/]+/, '') || '/us';
+  if (/^\/us\/(feedback|building)/.test(here)) return '';
+  const btn = 'font-family:var(--mono);font-size:13.5px;font-weight:600;padding:8px 12px;border:1.5px solid var(--ink);color:var(--ink);background:var(--paper);text-decoration:none;white-space:nowrap';
+  const fb = (k) => `/us/feedback?kind=${k}&from=${encodeURIComponent(here)}`;
+  let last = null; try { last = require('../lib/building').lastUpdated(); } catch (e) { /* no history */ }
+  return `<aside aria-label="Help keep this honest" style="border:1.5px dashed var(--ink);padding:14px 16px;margin:18px 0 0">
+  <div style="font-family:var(--mono);font-weight:600;font-size:15px">Help keep this honest</div>
+  <p class="src" style="margin:4px 0 10px;max-width:62ch">See something wrong, out of date, or missing on this page? Tell us. A person reads every note, and fixes are logged in public — this is still being built, county by county.</p>
+  <div style="display:flex;gap:8px;flex-wrap:wrap"><a href="${fb('correction')}" style="${btn}">Correct something</a><a href="${fb('add')}" style="${btn}">Add information</a><a href="${fb('document')}" style="${btn}">Send a document</a><a href="/us/building" style="${btn};border-style:dashed">What's new${last ? ` · updated ${esc(last)}` : ''}</a></div>
+</aside>`;
+}
+
 function page({ title, description, canonical, body, jsonld }) {
   return `<!DOCTYPE html>
 <html lang="en">
@@ -44,6 +58,7 @@ ${jsonld ? ld(jsonld) : ''}
 <body><div class="wrap">
 <nav class="site" aria-label="Site"><a href="/">County Commons</a><a href="/us">Every county in the U.S.</a></nav>
 ${body}
+${honestBand(canonical)}
 <footer><b>County Commons is an independent, citizen-built civic project. It is not a government website</b> and has no affiliation with any government body. It computes and cites public records and never takes sides. A gap means "not gathered yet," never "hidden." Spot an error? brayden.ozark@gmail.com.</footer>
 </div></body></html>`;
 }
@@ -225,4 +240,36 @@ function sitemapUrls() {
   return out;
 }
 
-module.exports = { countyPage, statePage, usPage, whatWorksPage, sitemapUrls };
+// The national pages' own drop-box and "still building" page (same private
+// store and public fix log as the county sites).
+const KINDS = { correction: 'Correct something', add: 'Add information', document: 'Send a document', problem: 'Something’s broken' };
+function feedbackPage({ from, kind, sent, error }) {
+  kind = KINDS[kind] ? kind : 'correction';
+  const f = 'font-family:var(--mono);font-size:14px;padding:8px 10px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink);width:100%;box-sizing:border-box';
+  const body = sent ? `<header class="page"><div class="eyebrow">County Commons · help keep this honest</div><h1>Got it — thank you</h1><div class="src">A person reads every note. When one leads to a fix, it’s logged on <a href="/us/building">what’s new</a>.</div></header><section><p><a href="${esc(sent)}">Back to where you were</a></p></section>`
+    : `<header class="page"><div class="eyebrow">County Commons · help keep this honest</div><h1>${esc(KINDS[kind])}</h1><div class="src">These pages are built from national public records, and they’re still being built. If something’s wrong, out of date or missing for your county or state, you’re the best fact-checker we have.</div></header>
+<section><form method="POST" action="/us/feedback" style="max-width:600px;display:flex;flex-direction:column;gap:14px">
+${error ? `<p class="src" style="color:var(--dead)"><b>${esc(error)}</b></p>` : ''}
+<fieldset style="border:0;padding:0;margin:0;display:flex;gap:8px;flex-wrap:wrap"><legend class="src" style="margin-bottom:6px">What kind of note?</legend>${Object.entries(KINDS).map(([k, v]) => `<label style="font-size:14px;border:1.5px solid var(--ink);padding:6px 10px"><input type="radio" name="kind" value="${k}"${k === kind ? ' checked' : ''}> ${esc(v)}</label>`).join('')}</fieldset>
+<label>What should change, or what’s missing?<textarea name="message" required maxlength="5000" rows="6" style="${f};margin-top:6px;font-family:inherit;font-size:15px"></textarea></label>
+<label>Where can we check? <span class="src">(a link to the record or document)</span><input name="source" maxlength="500" style="${f};margin-top:6px"></label>
+<label>Which page?<input name="page" value="${esc(from || '')}" maxlength="300" style="${f};margin-top:6px"></label>
+<label>How to reach you <span class="src">(optional)</span><input name="contact" maxlength="200" style="${f};margin-top:6px"></label>
+<label style="display:flex;gap:8px;align-items:center;font-size:14px;flex-wrap:wrap"><input type="checkbox" name="credit" value="1"> <span>Credit me by name if it leads to a fix:</span> <input name="credit_name" maxlength="80" style="${f};width:auto;flex:1;min-width:160px"></label>
+<input type="text" name="website" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;height:1px;width:1px;overflow:hidden">
+<button type="submit" style="font-family:var(--mono);font-size:15px;padding:11px 20px;background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);align-self:flex-start">Send it</button></form>
+<p class="src" style="max-width:62ch">Saved privately on our own server and read by a person; never published or shared. A note is a lead, not an edit — we check it against the record first. Rather email? brayden.ozark@gmail.com.</p></section>`;
+  return page({ title: `${KINDS[kind]} · County Commons`, description: 'Correct something, add missing information, or send a document for any county page. A person reads every note.', canonical: 'https://countycommons.us/us/feedback', body });
+}
+function buildingPage() {
+  const B = require('../lib/building');
+  const fixes = B.corrections().slice().sort((a, b) => String(b.date).localeCompare(String(a.date)));
+  const ups = B.updates().slice(0, 50), notes = B.noteStats();
+  const byDay = []; for (const u of ups) { const g = byDay[byDay.length - 1]; if (g && g.date === u.date) g.items.push(u.what); else byDay.push({ date: u.date, items: [u.what] }); }
+  const body = `<header class="page"><div class="eyebrow">County Commons · still building</div><h1>Still building — what’s new, and what readers helped fix</h1><div class="src">A small, independent project built in public, one record at a time.${ups.length ? ` Last update: <b>${esc(ups[0].date)}</b>.` : ''} <a href="/us/feedback?kind=correction&from=/us/building">Help keep it honest</a>.</div></header>
+<section><h2>Fixed thanks to readers <span class="sub">— ${fixes.length}</span></h2>${fixes.length ? fixes.map(x => `<p><b>${esc(x.date)}</b> — ${esc(x.what)} <span class="src">${x.page ? esc(x.page) : ''}${x.credit ? ` · thanks to ${esc(x.credit)}` : ''}</span></p>`).join('') : '<p>None yet — the first one could be yours.</p>'}<p class="src">Notes received across all sites: ${notes.total}. Counts only; notes stay private.</p></section>
+<section><h2>Recent updates</h2>${byDay.map(g => `<p style="margin:12px 0 2px"><b>${esc(g.date)}</b></p><ul style="margin:0 0 0 18px">${g.items.map(w => `<li>${esc(w)}</li>`).join('')}</ul>`).join('')}<p class="src">From the project’s public change history: <a href="https://github.com/TiredofSleep/countycommons" rel="noopener">github.com/TiredofSleep/countycommons</a>.</p></section>`;
+  return page({ title: 'Still building: what’s new on County Commons', description: 'What changed lately on County Commons, and the corrections readers sent in.', canonical: 'https://countycommons.us/us/building', body });
+}
+
+module.exports = { feedbackPage, buildingPage, countyPage, statePage, usPage, whatWorksPage, sitemapUrls };

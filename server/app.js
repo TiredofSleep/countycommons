@@ -73,6 +73,26 @@ app.use((req, res, next) => {
     // flagship. This is why countycommons.us shows "select your county or city".
     const p = req.path;
     if (p === '/enter' || p.startsWith('/gate') || p === '/health' || p === '/robots.txt' || /\.[a-z0-9]+$/i.test(p)) return next();
+    // Help keep the national pages honest: their own drop-box and fix log.
+    if (p === '/us/building' && req.method === 'GET') return res.send(require('./views/national').buildingPage());
+    if (p === '/us/feedback') {
+      const nv = require('./views/national');
+      if (req.method === 'GET') return res.send(nv.feedbackPage({ from: safePath(req.query.from || ''), kind: String(req.query.kind || '').slice(0, 20) }));
+      if (req.method === 'POST') return heavyLimit(req, res, () => express.urlencoded({ extended: false })(req, res, () => {
+        const b = req.body || {};
+        if ((b.website || '').trim() || require('./lib/spam').isProbe(b.message)) return res.send(nv.feedbackPage({ sent: '/us' }));
+        const message = String(b.message || '').trim().slice(0, 5000);
+        if (!message) return res.status(400).send(nv.feedbackPage({ from: safePath(b.page), kind: b.kind, error: 'The note was empty — tell us what you saw.' }));
+        const id = new Date().toISOString().slice(0, 19).replace(/[T:]/g, '-') + '-' + crypto.randomBytes(3).toString('hex');
+        fs.writeFileSync(path.join(FEEDBACK_DIR, id + '.json'), JSON.stringify({
+          id, ts: new Date().toISOString(), site: 'us', page: String(b.page || '').trim().slice(0, 300),
+          kind: ['correction', 'add', 'document', 'problem'].includes(b.kind) ? b.kind : 'other', message,
+          source: String(b.source || '').trim().slice(0, 500), contact: String(b.contact || '').trim().slice(0, 200),
+          credit: b.credit === '1' ? (String(b.credit_name || '').trim().slice(0, 80) || null) : null, screenshot: null
+        }, null, 2));
+        res.send(nv.feedbackPage({ sent: safePath(b.page) || '/us' }));
+      }));
+    }
     // The national base template: every U.S. county at /us/<st>/<county>.
     const us = p.match(/^\/us(?:\/([a-z]{2}))?(?:\/([a-z0-9-]+))?\/?$/);
     if (us) {
@@ -147,7 +167,7 @@ app.get(['/sitemap.xml', '/sitemap-index.xml'], (req, res) => {
   if (r.action === 'serve' && directory.isFeatured(r.key)) {
     let cfg = {}; try { cfg = load(r.key).county; } catch (e) {}
     const base = `https://${host}`;
-    const paths = ['/', '/tour', '/budget', '/petitions', '/issues', '/outcomes', '/help', '/calendar', '/participate', '/docket', '/documents', '/vendors', '/audits', '/verify', '/methodology', '/guide', '/stance', '/story', '/counties', '/cases', '/research', '/receipts', '/food', '/sovereignty', '/engine', '/commons', '/blueprint', '/almanac', '/feed', '/frontier', '/growops', '/water', '/justice', '/surveillance', '/offices', '/atlas', '/compare', '/what-works', '/coverage', '/elections', '/turnout', '/grants', '/kindred', '/field', '/never', '/security', '/traffic'];
+    const paths = ['/', '/tour', '/budget', '/petitions', '/building', '/issues', '/outcomes', '/help', '/calendar', '/participate', '/docket', '/documents', '/vendors', '/audits', '/verify', '/methodology', '/guide', '/stance', '/story', '/counties', '/cases', '/research', '/receipts', '/food', '/sovereignty', '/engine', '/commons', '/blueprint', '/almanac', '/feed', '/frontier', '/growops', '/water', '/justice', '/surveillance', '/offices', '/atlas', '/compare', '/what-works', '/coverage', '/elections', '/turnout', '/grants', '/kindred', '/field', '/never', '/security', '/traffic'];
     if (cfg.has_municipalities) paths.push('/places');
     if (cfg.has_compare) paths.push('/compare/counties', '/compare/spending');
     if (cfg.has_taxes_debt) paths.push('/taxes');
@@ -310,6 +330,8 @@ app.use((req, res, next) => {
 // tax rates, state turnout counts, the closest prisons) stay open past the guard.
 // Elections pass through too: when and where to vote doesn't wait on a budget.
 const STARTER_PAGES = {
+  '/building': ['Still building', 'what’s new, and the fixes readers sent in'],
+  '/feedback': ['Help keep this honest', 'correct something, add information, or send a document'],
   '/petitions': ['Petitions', 'sign, start and share petitions to your elected officials'],
   '/elections': ['When and how to vote', 'election dates, polling hours and the ID rule'],
   '/faq': ['Questions answered', 'property tax, voting and what’s been gathered, from public records'],
@@ -1357,7 +1379,7 @@ const multer = require('multer');
 const { feedbackPage } = require('./views/feedback');
 const FEEDBACK_DIR = path.join(__dirname, '..', 'data', 'feedback');
 fs.mkdirSync(FEEDBACK_DIR, { recursive: true });
-const FB_TYPES = { 'image/png': '.png', 'image/jpeg': '.jpg', 'image/webp': '.webp', 'image/gif': '.gif' };
+const FB_TYPES = { 'image/png': '.png', 'image/jpeg': '.jpg', 'image/webp': '.webp', 'image/gif': '.gif', 'application/pdf': '.pdf' };
 const fbId = (req) => {
   if (!req.fbId) req.fbId = new Date().toISOString().slice(0, 19).replace(/[T:]/g, '-') + '-' + crypto.randomBytes(3).toString('hex');
   return req.fbId;
@@ -1367,15 +1389,17 @@ const fbUpload = multer({
     destination: FEEDBACK_DIR,
     filename: (req, file, cb) => cb(null, fbId(req) + FB_TYPES[file.mimetype])
   }),
-  limits: { fileSize: 8 * 1024 * 1024, files: 1, fields: 6 },
+  limits: { fileSize: 8 * 1024 * 1024, files: 1, fields: 12 },
   fileFilter: (req, file, cb) => cb(null, Boolean(FB_TYPES[file.mimetype]))
 });
 const safePath = p => (typeof p === 'string' && p.startsWith('/') && !p.startsWith('//') && !p.includes('\\')) ? p : '';
 
+app.get('/building', (req, res) => res.send(require('./views/building').buildingPage({ ...load(req.tenantKey), tenantKey: req.tenantKey })));
+
 app.get('/feedback', (req, res) => {
   let from = safePath(req.query.from || '');
   if (!from) { try { from = safePath(new URL(req.headers.referer).pathname); } catch (e) { /* no referer */ } }
-  res.send(feedbackPage(load(req.tenantKey).county, { from }));
+  res.send(feedbackPage(load(req.tenantKey).county, { from, kind: String(req.query.kind || '').slice(0, 20) }));
 });
 
 app.post('/feedback', heavyLimit, (req, res) => {
@@ -1384,21 +1408,29 @@ app.post('/feedback', heavyLimit, (req, res) => {
     const b = req.body || {};
     if (err) {
       return res.status(400).send(feedbackPage(county, {
-        error: 'That image did not go through (8 MB max; PNG, JPG, WebP, or GIF). Your note was not saved — please try again.',
-        from: safePath(b.page)
+        error: 'That file did not go through (8 MB max; a PDF or a PNG, JPG, WebP, or GIF image). Your note was not saved — please try again.',
+        from: safePath(b.page), kind: b.kind
       }));
     }
-    if ((b.website || '').trim()) return res.send(feedbackPage(county, { sent: '/' }));
+    // The hidden field only bots fill in, and scanner probes: thank them and drop it.
+    if ((b.website || '').trim() || require('./lib/spam').isProbe(b.message)) {
+      if (req.file) { try { fs.unlinkSync(req.file.path); } catch (e) { /* already gone */ } }
+      return res.send(feedbackPage(county, { sent: '/' }));
+    }
     const message = (b.message || '').trim().slice(0, 5000);
     if (!message) {
       if (req.file) { try { fs.unlinkSync(req.file.path); } catch (e) { /* already gone */ } }
-      return res.status(400).send(feedbackPage(county, { error: 'The message was empty — tell us what happened.', from: safePath(b.page) }));
+      return res.status(400).send(feedbackPage(county, { error: 'The note was empty — tell us what you saw.', from: safePath(b.page), kind: b.kind }));
     }
     const id = fbId(req);
     const rec = {
       id, ts: new Date().toISOString(),
       page: (b.page || '').trim().slice(0, 300),
+      site: req.tenantKey || null,
+      kind: ['correction', 'add', 'document', 'problem'].includes(b.kind) ? b.kind : 'other',
       message,
+      source: (b.source || '').trim().slice(0, 500),
+      credit: b.credit === '1' ? ((b.credit_name || '').trim().slice(0, 80) || null) : null,
       contact: (b.contact || '').trim().slice(0, 200),
       ua: (req.headers['user-agent'] || '').slice(0, 300),
       screenshot: req.file ? req.file.filename : null
