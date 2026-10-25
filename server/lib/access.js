@@ -23,7 +23,7 @@ const TENANTS_PATH = path.join(__dirname, '..', '..', 'config', 'tenants.json');
 
 function defaultTenant() {
   try { return JSON.parse(fs.readFileSync(TENANTS_PATH, 'utf8')).default; }
-  catch (e) { return 'clarkar'; }
+  catch (e) { return require('./network').net().flagship; }
 }
 
 // { secret, pins: { "<pin>": {tenant, role, name} } }. Cached by mtime so a

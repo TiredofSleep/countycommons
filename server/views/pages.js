@@ -79,8 +79,9 @@ function documentsPage(data, q) {
   // Group by jurisdiction for scannability.
   const groups = {};
   for (const d of docs) (groups[d.jurisdiction] = groups[d.jurisdiction] || []).push(d);
+  const home = ((county.jurisdictions || [])[0] || {}).id || county.slug;
   const groupOrder = Object.keys(groups).sort((a, b) =>
-    (a === county.slug || a === 'clark-county' ? -1 : b === 'clark-county' ? 1 : a.localeCompare(b)));
+    (a === home ? -1 : b === home ? 1 : a.localeCompare(b)));
 
   const ocrHits = q ? searchOcrTexts(q) : [];
   const byBase = new Map(documents.documents.filter(d => d.local_file)
@@ -131,7 +132,7 @@ ${ocrHits.map(h => {
   <h1>Document library</h1>
   <div class="src">Every document behind the numbers — ${documents.documents.length} filed, hashed, and archived. Search covers titles, jurisdictions, years, and the full machine-read text of the minutes and ordinances. When a document is missing, the gap goes on the <a href="/docket">docket</a>.</div>
   <form method="GET" action="/documents" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
-    <input type="search" name="q" value="${esc(q)}" placeholder="Search: ambulance, asphalt, salary, EDCCC, millage…"
+    <input type="search" name="q" value="${esc(q)}" placeholder="Search: ambulance, asphalt, salary, millage…"
       style="font-size:14px;padding:9px 12px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink);flex:1;min-width:220px">
     <button type="submit" style="font-family:var(--mono);font-size:13px;padding:9px 16px;background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);cursor:pointer">Search</button>
     ${q ? '<a href="/documents" style="align-self:center;font-size:12.5px">clear</a>' : ''}

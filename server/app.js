@@ -26,6 +26,7 @@ const { castVote } = require('./vote');
 const app = express();
 app.disable('x-powered-by');
 app.use(require('./lib/reqctx').middleware);
+app.use(require('./lib/network').rehostMiddleware);
 // Caddy is the single reverse proxy in front of us; trust exactly one hop so
 // req.ip reflects the real client for the per-IP write throttle.
 app.set('trust proxy', 1);
@@ -57,7 +58,7 @@ function comingSoonPage(sub) {
   <div class="eyebrow">County Commons</div>
   <h1>“${s}” isn't live yet</h1>
   <p class="src">County Commons is a free civic-transparency platform, county by county. This one hasn't been set up yet — no budget has been ingested and no questions are open here.</p>
-  <p class="src">The first county is live now: <a href="https://clarkar.countycommons.us">Clark County, Arkansas</a>. If you'd like to bring your county on, that's exactly what this project is for.</p>
+  ${require('./lib/network').flagshipLink() ? `<p class="src">The first county is live now: ${require('./lib/network').flagshipLink()}. If you'd like to bring your county on, that's exactly what this project is for.</p>` : ''}
 </header></div></body></html>`;
 }
 
@@ -562,10 +563,9 @@ app.get('/story', (req, res) => {
   const data = load(req.tenantKey);
   const { layout } = require('./views/layout');
   const { mdToHtml } = require('./lib/md');
-  // The flagship (Clark) tells its real founding story; every other county gets
-  // the platform's mission story, not Clark's personal narrative.
-  const isFlagship = req.tenantKey === tenant.registry().default;
-  const md = isFlagship
+  // A county whose config sets has_founding_story tells the founder's own story
+  // (THE-STORY.md); every other county gets the platform's mission story.
+  const md = data.county.has_founding_story
     ? fs.readFileSync(path.join(__dirname, '..', 'THE-STORY.md'), 'utf8').split('\n').slice(4).join('\n')
     : `# Why ${data.county.platform_name} exists
 
@@ -573,7 +573,7 @@ ${data.county.name}'s public money should be as easy to walk as a receipt, and i
 
 It computes and cites; it never takes sides. Every number links to its source. The arithmetic re-adds itself in public. It is independent and free — **not a government website**.
 
-It was built first in Clark County, Arkansas, and generalized so any county could have the same thing on the same code, the same rules, and the same receipts. ${data.county.name} is one of them. What it becomes here is up to the people who live here.`;
+It was built first in ${require('./lib/network').net().flagship_name || 'one county'}, and generalized so any county could have the same thing on the same code, the same rules, and the same receipts. ${data.county.name} is one of them. What it becomes here is up to the people who live here.`;
   const ledger = `
 <section style="margin-top:26px">
 <h2>The claims ledger <span class="sub">— every promise above, tracked honestly</span></h2>
@@ -596,7 +596,7 @@ It was built first in Clark County, Arkansas, and generalized so any county coul
   }));
 });
 
-app.get('/guide', (req, res) => res.send(storyPage(load(req.tenantKey), { isFlagship: req.tenantKey === tenant.registry().default })));
+app.get('/guide', (req, res) => res.send(storyPage(load(req.tenantKey), { isFlagship: !!load(req.tenantKey).county.has_hand_tour })));
 const { tourPage } = require('./views/tour');
 app.get('/tour', (req, res) => res.send(tourPage(load(req.tenantKey))));
 
@@ -726,8 +726,8 @@ app.get('/commonwealth', (req, res) => {
 });
 
 app.get('/compare/spending', (req, res) => {
-  // Hardcoded Clark-vs-neighbor analysis — flagship only; others go to the tree.
-  if (req.tenantKey !== tenant.registry().default) return res.redirect('/budget');
+  // A hand-built neighbor analysis, only where the county's config sets has_compare; others go to the tree.
+  if (!load(req.tenantKey).county.has_compare) return res.redirect('/budget');
   res.send(spendingPage(load(req.tenantKey)));
 });
 
@@ -736,9 +736,9 @@ app.get('/compare/spending', (req, res) => {
 const { compute: computeCountyCompare } = require('./lib/countycompare');
 const { compareCountiesPage } = require('./views/comparecounties');
 app.get('/compare/counties', (req, res) => {
-  // Hardcoded Clark-vs-Garland Arkansas comparison — flagship only; others to
-  // the universal network directory.
-  if (req.tenantKey !== tenant.registry().default) return res.redirect('/counties');
+  // A hand-built county-vs-county comparison, only where the county's config
+  // sets has_compare; others go to the universal network directory.
+  if (!load(req.tenantKey).county.has_compare) return res.redirect('/counties');
   res.send(compareCountiesPage(load(req.tenantKey), computeCountyCompare()));
 });
 

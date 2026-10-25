@@ -24,11 +24,14 @@ You don't need permission. You need a small server, some patience and your count
 **The steps**
 
 - Get the code: [github.com/TiredofSleep/countycommons](https://github.com/TiredofSleep/countycommons). Download it, then run `npm install`.
-- Copy `config/county.json` to a new file for your county and change it: the county's name, its towns, its elected officials, its meeting calendar and where its records live. County details belong in this file, not in the code.
-- Add your county to `config/tenants.json` with its own data folder.
-- Put the county's PDFs in `inbox/`. Run `node pipeline/ingest.js extract <file>` to pull out every dollar amount by page, then build the money trail from it. `node pipeline/ingest.js pin <doc-id>` finds the page each number is printed on.
-- Run `node pipeline/verify.js data/<your-folder>`. It checks that every total equals the sum of its parts, to the dollar, and the site shows that check next to every number.
-- Run `npm start` and open the site.
+- Put your own name, web address and contact in `config/network.json`. Links across the site follow that address.
+- Create your county: `node pipeline/new-county.js polkar "Polk County" "Arkansas"` (use your county's name and a short key). It makes a blank settings file and an empty data folder under `data/tenants/<key>/`.
+- Fill in the settings file: the county's towns, its elected officials, its meeting calendar and where its records live. `config/county.example.json` shows every field. County details belong in this file, not in the code.
+- Put the county's PDFs in `inbox/<key>/` and run `node pipeline/register.js <key>`. It fingerprints each file so anyone can check later that it hasn't changed, and lists the new ones for you to describe.
+- Run `node pipeline/ingest.js extract <file>` to pull out every dollar amount by page, then build the money trail from it. `node pipeline/ingest.js pin <doc-id>` finds the page each number is printed on.
+- Run `node pipeline/verify.js data/tenants/<key>/corpus`. It checks that every total equals the sum of its parts, to the dollar, and the site shows that check next to every number.
+- Run `npm start` and open `http://<key>.localhost:3000`. The county stays a "coming soon" page until its budget is loaded.
+- Starter petitions for your county can go in `config/petitions/<key>.json` and be posted with `node pipeline/seed-petitions.js <key> --post`. Every petition says who started it.
 
 The longer guides are in the code: [running several counties](https://github.com/TiredofSleep/countycommons/blob/main/docs/MULTI-COUNTY.md), [putting it on a server](https://github.com/TiredofSleep/countycommons/blob/main/docs/DEPLOY.md), and [the ground rules for county content](https://github.com/TiredofSleep/countycommons/blob/main/docs/COUNTY-CODE.md). Expect some rough edges — this is still being built. [Ask for help](/feedback?kind=problem) and we'll answer.
 

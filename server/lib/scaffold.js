@@ -29,20 +29,26 @@ function createCounty({ key, name, state, sub, platformName }) {
   const cdir = path.join(ROOT, 'data', 'tenants', key, 'corpus');
   fs.mkdirSync(cdir, { recursive: true });
 
-  // Starter config, cloned from the default county's shape and blanked to this
-  // county's specifics. Officials/jurisdictions start empty — the owner fills
-  // them, or the host does through their admin as capabilities grow.
-  const tmpl = JSON.parse(fs.readFileSync(path.join(ROOT, reg.tenants[reg.default].configPath), 'utf8'));
-  const cfg = Object.assign({}, tmpl, {
-    name, state, slug: key,
+  // Starter config: blank, in the shape of config/county.example.json. Only the
+  // network-wide lines (sponsor, contact) carry over from the default county —
+  // never its officials, races, election office, sources or county-only pages.
+  // Officials and jurisdictions start empty; the owner or host fills them.
+  const def = JSON.parse(fs.readFileSync(path.join(ROOT, reg.tenants[reg.default].configPath), 'utf8'));
+  const AR = state === 'Arkansas';
+  const cfg = {
+    name, state, slug: key, population: null, population_source: null,
     platform_name: (platformName && platformName.trim()) || 'County Commons',
-    jurisdictions: [{ id: key, name, kind: 'county', governing_body: 'Quorum Court', executive: 'County Judge', website: null }],
+    sponsor_line: def.sponsor_line, contact_email: def.contact_email,
+    jurisdictions: [{ id: key, name, kind: 'county', governing_body: AR ? 'Quorum Court' : 'County governing body', executive: AR ? 'County Judge' : null, website: null }],
     peer_counties: [],
     officials: [],
     quorum_court: { source: '', justices: [] },
     records_portals: [],
-    calendar: Object.assign({}, tmpl.calendar, { meetings: [] })
-  });
+    calendar: { budget_adoption_window: { start_month: 10, end_month: 12, note: 'Most counties adopt next year’s budget late in the year; confirm with the county clerk.' }, meetings: [], election_blackouts: [] },
+    data_sources: [],
+    currency_year: def.currency_year || new Date().getFullYear(),
+    reading_level_target: '6th-8th grade'
+  };
   fs.writeFileSync(path.join(ROOT, 'data', 'tenants', key, 'county.json'), JSON.stringify(cfg, null, 2));
 
   const w = (f, o) => fs.writeFileSync(path.join(cdir, f), JSON.stringify(o, null, 2));

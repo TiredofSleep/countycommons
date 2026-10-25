@@ -1,5 +1,6 @@
 const reqctx = require('../lib/reqctx');
 const { esc } = require('../lib/corpus');
+const network = require('../lib/network');
 
 // Page shell. No external requests of any kind — styles and the tiny
 // enhancement script are served from this box. Works with JS disabled.
@@ -165,7 +166,7 @@ function layout({ title, current, body, county, description, jsonld, canonical: 
   const honestBand = ['/feedback', '/admin', '/owner'].includes(current) ? '' : `
 <aside aria-label="Help keep this honest" style="border:1.5px dashed var(--ink);padding:14px 16px;margin:18px 0 0">
   <div style="font-family:var(--mono);font-weight:600;font-size:15px">Help keep this honest</div>
-  <p class="src" style="margin:4px 0 10px;max-width:62ch">See something wrong, out of date, or missing on this page? Tell us — a person reads every note, and fixes are logged in public. County Commons is built out furthest for Clark County, Arkansas, but it’s for every county${county.name && county.name !== 'Clark County' ? `, and we build more for ${esc(county.name)} on request` : ', and we build more for any county on request'}.</p>
+  <p class="src" style="margin:4px 0 10px;max-width:62ch">See something wrong, out of date, or missing on this page? Tell us — a person reads every note, and fixes are logged in public. ${network.net().flagship_name ? `County Commons is built out furthest for ${esc(network.net().flagship_name)}, but it’s for every county` : 'County Commons is for every county'}${county.name && !(network.net().flagship_name || '').startsWith(county.name + ',') ? `, and we build more for ${esc(county.name)} on request` : ', and we build more for any county on request'}.</p>
   <div style="display:flex;gap:8px;flex-wrap:wrap">
     <a href="${fb('correction')}" style="${btn}">Correct something</a>
     <a href="${fb('add')}" style="${btn}">Add information</a>

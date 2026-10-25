@@ -97,7 +97,7 @@ for (const camp of C.campaigns) {
       make(camp, { tenant: x.key, county: x.county, level: 'state', state });
     }
   } else if (camp.level === 'national') {
-    const x = counties.find(c => c.key === 'clarkar') || counties[0];
+    const x = counties.find(c => c.key === require('../server/lib/network').net().flagship) || counties[0];
     make(camp, { tenant: x.key, county: x.county, level: 'national', state: null });
   }
 }

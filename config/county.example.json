@@ -1,0 +1,61 @@
+{
+  "name": "Example County",
+  "state": "Your State",
+  "slug": "example-county-st",
+  "seat": "County Seat Town",
+  "population": 25000,
+  "population_source": "U.S. Census estimate",
+  "platform_name": "Example Commons",
+  "sponsor_line": "Run by residents of Example County",
+  "contact_email": "you@example.org",
+  "jurisdictions": [
+    {
+      "id": "example-county",
+      "name": "Example County",
+      "kind": "county",
+      "governing_body": "County Commission",
+      "executive": "County Executive",
+      "website": "https://www.example-county.gov"
+    },
+    {
+      "id": "county-seat-town",
+      "name": "City of County Seat Town",
+      "kind": "city",
+      "governing_body": "City Council",
+      "executive": "Mayor",
+      "website": null
+    }
+  ],
+  "peer_counties": ["Neighbor One", "Neighbor Two"],
+  "officials": [
+    {
+      "office": "County Executive",
+      "name": "Name of the elected official",
+      "term_expires": "2028-12-31",
+      "phone": "000-000-0000",
+      "source": "where you found this, e.g. the county website page"
+    }
+  ],
+  "records_portals": [
+    { "id": "county-records", "name": "County meeting minutes and ordinances", "url": "https://www.example-county.gov/records" }
+  ],
+  "election_office": {
+    "name": "Example County election office",
+    "address": "Street address",
+    "phone": "000-000-0000",
+    "url": "https://www.example-county.gov/elections",
+    "src": [{ "url": "https://www.example-county.gov/elections", "label": "Example County election office" }]
+  },
+  "calendar": {
+    "budget_adoption_window": { "start_month": 10, "end_month": 12, "note": "When the governing body usually adopts next year's budget." },
+    "meetings": [
+      { "body": "County Commission", "schedule": "first Tuesday, monthly", "note": "Confirm with the county clerk." }
+    ],
+    "election_blackouts": []
+  },
+  "data_sources": [
+    { "id": "county-site", "name": "Example County official site", "url": "https://www.example-county.gov", "holds": ["budget ordinances", "meeting minutes"] }
+  ],
+  "currency_year": 2026,
+  "reading_level_target": "6th-8th grade"
+}

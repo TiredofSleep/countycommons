@@ -98,7 +98,7 @@ ${listings.length ? listings.map((e, i) => `
 <form method="POST" action="/admin/calendar/event/add" style="max-width:640px;display:flex;flex-direction:column;gap:10px">
   <label style="font-size:13.5px">Name<input name="name" required maxlength="120" placeholder="Fall recycling drive" style="${field};margin-top:4px"></label>
   <label style="font-size:13.5px">Date &amp; time<input name="date" maxlength="80" placeholder="Saturday, Oct 18, 9am–1pm" style="${field};margin-top:4px"></label>
-  <label style="font-size:13.5px">Place<input name="place" maxlength="120" placeholder="Feaster Park, Arkadelphia" style="${field};margin-top:4px"></label>
+  <label style="font-size:13.5px">Place<input name="place" maxlength="120" placeholder="City park, Main Street" style="${field};margin-top:4px"></label>
   <label style="font-size:13.5px">Note <span class="src">(optional)</span><input name="note" maxlength="240" placeholder="Bring cardboard and electronics." style="${field};margin-top:4px"></label>
   <button type="submit" style="font-family:var(--mono);font-size:13px;padding:9px 16px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);cursor:pointer;align-self:flex-start">Add event</button>
 </form>
@@ -275,11 +275,11 @@ ${hostListings.length ? hostListings.map((r, i) => `
 <section>
 <h2>Add a listing</h2>
 <form method="POST" action="/admin/help/add" style="max-width:640px;display:flex;flex-direction:column;gap:10px">
-  <label style="font-size:13.5px">Name<input name="name" required maxlength="120" placeholder="Clark County Food Pantry" style="${field};margin-top:4px"></label>
+  <label style="font-size:13.5px">Name<input name="name" required maxlength="120" placeholder="County food pantry" style="${field};margin-top:4px"></label>
   <label style="font-size:13.5px">What they help with<input name="what" maxlength="160" placeholder="Groceries, no questions asked" style="${field};margin-top:4px"></label>
   <label style="font-size:13.5px">Phone<input name="phone" maxlength="40" placeholder="870-555-0100" style="${field};margin-top:4px"></label>
   <label style="font-size:13.5px">Hours<input name="hours" maxlength="120" placeholder="Tue & Thu, 9am–noon" style="${field};margin-top:4px"></label>
-  <label style="font-size:13.5px">Address <span class="src">(optional)</span><input name="address" maxlength="160" placeholder="123 Main St, Arkadelphia" style="${field};margin-top:4px"></label>
+  <label style="font-size:13.5px">Address <span class="src">(optional)</span><input name="address" maxlength="160" placeholder="123 Main St" style="${field};margin-top:4px"></label>
   <button type="submit" style="font-family:var(--mono);font-size:13px;padding:9px 16px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);cursor:pointer;align-self:flex-start">Add listing</button>
 </form>
 </section>`;

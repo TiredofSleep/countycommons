@@ -59,7 +59,7 @@ function taxDebtPage(data) {
 ${wrap(`<table class="plain">
 <thead><tr><th>Sales tax</th><th>Rate</th><th>Source</th></tr></thead>
 <tbody>${salesRows}
-<tr><td><b>Total at an Arkadelphia register</b></td><td class="num"><b>${esc(t.rates.sales_total)}</b></td><td></td></tr>
+<tr><td><b>${esc(t.rates.sales_total_label || 'Total sales tax')}</b></td><td class="num"><b>${esc(t.rates.sales_total)}</b></td><td></td></tr>
 </tbody>
 </table>`)}
 <p>${esc(t.rates.property_note)} <span class="src">Source: ${cite(t.rates.property_doc, null, null, 'State millage report, 2025')}.</span></p>

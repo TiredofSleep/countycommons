@@ -1,4 +1,5 @@
 const { esc } = require('../lib/corpus');
+const network = require('../lib/network');
 const { layout } = require('./layout');
 const B = require('../lib/building');
 
@@ -30,7 +31,7 @@ function buildingPage(data) {
 </section>
 <section id="requested">
 <h2>Built for every county <span class="sub">— the most-requested go next</span></h2>
-<p>County Commons is built out furthest for <a href="https://clarkar.countycommons.us/">Clark County, Arkansas</a>: the budget line by line, audits, petitions, offices and more. Every U.S. county has a starting page, and we build more for any county on request. Each request is counted here; the counties with the most requests get built next.</p>
+<p>${network.flagshipLink() ? `County Commons is built out furthest for ${network.flagshipLink()}: the budget` : `County Commons is for every county: the budget`} line by line, audits, petitions, offices and more. Every U.S. county has a starting page, and we build more for any county on request. Each request is counted here; the counties with the most requests get built next.</p>
 ${(() => { const rows = B.requestRows(); return rows.length ? `<div style="overflow-x:auto;max-width:100%"><table class="plain"><thead><tr><th>County</th><th class="num">Requests</th></tr></thead><tbody>${rows.map(r => `<tr><td><a href="${esc(r.url)}">${esc(r.label)}</a></td><td class="num">${r.n}</td></tr>`).join('')}</tbody></table></div>` : '<p class="src">No requests yet — yours would be the first.</p>'; })()}
 <p><a href="/feedback?kind=request&from=/building" style="font-family:var(--mono);font-size:14px;font-weight:600;padding:9px 14px;border:1.5px solid var(--ink);color:var(--ink);background:var(--card);text-decoration:none">Request more for a county</a></p>
 </section>
