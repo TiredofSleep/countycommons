@@ -310,6 +310,7 @@ ${local.length ? `<h3 style="margin-top:6px">${esc(countyLabel)} <span class="su
 ${site ? `<p class="src" style="max-width:none">${esc(countyLabel)} has a full County Commons site with more petitions to its own officials: <a href="https://${esc(site)}/petitions">${esc(site)}/petitions</a>.</p>` : ''}
 ${st.length ? `<h3 style="margin-top:6px">All of ${esc(stateName)} <span class="sub">— to ${esc(stateName)} lawmakers and the governor</span></h3>${st.map(p => li(p, 2500)).join('')}` : ''}
 ${nat.length ? `<h3 style="margin-top:10px">Nationwide <span class="sub">— to Congress</span></h3>${nat.map(p => li(p, 5000)).join('')}` : ''}
+<p class="src" style="max-width:none"><a href="/us/petitions">Search every petition in the country →</a></p>
 <p class="src" style="max-width:none">Signatures are counted by the county they come from, so lawmakers can see where people want it. More county petitions — camera rules, court-date reminders, meetings online — run on full county sites, where someone can carry them to the county’s own meeting.${countyPath && !site ? ` <a href="/us/feedback?kind=request&from=${encodeURIComponent(countyPath)}">Request a full site${countyLabel ? ` for ${esc(countyLabel)}` : ''}</a>.` : ''}</p>
 </section>`;
 }
@@ -396,4 +397,95 @@ ${fromName ? `<form method="post" action="/us/petitions/${esc(p.id)}/sign" style
   return page({ title: `Sign: ${p.title} · County Commons`, description: p.support < 5 ? `A petition to ${to}. Be one of the first to sign — counted by county, delivered at ${goal.toLocaleString('en-US')} signatures.` : `${p.support.toLocaleString('en-US')} people have signed this petition to ${to}. Goal: ${goal.toLocaleString('en-US')}.`, canonical: link, body });
 }
 
-module.exports = { matchCounty, countyByGeoid, petitionsBlock, usPetitionPage, countyName, feedbackPage, buildingPage, countyPage, statePage, usPage, whatWorksPage, sitemapUrls };
+// ---- The national petitions directory: every shared ask, searchable ----
+function campaignsFile() { try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'config', 'campaigns.json'), 'utf8')); } catch (e) { return { campaigns: [] }; } }
+const genericTitle = (t) => String(t || '').replace(/\{county\}/g, 'each county').replace(/\{state\}/g, 'each state');
+const LEVEL = { county: 'To county officials', state: 'To state lawmakers', national: 'To Congress' };
+// Where a petition lives: a county site, or these national pages.
+function petitionUrl(p) {
+  if (p.level === 'national' || p.level === 'state' || /^us:/.test(String(p.tenant))) return `/us/petitions/${p.id}`;
+  return `https://${p.tenant}.countycommons.us/petitions/${p.id}`;
+}
+
+function petitionsDirectory({ q, st }) {
+  const P = require('../priorities');
+  const C = campaignsFile();
+  const N = nat();
+  const stateName = st && N.states[st] ? N.states[st].name : null;
+  const f = 'font-size:16px;padding:8px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink)';
+  let results = '';
+  if (q) {
+    const r = P.searchPublic(q, { state: stateName });
+    const camp = (c) => { const meta = C.campaigns.find(x => x.id === c.campaign) || {}; return `<div class="issue" style="display:block"><span class="chip">${esc(LEVEL[meta.level] || 'Petition')}</span> <a href="/us/petitions/shared/${esc(c.campaign)}" style="color:inherit;text-decoration:none"><b>${esc(genericTitle(meta.title || c.sample.title))}</b></a><p class="src" style="margin:4px 0 0">Open in ${c.copies.toLocaleString('en-US')} place${c.copies === 1 ? '' : 's'}${stateName ? ` in ${esc(stateName)}` : ''} · ${c.support.toLocaleString('en-US')} signed · <a href="/us/petitions/shared/${esc(c.campaign)}${st ? `?state=${esc(st)}` : ''}">find yours →</a></p></div>`; };
+    const one = (p) => `<div class="issue" style="display:block"><a href="${esc(petitionUrl(p))}" style="color:inherit;text-decoration:none"><b>${esc(p.title)}</b></a><p class="src" style="margin:4px 0 0">${esc(require('./petitions').placeName(p.tenant) || p.state || '')} · ${p.support.toLocaleString('en-US')} signed${p.by ? ` · started by ${esc(p.by)}` : ''}</p></div>`;
+    results = `<section id="results"><h2>Results for “${esc(q)}”${stateName ? ` in ${esc(stateName)}` : ''} <span class="sub">— ${r.campaigns.length + r.petitions.length}</span></h2>
+${r.campaigns.map(camp).join('')}${r.petitions.map(one).join('')}
+${!r.campaigns.length && !r.petitions.length ? `<p>No petitions match. Try fewer words${stateName ? ', or search all states' : ''}.</p>` : ''}</section>`;
+  }
+  const rows = C.campaigns.filter(c => !c.hold).map(c => ({ c, r: P.campaignRollup(c.id) })).filter(x => x.r.copies.length);
+  const group = (lvl) => rows.filter(x => x.c.level === lvl).sort((a, b) => b.r.total - a.r.total || b.r.copies.length - a.r.copies.length)
+    .map(({ c, r }) => `<tr><td><a href="/us/petitions/shared/${esc(c.id)}">${esc(genericTitle(c.title))}</a></td><td class="num">${r.copies.length.toLocaleString('en-US')}</td><td class="num">${r.total.toLocaleString('en-US')}</td></tr>`).join('');
+  const table = (lvl, head) => `<h3 style="margin-top:14px">${head}</h3><div style="overflow-x:auto;max-width:100%"><table class="plain"><thead><tr><th>Petition</th><th class="num">Places open</th><th class="num">Signed</th></tr></thead><tbody>${group(lvl)}</tbody></table></div>`;
+  const states = Object.entries(N.states).sort((a, b) => a[1].name.localeCompare(b[1].name));
+  const body = `
+<header class="page"><div class="eyebrow">County Commons · petitions</div>
+<h1>Petitions across the country</h1>
+<div class="src">Residents’ requests to their county, their state and Congress. Many are shared: the same ask is open in many places at once, each copy addressed to that place’s own officials and counted toward its own goal. Every petition says who started it.</div></header>
+<section>
+<form method="get" action="/us/petitions" style="display:flex;gap:8px;flex-wrap:wrap;align-items:flex-end">
+  <label style="flex:1;min-width:220px"><b>Search petitions</b><br><input name="q" value="${esc(q || '')}" placeholder="jail, water, gardens, checkbook…" style="${f};width:100%"></label>
+  <label><b>State</b><br><select name="st" style="${f}"><option value="">All states</option>${states.map(([k, s]) => `<option value="${esc(k)}"${k === st ? ' selected' : ''}>${esc(s.name)}</option>`).join('')}</select></label>
+  <button type="submit" style="font-family:var(--mono);font-size:15px;font-weight:600;padding:10px 18px;background:var(--ink);color:var(--paper);border:0">Search</button>
+</form>
+</section>
+${results}
+<section id="shared">
+<h2>Shared petitions</h2>
+${table('national', 'To Congress')}
+${table('state', 'To state lawmakers — open in every state')}
+${table('county', 'To county officials — open in every county with a site')}
+<p class="src">Find your county’s page at <a href="/us">countycommons.us/us</a> to sign one from there; signatures are counted by county.</p>
+</section>`;
+  return page({ title: q ? `Petitions matching “${q}” · County Commons` : 'Petitions across the country: search every county, state and national petition · County Commons',
+    description: 'Search residents’ petitions to their county, their state and Congress — shared asks open in thousands of counties, counted by county, each with who started it and its sources.',
+    canonical: 'https://countycommons.us/us/petitions' + (q ? `?q=${encodeURIComponent(q)}${st ? `&st=${st}` : ''}` : ''), body });
+}
+
+// One shared ask: every place it's open, by state, then by county.
+function sharedRollupPage(campId, st) {
+  const P = require('../priorities');
+  const C = campaignsFile();
+  const meta = C.campaigns.find(c => c.id === campId && !c.hold); if (!meta) return null;
+  const r = P.campaignRollup(campId); if (!r.copies.length) return null;
+  const N = nat();
+  const where = (p) => /^us:/.test(String(p.tenant)) ? countyByGeoid(String(p.tenant).slice(3)) : (() => { const n = require('./petitions').placeName(p.tenant); return n ? { name: n.split(', ')[0], state: n.split(', ').slice(1).join(', ') } : null; })();
+  const rows = r.copies.map(p => ({ p, w: p.level === 'state' ? { name: p.state, state: p.state } : p.level === 'national' ? { name: 'United States', state: '' } : where(p) })).filter(x => x.w);
+  const byState = {}; for (const x of rows) { const s = x.w.state || '—'; (byState[s] = byState[s] || { n: 0, sig: 0, list: [] }); byState[s].n++; byState[s].sig += x.p.support; byState[s].list.push(x); }
+  const stName = st && N.states[st] ? N.states[st].name : null;
+  const pick = stName && byState[stName];
+  const body = `
+<header class="page"><div class="eyebrow">County Commons · shared petition</div>
+<h1>${esc(genericTitle(meta.title))}</h1>
+<div class="src">${esc(LEVEL[meta.level] || '')}. Open in <b>${r.copies.length.toLocaleString('en-US')}</b> place${r.copies.length === 1 ? '' : 's'} — <b>${r.total.toLocaleString('en-US')}</b> signed in all. Each copy goes to that place’s own officials and counts toward its own goal. Started by ${esc(C.started_by || 'County Commons')}.</div></header>
+${meta.level === 'national' ? `<section><p><a href="/us/petitions/${esc(r.copies[0].id)}"><b>Read and sign →</b></a></p></section>` : ''}
+${pick ? `<section><h2>${esc(stName)} <span class="sub">— ${pick.n} place${pick.n === 1 ? '' : 's'}</span></h2>
+<div style="overflow-x:auto;max-width:100%"><table class="plain"><tbody>${pick.list.sort((a, b) => a.w.name.localeCompare(b.w.name)).map(x => `<tr><td><a href="${esc(petitionUrl(x.p))}">${esc(x.w.name)}</a></td><td class="num">${x.p.support} signed</td></tr>`).join('')}</tbody></table></div>
+<p class="src"><a href="/us/petitions/shared/${esc(campId)}">All states</a></p></section>` : ''}
+${meta.level !== 'national' ? `<section><h2>By state <span class="sub">— pick yours to find your ${meta.level === 'state' ? 'state’s' : 'county’s'} copy</span></h2>
+<div style="overflow-x:auto;max-width:100%"><table class="plain"><thead><tr><th>State</th><th class="num">Places</th><th class="num">Signed</th></tr></thead><tbody>${Object.entries(byState).sort((a, b) => a[0].localeCompare(b[0])).map(([s, x]) => { const code = Object.keys(N.states).find(k => N.states[k].name === s); return `<tr><td>${code ? `<a href="/us/petitions/shared/${esc(campId)}?state=${esc(code)}">${esc(s)}</a>` : esc(s)}</td><td class="num">${x.n}</td><td class="num">${x.sig}</td></tr>`; }).join('')}</tbody></table></div></section>` : ''}
+<section><p class="src">${(meta.src || []).length ? `Sources for the facts in this petition: ${meta.src.map(s => `<a href="${esc(/^\//.test(s.url) ? 'https://clarkar.countycommons.us' + s.url : s.url)}" rel="noopener">${esc(s.label || s.url)}</a>`).join(' · ')}. ` : ''}<a href="/us/petitions">All petitions</a> · This is a petition to elected officials. It doesn’t put anything on the ballot.</p></section>`;
+  return page({ title: `${genericTitle(meta.title)} — shared petition · County Commons`,
+    description: `A shared petition open in ${r.copies.length} places, ${r.total} signed so far: ${genericTitle(meta.title)}. Find your county’s or state’s copy.`,
+    canonical: `https://countycommons.us/us/petitions/shared/${campId}${pick ? `?state=${st}` : ''}`, body });
+}
+
+// Every petition page the national pages own, for the sitemap.
+function petitionSitemapUrls() {
+  const P = require('../priorities');
+  const out = ['https://countycommons.us/us/petitions'];
+  for (const c of campaignsFile().campaigns) if (!c.hold) out.push(`https://countycommons.us/us/petitions/shared/${c.id}`);
+  for (const p of P.allPublic()) if (petitionUrl(p).startsWith('/us/')) out.push('https://countycommons.us' + petitionUrl(p));
+  return out;
+}
+
+module.exports = { petitionsDirectory, sharedRollupPage, petitionSitemapUrls, petitionUrl, matchCounty, countyByGeoid, petitionsBlock, usPetitionPage, countyName, feedbackPage, buildingPage, countyPage, statePage, usPage, whatWorksPage, sitemapUrls };

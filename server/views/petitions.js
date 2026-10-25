@@ -131,12 +131,22 @@ function listPage(data, items, opts) {
   <h1>Petitions in ${esc(county.name)}</h1>
   <div class="src">Sign what you agree with, start what’s missing, and share it with your neighbors. When a petition reaches its goal, it’s printed with the count by town and handed to the officials it names at a public meeting — and their answer is posted on <a href="/outcomes">what came of it</a>. ${esc(honest(county))}</div>
 </header>
-<section id="board">
+<section id="search">
+<form method="get" action="/petitions#search" role="search" style="display:flex;gap:8px;flex-wrap:wrap;align-items:flex-end">
+  <label style="flex:1;min-width:200px"><b>Search petitions</b><br><input name="q" value="${esc(o.q || '')}" placeholder="water, jail, budget, roads…" style="width:100%;font-size:16px;padding:8px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink)"></label>
+  <button type="submit" style="font-family:var(--mono);font-size:15px;font-weight:600;padding:10px 18px;background:var(--ink);color:var(--paper);border:0">Search</button>
+</form>
+${o.q ? `<h2 style="margin-top:14px">Results for “${esc(o.q)}” <span class="sub">— ${o.results.length} in ${esc(county.name)}, ${esc(county.state)} and nationwide</span></h2>
+${o.results.length ? o.results.map(p => card(data, p, o.places, o.mine && o.mine.has(p.id))).join('') : `<p>No petitions match. Try fewer words, <a href="https://countycommons.us/us/petitions?q=${encodeURIComponent(o.q)}">search every county</a>, or <a href="/petitions?idea=${encodeURIComponent(o.q.slice(0, 120))}#start">start one</a>.</p>`}
+<p class="src"><a href="/petitions">Back to all petitions</a> · <a href="https://countycommons.us/us/petitions?q=${encodeURIComponent(o.q)}">Search petitions in every county</a></p>` : ''}
+</section>
+${o.q ? '' : `<section id="board">
 ${PV.levelFunnel(levels, lvl.id, o.idea).replace(/\/priorities\?/g, '/petitions?').replace('the funnel — pick a level, each is its own board', 'who it goes to — pick a level')}
 <h2>${esc(lvl.label)} <span class="sub">— petitions to ${esc(addressee(data, lvl))}</span></h2>
 ${items.length ? items.map(p => card(data, p, o.places, o.mine && o.mine.has(p.id))).join('') : `<p>No petitions here yet. <a href="#start">Start the first one</a> — it takes a minute.</p>`}
 ${o.wider ? o.wider : ''}
-</section>
+<p class="src">Petitions across the country: <a href="https://countycommons.us/us/petitions">search every county, state and national petition</a>.</p>
+</section>`}
 ${startForm(data, lvl, o)}
 <section><p class="src">Every petition here goes through the same lines as everything else on this site: no campaigning for candidates or ballot measures, and no naming county staff. Signatures are counted, not verified — one per browser — and the copy handed to officials removes duplicates. <a href="/outcomes">What came of past petitions</a>.</p></section>`;
   return layout({
@@ -216,6 +226,8 @@ ${PV.trailHtml(p)}
   return layout({
     title: `Sign: ${p.title}`,
     current: '/petitions', body, county,
+    // State and national petitions have one official address, on the national pages.
+    canonical: p.level === 'state' || p.level === 'national' ? `https://countycommons.us/us/petitions/${p.id}` : undefined,
     description: p.support < 5
       ? `A petition to ${to}. Be one of the first ${county.name} residents to sign — at ${goal.toLocaleString('en-US')} signatures it’s delivered at a public meeting.`
       : `${p.support.toLocaleString('en-US')} ${county.name} residents have signed this petition to ${to}. Goal: ${goal.toLocaleString('en-US')}. Add your name.`
@@ -289,6 +301,7 @@ ${rows.length > 200 ? `<p class="src">Showing the 200 with the most signatures; 
 <p class="src">${esc(honest(county))} Signatures are counted, not verified — one per browser. <a href="/petitions">Petitions in ${esc(county.name)}</a>.</p>
 </section>`;
   return layout({ title: `Shared petition: ${title} · County Commons`, current: '/petitions', body, county,
+    canonical: `https://countycommons.us/us/petitions/shared/${camp.id}`,
     description: `The same petition open in ${rows.length} counties in ${Object.keys(states).length} states, ${r.total} signatures so far: ${title}.` });
 }
 

@@ -73,8 +73,19 @@ app.use((req, res, next) => {
     // flagship. This is why countycommons.us shows "select your county or city".
     const p = req.path;
     if (p === '/enter' || p.startsWith('/gate') || p === '/health' || p === '/robots.txt' || /\.[a-z0-9]+$/i.test(p)) return next();
+    // Every petition in the country, searchable; and each shared ask, by state.
+    if (req.method === 'GET' && /^\/us\/petitions\/?$/.test(p)) {
+      const st = /^[a-z]{2}$/i.test(String(req.query.st || '')) ? String(req.query.st).toUpperCase() : '';
+      return res.send(require('./views/national').petitionsDirectory({ q: String(req.query.q || '').slice(0, 80).trim(), st }));
+    }
+    const usShared = p.match(/^\/us\/petitions\/shared\/([a-z0-9-]{2,60})\/?$/);
+    if (usShared && req.method === 'GET') {
+      const st = /^[a-z]{2}$/i.test(String(req.query.state || '')) ? String(req.query.state).toUpperCase() : '';
+      const html = require('./views/national').sharedRollupPage(usShared[1], st);
+      if (html) return res.send(html);
+    }
     // State and national petitions, signable from every national county page.
-    const usPet = p.match(/^\/us\/petitions\/([a-z0-9-]{3,80})(\/sign)?$/);
+    const usPet =p.match(/^\/us\/petitions\/([a-z0-9-]{3,80})(\/sign)?$/);
     if (usPet) {
       const nv = require('./views/national');
       const pet = priorities.getPublic(usPet[1]);
@@ -210,6 +221,8 @@ app.get(['/sitemap.xml', '/sitemap-index.xml'], (req, res) => {
     if (cfg.has_commonwealth) paths.push('/commonwealth');
     paths.push('/faq');
     for (const p of paths) urls.push(base + p);
+    // This county's own county and city petitions (state and national ones live on the national pages).
+    for (const pt of priorities.allPublic()) if (pt.tenant === r.key && pt.level !== 'state' && pt.level !== 'national') urls.push(base + '/petitions/' + pt.id);
     try {
       const d = load(r.key);
       if (d.budget.meta && d.budget.meta.grand_total > 0) {
@@ -222,6 +235,7 @@ app.get(['/sitemap.xml', '/sitemap-index.xml'], (req, res) => {
   } else {
     urls.push('https://countycommons.us/');
     for (const u of require('./views/national').sitemapUrls()) urls.push(u);
+    for (const u of require('./views/national').petitionSitemapUrls()) urls.push(u);
     for (const t of directory.featured()) urls.push(`https://${t.host}/`);
   }
   const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(u => `  <url><loc>${u}</loc></url>`).join('\n')}\n</urlset>\n`;
@@ -1043,7 +1057,9 @@ app.get('/petitions', (req, res) => {
   const wider = local ? PT.widerStrip(data,
     priorities.listByLevel({ tenant: req.tenantKey, state: data.county.state, level: 'state' }).slice(0, 5),
     priorities.listByLevel({ tenant: req.tenantKey, state: data.county.state, level: 'national' }).slice(0, 5)) : '';
+  const q = String(req.query.q || '').slice(0, 80).trim();
   res.send(PT.listPage(data, priorities.listByLevel({ tenant: req.tenantKey, state: data.county.state, level }), {
+    q, results: q ? priorities.searchLocal(q, { tenant: req.tenantKey, state: data.county.state }) : [],
     level, places: places.placesFor(req.tenantKey), mine: priorities.supportedBy(participantOf(req), req.tenantKey), wider,
     blocked: (req.query.blocked || '').slice(0, 200) || null, error: (req.query.error || '').slice(0, 40) || null,
     idea: (req.query.idea || '').slice(0, 120)

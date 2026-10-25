@@ -282,6 +282,37 @@ function bulkPropose(items) {
 // Link an existing petition into a shared campaign (e.g. one a resident started first).
 function tagCampaign(id, campaign) { const s = load(); if (!s.priorities[id]) return false; s.priorities[id].campaign = campaign; save(s); return true; }
 
+// Every open, public petition (for search, the national directory and sitemaps).
+function allPublic() { return Object.values(load().priorities).filter(p => p.status === 'open' && real(p)).map(enrich); }
+
+// Keyword search over titles and reasons: every word must appear. Shared asks
+// collapse to one result per campaign (with its copy count and total signatures);
+// petitions started on their own are listed individually.
+// Every word of the query must appear in the title or the why.
+function matcher(q) {
+  const words = String(q || '').toLowerCase().replace(/[^a-z0-9 ]+/g, ' ').split(/\s+/).filter(w => w.length > 1).slice(0, 8);
+  if (!words.length) return null;
+  return (p) => { const t = (p.title + ' ' + p.why).toLowerCase(); return words.every(w => t.includes(w)); };
+}
+// One county board's search: its own county and city petitions, plus its state's and the national ones.
+function searchLocal(q, { tenant, state }) {
+  const hit = matcher(q); if (!hit) return [];
+  return allPublic().filter(p => (p.tenant === tenant && p.level !== 'state' && p.level !== 'national') || (p.level === 'state' && p.state === state) || p.level === 'national')
+    .filter(hit).sort((a, b) => b.support - a.support).slice(0, 60);
+}
+function searchPublic(q, opts = {}) {
+  const hit = matcher(q);
+  if (!hit) return { campaigns: [], petitions: [] };
+  const camps = {}; const singles = [];
+  for (const p of allPublic()) {
+    if (opts.state && p.level !== 'national' && p.state !== opts.state) continue;
+    if (!hit(p)) continue;
+    if (p.campaign) { const c = camps[p.campaign] = camps[p.campaign] || { campaign: p.campaign, level: p.level, copies: 0, support: 0, sample: p }; c.copies++; c.support += p.support; }
+    else singles.push(p);
+  }
+  return { campaigns: Object.values(camps).sort((a, b) => b.support - a.support || b.copies - a.copies), petitions: singles.sort((a, b) => b.support - a.support).slice(0, 100) };
+}
+
 function getPublic(id) { const p = get(id); return p && p.status === 'open' && real(p) ? enrich(p) : null; }
 
-module.exports = { bulkPropose, tagCampaign, campaignRollup, findCampaignCopy, getPublic, propose, support, addOutcome, undoOutcome, phaseOf, get, setStatus, remove, mySupport, supportedBy, listFor, listByLevel, listAll };
+module.exports = { allPublic, searchPublic, searchLocal, bulkPropose, tagCampaign, campaignRollup, findCampaignCopy, getPublic, propose, support, addOutcome, undoOutcome, phaseOf, get, setStatus, remove, mySupport, supportedBy, listFor, listByLevel, listAll };

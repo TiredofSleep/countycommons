@@ -112,7 +112,7 @@ function siteMap(county, current) {
 
 // JSON-LD blocks; "<" is escaped so a value can never close the script tag.
 const ldTags = (list) => list.map(x => `<script type="application/ld+json">${JSON.stringify(x).replace(/</g, '\\u003c')}</script>`).join('\n');
-function layout({ title, current, body, county, description, jsonld }) {
+function layout({ title, current, body, county, description, jsonld, canonical: canonicalOverride }) {
   // Search: every title names the place and state ("Travis County, Texas"),
   // replacing the bare platform name a searcher wouldn't type.
   const place = `${county.name}, ${county.state}`;
@@ -121,7 +121,7 @@ function layout({ title, current, body, county, description, jsonld }) {
   } else if (!title.includes(county.state)) {
     title = `${title} — ${place}`;
   }
-  const canonical = reqctx.url();
+  const canonical = canonicalOverride || reqctx.url(); // a page shown on many sites can name one official address
   const ld = [].concat(jsonld || []);
   // Counties with a municipalities layer (e.g. Middlesex, MA, where county
   // government was abolished) get a "Cities & towns" item after the money trail.
