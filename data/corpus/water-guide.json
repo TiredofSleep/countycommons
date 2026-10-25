@@ -1,9 +1,9 @@
 {
  "updated": "2026-09-26",
  "grades": {
-  "A": "Proven — running in real towns and cities",
-  "B": "Piloted — working plants, not yet common",
-  "C": "Lab stage — promising research, no utility runs it yet"
+  "A": "In use at multiple U.S. utilities, with named examples",
+  "B": "Working plants, but few",
+  "C": "Research only; no utility runs it"
  },
  "options": [
   {
@@ -26,7 +26,7 @@
      "name": "Let bacteria clean it first (biological filtration)",
      "grade": "A",
      "what": "A living layer on the sand or carbon filter eats organic matter and ammonia — with fewer chemicals. Less organic matter means fewer chlorine byproducts later. Slow sand filters work this way.",
-     "example": "Slow sand filters have run for more than 150 years; several U.S. utilities have converted filters to biological operation.",
+     "example": "Slow sand filters have run for more than 150 years; several U.S. utilities have converted filters to biological operation. (Hazen and Sawyer is an engineering firm.)",
      "src": [
       {
        "url": "https://scijournals.onlinelibrary.wiley.com/doi/10.1002/jctb.4860",
@@ -37,7 +37,7 @@
        "label": "Hazen and Sawyer"
       }
      ],
-     "limit": "It doesn’t remove “forever chemicals” (PFAS) by itself, and slow sand filters need land."
+     "limit": "It doesn’t remove “forever chemicals” (PFAS) by itself."
     },
     {
      "name": "Disinfect with UV light",
@@ -49,7 +49,7 @@
        "label": "Trojan Technologies"
       }
      ],
-     "limit": "Some chlorine is still needed to keep water safe inside the pipes."
+     "limit": "Some chlorine is still needed to keep water safe inside the pipes. The source is the equipment maker (vendor-reported)."
     },
     {
      "name": "Let the riverbank filter it",
@@ -90,7 +90,7 @@
        "label": "PFAS destruction review"
       }
      ],
-     "limit": "EPA set PFAS limits in 2024. In 2026 it proposed pushing the main deadline from 2029 to 2031 and dropping limits for four of the six chemicals — both still proposals. Test first, then decide.",
+     "limit": "EPA set PFAS limits in 2024. In 2026 it proposed pushing the main deadline from 2029 to 2031 and dropping limits for four of the six chemicals — both still proposals.",
      "src2": [
       {
        "url": "https://www.epa.gov/sdwa/proposed-pfoa-and-pfos-compliance-extension-rule",
@@ -105,15 +105,14 @@
     {
      "name": "Protect the source",
      "grade": "A",
-     "what": "Keeping the watershed healthy — forests, stream banks, fixing upstream sewage — is usually cheaper than treating dirty water.",
-     "example": "New York City protected its Catskill watershed instead of building a filtration plant estimated at up to $10 billion.",
+     "what": "Protecting the watershed — forests, stream banks, upstream sewage fixes — is a way utilities reduce how much treatment the water needs.",
+     "example": "New York City protected its Catskill watershed instead of building a filtration plant estimated at up to $10 billion (PERC).",
      "src": [
       {
        "url": "https://www.perc.org/2005/06/01/the-catskills-parable/",
        "label": "PERC"
       }
-     ],
-     "limit": "New York’s dollars don’t scale down; the idea does."
+     ]
     }
    ]
   },
@@ -164,7 +163,7 @@
        "label": "Oberlin’s Living Machine"
       }
      ],
-     "limit": "Strong study results, few full-size town plants to copy. Treat as a supplement, not a whole plant."
+     "limit": "No full-size town plant using it as the main treatment was found."
     },
     {
      "name": "Recover energy and fertilizer",
@@ -177,7 +176,7 @@
        "label": "Ostara"
       }
      ],
-     "limit": "Usually pays off only at bigger plants."
+     "limit": "The source is the technology company (vendor-reported)."
     }
    ]
   },
@@ -217,7 +216,7 @@
  ],
  "ownership": [
   {
-   "text": "Small towns aren’t alone: the National Rural Water Association and its state groups count over 31,000 member utility systems, and the Arkansas Rural Water Association is a nonprofit of rural and small publicly owned systems that trains and helps systems serving 10,000 people or fewer.",
+   "text": "The National Rural Water Association and its state groups count over 31,000 member utility systems, and the Arkansas Rural Water Association is a nonprofit of rural and small publicly owned systems that trains and helps systems serving 10,000 people or fewer.",
    "src": [
     {
      "url": "https://nrwa.org/about/",
@@ -300,5 +299,6 @@
     }
    ]
   }
- ]
+ ],
+ "grades_note": "“How widely used” is County Commons’s own classification, not a government rating. It describes how common an option is, not whether it fits a given place."
 }

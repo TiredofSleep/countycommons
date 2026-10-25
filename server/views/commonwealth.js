@@ -2,10 +2,9 @@ const { esc, money } = require('../lib/corpus');
 const { layout } = require('./layout');
 
 // Commonwealth: what a community can do with its own money. Starts from the
-// county's real numbers (interest that leaves, money already on deposit, pots
-// already pooled), then lays out how a shared fund can grow, what it can own,
-// and how it stays honest — every precedent cited, every limit stated. It
-// shows options and their track records; residents and their officials choose.
+// county's real numbers (interest on bonds, money on deposit, dedicated taxes),
+// then lists examples of shared funds elsewhere — every precedent cited, every
+// limit stated. It shows options and their track records; it recommends none.
 
 function commonwealthPage(data) {
   const { county, commonwealth: c, documents } = data;
@@ -25,7 +24,7 @@ ${rows.map(r => `<tr><td>${esc(r.what)}${r.note ? `<br><span class="soft" style=
 
   const lever = (l, i) => `
 <div class="issue" style="display:block">
-  <div class="eyebrow" style="margin:0 0 4px">Way ${i + 1}</div>
+  <div class="eyebrow" style="margin:0 0 4px">Example ${i + 1}</div>
   <b style="font-size:17px">${esc(l.title)}</b>
   <p>${esc(l.body)}</p>
   <ul>${l.precedents.map(p => `<li><b>${esc(p.name)}.</b> ${esc(p.fact)} <span class="src">${cites(p.src)}</span></li>`).join('')}</ul>
@@ -36,7 +35,7 @@ ${rows.map(r => `<tr><td>${esc(r.what)}${r.note ? `<br><span class="soft" style=
   const body = `
 <header class="page">
   <div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · commonwealth</div>
-  <h1>What a community can do with its own money</h1>
+  <h1>Local bonds, deposits, and shared funds</h1>
   <div class="src">${esc(c.intro)} Updated ${esc(c.updated)}.</div>
 </header>
 
@@ -48,26 +47,24 @@ ${rowTable(c.leaving.rows, ['Interest to lenders', 'Amount'])}
 </section>
 
 <section id="already">
-<h2>${esc(c.already.title)} <span class="sub">— money that already exists</span></h2>
+<h2>${esc(c.already.title)}</h2>
 <p>${esc(c.already.lead)}</p>
 ${rowTable(c.already.rows, ['Where it sits', 'Amount'])}
 <p class="src" style="max-width:none">${esc(c.already.note)}</p>
 </section>
 
 <section id="grow">
-<h2>How a shared fund grows <span class="sub">— without the stock market</span></h2>
+<h2>Examples of shared funds elsewhere</h2>
 <p>${esc(c.grow_lead)}</p>
 ${c.levers.map(lever).join('')}
 </section>
 
 <section id="honest">
-<h2>How a shared fund stays honest</h2>
+<h2>Ostrom’s principles for governing shared resources</h2>
 <p>${esc(c.guardrails.lead)}</p>
 <ol>${c.guardrails.principles.map(p => `<li>${esc(p)}</li>`).join('')}</ol>
 <p class="src" style="max-width:none">${cites(c.guardrails.src)}</p>
-<p><b>For a public fund, that means:</b></p>
-<ul>${c.guardrails.rules.map(r => `<li>${esc(r.text)} ${r.src ? `<span class="src">${cites(r.src)}</span>` : ''}</li>`).join('')}</ul>
-<p style="font-size:14px"><b>The warning:</b> ${esc(c.guardrails.warning)} <span class="src">${cites(c.guardrails.warning_src)}</span></p>
+<p style="font-size:14px"><b>Orange County, 1994:</b> ${esc(c.guardrails.warning)} <span class="src">${cites(c.guardrails.warning_src)}</span></p>
 </section>
 
 <section id="law">
@@ -76,19 +73,19 @@ ${c.levers.map(lever).join('')}
 </section>
 
 <section id="you">
-<h2>Where residents come in</h2>
+<h2>Related pages</h2>
 <ul>${c.residents.map(x => `<li>${x}</li>`).join('')}</ul>
 </section>
 
 <section id="limits">
 <h2>What this doesn’t claim <span class="sub">— the honest limits</span></h2>
 <ul>${c.limits.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
-<p class="src">Related: <a href="/whatif">What if we saved instead of borrowing?</a> · <a href="/taxlab">Tax lab</a>${county.has_taxes_debt ? ' · <a href="/taxes">Taxes &amp; debt</a>' : ''} · <a href="/commons">The two pots (food)</a> · <a href="/sovereignty">Food sovereignty</a> · <a href="/growops">Grow-ops</a>. This page lays out options and their records; it doesn’t tell anyone what to choose. Spot an error? <a href="/feedback">Report it</a>.</p>
+<p class="src">Related: <a href="/whatif">Bonds versus saving first</a> · <a href="/taxlab">Tax lab</a>${county.has_taxes_debt ? ' · <a href="/taxes">Taxes &amp; debt</a>' : ''}. This page lays out options and their records; it doesn’t tell anyone what to choose. Spot an error? <a href="/feedback">Report it</a>.</p>
 </section>`;
 
   return layout({
     title: `Commonwealth — ${county.platform_name}`, current: '/commonwealth', body, county,
-    description: `What ${county.name} could do with its own money: the interest that leaves, the money already pooled, and how a shared fund can grow, what it can own, and how it stays honest — every precedent cited.`
+    description: `Interest on ${county.name}’s local bonds, money on deposit, and examples of shared funds elsewhere — every precedent cited.`
   });
 }
 

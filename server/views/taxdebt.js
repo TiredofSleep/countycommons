@@ -110,20 +110,20 @@ ${t.banks.rows.map(b => `
   <p class="src" style="overflow-wrap:anywhere">Sources: ${cite(b.deposits_src.doc, b.deposits_src.page)} · ${cite(b.owed_src.doc, b.owed_src.page)}</p>
 </div>`).join('')}
 <div class="issue" style="display:block;border-left:3px solid var(--accent)">
-  <div class="eyebrow" style="margin:0 0 4px">The finding</div>
+  <div class="eyebrow" style="margin:0 0 4px">Arithmetic on the 2026 bond schedule</div>
   <b style="font-size:17px">${esc(t.banks.finding.title)}</b>
   <p>${esc(t.banks.finding.lead)}</p>
-  ${wrap(`<table class="plain"><thead><tr><th>How it’s paid for</th><th>How long</th><th>Total paid</th></tr></thead><tbody>
+  ${wrap(`<table class="plain"><thead><tr><th>Item</th><th>Period</th><th>Amount</th></tr></thead><tbody>
   ${t.banks.finding.rows.map(x => `<tr><td>${esc(x.how)}</td><td>${esc(x.time)}</td><td class="num">${money(x.total)}</td></tr>`).join('')}
   </tbody></table>`)}
   <p style="font-size:14px">${esc(t.banks.finding.catch)}</p>
-  <p style="font-size:14px"><b>Open question:</b> ${esc(t.banks.finding.open)}</p>
-  <p class="src" style="overflow-wrap:anywhere">${esc(t.banks.finding.method)} Sources: ${t.banks.finding.src.map(x => cite(x.doc, x.page)).join(' · ')} · <a href="/whatif">Play it out on the What-if page</a></p>
+  <p style="font-size:14px"><b>Not shown in the documents:</b> ${esc(t.banks.finding.open)}</p>
+  <p class="src" style="overflow-wrap:anywhere">${esc(t.banks.finding.method)} Sources: ${t.banks.finding.src.map(x => cite(x.doc, x.page)).join(' · ')}</p>
 </div>
 </section>` : ''}
 
 <section id="arithmetic">
-<h2>The honest arithmetic <span class="sub">— what these numbers do and don't show</span></h2>
+<h2>What these numbers do and don't show</h2>
 <p>${esc(t.arithmetic.lead)}</p>
 <ul>${t.arithmetic.limits.map(l => `<li>${esc(l)}</li>`).join('')}</ul>
 <p><b>${esc(t.arithmetic.decision)}</b></p>

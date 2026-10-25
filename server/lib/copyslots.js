@@ -15,7 +15,7 @@ const COPY_SLOTS = [
   { key: 'home.subhead', label: 'Sub-headline',
     default: "It's your money and your town. Look at every dollar — and where it came from. Say what your street or your county needs. Get your neighbors behind it, and we hand it to the people who decide, then show you what they did. Free. No account. Plain words." },
   { key: 'home.strip', label: 'Verb strip',
-    default: 'SEE IT · SAY IT · RALLY YOUR NEIGHBORS · HOLD THEM TO IT' }
+    default: 'SEE IT · SAY IT · SHARE IT · TRACK IT' }
 ];
 
 // Available placeholders, shown to the host in the editor.

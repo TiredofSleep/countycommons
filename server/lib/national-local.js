@@ -63,7 +63,7 @@ ${src(F, `The Census Bureau sorts every government’s money into the same natio
 </section>`;
 }
 
-const OPINION = { unmodified_opinion: 'a clean (“unmodified”) opinion', qualified_opinion: 'a qualified opinion — the auditor couldn’t sign off on something material (the report says what)', adverse_opinion: 'an adverse opinion — the auditor found the statements, or that part of them, don’t fairly present the finances (the report says why)', disclaimer_of_opinion: 'a disclaimer — the auditor couldn’t form an opinion (the report says why)' };
+const OPINION = { unmodified_opinion: 'an unmodified opinion (the auditor’s standard wording when it has no reservations)', qualified_opinion: 'a qualified opinion — the auditor couldn’t sign off on something material (the report says what)', adverse_opinion: 'an adverse opinion — the auditor found the statements, or that part of them, don’t fairly present the finances (the report says why)', disclaimer_of_opinion: 'a disclaimer — the auditor couldn’t form an opinion (the report says why)' };
 // The auditor's opinion, in plain words. Two cautions it must carry:
 //  - Many counties keep their books on a cash or state-prescribed ("regulatory")
 //    basis rather than GAAP. Their auditors report "not GAAP", and often an
@@ -132,7 +132,7 @@ function libraries(c) {
   const r = I.counties[c.geoid]; if (!r) return '';
   return `
 <section id="libraries">
-<h2>Public libraries <span class="sub">— free internet, help and a place to meet</span></h2>
+<h2>Public libraries</h2>
 <p>${esc(c.name)} has <b>${r.n}</b> public librar${r.n === 1 ? 'y' : 'ies'}${r.mobile ? ` and ${r.mobile} bookmobile${r.mobile === 1 ? '' : 's'}` : ''}.</p>
 <div style="overflow-x:auto;max-width:100%"><table class="plain"><tbody>${r.list.map(x => `<tr><td>${esc(x.name)}<br><span class="soft" style="font-size:12px">${esc([x.address, x.city].filter(Boolean).join(', '))} · ${esc(x.type)}</span></td><td class="num">${x.hours_week ? `about ${x.hours_week} hours a week` : ''}</td></tr>`).join('')}</tbody></table></div>
 ${r.more ? `<p class="src">And ${r.more} more.</p>` : ''}
@@ -145,7 +145,7 @@ ${src(I, 'Hours are the yearly total divided by weeks open — check with the li
 function healthAccess(c) {
   const L = read('local.json'); const H = L && L.health; if (!H) return '';
   const r = H.counties[c.geoid] || { n: 0, centers: [], pc: null, mh: null };
-  const short = (x, what) => !x ? '' : `${x.whole ? `All of ${esc(c.name)}` : `Parts of ${esc(c.name)}${x.low_income ? ', or its low-income residents,' : ''}`} ${x.whole ? 'is' : 'are'} officially short of ${what} (shortage score ${x.score} on a 0–25 scale; higher means a worse shortage).`;
+  const short = (x, what) => !x ? '' : `${x.whole ? `All of ${esc(c.name)}` : `Parts of ${esc(c.name)}${x.low_income ? ', or its low-income residents,' : ''}`} ${x.whole ? 'is' : 'are'} officially short of ${what} (shortage score ${x.score} on a 0–25 scale; a higher score means a greater shortage under HRSA’s scoring).`;
   return `
 <section id="health-care">
 <h2>Health care access <span class="sub">— low-cost clinics and shortages</span></h2>
@@ -177,7 +177,7 @@ function faq(c, base = '') {
   const B = read('labor.json'); const r = B && B.counties[c.geoid];
   if (r) { const mon = new Date(B.month + '-15T12:00:00').toLocaleDateString('en-US', { month: 'long', year: 'numeric' }); add(`What is the unemployment rate in ${c.name}?`, `${r.rate.toFixed(1)}% in ${mon}${r.prior != null ? `, compared with ${r.prior.toFixed(1)}% a year earlier` : ''}, according to the Bureau of Labor Statistics (not seasonally adjusted).`, 'jobs'); }
   const A = read('audits-fac.json'); const a = A && A.counties[c.geoid];
-  if (a) add(`Did ${c.name} pass its audit?`, `${opinionLine(a.opinion)} Its federal single audit for the year ending ${a.fy_end || a.year} reported ${a.findings.n ? `${a.findings.n} finding${a.findings.n === 1 ? '' : 's'} on its federal programs${a.findings.mw ? `, including ${a.findings.mw} material weakness${a.findings.mw === 1 ? '' : 'es'}` : ''}` : 'no findings on its federal programs'}.`, 'federal-audit');
+  if (a) add(`What did ${c.name}'s latest audit report?`, `${opinionLine(a.opinion)} Its federal single audit for the year ending ${a.fy_end || a.year} reported ${a.findings.n ? `${a.findings.n} finding${a.findings.n === 1 ? '' : 's'} on its federal programs${a.findings.mw ? `, including ${a.findings.mw} material weakness${a.findings.mw === 1 ? '' : 'es'}` : ''}` : 'no findings on its federal programs'}.`, 'federal-audit');
   const HC = L && L.health && L.health.counties[c.geoid];
   if (HC && HC.n) add(`Where can I get low-cost health care in ${c.name}?`, `${c.name} has ${HC.n} community health center site${HC.n === 1 ? '' : 's'}, open to anyone with fees based on income, including ${HC.centers.slice(0, 3).map(x => `${x.name} (${x.city})`).join(', ')}.`, 'health-care');
   const I = L && L.libraries && L.libraries.counties[c.geoid];

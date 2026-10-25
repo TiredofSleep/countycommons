@@ -69,7 +69,7 @@ ${jps.map(j => `<tr><td class="num">${esc(String(j.district))}</td><td>${esc(j.n
 <section>
 <h2>2 · Who actually decides <span class="sub">— the map of power here</span></h2>
 <p><b>There is no county governing body to lobby here.</b> ${esc(noGovReason)} The governments that actually tax and spend are your <b>city or town</b> and the <b>state</b>${county.has_municipalities ? `` : ''}. See who they are and how to reach them on the <a href="/participate">who-decides page</a>${county.has_municipalities ? `, and each city's own budget on the <a href="/places">cities &amp; towns page</a>` : ''}.</p>
-<p class="src">That is also why the <a href="/priorities">priorities board</a> here points at the city and state levels, not a county one — the honest lane for where the decisions actually get made.</p>
+<p class="src">That is also why the <a href="/priorities">priorities board</a> here points at the city and state levels, not a county one — because the decisions are made at those levels.</p>
 </section>`;
 
   return `${hero(county)}
@@ -77,8 +77,8 @@ ${section1}
 ${section2}
 
 <section>
-<h2>3 · How to be heard <span class="sub">— the calendar is the strategy</span></h2>
-${win ? `<p><b>The budget is written ${MONTHS[win.start_month] || ''}${win.end_month && win.end_month !== win.start_month ? '–' + (MONTHS[win.end_month] || '') : ''}.</b> ${win.note ? esc(win.note) + ' ' : ''}A concern raised while the budget is being written lands in it; the same concern raised after waits a year. If you care about a number in this tree, that window is when it moves.</p>` : ''}
+<h2>3 · How to be heard <span class="sub">— when budget decisions are made</span></h2>
+${win ? `<p><b>The budget is written ${MONTHS[win.start_month] || ''}${win.end_month && win.end_month !== win.start_month ? '–' + (MONTHS[win.end_month] || '') : ''}.</b> ${win.note ? esc(win.note) + ' ' : ''}Budget decisions for the year are made in that window.</p>` : ''}
 <p><b>Put it on the record — here.</b> Say what to prioritize, and why, on the <a href="/priorities">priorities board</a>, or answer an <a href="/issues">open question</a>. When enough neighbors back the same thing, it is carried to the people who decide, and <a href="/outcomes">what they do with it is tracked in the open</a>.</p>
 <p><b>The records are yours.</b> The ${esc(foia.name)}${foia.cite ? ` (${esc(foia.cite)})` : ''} gives every citizen the right to public records — budgets, minutes, contracts, the check register. Most of what this site publishes came from records anyone could have requested. The <a href="/docket">docket</a> lists exactly which records would fill the remaining gaps.</p>
 <p><b>Check the math yourself.</b> Every number links to its source. Every branch is re-added by a program, and <a href="/verify">the receipt is public</a>. If you find an error, that is a gift — the whole point is that it can be checked.</p>
@@ -103,30 +103,31 @@ function clarkStory(data) {
 <section>
 <h2>1 · The short version <span class="sub">— five things, one minute</span></h2>
 <p><b>Your county government plans to spend <a href="/verify">${money(total)}</a> in 2026.</b> That is about <b>$${perResident.toLocaleString('en-US')} for every person</b> in the county.</p>
-<p><b>The biggest thing the county does is public safety.</b> The <a href="/line/gf-sheriff">sheriff</a>, the <a href="/line/gf-jail">jail</a>, and <a href="/line/e911">911</a> add up to roughly $4.7 million — about 43 cents of every General Fund dollar.</p>
-<p><b>The second biggest is roads.</b> The <a href="/line/road-fund">road fund</a> spends about $6 million a year — nearly $1 million of it just on <a href="/line/road-asphalt">asphalt</a>.</p>
-<p><b>One line is bigger than the jail, and no public document says who gets it.</b> A dedicated sales tax sends <a href="/line/edccc">$1.84 million to economic development</a> as a single word: "INCENTIVES." Finding out where it goes is <a href="/docket#i5">Docket #5</a>.</p>
+<p><b>The two largest funds are the <a href="/line/general-fund">General Fund</a> ($6.8 million) and the <a href="/line/road-fund">road fund</a> ($6.0 million).</b> They are separate funds.</p>
+<p><b>In the General Fund, public safety is the largest group of lines.</b> The <a href="/line/gf-sheriff">sheriff</a>, the <a href="/line/gf-jail">jail</a> and prisoner food add up to about $2.96 million — 43 cents of every General Fund dollar. With the <a href="/line/e911">911</a> fund ($1.09 million) and the <a href="/line/jail-funds">jail funds</a> ($0.66 million), the total is roughly $4.7 million.</p>
+<p><b>The road fund</b> spends about $6 million a year — nearly $1 million of it on <a href="/line/road-asphalt">asphalt</a>.</p>
+<p><b>One line is bigger than the jail.</b> A dedicated sales tax sends <a href="/line/edccc">$1.84 million to economic development</a>, listed as a single word: "INCENTIVES." The recipient list is not in the documents collected so far (<a href="/docket#i5">Docket #5</a>).</p>
 <p><b>Everything on this site is checked arithmetic.</b> Every branch of the money tree adds up to the dollar, and <a href="/verify">you can see the receipt</a>. Where we don't know something, the page says so out loud.</p>
 </section>
 
 <section>
 <h2>2 · Your tax bill, decoded <span class="sub">— where a $100,000 home's property tax goes</span></h2>
 <p>Property tax works in "mills." One mill on a $100,000 home costs about <b>$20 a year</b> (homes are taxed on 20% of their value here). Inside Arkadelphia city limits the total is <a href="/line/millage-rates">59.75 mills — roughly $1,195 a year</a> before the homestead credit.</p>
-<p>Where those mills go may surprise you:</p>
-<p>· <b>Schools take 8 of every 10 property tax dollars.</b> The Arkadelphia district levies 47.65 mills; Gurdon levies 43. This is the biggest line on your bill, and it just got bigger: the district added <b>3 new bond mills</b> this year, and it has <a href="/line/schools">$35 million in bonds</a> to pay off.</p>
-<p>· <b>The county takes 7.1 mills</b> — and inside that, one mill each goes to the <a href="/line/library">library</a>, the hospital, and the college. Three institutions, quietly funded on your bill — and the hospital and college money never appears in the county budget at all (<a href="/docket#i11">Docket #11</a>).</p>
+<p>Where those mills go:</p>
+<p>· <b>Schools take 47.65 of the 59.75 mills — about 8 of every 10 property tax dollars</b> (47.65 ÷ 59.75 = 80%; see the <a href="/line/millage-rates">millage rates</a>). Gurdon's district levies 43. The Arkadelphia district added <b>3 new bond mills</b> this year, and it has <a href="/line/schools">$35 million in bonds</a> to pay off.</p>
+<p>· <b>The county takes 7.1 mills</b> — and inside that, one mill each goes to the <a href="/line/library">library</a>, the hospital, and the college. Three institutions receive one mill each on the county's rate. The hospital and college money does not appear in the county budget (<a href="/docket#i11">Docket #11</a>, which names the county tax-levy record).</p>
 <p>· <b>The city takes 5.</b></p>
-<p>· <b>Fire protection takes zero.</b> There is no fire millage in this county. Rural fire departments run on voluntary dues and a <a href="/line/fire-passthrough">$45,921 county pass-through</a> — which is why the fire funding question (<a href="/docket#i4">Docket #4</a>) matters.</p>
+<p>· <b>Fire protection takes zero.</b> There is no fire millage in this county. Rural fire departments run on voluntary dues and a <a href="/line/fire-passthrough">$45,921 county pass-through</a> (<a href="/docket#i4">Docket #4</a>).</p>
 </section>
 
 <section>
 <h2>3 · What we found by digging <span class="sub">— the headlines so far</span></h2>
-<p class="src">How does all this compare to neighboring counties, and which categories deserve a closer look? <a href="/compare/spending">The spending comparison</a> holds that whole analysis.</p>
-<p><b>Clark County deputies earn about $14,000 less than Garland County deputies.</b> Clark's line deputies are paid $43,398–$46,498. Garland County lists its 2026 patrol deputies at $57,418–$58,540 — and two years ago Garland paid about what Clark pays now. Nevada County pays $32,400. The full side-by-side, with every caveat, is at <a href="/compare/deputy-pay">the deputy pay comparison</a>.</p>
-<p><b>The economic development money has no public paper trail.</b> The EDCCC receives $1.84 million a year from a dedicated sales tax, owns a 991-acre industrial mega-site, and files no public financial reports at all — it is not in the IRS charity file. Local news also reports the county owes the state about $1.3 million in sales-tax rebate repayments. The paper trail runs through meeting minutes we have located but not yet pulled (<a href="/docket#i9">Docket #9</a>).</p>
-<p><b>The city's budget is not public, but its report card is.</b> Arkadelphia has never posted its budget online. Its audited books are online, though: in 2024 the city took in $18.2 million and spent $13.2 million in its general fund. Details: <a href="/line/city-arkadelphia">the city's page</a>.</p>
+<p class="src">How does Clark County's spending compare with neighboring counties? <a href="/compare/spending">The spending comparison</a> holds that whole analysis.</p>
+<p><b>Deputy pay, Clark and Garland counties.</b> Clark's line deputies are paid $43,398–$46,498. Garland County lists its 2026 patrol deputies at $57,418–$58,540, a difference of about $14,000; two years ago Garland paid about what Clark pays now. Nevada County pays $32,400. The full side-by-side, with every caveat, is at <a href="/compare/deputy-pay">the deputy pay comparison</a>.</p>
+<p><b>The economic development money.</b> The EDCCC receives $1.84 million a year from a dedicated sales tax and owns a 991-acre industrial mega-site. It publishes no financial reports we could find, and it is not in the IRS charity file. Local news also reports the county owes the state about $1.3 million in sales-tax rebate repayments. The records that would show where the money goes are on the docket (<a href="/docket#i9">#9</a>).</p>
+<p><b>The city's budget and its audit.</b> Arkadelphia has not posted a budget online. Its audited financial statements are online: in 2024 the city took in $18.2 million and spent $13.2 million in its general fund. Details: <a href="/line/city-arkadelphia">the city's page</a>.</p>
 <p><b>About $3.9 million sits unappropriated across county funds.</b> Some is a legal cushion (counties may only spend 90% of expected revenue), some is real reserves, some is restricted money — like a <a href="/line/library">$196,000 library bequest</a>. What restricts which balance is <a href="/docket#i8">Docket #8</a>.</p>
-<p><b>Election years cost money.</b> The <a href="/line/gf-election">election commission's budget</a> tripled for 2026 — from $33,750 to $109,200 — because running elections takes real staff and real dollars.</p>
+<p><b>Election commission budget.</b> The <a href="/line/gf-election">election commission's budget</a> rose from $33,750 to $109,200 for 2026. The budget document does not state the reason.</p>
 </section>
 
 <section>
@@ -136,14 +137,14 @@ function clarkStory(data) {
 ${jps.map(j => `<tr><td class="num">${j.district}</td><td>${esc(j.name)}</td></tr>`).join('')}
 </tbody></table>
 <p class="src">Names from the county's own website. Not sure which district you live in? The county clerk's office can tell you in one phone call.</p>
-<p><b>City money:</b> the Arkadelphia board of directors adopts the city budget; the city manager runs it. <b>School money:</b> each district's elected school board — and school tax rates go to a public vote when they change. <b>The sheriff</b> runs his department but does not set its budget; the quorum court does. That is why demonstrated public support matters: the people who vote on deputy pay are the eleven names above.</p>
+<p><b>City money:</b> the Arkadelphia board of directors adopts the city budget; the city manager runs it. <b>School money:</b> each district's elected school board — and school tax rates go to a public vote when they change. <b>The sheriff</b> runs his department but does not set its budget; the quorum court does. The quorum court sets the sheriff's department budget; the 11 justices of the peace are listed above.</p>
 </section>
 
 <section>
-<h2>5 · How to be heard <span class="sub">— the calendar is the strategy</span></h2>
-<p><b>The budget is written in the fall.</b> Departments send requests in late summer; the quorum court works the budget October through December and adopts it before January. A concern raised in November lands in next year's budget. The same concern raised in March waits ten months. If you care about a number in this tree, fall is when it moves.</p>
-<p><b>Meetings are public and you can speak.</b> The quorum court meets monthly at the courthouse. City board and school board meetings are public too. Showing up matters more than most people think — most months, almost nobody does.</p>
-<p><b>The records are yours.</b> Arkansas's Freedom of Information Act gives every citizen the right to see county records — budgets, minutes, contracts, even the check register. Most of what this site publishes came from records anyone could have requested. The <a href="/docket">docket</a> lists what we are still chasing, and every "dead end" on this site is a records request waiting for a requester.</p>
+<h2>5 · How to be heard <span class="sub">— when budget decisions are made</span></h2>
+<p><b>The budget is written in the fall.</b> Departments send requests in late summer; the quorum court works the budget October through December and adopts it before January (see the <a href="/calendar">calendar</a>).</p>
+<p><b>Meetings are public and you can speak.</b> The quorum court meets monthly at the courthouse. City board and school board meetings are public too.</p>
+<p><b>The records are yours.</b> Arkansas's Freedom of Information Act gives every citizen the right to see county records — budgets, minutes, contracts, even the check register. Most of what this site publishes came from records anyone could have requested. The <a href="/docket">docket</a> lists what is still missing; each entry names the record that would fill it and how to request it under the Arkansas Freedom of Information Act.</p>
 <p><b>Put it on the record — here.</b> Say what to prioritize on the <a href="/priorities">priorities board</a>, or answer an <a href="/issues">open question</a>; enough neighbors behind the same thing carries it to the people above, and <a href="/outcomes">what they do is tracked in the open</a>.</p>
 <p><b>Check the math yourself.</b> Every number links to its source page. Every branch is re-added by a program, and <a href="/verify">the receipt is public</a>. If you find an error, that is a gift — the whole point of this site is that it can be checked.</p>
 </section>

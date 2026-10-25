@@ -17,7 +17,7 @@ const PILLARS = [
   { id: 'water', label: 'Water', href: '/water' },
   { id: 'jails', label: 'Jails & prisons', href: '/justice' },
   { id: 'docket', label: 'Dead ends & open questions', href: '/docket' },
-  { id: 'research', label: 'Research for a better county', href: '/commonwealth' }
+  { id: 'research', label: 'Research and background', href: '/research' }
 ];
 
 function forTenant(key, t) {

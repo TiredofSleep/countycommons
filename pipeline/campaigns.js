@@ -65,13 +65,12 @@ const counties = Object.entries(T).map(([key, t]) => {
 const fill = (s, c) => String(s).replace(/\{county\}/g, c.name || '').replace(/\{state\}/g, c.state || '');
 
 const report = { posted: 0, existing: 0, skipped: [], blocked: [], adopted: 0 };
+const queue = []; // posted together at the end — one screened write, not one per copy
 function make(camp, { tenant, county, level, state }) {
   const title = fill(camp.title, county), why = fill(camp.why, county);
   if (P.findCampaignCopy(camp.id, { tenant, level, state })) { report.existing++; return; }
   if (!post) { report.posted++; return; }
-  const r = P.propose({ tenant, kind: 'prioritize', title, why, level, state, participant: null, county, by: C.started_by, campaign: camp.id });
-  if (r.error) report.blocked.push(`${camp.id} @ ${tenant}: ${r.error}${r.flags ? ' (' + r.flags.join(', ') + ')' : ''}`);
-  else report.posted++;
+  queue.push({ tenant, title, why, level, state, county, by: C.started_by, campaign: camp.id });
 }
 
 for (const camp of C.campaigns) {
@@ -102,6 +101,7 @@ for (const camp of C.campaigns) {
     make(camp, { tenant: x.key, county: x.county, level: 'national', state: null });
   }
 }
+if (post && queue.length) { const r = P.bulkPropose(queue); report.posted = r.posted; report.blocked.push(...r.blocked); }
 console.log(`${post ? 'posted' : 'would post'} ${report.posted} · already there ${report.existing} · linked ${report.adopted}`);
 if (report.blocked.length) console.log('blocked by the screen:\n  ' + report.blocked.join('\n  '));
 const sk = {}; for (const s of report.skipped) { const k = s.split(':').slice(-1)[0].trim(); sk[k] = (sk[k] || 0) + 1; }

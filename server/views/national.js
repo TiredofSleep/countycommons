@@ -172,7 +172,7 @@ function statePage(st) {
 <p>The state government took in <b>${big(totalRev)}</b> and spent <b>${big(totalExp)}</b>${per(totalExp)}. It owed ${big(get('Debt at end of fiscal year') || 0)} in debt at year's end.</p>
 <h3 style="margin-top:12px">Of every $100 it spends</h3>
 ${fns.slice().sort((a, b) => b[2] - a[2]).map(x => `<div style="display:flex;justify-content:space-between;gap:10px;padding:5px 0;border-bottom:1px solid var(--rule-soft)"><span>${esc(x[0])}</span><span class="num"><b>$${(x[2] / fnSum * 100).toFixed(2)}</b> <span class="soft" style="font-size:12.5px">· ${big(x[2])}</span></span></div>`).join('')}
-<p class="src" style="max-width:none">${fnSum === genExp ? `✓ These ${fns.length} functions add to the state's general expenditure, ${big(genExp)}, exactly.` : `These functions add to ${big(fnSum)}; the table's general expenditure is ${big(genExp || 0)}.`} “Public welfare” is mostly Medicaid. Money the state passes to counties, cities and school districts is counted in the function it pays for.</p>
+<p class="src" style="max-width:none">${fnSum === genExp ? `✓ These ${fns.length} functions add to the state's general expenditure, ${big(genExp)}, exactly.` : `These functions add to ${big(fnSum)}; the table's general expenditure is ${big(genExp || 0)}.`} Money the state passes to counties, cities and school districts is counted in the function it pays for.</p>
 <h3 style="margin-top:12px">Where its money comes from</h3>
 <div style="display:flex;justify-content:space-between;gap:10px;padding:5px 0;border-bottom:1px solid var(--rule-soft)"><span><b>Taxes</b></span><span class="num"><b>${big(totTax)}</b></span></div>
 ${taxes.map(([l, v]) => `<div style="display:flex;justify-content:space-between;gap:10px;padding:4px 0 4px 14px;border-bottom:1px solid var(--rule-soft);font-size:14.5px"><span>${esc(l)}</span><span class="num">${big(v)}</span></div>`).join('')}
@@ -216,7 +216,7 @@ function whatWorksPage() {
 <header class="page">
   <div class="eyebrow">County Commons · the United States</div>
   <h1>What has worked: local options with a track record</h1>
-  <div class="src">Overdose deaths, the uninsured, doctor shortages, child poverty, hunger, housing, jails, bridges, broadband, jobs, schools, water, disaster losses and voter turnout — for each, approaches that cities, counties, schools and health departments have tried and evaluators have measured. Every county page shows how it compares with counties like it, and the options for where it's furthest behind.</div>
+  <div class="src">Overdose deaths, the uninsured, doctor shortages, child poverty, hunger, housing, jails, bridges, broadband, jobs, schools, water, disaster losses and voter turnout — for each, approaches that cities, counties, schools and health departments have tried and evaluators have measured. Every county page shows how it compares with counties like it, and what evaluators have measured about approaches to each topic.</div>
 </header>
 ${require('./whatworks').fullBody(null, N)}`;
   return page({ title: 'What works for local government: evidence-rated options on overdoses, health, poverty, housing, jails and more · County Commons',
@@ -371,6 +371,7 @@ function usPetitionPage(p, { from, mine, signed, error }) {
 <p class="src">At ${goal.toLocaleString('en-US')} signatures it’s printed, with the count by ${isCounty ? 'town' : 'county'}, and ${isCounty ? `sent by mail and email to ${esc(to)}` : `delivered to the offices of ${esc(to)}`} — and their answer is posted here.</p>
 ${places.length ? `<p class="src" style="max-width:none">Signed from: ${places.map(([k, n]) => `${esc(k)} <b>${n}</b>`).join(' · ')}</p>` : ''}
 <h2>Why it matters</h2><p style="white-space:pre-line">${esc(p.why)}</p>
+${require('./petitions').sourcesLine(p)}
 </section>
 <section id="sign">
 ${mine ? `<p><b>✓ You’ve signed this petition.</b> ${signed ? 'Thank you — now pass it on.' : ''}</p>` : `

@@ -24,7 +24,7 @@ function spendingPage(data) {
 
   const twinRows = spending.twin_rows.map(r => `
 <tr>
-  <td>${esc(r.label)}${r.flag ? ' <span class="chip c-part">◐ outlier</span>' : ''}</td>
+  <td>${esc(r.label)}${r.flag ? ' <span class="chip c-part">◐ higher than twin</span>' : ''}</td>
   <td class="num">${money(r.clark)}</td>
   <td class="num">${money(r.ouachita)}</td>
   <td class="num">${r.clark > r.ouachita ? '+' : ''}${money(r.clark - r.ouachita).replace('$-', '−$')}</td>
@@ -66,18 +66,18 @@ function spendingPage(data) {
 </section>
 
 <section>
-<h2>The categories that need further insight <span class="sub">— each one is a question with a document that answers it</span></h2>
+<h2>Lines with limited public documentation</h2>
 ${outliers}
 </section>
 
 <section>
-<h2>The honest arithmetic <span class="sub">— what this does and doesn't show</span></h2>
+<h2>What this does and doesn't show</h2>
 <p>${esc(spending.summary)}</p>
 </section>`;
 
   return layout({
     title: `Where the money stands out — ${county.platform_name}`, current: null, body, county,
-    description: "Clark County's spending per resident beside its neighbors, and the categories that need a closer look — each linked to its source and its docket item."
+    description: "Clark County's spending per resident beside its neighbors, and the lines with limited public documentation — each linked to its source and its docket item."
   });
 }
 

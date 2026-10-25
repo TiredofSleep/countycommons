@@ -70,7 +70,7 @@ function issuesPage(data, opts) {
 <header class="page">
   <div class="eyebrow">${esc(county.name)}, ${esc(county.state)}</div>
   <h1>Open questions — at every level</h1>
-  <div class="src"><b>The counting room — where what residents want becomes a number with receipts.</b> There's a question board for every level of government, from your town up to the nation. Each one is advisory signal carried to the body that decides — and it informs the government we have; it never replaces it. No account needed, one voice per sitting, changeable while your window stays open.</div>
+  <div class="src"><b>The counting room — where residents’ answers become a published count.</b> There's a question board for every level of government, from your town up to the nation. Each one is advisory signal carried to the body that decides — and it informs the government we have; it never replaces it. No account needed, one voice per sitting, changeable while your window stays open.</div>
 </header>
 
 <div id="board">${levelFunnel(levels, current.id, '')}</div>
@@ -90,7 +90,7 @@ ${opts.blocked ? `<div class="issue" style="display:block;border-color:var(--dea
 <form method="POST" action="/issues/ask" style="display:flex;flex-direction:column;gap:8px;max-width:60ch">
   <input type="hidden" name="level" value="${esc(current.id)}">
   <p class="src" style="margin:0;border-left:3px solid var(--accent);padding-left:10px">Asking on the <b>${esc(current.label)}</b> board — aimed at ${esc(current.body)}. ${levels.length > 1 ? `<a href="#board">Switch level above.</a>` : ''}</p>
-  <textarea name="wording" required maxlength="300" rows="3" placeholder="Should every government dollar be publicly traceable to the receipt?"
+  <textarea name="wording" required maxlength="300" rows="3" placeholder="Write a yes-or-no question about a decision this level of government makes."
     style="font-family:var(--sans);font-size:14px;padding:10px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink)"></textarea>
   <textarea name="context" maxlength="600" rows="2" placeholder="Context (optional) — why it matters. No verdicts."
     style="font-family:var(--sans);font-size:13px;padding:8px;border:1.5px solid var(--rule);background:var(--card);color:var(--ink)"></textarea>
@@ -166,10 +166,9 @@ ${t.connections ? `<p class="src">Who's answering, self-reported (not verified):
 
 ${(draft.requested_documents && draft.requested_documents.length) ? `
 <div class="issue" style="display:block;border-left:3px solid var(--accent)">
-  <div class="eyebrow" style="color:var(--accent)">what a “yes” would put on the record</div>
-  <p class="src" style="margin:4px 0 8px">This isn't an abstract question. A yes means the county requires these specific things it doesn't show today — each a real gap you can see on the money trail:</p>
+  <div class="eyebrow" style="color:var(--accent)">documents this question concerns</div>
+  <p class="src" style="margin:4px 0 8px">A yes is an advisory signal; it does not require the county to do anything. The documents this question concerns:</p>
   ${draft.requested_documents.map(rd => `<div style="margin:6px 0"><b>${esc(rd.title)}</b>${rd.node ? ` — <a href="/line/${esc(rd.node)}">see it on the money trail</a>` : ''}<p class="src" style="margin:2px 0 0">${esc(rd.why)}</p></div>`).join('')}
-  <p class="src" style="margin:8px 0 0">The more of these the county shows, the stronger every vote here becomes — you're not asking for a feeling, you're asking for these documents.</p>
 </div>` : ''}
 
 <section>
@@ -189,7 +188,7 @@ ${results}
 <p class="src" style="margin:0">Every answer moves this bar in real time — including yours. At <b>${threshold}</b>, the result is printed and hand-delivered.</p>${justVoted ? '<p class="src" style="color:var(--sourced);margin:4px 0 0"><b>Your vote is in the count above.</b></p>' : ''}
 <p class="src">Tier 0 means open sentiment: it shows how visitors lean, and it is never cited as verified resident opinion. Phone, residency, and voter verification tiers arrive with the full voting layer — and results will always display every tier's count separately.</p>
 <p class="src">These counts are unofficial: gathered by an independent community platform, not by any government. This is not an election, a referendum, or a legal petition — its only weight is that the counting is published and checkable.</p>
-<p class="src"><b>Plainly:</b> because a Tier 0 answer takes no verification, a determined person can pad this number — that is exactly the weakness the verification tiers (phone, residency, voter-file) are built to close. Until then, treat these as open sentiment, never proof, and weigh the public signatures — real names, by choice — more heavily than the raw count.</p>
+<p class="src"><b>Plainly:</b> because a Tier 0 answer takes no verification, a determined person can pad this number — that is exactly the weakness the verification tiers (phone, residency, voter-file) are built to close. Until then, treat these as open sentiment, not proof. Public signatures (real names, by choice) and the raw count are shown separately.</p>
 </section>
 
 ${solutionsSection(county, draft.id, sol.list || [], { myVotes: sol.myVotes, founding: sol.founding, filed: sol.filed, error: sol.error, blocked: sol.blocked })}
@@ -206,7 +205,7 @@ ${mine ? `
 </form>` : `<p class="src">Answer the question above first — then this opens up.</p>`}
 <details id="registerbox" class="envelope" style="border:1.5px dashed var(--ink);padding:10px 14px;max-width:580px"${justVoted || justRegistered || signState === 'ok' ? ' open' : ''}>
   <summary style="cursor:pointer;font-family:var(--mono);font-size:13px;font-weight:600">${registeredFields.length ? "You're on the record ✓ — open to update or sign" : 'Put your name on it — optional, petition-style'}</summary>
-  <p class="src" style="margin:10px 0 0">A registered answer is the kind an official can't wave off. Every field is optional — leave what you like.</p>
+  <p class="src" style="margin:10px 0 0">A registered answer is counted separately by tier. Every field is optional — leave what you like.</p>
   ${registrationForm({ county, action: `/issues/${esc(draft.id)}/register`, registeredFields, justRegistered, announce: { show: true, checked: !!mySig } })}
 </details>
 </section>
@@ -247,7 +246,7 @@ ${sigs.length ? (() => {
       <button type="button" data-share-title="A question for ${esc(county.name)}" data-share-url="https://countycommons.us/issues/${esc(draft.id)}" style="font-family:var(--mono);font-size:12px;padding:7px 12px;border:1.5px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer">Share…</button>
     </div>
     <p class="src"><b>During early access:</b> the site asks for a door code — send it along with the link (you know it if you're reading this). When they enter it, the door opens onto this exact page.</p>
-    <p class="src">The traction rule: at ${threshold} responses, the result gets printed and hand-delivered to the relevant body, and the delivery is stamped on the <a href="/docket">docket</a>. ${t.total} of ${threshold} and counting — every share moves it.</p>
+    <p class="src">The traction rule: at ${threshold} responses, the result gets printed and hand-delivered to the relevant body, and the delivery is stamped on the <a href="/docket">docket</a>. ${t.total} of ${threshold} responses.</p>
   </div>
 </div>
 </section>

@@ -51,8 +51,8 @@ function participatePage(data) {
 </header>
 
 <section>
-<h2>1 · Raise your voice <span class="sub">— fifteen seconds</span></h2>
-<p>Say what ${esc(county.name)} should prioritize — or take a fresh look at — and why, on <a href="/priorities">the priorities board</a>. Back what your neighbors have posted; the strongest-felt priorities rise on their own, and when one reaches the threshold it's carried to the people who decide. Prefer a straight yes/no? <a href="/issues">Answer an open question</a>. No account needed; you can change your mind until it closes.</p>
+<h2>1 · Sign or start a petition</h2>
+<p>Post a priority or sign a petition on <a href="/petitions">the petitions board</a>. Priorities with the most signatures are listed first, and when one reaches the delivery threshold it is carried to the body that decides. Prefer a straight yes/no? <a href="/issues">Answer an open question</a>. No account needed; you can change your answer until it closes.</p>
 </section>
 
 <section>
@@ -64,9 +64,9 @@ ${jpTable}
 </section>
 
 <section>
-<h2>3 · Show up <span class="sub">— the calendar is the strategy</span></h2>
+<h2>3 · Show up <span class="sub">— meeting times</span></h2>
 <p>${meetingLines}</p>
-<p>Public meetings are where the budget actually gets set, and residents can speak. Come with one point, sourced if you can — the <a href="/budget">money trail</a> exists so you can cite the same documents the officials have. Full schedule and any community events: <a href="/calendar">the calendar</a>.</p>
+<p>Budgets are adopted at public meetings. The <a href="/budget">money trail</a> cites the same documents the officials have. Full schedule and any community events: <a href="/calendar">the calendar</a>.</p>
 </section>
 
 <section>
@@ -81,17 +81,12 @@ ${jpTable}
 
 <section>
 <h2>6 · Bring what you find <span class="sub">— the record grows by neighbors</span></h2>
-<p>Some records only exist on paper at a counter. If you request one — or already have one in a drawer — it can join the public archive: hashed, cited, and navigable for everyone. The <a href="/docket">docket</a> lists exactly which documents are still missing. One person with a stamp regularly beats a year of waiting.</p>
+<p>Some records only exist on paper at a counter. If you request one — or already have one in a drawer — it can join the public archive: hashed, cited, and navigable for everyone. The <a href="/docket">docket</a> lists exactly which documents are still missing.</p>
 </section>
 
 <section>
 <h2>7 · Widen the toolkit <span class="sub">— beyond this county</span></h2>
-<p>Changing a law — local, state, or federal — has a how-to, and other groups teach it for free: how to track a bill, get a public record, run a citizens' panel, or put a measure on the ballot. We've gathered the nonpartisan ones, verified and linked by method, not by cause. <a href="/kindred">See the kindred work</a>.</p>
-</section>
-
-<section>
-<h2>Why we believe this works <span class="sub">— the evidence</span></h2>
-<p>Participation is old, proven, and it grows the people who practice it — that's not a slogan, it's a research finding. <a href="/stance">Our full stance, with sources</a>.</p>
+<p>Changing a law — local, state, or federal — has a how-to, and other groups teach it for free: how to track a bill, get a public record, run a citizens' panel, or put a measure on the ballot. We list free guides from other groups by method, not by cause. <a href="/kindred">See the kindred work</a>.</p>
 </section>`;
 
   return layout({

@@ -70,6 +70,21 @@ function sharedStrip(p) {
   return `<div class="issue" style="display:block;border-left:3px solid var(--accent)"><b>The same ask is open in ${r.copies.length} counties in ${states.size} state${states.size === 1 ? '' : 's'}</b> — ${r.total.toLocaleString('en-US')} signature${r.total === 1 ? '' : 's'} across all of them. Each county's petition goes to its own officials and counts toward its own goal; together they show how many places want the same thing. <a href="/petitions/shared/${esc(p.campaign)}">See every county →</a></div>`;
 }
 
+// A petition's sources: its own, or its shared campaign's (config/campaigns.json).
+let CAMP = { m: 0, d: null };
+function sourcesOf(p) {
+  if (p.src && p.src.length) return p.src;
+  if (!p.campaign) return [];
+  const f = require('path').join(__dirname, '..', '..', 'config', 'campaigns.json');
+  try { const m = require('fs').statSync(f).mtimeMs; if (m !== CAMP.m) CAMP = { m, d: JSON.parse(require('fs').readFileSync(f, 'utf8')) }; } catch (e) { return []; }
+  const c = (CAMP.d.campaigns || []).find(x => x.id === p.campaign);
+  return (c && c.src) || [];
+}
+function sourcesLine(p) {
+  const s = sourcesOf(p);
+  return s.length ? `<p class="src" style="max-width:none">Sources for the facts above: ${s.map(x => `<a href="${esc(x.url)}" rel="noopener">${esc(x.label || x.url)}</a>`).join(' · ')}</p>` : '';
+}
+
 const signers = (n) => `${n.toLocaleString('en-US')} ${n === 1 ? 'signature' : 'signatures'}`;
 
 function card(data, p, places, mine) {
@@ -167,6 +182,7 @@ ${PV.progressBar(p.support, goal, null)}
 ${sharedStrip(p)}
 <h2 style="margin-top:16px">Why it matters</h2>
 <p style="white-space:pre-line">${esc(p.why)}</p>
+${sourcesLine(p)}
 ${p.reasons.length ? `<h3>What signers added</h3>${p.reasons.slice(-6).reverse().map(r => `<p class="src" style="max-width:none;border-left:2px solid var(--rule);padding-left:10px">“${esc(r)}”</p>`).join('')}` : ''}
 </section>
 ${o.signed || o.mine ? shareBlock(data, p, goal) : ''}
@@ -287,4 +303,4 @@ function widerStrip(data, stateItems, nationalItems) {
 </div>`;
 }
 
-module.exports = { placeName, sharedPage, widerStrip, listPage, petitionPage, flyerPage, packetPage, addressee, levelOf, honest };
+module.exports = { sourcesLine, placeName, sharedPage, widerStrip, listPage, petitionPage, flyerPage, packetPage, addressee, levelOf, honest };

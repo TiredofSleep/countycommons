@@ -54,7 +54,7 @@ ${namedRows}
 </section>
 
 <section>
-<h2>The pools no document names yet <span class="sub">— bought yearly from real companies</span></h2>
+<h2>Budget lines whose payees no document names</h2>
 <table class="plain">
 <thead><tr><th>Budget line (2026)</th><th>Appropriated</th><th>Who receives it</th></tr></thead>
 <tbody>${poolRows}</tbody>
@@ -63,7 +63,7 @@ ${namedRows}
 </section>
 
 <section>
-<h2>How this becomes knowable <span class="sub">— the records exist; they're just not posted</span></h2>
+<h2>Records that would complete the picture</h2>
 ${vendors.how_it_becomes_knowable.map(h => `<p class="src">· ${esc(h)}</p>`).join('')}
 </section>
 

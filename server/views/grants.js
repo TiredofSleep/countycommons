@@ -49,9 +49,9 @@ function grantsPage(data) {
 
   const local = loc ? `
 <section id="ours">
-<h2>${esc(loc.title)} <span class="sub">— what fits the needs on this site</span></h2>
+<h2>${esc(loc.title)} <span class="sub">— programs that match records on this site</span></h2>
 <p>${esc(loc.lead)}</p>
-${loc.fits.map(f => `<div style="border-bottom:1px solid var(--rule-soft);padding:9px 0"><b>${esc(f.need)}</b><div style="font-size:14px">${esc(f.text)}${f.link ? ` <a href="${esc(f.link)}">See the page →</a>` : ''}</div></div>`).join('')}
+${loc.fits.map(f => `<div style="border-bottom:1px solid var(--rule-soft);padding:9px 0"><b>${esc(f.need)}</b><div style="font-size:14px">${esc(f.text)}${f.link ? ` <a href="${esc(f.link)}">See the page →</a>` : ''}${f.src ? ` <span class="src">${f.src.map(cite).join(' · ')}</span>` : ''}</div></div>`).join('')}
 <p style="font-size:14px;margin:12px 0 4px"><b>Not available here:</b></p>
 <ul>${loc.not_available.map(x => `<li style="font-size:14px">${esc(x)}</li>`).join('')}</ul>
 <p style="font-size:14px;margin:12px 0 4px"><b>What’s already coming in:</b></p>
@@ -67,7 +67,7 @@ ${loc.fits.map(f => `<div style="border-bottom:1px solid var(--rule-soft);paddin
   const body = `
 <header class="page">
   <div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · grants</div>
-  <h1>Money we could go get</h1>
+  <h1>Grants and loans open to ${esc(county.name)} and its cities</h1>
   <div class="src">${esc(g.intro)} Dates and terms were read on ${esc(fmt(g.checked))}.</div>
 </header>
 ${(() => { const n = require('../lib/national'); const c = n.forCounty(county); return c ? require('../lib/national-blocks').grants(c, n.meta(), { limit: 15 }) : ''; })()}
@@ -92,13 +92,13 @@ ${g.groups.map(grp => `<h3 style="margin-top:16px">${esc(grp.need)}</h3>${grp.it
 <section id="how">
 <h2>How applying works</h2>
 <ul>${g.how.map(x => `<li>${esc(x.text)} <span class="src">${cite(x)}</span></li>`).join('')}</ul>
-<p style="font-size:14px;margin-bottom:4px"><b>The honest limits:</b></p>
+<p style="font-size:14px;margin-bottom:4px"><b>Limits:</b></p>
 <ul>${g.limits.map(x => `<li style="font-size:14px">${esc(x)}</li>`).join('')}</ul>
-<p class="src">Related: <a href="/budget">The budget</a> · <a href="/commonwealth">Commonwealth</a> · <a href="/docket">The docket</a>. This page lists programs; whether to apply is for the county, its cities, and their residents to decide. Spot an error or a program we missed? <a href="/feedback">Tell us</a>.</p>
+<p class="src">Related: <a href="/budget">The budget</a> · <a href="/commonwealth">Commonwealth</a> · <a href="/docket">The docket</a>. This page lists programs; whether to apply is for the county, its cities, and their residents to decide. Petitions about grants are at <a href="/petitions">/petitions</a>. Spot an error or a program we missed? <a href="/feedback">Tell us</a>.</p>
 </section>`;
 
   return layout({
-    title: `Grants — ${county.platform_name}`, current: '/grants', body, county,
+    title: `Grants and loans — ${county.platform_name}`, current: '/grants', body, county,
     description: `Grants and low-cost loans ${county.name} and its cities could apply for — what each pays for, who can apply, how much, and when — read from each agency's own page.`
   });
 }

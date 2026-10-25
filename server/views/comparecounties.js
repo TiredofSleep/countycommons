@@ -59,18 +59,21 @@ ${metricSvg(row)}
 
 ${section(r('total'), `Clark ${cap(cmp.meta.clarkar.grand_total)} ÷ ${cmp.meta.clarkar.pop.toLocaleString()} residents; Garland ${cap(cmp.meta.garlandar.grand_total)} ÷ ${cmp.meta.garlandar.pop.toLocaleString()}. County budgets include reserves, employee insurance, and capital that the Census actuals leave out — which is much of why both bars sit above the AR line.`)}
 
-${section(r('public_safety'), 'Clark: Sheriff + jail (operating + maintenance/construction funds). Garland: Sheriff + Detention Fund + detention reserve + jail O&M + commissary. The county corrections role Arkansas assigns is why public safety is a big share in both.')}
+${section(r('public_safety'), 'Clark: Sheriff + jail (operating + maintenance/construction funds). Garland: Sheriff + Detention Fund + detention reserve + jail O&M + commissary. Arkansas assigns counties a corrections role (see the U. of Arkansas Extension study MP513, cited below).')}
 
-${section(r('roads'), 'Operating road funds only.', `<b>Garland also has a separate one-time \$16,000,000 Road & Bridge Improvement fund</b> (≈${cap(cmp.garlandRoadCapitalPerCap)}/resident) not shown here — a capital push Clark doesn't have this year. Even so, rural Clark budgets far more per resident on road operations, the classic small-county pattern: more road miles, fewer people to share the cost.`)}
+${section(r('roads'), 'Operating road funds only.', `<b>Garland also has a separate one-time \$16,000,000 Road & Bridge Improvement fund</b> (≈${cap(cmp.garlandRoadCapitalPerCap)}/resident) not shown here. Clark has no comparable one-time road fund in its 2026 budget. Clark budgets ${cap(r('roads').counties.clarkar.perCap)} per resident on road operations; Garland ${cap(r('roads').counties.garlandar.perCap)}.`)}
 
-${section(r('solid_waste'), 'Garland runs a large regional solid-waste operation (landfill + collection + stormwater), which is why its per-resident figure towers over Clark and both averages.')}
+${section(r('solid_waste'), (() => {
+  const g = r('solid_waste').counties.garlandar.perCap, c = r('solid_waste').counties.clarkar.perCap;
+  return 'Garland runs a regional solid-waste operation (landfill, collection, stormwater); its per-resident figure is ' + cap(g) + ', Clark\'s is ' + cap(c) + (c > 0 ? ' (' + (g / c).toFixed(1) + ' times Clark\'s)' : '') + '.';
+})())}
 
-${section(r('library'), 'County library funds. Garland funds a notably larger library system per resident than Clark or the state average.')}
+${section(r('library'), 'County library funds: Garland\'s are ' + cap(r('library').counties.garlandar.perCap) + ' per resident, Clark\'s ' + cap(r('library').counties.clarkar.perCap) + '.')}
 
 <section>
 <h2>Where the numbers come from</h2>
 <p class="src">County figures: each county's 2026 appropriation ordinance, itemized and cross-footed on its own money trail (Clark's 2025-21; Garland's O-25-25). Benchmarks: <a href="${esc(b.source_url)}" rel="noopener">${esc(b.source)}</a> — Census dollar aggregates divided by 2022 Census population; the national line divides by all US residents, including places with no county government. The Arkansas per-function split and the "narrow county role" caveat are from the same Census release and corroborated by the U. of Arkansas Extension study MP513.</p>
-<p class="src">This is the honest version of a comparison chart: exact where the measures match (county to county), clearly caveated where they don't (budget vs. actual, one year vs. another). As more counties come online, each becomes another bar here — same rules, same receipts.</p>
+<p class="src">The county-to-county bars use the same measure; the benchmark lines do not (budget vs. actual, one year vs. another). As more counties come online, each becomes another bar here — same rules, same receipts.</p>
 </section>`;
 
   return layout({ title: `How counties spend — ${county.platform_name}`, current: '/compare/counties', body, county,

@@ -2,6 +2,9 @@ const { esc, money, STATUS } = require('../lib/corpus');
 const { layout } = require('./layout');
 
 // ---------- Docket ----------
+// Escapes text, then turns [label](url) into a link (http(s) or site paths only).
+const linkText = s => esc(s).replace(/\[([^\]]+)\]\(((?:https?:\/\/|\/)[^)\s]+)\)/g, (m, label, url) => `<a href="${url}"${url[0] === '/' ? '' : ' rel="noopener"'}>${label}</a>`);
+
 function docketPage(data) {
   const { docket, county } = data;
   const chipFor = st => st === 'complete'
@@ -13,10 +16,10 @@ function docketPage(data) {
 <div class="issue${i.status === 'complete' ? ' done' : ''}" id="i${i.num}">
   <div class="inum">#${i.num}</div>
   <div class="ibody"><b>${esc(i.title)}.</b>
-    <p>${esc(i.detail)}</p>
-    ${i.stamped ? `<div class="revealed"><b>${esc(i.stamped.date)} — what this revealed:</b> ${esc(i.stamped.revealed)}</div>`
-      : i.learned ? `<div class="revealed"><b>${i.completed ? esc(i.completed) + ' — ' : ''}what this revealed:</b> ${esc(i.learned)}</div>` : ''}
-    ${i.research_notes ? `<div style="margin-top:6px">${i.research_notes.map(n => `<p style="font-size:12.5px;color:var(--ink-soft);margin:3px 0">· ${esc(n)}</p>`).join('')}</div>` : ''}
+    <p>${linkText(i.detail)}</p>
+    ${i.stamped ? `<div class="revealed"><b>${esc(i.stamped.date)} — what this revealed:</b> ${linkText(i.stamped.revealed)}</div>`
+      : i.learned ? `<div class="revealed"><b>${i.completed ? esc(i.completed) + ' — ' : ''}what this revealed:</b> ${linkText(i.learned)}</div>` : ''}
+    ${i.research_notes ? `<div style="margin-top:6px">${i.research_notes.map(n => `<p style="font-size:12.5px;color:var(--ink-soft);margin:3px 0">· ${linkText(n)}</p>`).join('')}</div>` : ''}
   </div>
   <div class="ist">${chipFor(i.status)}</div>
 </div>`).join('');
@@ -212,8 +215,8 @@ Every number on this site says which layer it comes from, because mixing them up
 ${(() => {
   const { deliveryInfo } = require('../lib/threshold');
   const t = deliveryInfo(county);
-  return `<p>When enough residents back the same priority, we print it and carry it to the body that decides. "Enough" isn't a number we invented. In the United States, the count that actually forces a government to act — a ballot initiative or referendum — is a <b>share of the votes cast in the last election</b>, not a share of the population. Arkansas county measures need signatures equal to 15% of the votes for a county office; Texas city charters commonly set 5%; the UK Parliament promises a response at a flat 10,000.</p>
-  <p>Ours is an <b>advisory</b> bar — a request to be heard, not a binding measure — so we sit at the low, reachable end: <b>about 5% of the votes cast last election</b>. For ${esc(county.name)} that comes to <b>${t.value.toLocaleString('en-US')}</b>. ${esc(t.note)} A city-level priority is sized to that city's own electorate the same way. Where a real local petition rule sets an exact number, we use that instead — and say so here.</p>`;
+  return `<p>When enough residents back the same priority, we print it and carry it to the body that decides. "Enough" isn't a number we invented. In the United States, the signature count for a ballot initiative or referendum is usually set as a <b>share of the votes cast in the last election</b>, not a share of the population. The UK Parliament, by comparison, responds to a petition at a flat 10,000 signatures (<a href="https://petition.parliament.uk/help" rel="noopener">petition.parliament.uk</a>).</p>
+  <p>Our delivery bar is <b>about 5% of the votes cast in the last election</b>. It is advisory: a request to be heard, not a binding measure. For ${esc(county.name)} that comes to <b>${t.value.toLocaleString('en-US')}</b>. ${esc(t.note)} A city-level priority is sized to that city's own electorate the same way. Where a real local petition rule sets an exact number, we use that instead — and say so here.</p>`;
 })()}
 </section>
 
@@ -237,7 +240,7 @@ ${(() => {
 ${(() => {
   const { foiaOf } = require('../lib/foia');
   const f = foiaOf(county.state);
-  return `<p><b>The documents here are public records.</b> Ordinances, budgets, minutes, and audit reports are government records, obtained from official sources under the ${esc(f.name)}${f.cite ? ` (${esc(f.cite)})` : ''} or from public websites. Government edicts and public records carry no copyright that bars republication; each document page shows where its copy came from and its checksum so you can confirm it is unaltered.</p>`;
+  return `<p><b>The documents here are public records.</b> Ordinances, budgets, minutes, and audit reports are government records, obtained from official sources under the ${esc(f.name)}${f.cite ? ` (${esc(f.cite)})` : ''} or from public websites. Each document page shows where its copy came from and its checksum so you can confirm it is unaltered.</p>`;
 })()}
 <p><b>Question results are unofficial.</b> Counts on this site are community sentiment gathered by a private platform. They are not an election, not a referendum, not a petition under any statute, and they bind no one. Their only power is that the counting method is published and checkable.</p>
 <p><b>Nothing here is professional advice.</b> The Help Finder shares contact information for local programs; each program decides its own eligibility, and hours and rules change — call ahead. Budget figures are transcriptions of public documents, not financial, legal, or tax advice.</p>

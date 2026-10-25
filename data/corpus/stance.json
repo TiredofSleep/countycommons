@@ -1,117 +1,194 @@
 {
-  "title": "Direct, transparent democracy — where we stand",
-  "preamble": "This platform never takes sides on the questions it asks. But it is not neutral about everything: it stands for a process. We believe residents should be able to see their government's money to the receipt, speak on its decisions directly, and check every count themselves. That stance — for participation itself — is the one position this platform holds openly, and this page shows the evidence behind it.",
-  "definitions": [
-    { "word": "Direct", "meaning": "Residents speak for themselves — on paper, by phone, or in person — instead of being spoken for or polled by proxy. Direct does not mean binding: results here are signal, not command. Elected officials keep their authority and their responsibility; what changes is how clearly they can hear the county." },
-    { "word": "Transparent", "meaning": "Every number cites its source. Every count shows its tier. Every gap is named. The platform's own books, costs, code, and activity log are as public as the budgets it maps — the standard points at us first." },
-    { "word": "Democracy", "meaning": "The institutions your community already has — its county board, city council, and school boards — working with better information and demonstrated public support. This platform is furniture for that system, not a replacement for it." }
-  ],
-  "tenets": [
+ "title": "How this site works",
+ "preamble": "This page explains the rules the platform follows: what a result means, what is counted, and what is public. Opinions on local issues appear only in petitions, attributed to the residents who started them.",
+ "definitions": [
+  {
+   "word": "Direct",
+   "meaning": "Residents answer for themselves — on paper, by phone, by text or online — rather than through a poll of a sample. Results here are not binding. Elected officials keep their authority and their responsibility."
+  },
+  {
+   "word": "Transparent",
+   "meaning": "Every number cites its source. Every count shows its tier. Every gap is named. The platform’s own books, costs, code and activity log are public."
+  },
+  {
+   "word": "Democracy",
+   "meaning": "The platform works alongside the institutions a community already has: its county board, city council and school boards. It is not a replacement for them."
+  }
+ ],
+ "tenets": [
+  {
+   "claim": "What the site does and does not do",
+   "evidence": "The site computes and cites. Every number links to its source document, and the arithmetic re-adds itself in public. The site does not state opinions, recommend actions or rate officials. Opinions appear only in petitions, attributed to the residents who started them. The site takes no side on candidates, races or ballot measures.",
+   "sources": [
     {
-      "claim": "Direct participation is not an experiment — it is the oldest working form of local government.",
-      "evidence": "New England towns have governed themselves by open town meeting since colonial times; Tocqueville marked their independence in 1831. Swiss citizens vote on roughly 15 issues a year, and more than a third of all national referendums ever held worldwide took place in Switzerland. The scale where this works best is exactly ours: small places where the issues touch everyone.",
-      "sources": [
-        { "label": "Town meeting — history and practice", "url": "https://en.wikipedia.org/wiki/Town_meeting" },
-        { "label": "Direct democracy in Switzerland", "url": "http://houseofswitzerland.org/swissstories/history/way-modern-direct-democracy-switzerland" },
-        { "label": "Direct democracy at the local level in Switzerland (research)", "url": "https://www.researchgate.net/publication/357540853_Direct_Democracy_at_the_Local_Level_in_Switzerland" }
-      ]
+     "label": "How every number is sourced",
+     "url": "/methodology"
     },
     {
-      "claim": "Taking part changes the people who take part — durably.",
-      "evidence": "Stanford's deliberative polling research found that structured participation produced measurable knowledge gains and large, lasting effects on civic engagement — participants followed politics more closely and voted more, nearly a year later. Participatory budgeting studies report the same: residents who allocate public money once become more politically active afterward, and collaboration with community organizations raised turnout among groups that usually stay home.",
-      "sources": [
-        { "label": "The lasting effects of deliberation on civic engagement (Stanford FSI)", "url": "https://fsi.stanford.edu/news/lasting-effects-deliberation-civic-engagement" },
-        { "label": "Can deliberation have lasting effects? (APSR)", "url": "https://www.cambridge.org/core/journals/american-political-science-review/article/can-deliberation-have-lasting-effects/341938D11548550CBEBA9B93109065CE" },
-        { "label": "Participatory budgeting and political participation (People Powered)", "url": "https://www.peoplepowered.org/news-content/how-participatory-budgeting-can-strengthen-civil-society-political-participation" }
-      ]
+     "label": "The receipt — every total re-added in public",
+     "url": "/verify"
     },
     {
-      "claim": "Communities agree on more than their arguments suggest — when the platform doesn't reward fighting.",
-      "evidence": "Taiwan's vTaiwan process — statements people could agree or disagree with but never reply to — repeatedly surfaced majorities hidden under loud disputes, and produced real regulation on ride-sharing and online alcohol sales. Washington, D.C. launched the same family of tools city-wide in 2025. The mechanics matter: no reply threads, no dogpiles, bridge-building scored above dunking. That is the deliberation design this platform inherits.",
-      "sources": [
-        { "label": "vTaiwan — Participedia case study", "url": "https://participedia.net/case/5065" },
-        { "label": "Polis — the clustering method", "url": "https://pol.is/home" }
-      ]
+     "label": "What this project will never do",
+     "url": "/never"
     },
     {
-      "claim": "Small governments can move real money when priorities are made visible.",
-      "evidence": "Washington County, Wisconsin reallocated 15% of its operating budget through priority-based budgeting. Lahti, Finland ran city-wide participatory budgeting where anyone could vote at the library — and the budget doubled the next year because the pilot worked. Porto Alegre, the birthplace of participatory budgeting, saw improved roads, water, schools, and civic trust — and its later erosion when political commitment faded is exactly why we build durable public infrastructure rather than one-time campaigns.",
-      "sources": [
-        { "label": "Porto Alegre: participatory budgeting and sustaining change (WRI)", "url": "https://www.wri.org/research/porto-alegre-participatory-budgeting-and-challenge-sustaining-transformative-change" },
-        { "label": "Participatory budgeting in Brazil (Pathfinders/SDG16+)", "url": "https://www.sdg16.plus/policies/participatory-budgeting-brazil/" }
-      ]
-    },
-    {
-      "claim": "Transparency is what makes a count citable — and it has to start with us.",
-      "evidence": "A number an official can cite must survive a hostile challenge: who was counted, how they were verified, what the arithmetic was. That is why every result here shows its tiers, every cell under 20 renders as a range, the vote path is one gate, and the activity log is hash-chained and publicly anchored so that not even the operator can quietly rewrite history. And it is why the sponsor's own books open before anyone else's are asked for: a standard you won't hold yourself to isn't a standard.",
-      "sources": [
-        { "label": "Our security and integrity protocols", "url": "/security" },
-        { "label": "What we will never do", "url": "/never" },
-        { "label": "How every number is sourced", "url": "/methodology" }
-      ]
-    },
-    {
-      "claim": "Signal beats silence — and signal is not command.",
-      "evidence": "The officials this county elects often already know what needs doing; what they lack is demonstrated public support that survives scrutiny. A verified count is political cover, not political pressure. This platform's results bind no one. They simply make it impossible to say nobody was asked — and, over time, awkward not to ask.",
-      "sources": [
-        { "label": "Our story — why a dry cleaner built this", "url": "/story" },
-        { "label": "The first open question", "url": "/issues" }
-      ]
-    },
-    {
-      "claim": "Trust no one, check everything — this network is guarded by light, not locks.",
-      "evidence": "We build as if no lock lasts forever. Passwords leak, keys get stolen, and the codes that hide data today may be cracked tomorrow. So this platform does not ask you to trust that its doors are locked. It asks you to watch. Every number re-adds itself in public. Every change to the record is written into a chained log that shows if anything was rewritten. Every visit is counted in the open, with no names or addresses kept. Even what we tell search engines, and when, is published as it happens. Power that has to work in the light is power that can be checked. Locks still protect people where the law or safety requires it: a voter’s identity, if we ever verify one, and the connection between your phone and this site. But the platform’s own conduct is never hidden behind a lock. It is shown, logged, and open to audit by anyone.",
-      "sources": [
-        { "label": "The receipt — every total re-added in public", "url": "/verify" },
-        { "label": "Security — the chained activity log", "url": "/security" },
-        { "label": "The public traffic count", "url": "/traffic" },
-        { "label": "Every search-engine announcement, logged", "url": "/indexnow.json" },
-        { "label": "The code, public to the last line", "url": "https://github.com/TiredofSleep/countycommons" }
-      ]
+     "label": "Petitions",
+     "url": "/petitions"
     }
-  ],
-  "tradition": [
+   ]
+  },
+  {
+   "claim": "What a result means",
+   "evidence": "Results here bind no one. Officials keep their authority. A result shows how many people answered, split by verification tier and by channel. When a petition is delivered, the delivery and any official response are recorded on the outcomes page.",
+   "sources": [
     {
-      "thinker": "Alexis de Tocqueville (1831)",
-      "idea": "Visiting New England, Tocqueville judged town institutions the schools where liberty is learned — self-government as a practice you acquire by doing, not a belief you're taught. A county that never asks its residents anything is a school with no classes.",
-      "source": { "label": "Town meeting and Tocqueville's observations", "url": "https://en.wikipedia.org/wiki/Town_meeting" }
+     "label": "How every number is sourced",
+     "url": "/methodology"
     },
     {
-      "thinker": "Elinor Ostrom (Nobel, 2009)",
-      "idea": "Ostrom's field research demolished the assumption that communities can't govern shared resources without top-down control. Her design principles for institutions that endure read like this platform's spec: those affected participate in making the rules; monitoring is done by and answerable to the community; conflict resolution is cheap and accessible; and the community's right to organize is respected by higher authorities. A county budget is a commons; the platform is Ostrom's monitoring principle, built.",
-      "source": { "label": "Governing the Commons (Cambridge)", "url": "https://www.cambridge.org/core/books/governing-the-commons/A8BB63BC4A1433A50A3FB92EDBBB97D5" }
-    },
-    {
-      "thinker": "Robert Putnam (1995–2000)",
-      "idea": "Bowling Alone documented two generations of collapse in American civic connection — league bowling down 40% while bowling itself rose; meeting attendance, committee service, and institutional trust all falling together. Pew finds three-quarters of Americans say trust in government is shrinking. The decline is the diagnosis; participation infrastructure is a treatment you can actually build.",
-      "source": { "label": "Bowling Alone (Journal of Democracy)", "url": "https://www.cftompkins.org/wp-content/uploads/2012/07/Putnam-article.pdf" }
+     "label": "Outcomes",
+     "url": "/outcomes"
     }
-  ],
-  "counterarguments": [
+   ]
+  },
+  {
+   "claim": "How counts and privacy work",
+   "evidence": "Counts are shown as counted and labeled unverified (one per browser) until identity checks are added. All channels go through a single vote path. Names, towns and contact details are kept in a separate private file and never published. When a petition is delivered, its printed copy lists names only for signers who chose to be named. Individual votes are visible to no one.",
+   "sources": [
     {
-      "objection": "Majorities can vote against minorities.",
-      "answer": "The most serious objection, and California's Proposition 8 is its proof case. Our answers are structural: results here bind no one — elected officials retain authority and legal responsibility; the charter's bright lines exclude the dangerous question types entirely (no votes on races or live ballot measures, no campaigning, nothing aimed at non-elected staff); and questions are framed about process and money, not about groups of people. A signal system cannot strip anyone's rights; it can only make opinion visible — and deliberation mechanics are designed to surface cross-group consensus, not raw majority muscle."
+     "label": "Security and integrity protocols",
+     "url": "/security"
     },
     {
-      "objection": "Money captures direct democracy — signatures and campaigns are bought.",
-      "answer": "True in California's paid-signature industry. Here there are no signatures to buy and no campaign spending to out-shout: questions enter through a neutrality pipeline with wording review, and the research finding cuts the other way at mass scale — a whole electorate is far harder to lobby than a small body of officials. The platform also publishes who sponsors it and what it costs, so the money behind the microphone is never a mystery."
+     "label": "What this project will never do",
+     "url": "/never"
     },
     {
-      "objection": "Voters don't have the information; ballots exhaust them.",
-      "answer": "California asks voters to absorb dozens of complex propositions at once. This platform asks few questions, one at a time, each with a plain-language context page wired into a cited document corpus — the information problem is the budget explorer's entire job. And the research is kinder to voters than the caricature: studies repeatedly find voter-competence fears overstated when information is accessible."
-    },
-    {
-      "objection": "Online participation just polls the comfortable.",
-      "answer": "Correct — online alone is self-selection with a interface. That is why paper ballots at counters, text messaging, and kiosks are core channels, not accessibility garnish; why Lahti's library voting is a founding precedent; and why every result displays its tiers and channels honestly instead of claiming to be the county's voice."
-    },
-    {
-      "objection": "These platforms fade when their champions move on.",
-      "answer": "Porto Alegre's erosion is the honest scar in the record. The mitigation is architectural: open source, one cheap server, county specifics isolated in a config file, steady-state operations designed for under three hours a week, a succession envelope written before it's needed, and a stated win condition of being absorbed by a better steward. Built to survive indifference, not to require enthusiasm."
-    },
-    {
-      "objection": "Isn’t it risky to show everything? Won’t bad actors see how it works?",
-      "answer": "They can see how it works — and so can everyone watching them. Hiding how a system works mostly hides mistakes and abuse from the people they affect. Showing it means a change, a strange count, or a bad edit gets noticed by many eyes, fast. What stays private is people, not process: no one’s vote, name, or address is ever shown."
+     "label": "How every number is sourced",
+     "url": "/methodology"
     }
-  ],
-  "closing": "None of this requires anyone to lose an argument. It requires the trail to be visible, the questions to be askable, and the counting to be checkable. We think a county that has those three things makes better decisions than one that doesn't — and that is the entire platform, stated as a belief. Everything else on this site is evidence."
+   ]
+  },
+  {
+   "claim": "How the platform’s own conduct can be checked",
+   "evidence": "The activity log is hash-chained and publicly anchored, so a rewrite would show. Visits are counted in the open, with no names or addresses kept. Each announcement to search engines is logged and published. The code is public. Totals re-add themselves on the receipt page. Passwords and encryption protect personal details where the law or safety requires it; the platform’s own conduct is shown and logged rather than hidden behind a lock.",
+   "sources": [
+    {
+     "label": "The receipt — every total re-added in public",
+     "url": "/verify"
+    },
+    {
+     "label": "Security — the chained activity log",
+     "url": "/security"
+    },
+    {
+     "label": "The public traffic count",
+     "url": "/traffic"
+    },
+    {
+     "label": "Every search-engine announcement, logged",
+     "url": "/indexnow.json"
+    },
+    {
+     "label": "The code, public to the last line",
+     "url": "https://github.com/TiredofSleep/countycommons"
+    }
+   ]
+  },
+  {
+   "claim": "Where this method has been used",
+   "evidence": "New England towns have governed through open town meeting since colonial times. Swiss citizens vote on roughly 15 issues a year, and more than a third of all national referendums ever held worldwide took place in Switzerland. A Stanford study of deliberative polling reported that participants followed politics more closely and voted more nearly a year later. Taiwan’s vTaiwan process used statements people could agree or disagree with but not reply to, and fed rule-making on ride-sharing and online alcohol sales. Porto Alegre, Brazil, was the birthplace of participatory budgeting; a World Resources Institute case study describes improvements there and the later weakening when political commitment faded. Each case is described, with its caveats, on the cases page.",
+   "sources": [
+    {
+     "label": "Town meeting — history and practice",
+     "url": "https://en.wikipedia.org/wiki/Town_meeting"
+    },
+    {
+     "label": "Direct democracy in Switzerland",
+     "url": "http://houseofswitzerland.org/swissstories/history/way-modern-direct-democracy-switzerland"
+    },
+    {
+     "label": "The lasting effects of deliberation on civic engagement (Stanford FSI)",
+     "url": "https://fsi.stanford.edu/news/lasting-effects-deliberation-civic-engagement"
+    },
+    {
+     "label": "Can deliberation have lasting effects? (APSR)",
+     "url": "https://www.cambridge.org/core/journals/american-political-science-review/article/can-deliberation-have-lasting-effects/341938D11548550CBEBA9B93109065CE"
+    },
+    {
+     "label": "vTaiwan — Participedia case study",
+     "url": "https://participedia.net/case/5065"
+    },
+    {
+     "label": "Polis — the clustering method",
+     "url": "https://pol.is/home"
+    },
+    {
+     "label": "Porto Alegre: participatory budgeting and sustaining change (WRI)",
+     "url": "https://www.wri.org/research/porto-alegre-participatory-budgeting-and-challenge-sustaining-transformative-change"
+    },
+    {
+     "label": "Where this has been tried — the cases",
+     "url": "/cases"
+    }
+   ]
+  }
+ ],
+ "tradition": [
+  {
+   "thinker": "Alexis de Tocqueville (1831)",
+   "idea": "Visiting New England, Tocqueville described town institutions as the schools where liberty is learned — self-government as a practice acquired by doing.",
+   "source": {
+    "label": "Town meeting and Tocqueville’s observations",
+    "url": "https://en.wikipedia.org/wiki/Town_meeting"
+   }
+  },
+  {
+   "thinker": "Elinor Ostrom (Nobel, 2009)",
+   "idea": "Ostrom’s field research found that communities can govern shared resources without top-down control. Her design principles for institutions that endure include: those affected participate in making the rules; monitoring is done by and answerable to the community; conflict resolution is cheap and accessible; and the community’s right to organize is respected by higher authorities.",
+   "source": {
+    "label": "Governing the Commons (Cambridge)",
+    "url": "https://www.cambridge.org/core/books/governing-the-commons/A8BB63BC4A1433A50A3FB92EDBBB97D5"
+   }
+  },
+  {
+   "thinker": "Robert Putnam (1995–2000)",
+   "idea": "Bowling Alone documented two generations of decline in American civic connection — league bowling down 40% while bowling itself rose; meeting attendance, committee service and institutional trust all falling together.",
+   "source": {
+    "label": "Bowling Alone (Journal of Democracy)",
+    "url": "https://www.cftompkins.org/wp-content/uploads/2012/07/Putnam-article.pdf"
+   }
+  }
+ ],
+ "counterarguments": [
+  {
+   "objection": "Majority votes can disadvantage minorities.",
+   "answer": "For that reason results here bind no one, and the charter excludes votes on races, active ballot measures, campaigning, and non-elected staff. Questions are about process and money, not about groups of people."
+  },
+  {
+   "objection": "Paid advocacy could try to influence the questions or the counts.",
+   "answer": "Questions enter through a wording review, and the platform publishes who sponsors it and what it costs."
+  },
+  {
+   "objection": "Voters may lack information on complex questions.",
+   "answer": "The platform asks few questions, one at a time, each with a plain-language context page linked to cited documents."
+  },
+  {
+   "objection": "Online responses are self-selected.",
+   "answer": "For that reason paper ballots at counters, text messaging and kiosks are planned channels, and every result shows its tiers and channels."
+  },
+  {
+   "objection": "Platforms like this can fade when their founders move on.",
+   "answer": "The code is open, it runs on one inexpensive server, county specifics sit in a single config file, and upkeep is designed to take under three hours a week. Porto Alegre’s participatory budgeting weakened when political commitment faded (WRI case study, above)."
+  },
+  {
+   "objection": "Showing how the system works could help bad actors.",
+   "answer": "Showing how it works lets many people notice a change, a strange count or a bad edit. What stays private is people: no one’s vote, name or address is ever shown."
+  }
+ ],
+ "closing": "Opinions on local issues appear only in petitions, attributed to the residents who start them. Everything else on this site is a sourced fact or a computed number.",
+ "definitions_title": "What “direct”, “transparent” and “democracy” mean on this platform",
+ "tradition_title": "Background reading",
+ "counterarguments_title": "Known limits of this method"
 }

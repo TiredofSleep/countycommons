@@ -1,9 +1,9 @@
 const { esc } = require('../lib/corpus');
 const { layout } = require('./layout');
 
-// The research shelf: the full citation base for the stance, claim by claim,
-// weak spots stated. Companion to /stance (the argument) and /cases (the
-// stories); this page is the bibliography.
+// The research shelf: a bibliography of published research on civic
+// participation and public-budget transparency, findings attributed to the
+// studies cited. Companion to /cases (the stories).
 
 function researchPage(data) {
   const { county, research } = data;
@@ -22,13 +22,13 @@ function researchPage(data) {
 </header>
 ${themes}
 <section>
-<h2>The shelf in one breath</h2>
-<p><b>${esc(research.closing)}</b> <a href="/cases">The evidence library</a> · <a href="/stance">the stance</a>.</p>
+<h2>Summary</h2>
+<p>${esc(research.closing)} <a href="/cases">The evidence library</a>.</p>
 </section>`;
 
   return layout({
     title: `${research.title} — ${county.platform_name}`, current: null, body, county,
-    description: 'Every citation behind the stance: the republic\'s room for participation, the trust crisis, transparency-plus-voice evidence, and the failure modes with their design answers.'
+    description: 'Published research on civic participation and public-budget transparency: history, trust, transparency studies, deliberation, participation platforms, and documented problems.'
   });
 }
 

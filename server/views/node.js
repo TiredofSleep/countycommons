@@ -105,8 +105,8 @@ ${(node.status === 'dead_end' || node.status === 'partial') ? `
 <section>
 <div class="issue" style="display:block;border-left:3px solid var(--accent)">
   <div class="eyebrow" style="color:var(--accent)">how this line is traced</div>
-  <p class="src" style="margin:4px 0 0"><b>Reconstructed — and the trail stops here.</b> To see who this money actually reached, someone has to pull records, minutes, or a check register${issue ? ` (that's <a href="/docket#i${issue.num}">Docket #${issue.num}</a>)` : ''}. It often stays dark.</p>
-  <p class="src" style="margin:6px 0 0"><b>There's another way.</b> If the county paid this line from a transparent, line-attributed account, it would publish its own itemized transactions — payee, amount, date — the moment each payment cleared. No request required; the dead end becomes a list. That's the idea behind <a href="/receipts"><b>receipts by rails</b></a>, filed as a solution to <a href="/issues/contract-transparency#solutions">the transparency question</a> — read it and weigh in.</p>
+  <p class="src" style="margin:4px 0 0"><b>The documents we hold do not show who received this money.</b> Records that would show it: minutes, a check register, or bid records${issue ? ` (<a href="/docket#i${issue.num}">Docket #${issue.num}</a>)` : ''}.</p>
+  <p class="src" style="margin:6px 0 0">Residents have started petitions on ideas like this — see <a href="/petitions">petitions</a>.</p>
 </div>
 </section>` : ''}
 

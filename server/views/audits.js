@@ -54,17 +54,17 @@ function auditsPage(data) {
 </header>
 
 <section>
-<h2>Read this first <span class="sub">— the phrase that gets misread</span></h2>
+<h2>Read this first <span class="sub">— what “regulatory basis” means</span></h2>
 <p class="src">${esc(auditFindings.regulatory_basis_note)}</p>
 </section>
 
 <section>
-<h2>The verdicts <span class="sub">— quoted from the reports</span></h2>
+<h2>What each report said <span class="sub">— quoted from the reports</span></h2>
 ${rows}
 </section>
 
 ${auditFindings.rebate ? `<section>
-<h2>${esc(auditFindings.rebate.title)} <span class="sub">— the scary number, explained</span></h2>
+<h2>${esc(auditFindings.rebate.title)}</h2>
 <p>${esc(auditFindings.rebate.body)}</p>
 <p class="src">${esc(auditFindings.rebate.status)}</p>
 </section>` : ''}
@@ -77,7 +77,7 @@ ${auditFindings.minutes_finding ? `<section>
 ${auditFindings.cities ? require('../lib/city-audits-block').block(auditFindings.cities, county.name) : ''}
 ${auditFindings.fiscal ? require('../lib/fiscal-block').block(auditFindings.fiscal, (() => { const d = auditFindings.fiscal.source.doc && documents.documents.find(x => x.id === auditFindings.fiscal.source.doc); return d ? `<a href="/documents#${esc(d.id)}">${esc(d.title)}</a>` : `<a href="${esc(auditFindings.fiscal.source.url)}" rel="noopener">the state audit report</a>`; })()) : ''}
 ${Array.isArray(auditFindings.limits) && auditFindings.limits.length ? `<section>
-<h2>What audits cannot tell you <span class="sub">— the honest limits</span></h2>
+<h2>What audits cannot tell you</h2>
 ${auditFindings.limits.map(l => `<p class="src">· ${esc(l)}</p>`).join('')}
 </section>` : ''}`;
 

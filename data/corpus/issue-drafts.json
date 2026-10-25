@@ -6,14 +6,14 @@
       "submitter_role": "resident (platform founder — relationship disclosed)",
       "raw_submission": "We the people demand end to end transparency for all govt. funded contracts... we need the private organizations finances as related to the government contracts... that's the end game for the only true transparency of knowing where every dollar lands.",
       "neutral_framing": "Should Clark County require end-to-end public reporting — who received the money, what it bought, and what it achieved — as a written condition of every contract, grant, and incentive the county funds?",
-      "final_wording": "Should every dollar of Clark County government money — spent directly or passed through to any organization — be publicly traceable down to the receipt: who was paid, how much, and for what?",
-      "final_wording_note": "Final wording chosen by the submitter on 2026-07-18, per the ownership rule. The neutral framing above was offered; the submitter chose the receipt-level version.",
+      "final_wording": "Should Clark County require public reporting of who was paid, how much, and for what, for every contract, grant and incentive it funds?",
+      "final_wording_note": "Wording made neutral in October 2026: opinions on this site live only in petitions. Earlier wording is in the repository history.",
       "scope": "county",
       "shaping_notes": [
         "The neutral framing converts a demand into a yes/no question an official body could actually act on, per the charter. The submitter chooses the final wording; both versions are logged per the Idea Shaper ownership rules.",
-        "Mechanism honesty: a county cannot open a private company's books. It CAN condition its own money — disclosure clauses in contracts and incentive agreements, and Arkansas courts have applied the FOIA to private entities substantially supported by public funds. The question is framed around what the county can lawfully require.",
-        "The evidence base is this corpus: $1.84M/year in EDCCC incentives with no public recipient list, commodity vendors absent from any posted record, an ambulance contract whose terms never appeared in public, and a state rebate mechanism that hides claimants. All documented, none illegal — the question is whether residents want the county to require more than the law's minimum.",
-        "Pre-vote checklist per the charter: neutrality review, human review against bright lines (no named-individual conduct — this is a policy question, clears), official partner conversation (county judge / quorum court are the actors), and conflict-of-interest disclosure: the platform's sponsor and founder is a county business owner; that relationship is disclosed on the issue page."
+        "A county cannot open a private company’s books. It can set conditions on its own money, such as disclosure clauses in contracts and incentive agreements. The question is framed around what the county can require.",
+        "The documents behind this question are on this site: $1.84M a year in EDCCC incentives with no public recipient list in the documents we hold, commodity purchases no posted document names, and an ambulance contract whose terms are not in a public document we hold. The question is whether the county should require reporting beyond what the law requires.",
+        "Pre-vote checklist per the charter: neutrality review, human review against bright lines (no named-individual conduct — this is a policy question, clears), official partner conversation (county judge / quorum court are the actors), and conflict-of-interest disclosure: the platform’s sponsor and founder is a county business owner; that relationship is disclosed on the issue page."
       ],
       "status": "open-tier0",
       "opened": "2026-07-18",
@@ -21,228 +21,48 @@
       "requested_documents": [
         {
           "title": "The EDCCC incentive recipients and their performance terms",
-          "why": "$1,844,538 a year in economic-development incentives, with no public list of who got it or what they promised. It sits on the money trail as a dead end.",
+          "why": "$1,844,538 a year in economic-development incentives, with no public list of recipients or terms in the documents we hold. It sits on the money trail as a dead end.",
           "node": "edccc"
         },
         {
           "title": "How fire protection is funded, and the coverage map",
-          "why": "How fire is paid for and which areas it covers — the honest basis for any fire-funding question.",
+          "why": "How fire protection is funded and which areas each department covers.",
           "node": "fire-passthrough"
         },
         {
-          "title": "The roughly $1.3 million state sales-tax rebate repayment",
-          "why": "Local reporting says the county owes the state about $1.3M in rebate repayments — a news lead the county’s own records would confirm or correct.",
-          "node": null
-        },
-        {
           "title": "The county ambulance / EMS service agreement",
-          "why": "The terms of the county’s emergency-medical-service contract never appeared in a public document.",
+          "why": "The terms of the county’s EMS contract are not in a public document we hold.",
           "node": null
         }
       ],
-      "background": "This platform traced every public dollar it could. Most of the trail is documented: the <a href=\"/budget\">money trail</a> cross-foots to the dollar, and <a href=\"/audits\">what the auditors reported</a> is quoted in full. But parts of the trail stop short of a receipt: <a href=\"/line/edccc\">$1.84M/year in economic development incentives</a> with no public recipient list, <a href=\"/vendors\">commodity purchases no posted document names</a>, and <a href=\"/compare/spending\">about $4M a year that moves without public detail</a>. This question asks whether that should change — not whether anyone did anything wrong.",
-      "disclosure": "This question was submitted by the platform’s founder, who owns Ozark Cleaners — the platform’s sponsor. That double relationship is disclosed here on purpose.",
-      "founding_solutions": [
-        {
-          "id": "sol-receipts-by-rails",
-          "title": "Pay procurement from line-attributed accounts, so the check register publishes itself",
-          "summary": "Move the county’s discretionary/procurement spending onto authorized accounts tied to each budget line — virtual cards or ring-fenced accounts — whose transaction feed publishes by default. The receipt is then generated by the payment itself, not reconstructed later from records requests. This is proven infrastructure: a federal card rail (GSA SmartPay) already captures line-item transaction data at $39B+/year, one state (Oklahoma) already publishes item-level card transactions, and governments already ring-fence each line in the ledger (encumbrance accounting). Honest limit: it reaches only the ~15–30% of a budget that is operating procurement — not payroll, debt, or transfers — which is exactly where the county’s dead ends are today (the $1.84M “INCENTIVES” line). Framed as audit-and-anti-diversion, not programmable control.",
-          "brief": "/receipts",
-          "citations": [
-            {
-              "label": "GSA SmartPay FY2025 statistics ($39.4B, ~82M transactions, Level 3 line-item data)",
-              "url": "https://smartpay.gsa.gov/about/statistics/"
-            },
-            {
-              "label": "Oklahoma — item-level purchase-card transactions published by default",
-              "url": "https://data.ok.gov/dataset/purchase-card-pcard-fiscal-year-2025"
-            },
-            {
-              "label": "Encumbrance accounting — how governments already ring-fence each appropriation line",
-              "url": "https://legalclarity.org/what-is-an-encumbrance-in-governmental-accounting/"
-            },
-            {
-              "label": "GAO-08-333 — the honest downside: 41–48% of purchase-card transactions failed basic controls",
-              "url": "https://www.gao.gov/assets/gao-08-333-highlights.pdf"
-            }
-          ]
-        },
-        {
-          "id": "sol-monthly-check-register",
-          "title": "Publish the county check register — downloadable and searchable, the way Tarrant County does",
-          "summary": "Right now Clark County publishes no public check register at all (Docket #10) — “who got paid” is a dead end on the money trail. The immediately-doable fix, needing no new payment rails: post every check the county writes — payee, amount, date, and purpose — as downloadable data with a vendor lookup, not a PDF. There is a clear peer model to copy: Tarrant County, Texas — the only county in its state to earn all six of the state’s transparency stars — publishes a downloadable check register (down to an item-description field) plus a live vendor-payment lookup anyone can search. Oklahoma goes a step further and publishes purchase-card spending at the item level; Ohio put 112 million transactions online and went from 46th to 1st in national transparency. Clark can copy the floor — a downloadable, searchable register — this year, from the accounting system it already runs, and this platform can ingest the feed directly instead of chasing records.",
-          "citations": [
-            {
-              "label": "Tarrant County, TX — downloadable check register (with item-description field) + live vendor-payment lookup",
-              "url": "https://www.tarrantcountytx.gov/en/auditor/accounts-payable.html"
-            },
-            {
-              "label": "Tarrant County — live vendor payment lookup",
-              "url": "https://vendorchecks.tarrantcounty.com/"
-            },
-            {
-              "label": "Oklahoma — item-level purchase-card transactions published by default (the stretch goal)",
-              "url": "https://data.ok.gov/dataset/purchase-card-pcard-fiscal-year-2025"
-            },
-            {
-              "label": "OhioCheckbook — 112M transactions online; Ohio went from 46th to 1st in transparency",
-              "url": "https://www.buckeyeinstitute.org/research/detail/the-buckeye-institute-inspired-ohio-checkbook-ensures-government-transparency-and-should-be-made-permanent"
-            }
-          ]
-        }
-      ]
+      "background": "The money trail covers the 2026 appropriation ordinance, and it cross-foots to the dollar (<a href=\"/budget\">money trail</a>; <a href=\"/audits\">what the auditors reported</a>). Three parts stop short of a recipient-level record: the <a href=\"/line/edccc\">$1.84M EDCCC line</a>, <a href=\"/vendors\">commodity purchases no posted document names</a>, and pooled lines (<a href=\"/compare/spending\">spending comparison</a>). This question asks whether the county should publish recipient-level records.",
+      "disclosure": "This question was submitted by the platform’s founder, who owns Ozark Cleaners — the platform’s sponsor. That double relationship is disclosed here on purpose."
     },
     {
       "id": "food-as-utility",
       "submitted": "2026-09-04",
       "submitter_role": "resident (platform founder)",
-      "neutral_framing": "Should Clark County treat access to food as shared public infrastructure — supporting community food-growing (gardens on public land, a gleaning and produce-sharing network, and school and campus gardens) the way it supports parks, the library, and water?",
-      "final_wording": "Should Clark County back growing and sharing food together as public infrastructure — gardens on public land, a gleaning and produce-sharing network, and school and campus gardens — the way it backs parks, the library, and water?",
-      "final_wording_note": "Opened by the platform’s founder during the site’s quiet launch. A neutral framing and this plain wording are both logged per the Idea Shaper ownership rules; the plain version was chosen.",
+      "neutral_framing": "Should Clark County government fund community food-growing programs — gardens on public land, a gleaning and produce-sharing network, and school and campus gardens?",
+      "final_wording": "Should Clark County government fund community food-growing programs — gardens on public land, a gleaning and produce-sharing network, and school and campus gardens?",
+      "final_wording_note": "Opened by the platform’s founder during the site’s quiet launch. Wording made neutral in October 2026; earlier wording is in the repository history.",
       "scope": "county",
       "shaping_notes": [
         "This is a policy question a county body could act on — not a named-individual conduct question and not an active ballot measure. It clears the charter’s bright lines.",
-        "Mechanism honesty: a county cannot guarantee anyone’s food, and this question does not claim it can. It asks whether the county should back community food-growing as ongoing infrastructure — land, coordination, and grant-seeking — the parts a county actually controls.",
-        "The evidence base is cited in full on the /food brief and inside each founding solution, with verification caveats stated in the open (some figures are corroborated secondary sources, and are flagged as such rather than presented as primary)."
+        "A county cannot guarantee anyone’s food, and this question does not claim it can. It asks whether the county should support community food-growing as ongoing infrastructure — land, coordination, and grant-seeking — the parts a county controls.",
+        "The sources are cited on the /food page; where a figure comes from a secondary source, the page says so."
       ],
       "status": "open-tier0",
       "opened": "2026-09-04",
       "tier_note": "Open as a Tier 0 sentiment poll during the site’s quiet launch: no account, one voice per browser, changeable until close. Per the charter, Tier 0 is displayed but never cited as verified resident opinion — verification tiers arrive with the full voting layer.",
-      "background": "About one in five people in Clark County are food insecure — a 20% rate in the 2023 Feeding America <em>Map the Meal Gap</em> estimate, above Arkansas’s 19% and the nation’s 14% (<a href=\"https://www.aspirearkansas.org/families/food-insecurity\" rel=\"noopener\">source</a>). Most food help is emergency help, and that work is essential — nothing here replaces it. This question asks about a second, cheaper, more durable thing: whether the county should back <b>growing and sharing food together</b> as public infrastructure, using land, know-how, and grant money it largely already has — a Cooperative Extension office in every county, a statewide gleaning network in all 75 counties, and two universities in town. The full research, with precedents and honest limits, is in <a href=\"/food\">Food as a utility</a>.",
-      "disclosure": "This question was opened by the platform’s founder. Unlike the contract-transparency question, no sponsor relationship is at stake here; it is disclosed only because the platform names who opens every question.",
-      "founding_solutions": [
-        {
-          "id": "sol-food-garden-land",
-          "title": "Open unused public land for community gardens — a $1 lease, not a land sale",
-          "summary": "Clark County and its cities hold vacant parcels. Offer them for community gardens through a simple, revocable license — the model Newark runs at $1 a year and Baltimore runs for free — so no land is ever sold or given away. This is a proven public service, not an experiment: Seattle has run 91 community gardens through a city department since 1973 (its gardeners donated 40,000 pounds of produce to meal programs in 2023), and Brown County, Wisconsin has run 13 gardens and 386 plots through its Extension office, the county, and the city since 1996. The know-how is already here and free — every Arkansas county has a Cooperative Extension office and the Master Gardener program behind it. Honest limit: land is necessary but not sufficient. Gardens need water, soil, and stewards, and a plot supplements a household’s groceries (a California study estimates about $435 of produce a season), it does not end anyone’s food insecurity.",
-          "brief": "/food",
-          "citations": [
-            {
-              "label": "Seattle P-Patch — 91 city-run community gardens since 1973; 40,000 lb donated in 2023",
-              "url": "https://www.seattle.gov/neighborhoods/p-patch-gardening"
-            },
-            {
-              "label": "Brown County, WI — county + Extension community gardens (13 gardens, 386 plots) since 1996",
-              "url": "https://brown.extension.wisc.edu/community-gardens/"
-            },
-            {
-              "label": "Newark Adopt-a-Lot — $1/year lease of city land for gardening",
-              "url": "https://www.newarknj.gov/194/Adopt-a-Lot"
-            },
-            {
-              "label": "Baltimore Adopt-A-Lot — free, revocable license for community gardens",
-              "url": "https://www.baltimorecity.gov/dhcd/developer-resident-resources/adopt-a-lot-program"
-            },
-            {
-              "label": "Arkansas Master Gardener Program — free Extension horticulture support in every county",
-              "url": "https://www.uaex.uada.edu/yard-garden/master-gardeners/default.aspx"
-            }
-          ]
-        },
-        {
-          "id": "sol-food-glean-share",
-          "title": "Plug into the Arkansas Gleaning Project and a produce-sharing network",
-          "summary": "Do not build gleaning from scratch — it already runs statewide. The Arkansas Gleaning Project (the Arkansas Hunger Relief Alliance with the Society of St. Andrew) has gleaned more than 12 million pounds of fresh produce and works with 800-plus hunger-relief organizations across all 75 counties. The county’s job is connection: route surplus from gardens, farms, and the farmers market into that network, and set up a community fridge or produce-sharing point for daily give-and-take. Nearly free — the logistics already exist. Honest limit: community fridges are citizen-led mutual aid, not a government program (the national Freedge network counted 150-plus US fridges in 2021). A county can host or tolerate one, but volunteers keep it running, not staff.",
-          "citations": [
-            {
-              "label": "Arkansas Gleaning Project — 12M+ lb gleaned, 800+ organizations, all 75 counties",
-              "url": "https://arhungeralliance.org/programs/ar-gleaning-project/"
-            },
-            {
-              "label": "Community fridges (Freedge model) — citizen-led mutual aid, 150+ US fridges (2021)",
-              "url": "https://shelterforce.org/2021/02/24/community-fridges-provide-vital-and-visible-relief-in-the-war-on-hunger/"
-            }
-          ]
-        },
-        {
-          "id": "sol-food-school-campus",
-          "title": "Grow it in the schools and on the two campuses",
-          "summary": "Clark County has assets most rural counties do not: a school district and two universities, Henderson State and Ouachita Baptist. School gardens feed cafeterias and teach kids where food comes from — Denver’s Garden to Cafeteria program put more than 5,000 pounds of school-grown produce into salad bars at about 250 schools. This is not untested here: in 2011 USDA’s People’s Garden School Pilot partnered with the University of Arkansas to build school gardens through Cooperative Extension. The evidence is real but honest about itself — the best systematic review links community gardening to higher fruit-and-vegetable intake while stating plainly that the overall evidence quality is low. We keep that caveat attached rather than oversell it.",
-          "citations": [
-            {
-              "label": "Denver Garden to Cafeteria — 5,000+ lb of school produce into ~250 school salad bars",
-              "url": "https://slowfoodusa.org/school-gardens/garden-cafeteria/"
-            },
-            {
-              "label": "USDA People’s Garden School Pilot, partnered with the University of Arkansas (2011)",
-              "url": "https://peoplesgarden.wsu.edu/home/project-background/"
-            },
-            {
-              "label": "Hume et al. 2022, BMC Public Health — systematic review (higher F&V intake; “evidence quality overall was low”)",
-              "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9229094/"
-            }
-          ]
-        },
-        {
-          "id": "sol-food-policy-council",
-          "title": "Stand up a food policy council — a standing table, not a new bureaucracy",
-          "summary": "A food policy council is a lightweight body a local government can create by resolution to coordinate the people already working on food — growers, schools, the food bank, the universities, and the county itself. Johns Hopkins’ Center for a Livable Future documents that these can be housed directly in government, and at least 283 were active across the US as of 2020. It is the cheap, structural piece that keeps gardens, gleaning, and school plots from staying one-off projects. The north star — honestly out of a county’s scale, but showing the direction: Belo Horizonte runs a coordinated food-as-a-right system at about 2% of its city budget, and Rosario turned vacant land into 2,500 tons of food a year (a WRI Prize for Cities winner). Both are the work of a standing municipal food body, not a single grant.",
-          "citations": [
-            {
-              "label": "Johns Hopkins Center for a Livable Future — how to structure a food policy council (can be housed in government)",
-              "url": "https://clf.jhsph.edu/stories/structuring-your-food-policy-council"
-            },
-            {
-              "label": "CDC — 283 food policy councils active in the US as of 2020",
-              "url": "https://www.cdc.gov/pcd/issues/2025/24_0335.htm"
-            },
-            {
-              "label": "Belo Horizonte — municipal food-as-a-right system at ~2% of city budget",
-              "url": "https://www.nycfoodpolicy.org/popular-restaurants-belo-horizonte-urban-food-policy-snapshot/"
-            },
-            {
-              "label": "Rosario, Argentina — urban agriculture (2,500 tons/yr; WRI Prize for Cities, 2021)",
-              "url": "https://www.wri.org/news/release-prize-cities-awarded-rosario-argentina-improving-resilience-and-equity-through-urban"
-            }
-          ]
-        },
-        {
-          "id": "sol-food-hub-engine",
-          "title": "Build the engine: a food hub with anchor buyers, so it pays for itself",
-          "summary": "The hard truth about gardens, fridges, and gleaning is that they only ever cost money — so they live and die on grants and volunteers. The fix is an economic engine underneath them: a food hub (aggregation, cold storage, light processing, delivery) that SELLS local food at market rate to buyers who already pay — the hospital, the school district, the universities, large employers — and routes its seconds and surplus to the pantries. The selling arm funds the giving arm; grants buy one-time capital (a building, a cooler, a truck), not payroll. It is proven infrastructure, not a hope: 91% of US food hubs broke even or better in 2020, institutions spend $130 billion a year on food, and Arkansas’s Medicaid nutrition waiver now opens produce prescriptions as a health-care buyer. Honest limit: food hubs still lean on grants (2025 data) and need a real business operator and three to five years to turn — this is the slow flywheel, not a quick win. The full cited design is at /engine.",
-          "brief": "/engine",
-          "citations": [
-            {
-              "label": "Food hubs are businesses that mostly break even — 91% in 2020 (MSU National Food Hub Survey)",
-              "url": "https://www.canr.msu.edu/resources/2021-national-food-hub-survey"
-            },
-            {
-              "label": "$130B/year in US institutional food spending — the anchor demand (Health Care Without Harm)",
-              "url": "https://us.noharm.org/healthy-food/leveraging-power-procurement"
-            },
-            {
-              "label": "Arkansas’s Medicaid waiver now covers produce prescriptions — health care as a buyer (KFF)",
-              "url": "https://www.kff.org/medicaid/section-1115-medicaid-waiver-watch-a-closer-look-at-recent-approvals-to-address-health-related-social-needs-hrsn/"
-            },
-            {
-              "label": "The honest caveat: hubs remain grant-reliant — grants as catalyst, not payroll (MSU 2025 survey)",
-              "url": "https://www.canr.msu.edu/news/increased-local-food-sales-to-schools-and-the-value-of-grant-investment-findings-from-the-2025-national-food-hub-survey"
-            }
-          ]
-        },
-        {
-          "id": "sol-food-grant-path",
-          "title": "Fund it with money that already exists, not new county taxes",
-          "summary": "This does not have to come out of the general fund. USDA’s Community Food Projects Competitive Grants Program funds exactly this kind of work — up to $400,000, with a 1-to-1 match — and is open to nonprofits and gleaning groups (a local food nonprofit or the food bank applies, since a county government is not directly eligible for the core track). Extension support is already free to every county. Spend this money the durable way — on one-time capital and startup (land prep, a cooler, a truck, first-year coordination that hands off to earned revenue), not on payroll that ends when the grant does (see the engine at /engine). Honest limits: these grants are competitive, time-limited, and need a nonprofit applicant and a match — they are seed money to get a program self-sustaining, not a permanent funding line. The point is that the county’s own cost can be land, coordination, and political will, not a new tax.",
-          "citations": [
-            {
-              "label": "USDA Community Food Projects Competitive Grants — up to $400,000, 1:1 match, nonprofits/gleaners eligible",
-              "url": "https://www.nifa.usda.gov/grants/programs/hunger-food-security-programs/community-food-projects-competitive-grant-program-cfpcgp"
-            },
-            {
-              "label": "Arkansas Master Gardener Program — free Extension support in every county",
-              "url": "https://www.uaex.uada.edu/yard-garden/master-gardeners/default.aspx"
-            }
-          ]
-        }
-      ]
+      "background": "About one in five people in Clark County are food insecure: 20% in the 2023 Feeding America <em>Map the Meal Gap</em> estimate, compared with 19% for Arkansas and 14% for the nation (<a href=\"https://www.aspirearkansas.org/families/food-insecurity\" rel=\"noopener\">source</a>). Most food assistance is emergency assistance. This question asks whether the county should also support community food-growing. Every Arkansas county has a Cooperative Extension office (<a href=\"https://www.uaex.uada.edu/\" rel=\"noopener\">University of Arkansas Extension</a>), and the Arkansas Gleaning Project operates in all 75 counties (<a href=\"https://arhungeralliance.org/programs/ar-gleaning-project/\" rel=\"noopener\">Arkansas Hunger Relief Alliance</a>). Sources and precedents are on the <a href=\"/food\">Food as a utility</a> page.",
+      "disclosure": "This question was opened by the platform’s founder. Unlike the contract-transparency question, no sponsor relationship is at stake here; it is disclosed only because the platform names who opens every question."
     },
     {
       "id": "living-filter-arkadelphia",
       "submitted": "2026-09-26",
-      "submitter_role": "platform",
-      "neutral_framing": "Should Arkadelphia Water Utilities pilot a living (biological) filter before treatment, to cut chlorine byproducts in our drinking water?",
-      "final_wording": "Our drinking water forms chlorine byproducts from the natural organic matter in its source. Should Arkadelphia Water Utilities test a living filter — sand or soil where bacteria eat that organic matter — before treatment?",
+      "submitter_role": "founder",
+      "neutral_framing": "Should Arkadelphia Water Utilities pilot a biological filter before treatment?",
+      "final_wording": "Should Arkadelphia Water Utilities run a pilot of a biological filter before treatment?",
       "final_wording_note": "Framed as a pilot the utility can run on its own, measured before and after — not a commitment to build.",
       "scope": "city",
       "shaping_notes": [
@@ -252,96 +72,47 @@
       "status": "open-tier0",
       "opened": "2026-09-26",
       "tier_note": "Open as a Tier 0 sentiment poll: no account, one voice per browser, changeable until close. Tier 0 is displayed but never cited as verified resident opinion — verification tiers arrive with the full voting layer.",
-      "background": "Arkadelphia’s 2023 report shows trihalomethanes averaging 54 ppb, but the top of the range reached 85 — over the limit of 80. The source is Ouachita River water, which carries natural organic matter. A living filter takes out part of that organic matter before the chlorine goes in. It isn’t enough by itself, and results vary by site — which is why the first step is a pilot. The evidence and the limits are on the <a href=\"/water#proposal\">water page</a>.",
-      "founding_solutions": [
-        {
-          "id": "sol-living-filter-arkadelphia",
-          "title": "Pilot a living filter ahead of treatment for one season",
-          "summary": "A pilot: a small slow-sand or biological filter running beside the plant for a season, measuring organic carbon and byproducts before and after. Riverbank filtration would need a geology study first — federal maps describe the region’s rock aquifers as low-yield, so a usable sand-and-gravel zone by the river isn’t known yet.",
-          "citations": [
-            {
-              "label": "Riverbank filtration at four U.S. sites (Journal AWWA, 2007)",
-              "url": "https://www.unh.edu/wttac/Project_Summaries/assessing_rbf_awwa_journal.pdf"
-            },
-            {
-              "label": "Slow sand filtration — what it removes",
-              "url": "https://www.oregon.gov/oha/PH/HEALTHYENVIRONMENTS/DRINKINGWATER/OPERATIONS/TREATMENT/Documents/nesc-tech-brief-slowsand.pdf"
-            },
-            {
-              "label": "EPA — disinfection byproduct rules",
-              "url": "https://www.epa.gov/dwreginfo/stage-1-and-stage-2-disinfectants-and-disinfection-byproducts-rules"
-            }
-          ]
-        }
-      ]
+      "background": "Arkadelphia’s 2023 water report (<a href=\"/documents#arkadelphia-ccr-2023\">document library</a>) lists trihalomethanes (TTHM) at a 54 ppb running average against an 80 ppb limit. The limit applies to the running annual average, and the report lists no TTHM violation. Individual samples ranged up to 85 ppb. The source water is the Ouachita River, which carries natural organic matter. A biological filter is one method for reducing that organic matter before chlorine is added; results vary by site. The evidence and its limits are on the <a href=\"/water#proposal\">water page</a>.",
+      "submitter": "Brayden Sanders, founder of County Commons",
+      "disclosure": "This question was submitted by Brayden Sanders, founder of County Commons."
     },
     {
       "id": "new-jail-as-school",
       "submitted": "2026-09-26",
-      "submitter_role": "platform",
-      "neutral_framing": "Should the new Clark County jail be designed from day one with classrooms, trade shops, a training kitchen, and garden space, partnered with a college?",
-      "final_wording": "Clark County is planning a new jail. Should it be built with classrooms, trade shops, a training kitchen, and garden space from day one, so people held there can earn credentials that continue after release?",
-      "final_wording_note": "Framed around a choice the county can make, with the cost and evidence on the page — not about any person or case.",
+      "submitter_role": "founder",
+      "neutral_framing": "Should the new Clark County jail include classrooms, trade shops, a training kitchen, and garden space?",
+      "final_wording": "The sheriff has called for a new Clark County jail. Should its design include classrooms, trade shops, a training kitchen and garden space?",
+      "final_wording_note": "Wording made neutral in October 2026; earlier wording is in the repository history.",
       "scope": "county",
       "shaping_notes": [
         "About how the county runs its jail — not about any person, candidate, case, or ballot measure. Clears the bright lines.",
-        "Grounded in the county’s own records and published evidence, with limits stated on the page. Every crew is offered, never forced."
+        "Grounded in the county’s own records and published evidence, with limits stated on the page."
       ],
       "status": "open-tier0",
       "opened": "2026-09-26",
       "tier_note": "Open as a Tier 0 sentiment poll: no account, one voice per browser, changeable until close. Tier 0 is displayed but never cited as verified resident opinion — verification tiers arrive with the full voting layer.",
-      "background": "People held with nothing to do cost money and lose hope. Across decades of studies, people who took part in education while locked up had 43% lower odds of coming back, and RAND estimated roughly $5 to $7 saved for every $1. The facts, the evidence, and the limits are on the <a href=\"/justice\">From holding to building</a> page.",
-      "founding_solutions": [
-        {
-          "id": "sol-new-jail-as-school",
-          "title": "Offered, paid, and credentialed",
-          "summary": "Every crew is a choice. Work is paid, credentials are in the person’s own name, and what’s grown or built goes to the community.",
-          "citations": [
-            {
-              "label": "RAND — correctional education",
-              "url": "https://www.rand.org/pubs/research_reports/RR266.html"
-            },
-            {
-              "label": "RAND brief — the cost math",
-              "url": "https://www.rand.org/pubs/research_briefs/RB9728.html"
-            }
-          ]
-        }
-      ]
+      "background": "The sheriff has called for a new jail at least double the current capacity (<a href=\"https://arkadelphian.com/2026/05/12/sheriff-watson-its-time-to-get-serious-about-the-future-of-housing-prisoners/\" rel=\"noopener\">The Arkadelphian, May 12, 2026</a>). Its cost, site, financing and design have not been announced (<a href=\"/docket#i17\">Docket #17</a>). A RAND meta-analysis of correctional-education studies found 43% lower odds of returning to prison among participants (<a href=\"https://www.rand.org/pubs/research_reports/RR266.html\" rel=\"noopener\">RAND RR266</a>). The facts, the evidence, and the limits are on the <a href=\"/justice\">From holding to building</a> page.",
+      "submitter": "Brayden Sanders, founder of County Commons",
+      "disclosure": "This question was submitted by Brayden Sanders, founder of County Commons."
     },
     {
       "id": "jail-garden-clark",
       "submitted": "2026-09-26",
-      "submitter_role": "platform",
-      "neutral_framing": "Should Clark County start an offered jail garden crew that grows food for the jail kitchen and local food pantries, with the University of Arkansas extension office?",
-      "final_wording": "Smith and Garland counties run jail gardens that feed local food banks. Should Clark County start one, offered to people held in the jail, growing food for the jail kitchen and local pantries?",
-      "final_wording_note": "Framed around a choice the county can make, with the cost and evidence on the page — not about any person or case.",
+      "submitter_role": "founder",
+      "neutral_framing": "Should Clark County start a jail garden program, with the University of Arkansas extension office, that grows food for the jail kitchen and local food pantries?",
+      "final_wording": "Should Clark County start a jail garden program, offered to people held in the jail, that grows food for the jail kitchen and local pantries?",
+      "final_wording_note": "Wording made neutral in October 2026; earlier wording is in the repository history.",
       "scope": "county",
       "shaping_notes": [
         "About how the county runs its jail — not about any person, candidate, case, or ballot measure. Clears the bright lines.",
-        "Grounded in the county’s own records and published evidence, with limits stated on the page. Every crew is offered, never forced."
+        "Grounded in the county’s own records and published evidence, with limits stated on the page."
       ],
       "status": "open-tier0",
       "opened": "2026-09-26",
       "tier_note": "Open as a Tier 0 sentiment poll: no account, one voice per browser, changeable until close. Tier 0 is displayed but never cited as verified resident opinion — verification tiers arrive with the full voting layer.",
-      "background": "People held with nothing to do cost money and lose hope. Across decades of studies, people who took part in education while locked up had 43% lower odds of coming back, and RAND estimated roughly $5 to $7 saved for every $1. The facts, the evidence, and the limits are on the <a href=\"/justice\">From holding to building</a> page.",
-      "founding_solutions": [
-        {
-          "id": "sol-jail-garden-clark",
-          "title": "Offered, paid, and credentialed",
-          "summary": "Every crew is a choice. Work is paid, credentials are in the person’s own name, and what’s grown or built goes to the community.",
-          "citations": [
-            {
-              "label": "RAND — correctional education",
-              "url": "https://www.rand.org/pubs/research_reports/RR266.html"
-            },
-            {
-              "label": "RAND brief — the cost math",
-              "url": "https://www.rand.org/pubs/research_briefs/RB9728.html"
-            }
-          ]
-        }
-      ]
+      "background": "Jail garden programs exist elsewhere. In Smith County, Texas, people held in the jail run a garden whose produce goes to the East Texas Food Bank (<a href=\"https://www.ketk.com/news/local-news/smith-county-jail-inmates-helping-to-feed-east-texans/\" rel=\"noopener\">KETK, June 2023</a>). The Garland County, Arkansas, Detention Center is a University of Arkansas Division of Agriculture site that donates produce to Project Hope Food Bank (<a href=\"https://www.garlandcounty.org/190/Detention-Center\" rel=\"noopener\">Garland County</a>). No garden, GED, trade, recovery or reentry program was found documented at the Clark County jail (<a href=\"/docket#i18\">Docket #18</a>). A RAND meta-analysis of correctional-education studies found 43% lower odds of returning to prison among participants (<a href=\"https://www.rand.org/pubs/research_reports/RR266.html\" rel=\"noopener\">RAND RR266</a>). The facts, the evidence, and the limits are on the <a href=\"/justice\">From holding to building</a> page.",
+      "submitter": "Brayden Sanders, founder of County Commons",
+      "disclosure": "This question was submitted by Brayden Sanders, founder of County Commons."
     }
   ]
 }

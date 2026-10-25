@@ -10,7 +10,7 @@ function casesPage(data) {
 <div class="issue" style="display:block">
   <b><a href="/cases/${esc(c.id)}">${esc(c.title)}</a></b>
   <p class="src">${esc(c.place)} · ${esc(c.era)}</p>
-  <p style="font-size:13px;margin:4px 0 0">${esc(c.what_it_teaches.split('.')[0])}.</p>
+  <p style="font-size:13px;margin:4px 0 0">${esc(c.what_happened.split('. ')[0].replace(/\.$/, ''))}.</p>
 </div>`).join('');
 
   const body = `
@@ -19,12 +19,11 @@ function casesPage(data) {
   <h1>Where this has been tried</h1>
   <div class="src">${esc(cases.intro)}</div>
 </header>
-${items}
-<p class="src">The argument these cases add up to: <a href="/stance">our stance</a>.</p>`;
+${items}`;
 
   return layout({
     title: `Where this has been tried — ${county.platform_name}`, current: null, body, county,
-    description: 'Case studies behind the platform: town meetings, Switzerland, vTaiwan, Porto Alegre, Reykjavik, Barcelona, Stanford, Lahti, a Wisconsin county — and California, the cautionary case.'
+    description: 'Case studies of participation, petition and budgeting programs: town meetings, Switzerland, vTaiwan, Porto Alegre, Reykjavik, Barcelona, Stanford, Lahti, a Wisconsin county, and California.'
   });
 }
 
@@ -39,13 +38,12 @@ function casePage(data, c) {
 
 <section><h2>What happened</h2><p>${esc(c.what_happened)}</p></section>
 <section><h2>What the evidence shows</h2><p>${esc(c.what_evidence_shows)}</p></section>
-<section><h2>What it teaches ${esc(county.name)}</h2><p>${esc(c.what_it_teaches)}</p></section>
-<section><h2>The honest caveat</h2><p class="src">${esc(c.caveats)}</p></section>
+<section><h2>Limits and caveats</h2><p class="src">${esc(c.caveats)}</p></section>
 <section><p class="src">Sources: ${c.sources.map(s => `<a href="${esc(s.url)}" rel="noopener">${esc(s.label)}</a>`).join(' · ')}</p></section>`;
 
   return layout({
     title: `${c.title} — ${county.platform_name}`, current: null, body, county,
-    description: `${c.place}, ${c.era}: what happened, what the evidence shows, and what it teaches ${county.name}.`
+    description: `${c.place}, ${c.era}: what happened, what the evidence shows, and the limits.`
   });
 }
 

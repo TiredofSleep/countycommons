@@ -1,8 +1,8 @@
 const { esc } = require('../lib/corpus');
 const { layout } = require('./layout');
 
-// A click-through intro to what the platform does and why it matters — see the
-// money, say what you want, rally neighbors, hold officials to it. Server-rendered
+// A click-through intro to what the platform does — see the money, say what
+// you want, share it, track what happens. Server-rendered
 // slides with tiny inline-SVG visuals; app.js turns it into a one-at-a-time
 // slideshow, and with JS off it's a readable scroll (every slide visible).
 
@@ -20,16 +20,17 @@ function slide(n, total, eyebrow, title, lead, visual, extra) {
 // --- little theme-aware SVG visuals ---
 function barsSVG() {
   const bars = [['Public safety', 82], ['Roads', 61], ['Health & welfare', 44], ['Everything else', 30]];
-  return `<svg viewBox="0 0 320 150" width="100%" style="max-width:420px" role="img" aria-label="budget bars">
+  return `<svg viewBox="0 0 320 170" width="100%" style="max-width:420px" role="img" aria-label="example budget bars (illustration, not real figures)">
     ${bars.map((b, i) => `<text x="0" y="${20 + i * 36}" font-size="11" fill="var(--ink)" font-family="var(--sans)">${b[0]}</text>
     <rect x="0" y="${24 + i * 36}" width="${b[1] * 3}" height="12" fill="var(--accent)"/>
-    <text x="${b[1] * 3 + 6}" y="${34 + i * 36}" font-size="10" fill="var(--ink)" opacity="0.7" font-family="var(--mono)">cited ✓</text>`).join('')}
+    <text x="${b[1] * 3 + 6}" y="${34 + i * 36}" font-size="10" fill="var(--ink)" opacity="0.7" font-family="var(--mono)"></text>`).join('')}
+    <text x="0" y="164" font-size="10" fill="var(--ink)" opacity="0.7" font-family="var(--mono)">Illustration only — not real figures</text>
   </svg>`;
 }
 function deadEndSVG() {
   return `<svg viewBox="0 0 320 90" width="100%" style="max-width:420px" role="img" aria-label="a dead end becomes a docket item">
     <rect x="0" y="30" width="120" height="30" fill="none" stroke="var(--dead)" stroke-width="1.5"/>
-    <text x="60" y="49" font-size="11" fill="var(--dead)" text-anchor="middle" font-family="var(--mono)">$1.84M — ???</text>
+    <text x="60" y="49" font-size="11" fill="var(--dead)" text-anchor="middle" font-family="var(--mono)">a lump line — ???</text>
     <text x="145" y="49" font-size="16" fill="var(--ink)">→</text>
     <rect x="175" y="30" width="145" height="30" fill="none" stroke="var(--accent)" stroke-width="1.5"/>
     <text x="247" y="49" font-size="11" fill="var(--accent)" text-anchor="middle" font-family="var(--mono)">on the docket</text>
@@ -44,10 +45,10 @@ function voteSVG() {
   </svg>`;
 }
 function progressSVG() {
-  return `<svg viewBox="0 0 320 60" width="100%" style="max-width:420px" role="img" aria-label="a count reaching a threshold">
+  return `<svg viewBox="0 0 320 60" width="100%" style="max-width:420px" role="img" aria-label="example: a count reaching a threshold (illustration)">
     <rect x="0" y="20" width="320" height="14" rx="3" fill="var(--rule)"/>
     <rect x="0" y="20" width="232" height="14" rx="3" fill="var(--accent)"/>
-    <text x="0" y="52" font-size="11" fill="var(--ink)" font-family="var(--mono)">290 of 400 neighbors</text>
+    <text x="0" y="52" font-size="11" fill="var(--ink)" font-family="var(--mono)">Example: 290 of 400 neighbors</text>
     <text x="320" y="52" font-size="11" fill="var(--ink)" text-anchor="end" font-family="var(--mono)">then hand-delivered</text>
   </svg>`;
 }
@@ -74,11 +75,11 @@ function tourBlock(county) {
   const slides = [
     slide(1, T, 'welcome',
       'See where the money goes. Then have your say.',
-      `This is <b>${esc(county.platform_name)}</b> — a free, independent way to follow every public dollar in ${esc(county.name)}, and to push, together, for what your community actually needs. In two minutes, here's what it lets you do. <b>Not a government website.</b>`,
+      `This is <b>${esc(county.platform_name)}</b> — a free, independent way to follow every public dollar in ${esc(county.name)}, and to petition officials about what you think should change. In two minutes, here's what it lets you do. <b>Not a government website.</b>`,
       levelsSVG()),
     slide(2, T, 'see it',
       'Follow every dollar to its source.',
-      'The <b>money trail</b> lays out the whole budget, biggest pieces first. Click any number and you get the exact document it came from and the page — and the arithmetic is re-added in public, so it adds up to the dollar. No spin, just the receipt.',
+      'The <b>money trail</b> lays out the whole budget, biggest pieces first. Click any number and you get the exact document it came from and the page — and the arithmetic is re-added in public, so it adds up to the dollar. ',
       barsSVG(),
       `<p class="src" style="margin:12px 0 0">→ <a href="/budget">Open the money trail</a></p>`),
     slide(3, T, 'honest',
@@ -88,25 +89,25 @@ function tourBlock(county) {
       `<p class="src" style="margin:12px 0 0">→ <a href="/docket">See the docket</a></p>`),
     slide(4, T, 'say it',
       'Say what your community needs.',
-      'Put a priority on the record — a skate park, a crosswalk, hiring local for a project, food as a utility, publishing the school budget — and say why. Or answer an open <b>yes/no question</b>. No account, one voice per sitting, and you choose how much about yourself to share.',
+      'Put a priority on the record — a crosswalk, a change in library hours, a road repair — and say why. Or answer an open <b>yes/no question</b>. No account, one voice per sitting, and you choose how much about yourself to share.',
       voteSVG(),
       `<p class="src" style="margin:12px 0 0">→ <a href="/priorities">The priorities board</a> · <a href="/issues">open questions</a></p>`),
-    slide(5, T, 'rally',
-      'Rally your neighbors — and watch the count.',
-      'Others back what they share, so the strongest-felt priorities rise on their own. A <b>live count</b> reaches for a threshold sized to your community, the way real petitions are. When enough neighbors back the same thing, it’s printed and hand-delivered to the people who decide.',
+    slide(5, T, 'share',
+      'Share it — and watch the count.',
+      'Others can back what they share, and priorities with more backers appear higher on the board. A <b>live count</b> shows progress toward a threshold sized to your community (<a href="/methodology#threshold">how it is set</a>). When enough neighbors back the same thing, it’s printed and hand-delivered to the people who decide.',
       progressSVG()),
-    slide(6, T, 'hold them',
-      'Hold them to it — in the open.',
+    slide(6, T, 'track it',
+      'Track what happens — in the open.',
       'Delivered isn’t the end. Every priority is tracked through <b>raised → delivered → answered → acted</b>, each step dated and cited to a real source. When an ask sits unanswered, the days are shown. The platform never invents an outcome — it records what officials actually did.',
       loopSVG(),
       `<p class="src" style="margin:12px 0 0">→ <a href="/outcomes">What came of it</a></p>`),
     slide(7, T, 'start',
-      'Now go make a difference.',
-      'You’ve seen how it works — city, county, state, nation, a board for each. Don’t stop at reading. Do one of two things: <b>provide a solution</b> — a clear, cited proposal others can back — or <b>circulate a question</b> and get your neighbors on the record. It computes and cites; it never tells you what to want. Your money, made plain, and your voice, made impossible to miss.',
+      'Ways to take part.',
+      'You can read the budget, answer an open question, post a priority, or sign a petition. There is a board for each level — city, county, state, nation. The site computes and cites; it does not tell you what to want.',
       levelsSVG(),
       `<div style="display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 0">
-        <a href="/priorities" style="font-family:var(--mono);font-size:15px;font-weight:600;padding:13px 20px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);text-decoration:none">Provide a solution →</a>
-        <a href="/issues" style="font-family:var(--mono);font-size:15px;font-weight:600;padding:13px 20px;background:var(--card);color:var(--ink);border:2px solid var(--ink);text-decoration:none">Circulate a question →</a>
+        <a href="/priorities" style="font-family:var(--mono);font-size:15px;font-weight:600;padding:13px 20px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);text-decoration:none">Post a priority →</a>
+        <a href="/issues" style="font-family:var(--mono);font-size:15px;font-weight:600;padding:13px 20px;background:var(--card);color:var(--ink);border:2px solid var(--ink);text-decoration:none">Answer a question →</a>
       </div>
       <p class="src" style="margin:12px 0 0">Or jump straight to <a href="/gate">any county or city</a>.</p>`)
   ].join('');
@@ -131,7 +132,7 @@ function tourBlock(county) {
   <div class="tour-nav">
     <button type="button" class="tour-btn ghost" data-tour="back">← Back</button>
     <div class="tour-dots" aria-hidden="true"></div>
-    <button type="button" class="tour-btn" data-tour="next" data-href="/priorities" data-last="Go make a difference →">Next →</button>
+    <button type="button" class="tour-btn" data-tour="next" data-href="/priorities" data-last="Go to the priorities board →">Next →</button>
   </div>
 </div>`;
 }
@@ -143,12 +144,12 @@ function tourPage(data) {
 <header class="page">
   <div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · a quick tour</div>
   <h1>What this site lets you do</h1>
-  <div class="src">Two minutes, four moves: <b>see the money, say what you want, rally your neighbors, hold them to it.</b> Click through — or just scroll.</div>
+  <div class="src">Two minutes, four moves: <b>see the money, say what you want, share it, track what happens.</b> Click through — or just scroll.</div>
 </header>
 ${tourBlock(county)}`;
   return layout({
     title: `Take the tour — ${county.platform_name}`, current: '/tour', body, county,
-    description: `A two-minute walkthrough of ${county.platform_name}: see where every public dollar goes, say what your community needs, rally your neighbors, and hold officials to it.`
+    description: `A two-minute walkthrough of ${county.platform_name}: see where every public dollar goes, post a priority or answer a question, and track what officials do.`
   });
 }
 

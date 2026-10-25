@@ -200,7 +200,7 @@ app.get(['/sitemap.xml', '/sitemap-index.xml'], (req, res) => {
   if (r.action === 'serve' && directory.isFeatured(r.key)) {
     let cfg = {}; try { cfg = load(r.key).county; } catch (e) {}
     const base = `https://${host}`;
-    const paths = ['/', '/tour', '/budget', '/petitions', '/building', '/issues', '/outcomes', '/help', '/calendar', '/participate', '/docket', '/documents', '/vendors', '/audits', '/verify', '/methodology', '/guide', '/stance', '/story', '/counties', '/cases', '/research', '/receipts', '/food', '/sovereignty', '/engine', '/commons', '/blueprint', '/almanac', '/feed', '/frontier', '/growops', '/water', '/justice', '/surveillance', '/offices', '/atlas', '/compare', '/what-works', '/coverage', '/elections', '/turnout', '/grants', '/kindred', '/field', '/never', '/security', '/traffic'];
+    const paths = ['/', '/tour', '/budget', '/petitions', '/building', '/issues', '/outcomes', '/help', '/calendar', '/participate', '/docket', '/documents', '/vendors', '/audits', '/verify', '/methodology', '/guide', '/stance', '/story', '/counties', '/cases', '/research', '/receipts', '/food', '/sovereignty', '/engine', '/almanac', '/feed', '/frontier', '/growops', '/water', '/justice', '/surveillance', '/offices', '/atlas', '/compare', '/what-works', '/coverage', '/elections', '/turnout', '/grants', '/kindred', '/field', '/never', '/security', '/traffic'];
     if (cfg.has_municipalities) paths.push('/places');
     if (cfg.has_compare) paths.push('/compare/counties', '/compare/spending');
     if (cfg.has_taxes_debt) paths.push('/taxes');
@@ -768,8 +768,8 @@ app.get('/traffic', (req, res) => res.send(trafficPage(load(req.tenantKey), traf
 
 app.get('/security', charterPage('SECURITY.md', null, 'The platform\'s public threat model and integrity protocols, including the hash-chained activity log anyone can verify.'));
 app.get('/never', charterPage('NEVER.md', null, 'What this project will never do — written down before anyone was watching, on purpose.'));
-app.get('/field', charterPage('docs/FIELD.md', '/field', 'An honest map of where this platform sits among civic-democracy organizations — where it leads, where it is early by design, and what it refuses to become.'));
-app.get('/receipts', charterPage('docs/RECEIPTS-BY-RAILS.md', '/receipts', 'Receipts by rails: how a government could make its own check register publish itself — the precedents, with numbers, and the honest limits.'));
+app.get('/field', charterPage('docs/FIELD.md', '/field', 'Similar civic projects: what other civic-technology and participation organizations do, with links.'));
+app.get('/receipts', charterPage('docs/RECEIPTS-BY-RAILS.md', '/receipts', 'How governments publish payments: check registers, open checkbooks and purchase-card data in places that publish them, with links and numbers.'));
 // Food-as-utility brief. A county with its own version (docs/food/<tenant>.md,
 // with its local food-insecurity number and named local partners) gets it; every
 // other county gets the county-neutral default. Keeps the leak-free rule: no
@@ -777,19 +777,20 @@ app.get('/receipts', charterPage('docs/RECEIPTS-BY-RAILS.md', '/receipts', 'Rece
 app.get('/food', (req, res, next) => {
   const perCounty = path.join('docs', 'food', `${req.tenantKey}.md`);
   const file = fs.existsSync(path.join(__dirname, '..', perCounty)) ? perCounty : 'docs/FOOD-AS-UTILITY.md';
-  return charterPage(file, '/food', 'Food as a utility: how a county could back community food-growing as public infrastructure — the precedents, with numbers, and the honest limits.')(req, res, next);
+  return charterPage(file, '/food', 'Food-growing programs run by governments elsewhere, with the numbers and the limits, with sources.')(req, res, next);
 });
 // The economic engine behind it: how a local food system pays for its own
 // operations (earned revenue + circulating value) instead of dying when the
 // grant ends. Shared across counties; the cited systems design.
-app.get('/engine', charterPage('docs/FOOD-ENGINE.md', '/engine', 'The food flywheel: how a local food system pays for itself — food hubs, anchor buyers, food-is-medicine, compost, and co-op ownership, with the evidence and the honest limits.'));
-app.get('/commons', charterPage('docs/FOOD-COMMONS.md', '/commons', 'The two pots: who pays to feed a county and why — the earned engine and the poured-in commons fund, with the case for funding food as a public utility.'));
-app.get('/blueprint', charterPage('docs/FOOD-BLUEPRINT.md', '/blueprint', 'The $400K blueprint: how to spend a USDA-scale grant as durable capital plus a shrinking bridge, so a county food system outlives the grant.'));
+app.get('/engine', charterPage('docs/FOOD-ENGINE.md', '/engine', 'How local food systems are funded: food hubs, institutional buyers, produce prescriptions, compost and co-ops — what each has reported, with sources.'));
+// Retired (Oct 2026): the site states facts; these asks now live in petitions.
+for (const r of ['/commons', '/blueprint']) app.get(r, (req, res) => res.redirect(301, '/petitions'));
+
 app.get('/almanac', charterPage('docs/FOOD-ALMANAC.md', '/almanac', 'The grower\'s almanac: year-round food production in central Arkansas (zone 8a) — month-by-month planting, winter crops, season extension, and the cellar crops.'));
-app.get('/feed', charterPage('docs/FOOD-FEED-THE-COUNTY.md', '/feed', 'Feeding the county: a carrying-capacity model of the nutrition, land, and labor to feed 80% of the county — and why land is not the constraint, growers are.'));
-app.get('/sovereignty', charterPage('docs/FOOD-SOVEREIGNTY.md', '/sovereignty', 'The path to food sovereignty: local food security a community grows, owns, and takes pride in — from one garden to a county that feeds itself, with the diet lever that makes it possible.'));
-app.get('/frontier', charterPage('docs/FOOD-FRONTIER.md', '/frontier', 'The frontier, honestly: which new-age growing strategies (container farms, vertical potatoes, automation, perennials, passive solar) actually serve food sovereignty — and which just swap the grocery truck for an electric bill and a tech vendor.'));
-app.get('/growops', charterPage('docs/FOOD-GROWOPS.md', '/growops', 'Grow-ops: design our own low-energy, open-source greens and potato growing units, grant-fund them, and deploy them to communities that own and run them — with the unit specs, the grant map, and a Garland pilot.'));
+app.get('/feed', charterPage('docs/FOOD-FEED-THE-COUNTY.md', '/feed', 'Land and labor for a county’s food: what published nutrition and yield figures imply for the acres and growers a county’s diet would take, with sources.'));
+app.get('/sovereignty', charterPage('docs/FOOD-SOVEREIGNTY.md', '/sovereignty', 'Local food production at county scale: land per diet, a 1943 national precedent, and the limits, with sources.'));
+app.get('/frontier', charterPage('docs/FOOD-FRONTIER.md', '/frontier', 'Newer growing methods — container farms, vertical systems, automation, perennials, passive solar — what each has produced and where companies failed, with sources.'));
+app.get('/growops', charterPage('docs/FOOD-GROWOPS.md', '/growops', 'Small growing systems for greens and potatoes: published yields, energy use and costs, with sources.'));
 
 // ---- issues: Tier 0 sentiment polling (the M2 seed) ----
 // The participant token is a 24-hex string we minted (randomBytes(12)). Read
@@ -987,34 +988,8 @@ app.post('/register', writeLimit, express.urlencoded({ extended: false }), (req,
 const pb = require('./pb');
 const { pbPage, pbEmptyPage } = require('./views/pb');
 
-app.get('/yourbudget', (req, res) => {
-  const data = load(req.tenantKey);
-  const ex = pb.openExerciseFor(req.tenantKey);
-  if (!ex) return res.send(pbEmptyPage(data));
-  const participant = participantOf(req);
-  const myAlloc = participant ? pb.myAllocation(participant, ex.id) : null;
-  res.send(pbPage(data, ex, participant, myAlloc, pb.tallyPB(ex), {
-    submitted: req.query.placed === '1',
-    error: req.query.error === 'sum' ? `Your tokens must add up to exactly ${ex.tokens}. Nothing was saved — try again.` : null
-  }));
-});
-
-// One allocation gate. Options come in as t_<optionId> fields; the tradeoff
-// constraint (sum === tokens) is enforced in pb.castAllocation, not here.
-app.post('/yourbudget/:id', writeLimit, express.urlencoded({ extended: false }), (req, res) => {
-  const ex = pb.getExercise(req.params.id);
-  if (!ex || ex.tenant !== req.tenantKey || ex.status !== 'open') return res.redirect('/yourbudget');
-  const participant = ensureParticipant(req, res);
-  const allocation = {};
-  for (const op of ex.options) allocation[op.id] = parseInt((req.body && req.body['t_' + op.id]) || '0', 10) || 0;
-  try {
-    pb.castAllocation(participant, ex.id, allocation, 'web');
-  } catch (e) {
-    if (e.code === 'BAD_SUM') return res.redirect('/yourbudget?error=sum');
-    throw e;
-  }
-  res.redirect('/yourbudget?placed=1');
-});
+app.get('/yourbudget', (req, res) => res.redirect(301, '/petitions'));
+app.post('/yourbudget/:id', (req, res) => res.redirect(303, '/petitions'));
 
 // ---- community priorities (voice to the budget-writers; server/priorities.js) ----
 const priorities = require('./priorities');

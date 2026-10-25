@@ -17,8 +17,8 @@ function card(p) {
     <b style="font-size:16px">${esc(p.title)}</b>
     ${phaseBadge(p.phase)}
   </div>
-  <p class="src" style="margin:6px 0 2px">${esc(p.why)}</p>
-  <p class="src" style="margin:2px 0 0"><b>${support}</b> ${support === 1 ? 'resident' : 'residents'} behind it · <a href="/priorities">on the board</a></p>
+  <p class="src" style="margin:6px 0 2px">Started by ${p.by ? esc(p.by) : 'a resident'}: ${esc(p.why)}</p>
+  <p class="src" style="margin:2px 0 0"><b>${support}</b> ${support === 1 ? 'resident' : 'residents'} behind it · <a href="/petitions">on the board</a></p>
   ${trailHtml(p)}
 </div>`;
 }
@@ -35,12 +35,9 @@ function outcomesPage(data, items) {
 
   const acted = items.filter(p => p.phase === 'acted');
   const answered = items.filter(p => p.phase === 'answered');
-  // Longest-waiting first — the ones that have gone unanswered the longest lead.
+  // Alphabetical by title: the order does not rank items by how long they have waited.
   const waiting = items.filter(p => p.phase === 'delivered')
-    .sort((a, b) => {
-      const la = a.timeline[a.timeline.length - 1], lb = b.timeline[b.timeline.length - 1];
-      return daysSince((la || {}).at) - daysSince((lb || {}).at);
-    }).reverse();
+    .sort((a, b) => String(a.title).localeCompare(String(b.title)));
   const moved = acted.length + answered.length + waiting.length;
 
   const section = (title, sub, list) => list.length ? `
@@ -53,11 +50,11 @@ ${list.map(card).join('')}
 <header class="page">
   <div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · the accountability loop</div>
   <h1>What came of it</h1>
-  <div class="src">This is the whole point: the community says what it wants (on <a href="/priorities">the priorities board</a>), it gets carried to ${carriedTo}, and here we record what they did — with a source for every step. We never say they did right or wrong. We show what happened, and when nothing happens, we count the days in the open.</div>
+  <div class="src">This is the whole point: the community says what it wants (on <a href="/petitions">the petitions board</a>), it gets carried to ${carriedTo}, and here we record what they did — with a source for every step. We never say they did right or wrong. We record the date each item was delivered and the date of any response.</div>
 </header>
 
 ${moved === 0 ? `<div class="issue" style="display:block;border-style:dashed">
-  <b>Nothing has moved yet — and that's the honest starting point.</b>
+  <b>Nothing has moved yet.</b>
   <p class="src" style="margin:6px 0 0">This page fills itself in from real events, not promises. Nothing is here because no priority has been carried to ${carriedTo} yet. When one is, you'll see its whole trail — each step dated and cited to a real source:</p>
   <div style="display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 2px;font-family:var(--mono);font-size:13px">
     <span class="chip">① Raised on the board</span>
@@ -68,21 +65,21 @@ ${moved === 0 ? `<div class="issue" style="display:block;border-style:dashed">
     <span style="opacity:.5">→</span>
     <span class="chip c-ok">④ Acted on</span>
   </div>
-  <p class="src" style="margin:8px 0 0">If an ask sits unanswered, we count the days in the open — silence gets recorded too. Start the loop on <a href="/priorities">the priorities board</a>.</p>
+  <p class="src" style="margin:8px 0 0">The date of delivery and of any response is recorded. Priorities are posted on <a href="/petitions">the petitions board</a>.</p>
 </div>` : ''}
 
 ${section('Acted on', 'the loop closed', acted)}
 ${section('Answered, awaiting action', 'the county responded', answered)}
 ${waiting.length ? `
 <section>
-<h2>Carried over, still waiting <span class="sub">— the days are counting</span></h2>
-<p class="src">These were put in front of the ${esc(body_name)} and haven't been answered. Nothing here accuses anyone — it's just the clock, running in public.</p>
+<h2>Delivered, no response recorded</h2>
+<p class="src">These were put in front of the ${esc(body_name)} and no response is recorded. Days since delivery are shown for each item.</p>
 ${waiting.map(card).join('')}
 </section>` : ''}
 
 <section>
 <h2>How a priority moves</h2>
-<p class="src">${phaseBadge('raised')} residents post it and back it · ${phaseBadge('delivered')} it's carried to the body that decides · ${phaseBadge('answered')} an official or the body responds · ${phaseBadge('acted')} something actually happens. Each step is recorded by the county's host with a source, and stamped in the <a href="/security">public activity log</a>. The county writes the budget; this is the receipt for whether they heard us.</p>
+<p class="src">${phaseBadge('raised')} residents post it and back it · ${phaseBadge('delivered')} it's carried to the body that decides · ${phaseBadge('answered')} an official or the body responds · ${phaseBadge('acted')} something actually happens. Each step is recorded by the county's host with a source, and stamped in the <a href="/security">public activity log</a>.</p>
 </section>`;
 
   return layout({

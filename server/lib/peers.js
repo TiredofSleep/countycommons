@@ -73,12 +73,16 @@ function compare(c, N) {
     const gap = med ? (lower ? (v - med) / med : (med - v) / med) : 0;
     const best = pv.sort((a, b) => lower ? a[1] - b[1] : b[1] - a[1]).slice(0, 3).map(([o, x]) => ({ name: o.name, st: o.st, slug: o.slug, v: fmt(x) }));
     const pBelow = below(N['_dist_' + key], v);
-    rows.push({ key, label, v: fmt(v), med: fmt(med), gap, better: lower ? 1 - pBelow : pBelow, best, n: pv.length });
+    // These two are stored as providers per resident but shown as residents per provider.
+    const inv = key === 'primary_care' || key === 'mental_health';
+    const raw = !med || !v ? 0 : inv ? med / v - 1 : (v - med) / med;
+    rows.push({ key, label, v: fmt(v), med: fmt(med), gap, raw, lower, inv, better: lower ? 1 - pBelow : pBelow, best, n: pv.length });
   }
   return { peers: peers.length, metro: metro(c), income: income(c), rows };
 }
 
-const statusChip = (g) => g > 0.15 ? '<span class="chip c-dead">behind similar counties</span>' : g < -0.15 ? '<span class="chip c-ok">ahead of similar counties</span>' : '<span class="chip">about the same</span>';
+// The difference from the typical similar county, in plain numbers — no grades, one color.
+const statusChip = (r) => Math.abs(r.raw) < 0.05 ? '<span class="chip">about the same as the typical similar county</span>' : `<span class="chip">about ${Math.round(Math.abs(r.raw) * 100)}% ${r.raw > 0 ? 'higher' : 'lower'} than the typical similar county</span>`;
 
 // The block on county pages. linkBase: '' on tenant sites (links go to the
 // national pages), the full apex URL is used for neighbors either way.
@@ -86,14 +90,14 @@ function block(c, N, opts = {}) {
   const cmp = compare(c, N); if (!cmp || !cmp.rows.length) return '';
   const S = (N.states[c.st] || {}).name || c.st;
   const href = (b) => `https://countycommons.us/us/${b.st.toLowerCase()}/${b.slug}`;
-  const rows = cmp.rows.map(r => `<tr><td>${esc(r.label)}<br>${statusChip(r.gap)}</td><td class="num"><b>${esc(r.v)}</b></td><td class="num">${esc(r.med)}</td><td style="font-size:12.5px">${r.best.map(b => `<a href="${href(b)}">${esc(b.name)}, ${esc(b.st)}</a> ${esc(b.v)}`).join('<br>')}</td></tr>`).join('');
-  const behind = cmp.rows.filter(r => r.gap > 0.15).sort((a, b) => b.gap - a.gap);
+  const rows = cmp.rows.map(r => `<tr><td>${esc(r.label)}<br>${statusChip(r)}</td><td class="num"><b>${esc(r.v)}</b></td><td class="num">${esc(r.med)}</td><td style="font-size:12.5px"><span class="soft">${(r.inv ? !r.lower : r.lower) ? 'Lowest' : 'Highest'}:</span><br>${r.best.map(b => `<a href="${href(b)}">${esc(b.name)}, ${esc(b.st)}</a> ${esc(b.v)}`).join('<br>')}</td></tr>`).join('');
+  const most = cmp.rows.filter(r => Math.abs(r.raw) >= 0.15).sort((a, b) => Math.abs(b.raw) - Math.abs(a.raw));
   return `
 <section id="compared">
 <h2>How ${esc(c.name)} compares <span class="sub">— beside ${cmp.peers} counties like it</span></h2>
-<p>“Counties like it” means ${cmp.metro ? 'other counties in a metro area' : 'other counties outside metro areas'} with a similar number of people and a similar median household income (about $${num(cmp.income)} here). Comparing with them, instead of the whole country, shows what similar places have managed.${behind.length ? ` ${esc(c.name)} is furthest behind on <b>${behind.slice(0, 3).map(r => esc(r.label.toLowerCase())).join('</b>, <b>')}</b>.` : ''}</p>
-<div style="overflow-x:auto;max-width:100%"><table class="plain"><thead><tr><th>Measure</th><th class="num">${esc(c.name)}</th><th class="num">Typical similar county</th><th>Doing best among similar counties</th></tr></thead><tbody>${rows}</tbody></table></div>
-<p class="src" style="max-width:none">“Behind” or “ahead” means more than 15% worse or better than the typical (median) similar county; small differences can be noise. Sources: County Health Rankings 2025 (health, money and internet), Vera Institute (jail, latest year from 2015 on), FHWA National Bridge Inventory 2025, HUD (metro areas), Census 2024 population. ${opts.more ? `<a href="${opts.more}">What has worked elsewhere</a> on each of these.` : ''}</p>
+<p>“Counties like it” means ${cmp.metro ? 'other counties in a metro area' : 'other counties outside metro areas'} with a similar number of people and a similar median household income (about $${num(cmp.income)} here). Comparing with them, instead of the whole country, shows how counties of similar size and income compare.${most.length ? ` ${esc(c.name)} differs most from them on <b>${most.slice(0, 3).map(r => `${esc(r.label.toLowerCase())} (${r.raw > 0 ? 'higher' : 'lower'})`).join('</b>, <b>')}</b>.` : ''}</p>
+<div style="overflow-x:auto;max-width:100%"><table class="plain"><thead><tr><th>Measure</th><th class="num">${esc(c.name)}</th><th class="num">Typical similar county</th><th>Lowest or highest among similar counties</th></tr></thead><tbody>${rows}</tbody></table></div>
+<p class="src" style="max-width:none">Each difference compares ${esc(c.name)} with the typical (median) similar county; small differences can be noise. The last column lists the similar counties at one end of each measure — lowest for measures like deaths and poverty, highest for measures like income and broadband. Sources: County Health Rankings 2025 (health, money and internet), Vera Institute (jail, latest year from 2015 on), FHWA National Bridge Inventory 2025, HUD (metro areas), Census 2024 population. ${opts.more ? `<a href="${opts.more}">What evaluations found</a> on approaches to each of these.` : ''}</p>
 </section>`;
 }
 

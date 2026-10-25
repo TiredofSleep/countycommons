@@ -191,7 +191,7 @@ function enrich(p) {
   return {
     id: p.id, kind: p.kind, title: p.title, why: p.why, node_ref: p.node_ref,
     level: levelOf(p), target: p.target || levelOf(p), state: p.state || null,
-    tenant: p.tenant, created_at: p.created_at, by: p.by || null, campaign: p.campaign || null, goal: p.goal || null, to: p.to || null,
+    tenant: p.tenant, created_at: p.created_at, by: p.by || null, campaign: p.campaign || null, goal: p.goal || null, to: p.to || null, src: p.src || null,
     support: Object.keys(p.supporters || {}).length,
     reasons: Object.values(p.supporters || {}).filter(x => x.why).map(x => x.why),
     towns: townCounts(p),
@@ -263,6 +263,7 @@ function bulkPropose(items) {
   const spam = require('./lib/spam'); const sub = require('./submissions');
   let posted = 0; const blocked = [];
   for (const it of items) {
+    if (!it.id) { const slug = it.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40) || 'priority'; do { it.id = `${slug}-${crypto.randomBytes(3).toString('hex')}`; } while (s.priorities[it.id]); }
     if (s.priorities[it.id]) continue;
     const junk = spam.petitionProblem(it.title, it.why);
     // Screen the words of the ask, not the county's own name ("Crook County" isn't an accusation).
@@ -271,7 +272,7 @@ function bulkPropose(items) {
     const flags = junk ? [junk] : sub.screen(text, it.county);
     if (flags.length) { blocked.push(`${it.id}: ${flags.join(', ')}`); continue; }
     s.priorities[it.id] = { id: it.id, tenant: it.tenant, kind: 'prioritize', title: it.title, why: it.why, node_ref: null, level: it.level, target: it.level, state: it.state || null,
-      created_at: now, supporters: {}, status: 'open', by: it.by, campaign: it.campaign, ...(it.goal ? { goal: it.goal } : {}), ...(it.to ? { to: it.to } : {}) };
+      created_at: now, supporters: {}, status: 'open', by: it.by, campaign: it.campaign, ...(it.goal ? { goal: it.goal } : {}), ...(it.to ? { to: it.to } : {}), ...(it.src ? { src: it.src } : {}) };
     posted++;
   }
   if (posted) { chain.append('priority-bulk', { campaign: items[0] && items[0].campaign, posted }); save(s); }

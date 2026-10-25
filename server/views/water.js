@@ -3,8 +3,9 @@ const { layout } = require('./layout');
 
 // Water — every county gets this page. The local section (water.json) appears
 // once a county's own system is researched; until then the page says so plainly
-// and shows how to look it up. The shared guide (water-guide.json) grades every
-// treatment option honestly: A proven, B piloted, C lab stage.
+// and shows how to look it up. The shared guide (water-guide.json) catalogs treatment
+// options, each labeled by how widely it is used. Facts only: opinions and
+// proposals live in petitions (/petitions).
 
 function waterPage(data) {
   const { county, water: w, waterGuide: g, documents } = data;
@@ -17,7 +18,7 @@ function waterPage(data) {
     return '';
   };
   const cites = (list) => (list || []).map(cite).filter(Boolean).join(' · ');
-  const gradeChip = (x) => `<span class="chip ${x === 'A' ? 'c-ok' : x === 'B' ? 'c-part' : 'c-cite'}">${esc(x)} · ${esc(g.grades[x].split(' — ')[0])}</span>`;
+  const usedChip = (x) => `<span class="chip c-cite">${esc(g.grades[x])}</span>`;
 
   const local = w ? `
 <section id="ours">
@@ -38,12 +39,7 @@ ${w.quality.rows.map(r => `<tr><td>${esc(r.what)}${r.note ? `<br><span class="so
 <p style="font-size:14px">${esc(w.quality.violation)}</p>
 <p style="font-size:14px">${esc(w.quality.inspection)}</p>
 <p class="src" style="max-width:none">${esc(w.quality.note || '')} Sources: ${cites(w.quality.src)}</p>
-</section>
-
-<section id="fits">
-<h2>What fits here <span class="sub">— proven options matched to what the records show</span></h2>
-${w.fits.map(f => `<div style="border-bottom:1px solid var(--rule-soft);padding:9px 0"><b>${esc(f.name)}</b><div style="font-size:14px">${esc(f.why)}${f.link ? ` <a href="${esc(f.link)}">More →</a>` : ''}</div></div>`).join('')}
-<p style="margin-top:12px;border-left:3px solid var(--accent);padding-left:10px"><b>The open question:</b> ${esc(w.question)} <a href="/docket">See the docket</a>.</p>
+<p style="font-size:14px;border-left:3px solid var(--rule);padding-left:10px"><b>Not yet in the documents:</b> ${esc(w.question)} <a href="/docket">See the docket</a>.</p>
 </section>` : `
 <section id="ours">
 <h2>${esc(county.name)}’s water <span class="sub">— not researched yet</span></h2>
@@ -52,48 +48,30 @@ ${w.fits.map(f => `<div style="border-bottom:1px solid var(--rule-soft);padding:
 <p>Found your system’s report? <a href="/feedback">Send it to us</a> and we’ll add it here.</p>
 </section>`;
 
-  // A proposal is the platform's own, named as such: evidence, limits, and the
-  // question put to residents. The record sections above stay neutral.
-  const p = w && w.proposal;
-  const proposal = p ? `
-<section id="proposal">
-<h2>Our proposal <span class="sub">— ${esc(p.by)}</span></h2>
-<div class="issue" style="display:block;border-left:3px solid var(--accent)">
-  <b style="font-size:18px">${esc(p.title)}</b>
-  <p>${esc(p.summary)}</p>
-  <p style="font-size:14px"><b>Why here:</b> ${esc(p.why_here)} <span class="src">${cites(p.why_src)}</span></p>
-  <p style="font-size:14px;margin-bottom:4px"><b>The evidence:</b></p>
-  <ul>${p.evidence.map(x => `<li style="font-size:14px">${esc(x.text)} <span class="src">${cites(x.src)}</span></li>`).join('')}</ul>
-  <p style="font-size:14px;margin-bottom:4px"><b>The honest limits:</b></p>
-  <ul>${p.limits.map(x => `<li style="font-size:14px">${esc(x)}</li>`).join('')}</ul>
-  ${p.limits_src ? `<p class="src" style="max-width:none">${cites(p.limits_src)}</p>` : ''}
-  <p style="font-size:14px"><b>First step:</b> ${esc(p.first_step)}</p>
-  ${p.ask ? `<p><a href="${esc(p.ask.href)}">${esc(p.ask.label)} →</a></p>` : ''}
-</div>
-<p class="src" style="max-width:none">This is a proposal, labeled as one. The records above are the facts; whether to do this is for residents and the people they elect to decide.</p>
-</section>` : '';
+  const petitionsNote = `<p style="font-size:14px">Residents have started petitions on water — see <a href="/petitions">petitions</a>.</p>`;
 
   const options = g.options.map(grp => `
 <h3 style="margin-top:18px">${esc(grp.group)}</h3>
 ${grp.items.map(o => `
 <div class="issue" style="display:block">
-  <div style="display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline"><b>${esc(o.name)}</b> ${gradeChip(o.grade)}</div>
+  <div style="display:flex;flex-wrap:wrap;gap:6px 10px;align-items:baseline"><b>${esc(o.name)}</b> ${usedChip(o.grade)}</div>
   <p style="font-size:14px;margin:6px 0">${esc(o.what)}${o.example ? ` ${esc(o.example)}` : ''}</p>
-  <p class="src" style="max-width:none"><b>Limit:</b> ${esc(o.limit)} ${cites((o.src || []).concat(o.src2 || []))}</p>
+  <p class="src" style="max-width:none">${o.limit ? `<b>Limit:</b> ${esc(o.limit)} ` : ''}${cites((o.src || []).concat(o.src2 || []))}</p>
 </div>`).join('')}`).join('');
 
   const body = `
 <header class="page">
   <div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · water</div>
-  <h1>Our water</h1>
-  <div class="src">Clean water is the one public service every person uses every day. This page shows ${w ? 'what the records say about ours, and ' : ''}the options for keeping it safe and affordable as we grow — each graded honestly: proven, piloted, or still in the lab. Updated ${esc((w && w.updated) || g.updated)}.</div>
+  <h1>Water</h1>
+  <div class="src">This page shows ${w ? 'what public records say about the water system serving this county, and ' : ''}a catalog of treatment options, each labeled by how widely it is used. Updated ${esc((w && w.updated) || g.updated)}.</div>
 </header>
 ${local}
 ${require("../lib/national").waterBlock(require("../lib/national").forCounty(county))}
-${proposal}
+${petitionsNote}
 
 <section id="options">
-<h2>The options <span class="sub">— graded A (proven), B (piloted), C (lab stage)</span></h2>
+<h2>Treatment options <span class="sub">— how widely each is used</span></h2>
+<p class="src" style="max-width:none">${esc(g.grades_note || '')}</p>
 ${options}
 </section>
 
@@ -101,12 +79,12 @@ ${options}
 <h2>Who owns it, and how it’s paid for</h2>
 <ul>${g.ownership.concat(g.funding).map(x => `<li>${esc(x.text)} <span class="src">${cites(x.src)}</span></li>`).join('')}</ul>
 ${w ? `<p class="src" style="max-width:none">Look up any system yourself: ${g.find.map(x => cites(x.src)).join(' · ')}</p>` : ''}
-<p class="src">Related: <a href="/commonwealth">Commonwealth — our own money</a> · <a href="/growops">Grow-ops</a>. This page lays out options and their records; it doesn’t choose for anyone. Spot an error? <a href="/feedback">Report it</a>.</p>
+<p class="src">Related: <a href="/commonwealth">Commonwealth — our own money</a> · <a href="/growops">Grow-ops</a>. This page lists options and records. Petitions on water are at <a href="/petitions">/petitions</a>. Spot an error? <a href="/feedback">Report it</a>.</p>
 </section>`;
 
   return layout({
     title: `Our water — ${county.platform_name}`, current: '/water', body, county,
-    description: `${county.name}'s water: ${w ? 'the source, the test results, the sewer plant, and the money — plus ' : ''}every treatment option graded honestly (proven, piloted, or lab stage), with sources.`
+    description: `${county.name}'s water: ${w ? 'the source, the test results, the sewer plant, and the money — plus ' : ''}treatment options labeled by how widely they are used, with sources.`
   });
 }
 

@@ -2,7 +2,7 @@ const { esc, money } = require('../lib/corpus');
 const { layout } = require('./layout');
 const { simulate, ERAS, STARTS, NOW } = require('../lib/whatif');
 
-// What if we saved instead of borrowing? A server-rendered "game": pick when
+// Bonds versus saving first. A server-rendered "game": pick when
 // saving starts and which stretch of market history to replay; every plan is
 // recomputed from the government's real bond payments. Computes, never
 // advocates — each plan carries its cost, its risk, and whether the law
@@ -82,7 +82,7 @@ ${plan('Invest and borrow against it', notLegal, m(p.smart.total), `${m(p.smart.
   const body = `
 <header class="page">
   <div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · what if</div>
-  <h1>What if we saved instead of borrowing?</h1>
+  <h1>Bonds versus saving first: a replay of local bonds against market history</h1>
   <div class="src">${esc(w.intro)} Updated ${esc(w.updated)}.</div>
 </header>
 
@@ -102,15 +102,15 @@ ${w.notice ? `<div class="issue" style="display:block;border-color:var(--partial
 </section>
 
 <section id="smart-money">
-<h2>“Invest it and borrow against it” <span class="sub">— why counties can’t, and who can</span></h2>
-<p>Wealthy people borrow against their stocks so they never have to sell them and pay capital-gains tax. Governments pay no income tax, so that part doesn’t apply. What’s left is a bet: that investments earn more than the loan costs.${w.governments.length ? ' In the table above, most of the gain comes from investing early — not from the borrowing.' : ''}</p>
+<h2>“Invest it and borrow against it” <span class="sub">— what the law allows</span></h2>
+<p>A plan that invests and borrows at the same time depends on investments earning more than the loan costs. This section lists what the law allows for local governments.</p>
 <ul>
-<li><b>Texas law</b> lets a county invest only in government-type securities, bank CDs, and funds <a href="https://texas.public.law/statutes/tex._gov't_code_section_2256.014">“invested exclusively in obligations approved by this subchapter”</a> (Gov’t Code §2256.014). No stocks.</li>
-<li><b>Arkansas law</b> limits county and city spare cash to securities <a href="https://codes.findlaw.com/ar/title-19-public-finance/ar-code-sect-19-1-504.html">“having a maturity of not longer than five (5) years,”</a> bank CDs, pools, and repurchase agreements (§19-1-504). No stocks.</li>
+${county.state === 'Texas' ? `<li><b>Texas law</b> lets a county invest only in government-type securities, bank CDs, and funds <a href="https://texas.public.law/statutes/tex._gov't_code_section_2256.014">“invested exclusively in obligations approved by this subchapter”</a> (Gov’t Code §2256.014). No stocks.</li>` : ''}
+${county.state === 'Arkansas' ? `<li><b>Arkansas law</b> limits county and city spare cash to securities <a href="https://codes.findlaw.com/ar/title-19-public-finance/ar-code-sect-19-1-504.html">“having a maturity of not longer than five (5) years,”</a> bank CDs, pools, and repurchase agreements (§19-1-504). No stocks.</li>` : ''}
 ${county.state === 'Florida' ? `<li><b>Florida law</b> lets a town without a written investment policy hold only the state pool, top-rated money market funds, bank deposits, and U.S. Treasuries. With a written policy that puts “safety of principal and liquidity” first, it may add “other investments authorized by law or by ordinance” (<a href="http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&amp;URL=0200-0299/0218/Sections/0218.415.html">§218.415</a>). Stocks are not on the default list.</li>` : ''}
 <li><b>Federal law</b> won’t let tax-exempt bond money be invested at a higher return than the bond pays; extra earnings go to the U.S. Treasury (<a href="https://www.law.cornell.edu/uscode/text/26/148">26 U.S.C. §148</a>).</li>
 <li><b>The warning:</b> in 1994, Orange County, California used borrowed money to stretch a $7.6 billion investment pool to more than $20 billion. It lost about $1.7 billion and filed for bankruptcy on December 6, 1994 (<a href="https://www.sec.gov/litigation/admin/33-8121.htm">SEC order</a>).</li>
-<li><b>The version that works is run by the state:</b> approved Texas school bonds are <a href="https://texas.public.law/statutes/tex._educ._code_section_45.052">“guaranteed by the corpus and income of the permanent school fund”</a> (Education Code §45.052), so districts borrow at top-rated rates — borrowing against investments, with a state-sized fund behind it (<a href="https://texaspsf.org">texaspsf.org</a>).</li>
+${county.state === 'Texas' ? `<li><b>Texas school bonds</b> approved under Education Code §45.052 are <a href="https://texas.public.law/statutes/tex._educ._code_section_45.052">“guaranteed by the corpus and income of the permanent school fund”</a>, so districts borrow at top-rated rates (<a href="https://texaspsf.org">texaspsf.org</a>).</li>` : ''}
 </ul>
 </section>
 
@@ -118,7 +118,7 @@ ${county.state === 'Florida' ? `<li><b>Florida law</b> lets a town without a wri
 <h2>What this doesn’t show <span class="sub">— the honest limits</span></h2>
 <ul>
 <li>Saving first means paying for years before anything gets built. Borrowing gets the building now.</li>
-<li>People who move here later use a building they never saved for. Spreading the cost over the years people use it is the fair argument for bonds.</li>
+<li>People who move here later use a building they did not pay for up front; bonds spread the cost over the years of use.</li>
 <li>A growing pot of money has to survive many elections without being spent on something else.</li>
 <li>Money left in residents’ pockets while a county borrows isn’t worth nothing to them.</li>
 <li>All figures are in dollars of their own year, not adjusted for inflation. Only the bonds listed above are counted.</li>
@@ -127,8 +127,8 @@ ${county.state === 'Florida' ? `<li><b>Florida law</b> lets a town without a wri
 </section>`;
 
   return layout({
-    title: `What if we saved? — ${county.platform_name}`, current: '/whatif', body, county,
-    description: `What if ${county.name} saved first instead of borrowing? Replays its real bonds against real market history — saving, investing, and borrowing side by side, each with its cost and risk.`
+    title: `Bonds versus saving first — ${county.platform_name}`, current: '/whatif', body, county,
+    description: `Bonds versus saving first: a replay of ${county.name}’s real bonds against real market history, with saving, investing, and borrowing side by side, each with its cost and risk.`
   });
 }
 

@@ -5,7 +5,7 @@
    "id": "alpr",
    "name": "License plate readers (ALPR), e.g. Flock Safety cameras",
    "what": "Fixed or car-mounted cameras photograph passing license plates and log the plate, time, and place. Police can search past reads to track a car after a crime, or get an alert when a car on a 'hot list' (stolen, wanted, missing person) drives by. With Flock, the agency that owns the cameras decides who can search its data, including other agencies.",
-   "common_retention": "Flock's default is to delete reads on a rolling 30-day basis, unless a customer's policy or contract says otherwise. In August 2026 Flock urged agencies to cut this to 7 days (a suggestion, not a rule). Arkansas law caps most retention at 150 days.",
+   "common_retention": "Flock's default is to delete reads on a rolling 30-day basis, unless a customer's policy or contract says otherwise. In August 2026 Flock’s CEO recommended agencies cut this to 7 days, per WECT (a recommendation, not a rule). Arkansas law caps most retention at 150 days.",
    "src": [
     {
      "url": "https://flocksafety.com/lpr-policy",
@@ -161,7 +161,7 @@
  "evidence": [
   {
    "claim": "A 2026 study of 216 police agencies found vehicle thefts fell about 11% in the year after Flock plate cameras went up; it is a working paper and has not been peer reviewed.",
-   "side": "benefit",
+   "side": "effect",
    "src": [
     {
      "url": "https://doi.org/10.21428/cb6ab371.0dc24006",
@@ -171,7 +171,7 @@
   },
   {
    "claim": "A review of that same study notes car-theft arrests were already rising before the cameras went up, and recovery times did not improve when all stolen cars were counted, so the gains may not be caused by the cameras.",
-   "side": "mixed",
+   "side": "noclear",
    "src": [
     {
      "url": "https://ij.org/wp-content/uploads/2026/09/ALPR-and-crime-study-external-explainer-V7.pdf",
@@ -181,7 +181,7 @@
   },
   {
    "claim": "A 2019 study of a city network of nearly 100 plate readers found auto theft and robbery cases were solved more often after the network went up, but the change was not statistically significant.",
-   "side": "mixed",
+   "side": "noclear",
    "src": [
     {
      "url": "https://nij.ojp.gov/library/publications/impacts-large-scale-license-plate-reader-deployment-criminal-investigations",
@@ -191,7 +191,7 @@
   },
   {
    "claim": "A review of 30 body camera studies found cameras can lower complaints against officers, but it is unclear if that means better behavior or fewer reports, and it is uncertain whether they reduce use of force.",
-   "side": "benefit",
+   "side": "mixed",
    "src": [
     {
      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8356344/",
@@ -201,7 +201,7 @@
   },
   {
    "claim": "In a randomized trial of 2,224 Washington, D.C. officers, body cameras had very small, statistically insignificant effects on use of force and complaints.",
-   "side": "mixed",
+   "side": "noclear",
    "src": [
     {
      "url": "https://pubmed.ncbi.nlm.nih.gov/31064877/",
@@ -211,7 +211,7 @@
   },
   {
    "claim": "Chicago's inspector general found that 9.1% of police responses to ShotSpotter alerts (Jan 2020 to May 2021) turned up evidence of a gun crime.",
-   "side": "concern",
+   "side": "record",
    "src": [
     {
      "url": "https://www.oversight.gov/reports/chicago-police-departments-use-shotspotter-technology",
@@ -245,7 +245,7 @@
   },
   {
    "claim": "Detroit paid $300,000 in 2024 to a man wrongly arrested after a face recognition match, and agreed police can no longer arrest based only on such a match.",
-   "side": "concern",
+   "side": "record",
    "src": [
     {
      "url": "https://www.cbsnews.com/detroit/news/detroit-police-to-change-use-of-facial-recognition-technology-after-man-wrongfully-arrested",
@@ -259,7 +259,7 @@
   },
   {
    "claim": "An Illinois state audit in 2025 found U.S. Customs and Border Protection had accessed Illinois plate-reader data through a Flock pilot; Flock then halted federal pilots and set its system to reject searches using words like 'immigration'.",
-   "side": "concern",
+   "side": "record",
    "src": [
     {
      "url": "https://www.ksat.com/news/national/2025/08/25/license-plate-camera-company-halts-cooperation-with-federal-agencies-among-investigation-concerns/",
@@ -271,7 +271,7 @@
  "oversight": [
   {
    "tool": "Community Control Over Police Surveillance (CCOPS) law",
-   "what": "A local law, based on an ACLU model, that lets the city council or county board decide if and how police use surveillance tools, with public input. The ACLU counts 26 places that have adopted one.",
+   "what": "A local law, based on a model written by the ACLU, that lets the city council or county board decide if and how police use surveillance tools, with public input. The ACLU, which wrote the model law and is an advocacy group, counts 26 places that have adopted one.",
    "example": "Santa Clara County, California (2016), described by the county as the first of its kind in the nation.",
    "src": [
     {
@@ -345,6 +345,21 @@
     {
      "url": "https://www.riaclu.org/?p=15774",
      "label": "ACLU of Rhode Island: critique of transparency portals"
+    }
+   ]
+  },
+  {
+   "tool": "Vendor and agency safeguards",
+   "what": "Flock says its default is to delete plate reads on a rolling 30-day basis unless a customer’s policy or contract says otherwise, and that the agency that owns the cameras decides who can search its data. In August 2026 its CEO recommended agencies cut retention to 7 days.",
+   "example": "Flock Safety’s published LPR usage and privacy policy (vendor statement).",
+   "src": [
+    {
+     "url": "https://flocksafety.com/lpr-policy",
+     "label": "Flock Safety: LPR usage and privacy policy (30-day default)"
+    },
+    {
+     "url": "https://www.wect.com/2026/08/14/flock-safety-ceo-apologizes-license-plate-reader-misuse-announces-policy-changes/",
+     "label": "WECT (Aug 2026): Flock CEO apologizes for misuse, recommends 7-day retention"
     }
    ]
   },
@@ -497,5 +512,12 @@
   "Austin/Travis County current Flock status.",
   "Rialto, California body camera trial (Ariel et al.) was not checked and is left out.",
   "Current codified wording of Tex. Occ. Code § 1701.655 after H.B. 929 (the 90-day text seen is the 2015 version; H.B. 929 amended other parts)."
- ]
+ ],
+ "side_labels": {
+  "effect": "study found an effect",
+  "noclear": "study found no clear effect",
+  "mixed": "study found effects on some measures, not others",
+  "record": "audit or court record reported a problem"
+ },
+ "oversight_note": "This list covers oversight rules that exist; it does not rate whether they are needed."
 }

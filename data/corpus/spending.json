@@ -1,16 +1,16 @@
 {
-  "intro": "How does Clark County's spending compare to its neighbors — and which categories deserve a closer look? Comparisons here are per resident, from each county's own filed 2026 budget. They are ballpark by nature: Arkansas counties structure funds differently (Ouachita runs its sheriff out of a jail fund; Garland has a dedicated detention sales tax), so treat these as the start of questions, not the end of them.",
+  "intro": "How does Clark County's spending compare to its neighbors, and which categories have less public documentation? Comparisons are per resident, from each county's own filed 2026 budget. Arkansas counties structure funds differently (Ouachita runs its sheriff out of a jail fund; Garland has a dedicated detention sales tax), so the comparisons are approximate.",
   "populations": { "clark": 21000, "garland": 100000, "ouachita": 22000 },
   "headline_rows": [
     {
       "label": "General Fund (courthouse government, law enforcement, courts)",
       "clark": 6829201, "garland": 24645565, "ouachita": null,
-      "note": "Clark spends more per resident than Garland — the small-county scale penalty: one sheriff, one clerk's office, one courthouse divide across five times fewer people. Ouachita's general fund total is not yet summed from its department-level filing."
+      "note": "Clark's General Fund is $325 per resident; Garland's is $246. Garland has about five times Clark's population. Ouachita's general fund total is not yet summed from its department-level filing."
     },
     {
       "label": "Sheriff's office",
       "clark": 2118755, "garland": 9120047, "ouachita": null,
-      "note": "Nearly identical spend rates per resident — yet Garland pays deputies about $14,000 more. Same dollars, less salary: scale again. Ouachita's sheriff budget sits inside its Jail Operating fund and is not line-comparable."
+      "note": "Clark's sheriff's office is $101 per resident; Garland's is $91. Garland's listed patrol-deputy pay is about $14,000 higher (/compare/deputy-pay). Ouachita's sheriff budget sits inside its Jail Operating fund and is not line-comparable."
     }
   ],
   "twin_rows": [
@@ -19,43 +19,43 @@
     { "label": "Assessor", "clark": 560131, "ouachita": 581947, "flag": false },
     { "label": "Courthouse maintenance", "clark": 416460, "ouachita": 254009, "flag": true }
   ],
-  "twin_note": "Ouachita County (~22,000 people, Camden) is Clark's closest size twin. Most office budgets land in the same ballpark — evidence that Clark's administrative structure is normal for its size, not bloated. The one line running well above the twin: courthouse maintenance, flagged below.",
+  "twin_note": "Ouachita County (~22,000 people, Camden) is Clark's closest size twin. Three of the four offices below are within about 25% of Ouachita's 2026 request; courthouse maintenance is 64% higher.",
   "outliers": [
     {
       "title": "EDCCC incentives — $1.84M/yr",
-      "body": "$88 per resident per year — four times the library, forty times the health department — appropriated as a single word with no public recipient list. $25.4M collected from 2008 through 2023 (audited).",
+      "body": "$88 per resident per year: $1,844,538 appropriated on one ordinance line reading INCENTIVES. The county library line is $469,288 and the health department line is $48,900. No recipient list appears in the documents we hold. $25.4M collected from 2008 through 2023 (audited).",
       "link": "/line/edccc", "docket": 5
     },
     {
-      "title": "The hospital and college mills — ~$700K/yr not in the county appropriation ordinance",
-      "body": "The state millage book shows 1 mill each levied county-wide for the hospital and the college. At the county's ~$346M assessed value (derived from the FY2023 audit's debt-limit figure), that is roughly $346,000 a year each — flowing to those institutions without ever appearing in the county's appropriation ordinance. Possibly entirely proper; documented nowhere we can navigate.",
+      "title": "The hospital and college mills (about $700K a year, estimated)",
+      "body": "The state millage book lists 1 mill each, countywide, for the hospital and the college (State Millage Report 2025, p.15). At an estimated $346M assessed value, 1 mill is about $346,000 a year. Neither levy appears in the county appropriation ordinance; the documents we hold do not name the receiving entities.",
       "link": "/line/millage-rates", "docket": 11
     },
     {
-      "title": "The library spends about a third of what it collects",
-      "body": "~$1.28M projected revenue, $469K appropriated, ~$883K sitting unappropriated (including a $196K bequest). A building fund? A policy? No document in the corpus says.",
+      "title": "Library: $469K appropriated of about $1.28M projected revenue",
+      "body": "About $883K is unappropriated, including a $196K bequest fund. The documents we hold do not state why.",
       "link": "/line/library", "docket": 8
     },
     {
-      "title": "The 911 reserve holds $1.01M idle",
-      "body": "While dispatcher staffing and pay are live issues in the same system, the reserve fund appropriates $118K of a $1.26M balance.",
+      "title": "9-1-1 reserve fund: $118K appropriated of a $1.26M balance",
+      "body": "The 2026 ordinance lists a $1,256,731 reserve balance and appropriates $117,775 for equipment and supplies.",
       "link": "/line/e911", "docket": 8
     },
     {
       "title": "The road-bond sales tax: receipts about match the payments",
-      "body": "A 0.5% sales tax pledge repays the $8.46M Truck Bypass bonds (2021, 1.125–2.00%, through 2036). We earlier guessed it might raise far more than the debt costs; the audits say otherwise. The bond fund took in $469,373 in 2022 and $678,806 in 2023, against debt payments of $341,005 and $670,756. Any excess may be used for any lawful purpose. The bond ordinance itself is not yet in this corpus.",
+      "body": "A 0.5% sales tax pledge repays the $8.46M Truck Bypass bonds (2021, 1.125–2.00%, through 2036). The bond fund took in $469,373 in 2022 and $678,806 in 2023, against debt payments of $341,005 and $670,756 (county audits for FY2022 and FY2023, in the document library). The audits state that any excess may be used for any lawful purpose. The bond ordinance itself is not yet in this corpus.",
       "link": "/vendors", "docket": 3
     },
     {
-      "title": "About $1M/yr of vague pool lines",
-      "body": "Road \"other professional services\" ($350K), jail \"contracts\" ($351K), sanitation engineering and professional services ($325K) — single lines, no stated recipients. Check-register territory.",
+      "title": "Three pooled lines totaling $1.03M",
+      "body": "Road \"other professional services\" ($350K), jail maintenance \"contracts\" ($351K), and sanitation engineering and professional services ($325K). The lines name no recipients; the check register would.",
       "link": "/vendors", "docket": 10
     },
     {
-      "title": "Courthouse maintenance runs ~$162K above the twin county",
-      "body": "$416K vs Ouachita's $254K. The gap sits mostly in a $100K property-maintenance pool and $66.5K of insurance — explainable, but unexplained.",
+      "title": "Courthouse maintenance: $416K vs Ouachita's $254K",
+      "body": "A difference of $162K. The difference is mostly a $100K property-maintenance pool and $66.5K of insurance. The documents we hold do not say why.",
       "link": "/line/gf-courthouse-maint", "docket": 7
     }
   ],
-  "summary": "The arithmetic: roads, public safety, and sanitation — direct service — are about two-thirds of everything the county spends. In the remaining third, the documentation thins out: roughly $4M a year moves without public detail (EDCCC, the hospital and college mills, pooled lines, fee funds), and roughly $4M more sits unappropriated — some of that required by the state's 90% rule. This page draws no conclusion about any of it. Every item above is a trail that stops short of a receipt, a document that would extend it, and a docket number tracking the ask."
+  "summary": "The road fund and motor fuel ($6,594,007), sanitation ($1,899,263), sheriff ($2,118,755), General Fund jail ($676,423), jail funds ($663,891) and 9-1-1 ($1,087,970) total $13,041,309, which is 61% of the $21,386,230 appropriated. Lines with no recipient-level record in the documents we hold: EDCCC incentives ($1,844,538), the hospital and college mills (about $692,000, estimated), and three pooled lines ($1,026,000). Unappropriated balances noted on budget lines: sanitation about $862K, library about $883K (including the $196K bequest fund), 9-1-1 reserve about $1.01M, and the general reserve about $1.53M. This page draws no conclusion about any of it. Each item above links to its line and its docket number."
 }

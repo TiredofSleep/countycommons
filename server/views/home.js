@@ -106,7 +106,7 @@ ${petitionStrip(data, opts.petitions || [])}
 
 <section style="margin-top:8px">
 <h2 style="margin-top:0">See it in two minutes <span class="sub">— what this site lets you do</span></h2>
-<p class="src" style="max-width:60ch;margin-bottom:4px">Click through the four moves — see the money, say what you want, rally your neighbors, hold them to it. Or just scroll.</p>
+<p class="src" style="max-width:60ch;margin-bottom:4px">Click through the four moves — see the money, say what you want, share it, track what happens. Or just scroll.</p>
 ${tourBlock(county)}
 </section>
 
@@ -118,8 +118,8 @@ ${tourBlock(county)}
 </div>
 
 <section>
-<h2>This is your petition <span class="sub">— open-ended, and with receipts</span></h2>
-<p style="max-width:66ch">Not a one-off signature that disappears into an inbox. A standing place where a community can <b>see what government is doing, say what should change, rally behind it, and hold the outcome to the light</b> — on your town, in your state, and nationally. Every step is public and checkable, and nobody's voice is for sale.</p>
+<h2>Petitions, with receipts <span class="sub">— open-ended</span></h2>
+<p style="max-width:66ch">A standing place to <b>see what government is doing, post or sign a petition, and see the recorded outcome</b> — on your town, in your state, and nationally. Every step is public and checkable.</p>
 </section>
 
 <section>
@@ -133,17 +133,17 @@ ${tourBlock(county)}
 <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
   ${door('The pursuit ledger', 'Every gap in the record, named and numbered — and stamped in public when it gets filled. Watch the record complete itself.', '/docket', 'See the docket')}
   ${door('The document shelf', `${documents.documents.length} public documents — budgets, audits, minutes, ordinances — ${anyHashed ? 'hashed, archived, and, where the scans are machine-readable, searchable to the words inside' : 'indexed and cited, with source files hashed and archived as they\'re obtained'}.`, '/documents', 'Search the documents')}
-  ${door('Why this exists', 'The story, the creed, and a ledger of every claim this platform makes about itself — each one checkable.', '/story', 'Read the story')}
-  ${door('Make it travel', 'Share a question with a neighbor, put a QR code on a corkboard, bring this to your church or your shop. Traction is the product.', '/participate', 'Get involved')}
+  ${door('About this project', 'Who runs it, who pays, and its rules.', '/story', 'Read the story')}
+  ${door('Share', 'Send a question to a neighbor, print a QR code for a notice board.', '/participate', 'Get involved')}
 </div>
-<p class="src" style="margin-top:10px">More rooms: <a href="/vendors">who gets paid</a> · <a href="/audits">what the auditors reported</a> · <a href="/compare/spending">how ${esc(county.name)} compares</a> · <a href="/cases">the precedents</a> · <a href="/research">the research shelf</a> · <a href="/stance">where we stand</a> · <a href="/verify">the receipt</a> · <a href="/security">how it's secured</a> · <a href="/guide">the plain-words tour</a>.</p>
+<p class="src" style="margin-top:10px">More rooms: <a href="/vendors">who gets paid</a> · <a href="/audits">what the auditors reported</a> · <a href="/compare/spending">how ${esc(county.name)} compares</a> · <a href="/cases">the precedents</a> · <a href="/research">the research shelf</a> · <a href="/stance">how this site works</a> · <a href="/verify">the receipt</a> · <a href="/security">how it's secured</a> · <a href="/guide">the plain-words tour</a>.</p>
 </section>
 
 <section>
-<h2>Why a name and a number here counts <span class="sub">— plain and simple</span></h2>
-<p style="max-width:66ch">A shout at a meeting is one voice. A post online is noise with no name. Here your voice is counted honestly, and <b>you choose how much to share and how private to stay</b>. Weigh in with no account at all and it counts as open feeling. Or add as much as you like — your name, your town, that you live here — <b>kept private in a locked file, shown only to county officials if they ask to check the count is real, and never published unless you choose to.</b> Most people keep it private; that's the point. The more you're willing to show <i>them</i>, the harder your vote is to wave off — a room of real, verifiable neighbors is a fact an official has to answer, not an anonymous click.</p>
-<p style="max-width:66ch">And it goes somewhere. When <b>${threshold} neighbors back the same thing</b>, we print it and hand it to the people who decide — your county board, your city council, your school board — and stamp the delivery in the open. They don't have to agree. They do have to receive it, and what they do next is on the record either way. <a href="/cases">This has worked where it's been tried</a>, from town meetings to Taiwan.</p>
-<p class="src" style="max-width:66ch;margin-top:6px">Why ${threshold}? ${esc(tinfo.note)} It's the same kind of measure real petitions use — a share of the people who actually vote, not a number we picked. <a href="/methodology#threshold">How the threshold works</a>.</p>
+<h2>How your answer is counted <span class="sub">— and what stays private</span></h2>
+<p style="max-width:66ch">You can answer with no account. If you add your name and town, that information is <b>stored in a locked file, shown only to county officials who ask to check that a count is real, and never published unless you choose.</b> Every result shows how many answers came with no account and how many came from verified residents.</p>
+<p style="max-width:66ch">When <b>${threshold} neighbors back the same thing</b>, it is printed and handed to the people who decide — your county board, your city council, your school board — and the delivery is stamped in the open. Officials are not required to agree or respond. Each delivery and any response is recorded. Examples of resident-input processes elsewhere, with what each found and its limits, are on <a href="/cases">the cases page</a>.</p>
+<p class="src" style="max-width:66ch;margin-top:6px">Why ${threshold}? ${esc(tinfo.note)} The method and the petition rules it follows are on the methodology page: <a href="/methodology#threshold">how the threshold works</a>.</p>
 </section>
 
 <section>
@@ -158,7 +158,7 @@ ${stamps.map(s => `
 
 <section id="register">
 <h2>Put yourself on the record <span class="sub">— optional, as much or as little as you like</span> ${rulesButton()}</h2>
-<p style="max-width:60ch">Anyone can answer questions here with no account at all. Registering is what turns your answer into the kind an official can't wave off — a count backed by real, reachable people. Every field is optional.</p>
+<p style="max-width:60ch">Anyone can answer questions here with no account at all. Registering lets a count show how many responses come from verified residents. Every field is optional.</p>
 <div class="envelope" style="border:1.5px dashed var(--ink);padding:14px 16px 16px;max-width:580px">
 ${registrationForm({ county, action: '/register', registeredFields, justRegistered, voteHref: openQs.length ? `/issues/${esc(openQs[0].id)}` : '/issues', announce: { show: openQs.length > 0, checked: announceChecked } })}
 </div>
@@ -167,14 +167,14 @@ ${rulesDialog(county)}
 
 <section>
 <h2>Why you can trust it <span class="sub">— you don't have to; you can check</span></h2>
-<p style="max-width:66ch">First, know what this is: <b>an independent, citizen-built project — not a government website</b>. Nothing here is official${offSite ? `; ${esc(county.name)}'s own site is <a href="${esc(offSite)}" rel="noopener">${esc(offSiteLabel)}</a>` : ''}. This platform is the layer in between: where the county's money becomes navigable, its questions get counted, and — as it grows — the projects it decides it wants find their footing.</p>
-<p style="max-width:66ch">This platform renders no verdicts and takes no sides. Every number links to its source document. The arithmetic <a href="/verify">re-adds itself in public</a>. The activity log is <a href="/security">hash-chained and anchored</a> where we can't rewrite it. The code is <a href="https://github.com/TiredofSleep/countycommons" rel="noopener">public to the last line</a>. And the standard pointed at us first: <a href="/story">our story</a>, <a href="/stance">our stance</a>, <a href="/never">our nevers</a>.</p>
+<p style="max-width:66ch">First, know what this is: <b>an independent, citizen-built project — not a government website</b>. Nothing here is official${offSite ? `; ${esc(county.name)}'s own site is <a href="${esc(offSite)}" rel="noopener">${esc(offSiteLabel)}</a>` : ''}. This platform is the layer in between: where the county's money becomes navigable and its questions get counted.</p>
+<p style="max-width:66ch">This platform renders no verdicts and takes no sides. Every number links to its source document. The arithmetic <a href="/verify">re-adds itself in public</a>. The activity log is <a href="/security">hash-chained and anchored</a> where we can't rewrite it. The code is <a href="https://github.com/TiredofSleep/countycommons" rel="noopener">public to the last line</a>. And the standard pointed at us first: <a href="/story">our story</a>, <a href="/stance">how this site works</a>, <a href="/never">our nevers</a>.</p>
 </section>`;
 
   return layout({
     title: `${county.name}, ${county.state}: budget, property taxes, elections and public records · County Commons`,
     current: '/', body, county,
-    description: `${county.name}, ${county.state}, in public records: where the money goes line by line, your property tax bill explained, when and how to vote, and what officials do — every number cited, free, nonpartisan. Say what should change and rally your neighbors.`
+    description: `${county.name}, ${county.state}, in public records: where the money goes line by line, your property tax bill explained, when and how to vote, and what officials do — every number cited, free, nonpartisan. Post or sign a petition.`
   });
 }
 

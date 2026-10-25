@@ -1,9 +1,9 @@
 const { esc } = require('../lib/corpus');
 const { layout } = require('./layout');
 
-// The platform's one open position: the process itself. Every tenet carries
-// its evidence and sources; the definitions fence the stance off from issue
-// advocacy (direct ≠ binding; results are signal, officials decide).
+// How this site works: what the platform does and does not do, what a result
+// means, how counts and privacy work, and where the method has been used. It
+// describes the platform; it argues nothing. Opinions live only in petitions.
 
 function stancePage(data) {
   const { county, stance } = data;
@@ -24,20 +24,20 @@ function stancePage(data) {
 
   const body = `
 <header class="page">
-  <div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · what this platform stands for</div>
+  <div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · how this site works</div>
   <h1>${esc(stance.title)}</h1>
   <div class="src">${esc(stance.preamble)}</div>
 </header>
 
 <section>
-<h2>Three words, defined honestly <span class="sub">— so nobody has to guess what we mean</span></h2>
+<h2>${esc(stance.definitions_title || 'What the words mean on this platform')}</h2>
 ${defs}
 </section>
 
 ${tenets}
 
 <section>
-<h2>The tradition we stand in <span class="sub">— three thinkers who did the homework</span></h2>
+<h2>${esc(stance.tradition_title || 'Background reading')}</h2>
 ${(stance.tradition || []).map(t => `
 <div class="issue" style="display:block">
   <b>${esc(t.thinker)}</b>
@@ -47,27 +47,27 @@ ${(stance.tradition || []).map(t => `
 </section>
 
 <section>
-<h2>The honest counterarguments <span class="sub">— a stance that hides its objections is a pitch</span></h2>
+<h2>${esc(stance.counterarguments_title || 'Known limits of this method')}</h2>
 ${(stance.counterarguments || []).map(c => `
 <div class="issue" style="display:block">
-  <b>"${esc(c.objection)}"</b>
+  <b>${esc(c.objection)}</b>
   <p style="font-size:13.5px;margin:6px 0 0">${esc(c.answer)}</p>
 </div>`).join('')}
 </section>
 
 <section>
-<h2>The evidence library <span class="sub">— every precedent, in depth</span></h2>
-<p>Each case behind this stance has its own page — what happened, what the evidence shows, what it teaches this county, and the honest caveat: <a href="/cases">where this has been tried</a>. And the complete bibliography — every citation, claim by claim, weak spots stated — is <a href="/research">the research shelf</a>.</p>
+<h2>The evidence library</h2>
+<p>Each case has its own page — what happened, what the evidence shows, and the caveat: <a href="/cases">where this has been tried</a>. The complete bibliography, claim by claim with weak spots stated, is <a href="/research">the research shelf</a>.</p>
 </section>
 
 <section>
-<h2>The whole stance in one breath</h2>
-<p><b>${esc(stance.closing)}</b></p>
+<h2>Where opinions go</h2>
+<p>${esc(stance.closing)} See <a href="/petitions">petitions</a>.</p>
 </section>`;
 
   return layout({
     title: `${stance.title} — ${county.platform_name}`, current: null, body, county,
-    description: 'The one position this platform holds openly: residents should see the money, speak directly, and be able to check the count — with the evidence behind that belief.'
+    description: 'How County Commons counts, verifies and publishes results: what the site does and does not do, what a result means, and what is public.'
   });
 }
 

@@ -98,6 +98,7 @@ function officesPage(data) {
 ${rows.length ? rows.join('') : `<p>We haven't matched ${esc(county.name)}'s offices yet — not gathered, not hidden.</p>`}
 ${hasBudget ? `<p class="src">Amounts add up the ${seo.year(data)} budget lines whose names match each office. An office can also be paid from lines named differently, so treat these as a floor — open each line to see its source page, or walk the whole <a href="/budget">money trail</a>.</p>` : ''}
 ${srcDir}
+${AR ? '<p class="src">The one-line duty descriptions are plain-language summaries, not legal text. The legal duties of Arkansas county offices are set out in the Arkansas Code (mostly Title 14, Local Government).</p>' : ''}
 </section>
 ${court}
 

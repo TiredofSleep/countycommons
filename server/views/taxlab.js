@@ -109,7 +109,7 @@ ${r.layers.map(({ L }) => {
       for (const p of x.projects || []) lines.push(`Saved up, it would pay cash for ${esc(p.name)} (${m(p.amount)}) in about <b>${p.years < 1 ? 'under a year' : `${p.years.toFixed(1)} years`}</b>.`);
     }
     if (x.revenue < 0) {
-      if (x.size && x.size.below) lines.push(`A cut this size is more than the whole budget for <b>${esc(x.size.below.name)}</b> (${m(x.size.below.amount)})${x.size.above ? `, and less than ${esc(x.size.above.name)} (${m(x.size.above.amount)})` : ''}.`);
+      if (x.size && x.size.below) lines.push(`A cut this size equals more than the whole budget line for <b>${esc(x.size.below.name)}</b> (${m(x.size.below.amount)})${x.size.above ? `, and less than ${esc(x.size.above.name)} (${m(x.size.above.amount)})` : ''}.`);
       else if (x.size && x.size.above) lines.push(`A cut this size is smaller than the smallest listed budget line, ${esc(x.size.above.name)} (${m(x.size.above.amount)}).`);
       if (x.reserveYears) lines.push(`Paid from savings instead of cuts, it would use up ${esc(L.reserve.label)} (${m(L.reserve.amount)}) in about <b>${x.reserveYears.toFixed(1)} years</b>.`);
     }
@@ -117,7 +117,7 @@ ${r.layers.map(({ L }) => {
     return `
 <div style="border-bottom:1px solid var(--rule-soft);padding:10px 0">
   <b>${esc(L.name)}</b>: ${fmtRate(L, L.base)} → <b>${fmtRate(L, x.next)}</b>
-  <div style="font-family:var(--mono);font-size:18px;margin:4px 0">${signed(x.revenue)} a year <span class="soft" style="font-family:var(--sans);font-size:13px">to ${esc(L.gov)}</span></div>
+  <div style="font-family:var(--mono);font-size:18px;margin:4px 0">${signed(x.revenue)} a year${L.kind === 'sales' ? ' (estimate)' : ''} <span class="soft" style="font-family:var(--sans);font-size:13px">to ${esc(L.gov)}</span></div>
   <div style="font-size:14px">${lines.join(' ')}</div>
   ${flags}
 </div>`;
@@ -151,7 +151,7 @@ ${results}
 <section id="limits">
 <h2>What this doesn’t show <span class="sub">— the honest limits</span></h2>
 <ul>${lab.limits.map(x => `<li>${esc(x)}</li>`).join('')}</ul>
-<p class="src">See also: <a href="/whatif">What if we saved instead of borrowing?</a> · <a href="/budget">The money trail</a>. This page computes and cites; it doesn’t recommend raising or cutting anything. Spot an error? <a href="/feedback">Report it</a>.</p>
+<p class="src">See also: <a href="/whatif">Bonds versus saving first</a> · <a href="/budget">The money trail</a>. This page computes and cites; it doesn’t recommend raising or cutting anything. Spot an error? <a href="/feedback">Report it</a>.</p>
 </section>`;
 
   return layout({

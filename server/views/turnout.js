@@ -49,7 +49,7 @@ function turnoutPage(data) {
 
     const local = loc ? `
 <section id="local">
-<h2>Local elections <span class="sub">— where a few voters decide a lot</span></h2>
+<h2>Local elections <span class="sub">— recent county-area results</span></h2>
 ${loc.elections.map(e => `
 <div class="issue" style="display:block">
   <div class="eyebrow" style="margin:0 0 4px">${esc(e.date)}</div>
@@ -65,7 +65,7 @@ ${loc.note ? `<p class="src" style="max-width:none">${esc(loc.note)}</p>` : ''}
 <header class="page">
   <div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · voter turnout</div>
   <h1>Who shows up to vote</h1>
-  <div class="src">Every budget, bond, and tax on this site was decided by people elected — or a measure passed — by whoever voted. These are the official counts: registered voters, ballots cast, and the share that voted. Nothing here is about candidates or how anyone voted.</div>
+  <div class="src">Elected officials and ballot measures are decided by the people who vote. These are the official counts: registered voters, ballots cast, and the share that voted. Nothing here is about candidates or how anyone voted.</div>
 </header>
 
 <section id="county">

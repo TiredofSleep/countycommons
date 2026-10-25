@@ -46,16 +46,16 @@ function comparePage(data) {
 
   // 1. The summary, in sentences built from the numbers.
   if (cmp && cmp.rows.length) {
-    const ahead = cmp.rows.filter(r => r.gap < -0.15).sort((a, b) => a.gap - b.gap);
-    const behind = cmp.rows.filter(r => r.gap > 0.15).sort((a, b) => b.gap - a.gap);
-    const same = cmp.rows.filter(r => Math.abs(r.gap) <= 0.15);
+    const lower = cmp.rows.filter(r => r.raw < -0.15).sort((a, b) => a.raw - b.raw);
+    const higher = cmp.rows.filter(r => r.raw > 0.15).sort((a, b) => b.raw - a.raw);
+    const same = cmp.rows.filter(r => Math.abs(r.raw) <= 0.15);
     const line = (r) => `<li><b>${esc(r.label.toLowerCase())}</b>: ${esc(r.v)} here, ${esc(r.med)} for the typical similar county</li>`;
     sections.push(`
 <section id="summary">
 <h2>In short <span class="sub">— beside ${cmp.peers} counties like it</span></h2>
-<p>“Counties like it” are ${cmp.metro ? 'metro-area' : 'non-metro'} counties with a similar population and a median household income near ${esc(county.name)}'s (${d0(cmp.income)}). Ahead or behind means more than 15% better or worse than the typical one.</p>
-${ahead.length ? `<p><b>Ahead of similar counties on ${ahead.length} measure${ahead.length === 1 ? '' : 's'}:</b></p><ul>${ahead.map(line).join('')}</ul>` : ''}
-${behind.length ? `<p><b>Behind similar counties on ${behind.length} measure${behind.length === 1 ? '' : 's'}:</b></p><ul>${behind.map(line).join('')}</ul>` : ''}
+<p>“Counties like it” are ${cmp.metro ? 'metro-area' : 'non-metro'} counties with a similar population and a median household income near ${esc(county.name)}'s (${d0(cmp.income)}). Higher or lower means the number is more than 15% above or below the typical one. Whether higher or lower is better depends on the measure.</p>
+${higher.length ? `<p><b>Higher than similar counties on ${higher.length} measure${higher.length === 1 ? '' : 's'}:</b></p><ul>${higher.map(line).join('')}</ul>` : ''}
+${lower.length ? `<p><b>Lower than similar counties on ${lower.length} measure${lower.length === 1 ? '' : 's'}:</b></p><ul>${lower.map(line).join('')}</ul>` : ''}
 ${same.length ? `<p><b>About the same on ${same.length}:</b> ${same.map(r => esc(r.label.toLowerCase())).join(', ')}.</p>` : ''}
 </section>`);
   }
@@ -93,7 +93,7 @@ ${same.length ? `<p><b>About the same on ${same.length}:</b> ${same.map(r => esc
     sections.push(`
 <section id="finances">
 <h2>County finances <span class="sub">— the general fund, beside ${esc(S)}'s other counties</span></h2>
-<p>At the end of ${esc(af.years[0])}, ${esc(county.name)}'s general fund held <b>${d0(af.balance[0])}</b> — enough to cover about <b>${m.toFixed(1)} months</b> of that year's spending. Five years earlier (${esc(af.years[af.years.length - 1])}) it held ${d0(af.balance[af.years.length - 1])}.${list.length > 2 && me >= 0 ? ` Among the ${list.length} ${esc(S)} counties whose state audits include this five-year schedule, that ranks <b>${me + 1} of ${list.length}</b> for months covered; the typical county held about ${med.toFixed(1)} months.` : ''}</p>
+<p>At the end of ${esc(af.years[0])}, ${esc(county.name)}'s general fund held <b>${d0(af.balance[0])}</b> — enough to cover about <b>${m.toFixed(1)} months</b> of that year's spending. Five years earlier (${esc(af.years[af.years.length - 1])}) it held ${d0(af.balance[af.years.length - 1])}.${list.length > 2 ? ` Among the ${list.length} ${esc(S)} counties whose state audits include this five-year schedule, the typical county held about ${med.toFixed(1)} months (range ${Math.min(...list.map(x => x.months)).toFixed(1)} to ${Math.max(...list.map(x => x.months)).toFixed(1)}).` : ''}</p>
 <p class="src" style="max-width:none">Source: each county's state audit, “Schedule of Selected Information for the Last Five Years — General Fund” (unaudited schedule). Latest years differ by county (${years.join(', ')}). A larger reserve isn't automatically better or worse — it can be savings for a planned project, or money not yet spent. <a href="/audits#fiscal">The year-by-year table</a>.</p>
 </section>`);
   }
@@ -105,17 +105,17 @@ ${same.length ? `<p><b>About the same on ${same.length}:</b> ${same.map(r => esc
 <header class="page">
   <div class="eyebrow">${esc(county.name)}, ${esc(S)} · how it compares</div>
   <h1>How ${esc(county.name)} compares</h1>
-  <div class="src">${esc(county.name)} measured against counties like it across the country, and against the other counties in ${esc(S)} — health, money, jobs, housing, the jail, bridges, people, schools and county finances. Every figure is computed from public data and cited; “ahead” and “behind” are measured differences, not grades. For what other places have tried on each measure, see <a href="/what-works">what has worked</a>.</div>
+  <div class="src">${esc(county.name)} measured against counties like it across the country, and against the other counties in ${esc(S)} — health, money, jobs, housing, the jail, bridges, people, schools and county finances. Every figure is computed from public data and cited; the differences are measured, not grades. For what other places have tried on each measure, see <a href="/what-works">what has worked</a>.</div>
 </header>
 ${sections.join('') || `<section><p>Comparison data for ${esc(county.name)} isn't matched yet — not gathered, never hidden.</p></section>`}
 <section><p class="src">Related: <a href="/atlas">By the numbers</a> · <a href="/budget">The money trail</a> · <a href="/audits">Audits</a> · <a href="/what-works">What has worked</a>. Spot an error? <a href="/feedback">Report it</a>.</p></section>`;
 
-  const behind = cmp ? cmp.rows.filter(r => r.gap > 0.15).sort((a, b) => b.gap - a.gap).map(r => r.label.toLowerCase()) : [];
-  const ahead = cmp ? cmp.rows.filter(r => r.gap < -0.15).sort((a, b) => a.gap - b.gap).map(r => r.label.toLowerCase()) : [];
+  const higher = cmp ? cmp.rows.filter(r => r.raw > 0.15).sort((a, b) => b.raw - a.raw).map(r => r.label.toLowerCase()) : [];
+  const lower = cmp ? cmp.rows.filter(r => r.raw < -0.15).sort((a, b) => a.raw - b.raw).map(r => r.label.toLowerCase()) : [];
   return layout({
     title: `How ${county.name}, ${S} compares: similar counties, state rankings and county finances · County Commons`,
     current: '/compare', body, county,
-    description: `${county.name}, ${S} beside ${cmp ? cmp.peers : 'similar'} counties like it${ahead.length ? ` — ahead on ${ahead.slice(0, 2).join(' and ')}` : ''}${behind.length ? `, behind on ${behind.slice(0, 2).join(' and ')}` : ''} — plus its rank in ${S} and its county reserve, all from public data.`
+    description: `${county.name}, ${S} beside ${cmp ? cmp.peers : 'similar'} counties like it${higher.length ? ` — higher on ${higher.slice(0, 2).join(' and ')}` : ''}${lower.length ? `, lower on ${lower.slice(0, 2).join(' and ')}` : ''} — plus its rank in ${S} and its county reserve, all from public data.`
   });
 }
 

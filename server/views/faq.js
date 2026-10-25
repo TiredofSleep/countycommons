@@ -92,7 +92,7 @@ function faqItems(d) {
     if (H) {
       const mhi = nrec.health && nrec.health['Median Household Income'];
       add(`How much is rent in ${nrec.name}?`,
-        `HUD's fair market rent for fiscal ${nrec.housing.fy}: <b>$${H.rent[2].toLocaleString('en-US')} a month</b> for a two-bedroom, $${H.rent[1].toLocaleString('en-US')} for one bedroom, $${H.rent[3].toLocaleString('en-US')} for three — rent plus utilities for a modest unit${nrec.housing.areas.length > 1 ? `, in ${esc(H.area)}` : ''}. Paying the two-bedroom rent with 30% of income takes about $${(Math.round(H.rent[2] * 40 / 100) * 100).toLocaleString('en-US')} a year${mhi ? `; the median household earns about $${mhi.toLocaleString('en-US')}` : ''}. <a href="/atlas#housing">Every size, and the change from last year</a>.`);
+        `HUD's fair market rent for fiscal ${nrec.housing.fy}: <b>$${H.rent[2].toLocaleString('en-US')} a month</b> for a two-bedroom, $${H.rent[1].toLocaleString('en-US')} for one bedroom, $${H.rent[3].toLocaleString('en-US')} for three — rent plus utilities for a modest unit${nrec.housing.areas.length > 1 ? `, in ${esc(H.area)}` : ''}. Under <a href="https://www.hud.gov/program_offices/comm_planning/affordablehousing/" rel="noopener">HUD's 30%-of-income affordability standard</a>, the two-bedroom rent corresponds to an income of about $${(Math.round(H.rent[2] * 40 / 100) * 100).toLocaleString('en-US')} a year${mhi ? `; the median household earns about $${mhi.toLocaleString('en-US')}` : ''}. <a href="/atlas#housing">Every size, and the change from last year</a>.`);
     }
     // Jail spending, property tax, unemployment, the federal audit and libraries,
     // from the national layers (the spending total only where we have no local budget).
@@ -112,7 +112,7 @@ function faqItems(d) {
   if (d.auditFindings && d.auditFindings.fiscal) {
     const F = d.auditFindings.fiscal, k = require('../lib/fiscal-block').facts(F);
     const m = (x) => (x < 0 ? '−$' : '$') + Math.abs(Math.round(x)).toLocaleString('en-US');
-    add(`Is ${c.name} in financial trouble?`,
+    add(`What do the state auditors' five-year figures show for the ${c.name} general fund?`,
       `Here are the state auditors' own five-year figures, without a verdict: the general fund's year-end balance went from ${m(F.balance[F.years.length - 1])} (${k.from}) to ${m(F.balance[0])} (${k.to}), and spending was more than revenue in ${k.short.length} of ${F.years.length} years.${k.months !== null ? ` At ${k.to} spending, that balance covers about ${k.months.toFixed(1)} months.` : ''} <a href="/audits#fiscal">The year-by-year table and what the auditors found</a>.`);
   }
   const docs = seo.hasBudget(d) ? seo.sourceDocs(d) : d.documents.documents.filter(x => x.status === 'ingested');

@@ -14,7 +14,7 @@ function schools(c, N) {
   return `
 <section id="schools">
 <h2>Public schools <span class="sub">— district budgets, fiscal ${esc(s.year)}</span></h2>
-<p>${s.districts.length} school district${s.districts.length === 1 ? ' has its' : 's have their'} office in ${esc(c.name)}. School taxes are usually the largest part of a property tax bill.</p>
+<p>${s.districts.length} school district${s.districts.length === 1 ? ' has its' : 's have their'} office in ${esc(c.name)}.</p>
 ${s.districts.slice(0, 8).map(d => `
 <div class="issue" style="display:block">
   <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap"><b>${esc(d.name)}</b><span class="num">${num(d.enroll)} students</span></div>
@@ -71,7 +71,7 @@ function bridges(c) {
   return `
 <section id="bridges">
 <h2>Bridges <span class="sub">— condition of every public bridge, ${esc(b.year)}</span></h2>
-<p><b>${num(b.total)}</b> bridges in ${esc(c.name)}: ${num(b.good)} in good condition, ${num(b.fair)} fair, and <b>${num(b.poor)} poor</b> (${(b.poor / b.total * 100).toFixed(1)}%). “Poor” means a main part — the deck, the beams, or the supports — is rated 4 or lower on the federal 0–9 scale. It doesn't mean unsafe to drive; unsafe bridges are closed.</p>
+<p><b>${num(b.total)}</b> bridges in ${esc(c.name)}: ${num(b.good)} in good condition, ${num(b.fair)} fair, and <b>${num(b.poor)} poor</b> (${(b.poor / b.total * 100).toFixed(1)}%). “Poor” means a main part — the deck, the beams, or the supports — is rated 4 or lower on the federal 0–9 scale. (<a href="https://www.fhwa.dot.gov/bridge/britab.cfm" rel="noopener">FHWA’s definition</a>).</p>
 ${b.worst.length ? `<h3 style="margin-top:10px">Busiest bridges rated poor</h3><table class="plain"><tbody>${b.worst.map(w => `<tr><td>${esc(w.road)}<br><span class="soft" style="font-size:12px">over ${esc(w.over)}${w.built ? ` · built ${w.built}` : ''}</span></td><td class="num">${num(w.adt)} vehicles a day</td></tr>`).join('')}</tbody></table>` : ''}
 <p class="src" style="max-width:none">Source: <a href="https://www.fhwa.dot.gov/bridge/nbi.cfm" rel="noopener">Federal Highway Administration, National Bridge Inventory</a> (${esc(b.year)} submission). Includes state, county and city bridges.</p>
 </section>`;

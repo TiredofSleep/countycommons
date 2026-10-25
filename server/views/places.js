@@ -23,7 +23,7 @@ function placesPage(data, index) {
 
   const body = `
 <header class="page">
-  <div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · where the money really is</div>
+  <div class="eyebrow">${esc(county.name)}, ${esc(county.state)} · city and town budgets</div>
   <h1>The cities and towns of ${esc(county.name.replace(/ County$/, ''))}</h1>
   <div class="src">${esc(index.note || '')}</div>
 </header>
@@ -39,12 +39,12 @@ ${ingested.map(p => `<a class="issue" style="display:block;text-decoration:none;
 <thead><tr><th>Place</th><th>Type</th><th class="num">Residents${index.pop_year ? ` (${esc(index.pop_year)})` : ' (2020)'}</th><th>Budget</th></tr></thead>
 <tbody>${places.map(row).join('')}</tbody>
 </table>
-<p class="src">${esc(index.pop_note || 'Populations are the 2020 U.S. Census.')} More cities and towns — and more ingested budgets — are being added. Want yours walked next? <a href="/priorities">Say so on the priorities board</a>.</p>
+<p class="src">${esc(index.pop_note || 'Populations are the 2020 U.S. Census.')} More cities and towns — and more ingested budgets — are being added. To ask for a city or town to be added, see <a href="/petitions">petitions</a>.</p>
 </section>`;
 
   return layout({
     title: `Cities & towns — ${county.platform_name}`, current: '/places', body, county,
-    description: `The cities and towns of ${county.name}, ${county.state} — where the real budgets live. Populations sourced, budgets linked, some walkable line-by-line.`
+    description: `The cities and towns of ${county.name}, ${county.state} — city and town budgets by department. Populations sourced, budgets linked, some walkable line-by-line.`
   });
 }
 
@@ -114,7 +114,7 @@ ${depts.map(bar).join('')}
 </section>
 
 ${(m.facts && m.facts.length) ? `<section>
-<h2>Worth knowing</h2>
+<h2>Notes on this budget</h2>
 <ul style="max-width:70ch;padding-left:22px">${m.facts.map(fact).join('')}</ul>
 </section>` : ''}
 

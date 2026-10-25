@@ -45,7 +45,7 @@ function siteMap(county, current) {
       county && county.has_mybill ? ['/mybill', 'Your tax bill, explained'] : null,
       muni ? ['/places', 'Cities & towns'] : null,
       county && county.has_taxes_debt ? ['/taxes', 'Taxes & debt'] : null,
-      ['/grants', 'Grants — money we could go get'],
+      ['/grants', 'Grants and loans'],
       ['/vendors', 'Who gets paid'],
       ['/audits', 'What the auditors reported'],
       ['/verify', 'The receipt — arithmetic checked'],
@@ -55,13 +55,13 @@ function siteMap(county, current) {
       ['/guide', 'The plain-words tour']
     ]],
     ['Public needs', [
-      ['/water', 'Our water'],
-      ['/justice', 'Jails & prisons — from holding to building'],
-      ['/surveillance', 'Who’s watching — cameras, plate readers, the rules'],
+      ['/water', 'Drinking water'],
+      ['/justice', 'Jails and prisons'],
+      ['/surveillance', 'Cameras and plate readers — what’s in use and the rules'],
       ['/offices', 'Who to call — county and state offices'],
       ['/atlas', 'By the numbers — schools, health, disaster risk, bridges, grants'],
       ['/compare', 'How it compares — beside similar counties and the rest of the state'],
-      ['/what-works', 'What has worked — how the county compares, and options with a track record'],
+      ['/what-works', 'What evaluations found — approaches other places have measured'],
       ['/help', 'Find help']
     ]],
     ['Dead ends & open questions', [
@@ -69,36 +69,34 @@ function siteMap(county, current) {
       ['/calendar', 'The calendar'],
       ['/coverage', 'How complete is this county?']
     ]],
-    ['Research for a better county', [
-      county && county.has_whatif ? ['/whatif', 'What if we saved?'] : null,
-      county && county.has_taxlab ? ['/taxlab', 'Tax lab — change the taxes'] : null,
-      county && county.has_commonwealth ? ['/commonwealth', 'Commonwealth — our own money'] : null,
-      ['/receipts', 'Receipts by rails'],
-      ['/sovereignty', 'Food sovereignty'],
-      ['/growops', 'Grow-ops'],
-      ['/engine', 'The food flywheel'],
-      ['/commons', 'The two pots'],
-      ['/feed', 'Feeding the county'],
-      ['/frontier', 'The growing frontier'],
+    ['Research and background', [
+      county && county.has_whatif ? ['/whatif', 'Savings scenarios'] : null,
+      county && county.has_taxlab ? ['/taxlab', 'Tax scenarios'] : null,
+      county && county.has_commonwealth ? ['/commonwealth', 'Public money on deposit'] : null,
+      ['/receipts', 'How governments publish payments'],
+      ['/sovereignty', 'Local food production — the numbers'],
+      ['/growops', 'Small growing systems — what they produce'],
+      ['/engine', 'How local food systems are funded'],
+      ['/feed', 'Land and labor for a county’s food'],
+      ['/frontier', 'Newer growing methods — results and failures'],
       ['/almanac', 'The grower’s almanac'],
-      ['/blueprint', 'The $400K blueprint'],
       ['/research', 'The research shelf'],
-      ['/cases', 'The precedents']
+      ['/cases', 'What other places did']
     ]],
     ['The wider network', [
       ['/counties', 'All counties'],
       cmp ? ['/compare/counties', 'How counties compare'] : null,
       cmp ? ['/compare/spending', 'Spending vs. neighbors'] : null,
       ['/kindred', 'Kindred work'],
-      ['/field', 'Where we sit in the field']
+      ['/field', 'Similar civic projects']
     ]],
     ['How to trust this', [
-      ['/stance', 'Where we stand'],
+      ['/stance', 'How this site works'],
       ['/never', 'What we will never do'],
       ['/security', 'How this is secured'],
-      ['/traffic', 'The traffic log'], ['/building', 'Still building — what’s new, and fixes readers sent'], ['/feedback', 'Help keep this honest — correct or add something'],
+      ['/traffic', 'The traffic log'], ['/building', 'Still building — what’s new, and fixes readers sent'],
       ['/story', 'Our story'],
-      ['/feedback', 'Report a problem']
+      ['/feedback', 'Correct or add something']
     ]]
   ];
   const col = ([heading, items]) => `<div style="min-width:170px;flex:1">
@@ -153,8 +151,8 @@ function layout({ title, current, body, county, description, jsonld }) {
   const ctaBand = noCta ? '' : `
 <aside style="border:2px solid var(--ink);background:var(--card);padding:16px 18px;margin:26px 0 0;display:flex;gap:14px;flex-wrap:wrap;align-items:center;justify-content:space-between">
   <div style="min-width:220px;flex:1">
-    <div style="font-family:var(--mono);font-weight:600;font-size:15px">Want something changed?</div>
-    <div class="src" style="margin-top:3px;max-width:52ch">Sign or start a petition to ${esc(county.name)} officials — or your state's, or Congress. At its goal it's delivered at a public meeting, and the answer is posted here. Free, no account.</div>
+    <div style="font-family:var(--mono);font-weight:600;font-size:15px">Petitions</div>
+    <div class="src" style="margin-top:3px;max-width:52ch">Residents' requests to ${esc(county.name)} officials, their state, or Congress — each one says who started it. When a petition reaches its goal it's delivered, and any answer is posted here. Free, no account.</div>
   </div>
   <a href="/petitions" style="font-family:var(--mono);font-size:15px;font-weight:600;padding:14px 22px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);text-decoration:none;white-space:nowrap">Petitions →</a>
 </aside>`;

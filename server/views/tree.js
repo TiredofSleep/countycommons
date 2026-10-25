@@ -76,10 +76,10 @@ function treePage(data, opts) {
 </header>
 
 ${o.hasPlaces ? `<div class="issue" style="display:block;border-left:3px solid var(--accent)">
-  <b>The real money is in your city or town.</b> <span class="src">With no county government here, the budgets that shape daily life — schools, police, roads, trash — are municipal. <a href="/places">Browse every city and town →</a>, and walk the ones we've ingested line by line.</span>
+  <b>City, town and school budgets.</b> <span class="src">With no county government here, schools, police, roads and trash are funded through city, town and school budgets. <a href="/places">Browse every city and town →</a></span>
 </div>` : ''}
 ${budget.meta.grand_total > 0 ? `<div class="issue" style="display:block;border-left:3px solid var(--accent)">
-  <b>Now you've seen it — say what matters.</b> <span class="src">You don't write the budget; the people you elected do. But this is the record they answer to. Tell them what to lean into, or what to take a fresh look at, and why. <a href="/priorities">Set the priorities</a>.</span>
+  <b>Petitions about this budget.</b> <span class="src">Residents can post a petition to the officials who set this budget: <a href="/petitions">petitions →</a></span>
 </div>` : ''}
 
 <div class="bar">
@@ -89,7 +89,7 @@ ${budget.meta.grand_total > 0 ? `<div class="issue" style="display:block;border-
   ${legendNote}
 </div>
 
-${section('Where it comes from', '— the thinner half of the record', 'revenue')}
+${section('Where it comes from', '— projected revenue, as far as the ordinance states it', 'revenue')}
 ${section('Where it goes', `— ${money(budget.meta.grand_total)} appropriated`, 'appropriations')}
 ${section('Beside the county', '— separate governments, separate ledgers', 'adjacent')}`;
 
