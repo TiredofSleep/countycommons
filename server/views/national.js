@@ -59,7 +59,7 @@ ${jsonld ? ld(jsonld) : ''}
 <nav class="site" aria-label="Site"><a href="/">County Commons</a><a href="/us">Every county in the U.S.</a></nav>
 ${body}
 ${honestBand(canonical)}
-<footer><b>County Commons is an independent, citizen-built civic project. It is not a government website</b> and has no affiliation with any government body. It computes and cites public records and never takes sides. A gap means "not gathered yet," never "hidden." Spot an error? brayden.ozark@gmail.com.</footer>
+<footer><b>County Commons is an independent, citizen-built civic project. It is not a government website</b> and has no affiliation with any government body. It computes and cites public records and never takes sides. A gap means "not gathered yet," never "hidden." Spot an error? brayden.ozark@gmail.com. Free to copy: <a href="/us/license">data under CC BY 4.0, code under MIT</a> · <a href="/us/copy">copy this for your county</a>.</footer>
 </div></body></html>`;
 }
 
@@ -242,7 +242,7 @@ function usPage() {
 
 function sitemapUrls() {
   const N = nat();
-  const out = ['https://countycommons.us/us', 'https://countycommons.us/us/what-works'];
+  const out = ['https://countycommons.us/us', 'https://countycommons.us/us/what-works', 'https://countycommons.us/us/copy', 'https://countycommons.us/us/license'];
   for (const st of Object.keys(N.byState)) {
     out.push(`https://countycommons.us/us/${st.toLowerCase()}`);
     for (const c of N.byState[st]) out.push(`https://countycommons.us/us/${st.toLowerCase()}/${c.slug}`);
@@ -488,4 +488,15 @@ function petitionSitemapUrls() {
   return out;
 }
 
-module.exports = { petitionsDirectory, sharedRollupPage, petitionSitemapUrls, petitionUrl, matchCounty, countyByGeoid, petitionsBlock, usPetitionPage, countyName, feedbackPage, buildingPage, countyPage, statePage, usPage, whatWorksPage, sitemapUrls };
+
+// The copy-it and license pages, on the national pages (links point at national routes).
+function docPage(file, slug, description) {
+  const md = fs.readFileSync(path.join(ROOT, file), 'utf8');
+  const title = (md.match(/^#\s+(.+?)\s*$/m) || [])[1] || slug;
+  const html = require('../lib/md').mdToHtml(md)
+    .replace(/href="\/feedback/g, 'href="/us/feedback').replace(/href="\/copy"/g, 'href="/us/copy"')
+    .replace(/href="\/license"/g, 'href="/us/license"').replace(/href="\/never"/g, 'href="https://clarkar.countycommons.us/never"');
+  return page({ title: title + ' · County Commons', description, canonical: 'https://countycommons.us/us/' + slug, body: '<div style="max-width:72ch">' + html + '</div>' });
+}
+
+module.exports = { docPage, petitionsDirectory, sharedRollupPage, petitionSitemapUrls, petitionUrl, matchCounty, countyByGeoid, petitionsBlock, usPetitionPage, countyName, feedbackPage, buildingPage, countyPage, statePage, usPage, whatWorksPage, sitemapUrls };

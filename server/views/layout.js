@@ -210,6 +210,7 @@ ${ctaBand}
 ${esc(county.platform_name)} is a free civic transparency project for ${esc(county.name)}, ${esc(county.state)}.
 It computes and cites; it never takes sides. A dead end means "not yet ingested and navigable," never "hidden."
 Every page is one click away in the <b>🗺 Every page</b> map at the top. ${esc(county.sponsor_line)}.${corrections}
+<br><br>Free to copy: <a href="/license">data and writing under CC BY 4.0, code under MIT</a> · <a href="/copy">copy this for your county</a>.
 </footer>
 </div>
 </body>

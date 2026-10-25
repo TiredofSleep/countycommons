@@ -119,6 +119,8 @@ app.use((req, res, next) => {
     }
     // Help keep the national pages honest: their own drop-box and fix log.
     if (p === '/us/building' && req.method === 'GET') return res.send(require('./views/national').buildingPage());
+    if (p === '/us/copy' && req.method === 'GET') return res.send(require('./views/national').docPage('COPY-THIS.md', 'copy', 'County Commons is free to copy: ask for a full site for your county, or run your own copy from the open code and data.'));
+    if (p === '/us/license' && req.method === 'GET') return res.send(require('./views/national').docPage('DATA-LICENSE.md', 'license', 'County Commons data and writing are free to reuse under CC BY 4.0, and the code under MIT. Residents’ personal information is never included.'));
     if (p === '/us/feedback') {
       const nv = require('./views/national');
       if (req.method === 'GET') return res.send(nv.feedbackPage({ from: safePath(req.query.from || ''), kind: String(req.query.kind || '').slice(0, 20) }));
@@ -211,7 +213,7 @@ app.get(['/sitemap.xml', '/sitemap-index.xml'], (req, res) => {
   if (r.action === 'serve' && directory.isFeatured(r.key)) {
     let cfg = {}; try { cfg = load(r.key).county; } catch (e) {}
     const base = `https://${host}`;
-    const paths = ['/', '/tour', '/budget', '/petitions', '/building', '/issues', '/outcomes', '/help', '/calendar', '/participate', '/docket', '/documents', '/vendors', '/audits', '/verify', '/methodology', '/guide', '/stance', '/story', '/counties', '/cases', '/research', '/receipts', '/food', '/sovereignty', '/engine', '/almanac', '/feed', '/frontier', '/growops', '/water', '/justice', '/surveillance', '/offices', '/atlas', '/compare', '/what-works', '/coverage', '/elections', '/turnout', '/grants', '/kindred', '/field', '/never', '/security', '/traffic'];
+    const paths = ['/', '/tour', '/budget', '/petitions', '/building', '/issues', '/outcomes', '/help', '/calendar', '/participate', '/docket', '/documents', '/vendors', '/audits', '/verify', '/methodology', '/guide', '/stance', '/story', '/counties', '/cases', '/research', '/receipts', '/food', '/sovereignty', '/engine', '/almanac', '/feed', '/frontier', '/growops', '/water', '/justice', '/surveillance', '/offices', '/atlas', '/compare', '/what-works', '/coverage', '/elections', '/turnout', '/grants', '/kindred', '/field', '/never', '/security', '/traffic', '/copy', '/license'];
     if (cfg.has_municipalities) paths.push('/places');
     if (cfg.has_compare) paths.push('/compare/counties', '/compare/spending');
     if (cfg.has_taxes_debt) paths.push('/taxes');
@@ -781,6 +783,8 @@ const { trafficPage } = require('./views/traffic');
 app.get('/traffic', (req, res) => res.send(trafficPage(load(req.tenantKey), traffic.summary(), tenant.registry())));
 
 app.get('/security', charterPage('SECURITY.md', null, 'The platform\'s public threat model and integrity protocols, including the hash-chained activity log anyone can verify.'));
+app.get('/copy', charterPage('COPY-THIS.md', null, 'County Commons is free to copy: ask for a full site for your county, or run your own copy from the open code and data.'));
+app.get('/license', charterPage('DATA-LICENSE.md', null, 'County Commons data and writing are free to reuse under CC BY 4.0, and the code under MIT. Residents’ personal information is never included.'));
 app.get('/never', charterPage('NEVER.md', null, 'What this project will never do — written down before anyone was watching, on purpose.'));
 app.get('/field', charterPage('docs/FIELD.md', '/field', 'Similar civic projects: what other civic-technology and participation organizations do, with links.'));
 app.get('/receipts', charterPage('docs/RECEIPTS-BY-RAILS.md', '/receipts', 'How governments publish payments: check registers, open checkbooks and purchase-card data in places that publish them, with links and numbers.'));
