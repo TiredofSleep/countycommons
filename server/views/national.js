@@ -73,7 +73,7 @@ function countyPage(st, slug) {
   const canonical = `https://countycommons.us/us/${st.toLowerCase()}/${slug}`;
   const el = c.st && N.elections && N.elections[st];
   const w = c.water, j = c.jail;
-  const QA = require('../lib/national-local').faq(c);
+  const QA = require('../lib/state-portals').faq(c).concat(require('../lib/national-local').faq(c));
   const facts = [
     c.pop2024 ? `<b>${num(c.pop2024)}</b> people (2024 Census estimate${c.pop2020 ? `, ${pct(c.pop2024, c.pop2020)} since 2020` : ''})` : '',
     c.land_sqmi ? `${num(c.land_sqmi)} square miles of land${c.pop2024 ? ` · ${num(c.pop2024 / c.land_sqmi)} people per square mile` : ''}` : ''
@@ -90,6 +90,7 @@ function countyPage(st, slug) {
 ${c.site ? `<section><div class="issue" style="display:block;border-left:3px solid var(--accent)"><b>${esc(c.name)} has a full County Commons site.</b> <span class="src">The budget line by line, your tax bill explained, audits, local offices and elections: <a href="https://${esc(c.site)}/">${esc(c.site)} →</a></span></div></section>` : ''}
 ${RK.keyFacts(c, N)}
 ${petitionsBlock(S.name, `/us/${st.toLowerCase()}/${slug}`, c.name, c.geoid, c.site)}
+${require('../lib/state-portals').countyBlock(c)}
 ${require('../lib/national-local').finance(c)}
 ${require('../lib/national-local').audit(c)}
 ${require('../lib/national-local').proptax(c)}
@@ -135,7 +136,7 @@ ${RK.neighbors(c, N)}
 
   return page({
     title: `${place}: county spending, property tax, audit, jobs, schools, health, ARPA and voting · County Commons`,
-    description: (() => { const sm = require('../lib/national-local').summary(c); return `${place}${c.pop2024 ? ` (${num(c.pop2024)} people)` : ''}: ${sm ? sm + ' — plus ' : ''}schools, health, water, the jail, petitions and how to vote, from official public records with sources.`; })(),
+    description: (() => { const sm = [require('../lib/state-portals').summary(c), require('../lib/national-local').summary(c)].filter(Boolean).join(', '); return `${place}${c.pop2024 ? ` (${num(c.pop2024)} people)` : ''}: ${sm ? sm + ' — plus ' : ''}schools, health, water, the jail, petitions and how to vote, from official public records with sources.`; })(),
     canonical, body,
     jsonld: [{ '@context': 'https://schema.org', '@type': 'AdministrativeArea', name: place, identifier: c.geoid,
       containedInPlace: { '@type': 'State', name: S.name }, url: canonical,
@@ -192,6 +193,7 @@ ${[['From other governments (mostly federal aid)', 'Intergovernmental revenue'],
   ${I.pop2024 ? `<p style="margin-top:10px"><b>${num(I.pop2024)}</b> people (2024 Census estimate${I.pop2020 ? `, ${pct(I.pop2024, I.pop2020)} since 2020` : ''}) · ${list.length} counties</p>` : ''}
 </header>
 ${money}
+${require('../lib/state-portals').stateBlock(st, list)}
 <section id="government">
 <h2>State government <span class="sub">— official sites</span></h2>
 ${g ? `<p>${g.website ? `Official state website: <a href="${esc(g.website)}" rel="noopener">${esc(g.website.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, ''))}</a>` : ''}${g.governor ? `<br>Governor: <a href="${esc(g.governor.url)}" rel="noopener">${esc(g.governor.name)}</a>` : ''}</p>${agencies}<p class="src">Source: <a href="${esc(g.src)}" rel="noopener">USA.gov state government directory</a>.</p>` : `<p>Not gathered yet — not hidden.</p>`}
