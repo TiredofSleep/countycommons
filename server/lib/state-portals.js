@@ -9,7 +9,7 @@ const { esc } = require('./corpus');
 const { read } = require('./national-local');
 
 const PORTALS = {
-  ID: { file: 'idaho.json', fy: (y) => `Oct ${y - 1} – Sep ${y}` }
+  ID: { file: 'idaho.json', trails: 'idaho-trails.json', fy: (y) => `Oct ${y - 1} – Sep ${y}` }
 };
 
 const num = (x) => Math.round(x).toLocaleString('en-US');
@@ -34,6 +34,36 @@ function statewide(D) {
   return statewideCache.get(D);
 }
 const docLinks = (docs) => (docs || []).map(d => `<a href="${esc(d.url)}" rel="noopener">${esc(KIND[d.kind] || d.kind.toLowerCase())}</a>`).join(' · ');
+
+// The money trail: the county's own budget PDF read fund by fund, each number
+// linked to the page it came from, and the sum checked against the total the
+// county reported to the Controller. Built from the filed PDFs (see
+// data/national/idaho-trails.json, "how" field).
+function trailBlock(c, r, P) {
+  const T = P.trails && read(P.trails); const t = T && T.counties && T.counties[c.geoid];
+  if (!t || !t.funds || !t.funds.length) return '';
+  const href = (pg) => esc(encodeURI(t.url) + '#page=' + pg);
+  const pg = (n) => `<a href="${href(n)}" rel="noopener" class="soft" style="font-size:12px">p.${n}</a>`;
+  const ctl = (r.years[t.fy] || {}).expense_budget;
+  const match = ctl && Math.abs(t.total - ctl) / ctl <= 0.005;
+  const check = !ctl ? '' : match
+    ? `<p><b>✓ It adds up.</b> These ${t.funds.length} funds total <b>${big(t.total)}</b>, the same as the ${big(ctl)} the county reported to the State Controller${t.total === ctl ? '' : ' (within half a percent)'}.</p>`
+    : `<p><b>These ${t.funds.length} funds total ${big(t.total)}.</b> The county reported ${big(ctl)} to the State Controller, a difference of ${big(Math.abs(t.total - ctl))}.${t.controller_note ? ' ' + esc(t.controller_note) : ''}</p>`;
+  const funds = t.funds.map(f => {
+    const share = t.total ? Math.round(f.amount / t.total * 1000) / 10 : 0;
+    const head = `<b>${esc(f.name)}</b> <span class="num">${big(f.amount)}</span> <span class="soft" style="font-size:12.5px">· ${share}%</span>`;
+    if (!f.depts || !f.depts.length) return `<div style="margin:4px 0;padding-left:18px">${head} ${pg(f.page)}</div>`;
+    return `<details style="margin:4px 0"><summary>${head} <span class="soft" style="font-size:12.5px">· ${f.depts.length} offices and departments</span></summary>
+<div style="overflow-x:auto;max-width:100%"><table class="plain"><tbody>${f.depts.slice().sort((a, b) => b.amount - a.amount).map(d => `<tr><td>${esc(d.name)}</td><td class="num">${big(d.amount)}</td><td class="src">${pg(d.page)}</td></tr>`).join('')}</tbody></table></div>${f.depts_note ? `<p class="src" style="max-width:none">${esc(f.depts_note)}</p>` : ''}</details>`;
+  }).join('');
+  const notes = [].concat(t.notes || [], t.corrections || []);
+  return `
+<h3 id="money-trail" style="margin-top:16px">Follow the money: fiscal ${t.fy}, fund by fund <span class="sub">— from the county’s own budget filing</span></h3>
+${check}
+<p>Open a fund to see the offices and departments inside it. Each page number opens that page of the official budget.${t.basis === 'proposed' ? ' <b>This filing shows the proposed budget</b>; the adopted figures may differ.' : ''}</p>
+${funds}
+<p class="src" style="max-width:none">Source: <a href="${esc(encodeURI(t.url))}" rel="noopener">${esc(t.title || c.name + ' fiscal ' + t.fy + ' budget')}</a>, filed with the Idaho State Controller.${t.fy !== latestBudget(r) ? ` This is the fiscal ${t.fy} budget, the latest one the county filed as a document.` : ''}${notes.length ? ' ' + notes.map(esc).join(' ') : ''} Read from the filed PDF by County Commons${t.ocr ? ' (a scanned document, read with text recognition and checked against its own column totals)' : ''}; if you find a number that doesn’t match the page, use the box below to tell us.</p>`;
+}
 
 function countyBlock(c) {
   const x = county(c); if (!x) return '';
@@ -70,6 +100,7 @@ ${g.l.map(d => `<tr><td>${esc(d.name)}</td><td class="num">${d.budget ? big(d.bu
 <h2>${esc(c.name)}’s own budget <span class="sub">— as reported to the Idaho State Controller</span></h2>
 ${lead}
 <div style="overflow-x:auto;max-width:100%"><table class="plain"><thead><tr><th>Fiscal year</th><th class="num">Budgeted to spend</th><th class="num">Actually spent</th><th class="num">Actually took in</th><th>Official documents</th></tr></thead><tbody>${rows}</tbody></table></div>
+${trailBlock(c, r, P)}
 ${districts}
 <p class="src" style="max-width:none">Source: <a href="${esc(r.url)}" rel="noopener">${esc(D.source.label)}</a>, retrieved ${esc(D.retrieved)}. Idaho counties’ fiscal year runs October 1 to September 30. Counties report each year’s numbers to the Controller, who posts them in January; a dash means nothing was reported for that year. “Budgeted” is the adopted budget for all funds; “actually spent” is what the county reported after the year closed. These are the county’s own figures, so they won’t match the Census Bureau’s national categories above.</p>
 </section>`;
