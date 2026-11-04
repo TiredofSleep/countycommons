@@ -98,7 +98,7 @@ function controls(base, scope, mode, item) {
 
 function comparePage(st, slug, q) {
   const N = require('./national');
-  const nat = JSON.parse(require('fs').readFileSync(require('path').join(__dirname, '..', '..', 'data', 'national', 'counties.json'), 'utf8'));
+  const nat = LN.index().nat; // cached with the budget lines
   const c = nat.counties.find(x => x.st === st && x.slug === slug); if (!c) return null;
   const S = (nat.states[st] || {}).name || st;
   const scope = SCOPES[q.with] ? q.with : 'size-state';
