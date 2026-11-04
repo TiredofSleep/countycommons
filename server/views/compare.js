@@ -105,6 +105,7 @@ ${same.length ? `<p><b>About the same on ${same.length}:</b> ${same.map(r => esc
 <header class="page">
   <div class="eyebrow">${esc(county.name)}, ${esc(S)} · how it compares</div>
   <h1>How ${esc(county.name)} compares</h1>
+  ${c ? `<p style="margin:6px 0 10px"><a href="https://countycommons.us/us/${esc(c.st.toLowerCase())}/${esc(c.slug)}/compare" style="display:inline-block;font-family:var(--mono);font-size:14px;font-weight:600;padding:9px 16px;border:1.5px solid var(--ink);text-decoration:none">Line by line: every budget item and grant beside other counties →</a> <span class="soft" style="font-size:13px">your size in ${esc(S)} or the nation, your neighbors, your state or the whole country</span></p>` : ''}
   <div class="src">${esc(county.name)} measured against counties like it across the country, and against the other counties in ${esc(S)} — health, money, jobs, housing, the jail, bridges, people, schools and county finances. Every figure is computed from public data and cited; the differences are measured, not grades. For what other places have tried on each measure, see <a href="/what-works">what has worked</a>.</div>
 </header>
 ${sections.join('') || `<section><p>Comparison data for ${esc(county.name)} isn't matched yet — not gathered, never hidden.</p></section>`}

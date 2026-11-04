@@ -85,6 +85,7 @@ function countyPage(st, slug) {
   <h1>${esc(place)}: public records at a glance</h1>
   <div class="src">What national public records say about ${esc(c.name)} — people, schools, health, drinking water, bridges, disaster risk, the jail, federal grants and how to vote — each with its source. ${c.site ? '' : `A full County Commons site (the budget line by line, your tax bill, audits, local offices) isn't built for ${esc(c.name)} yet — not gathered, never hidden.`}</div>
   ${facts.length ? `<p style="margin-top:10px">${facts.join('<br>')}</p>` : ''}
+  <p style="margin:12px 0 0"><a href="/us/${esc(st.toLowerCase())}/${esc(slug)}/compare" style="display:inline-block;font-family:var(--mono);font-size:14px;font-weight:600;padding:9px 16px;border:1.5px solid var(--ink);text-decoration:none">How ${esc(c.name)} compares →</a> <span class="soft" style="font-size:13px">grants, spending and every budget line, beside counties its size, its neighbors, its state or the nation</span></p>
 </header>
 
 ${c.site ? `<section><div class="issue" style="display:block;border-left:3px solid var(--accent)"><b>${esc(c.name)} has a full County Commons site.</b> <span class="src">The budget line by line, your tax bill explained, audits, local offices and elections: <a href="https://${esc(c.site)}/">${esc(c.site)} →</a></span></div></section>` : ''}
@@ -260,7 +261,7 @@ function sitemapUrls() {
   const out = ['https://countycommons.us/us', 'https://countycommons.us/us/what-works', 'https://countycommons.us/us/copy', 'https://countycommons.us/us/license'];
   for (const st of Object.keys(N.byState)) {
     out.push(`https://countycommons.us/us/${st.toLowerCase()}`);
-    for (const c of N.byState[st]) out.push(`https://countycommons.us/us/${st.toLowerCase()}/${c.slug}`);
+    for (const c of N.byState[st]) out.push(`https://countycommons.us/us/${st.toLowerCase()}/${c.slug}`, `https://countycommons.us/us/${st.toLowerCase()}/${c.slug}/compare`);
   }
   return out;
 }
@@ -514,4 +515,4 @@ function docPage(file, slug, description) {
   return page({ title: title + ' · County Commons', description, canonical: 'https://countycommons.us/us/' + slug, body: '<div style="max-width:72ch">' + html + '</div>' });
 }
 
-module.exports = { stateList, countyCount, docPage, petitionsDirectory, sharedRollupPage, petitionSitemapUrls, petitionUrl, matchCounty, countyByGeoid, petitionsBlock, usPetitionPage, countyName, feedbackPage, buildingPage, countyPage, statePage, usPage, whatWorksPage, sitemapUrls };
+module.exports = { page, stateList, countyCount, docPage, petitionsDirectory, sharedRollupPage, petitionSitemapUrls, petitionUrl, matchCounty, countyByGeoid, petitionsBlock, usPetitionPage, countyName, feedbackPage, buildingPage, countyPage, statePage, usPage, whatWorksPage, sitemapUrls };

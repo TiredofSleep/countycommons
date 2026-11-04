@@ -73,7 +73,7 @@ app.use((req, res, next) => {
     // through so they work at the apex; any other deep link falls back to the
     // flagship. This is why countycommons.us shows "select your county or city".
     const p = req.path;
-    if (p === '/enter' || p.startsWith('/gate') || p === '/health' || p === '/robots.txt' || /\.[a-z0-9]+$/i.test(p)) return next();
+    if (p === '/enter' || p.startsWith('/gate') || p === '/health' || p === '/robots.txt' || (/\.[a-z0-9]+$/i.test(p) && p !== '/us/compare/lines.csv')) return next();
     // Every petition in the country, searchable; and each shared ask, by state.
     if (req.method === 'GET' && /^\/us\/petitions\/?$/.test(p)) {
       const st = /^[a-z]{2}$/i.test(String(req.query.st || '')) ? String(req.query.st).toUpperCase() : '';
@@ -139,6 +139,18 @@ app.use((req, res, next) => {
         }, null, 2));
         res.send(nv.feedbackPage({ sent: safePath(b.page) || '/us' }));
       }));
+    }
+    // How a county compares: beside counties its size, its neighbors, its state
+    // or the nation — grants, Census categories and every budget line.
+    const usCmp = p.match(/^\/us\/([a-z]{2})\/([a-z0-9-]+)\/compare\/?$/);
+    if (usCmp && req.method === 'GET') {
+      traffic.note('__network__', req);
+      const html = require('./views/comparator').comparePage(usCmp[1].toUpperCase(), usCmp[2], { with: String(req.query.with || ''), per: String(req.query.per || ''), item: String(req.query.item || '').slice(0, 40) });
+      return html ? res.send(html) : res.status(404).send(gatePage('No county at that address.', '/'));
+    }
+    if (p === '/us/compare/lines.csv' && req.method === 'GET') {
+      res.type('text/csv; charset=utf-8').setHeader('Content-Disposition', 'inline; filename="county-budget-lines.csv"');
+      return res.send(require('./views/comparator').linesCsv());
     }
     // The national base template: every U.S. county at /us/<st>/<county>.
     const us = p.match(/^\/us(?:\/([a-z]{2}))?(?:\/([a-z0-9-]+))?\/?$/);
@@ -283,7 +295,7 @@ function findBlock(q) {
   if (q) {
     const row = (r) => r.kind === 'state'
       ? `<li style="margin:6px 0"><a href="${esc(r.path)}"><b>${esc(r.name)}</b></a> <span class="soft">— the whole state, and every county in it</span></li>`
-      : `<li style="margin:6px 0"><a href="${esc(r.path)}"><b>${esc(r.name)}, ${esc(r.stateName)}</b></a>${r.via ? ` <span class="soft">— ${esc(r.via)} is in this county</span>` : ''}${r.site ? ` · <a href="https://${esc(r.site)}/">full site</a>` : ''}</li>`;
+      : `<li style="margin:6px 0"><a href="${esc(r.path)}"><b>${esc(r.name)}, ${esc(r.stateName)}</b></a>${r.via ? ` <span class="soft">— ${esc(r.via)} is in this county</span>` : ''} · <a href="${esc(r.path)}/compare">how it compares</a>${r.site ? ` · <a href="https://${esc(r.site)}/">full site</a>` : ''}</li>`;
     found = results.length
       ? `<section aria-live="polite" style="margin:10px 0 0"><p class="src" style="margin:0">${results.length === 40 ? 'The first 40 matches' : results.length + ' match' + (results.length === 1 ? '' : 'es')} for “${esc(q)}”.${results.length > 8 ? ' Add your state to narrow it, like “' + esc(q) + ', ' + esc(results.find(r => r.kind === 'county').stateName) + '”.' : ''}</p><ul style="padding-left:18px;margin:6px 0">${results.map(row).join('')}</ul></section>`
       : `<section aria-live="polite" style="margin:10px 0 0"><p style="margin:0">No county or town matched “${esc(q)}”. Try just the county’s name, or pick your state below.</p></section>`;

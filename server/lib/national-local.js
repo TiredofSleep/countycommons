@@ -206,4 +206,4 @@ ${items.map(x => `<div class="issue" style="display:block"><b>${esc(x.q)}</b><p 
 }
 const faqLd = (items) => items.length ? { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: items.map(x => ({ '@type': 'Question', name: x.q, acceptedAnswer: { '@type': 'Answer', text: x.a } })) } : null;
 
-module.exports = { healthAccess, finance, audit, proptax, labor, libraries, read, opinionLine, faq, faqSection, faqLd, summary };
+module.exports = { PURPOSE, healthAccess, finance, audit, proptax, labor, libraries, read, opinionLine, faq, faqSection, faqLd, summary };
