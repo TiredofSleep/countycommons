@@ -227,6 +227,13 @@ ${require('./whatworks').fullBody(null, N)}`;
     canonical: 'https://countycommons.us/us/what-works', body });
 }
 
+// Every state with its county count, alphabetical (the opening page's state list).
+function stateList() {
+  const N = nat();
+  return Object.keys(N.byState).map(st => ({ st, name: (N.states[st] || {}).name || st, n: N.byState[st].length })).sort((a, b) => a.name.localeCompare(b.name));
+}
+function countyCount() { return nat().counties.length; }
+
 function usPage() {
   const N = nat();
   const sts = Object.keys(N.byState).sort((a, b) => (N.states[a] || {}).name.localeCompare((N.states[b] || {}).name));
@@ -236,6 +243,11 @@ function usPage() {
   <h1>Every state and county in the United States</h1>
   <div class="src">${num(N.counties.length)} counties and county equivalents, each with a page of national public records — population, drinking water, the county jail and how to vote — and ${N.counties.filter(c => c.site).length} with a full County Commons site — built out furthest for <a href="https://clarkar.countycommons.us/">Clark County, Arkansas</a>. It's for every county, and we build more for any county on request: <a href="/us/feedback?kind=request&from=/us">ask for yours</a>; the <a href="/us/building#requested">most-requested</a> go next. Each state has its own page too: what the state government collects and spends, its official offices, and how to vote. Pick a state.</div>
 </header>
+<form method="get" action="/" role="search" style="display:flex;gap:8px;flex-wrap:wrap;max-width:560px;margin:0 0 10px">
+  <label for="cc-find" style="flex-basis:100%;font-weight:600">Find your county</label>
+  <input id="cc-find" name="q" maxlength="80" placeholder="County or town, like “Arkadelphia”" style="font-size:16px;padding:10px 12px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink);flex:1;min-width:220px">
+  <button type="submit" style="font-family:var(--mono);font-size:15px;font-weight:600;padding:10px 18px;background:var(--ink);color:var(--paper);border:1.5px solid var(--ink)">Search</button>
+</form>
 <section><ul style="columns:3 160px;padding-left:18px">${sts.map(s => `<li><a href="/us/${esc(s.toLowerCase())}">${esc((N.states[s] || {}).name || s)}</a> <span class="soft" style="font-size:12px">${N.byState[s].length}</span></li>`).join('')}</ul></section>
 <section><p class="src">Sources: U.S. Census Bureau (population estimates, gazetteer), U.S. EPA SDWIS (public water systems), Vera Institute of Justice (jail data), and state election offices. Built ${esc(N.generated || '')}.</p></section>`;
   return page({ title: 'Every U.S. state and county: budgets, public records and voting · County Commons',
@@ -502,4 +514,4 @@ function docPage(file, slug, description) {
   return page({ title: title + ' · County Commons', description, canonical: 'https://countycommons.us/us/' + slug, body: '<div style="max-width:72ch">' + html + '</div>' });
 }
 
-module.exports = { docPage, petitionsDirectory, sharedRollupPage, petitionSitemapUrls, petitionUrl, matchCounty, countyByGeoid, petitionsBlock, usPetitionPage, countyName, feedbackPage, buildingPage, countyPage, statePage, usPage, whatWorksPage, sitemapUrls };
+module.exports = { stateList, countyCount, docPage, petitionsDirectory, sharedRollupPage, petitionSitemapUrls, petitionUrl, matchCounty, countyByGeoid, petitionsBlock, usPetitionPage, countyName, feedbackPage, buildingPage, countyPage, statePage, usPage, whatWorksPage, sitemapUrls };

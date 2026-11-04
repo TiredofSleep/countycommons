@@ -151,7 +151,7 @@ app.use((req, res, next) => {
     if (p === '/') {
       traffic.note('__network__', req); // count the landing + where it came from
       res.set('Content-Security-Policy', "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; frame-ancestors 'none'");
-      return res.send(gatePage(null, '/'));
+      return res.send(gatePage(null, '/', String(req.query.q || '').slice(0, 80).trim()));
     }
     return res.redirect(301, `https://${r.to}${req.originalUrl}`);
   }
@@ -266,9 +266,37 @@ function safeDest(next) {
 // you're in — no PIN needed to read (the site is public). Hosts enter a code to
 // edit their own county. A quick access code (1525) also opens the whole network.
 const directory = require('./lib/directory');
-function gatePage(msg, next) {
+// The finder on the opening page: a search box over every county and town in the
+// country, the results, and every state as a link. Works with no JavaScript.
+function findBlock(q) {
+  const N = require('./views/national');
+  const states = N.stateList();
+  const results = q ? require('./lib/search').search(q, 40) : [];
+  const box = `<form method="get" action="/" role="search" style="display:flex;gap:8px;flex-wrap:wrap;max-width:560px;margin:14px 0 4px">
+    <label for="cc-find" style="flex-basis:100%;font-weight:600">Find your county</label>
+    <input id="cc-find" name="q" value="${esc(q)}" maxlength="80" placeholder="County or town, like “Arkadelphia” or “Ada County, Idaho”" autocomplete="address-level2"
+      style="font-size:16px;padding:10px 12px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink);flex:1;min-width:220px">
+    <button type="submit" style="font-family:var(--mono);font-size:15px;font-weight:600;padding:10px 18px;background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);cursor:pointer">Search</button>
+  </form>
+  <p class="src" style="margin:0">Every one of the ${N.countyCount().toLocaleString('en-US')} counties in the United States has a page here: its budget where we have it, population, drinking water, the jail and how to vote.</p>`;
+  let found = '';
+  if (q) {
+    const row = (r) => r.kind === 'state'
+      ? `<li style="margin:6px 0"><a href="${esc(r.path)}"><b>${esc(r.name)}</b></a> <span class="soft">— the whole state, and every county in it</span></li>`
+      : `<li style="margin:6px 0"><a href="${esc(r.path)}"><b>${esc(r.name)}, ${esc(r.stateName)}</b></a>${r.via ? ` <span class="soft">— ${esc(r.via)} is in this county</span>` : ''}${r.site ? ` · <a href="https://${esc(r.site)}/">full site</a>` : ''}</li>`;
+    found = results.length
+      ? `<section aria-live="polite" style="margin:10px 0 0"><p class="src" style="margin:0">${results.length === 40 ? 'The first 40 matches' : results.length + ' match' + (results.length === 1 ? '' : 'es')} for “${esc(q)}”.${results.length > 8 ? ' Add your state to narrow it, like “' + esc(q) + ', ' + esc(results.find(r => r.kind === 'county').stateName) + '”.' : ''}</p><ul style="padding-left:18px;margin:6px 0">${results.map(row).join('')}</ul></section>`
+      : `<section aria-live="polite" style="margin:10px 0 0"><p style="margin:0">No county or town matched “${esc(q)}”. Try just the county’s name, or pick your state below.</p></section>`;
+  }
+  const grid = `<details style="margin:12px 0 0"${q ? '' : ' open'}><summary style="cursor:pointer;font-weight:600">Or pick your state</summary>
+    <ul style="columns:4 140px;padding-left:18px;margin:8px 0 0">${states.map(s => `<li><a href="/us/${esc(s.st.toLowerCase())}">${esc(s.name)}</a> <span class="soft" style="font-size:12px">${s.n}</span></li>`).join('')}</ul></details>`;
+  return box + found + grid;
+}
+
+function gatePage(msg, next, q) {
   const dest = safeDest(next);
   const groups = directory.byState();
+  const finder = findBlock(q || '');
   const list = groups.map(g => `
   <div style="margin:14px 0 0">
     <div class="eyebrow" style="margin:0 0 4px">${esc(g.state)}</div>
@@ -280,7 +308,7 @@ function gatePage(msg, next) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>County Commons — county and city budgets, taxes and elections, every number cited</title>
 <meta name="description" content="Free, nonpartisan civic research hub: county and city budgets line by line, property tax bills explained, elections and open records for ${directory.featured().length} places — every number cited to its source document, with CSV downloads.">
-<link rel="canonical" href="https://countycommons.us/">
+<link rel="canonical" href="https://countycommons.us/">${q ? '<meta name="robots" content="noindex">' : ''}
 <meta name="msvalidate.01" content="FFA249793035B911D0EEDEC5B9CD8803">
 <meta property="og:title" content="County Commons — public budgets, every number cited"><meta property="og:url" content="https://countycommons.us/"><meta property="og:type" content="website">
 <script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@graph': [
@@ -293,9 +321,10 @@ function gatePage(msg, next) {
   <div class="eyebrow">County Commons</div>
   <h1>Select your county or city</h1>
   <p class="src" style="max-width:60ch">Public budget transparency, county by county — every dollar traced to its source document, the arithmetic checked in the open. Pick a place to begin. <b>County Commons is an independent community project — not a government website.</b></p>
-  <p style="margin:2px 0 4px"><a href="/tour" style="display:inline-block;font-family:var(--mono);font-size:14px;font-weight:600;padding:9px 16px;border:1.5px solid var(--ink);background:var(--ink);color:var(--paper);text-decoration:none">▶ New here? Take the 2-minute tour</a></p>
-  <p class="src" style="margin:6px 0 0">Not listed? <a href="/us">Every county in the United States</a> has a page of public records — population, drinking water, the jail, and how to vote.</p>
   ${msg ? `<p class="src" style="color:var(--dead)">${esc(msg)}</p>` : ''}
+  ${finder}
+  <p style="margin:18px 0 4px"><a href="/tour" style="display:inline-block;font-family:var(--mono);font-size:14px;font-weight:600;padding:9px 16px;border:1.5px solid var(--ink);background:var(--ink);color:var(--paper);text-decoration:none">▶ New here? Take the 2-minute tour</a></p>
+  <h2 style="margin:26px 0 4px;font-size:19px">Full County Commons sites <span class="sub">— ${directory.featured().length} places with their budget traced line by line</span></h2>
   ${list || '<p class="src">No sites are published yet.</p>'}
   <details style="margin:22px 0 0;border-top:1px solid var(--rule);padding-top:12px">
     <summary style="cursor:pointer;font-size:13.5px;color:var(--accent)">Have a code? (hosts, or quick access)</summary>
