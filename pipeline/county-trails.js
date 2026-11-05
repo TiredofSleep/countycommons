@@ -45,7 +45,7 @@ for (const f of fs.readdirSync(path.join(dir, 'trail')).filter(f => f.endsWith('
   if (!/^https:\/\//.test(t.url || '')) { skipped.push(`${id}: no https source url`); continue; }
   out.counties[t.geoid] = {
     county: t.county, st: t.st, fy: Number(t.fy), fy_label: t.fy_label, basis: t.basis || 'adopted', title: t.title, url: t.url,
-    years_covered: Number(t.years_covered) || 1, scope: t.scope, grouped_by: t.grouped_by,
+    years_covered: Number(t.years_covered) || 1, page_anchor: t.page_anchor || undefined, scope: t.scope, grouped_by: t.grouped_by,
     stated_total: t.stated_total, stated_page: t.stated_page, stated_label: t.stated_label, total: Math.round(t.total * 100) / 100,
     funds: t.funds.slice().sort((a, b) => b.amount - a.amount).map(g => ({ name: g.name, amount: g.amount, page: g.page, depts: g.depts && g.depts.length ? g.depts.map(d => ({ name: d.name, amount: d.amount, page: d.page })) : undefined, depts_note: g.depts_note || undefined })),
     notes: t.notes && t.notes.length ? t.notes : undefined, corrections: t.corrections && t.corrections.length ? t.corrections : undefined,

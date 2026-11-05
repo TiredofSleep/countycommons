@@ -15,7 +15,7 @@ function get(c) { const T = read('county-trails.json'); return (T && T.counties 
 
 function block(c) {
   const t = get(c); if (!t || !t.funds || !t.funds.length) return '';
-  const href = (pg) => esc(enc(t.url) + '#page=' + pg);
+  const href = (pg) => esc(enc(t.url) + (t.page_anchor === 'pdf2htmlex' ? '#pf' + Number(pg).toString(16) : '#page=' + pg));
   const pg = (n) => `<a href="${href(n)}" rel="noopener" class="soft" style="font-size:12px">p.${n}</a>`;
   const match = t.stated_total && Math.abs(t.total - t.stated_total) / t.stated_total <= 0.005;
   const what = t.grouped_by === 'fund' ? 'funds' : t.grouped_by === 'function' ? 'areas' : 'departments';

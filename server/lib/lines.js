@@ -99,7 +99,18 @@ const EARLY = [
   ['buildings', /\brent expense\b/i],
   ['generaladmin', /\bconsumer and business affairs\b/i],
   ['transfers', /\beliminations?\b/i],
-  ['jail', /\bsheriff\W+custody\b/i]
+  ['jail', /\bsheriff\W+custody\b/i],
+  ['capital', /\b(capital (expenditures?|construction|outlay fund)|fixed assets)\b/i],
+  ['welfare', /\b(human assistance|aid payments|ihss|job (&|and) family|child, family|abuse (&|and) neglect)\b/i],
+  ['planning', /\b(cdbg|home programs?|community development block)\b/i],
+  ['treasurer', /\b(teeter plan|delinquent tax|tax forfeiture|audit and control|county comptroller|m ?& ?b support)\b/i],
+  ['courts', /\bcommon pleas\b/i],
+  ['it', /\bdata center\b/i],
+  ['defender', /\b(legal aid society|conflict criminal defen\w*)\b/i],
+  ['executive', /\b(legislature|county commission)\b/i],
+  ['assessor', /\bassessment department\b/i],
+  ['utilities', /\bsewage\b/i],
+  ['generaladmin', /^law( department)?$|\b(corporation counsel|human resource\w*|labor, licensing|boards and agencies)\b/i]
 ];
 const LABEL = Object.fromEntries(CATS.map(c => [c[0], c[1]]));
 const CENSUS = Object.fromEntries(CATS.map(c => [c[0], c[2]]));
@@ -186,7 +197,7 @@ function index() {
   if (CT) for (const [geoid, t] of Object.entries(CT.counties)) {
     const c = byGeo[geoid]; if (!c || counties[geoid]) continue;
     const yrs = t.years_covered || 1;
-    const pdf = (pg) => encOnce(t.url) + '#page=' + pg;
+    const pdf = (pg) => encOnce(t.url) + (t.page_anchor === 'pdf2htmlex' ? '#pf' + Number(pg).toString(16) : '#page=' + pg); // a web-page copy of a PDF names its pages pf1, pf2 … in hex
     const lines = [];
     for (const g of t.funds) {
       if (g.depts && g.depts.length && !g.depts_note) for (const d of g.depts) lines.push(Object.assign({ name: d.name, fund: g.name, amount: d.amount / yrs, href: pdf(d.page), page: d.page }, classify(d.name)));
