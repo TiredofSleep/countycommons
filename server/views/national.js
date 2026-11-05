@@ -92,6 +92,7 @@ ${c.site ? `<section><div class="issue" style="display:block;border-left:3px sol
 ${RK.keyFacts(c, N)}
 ${petitionsBlock(S.name, `/us/${st.toLowerCase()}/${slug}`, c.name, c.geoid, c.site)}
 ${require('../lib/state-portals').countyBlock(c)}
+${require('../lib/county-trails').block(c)}
 ${require('../lib/national-local').finance(c)}
 ${require('../lib/national-local').audit(c)}
 ${require('../lib/national-local').proptax(c)}

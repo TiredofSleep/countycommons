@@ -25,7 +25,7 @@ const SCOPES = {
 };
 const SCOPE_RULE = {
   'size-state': 'Counties in the same state with between half and double its population (2024 Census estimate). If fewer than five fit, the eight closest in population.',
-  'size-nation': 'Counties anywhere in the U.S. within 25% of its population (2024 Census estimate), either way.',
+  'size-nation': 'Counties anywhere in the U.S. within 25% of its population (2024 Census estimate), either way. If fewer than five fit, the eight closest in population.',
   near: 'Counties whose geographic center is within 60 miles of its center, in any state (2024 Census Gazetteer).',
   state: 'Every county and county-equivalent in the state.',
   nation: 'Every county and county-equivalent in the United States.'
@@ -43,7 +43,10 @@ function peersOf(c, all, scope) {
   if (scope === 'nation') return all.filter(x => x !== c);
   if (scope === 'state') return all.filter(x => x !== c && x.st === c.st);
   if (scope === 'near') return all.filter(x => x !== c && x.lat != null && miles(c, x) <= 60);
-  if (scope === 'size-nation') return all.filter(x => x !== c && x.pop2024 >= p * 0.8 && x.pop2024 <= p * 1.25);
+  if (scope === 'size-nation') {
+    const r = all.filter(x => x !== c && x.pop2024 >= p * 0.8 && x.pop2024 <= p * 1.25);
+    return r.length >= 5 ? r : all.filter(x => x !== c && x.pop2024).sort((a, b) => Math.abs(Math.log(a.pop2024 / p)) - Math.abs(Math.log(b.pop2024 / p))).slice(0, 8);
+  }
   const st = all.filter(x => x !== c && x.st === c.st && x.pop2024);
   let list = st.filter(x => x.pop2024 >= p / 2 && x.pop2024 <= p * 2);
   if (list.length < 5) list = st.slice().sort((a, b) => Math.abs(Math.log(a.pop2024 / p)) - Math.abs(Math.log(b.pop2024 / p))).slice(0, 8);
@@ -64,9 +67,10 @@ function items(c) {
     out.push(['census', 'spend', 'All county government spending', (x) => { const r = g(x); return r ? { v: r.spend, pop: r.pop, href: page(x, 'county-money'), est: r.estimated } : null; }]);
     for (const [k, label] of require('../lib/national-local').PURPOSE || []) out.push(['census', k, label, (x) => { const r = g(x); return r ? { v: (r.fn || {})[k] || 0, pop: r.pop, href: page(x, 'county-money'), est: r.estimated } : null; }]);
   }
-  out.push(['budget', 'total', 'Whole budget, all funds', (x) => { const r = I.counties[x.geoid]; return r ? { v: r.total, pop: x.pop2024, href: r.source.url, year: r.year } : null; }]);
+  const bnote = (r) => [r.scope && !/^all funds/i.test(r.scope) ? r.scope + ' only' : '', r.halved ? 'two-year budget, halved' : ''].filter(Boolean).join(', ');
+  out.push(['budget', 'total', 'Whole budget, all funds', (x) => { const r = I.counties[x.geoid]; return r ? { v: r.total, pop: x.pop2024, href: r.source.url, year: r.year, note: bnote(r) } : null; }]);
   for (const [k, label] of LN.CATS.map(z => [z[0], z[1]]).concat([['unmatched', 'Lines not matched to a category yet']])) {
-    out.push(['budget', k, label, (x) => { const r = I.counties[x.geoid]; if (!r) return null; const b = r.byCat[k]; return { v: b ? b.amount : 0, pop: x.pop2024, href: b && b.lines.length === 1 ? b.lines[0].href : null, lines: b ? b.lines : [], year: r.year }; }]);
+    out.push(['budget', k, label, (x) => { const r = I.counties[x.geoid]; if (!r) return null; const b = r.byCat[k]; return { v: b ? b.amount : 0, pop: x.pop2024, href: b && b.lines.length === 1 ? b.lines[0].href : null, lines: b ? b.lines : [], year: r.year, note: bnote(r) }; }]);
   }
   return out;
 }
@@ -121,7 +125,7 @@ function comparePage(st, slug, q) {
     const val = (r) => r && r.pop ? (mode === 'total' ? r.v : r.v / r.pop) : null;
     const list = s.rows.concat(s.me ? [{ x: c, r: s.me }] : []).sort((a, b) => (val(b.r) || 0) - (val(a.r) || 0));
     const srcCell = (x, r) => layer === 'budget'
-      ? (r.lines && r.lines.length ? r.lines.map(l => `<a href="${esc(l.href)}" rel="noopener">${esc(l.name)}</a> <span class="soft" style="font-size:12px">${big(l.amount)}${l.fund ? ' · in ' + esc(l.fund) : ''} · ${esc(l.how)}</span>`).join('<br>') : `<span class="soft">no line matched in this budget</span>`) + ` <span class="soft" style="font-size:12px">(${esc(r.year)})</span>`
+      ? (r.lines && r.lines.length ? r.lines.map(l => `<a href="${esc(l.href)}" rel="noopener">${esc(l.name)}</a> <span class="soft" style="font-size:12px">${big(l.amount)}${l.fund ? ' · in ' + esc(l.fund) : ''} · ${esc(l.how)}</span>`).join('<br>') : `<span class="soft">no line matched in this budget</span>`) + ` <span class="soft" style="font-size:12px">(${esc(r.year)}${r.note ? ', ' + esc(r.note) : ''})</span>`
       : `<a href="${esc(r.href)}">source</a>${r.est >= 50 ? ' <span style="color:var(--dead);font-size:12px">mostly Census estimates; left out of the middle</span>' : r.est ? ` <span class="soft" style="font-size:12px">${r.est}% estimated</span>` : ''}`;
     const rows = list.map((o, i) => `<tr${o.x === c ? ' style="background:var(--card);font-weight:600"' : ''}><td class="num">${i + 1}</td><td><a href="/us/${o.x.st.toLowerCase()}/${o.x.slug}/compare">${esc(o.x.name)}</a>, ${esc(o.x.st)}</td><td class="num">${num(o.x.pop2024 || 0)}</td><td class="num">${fmt(val(o.r))}</td><td class="num">${mode === 'total' ? (o.r.pop ? per(o.r.v / o.r.pop) + '<span class="soft" style="font-size:12px">/res.</span>' : '—') : big(o.r.v)}</td><td class="src" style="max-width:420px">${srcCell(o.x, o.r)}</td></tr>`).join('');
     const missing = peers.filter(x => !fn(x));

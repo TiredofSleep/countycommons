@@ -22,7 +22,7 @@ const CATS = [
   ['arpa', 'Federal relief and payments (ARPA, CARES, LATCF, PILT, opioid)', 'other', /\b(arpa|arp|american rescue|rescue plan|cares act|opioid|fiscal recovery|covid|coronavirus|latc\w*|local assistance|tribal consistency|pilt|payment in lieu|title iii)\b/i],
   ['capital', 'Capital projects', 'other', /\b(capital (projects?|improvement\w*|fund)|special projects|infrastructure)\b/i],
   ['environment', 'Natural resources and environment', 'other', /\b(physical environment|environment\w*|natural resources|lagoon|river|watershed|beach|erosion|wildlife)\b/i],
-  ['benefits', 'Employee benefits, workers’ comp and fleet', 'admin', /\b(employee benefits?|retiree|workers'? comp\w*|dental|trusts?|fleet|radio shop)\b/i],
+  ['benefits', 'Employee benefits, workers’ comp and fleet', 'admin', /\b(employee benefits?|retiree|workers'? comp\w*|dental|fleet|radio shop)\b/i],
   ['debt', 'Debt and bond payments', 'interest', /\b(bonds?|debt|interest|lease purchase|sinking)\b/i],
   ['executive', 'County judge, commissioners and governing body', 'admin', /\b(county judge|quorum court|magistrates?|commissioners?|commission court|board of supervisors|supervisors|county executive|county manager|county administrator|administrator|mayor|council|legislative|board of county|county board)\b/i],
   ['juvenile', 'Juvenile services', 'courts', /\b(juvenile|youth services)\b/i],
@@ -55,7 +55,7 @@ const CATS = [
   ['schools', 'Schools and colleges', 'schools', /\b(schools?|college|tuition|education|k-12|students?)\b/i],
   ['utilities', 'Utilities (water, sewer, power, airport, port, transit)', 'utilities', /\b(utilit\w*|water|wastewater|sewer|stormwater|aviation|port|transit|metro|airport)\b/i],
   ['buildings', 'Buildings and maintenance', 'admin', /\b(courthouse|buildings?|maintenance|facilit\w*|grounds|janitor\w*|custodial|annex|government center|plant)\b/i],
-  ['generaladmin', 'General government, insurance and grants', 'admin', /\b(human resources|personnel|general (operations|government|admin\w*|accounts|items|services)|non-?departmental|sundry|insurance|risk|tort|contingenc\w*|grants?[ -]in[ -]aid|grants?|county contracts|miscellaneous|other county expenses|association of arkansas counties|internal services?|retirement|outside agencies|central appropriations|regionals|contributions)\b/i],
+  ['generaladmin', 'General government, insurance and grants', 'admin', /\b(human resources|personnel|general (operations|government|admin\w*|accounts|items|services)|non[- ]?departmental|sundry|insurance|risk|tort|contingenc\w*|grants?[ -]in[ -]aid|grants?|county contracts|miscellaneous|other county expenses|association of arkansas counties|internal services?|retirement|outside agencies|central appropriations|regionals|contributions)\b/i],
   ['other', 'Cemeteries, airports, museums and other', 'other', /\b(cemeter\w*|airports?|museum|histor\w*|memorial|tourism|advertising|promotion)\b/i],
   ['general', 'General fund, not split by office', 'admin', /\b(general fund|current expense|county general|general)\b/i]
 ];
@@ -73,7 +73,33 @@ const EARLY = [
   ['treasurer', /\bcommissioner of (the )?revenue\b/i],
   ['buildings', /\bbuilding administrator\b/i],
   ['parks', /\brodeo\b/i],
-  ['juvenile', /\bjuvenile justice\b/i]
+  ['juvenile', /\bjuvenile justice\b/i],
+  // Big-county office names (county budget books, 2026).
+  ['elections', /\b(registrar of voters|voter registration|supervisor of elections)\b/i],
+  ['defender', /\b(legal defender|legal advocate|alternate (public )?defender)\b/i],
+  ['courts', /\b(pretrial services|alternate dispute|dispute resolution)\b/i],
+  ['coroner', /\bforensic science\w*\b/i],
+  ['welfare', /\b(homeless\w*|care coordination|self-sufficiency|well-being|in[- ]home supportive|cal ?works?|public social services|public assistance|best starts|section 8|community action|child care)\b/i],
+  ['health', /\b(crisis care|developmental disabilit\w*|animal care)\b/i],
+  ['executive', /\b(executive office|office of (the )?county administrat\w*|county administration|chief administrative officer|chief executive|office of the president|president)\b/i],
+  ['treasurer', /\b(chief financial officer|management and budget|office of (management and )?budget)\b/i],
+  ['it', /\b(chief information officer|universal services|caps program)\b/i],
+  ['buildings', /\b(asset management|real estate)\b/i],
+  ['benefits', /\b(equipment services|(retirement|benefits?|insurance) trust)\b/i],
+  ['generaladmin', /\b(county counsel|safety and claims|internal (operations|compliance)|people and internal|fixed charges|administrative support|ethics|inspector general)\b/i],
+  ['transfers', /\bworking capital\b/i],
+  ['capital', /\b(major projects|permanent improvement\w*)\b/i],
+  ['debt', /\bcertificates? of obligation\b/i],
+  ['environment', /\b(air quality|flood control)\b/i],
+  ['utilities', /\bseaport\b/i],
+  ['other', /\b(cultural|tourist tax\w*|performing arts|music center|arts (and culture|programs?))\b/i],
+  ['welfare', /\b(dcfs|adoption assistance|foster care|kin-?gap|cash assistance|family preservation)\b|^pss\b/i],
+  ['hospital', /\brehabilitation center\b/i],
+  ['parks', /\bbeaches and harbors\b/i],
+  ['buildings', /\brent expense\b/i],
+  ['generaladmin', /\bconsumer and business affairs\b/i],
+  ['transfers', /\beliminations?\b/i],
+  ['jail', /\bsheriff\W+custody\b/i]
 ];
 const LABEL = Object.fromEntries(CATS.map(c => [c[0], c[1]]));
 const CENSUS = Object.fromEntries(CATS.map(c => [c[0], c[2]]));
@@ -99,6 +125,9 @@ function classify(name, code) {
 }
 
 let CACHE = null;
+// A URL may arrive already percent-encoded; encode it exactly once.
+const encOnce = (u) => { try { return encodeURI(decodeURI(u)); } catch (e) { return u; } };
+
 function index() {
   if (CACHE && Date.now() - CACHE.at < 3600e3) return CACHE;
   const N = require('../views/national');
@@ -127,7 +156,10 @@ function index() {
     // grouping (a fund, "County departments") rather than one office.
     const take = (n, fund, depth) => {
       const ch = (kids[n.id] || []).filter(k => typeof k.amount === 'number' && k.amount > 0);
-      const ok = depth < 3 && ch.length && ch.every(k => !GENERIC.test(String(k.name).trim()))
+      // A transfers or debt line beside named offices doesn't make the list an
+      // object-code breakdown (Travis: ten functions, one is "Transfers out").
+      const gen = ch.filter(k => GENERIC.test(String(k.name).trim()));
+      const ok = depth < 3 && ch.length && (gen.length === 0 || (gen.length * 2 < ch.length && gen.every(k => /^(transfers?( out)?|interfund transfers|debt service|contingency)$/i.test(String(k.name).trim()))))
         && Math.abs(ch.reduce((s, k) => s + k.amount, 0) - n.amount) <= Math.max(2, n.amount * 0.005);
       const own = classify(n.name, n.code);
       if (ok && (!own.cat || own.cat === 'general' || own.cat === 'justice' || depth === 0)) { for (const k of ch) take(k, fund || n.name, depth + 1); return; }
@@ -140,13 +172,27 @@ function index() {
   let ID = null; try { ID = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'national', 'idaho-trails.json'), 'utf8')); } catch (e) { /* none */ }
   if (ID) for (const [geoid, t] of Object.entries(ID.counties)) {
     const c = byGeo[geoid]; if (!c || counties[geoid]) continue;
-    const pdf = (pg) => encodeURI(t.url) + '#page=' + pg;
+    const pdf = (pg) => encOnce(t.url) + '#page=' + pg;
     const lines = [];
     for (const f of t.funds) {
       if (f.depts && f.depts.length && !f.depts_note) for (const d of f.depts) lines.push(Object.assign({ name: d.name, fund: f.name, amount: d.amount, href: pdf(d.page), page: d.page }, classify(d.name)));
       else lines.push(Object.assign({ name: f.name, fund: null, amount: f.amount, href: pdf(f.page), page: f.page }, classify(f.name)));
     }
-    add(c, { year: t.fy, basis: t.basis, source: { label: t.title || `${c.name} fiscal ${t.fy} budget filing`, url: encodeURI(t.url) }, total: lines.reduce((s, l) => s + l.amount, 0), lines });
+    add(c, { year: t.fy, basis: t.basis, source: { label: t.title || `${c.name} fiscal ${t.fy} budget filing`, url: encOnce(t.url) }, total: lines.reduce((s, l) => s + l.amount, 0), lines });
+  }
+  // 3. Big counties read from their own adopted budget documents. A two-year
+  // budget is halved so it compares with one-year budgets.
+  let CT = null; try { CT = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'national', 'county-trails.json'), 'utf8')); } catch (e) { /* none */ }
+  if (CT) for (const [geoid, t] of Object.entries(CT.counties)) {
+    const c = byGeo[geoid]; if (!c || counties[geoid]) continue;
+    const yrs = t.years_covered || 1;
+    const pdf = (pg) => encOnce(t.url) + '#page=' + pg;
+    const lines = [];
+    for (const g of t.funds) {
+      if (g.depts && g.depts.length && !g.depts_note) for (const d of g.depts) lines.push(Object.assign({ name: d.name, fund: g.name, amount: d.amount / yrs, href: pdf(d.page), page: d.page }, classify(d.name)));
+      else lines.push(Object.assign({ name: g.name, fund: null, amount: g.amount / yrs, href: pdf(g.page), page: g.page }, classify(g.name)));
+    }
+    add(c, { year: t.fy, basis: t.basis, scope: t.scope, halved: yrs === 2 || undefined, source: { label: t.title, url: encOnce(t.url) }, total: lines.reduce((s, l) => s + l.amount, 0), lines });
   }
   // Sum each county's lines by category.
   for (const r of Object.values(counties)) {
