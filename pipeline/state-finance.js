@@ -295,6 +295,29 @@ const STATES = {
       [/^581 /, 'transfers'], [/^58[45] |^591 /, 'debt'], [/^587 /, 'clerk'], [/^589 |^593 /, 'generaladmin'], [/^590 /, null],
       [/^602 /, 'prosecutor'], [/^603 |^715 /, 'defender'], [/^[67]\d\d /, 'courts']
     ]
+  },
+  // SAO Financial Intelligence Tool (BARS accounts), all funds' expenditures section.
+  WA: {
+    agency: 'Washington State Auditor’s Office',
+    fyLabel: (fy) => `${fy}`,
+    title: (fy) => `annual report data in the Financial Intelligence Tool, ${fy}`,
+    what: 'Every Washington county files its annual report with the State Auditor using the same chart of accounts (BARS), so the numbers line up from county to county.',
+    scope: 'all funds, not transfers',
+    spentOn: 'all its funds, including utilities and shared internal services (not counting money moved between funds)',
+    note: 'These are the annual reports as filed; the State Auditor may revise them after audit. Internal service funds (shared services that charge the departments) are included, so some money appears twice. Depreciation is the yearly wear on buildings and equipment, an accounting cost rather than cash spent. Each “source” link opens the county in the State Auditor’s tool.',
+    mapOn: 'code', classify: true,
+    map: [
+      [/^501\./, null], [/^598\./, null],
+      [/^511\./, 'executive'], [/^513\./, 'executive'], [/^512\.3/, 'clerk'], [/^512\./, 'courts'], [/^514\.40/, 'elections'], [/^514\./, 'treasurer'],
+      [/^515\.9/, 'defender'], [/^515\.[1-3]/, 'generaladmin'], [/^517\./, 'benefits'], [/^518\.8/, 'it'], [/^518\.[23]/, 'buildings'], [/^51[89]\./, 'generaladmin'],
+      [/^521\./, 'sheriff'], [/^522\./, 'fire'], [/^523\./, 'jail'], [/^524\./, 'planning'], [/^525\./, 'emergency'], [/^526\./, 'ems'], [/^527\./, 'juvenile'], [/^528\./, 'emergency'],
+      [/^537\./, 'solidwaste'], [/^53\d\./, 'utilities'],
+      [/^54[2-5]\./, 'roads'], [/^54[67]\./, 'utilities'], [/^548\./, 'benefits'],
+      [/^551\./, 'planning'], [/^55[34]\./, 'environment'], [/^55[789]\./, 'planning'],
+      [/^561\./, 'hospital'], [/^56[2468]\./, 'health'], [/^565\.2/, 'veterans'], [/^56[579]\./, 'welfare'],
+      [/^571\./, 'parks'], [/^572\./, 'library'], [/^57[35]\./, 'other'], [/^57[46-9]\./, 'parks'],
+      [/^59\d\./, 'generaladmin']
+    ]
   }
 };
 
