@@ -226,6 +226,15 @@ function index() {
     }
     add(c, { year: t.fy, basis: t.basis, scope: t.scope, halved: yrs === 2 || undefined, source: { label: t.title, url: encOnce(t.url) }, total: lines.reduce((s, l) => s + l.amount, 0), lines });
   }
+  // 4. States that collect every county's actual spending in standard
+  // categories (counties with a budget above keep the budget).
+  let SF = null; try { SF = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'national', 'state-finance.json'), 'utf8')); } catch (e) { /* none */ }
+  if (SF) for (const [geoid, r] of Object.entries(SF.counties)) {
+    const c = byGeo[geoid], S = SF.states[r.st]; if (!c || !S || counties[geoid]) continue;
+    const lines = r.lines.map(l => Object.assign({ name: l.name, fund: l.category, amount: l.amount, href: r.url },
+      l.cat ? { cat: l.cat, how: `the state’s standard line “${l.name}”` } : classify(l.name)));
+    add(c, { year: r.fy || S.fy, basis: S.kind === 'actual' ? 'actual' : 'adopted', scope: S.scope, source: { label: `${S.title}, ${S.agency}`, url: S.source_page }, total: r.total, lines });
+  }
   // Sum each county's lines by category.
   for (const r of Object.values(counties)) {
     r.byCat = {};

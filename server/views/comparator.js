@@ -67,7 +67,7 @@ function items(c) {
     out.push(['census', 'spend', 'All county government spending', (x) => { const r = g(x); return r ? { v: r.spend, pop: r.pop, href: page(x, 'county-money'), est: r.estimated } : null; }]);
     for (const [k, label] of require('../lib/national-local').PURPOSE || []) out.push(['census', k, label, (x) => { const r = g(x); return r ? { v: (r.fn || {})[k] || 0, pop: r.pop, href: page(x, 'county-money'), est: r.estimated } : null; }]);
   }
-  const bnote = (r) => [r.scope && !/^all funds/i.test(r.scope) ? r.scope + ' only' : '', r.halved ? 'two-year budget, halved' : ''].filter(Boolean).join(', ');
+  const bnote = (r) => [r.basis === 'actual' ? 'actual spending' : '', r.scope && !/^all funds/i.test(r.scope) ? r.scope + ' only' : '', r.halved ? 'two-year budget, halved' : ''].filter(Boolean).join(', ');
   out.push(['budget', 'total', 'Whole budget, all funds', (x) => { const r = I.counties[x.geoid]; return r ? { v: r.total, pop: x.pop2024, href: r.source.url, year: r.year, note: bnote(r) } : null; }]);
   for (const [k, label] of LN.CATS.map(z => [z[0], z[1]]).concat([['unmatched', 'Lines not matched to a category yet']])) {
     out.push(['budget', k, label, (x) => { const r = I.counties[x.geoid]; if (!r) return null; const b = r.byCat[k]; return { v: b ? b.amount : 0, pop: x.pop2024, href: b && b.lines.length === 1 ? b.lines[0].href : null, lines: b ? b.lines : [], year: r.year, note: bnote(r) }; }]);
