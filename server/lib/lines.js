@@ -42,6 +42,7 @@ const CATS = [
   ['emergency', 'Emergency management and 911', 'police', /\b(emergency|oem|oes|911|e-?911|dispatch|homeland|disaster|civil defense|communications|search (and|&) rescue|safe room|cencom)\b/i],
   ['fire', 'Fire protection', 'fire', /\bfire\b/i],
   ['hospital', 'Hospitals', 'hospitals', /\b(hospitals?|medical center|nursing home)\b/i],
+  ['healthwelfare', 'Health and human services, combined (not split)', 'welfare', /\b(health (and|&) (human|social) services|physical health (and|&) social services|public health (and|&) social services)\b/i],
   ['health', 'Public health and mental health', 'health', /\b(health|mental|behavioral|substance|drug and alcohol|animal control|animal shelter|animal services)\b/i],
   ['veterans', 'Veterans services', 'welfare', /\b(veterans?|service officer)\b/i],
   ['welfare', 'Indigent care and human services', 'welfare', /\b(indigent|welfare|human services|social services|seniors?|aging|child support|community services|catastrophic|charity|food|children|youth|families|early childhood)\b/i],
@@ -233,7 +234,7 @@ function index() {
   if (SF) for (const [geoid, r] of Object.entries(SF.counties)) {
     const c = byGeo[geoid], S = SF.states[r.st]; if (!c || !S || counties[geoid]) continue;
     const lines = r.lines.map(l => Object.assign({ name: l.name, fund: l.category, amount: l.amount, href: l.page ? r.url + '#page=' + l.page : r.url, page: l.page },
-      l.cat ? { cat: l.cat, how: l.how || `the state’s standard line “${l.name}”` } : classify(l.name)));
+      l.cat ? { cat: l.cat, how: l.how || `the state’s standard line “${l.name}”` } : l.lumped ? { cat: null, how: 'the state’s line mixes several kinds of spending' } : classify(l.name)));
     add(c, { year: r.fy || S.fy, basis: S.kind === 'actual' ? 'actual' : 'adopted', scope: S.scope, source: { label: `${S.title}, ${S.agency}`, url: S.source_page }, total: r.total, lines });
   }
   // Sum each county's lines by category.

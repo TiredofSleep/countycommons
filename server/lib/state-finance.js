@@ -5,7 +5,7 @@ const { esc } = require('./corpus');
 const { read } = require('./national-local');
 
 const num = (x) => Math.round(x).toLocaleString('en-US');
-const big = (x) => x >= 1e9 ? '$' + (x / 1e9).toFixed(2) + ' billion' : x >= 1e6 ? '$' + (x / 1e6).toFixed(1) + ' million' : '$' + num(x);
+const big = (x) => x < 0 ? '−' + big(-x) : x >= 1e9 ? '$' + (x / 1e9).toFixed(2) + ' billion' : x >= 1e6 ? '$' + (x / 1e6).toFixed(1) + ' million' : '$' + num(x);
 
 function get(c) {
   const D = read('state-finance.json'); const r = D && D.counties && D.counties[c.geoid];

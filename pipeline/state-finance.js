@@ -130,7 +130,7 @@ const STATES = {
     note: 'Public safety and legal services combines the sheriff, jail, county attorney and courts. Physical health and social services combines public health, general assistance and veterans services. County environment and education covers conservation, extension and libraries.',
     download: false,
     map: [
-      [/^public safety & legal/i, 'justice'], [/^physical health/i, null], [/^county environment/i, null], [/^roads/i, 'roads'],
+      [/^public safety & legal/i, 'justice'], [/^physical health/i, 'healthwelfare'], [/^county environment/i, null], [/^roads/i, 'roads'],
       [/^government services to residents/i, 'clerk'], [/^administration$/i, 'generaladmin'], [/^nonprogram/i, 'generaladmin'],
       [/^debt service$/i, 'debt'], [/^capital projects$/i, 'capital']
     ]
@@ -197,10 +197,103 @@ const STATES = {
     regroup: (l) => /^business-type/i.test(l.category) ? 'Businesses the county runs' : /^(public safety|public works) - /i.test(l.name) ? l.name.split(' - ')[0] : l.name,
     map: [
       [/^general government$/i, 'generaladmin'], [/law enforcement$/i, 'sheriff'], [/^public safety - other$/i, 'justice'], [/highways? & roads$/i, 'roads'],
-      [/^public works - other$/i, null], [/^public health & social/i, null], [/^culture and recreation$/i, 'parks'], [/^community development$/i, 'planning'],
+      [/^public works - other$/i, null], [/^public health & social/i, 'healthwelfare'], [/^culture and recreation$/i, 'parks'], [/^community development$/i, 'planning'],
       [/^miscellaneous$/i, 'generaladmin'], [/^(hospital|nursing home)$/i, 'hospital'], [/^(historical society|stadium)$/i, 'other'], [/^self insurance/i, 'benefits'],
       [/^property management/i, 'buildings'], [/^(broadband|sewer)$/i, 'utilities'], [/^(solid waste|landfill)$/i, 'solidwaste'], [/^bonded indebtedness$/i, 'debt'],
       [/^capital outlay$/i, 'capital'], [/^transfers out$/i, 'transfers'], [/^(operating|other|assemble lincoln)$/i, null]
+    ]
+  },
+  // DOR County and Municipal Revenues and Expenditures: governmental funds by function.
+  WI: {
+    agency: 'Wisconsin Department of Revenue',
+    fyLabel: (fy) => `${fy}`,
+    title: (fy) => `County and Municipal Revenues and Expenditures, ${fy}`,
+    what: 'Every Wisconsin county files a financial report with the Department of Revenue each year in the same categories, so the numbers line up from county to county.',
+    scope: 'governmental funds, including transfers',
+    spentOn: 'its governmental funds, including debt payments and money moved to other funds (utilities run as businesses are not included)',
+    note: 'A few counties report a negative highway amount; it is shown as filed. “Other financing uses” is mostly money moved to other funds.',
+    map: [
+      [/^general government$/i, 'generaladmin'], [/^law enforcement$/i, 'sheriff'], [/^other public safety$/i, 'justice'], [/^ambulance$/i, 'ems'], [/^fire$/i, 'fire'],
+      [/^highway|^road-related|^other transportation$/i, 'roads'], [/^health and human services$/i, 'healthwelfare'], [/^culture and education$/i, null],
+      [/^parks and recreation$/i, 'parks'], [/^conservation and development$/i, 'planning'], [/^debt service/i, 'debt'],
+      [/solid waste|^other sanitation$/i, 'solidwaste'], [/^other financing uses$/i, 'transfers']
+    ]
+  },
+  // SCO ByTheNumbers County Expenditures (scratch ca_norm.js collapses business funds).
+  CA: {
+    agency: 'California State Controller’s Office',
+    fyLabel: (fy) => `fiscal ${fy} (Jul ${fy - 1} – Jun ${fy})`,
+    title: (fy) => `Counties Financial Transactions Report, county expenditures, fiscal ${fy}`,
+    what: 'Every California county reports its spending to the State Controller each year in the same categories, so the numbers line up from county to county.',
+    scope: 'all funds, including county-run businesses',
+    spentOn: 'everything it reports to the state, including hospitals and other services it runs as businesses',
+    note: 'Internal service funds (shared services like fleet and insurance that charge the departments) are counted as the state counts them, so some money appears twice. The “source” link shows this county’s rows in the State Controller’s data.',
+    mapOn: 'both', classify: true,
+    map: [
+      [/^debt service and capital outlay \/ capital projects/i, 'capital'], [/^debt service and capital outlay \//i, 'debt'],
+      [/\/ police protection$/i, 'sheriff'], [/\/ (adult detention|other detention|jails)/i, 'jail'], [/\/ juvenile detention$/i, 'juvenile'], [/\/ probation$/i, 'courts'],
+      [/\/ fire protection$/i, 'fire'], [/\/ district attorney - prosecution$/i, 'prosecutor'], [/\/ (public defender|court appointed counsel)$/i, 'defender'],
+      [/\/ (other trial court|trial court|other judicial|grand jury|fifty percent excess|courts$)/i, 'courts'], [/\/ flood control/i, 'environment'],
+      [/^public protection \/ other protection/i, 'justice'], [/\/ child support services$/i, 'welfare'], [/\/ (planning and zoning|building inspector|lafco|other protective inspection)/i, 'planning'],
+      [/\/ (agricultural commissioner|sealer of weights|agricultural education)/i, 'extension'], [/\/ humane services/i, 'health'], [/\/ coroner$/i, 'coroner'], [/\/ emergency services$/i, 'emergency'],
+      [/\/ (recorder|county clerk)$/i, 'clerk'],
+      [/\/ (mental health|public health|medical care|drug and alcohol|other health)/i, 'health'], [/\/ (roads|other public ways|transportation systems|transportation terminals|parking facilities)/i, 'roads'],
+      [/^public ways.* \/ sanitation$/i, 'solidwaste'],
+      [/^public assistance \/ veterans/i, 'veterans'], [/^public assistance \/ care of court wards/i, 'juvenile'], [/^public assistance \//i, 'welfare'],
+      [/\/ (recreation facilities|other recreation|small craft harbors|veterans memorial)/i, 'parks'], [/\/ library services$/i, 'library'], [/\/ cultural services$/i, 'other'],
+      [/\/ (school administration|other education)$/i, 'schools'],
+      [/^general government \/ (property management|other plant acquisition)/i, 'buildings'], [/\/ assessor$/i, 'assessor'], [/\/ elections$/i, 'elections'],
+      [/\/ (other finance|treasurer-tax collector|auditor-controller|purchasing agent)$/i, 'treasurer'],
+      [/\/ (administrative officer|board of supervisors|clerk of the board|other legislative)/i, 'executive'],
+      [/^general government \/ (personnel|county counsel|other counsel|district attorney \(legal advice\)|council of governments|other general government)/i, 'generaladmin'],
+      [/^general government \/ promotion$/i, 'other'], [/^general government \/ communications$/i, 'it'],
+      [/^businesses the county runs \/ hospital$/i, 'hospital'], [/^businesses the county runs \/ solid waste$/i, 'solidwaste'],
+      [/^businesses the county runs \/ (airport|water|transit|sewer|harbor and port|electric|gas)$/i, 'utilities'], [/\/ aid programs/i, 'welfare'], [/\/ (animal regulation)$/i, 'health'], [/\/ (museums|community centers)/i, 'other'],
+      [/^businesses the county runs \/ other businesses$/i, null], [/^internal service funds/i, null]
+    ]
+  },
+  // OSC Financial Data for Local Governments (scratch ny_norm.js merges object codes and funds per activity).
+  NY: {
+    agency: 'New York State Comptroller',
+    fyLabel: (fy) => `${fy}`,
+    title: (fy) => `Financial Data for Local Governments, counties, ${fy}`,
+    what: 'Every New York county files an annual financial report with the State Comptroller using the same account codes, so the numbers line up from county to county.',
+    scope: 'all funds, not transfers',
+    spentOn: 'all its funds, including county-run businesses (not counting money moved between funds)',
+    note: 'In bigger counties, “Distribution of sales tax” is sales tax the county collects and passes on to its cities and towns. “Medicaid to State” is the county’s share of Medicaid, paid to the state. Each line combines salaries, contracts, equipment and benefits for that activity.',
+    mapOn: 'both', classify: true,
+    map: [
+      [/^employee benefits \//i, 'benefits'], [/^debt service \//i, 'debt'], [/\/ distribution of sales tax$/i, 'generaladmin'], [/medicaid/i, 'welfare'],
+      [/^education \//i, 'schools'], [/\/ benefits and awards$/i, 'generaladmin'], [/^public safety \/ police$/i, 'sheriff'], [/\/ (jail|penitentiary)$/i, 'jail'],
+      [/\/ probation$/i, 'courts'], [/\/ public safety communication/i, 'emergency'], [/\/ depreciation$/i, 'generaladmin'],
+      [/\/ (bus operations|railroad|rapid transit)/i, 'utilities'], [/^social services \//i, 'welfare']
+    ],
+    fallback: [
+      [/^health \//i, 'health'], [/^sanitation \//i, 'solidwaste'], [/^transportation \//i, 'roads'], [/^culture and recreation \//i, 'parks'],
+      [/^community services \//i, 'welfare'], [/^economic development \//i, 'planning'], [/^utilities \//i, 'utilities'], [/^general government \//i, 'generaladmin'],
+      [/^public safety \//i, 'justice']
+    ]
+  },
+  // EDR tabulation of each county's DFS Annual Financial Report, by Uniform Accounting System code.
+  FL: {
+    agency: 'Florida Office of Economic and Demographic Research',
+    fyLabel: (fy) => `fiscal ${fy} (Oct ${fy - 1} – Sep ${fy})`,
+    title: (fy) => `county expenditures by account, from Annual Financial Reports, fiscal ${fy}`,
+    what: 'Every Florida county files an Annual Financial Report with the state Department of Financial Services using the same account codes; the Legislature’s Office of Economic and Demographic Research tabulates them. So the numbers line up from county to county.',
+    scope: 'governmental and business funds, including transfers',
+    spentOn: 'its governmental funds and the services it runs as businesses, including money moved between funds (taxes collected for other agencies are not counted)',
+    note: '“Inter-fund group transfers out” is money moved from one county fund to another; it is often the biggest line and is counted again where it is spent. Each “source” link opens the county’s spreadsheet; choose the year’s sheet.',
+    mapOn: 'code',
+    map: [
+      [/^51[12] /, 'executive'], [/^513 /, 'treasurer'], [/^51[49] /, 'generaladmin'], [/^515 /, 'planning'], [/^516 /, 'it'], [/^517 /, 'debt'],
+      [/^521 /, 'sheriff'], [/^522 /, 'fire'], [/^523 /, 'jail'], [/^524 /, 'planning'], [/^525 /, 'emergency'], [/^526 /, 'ems'], [/^527 /, 'coroner'], [/^528 /, 'generaladmin'], [/^529 /, 'justice'],
+      [/^53[1356] /, 'utilities'], [/^534 /, 'solidwaste'], [/^53[789] /, 'environment'],
+      [/^541 /, 'roads'], [/^54[234] /, 'utilities'], [/^545 /, 'planning'], [/^549 /, 'roads'],
+      [/^55[1249] /, 'planning'], [/^553 /, 'veterans'],
+      [/^561 /, 'hospital'], [/^56[235] /, 'health'], [/^56[49] /, 'welfare'],
+      [/^571 /, 'library'], [/^57[2459] /, 'parks'], [/^573 /, 'other'],
+      [/^581 /, 'transfers'], [/^58[45] |^591 /, 'debt'], [/^587 /, 'clerk'], [/^589 |^593 /, 'generaladmin'], [/^590 /, null],
+      [/^602 /, 'prosecutor'], [/^603 |^715 /, 'defender'], [/^[67]\d\d /, 'courts']
     ]
   }
 };
@@ -224,11 +317,13 @@ let n = 0;
 for (const [g, r] of Object.entries(D.counties)) {
   if (!geo[g] || geo[g].st !== st) { skipped.push(`${g} ${r.name}: not a ${st} county in counties.json`); continue; }
   const lines = r.lines.filter(l => l.amount).map(l => {
-    const m = S.map.find(([re]) => re.test(S.mapOn === 'category' ? l.category : l.name));
+    const key = S.mapOn === 'category' ? l.category : S.mapOn === 'both' ? `${l.category} / ${l.name}` : S.mapOn === 'code' ? `${l.code} ${l.name}` : l.name;
+    let m = S.map.find(([re]) => re.test(key));
+    if (!m && S.classify && S.fallback && !LN.classify(S.rename ? S.rename(l.name) : l.name).cat) m = S.fallback.find(([re]) => re.test(key));
     if (!m && S.classify) { const nm = S.rename ? S.rename(l.name) : l.name; const k = LN.classify(nm); return { category: S.groupByCat ? (LN.LABEL[k.cat] || 'Other funds') : l.category, name: nm, amount: l.amount, page: l.page || undefined, cat: k.cat, how: k.how }; }
     if (!m) unmapped.add(l.category + ' / ' + l.name);
     const short = m && m[2] ? (typeof m[2] === 'function' ? m[2](l.name.match(m[0])) : m[2]) : null;
-    return { category: S.regroup ? S.regroup(l) : l.category, name: short || (S.rename ? S.rename(l.name) : l.name), amount: l.amount, page: l.page || undefined, cat: m ? m[1] : null };
+    return { category: S.regroup ? S.regroup(l) : l.category, name: short || (S.rename ? S.rename(l.name) : l.name), amount: l.amount, page: l.page || undefined, cat: m ? m[1] : null, lumped: m && m[1] === null ? true : undefined };
   });
   const sum = lines.reduce((s, l) => s + l.amount, 0);
   if (Math.abs(sum - r.total) > 2) { skipped.push(`${g} ${r.name}: lines add to ${sum}, not ${r.total}`); continue; }
