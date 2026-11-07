@@ -98,6 +98,110 @@ const STATES = {
       [/^conservation/i, 'extension'], [/^(protective inspection|urban redevelopment|planning and zoning|economic development)/i, 'planning'],
       [/^other enterprise funds$/i, null]
     ]
+  },
+  // OSA County Finances raw data: governmental funds, current + capital + debt.
+  MN: {
+    agency: 'Minnesota Office of the State Auditor',
+    fyLabel: (fy) => `${fy}`,
+    title: (fy) => `${fy} Minnesota County Finances Report, raw data`,
+    what: 'Every Minnesota county reports its spending to the State Auditor each year in the same categories, so the numbers line up from county to county.',
+    scope: 'governmental funds, not utilities',
+    spentOn: 'day-to-day costs, building projects and debt payments from its governmental funds (utilities run as businesses are not included)',
+    note: 'Lines marked “buildings and equipment” are capital spending; the rest are day-to-day costs. The State Auditor does not break “all other general government” down further.',
+    rename: (n) => n.replace(/ \(current\)$/i, '').replace(/ \(capital outlay\)$/i, ': buildings and equipment'),
+    map: [
+      [/^governing board/i, 'executive'], [/^(administration and finance|all other general government|general government)/i, 'generaladmin'],
+      [/^police\/sheriff/i, 'sheriff'], [/^corrections/i, 'jail'], [/^fire/i, 'fire'], [/^ambulance/i, 'ems'], [/^all other public safety/i, 'justice'],
+      [/^(administration|maintenance|engineering|construction|snow and ice|street lighting|all other streets)/i, 'roads'],
+      [/^(refuse|all other sanitation|sanitation)/i, 'solidwaste'],
+      [/^(income maintenance|social services|all other human services|human services)/i, 'welfare'], [/^health/i, 'health'],
+      [/^library/i, 'library'], [/^parks/i, 'parks'], [/^(economic development|housing)/i, 'planning'], [/^conservation/i, 'environment'],
+      [/^(airport|transit)/i, 'utilities'], [/^cemetery/i, 'other'], [/^(bond principal|other long-term debt|interest and fiscal)/i, 'debt']
+    ]
+  },
+  // DOM "County Budgeted Expenditures By Service Area & FY": ten service areas, no finer lines.
+  IA: {
+    agency: 'Iowa Department of Management',
+    fyLabel: (fy) => `fiscal ${fy} (Jul ${fy - 1} – Jun ${fy})`,
+    title: (fy) => `County Budgeted Expenditures by Service Area, fiscal ${fy}`,
+    what: 'Every Iowa county files its budget with the Department of Management using the same ten service areas, so the numbers line up from county to county. The state does not publish finer lines.',
+    scope: 'all funds, not transfers',
+    spentOn: 'all funds (not counting money moved between funds)',
+    note: 'Public safety and legal services combines the sheriff, jail, county attorney and courts. Physical health and social services combines public health, general assistance and veterans services. County environment and education covers conservation, extension and libraries.',
+    download: false,
+    map: [
+      [/^public safety & legal/i, 'justice'], [/^physical health/i, null], [/^county environment/i, null], [/^roads/i, 'roads'],
+      [/^government services to residents/i, 'clerk'], [/^administration$/i, 'generaladmin'], [/^nonprogram/i, 'generaladmin'],
+      [/^debt service$/i, 'debt'], [/^capital projects$/i, 'capital']
+    ]
+  },
+  // Gateway bulk Budget Form 4B: every county fund's adopted budget (no departments in the bulk file).
+  IN: {
+    agency: 'Indiana Gateway for Government Units (Department of Local Government Finance)',
+    fyLabel: (fy) => `${fy}`,
+    title: (fy) => `Budget Form 4B, adopted budget estimates, ${fy}`,
+    what: 'Every Indiana county files its budget through the state’s Gateway site, fund by fund. The state lists funds only; County Commons grouped them into areas by each fund’s name.',
+    scope: 'all county funds, as adopted (before state review)',
+    spentOn: 'all its funds, as adopted by the county council (the state may certify less)',
+    note: 'These are the amounts the county council adopted; the Department of Local Government Finance reviews them and may certify less. Funds include grants and money set aside for one purpose, like federal relief. The “source” link opens the county’s Form 4B in Gateway; pick the year to see it.',
+    download: false,
+    rename: (n) => n.replace(/^\d{4}-\s*/, '').replace(/\bLc\b/g, 'LC').replace(/\bArp\b/gi, 'ARP'),
+    classify: true, groupByCat: true,
+    map: []
+  },
+  // No public statewide budget file (DLG's is behind a login), so: each fiscal
+  // court's latest State Auditor audit, final budget by fund and function.
+  KY: {
+    agency: 'Kentucky Auditor of Public Accounts',
+    heading: 'Its budget, from the state audit', budgetWord: 'final budget for',
+    fyLabel: (fy) => `the fiscal year that ended June 30, ${fy}`,
+    countyLabel: (fy) => `the fiscal year that ended June 30, ${fy}`,
+    title: (fy) => `fiscal court audit, fiscal ${fy}`,
+    titleFor: (r) => { const m = /Auditreports\/([^/]+)\/(\d{4})/.exec(r.url || ''); return m ? `${decodeURIComponent(m[1]).replace(/([a-z])([A-Z])/g, '$1 $2')} County Fiscal Court audit, fiscal ${m[2]}` : null; },
+    what: 'Kentucky doesn’t publish county budgets in one public place, so these come from each county’s latest audit by the State Auditor, which prints the final budget fund by fund. Audits run a year or more behind.',
+    scope: 'all budgeted funds, final (amended) budget',
+    spentOn: 'all its funds (not counting money moved between funds)',
+    note: 'These are the final budget amounts after the fiscal court’s amendments, from the audit’s budget comparison pages. “Administration” is mostly employee benefits and insurance. Each page number opens that page of the audit.',
+    download: false, mapOn: 'category',
+    map: [
+      [/^general government$/i, 'generaladmin'], [/^protection to persons/i, 'justice'], [/^general health/i, 'health'], [/^social services$/i, 'welfare'],
+      [/^recreation and culture$/i, 'parks'], [/^debt service$/i, 'debt'], [/^administration$/i, 'generaladmin'], [/^roads?( facilities)?$/i, 'roads'],
+      [/^(airports|bus services|(other )?transportation facilities)/i, 'utilities'], [/^capital projects$/i, 'capital'], [/^economic development/i, 'planning'],
+      [/^tva community/i, 'generaladmin'], [/asset forfeiture/i, 'sheriff']
+    ]
+  },
+  // Municipal Services certified budgets: the Certificate page, fund by fund.
+  KS: {
+    agency: 'Kansas Department of Administration (Municipal Services)',
+    fyLabel: (fy) => `${fy}`,
+    title: (fy) => `certified county budget, ${fy}`,
+    titleFor: (r) => r.name ? `${r.name} certified budget, 2026` : null,
+    what: 'Every Kansas county files its certified budget with the state Department of Administration. Its first page lists the most the county may spend from each fund this year. The state lists funds only; County Commons grouped them into areas by each fund’s name.',
+    scope: 'all budgeted funds, spending authority',
+    spentOn: 'all its funds (the most it is allowed to spend)',
+    note: 'These are the budget authority amounts from the certificate page: the most the county may spend from each fund. Money moved between funds can be counted in both. Each page number opens that page of the county’s filed budget.',
+    download: false, classify: true, groupByCat: true,
+    map: []
+  },
+  // APA budget filings: each county PDF's Schedule of Budgeted Disbursements, by function.
+  NE: {
+    agency: 'Nebraska Auditor of Public Accounts',
+    fyLabel: (fy) => `fiscal ${fy} (Jul ${fy - 1} – Jun ${fy})`,
+    title: (fy) => `county budget filing, fiscal ${fy - 1}–${String(fy).slice(2)}`,
+    titleFor: (r) => r.name ? `${r.name} budget filing, fiscal 2025–26` : null,
+    what: 'Every Nebraska county files its adopted budget with the State Auditor on the same form, so the numbers line up from county to county.',
+    scope: 'all funds, including transfers',
+    spentOn: 'all its funds, including money moved between funds',
+    note: 'These come from the budget form’s Schedule of Budgeted Disbursements. Transfers between funds are included, so some money is counted twice. The cash reserve carried into next year is not counted. Each page number opens that page of the county’s filed budget.',
+    download: false,
+    regroup: (l) => /^business-type/i.test(l.category) ? 'Businesses the county runs' : /^(public safety|public works) - /i.test(l.name) ? l.name.split(' - ')[0] : l.name,
+    map: [
+      [/^general government$/i, 'generaladmin'], [/law enforcement$/i, 'sheriff'], [/^public safety - other$/i, 'justice'], [/highways? & roads$/i, 'roads'],
+      [/^public works - other$/i, null], [/^public health & social/i, null], [/^culture and recreation$/i, 'parks'], [/^community development$/i, 'planning'],
+      [/^miscellaneous$/i, 'generaladmin'], [/^(hospital|nursing home)$/i, 'hospital'], [/^(historical society|stadium)$/i, 'other'], [/^self insurance/i, 'benefits'],
+      [/^property management/i, 'buildings'], [/^(broadband|sewer)$/i, 'utilities'], [/^(solid waste|landfill)$/i, 'solidwaste'], [/^bonded indebtedness$/i, 'debt'],
+      [/^capital outlay$/i, 'capital'], [/^transfers out$/i, 'transfers'], [/^(operating|other|assemble lincoln)$/i, null]
+    ]
   }
 };
 
@@ -107,30 +211,33 @@ if (!S || !file) { console.error('Usage: node pipeline/state-finance.js <' + Obj
 const NAT = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'national', 'counties.json'), 'utf8'));
 const geo = {}; for (const c of NAT.counties) geo[c.geoid] = c;
 const D = JSON.parse(fs.readFileSync(file, 'utf8'));
+const LN = require('../server/lib/lines');
 if (!/^https:\/\//.test(D.source_page || '')) { console.error('no https source page'); process.exit(1); }
 
 let out = { states: {}, counties: {} };
 try { out = JSON.parse(fs.readFileSync(OUT, 'utf8')); } catch (e) { /* first run */ }
 for (const [g, r] of Object.entries(out.counties)) if (r.st === st) delete out.counties[g];
-out.states[st] = { agency: S.agency, title: S.title(D.fy), fy: Number(D.fy), fy_label: S.fyLabel ? S.fyLabel(Number(D.fy)) : D.fy_label, kind: D.kind, source_page: D.source_page, download_url: S.download === false ? undefined : D.download_url, what: S.what, scope: S.scope, spentOn: S.spentOn || S.scope, note: S.note, built: new Date().toISOString().slice(0, 10) };
+out.states[st] = { agency: S.agency, title: S.title(D.fy), fy: Number(D.fy), fy_label: S.fyLabel ? S.fyLabel(Number(D.fy)) : D.fy_label, kind: D.kind, source_page: D.source_page, download_url: S.download === false ? undefined : D.download_url, heading: S.heading, budgetWord: S.budgetWord, groupByCat: S.groupByCat || undefined, what: S.what, scope: S.scope, spentOn: S.spentOn || S.scope, note: S.note, built: new Date().toISOString().slice(0, 10) };
 
 const skipped = [], unmapped = new Set();
 let n = 0;
 for (const [g, r] of Object.entries(D.counties)) {
   if (!geo[g] || geo[g].st !== st) { skipped.push(`${g} ${r.name}: not a ${st} county in counties.json`); continue; }
   const lines = r.lines.filter(l => l.amount).map(l => {
-    const m = S.map.find(([re]) => re.test(l.name));
+    const m = S.map.find(([re]) => re.test(S.mapOn === 'category' ? l.category : l.name));
+    if (!m && S.classify) { const nm = S.rename ? S.rename(l.name) : l.name; const k = LN.classify(nm); return { category: S.groupByCat ? (LN.LABEL[k.cat] || 'Other funds') : l.category, name: nm, amount: l.amount, page: l.page || undefined, cat: k.cat, how: k.how }; }
     if (!m) unmapped.add(l.category + ' / ' + l.name);
     const short = m && m[2] ? (typeof m[2] === 'function' ? m[2](l.name.match(m[0])) : m[2]) : null;
-    return { category: l.category, name: short || l.name, amount: l.amount, cat: m ? m[1] : null };
+    return { category: S.regroup ? S.regroup(l) : l.category, name: short || (S.rename ? S.rename(l.name) : l.name), amount: l.amount, page: l.page || undefined, cat: m ? m[1] : null };
   });
   const sum = lines.reduce((s, l) => s + l.amount, 0);
   if (Math.abs(sum - r.total) > 2) { skipped.push(`${g} ${r.name}: lines add to ${sum}, not ${r.total}`); continue; }
   if (!sum) { skipped.push(`${g} ${r.name}: no spending reported`); continue; }
   const other = S.other && r.other_funds ? Object.fromEntries(Object.entries(S.other).filter(([k]) => r.other_funds[k] > 0).map(([k]) => [k, r.other_funds[k]])) : undefined;
   const fy = r.fy && Number(r.fy) !== Number(D.fy) ? Number(r.fy) : undefined; // a county that hasn't filed the latest year
+  const title = S.titleFor ? S.titleFor(r) || undefined : undefined;
   const fy_label = S.countyLabel ? S.countyLabel(fy || Number(D.fy), r) : undefined;
-  out.counties[g] = { st, fy, fy_label, download: fy && r.download_url && S.download !== false ? r.download_url : undefined, total: sum, url: /^https:\/\//.test(r.url || '') ? r.url : D.source_page, lines, other: other && Object.keys(other).length ? other : undefined };
+  out.counties[g] = { st, fy, fy_label, title, download: fy && r.download_url && S.download !== false ? r.download_url : undefined, total: sum, url: /^https:\/\//.test(r.url || '') ? r.url : D.source_page, lines, other: other && Object.keys(other).length ? other : undefined };
   n++;
 }
 out.built = new Date().toISOString().slice(0, 10);

@@ -63,6 +63,7 @@ const CATS = [
 // mislead ("Trial Court Administrator" is a court, not the county executive;
 // "Health Insurance" is an employee benefit, not public health).
 const EARLY = [
+  ['emergency', /\b(public safety access point|psap)\b/i],
   ['courts', /\b(trial court|magistrate court|magistrate fund|district and magistrate|clerk'?s? commissioner|commissioners? fees?|court commissioner|port dist court)\b/i],
   ['benefits', /\bhealth insurance\b/i],
   ['sheriff', /\b(school resource|cops in school|crossing guard|d\.?a\.?r\.?e\.?\b|drug abuse resistance|sheriff training|sheriff aviation|boating safety|metro\/law enforcement)\b/i],
@@ -80,7 +81,7 @@ const EARLY = [
   ['courts', /\b(pretrial services|alternate dispute|dispute resolution)\b/i],
   ['coroner', /\bforensic science\w*\b/i],
   ['welfare', /\b(homeless\w*|care coordination|self-sufficiency|well-being|in[- ]home supportive|cal ?works?|public social services|public assistance|best starts|section 8|community action|child care)\b/i],
-  ['health', /\b(crisis care|developmental disabilit\w*|animal care)\b/i],
+  ['health', /\b(crisis care|developmental disabilit\w*|animal care|mh services)\b/i],
   ['executive', /\b(executive office|office of (the )?county administrat\w*|county administration|chief administrative officer|chief executive|office of the president|president)\b/i],
   ['treasurer', /\b(chief financial officer|management and budget|office of (management and )?budget)\b/i],
   ['it', /\b(chief information officer|universal services|caps program)\b/i],
@@ -231,8 +232,8 @@ function index() {
   let SF = null; try { SF = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'national', 'state-finance.json'), 'utf8')); } catch (e) { /* none */ }
   if (SF) for (const [geoid, r] of Object.entries(SF.counties)) {
     const c = byGeo[geoid], S = SF.states[r.st]; if (!c || !S || counties[geoid]) continue;
-    const lines = r.lines.map(l => Object.assign({ name: l.name, fund: l.category, amount: l.amount, href: r.url },
-      l.cat ? { cat: l.cat, how: `the state’s standard line “${l.name}”` } : classify(l.name)));
+    const lines = r.lines.map(l => Object.assign({ name: l.name, fund: l.category, amount: l.amount, href: l.page ? r.url + '#page=' + l.page : r.url, page: l.page },
+      l.cat ? { cat: l.cat, how: l.how || `the state’s standard line “${l.name}”` } : classify(l.name)));
     add(c, { year: r.fy || S.fy, basis: S.kind === 'actual' ? 'actual' : 'adopted', scope: S.scope, source: { label: `${S.title}, ${S.agency}`, url: S.source_page }, total: r.total, lines });
   }
   // Sum each county's lines by category.
