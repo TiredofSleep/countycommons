@@ -318,6 +318,69 @@ const STATES = {
       [/^571\./, 'parks'], [/^572\./, 'library'], [/^57[35]\./, 'other'], [/^57[46-9]\./, 'parks'],
       [/^59\d\./, 'generaladmin']
     ]
+  },
+  // Comptroller TAG exports: every county's audited governmental-fund spending.
+  TN: {
+    agency: 'Tennessee Comptroller of the Treasury',
+    fyLabel: (fy) => `fiscal ${fy} (Jul ${fy - 1} – Jun ${fy})`,
+    title: (fy) => `TAG data exports, county expenditures, fiscal ${fy}`,
+    what: 'The Comptroller’s office audits every Tennessee county and publishes its spending in the same categories, so the numbers line up from county to county.',
+    scope: 'governmental funds, including schools',
+    spentOn: 'its governmental funds, including the county school department, debt and building projects (not utilities or money moved between funds)',
+    note: 'Tennessee counties run their school departments, so education is usually the biggest area. Davidson (Metro Nashville), Hamilton, Knox and Shelby are audited by private firms, and the Comptroller’s data gives only their totals.',
+    mapOn: 'both', classify: true,
+    map: [
+      [/^total \(primary/i, null], [/^education \(/i, 'schools'], [/^debt service \//i, 'debt'], [/^capital projects \/ american rescue/i, 'arpa'], [/^capital projects \//i, 'capital'],
+      [/\/ payments to cities$/i, 'generaladmin'], [/\/ employee benefits$/i, 'benefits'], [/\/ local health center$/i, 'health'], [/\/ ambulance/i, 'ems'],
+      [/^highways \//i, 'roads'], [/\/ county trustee/i, 'treasurer'], [/\/ county clerk's office$/i, 'clerk'],
+      [/\/ (landfill|sanitation management|convenience centers|waste pickup|transfer stations)/i, 'solidwaste'], [/\/ (workhouse|correctional incentive)/i, 'jail']
+    ],
+    fallback: [
+      [/^general government \//i, 'generaladmin'], [/^finance \//i, 'treasurer'], [/^administration of justice \//i, 'courts'], [/^public safety \//i, 'justice'],
+      [/^public health and welfare \//i, 'healthwelfare'], [/^social, cultural/i, 'parks'], [/^agriculture/i, 'extension'], [/^other operations \//i, 'generaladmin']
+    ]
+  },
+  // Treasury F-65 county reports on data.michigan.gov: all funds by account range.
+  MI: {
+    agency: 'Michigan Department of Treasury',
+    fyLabel: (fy) => `${fy}`,
+    title: (fy) => `F-65 annual local unit fiscal report, counties, ${fy}`,
+    what: 'Every Michigan county files the F-65 report with the state Treasury each year using the same account ranges, so the numbers line up from county to county.',
+    scope: 'all funds, including transfers',
+    spentOn: 'all its funds, including the road commission and other county-run services, and money moved between funds',
+    note: 'Transfers out are money moved from one county fund to another and are counted again where spent. Depreciation is the yearly wear on buildings and equipment, an accounting cost rather than cash spent. Some counties put large amounts in “miscellaneous” or “all other” lines. The “source” link shows this county’s rows in the state’s open data.',
+    rename: (n) => n.replace(/^Except Above /i, '').replace(/\s+/g, ' ').trim(),
+    mapOn: 'name',
+    map: [
+      [/road commission|public works \(non-act 51\)/i, 'roads'], [/transfers \(out\)/i, 'transfers'], [/all other general government/i, 'generaladmin'],
+      [/^mental health/i, 'health'], [/police\/sheriff/i, 'sheriff'], [/corrections\/jail/i, 'jail'], [/human services & medical care/i, 'welfare'],
+      [/all other health & welfare/i, 'healthwelfare'], [/^capital outlay/i, 'capital'], [/^miscellaneous$/i, 'generaladmin'], [/health departments/i, 'health'],
+      [/child care/i, 'welfare'], [/all other public works/i, null], [/water and\/or sewer|other public works enterprise|airports|public transportation/i, 'utilities'],
+      [/^debt service/i, 'debt'], [/all other public safety/i, 'justice'], [/other judicial|circuit court|district\/municipal|friend of the court|probate|trial court|probation|family counseling|law library|grand jury/i, 'courts'],
+      [/^depreciation/i, null], [/prosecuting attorney/i, 'prosecutor'], [/building and grounds/i, 'buildings'], [/chief executive|legislative/i, 'executive'],
+      [/emergency 911/i, 'emergency'], [/all other community development|economic development|planning and zoning|redevelopment|building inspection/i, 'planning'],
+      [/parks and recreation|all other recreation/i, 'parks'], [/finance and tax|^treasurer$/i, 'treasurer'], [/^hospital$/i, 'hospital'], [/sanitation\/landfill/i, 'solidwaste'],
+      [/area agency on aging/i, 'welfare'], [/^clerk$|register of deeds/i, 'clerk'], [/emergency services \(ambulance\)/i, 'ems'], [/assessing/i, 'assessor'],
+      [/veteran/i, 'veterans'], [/medical examiner/i, 'coroner'], [/attorney\/corporation counsel/i, 'generaladmin'], [/alcoholism/i, 'health'], [/^library$/i, 'library'],
+      [/^elections$/i, 'elections'], [/combined public safety/i, 'justice'], [/cultural activities/i, 'other'], [/^fire$/i, 'fire'], [/extraordinary/i, 'generaladmin']
+    ]
+  },
+  // DCED Municipal Statistics: Statewide County Annual Financial Report (DCED-CLGS-20).
+  PA: {
+    agency: 'Pennsylvania Department of Community and Economic Development',
+    fyLabel: (fy) => `${fy}`,
+    title: (fy) => `County Annual Financial Report, statewide, ${fy}`,
+    what: 'Every Pennsylvania county files an annual financial report with the Department of Community and Economic Development in the same categories, so the numbers line up from county to county.',
+    scope: 'governmental funds, not transfers',
+    spentOn: 'its governmental funds, including debt and building projects (not utilities or money moved between funds)',
+    note: 'Counties choose which category each cost goes in, so some differences between counties are bookkeeping. The “source” link opens the state’s report viewer; pick the county and year.',
+    mapOn: 'both',
+    map: [
+      [/\/ health and welfare$/i, 'healthwelfare'], [/\/ administrative$/i, 'generaladmin'], [/\/ other expenditures$/i, null], [/\/ judicial$/i, 'courts'],
+      [/^public safety \/ public safety$/i, 'justice'], [/\/ corrections$/i, 'jail'], [/^debt service/i, 'debt'], [/^capital outlay/i, 'capital'],
+      [/\/ culture and recreation$/i, 'parks'], [/\/ conservation$/i, 'environment'], [/^community development \/ economic opportunity$/i, 'welfare'], [/^community development \//i, 'planning'],
+      [/\/ highways and streets$/i, 'roads'], [/\/ sanitation$/i, 'solidwaste']
+    ]
   }
 };
 
