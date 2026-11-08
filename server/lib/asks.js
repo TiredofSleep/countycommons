@@ -12,7 +12,7 @@ const ROOT = path.join(__dirname, '..', '..');
 
 // The governing body a county petition is addressed to (same table as
 // pipeline/campaigns.js --everywhere).
-const BODY = { AR: 'Quorum Court', TX: 'Commissioners Court', KY: 'Fiscal Court', LA: 'Parish Council or Police Jury', TN: 'County Commission', AL: 'County Commission', WV: 'County Commission', MO: 'County Commission', GA: 'Board of Commissioners', CA: 'Board of Supervisors', AZ: 'Board of Supervisors', IA: 'Board of Supervisors', MS: 'Board of Supervisors', VA: 'Board of Supervisors', WI: 'Board of Supervisors', NJ: 'Board of County Commissioners', FL: 'Board of County Commissioners', OH: 'Board of County Commissioners', SC: 'County Council', DE: 'County Council', HI: 'County Council', AK: 'Borough Assembly' };
+const BODY = { AR: 'Quorum Court', TX: 'Commissioners Court', KY: 'Fiscal Court', LA: 'Parish Council or Police Jury', TN: 'County Commission', AL: 'County Commission', WV: 'County Commission', MO: 'County Commission', OK: 'Board of County Commissioners', GA: 'Board of Commissioners', CA: 'Board of Supervisors', AZ: 'Board of Supervisors', IA: 'Board of Supervisors', MS: 'Board of Supervisors', VA: 'Board of Supervisors', WI: 'Board of Supervisors', NJ: 'Board of County Commissioners', FL: 'Board of County Commissioners', OH: 'Board of County Commissioners', SC: 'County Council', DE: 'County Council', HI: 'County Council', AK: 'Borough Assembly' };
 const addressee = (c) => `the ${c.name} ${/ city$/i.test(c.name) ? 'City Council' : (BODY[c.st] || 'County Commission (its governing board)')}`;
 
 let CAMP = { m: 0, d: null };

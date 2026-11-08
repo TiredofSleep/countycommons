@@ -48,6 +48,12 @@ const hash = (p) => crypto.createHash('sha256').update('cc-req:' + p).digest('he
 // Add business days (weekends skipped; holidays can add more).
 function addBusinessDays(d, n) { const x = new Date(d); let left = n; while (left > 0) { x.setDate(x.getDate() + 1); if (x.getDay() !== 0 && x.getDay() !== 6) left--; } return x; }
 const iso = (d) => d.toISOString().slice(0, 10);
+// The legal deadline: business or working days skip weekends; calendar days don't; none when the law sets no number.
+function dueDate(L, d) {
+  if (!L || !L.deadline_days) return null;
+  if (L.deadline_unit === 'calendar') { const x = new Date(d); x.setDate(x.getDate() + L.deadline_days); return iso(x); }
+  return iso(addBusinessDays(d, L.deadline_days));
+}
 
 function status(geoid, campId) {
   const r = load().requests[key(geoid, campId)]; if (!r) return null;
@@ -61,7 +67,7 @@ function markFiled(geoid, campId, st, participant, filedOn) {
   if (s.requests[k]) return { already: true };
   const L = law(st); const d = /^\d{4}-\d{2}-\d{2}$/.test(filedOn || '') ? new Date(filedOn + 'T12:00:00') : new Date();
   if (iso(d) > iso(new Date()) || iso(d) < iso(new Date(Date.now() - 60 * 864e5))) return { error: 'date' };
-  s.requests[k] = { geoid, campaign: campId, st, filed_at: iso(d), due: L ? iso(addBusinessDays(d, L.deadline_days)) : null, filer: hash(participant), support: {}, answered_at: null, answer: null, answer_url: null };
+  s.requests[k] = { geoid, campaign: campId, st, filed_at: iso(d), due: dueDate(L, d), filer: hash(participant), support: {}, answered_at: null, answer: null, answer_url: null };
   save(s); return { ok: true };
 }
 function addSupport(geoid, campId, participant) {
@@ -74,4 +80,5 @@ function answer(geoid, campId, { note, url, at }) {
   r.answered_at = at || iso(new Date()); r.answer = note || null; r.answer_url = url || null; save(s); return true;
 }
 
-module.exports = { law, recordFor, status, markFiled, addSupport, answer, RECORDS };
+const states = () => { law("AR"); return Object.keys((LAW.d && LAW.d.states) || {}); };
+module.exports = { law, states, recordFor, status, markFiled, addSupport, answer, RECORDS };

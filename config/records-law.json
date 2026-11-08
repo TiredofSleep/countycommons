@@ -1,5 +1,5 @@
 {
-  "_about": "Public records law facts used to print records requests and escalation steps. A state is turned on only after each fact here is checked against the statute or the state's own official guide; states not listed get the letter to elected officials only. Verified 2026-11-08.",
+  "_about": "Public records law facts used to print records requests and escalation steps. A state is turned on only after each fact here is checked against the statute or the state's own official guide; states not listed get the letter to elected officials only. AR and TX verified 2026-11-08; OK, MO, TN, LA, MS and FL verified 2026-11-08 (each state lists the sections read and anything left unverified, which is left out of what is printed).",
   "states": {
     "AR": {
       "law": "Arkansas Freedom of Information Act",
@@ -9,6 +9,7 @@
       "how": "A request may be made in person, by telephone, mail, fax or email (§ 25-19-105(a)(2)(B)). A written request is best, because it leaves a record.",
       "deadline": "Records must generally be made available right away. If a record is in active use or storage, the custodian must say so in writing and set a date and hour within three working days (§ 25-19-105(e)).",
       "deadline_days": 3,
+      "deadline_unit": "working",
       "fees": "Copies can cost no more than the actual cost of reproduction, not staff time; the custodian must itemize charges, may ask for payment in advance only over $25, and may waive fees for noncommercial, public-interest requests (§ 25-19-105(d)(3)).",
       "addressed_to": "Custodian of Records",
       "send_note": "Deliver it to the office named above by mail, email or in person, and keep a copy with the date you sent it.",
@@ -19,11 +20,23 @@
         "I ask that copy fees be waived, because the records are requested for noncommercial purposes in the public interest (§ 25-19-105(d)(3)(A)(iv)). If there is a fee, please send an itemized estimate first (§ 25-19-105(d)(3)(B))."
       ],
       "escalate": [
-        { "step": "No answer, or no written date, after three working days", "do": "Send a short follow-up letter that cites § 25-19-105(e) and asks for the records or a written date and hour. Keep copies of both letters." },
-        { "step": "Records refused", "do": "Any citizen denied records may appeal right away to the circuit court for the county (§ 25-19-107(a)). The court must set a hearing within seven days of a written application (§ 25-19-107(b)), and a citizen who wins after filing suit can be awarded attorney’s fees (§ 25-19-107(d))." },
-        { "step": "A custodian who negligently violates the act", "do": "Negligently violating the act is a Class C misdemeanor (§ 25-19-104). That is a matter for the county’s prosecuting attorney." }
+        {
+          "step": "No answer, or no written date, after three working days",
+          "do": "Send a short follow-up letter that cites § 25-19-105(e) and asks for the records or a written date and hour. Keep copies of both letters."
+        },
+        {
+          "step": "Records refused",
+          "do": "Any citizen denied records may appeal right away to the circuit court for the county (§ 25-19-107(a)). The court must set a hearing within seven days of a written application (§ 25-19-107(b)), and a citizen who wins after filing suit can be awarded attorney’s fees (§ 25-19-107(d))."
+        },
+        {
+          "step": "A custodian who negligently violates the act",
+          "do": "Negligently violating the act is a Class C misdemeanor (§ 25-19-104). That is a matter for the county’s prosecuting attorney."
+        }
       ],
-      "source": { "label": "Arkansas Attorney General, Freedom of Information Handbook, 22nd Edition (2026)", "url": "https://media.ark.org/ag/APA-045-2026-FOIA-Handbook-22nd-Edition.pdf" }
+      "source": {
+        "label": "Arkansas Attorney General, Freedom of Information Handbook, 22nd Edition (2026)",
+        "url": "https://media.ark.org/ag/APA-045-2026-FOIA-Handbook-22nd-Edition.pdf"
+      }
     },
     "TX": {
       "law": "Texas Public Information Act",
@@ -33,6 +46,7 @@
       "how": "The request should be in writing. If the county has named one mailing address and one email address for requests on its website and its Public Information Act sign, it only has to answer requests sent to those addresses (§ 552.234).",
       "deadline": "Information must be produced promptly. If it can’t be produced within 10 business days, the officer must say so in writing and set a date and hour (§ 552.221(d)). To withhold anything, the county must ask the Attorney General for a ruling and tell you within 10 business days (§ 552.301); if it doesn’t, the information is presumed public (§ 552.302).",
       "deadline_days": 10,
+      "deadline_unit": "business",
       "fees": "If charges will be more than $40, the county must send an itemized estimate, and you must answer it in writing within 10 business days or the request is treated as withdrawn (§ 552.2615).",
       "addressed_to": "Officer for Public Information",
       "send_note": "Send it to the mailing or email address the county lists for Public Information Act requests, usually on its website’s Public Information Act page (§ 552.234). Keep a copy with the date you sent it.",
@@ -43,12 +57,334 @@
         "If charges will be more than $40, please send me an itemized estimate first (§ 552.2615)."
       ],
       "escalate": [
-        { "step": "No answer within 10 business days", "do": "If the county neither produced the information, set a date in writing, nor asked the Attorney General for a ruling, the information is presumed public and must be released unless there is a compelling reason (§ 552.302). Send a follow-up letter that says so." },
-        { "step": "Records refused or ignored", "do": "File a written, signed complaint with the district or county attorney of the county, naming the government, the date and what happened (§ 552.3215(e)). They must decide within 31 days whether to act; if they decline or don’t act, you can take it to the Attorney General (§ 552.3215)." },
-        { "step": "Charged too much", "do": "Complain in writing to the Attorney General about the overcharge (§ 552.269)." },
-        { "step": "Still refused", "do": "A requester can sue for a writ of mandamus in district court in the county where the government’s main offices are (§ 552.321)." }
+        {
+          "step": "No answer within 10 business days",
+          "do": "If the county neither produced the information, set a date in writing, nor asked the Attorney General for a ruling, the information is presumed public and must be released unless there is a compelling reason (§ 552.302). Send a follow-up letter that says so."
+        },
+        {
+          "step": "Records refused or ignored",
+          "do": "File a written, signed complaint with the district or county attorney of the county, naming the government, the date and what happened (§ 552.3215(e)). They must decide within 31 days whether to act; if they decline or don’t act, you can take it to the Attorney General (§ 552.3215)."
+        },
+        {
+          "step": "Charged too much",
+          "do": "Complain in writing to the Attorney General about the overcharge (§ 552.269)."
+        },
+        {
+          "step": "Still refused",
+          "do": "A requester can sue for a writ of mandamus in district court in the county where the government’s main offices are (§ 552.321)."
+        }
       ],
-      "source": { "label": "Texas Government Code, Chapter 552 (Public Information Act)", "url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.552.htm" }
+      "source": {
+        "label": "Texas Government Code, Chapter 552 (Public Information Act)",
+        "url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.552.htm"
+      }
+    },
+    "OK": {
+      "law": "Oklahoma Open Records Act",
+      "cite": "51 O.S. § 24A.1 et seq.",
+      "who": "anyone",
+      "residency_line": "",
+      "how": "Send the request to the people the county has named to release records (§ 24A.5(8)). The county may require you to fill out its records request form (§ 24A.5(7)). A written request is best, because it leaves a record.",
+      "deadline": "The county must give prompt, reasonable access to its records. Any delay must be only the time needed to prepare the records or to avoid excessive disruption (§ 24A.5(6)). The law sets no fixed number of days.",
+      "deadline_days": null,
+      "deadline_unit": null,
+      "fees": "The county may charge only the reasonable, direct cost of copying: no more than 25 cents a page for pages up to 8½ by 14 inches, and no more than $1 a page for a certified copy. A search fee is allowed only if a request is solely for a commercial purpose or would clearly cause excessive disruption, and never when release is in the public interest. The county may ask for payment in advance only when the estimate is over $75 or you owe fees from past requests (§ 24A.5(4)).",
+      "addressed_to": "Records Custodian",
+      "send_note": "Deliver it to the person or office the county has named to release records, by mail, email or in person. If the county has a request form, use it. Keep a copy with the date you sent it.",
+      "lines": [
+        "If the records exist in electronic form, please provide them by email in that form, such as a spreadsheet or PDF.",
+        "Please provide prompt, reasonable access to these records. Any delay should be limited to the time needed to prepare them (§ 24A.5(6)).",
+        "If any part of a record is exempt, please provide the reasonably segregable rest (§ 24A.5(3)), and tell me which exemption you rely on.",
+        "These records are requested in the public interest, not for a commercial purpose, so no search fee should be charged (§ 24A.5(4)). If copy fees will be more than $75, please send me the estimate first."
+      ],
+      "escalate": [
+        {
+          "step": "No answer, or a long delay",
+          "do": "Send a short follow-up letter that cites § 24A.5(6) and asks for prompt, reasonable access. Keep copies of both letters."
+        },
+        {
+          "step": "Records refused or not returned promptly",
+          "do": "Ask the Attorney General’s Public Access Counselor to review it. Use the Attorney General’s form, sign it, and include your request and any answers. A review of a denial must be filed within 30 calendar days of the denial (§ 24A.40(B)). You may also ask for review if your request has not been answered in a prompt or reasonable manner (§ 24A.40(D)). The Attorney General must give advice within 60 calendar days (§ 24A.40(G))."
+        },
+        {
+          "step": "Still refused",
+          "do": "Anyone denied records may file a civil suit for declaratory or injunctive relief and, if they win, is entitled to reasonable attorney fees (§ 24A.17(B)). At least 10 business days before filing, you must tell the county and the Attorney General in writing that you plan to sue (§ 24A.17(C))."
+        },
+        {
+          "step": "A public official who willfully breaks the law",
+          "do": "Willfully violating the act is a misdemeanor, with a fine up to $500, up to one year in county jail, or both (§ 24A.17(A))."
+        }
+      ],
+      "source": {
+        "label": "Oklahoma Statutes, Title 51, Oklahoma Open Records Act (Oklahoma State Courts Network)",
+        "url": "https://www.oscn.net/applications/oscn/index.asp?ftdb=STOKST51&level=1"
+      },
+      "verified_sections": [
+        "51 O.S. § 24A.5 (as amended by Laws 2026, c. 217)",
+        "51 O.S. § 24A.17 (as amended by Laws 2024, c. 116)",
+        "51 O.S. § 24A.40 (added by Laws 2025, c. 335)"
+      ],
+      "unverified": [
+        "Whether the 30-day filing limit in § 24A.40(B) also applies to a review asked for under § 24A.40(D) (no prompt answer). The text says 30 days after the denial; the summary I read did not say whether (D) has its own limit.",
+        "The web address of the Attorney General’s Public Access Counselor form."
+      ]
+    },
+    "MO": {
+      "law": "Missouri Sunshine Law",
+      "cite": "RSMo ch. 610",
+      "who": "anyone",
+      "residency_line": "",
+      "how": "Send the request to the county’s custodian of records. The county must give the custodian’s name and location on request (§ 610.023.1). The law does not set a required way to ask, so a county may ask you to use its form but can’t require it (Attorney General’s Sunshine Law guide, on § 610.023.3). A written request is best, because it leaves a record.",
+      "deadline": "Each request must be acted on as soon as possible, and no later than the end of the third business day after the custodian receives it. If access isn’t given right away, the custodian must give a detailed explanation of the delay and the place and earliest time and date the records will be available. The time to produce records may go past three days for reasonable cause (§ 610.023.3).",
+      "deadline_days": 3,
+      "deadline_unit": "business",
+      "fees": "Paper copies up to 9 by 14 inches can cost no more than 10 cents a page. Copying time is capped at the average hourly pay of clerical staff, and research time may be charged at actual cost, using the staff that cost the least. You may ask for an estimate before copies are made, and fees may be waived or cut when the request serves the public interest and is not mainly commercial (§ 610.026.1(1)). Electronic records cost only copies, staff time and the medium, plus programming if it goes beyond the usual (§ 610.026.1(2)). The county may ask for payment before filling the request; if you don’t pay within 90 days (150 days if fees are over $1,000), the request is treated as withdrawn (§ 610.026.2).",
+      "addressed_to": "Custodian of Records",
+      "send_note": "Deliver it to the county’s custodian of records by mail, email or in person. If you don’t know who that is, ask; the county must tell you (§ 610.023.1). Keep a copy with the date you sent it.",
+      "lines": [
+        "Please provide the records by email in electronic form, such as a spreadsheet or PDF. When records are requested in a certain format, the law requires that format if it is available (§ 610.023.3).",
+        "Please act on this request no later than the end of the third business day after you receive it. If access is not given right away, please give a detailed explanation of the delay and the place and earliest time and date the records will be available (§ 610.023.3).",
+        "If any record is closed, please give me a written statement that cites the specific law you rely on (§ 610.023.4), and release the parts that are open (§ 610.024.1).",
+        "I ask that fees be waived or reduced, because this request is likely to add to public understanding of the county’s work and is not mainly in my commercial interest (§ 610.026.1(1)). Before making copies, please send me an estimate of the cost (§ 610.026.1(1))."
+      ],
+      "escalate": [
+        {
+          "step": "No answer after three business days",
+          "do": "Send a short follow-up letter that cites § 610.023.3 and asks for the records or a detailed explanation with the earliest date they will be ready. Keep copies of both letters."
+        },
+        {
+          "step": "Records refused or ignored",
+          "do": "After you have tried to get the records from the county, you can file a Sunshine Law complaint with the Attorney General’s Office. The Attorney General may go to court to enforce the law (§ 610.027.1)."
+        },
+        {
+          "step": "Still refused",
+          "do": "Any aggrieved person, taxpayer or citizen of Missouri may sue in the circuit court for the county (§ 610.027.1)."
+        },
+        {
+          "step": "A knowing or purposeful violation",
+          "do": "If a court finds the county knowingly broke the law, it can impose a civil penalty up to $1,000 and may order the county to pay attorney fees. For a purposeful violation, the penalty can be up to $5,000 and the court must order attorney fees (§ 610.027.3, .4)."
+        }
+      ],
+      "source": {
+        "label": "Missouri Attorney General, Missouri Sunshine Law guide (Attorney General Catherine L. Hanaway), with statute text",
+        "url": "https://ago.mo.gov/wp-content/uploads/2.0-Missouri-Sunshine-Law-CH.pdf"
+      },
+      "verified_sections": [
+        "RSMo § 610.023",
+        "RSMo § 610.024",
+        "RSMo § 610.026 (with the 2025 H.B. 145 & 59 changes)",
+        "RSMo § 610.027"
+      ],
+      "unverified": [
+        "The Revisor of Statutes site (revisor.mo.gov) blocked automated reading, so the statute text was read from the copy printed in the Attorney General’s current guide, not the Revisor’s site.",
+        "The one-year and two-year filing limits in § 610.027.5 were left out, because the text ties them to suits to void actions and it is not clear they apply to every records suit."
+      ]
+    },
+    "TN": {
+      "law": "Tennessee Public Records Act",
+      "cite": "Tenn. Code Ann. § 10-7-501 et seq.",
+      "who": "any citizen of Tennessee",
+      "residency_line": "I am a citizen of the State of Tennessee.",
+      "how": "Only Tennessee citizens have a right to records, and the county may ask for a government photo ID with your address (§ 10-7-503(a)(2)(A), (a)(7)(A)). A request just to look at records can’t be required in writing. A request for copies can be required in writing or on a set form (§ 10-7-503(a)(7)(A)). Each county must adopt a public records policy that lists how to ask, any form, its fees and who handles requests (§ 10-7-503(g)).",
+      "deadline": "Records must be made available promptly. If that isn’t practicable, within seven business days the custodian must make them available, deny the request in writing with the reason, or tell you in writing how much time is reasonably needed to produce them (§ 10-7-503(a)(2)(B)). Not answering in one of these ways counts as a denial.",
+      "deadline_days": 7,
+      "deadline_unit": "business",
+      "fees": "Looking at records is free. The county must give you an estimate before charging for copies (§ 10-7-503(a)(7)(C)). Under the state’s Schedule of Reasonable Charges, copies are up to 15 cents a page in black and white and 50 cents in color, labor can be charged only after the first hour, and the county may ask for payment before making copies (Office of Open Records Counsel, Schedule of Reasonable Charges).",
+      "addressed_to": "Public Records Request Coordinator",
+      "send_note": "Send it to the Public Records Request Coordinator named in the county’s public records policy, using the way the policy lists. If the policy requires a form for copies, use it. Keep a copy with the date you sent it.",
+      "lines": [
+        "If the records are kept in electronic form, please provide them by email in that form, such as a PDF.",
+        "If you cannot make the records available promptly, within seven business days please make them available, deny the request in writing with the reason, or tell me in writing the time reasonably needed to produce them (§ 10-7-503(a)(2)(B)).",
+        "If you withhold any record or part of one, please put the denial in writing and state the reason (§ 10-7-503(a)(2)(B)), and provide the rest with only the confidential parts redacted.",
+        "Please send me an estimate of any copy and labor charges before you make copies (§ 10-7-503(a)(7)(C))."
+      ],
+      "escalate": [
+        {
+          "step": "No answer after seven business days",
+          "do": "Send a short follow-up letter that cites § 10-7-503(a)(2)(B). Not answering in one of the three ways the law lists counts as a denial. Keep copies of both letters."
+        },
+        {
+          "step": "Help from the state",
+          "do": "Contact the Office of Open Records Counsel in the Comptroller’s office. It answers questions from the public and issues informal advisory opinions (§ 8-4-601(b)), and it can informally mediate a dispute if both sides agree (§ 8-4-601(c))."
+        },
+        {
+          "step": "Records refused",
+          "do": "A citizen who is denied records, including by an unreasonable fee, may file a petition for access in chancery or circuit court, and the county has the burden to justify the denial (§ 10-7-505). The court may award attorney fees if the county knew the record was public and willfully refused to release it (§ 10-7-505(g))."
+        }
+      ],
+      "source": {
+        "label": "Tennessee Comptroller of the Treasury, Office of Open Records Counsel, Tennessee Public Records Act FAQs",
+        "url": "https://comptroller.tn.gov/office-functions/open-records-counsel/open-meetings/frequently-asked-questions/tennessee-public-records-act-faqs.html"
+      },
+      "verified_sections": [
+        "§ 10-7-503(a)(2)(A), (a)(2)(B), (a)(7)(A), (a)(7)(C), (g), as stated in Office of Open Records Counsel guidance (FAQs, Model Public Records Policy, Best Practices, 2022 seminar), not the statute text itself",
+        "§ 10-7-505 and § 10-7-505(g), with the willfulness words quoted in the Office of Open Records Counsel 2022 public records seminar",
+        "§ 8-4-601(b), quoted in the Office of Open Records Counsel Informal Advisory Opinions policy",
+        "§ 8-4-601(c), as stated in the Office of Open Records Counsel Mediation policy"
+      ],
+      "unverified": [
+        "The statute text itself. Tennessee’s code is posted only on a LexisNexis site that could not be read, so every fact here comes from the Office of Open Records Counsel’s guidance.",
+        "Exact sub-paragraph cites inside § 10-7-503(a)(7) (for example, the ID rule) beyond what the Office of Open Records Counsel’s FAQ gives.",
+        "Which county’s court a petition must be filed in under § 10-7-505.",
+        "Whether there were changes after the Office of Open Records Counsel’s 2017 policies and 2022 seminar. The FAQ page appears current and matches them."
+      ]
+    },
+    "LA": {
+      "law": "Louisiana Public Records Law",
+      "cite": "La. R.S. 44:1 et seq.",
+      "who": "any person of the age of majority (an adult) may inspect or copy records; any person may get a copy",
+      "residency_line": "",
+      "how": "A request may be made in person, in writing or electronically (§ 44:35(A)). The custodian may ask only about your age and identification, and may ask you to sign a register (§ 44:32(A)(1)). A written request is best, because it leaves a record.",
+      "deadline": "A record that is available must be shown right away. If it is in active use, the custodian must promptly say so in writing and set a day and hour within three days, not counting weekends and legal holidays (§ 44:33(B)(1)). If the custodian questions whether a record is public, it must tell you in writing, with reasons and the legal basis, within five days, not counting weekends and legal holidays (§ 44:32(D)).",
+      "deadline_days": 5,
+      "deadline_unit": "business",
+      "fees": "The custodian may charge reasonable copy fees, which may include sending electronic copies, from a fee schedule it must post. It may ask for payment in advance, must tell you the amount before producing copies, and may give free or cheaper copies to indigent citizens (§ 44:32(C)(1)(a)). No fee may be charged just to look at records, or to decide whether a record can be released (§ 44:32(C)(3)).",
+      "addressed_to": "Custodian of Records",
+      "send_note": "Deliver it to the office named above by mail, email or in person, and keep a copy with the date you sent it.",
+      "lines": [
+        "Please send electronic copies of the records by email, such as a spreadsheet or PDF (§ 44:32(C)(1)(a)).",
+        "If any record is not available right away because it is in active use, please certify that in writing and set a day and hour within three days, not counting weekends and legal holidays (§ 44:33(B)(1)).",
+        "If you question whether any record is public, please notify me in writing within five days, not counting weekends and legal holidays, with your reasons and the legal basis (§ 44:32(D)), and make the public parts available (§ 44:32(B)).",
+        "Before producing copies, please tell me the amount of any fees (§ 44:32(C)(1)(a))."
+      ],
+      "escalate": [
+        {
+          "step": "No answer, or no written date",
+          "do": "Send a short follow-up letter that cites § 44:32(D) and § 44:33(B)(1) and asks for the records or a written answer. Keep copies of both letters."
+        },
+        {
+          "step": "Records refused, or no written answer after five days",
+          "do": "If you are denied, or five days pass (not counting weekends and legal holidays) with no written decision or time estimate, you may sue in the district court for the parish where the custodian’s office is (§ 44:35(A)). If you win, the court must award reasonable attorney fees and costs (§ 44:35(D)(1))."
+        },
+        {
+          "step": "Ignored without good reason",
+          "do": "If the custodian arbitrarily withheld records or failed to respond, the court may award actual damages and civil penalties up to $100 a day, paid by the public body (§ 44:35(E))."
+        },
+        {
+          "step": "A custodian who arbitrarily breaks the law",
+          "do": "Arbitrarily or capriciously violating the law is a crime, with a fine of $100 to $1,000 or one to six months in jail for a first offense (§ 44:37)."
+        }
+      ],
+      "source": {
+        "label": "Louisiana Revised Statutes, Title 44 (Louisiana State Legislature)",
+        "url": "https://www.legis.la.gov/legis/Laws_Toc.aspx?folder=118&level=Parent"
+      },
+      "verified_sections": [
+        "La. R.S. 44:31",
+        "La. R.S. 44:32 (as amended through Acts 2024, No. 411)",
+        "La. R.S. 44:33",
+        "La. R.S. 44:35",
+        "La. R.S. 44:37"
+      ],
+      "unverified": [
+        "The age of majority in years. Title 44 uses the phrase but does not define it, so no number is given."
+      ]
+    },
+    "MS": {
+      "law": "Mississippi Public Records Act",
+      "cite": "Miss. Code Ann. § 25-61-1 et seq.",
+      "who": "anyone",
+      "residency_line": "",
+      "how": "Make the request in writing. The county may adopt reasonable written rules on the cost, time, place and way to get records, and must give public notice of them (§ 25-61-5(1)(a)).",
+      "deadline": "A county with written rules must produce or deny records no later than seven working days after it receives the request. If it can’t produce them by the seventh working day, it must explain in writing why, and say the records will be produced. Unless both sides agree, it must produce them no later than 14 working days after the request. A county with no written rules must produce records within one working day after a written request (§ 25-61-5(1)).",
+      "deadline_days": 7,
+      "deadline_unit": "working",
+      "fees": "Fees can’t be more than the actual cost of searching, reviewing, copying and mailing, with staff time at the pay of the lowest-level worker who can do the job. Fees are collected before the work is done (§ 25-61-7(1)). Redacting exempt material may cost no more than actual cost (§ 25-61-5(2)).",
+      "addressed_to": "Custodian of Records",
+      "send_note": "Deliver it to the county office that keeps the records, following any public records rules the county has posted. Keep a copy with the date you sent it.",
+      "lines": [
+        "Please provide the records by email in electronic form, such as a spreadsheet or PDF. If you keep a record in that format, the law requires a copy in the format requested (§ 25-61-10(2)).",
+        "Please produce the records within seven working days. If you can’t, please explain in writing why and when they will be produced, which may be no later than 14 working days after you receive this request unless we agree otherwise (§ 25-61-5(1)).",
+        "If any part of a record is exempt, please redact that part and release the rest (§ 25-61-5(2)). Any denial must be in writing and name the specific exemption (§ 25-61-5(3)).",
+        "Because fees are collected in advance (§ 25-61-7(1)), please tell me the cost before you do the work."
+      ],
+      "escalate": [
+        {
+          "step": "No answer after seven working days",
+          "do": "Send a short follow-up letter that cites § 25-61-5(1) and asks for the records or a written explanation. Keep copies of both letters."
+        },
+        {
+          "step": "Records refused",
+          "do": "File a complaint with the Mississippi Ethics Commission. The county has 14 days to answer, and the Commission can order records produced and impose penalties (§ 25-61-13)."
+        },
+        {
+          "step": "Court",
+          "do": "You may also sue in chancery court without going to the Ethics Commission first, but you must give the Commission written notice when you file (§ 25-61-13)."
+        },
+        {
+          "step": "Wrongful denial or unreasonable fee",
+          "do": "A person who wrongly denies access to a public record, or charges an unreasonable fee, can be personally liable for up to $100 per violation plus your reasonable costs (§ 25-61-15)."
+        }
+      ],
+      "source": {
+        "label": "Mississippi Ethics Commission, Public Records Act text (Title 25, Chapter 61); § 25-61-5 checked against Senate Bill 2308 (2024), Mississippi Legislature",
+        "url": "https://www.ethics.ms.gov/title-25-chapter-61-public-access-public-records"
+      },
+      "verified_sections": [
+        "Miss. Code § 25-61-5 (as amended by 2024 S.B. 2308, read on the Legislature’s site)",
+        "Miss. Code § 25-61-7(1)",
+        "Miss. Code § 25-61-10",
+        "Miss. Code § 25-61-13",
+        "Miss. Code § 25-61-15"
+      ],
+      "unverified": [
+        "The Ethics Commission’s posted text has no amendment history, and its copy of § 25-61-5 is out of date. So §§ 25-61-7, 25-61-10, 25-61-13 and 25-61-15 should be checked against the current code. A search found no 2025 or 2026 bill that changed them.",
+        "§ 25-61-5 sunsets on July 1, 2028 unless the Legislature extends it (§ 25-61-5(4)). The deadlines here depend on it."
+      ]
+    },
+    "FL": {
+      "law": "Florida Public Records Act",
+      "cite": "Fla. Stat. ch. 119",
+      "who": "anyone",
+      "residency_line": "",
+      "how": "Anyone may inspect and copy public records at any reasonable time (§ 119.01(1), § 119.07(1)(a)). A written request is best, because you need written notice to the custodian before suing for attorney fees (§ 119.12(1)(b)).",
+      "deadline": "The custodian must acknowledge a request promptly and respond in good faith, including reasonable efforts to find out whether the record exists and where it is (§ 119.07(1)(c)). The law sets no fixed number of days.",
+      "deadline_days": null,
+      "deadline_unit": null,
+      "fees": "Unless another law sets a fee, copies cost up to 15 cents a one-sided page (up to 8½ by 14 inches), up to 5 cents more for two-sided, and actual cost for other copies (§ 119.07(4)(a)). If a request needs extensive staff or technology time, the county may add a reasonable special service charge based on its actual cost (§ 119.07(4)(d)).",
+      "addressed_to": "Custodian of Public Records",
+      "send_note": "Send it to the custodian of public records whose contact information the county posts on its website and in its main office (§ 119.12(2)). Keep a copy with the date you sent it.",
+      "lines": [
+        "Please provide the records by email in electronic form, such as a spreadsheet or PDF. If you keep a record in that medium, the law requires a copy in the medium requested (§ 119.01(2)(f)).",
+        "Please acknowledge this request promptly and respond in good faith (§ 119.07(1)(c)).",
+        "If you believe any part of a record is exempt, please redact only that part and produce the rest (§ 119.07(1)(d)), and state the basis of the exemption, with the statute citation (§ 119.07(1)(e)). I ask that you state the reasons in writing and with particularity (§ 119.07(1)(f)).",
+        "If there will be a special service charge (§ 119.07(4)(d)), please tell me the cost before you do the work."
+      ],
+      "escalate": [
+        {
+          "step": "No answer, or no good-faith response",
+          "do": "Send a short follow-up letter that cites § 119.07(1)(c). Keep copies of both letters."
+        },
+        {
+          "step": "Help settling the dispute",
+          "do": "The Attorney General’s office has a public records mediation program, with mediators for disputes over access to public records (§ 16.60(2), (3)(a))."
+        },
+        {
+          "step": "Before going to court",
+          "do": "Give the custodian written notice that identifies your request at least 5 business days before you file. This is needed to recover attorney fees (§ 119.12(1)(b)), unless the county doesn’t post its custodian’s contact information in its main office and on its website (§ 119.12(2))."
+        },
+        {
+          "step": "Still refused",
+          "do": "In a suit to enforce the law, the court must set an immediate hearing (§ 119.11(1)). If the county unlawfully refused, the court must award reasonable costs and attorney fees (§ 119.12(1)). A public officer who breaks the law faces a fine up to $500; knowingly violating § 119.07(1) can lead to suspension and removal or impeachment and is a first-degree misdemeanor (§ 119.10(1))."
+        }
+      ],
+      "source": {
+        "label": "Florida Statutes, Chapter 119 (Online Sunshine, Florida Legislature)",
+        "url": "http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0100-0199/0119/0119.html"
+      },
+      "verified_sections": [
+        "Fla. Stat. § 119.01(1), (2)(f)",
+        "Fla. Stat. § 119.07(1)(a), (c), (d), (e), (f), (g)",
+        "Fla. Stat. § 119.07(4)(a), (d)",
+        "Fla. Stat. § 119.10",
+        "Fla. Stat. § 119.11(1)",
+        "Fla. Stat. § 119.12",
+        "Fla. Stat. § 16.60"
+      ],
+      "unverified": [
+        "Whether a request may be made orally. The Attorney General’s open government site returned 403, so its guide was not read, and no line here says a request may be oral.",
+        "How to ask for Attorney General mediation (the steps are not in § 16.60)."
+      ]
     }
   }
 }

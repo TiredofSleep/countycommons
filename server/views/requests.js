@@ -60,7 +60,8 @@ function statusBox(st, s, L, ctx) {
   const parts = [`<b>Filed ${esc(nice(s.filed_at))}</b> by a resident.`];
   if (s.answered_at) parts.push(`<b style="color:var(--sourced)">Answered ${esc(nice(s.answered_at))}.</b> ${esc(s.answer || '')}${s.answer_url ? ` <a href="${esc(s.answer_url)}" rel="noopener">See the records →</a>` : ''}`);
   else if (s.overdue) parts.push(`<b>No answer has been reported here yet.</b> The legal deadline was about ${esc(nice(s.due))}. The county answers the person who filed, so this doesn’t mean the county didn’t answer. If you filed it, tell us what came back with the box below; if nothing came, the next steps are below.`);
-  else if (s.due) parts.push(`An answer, or a written date, is due by about <b>${esc(nice(s.due))}</b> (${L.deadline_days} ${st === 'AR' ? 'working' : 'business'} days, not counting weekends; holidays can add days).`);
+  else if (!s.due) parts.push(esc(L.deadline));
+  else if (s.due) parts.push(`An answer, or a written date, is due by about <b>${esc(nice(s.due))}</b> (${L.deadline_days} ${L.deadline_unit === 'calendar' ? 'calendar days' : (L.deadline_unit || (st === 'AR' ? 'working' : 'business')) + ' days, not counting weekends; holidays can add days'}).`);
   parts.push(`${s.supporters.toLocaleString('en-US')} other resident${s.supporters === 1 ? ' supports' : 's support'} it.`);
   return `<div class="issue" style="display:block;border-left:3px solid ${s.answered_at ? 'var(--sourced)' : s.overdue ? 'var(--partial)' : 'var(--accent)'}">${parts.join(' ')}</div>`;
 }
