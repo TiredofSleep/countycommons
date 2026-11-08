@@ -157,7 +157,7 @@ app.use((req, res, next) => {
     if (us) {
       const nv = require('./views/national');
       traffic.note('__network__', req);
-      const html = !us[1] && us[2] === 'what-works' ? nv.whatWorksPage() : !us[1] && us[2] ? null : !us[1] ? nv.usPage() : !us[2] ? nv.statePage(us[1].toUpperCase()) : nv.countyPage(us[1].toUpperCase(), us[2]);
+      const html = !us[1] && us[2] === 'what-works' ? nv.whatWorksPage() : !us[1] && us[2] === 'transparency' ? nv.transparencyPage() : !us[1] && us[2] ? null : !us[1] ? nv.usPage() : !us[2] ? nv.statePage(us[1].toUpperCase()) : nv.countyPage(us[1].toUpperCase(), us[2]);
       return html ? res.send(html) : res.status(404).send(gatePage('No county at that address.', '/'));
     }
     if (p === '/') {

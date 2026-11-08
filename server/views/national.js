@@ -217,6 +217,54 @@ ${built.length ? `<section><h2>Full County Commons sites in ${esc(S.name)}</h2><
     jsonld: { '@context': 'https://schema.org', '@type': 'State', name: S.name, url: `https://countycommons.us/us/${st.toLowerCase()}`, containedInPlace: { '@type': 'Country', name: 'United States' } } });
 }
 
+// The transparency meter's standard: every item, the bar for "yes", who meets
+// it, and the counties checked so far.
+function transparencyPage() {
+  const N = nat(); const T = require('../lib/transparency');
+  const ex = (b) => b ? `<a href="${esc(b.url)}" rel="noopener">${esc(b.text)}</a>` : '<span class="soft">—</span>';
+  const levels = T.LEVELS.map(([lv, name, sub], i) => `<h3>${i + 1}. ${esc(name)} <span class="sub">— ${esc(sub)}</span></h3>
+<div style="overflow-x:auto;max-width:100%"><table class="plain"><thead><tr><th>Item</th><th>The bar for “yes”</th><th>Who meets it</th></tr></thead><tbody>${T.ITEMS.filter(x => x[3] === lv).map(([k, label, bar, , best]) => `<tr><td style="white-space:nowrap"><b>${esc(label)}</b></td><td>${esc(bar)}</td><td>${ex(best)}</td></tr>`).join('')}</tbody></table></div>`).join('');
+  // Counties checked so far, by items met (only those with a website check).
+  let X = null; try { X = JSON.parse(require('fs').readFileSync(path.join(__dirname, '..', '..', 'data', 'national', 'transparency-checks.json'), 'utf8')); } catch (e) { /* none */ }
+  if (!N._byGeo) { N._byGeo = {}; for (const c of N.counties) N._byGeo[c.geoid] = c; }
+  const rows = X ? Object.keys(X.counties).map(g => N._byGeo[g]).filter(Boolean).map(c => { const it = T.get(c).items; const v = Object.values(it); return { c, yes: v.filter(o => o.v === 'yes').length, partly: v.filter(o => o.v === 'partly').length, no: v.filter(o => o.v === 'no').length, done: v.length }; }).sort((a, b) => b.yes - a.yes || b.partly - a.partly || a.c.name.localeCompare(b.c.name)) : [];
+  const S = (st) => (N.states[st] || {}).name || st;
+  const body = `
+<header class="page">
+  <div class="eyebrow">County Commons · the United States</div>
+  <h1>The transparency meter: what earns each box</h1>
+  <div class="src">Everyone agrees government should be open about its money and its work. This page sets out exactly what County Commons checks on every county page, the bar for each box, and a real government that already meets that bar. A perfect score is all ${T.ITEMS.length}: every dollar traced to its receipt, and every meeting and vote on the record.</div>
+</header>
+<section>
+<h2>How it works</h2>
+<p>Each item is <b>yes</b>, <b>partly</b> or <b>no</b>, with a plain note and a link to the page that proves it. An item nobody has checked says <b>not checked yet</b>, and that never counts against a county. Checks come from the budget books and state reports County Commons has read, federal and state audits, and visits to each county’s own website. We count what is public; we don’t judge why something isn’t. A county that publishes something we missed can tell us with the box on any page, and we fix it in public.</p>
+<p>The bar for “yes” is set where the best governments already are, so it’s reachable. Two bars nobody has fully reached yet: the receipt behind every payment, and every payment posted the day it’s made by every county.</p>
+</section>
+<section>
+<h2>The ${T.ITEMS.length} items</h2>
+${levels}
+</section>
+<section>
+<h2>Who sets the bar</h2>
+<ul>
+<li><b>Every payment, locally:</b> England’s Local Government Transparency Code 2015 makes county, district and larger parish councils post every payment over £500, card spending, and every contract and tender over £5,000, at least every three months. Many councils post monthly, as spreadsheets. <a href="https://www.gov.uk/government/publications/local-government-transparency-code-2015/local-government-transparency-code-2015" rel="noopener">The Code</a>.</li>
+<li><b>Every payment, in the U.S.:</b> Checkbook NYC puts the city’s revenue, budget, payments, contracts and payroll in one place, updated daily, with a data feed, and its code is open for any government to reuse. <a href="https://www.checkbooknyc.com" rel="noopener">Checkbook NYC</a>.</li>
+<li><b>Speed:</b> Brazil’s Complementary Law 131 of 2009 requires every level of government, cities included, to post spending as it happens. <a href="https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp131.htm" rel="noopener">The law</a>.</li>
+<li><b>Contracts:</b> Ukraine has run public purchasing through its open ProZorro system by law since 2016. <a href="https://prozorro.gov.ua" rel="noopener">ProZorro</a>.</li>
+<li><b>Budgets:</b> The International Budget Partnership’s Open Budget Survey grades eight budget documents, including a plain-language citizens budget and reports during the year; Georgia and New Zealand scored highest in 2023 (87 of 100). <a href="https://internationalbudget.org/open-budget-survey" rel="noopener">Open Budget Survey</a>.</li>
+<li><b>Local finances in Texas:</b> the Comptroller’s Transparency Stars ask for five years of trends, three years of check registers, and pages on contracts, economic development deals, debt and pensions. <a href="https://comptroller.texas.gov/transparency/local/stars/" rel="noopener">Transparency Stars</a>.</li>
+</ul>
+</section>
+<section>
+<h2>Counties checked so far <span class="sub">— ${rows.length} with a website check</span></h2>
+<p>Most of the ${N.counties.length.toLocaleString('en-US')} counties haven’t had a website check yet, so their pages show many “not checked yet” boxes. These are the counties we’ve looked at, most items met first. Every number links to its county’s page, where each box has its proof.</p>
+<div style="overflow-x:auto;max-width:100%"><table class="plain"><thead><tr><th>County</th><th class="num">Met</th><th class="num">Partly</th><th class="num">Not met</th><th class="num">Not checked</th></tr></thead><tbody>${rows.map(r => `<tr><td><a href="/us/${esc(r.c.st.toLowerCase())}/${esc(r.c.slug)}#transparency">${esc(r.c.name)}, ${esc(S(r.c.st))}</a></td><td class="num">${r.yes}</td><td class="num">${r.partly}</td><td class="num">${r.no}</td><td class="num">${T.ITEMS.length - r.done}</td></tr>`).join('')}</tbody></table></div>
+</section>`;
+  return page({ title: 'Transparency meter: the standard, the bar for each item, and who meets it · County Commons',
+    description: `The ${T.ITEMS.length}-item standard County Commons uses on every county page, from posting the budget to every payment, contract, vote and receipt, with the government that meets each bar.`,
+    canonical: 'https://countycommons.us/us/transparency', body });
+}
+
 function whatWorksPage() {
   const N = nat();
   const body = `
@@ -261,7 +309,7 @@ function usPage() {
 
 function sitemapUrls() {
   const N = nat();
-  const out = ['https://countycommons.us/us', 'https://countycommons.us/us/what-works', 'https://countycommons.us/us/copy', 'https://countycommons.us/us/license'];
+  const out = ['https://countycommons.us/us', 'https://countycommons.us/us/what-works', 'https://countycommons.us/us/transparency', 'https://countycommons.us/us/copy', 'https://countycommons.us/us/license'];
   for (const st of Object.keys(N.byState)) {
     out.push(`https://countycommons.us/us/${st.toLowerCase()}`);
     for (const c of N.byState[st]) out.push(`https://countycommons.us/us/${st.toLowerCase()}/${c.slug}`, `https://countycommons.us/us/${st.toLowerCase()}/${c.slug}/compare`);
@@ -518,4 +566,4 @@ function docPage(file, slug, description) {
   return page({ title: title + ' · County Commons', description, canonical: 'https://countycommons.us/us/' + slug, body: '<div style="max-width:72ch">' + html + '</div>' });
 }
 
-module.exports = { page, stateList, countyCount, docPage, petitionsDirectory, sharedRollupPage, petitionSitemapUrls, petitionUrl, matchCounty, countyByGeoid, petitionsBlock, usPetitionPage, countyName, feedbackPage, buildingPage, countyPage, statePage, usPage, whatWorksPage, sitemapUrls };
+module.exports = { transparencyPage, page, stateList, countyCount, docPage, petitionsDirectory, sharedRollupPage, petitionSitemapUrls, petitionUrl, matchCounty, countyByGeoid, petitionsBlock, usPetitionPage, countyName, feedbackPage, buildingPage, countyPage, statePage, usPage, whatWorksPage, sitemapUrls };

@@ -14,33 +14,52 @@ const { read } = require('./national-local');
 const ROOT = path.join(__dirname, '..', '..');
 
 // A perfect score is the goal the meter measures toward: every dollar traced
-// to its receipt, and every action of the government on the record.
+// to its receipt, and every action of the government on the record. "Yes" is
+// set at the bar the best governments actually meet; `best` names one that
+// meets it (see the /us/transparency page for sources).
 const LEVELS = [
   ['plan', 'The plan', 'the budget'],
   ['open', 'Open format', 'can people and tools use it'],
   ['results', 'What happened', 'what really came in and went out'],
   ['dollars', 'Every dollar', 'down to the receipt'],
-  ['activity', 'Every action', 'meetings and votes on the record'],
+  ['activity', 'Every action', 'meetings, votes and records'],
+  ['speed', 'Speed', 'the top of the scale'],
 ];
+const ENG = { text: 'England’s councils, under the Local Government Transparency Code 2015', url: 'https://www.gov.uk/government/publications/local-government-transparency-code-2015/local-government-transparency-code-2015' };
+const NYC = { text: 'Checkbook NYC (New York City Comptroller)', url: 'https://www.checkbooknyc.com' };
+const OBS = { text: 'Georgia and New Zealand, top scorers (87 of 100) on the 2023 Open Budget Survey', url: 'https://internationalbudget.org/open-budget-survey' };
+const TXS = { text: 'the Texas Comptroller’s Transparency Stars criteria', url: 'https://comptroller.texas.gov/transparency/local/stars/' };
 const ITEMS = [
-  ['posted', 'Posted', 'An adopted budget is free to read online.', 'plan'],
-  ['current', 'Current', 'The budget for the fiscal year now under way is posted.', 'plan'],
+  ['proposed', 'Proposed budget first', 'The proposed budget is posted before the governing body votes on it, so people can weigh in.', 'plan', OBS],
+  ['posted', 'Adopted budget', 'The adopted budget is free to read online.', 'plan', OBS],
+  ['current', 'Current', 'The budget for the fiscal year now under way is posted.', 'plan', OBS],
   ['by_office', 'By office', 'Spending is shown department by department.', 'plan'],
   ['line_items', 'Line items', 'Inside each office, it shows what the money buys, like salaries, supplies and contracts.', 'plan'],
   ['adds_up', 'Adds up', 'The parts add to the total the county prints. County Commons checks this itself.', 'plan'],
+  ['summary', 'Plain-language summary', 'A short “citizens budget” explains the budget in everyday words.', 'plan', OBS],
+  ['history', 'History', 'At least five years of budgets and three years of payments stay online.', 'plan', TXS],
   ['searchable', 'Searchable', 'The budget is text or a spreadsheet, not a scanned picture.', 'open'],
   ['open_to_tools', 'Open to tools', 'It downloads without a bot check, so apps and research tools can read it.', 'open'],
-  ['open_data', 'Open data', 'Budget or spending numbers come as a spreadsheet or data feed anyone can download.', 'open'],
-  ['actual', 'Actual spending', 'What the county really spent is public too, not just the plan.', 'results'],
+  ['open_data', 'Open data', 'Budget or spending numbers come as a spreadsheet or data feed anyone can download.', 'open', NYC],
+  ['free_reuse', 'Free to use', 'No sign-in, fee or license is needed to read, download or reuse it.', 'open'],
+  ['in_year', 'Reports during the year', 'Monthly or quarterly reports compare spending so far with the budget.', 'results', OBS],
+  ['actual', 'Actual spending', 'A year-end report shows what the county really spent, not just the plan.', 'results'],
   ['revenue', 'Where money comes from', 'Each tax, fee and grant the county takes in is shown.', 'results'],
   ['audit', 'Audit', 'An independent audit or state review is public.', 'results'],
-  ['payments', 'Every payment', 'Each check or payment is listed: who was paid, how much, when, and for what.', 'dollars'],
-  ['contracts', 'Contracts', 'Contracts and bids are posted, with the company and the amount.', 'dollars'],
-  ['pay', 'Pay by job', 'What each county job pays is public.', 'dollars'],
-  ['receipts', 'Receipts', 'The invoice or receipt behind each payment can be seen.', 'dollars'],
-  ['meetings', 'Meetings', 'Agendas and minutes of the governing body’s meetings are posted.', 'activity'],
+  ['debt', 'Debt', 'What the county owes, to whom, and the yearly payments are shown.', 'results', TXS],
+  ['pensions', 'Pensions', 'Retirement promises to workers, and how well funded they are, are shown.', 'results', TXS],
+  ['payments', 'Every payment', 'Each payment is listed with who was paid, how much and when, posted at least every three months.', 'dollars', ENG],
+  ['cards', 'Card spending', 'Purchases on county credit or purchasing cards are listed.', 'dollars', ENG],
+  ['contracts', 'Contracts', 'Every contract award is posted with the company and amount, and the contract itself can be read.', 'dollars', ENG],
+  ['pay', 'Pay by job', 'What each county job pays is public.', 'dollars', NYC],
+  ['incentives', 'Tax breaks and deals', 'Tax abatements and economic development deals show who got what, and what they promised.', 'dollars', TXS],
+  ['receipts', 'Receipts', 'The invoice or receipt behind each payment can be seen. We haven’t found any government that does this for every payment yet.', 'dollars'],
+  ['meetings', 'Agendas and minutes', 'Agendas are posted before meetings and minutes after.', 'activity'],
   ['votes', 'Votes', 'How each elected official voted is recorded and posted.', 'activity'],
   ['video', 'Video', 'Meetings are streamed or recorded, and the recordings are posted.', 'activity'],
+  ['records_log', 'Records requests', 'A log of public records requests and how each was answered is posted.', 'activity'],
+  ['disclosures', 'Officials’ filings', 'The financial disclosure filings of every elected county official can be read online.', 'activity'],
+  ['realtime', 'Daily or real time', 'Payments are posted within a day or in real time, not months later.', 'speed', NYC],
 ];
 
 const MON = { jan: 0, feb: 1, mar: 2, apr: 3, may: 4, jun: 5, jul: 6, aug: 7, sep: 8, oct: 9, nov: 10, dec: 11 };
@@ -179,9 +198,9 @@ function block(c) {
   const cell = (k, label) => { const m = items[k] && MARK[items[k].v]; return `<span title="${esc(label)}" style="flex:1;height:12px;${m ? `background:${m[2]};opacity:${items[k].v === 'partly' ? 0.55 : items[k].v === 'no' ? 0.25 : 1}` : 'border:1px dashed var(--rule)'}"></span>`; };
   const seg = LEVELS.map(([lv, name]) => `<span style="display:flex;gap:2px;flex:${ITEMS.filter(i => i[3] === lv).length}" title="${esc(name)}">${ITEMS.filter(i => i[3] === lv).map(([k, label]) => cell(k, label)).join('')}</span>`).join('');
   const link = (o) => o.url ? ` <a href="${esc(o.page ? encOnce(o.url).split('#')[0] + '#page=' + o.page : o.url)}" rel="noopener" class="soft" style="font-size:12px">source</a>` : '';
-  const row = ([k, label, what]) => {
+  const row = ([k, label, what, , best]) => {
     const o = items[k], m = o && MARK[o.v];
-    return `<tr><td style="white-space:nowrap;vertical-align:top"><span aria-hidden="true" style="display:inline-block;width:1.4em;color:${m ? m[2] : 'var(--ink-soft)'}">${m ? m[0] : '–'}</span><b>${esc(label)}</b></td><td style="vertical-align:top">${m ? `<b style="color:${m[2]}">${m[1]}.</b> ${esc(o.note || '')}${link(o)}` : `<span class="soft">Not checked yet.</span>`}<br><span class="soft" style="font-size:12.5px">${esc(what)}</span></td></tr>`;
+    return `<tr><td style="white-space:nowrap;vertical-align:top"><span aria-hidden="true" style="display:inline-block;width:1.4em;color:${m ? m[2] : 'var(--ink-soft)'}">${m ? m[0] : '–'}</span><b>${esc(label)}</b></td><td style="vertical-align:top">${m ? `<b style="color:${m[2]}">${m[1]}.</b> ${esc(o.note || '')}${link(o)}` : `<span class="soft">Not checked yet.</span>`}<br><span class="soft" style="font-size:12.5px">The bar: ${esc(what)}${best ? ` Who meets it: <a href="${esc(best.url)}" rel="noopener">${esc(best.text)}</a>.` : ''}</span></td></tr>`;
   };
   const rows = LEVELS.map(([lv, name, sub], i) => `<tr><td colspan="2" style="padding-top:${i ? 12 : 4}px"><b>${i + 1}. ${esc(name)}</b> <span class="soft" style="font-size:12.5px">— ${esc(sub)}</span></td></tr>${ITEMS.filter(x => x[3] === lv).map(row).join('')}`).join('');
   const summary = done
@@ -198,7 +217,7 @@ function block(c) {
 <div style="overflow-x:auto;max-width:100%"><table class="plain"><tbody>${rows}</tbody></table></div>
 </details>
 ${state ? `<p style="margin-top:10px"><b>The state’s part:</b> ${sm ? `<span style="color:${sm[2]}">${sm[0]}</span> ` : ''}${esc(state.note)}${link(state)} <span class="soft" style="font-size:12.5px">(This is about the state, so it isn’t counted above.)</span></p>` : ''}
-<p class="src" style="max-width:none">Each item is a fact with a link, not a grade. “Not checked yet” never counts against a county. ${checked ? `County website checked ${esc(checked)}. ` : ''}A county that publishes something we missed can show us with the box below, and we’ll fix it.</p>
+<p class="src" style="max-width:none">Each item is a fact with a link, not a grade. “Not checked yet” never counts against a county. ${checked ? `County website checked ${esc(checked)}. ` : ''}A county that publishes something we missed can show us with the box below, and we’ll fix it. <a href="/us/transparency">How the meter works, and who sets each bar →</a></p>
 </section>`;
 }
 
