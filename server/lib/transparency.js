@@ -89,6 +89,8 @@ function fromState(r, S, it) {
     it.actual = { v: 'yes', note: `That audit shows what the county actually spent in ${yr}.`, url: r.url };
     return;
   }
+  // States whose county numbers come as a spreadsheet or data feed anyone can download.
+  if (/^(VA|MN|WI|CA|NY|FL|WA|TN|MI|PA|IA|IN|WY)$/.test(r.st)) it.open_data = { v: 'yes', note: `Its ${S.kind === 'actual' ? 'spending' : 'budget'} numbers can be downloaded as a spreadsheet or data file from the ${S.agency}.`, url: S.source_page };
   if (S.kind === 'actual') it.actual = { v: 'yes', note: `Its spending in ${yr} is posted by the ${S.agency}.`, url: r.url || S.source_page };
   else {
     it.posted = it.posted || { v: 'yes', note: `Its budget for ${yr} is posted by the ${S.agency}.`, url: r.url || S.source_page };
