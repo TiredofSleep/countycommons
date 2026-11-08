@@ -258,7 +258,7 @@ function block(c) {
 <div role="img" aria-label="${esc(summary)}" style="display:flex;gap:8px;max-width:520px;margin:6px 0 2px">${seg}</div>
 <div aria-hidden="true" class="soft" style="display:flex;gap:8px;max-width:520px;font-size:11px;margin-bottom:12px">${LEVELS.map(([lv, name]) => `<span style="flex:${ITEMS.filter(i => i[3] === lv).length};overflow:hidden;white-space:nowrap;text-overflow:ellipsis">${esc(name)}</span>`).join('')}</div>
 ${(() => { const t = timely(c, items); const camp = t && require('./asks').askFor('proposed'); return t && camp && require('./asks').deliverable(c) ? `<div class="issue" style="display:block;border-left:3px solid var(--accent)"><b>Most timely right now:</b> ${esc(t)} <a href="/us/${esc(c.st.toLowerCase())}/${esc(c.slug)}/ask/${esc(camp.id)}">Ask ${esc(c.name)} to post it before the vote →</a></div>` : ''; })()}
-<p class="src" style="max-width:none">Work for ${esc(c.name)}? Most boxes turn green by posting documents the county already has. <a href="/us/${esc(c.st.toLowerCase())}/${esc(c.slug)}/officials">How to turn each box green →</a></p>
+<p class="src" style="max-width:none">Work for ${esc(c.name)}? Most boxes turn green by posting documents the county already has. <a href="/us/${esc(c.st.toLowerCase())}/${esc(c.slug)}/officials">How to turn each box green →</a> · <a href="/us/${esc(c.st.toLowerCase())}/${esc(c.slug)}/flyer">Print a one-page flyer of this meter</a></p>
 <details><summary>See each item</summary>
 <div style="overflow-x:auto;max-width:100%"><table class="plain"><tbody>${rows}</tbody></table></div>
 </details>

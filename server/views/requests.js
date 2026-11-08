@@ -166,4 +166,29 @@ ${reqs.length ? `<section><h2>Public records requests residents have reported</h
 <section><p class="src" style="max-width:none"><a href="/us/transparency">The standard, and a government that meets each bar →</a> · <a href="/us/${esc(c.st.toLowerCase())}/${esc(c.slug)}#transparency">${esc(c.name)}’s page →</a></p></section>`;
 }
 
-module.exports = { officialsLetter, requestPage, takeFurther, forPetition, officialsGuide };
+// A one-page flyer to hand out: what the county posts, what it doesn't yet,
+// and one QR code to the meter, where each missing box has its petition.
+const FLY = { proposed: 'The proposed budget, before the vote', posted: 'The adopted budget', current: 'This year’s budget', by_office: 'Spending by office', line_items: 'What each office buys (line items)', adds_up: 'The budget adds up to its total', summary: 'A plain-language budget summary', history: 'Five years of budgets', searchable: 'Budget is searchable text, not a scan', open_to_tools: 'Downloads without a bot check', open_data: 'Numbers as a spreadsheet anyone can download', free_reuse: 'Free to read and reuse, no sign-in', in_year: 'Monthly or quarterly spending reports', actual: 'What was really spent last year', revenue: 'Where the money comes from', audit: 'The audit', debt: 'What the county owes', pensions: 'Retirement promises and funding', payments: 'Every payment: who, how much, when', cards: 'County credit card spending', contracts: 'Contracts and who got them', pay: 'What each job pays', incentives: 'Tax breaks and deals', receipts: 'The receipt behind each payment', meetings: 'Meeting agendas and minutes', votes: 'How each official voted', video: 'Meeting video', records_log: 'A log of records requests', disclosures: 'Officials’ financial filings', realtime: 'Payments posted daily' };
+function meterFlyer(c, stateName, qrSvg, link) {
+  const { items, checked } = T.get(c);
+  const met = T.ITEMS.filter(([k]) => items[k] && items[k].v === 'yes');
+  const part = T.ITEMS.filter(([k]) => items[k] && items[k].v === 'partly');
+  const no = T.ITEMS.filter(([k]) => items[k] && items[k].v === 'no');
+  const unchecked = T.ITEMS.length - met.length - part.length - no.length;
+  const li = (arr, mark) => arr.map(([k, label]) => `<li><span aria-hidden="true">${mark}</span> ${esc(FLY[k] || label)}</li>`).join('');
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Flyer — what ${esc(c.name)} puts online</title><meta name="robots" content="noindex">
+<style>body{font-family:Georgia,serif;color:#111;background:#fff;max-width:7.5in;margin:0 auto;padding:.4in .4in}h1{font-size:30px;line-height:1.15;margin:.08in 0}.k{font-family:ui-monospace,monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase}p{font-size:16px;line-height:1.4;margin:.08in 0}.small{font-size:12px;color:#333}.cols{display:grid;grid-template-columns:1fr 1fr;gap:.25in;margin-top:.1in}h2{font-size:17px;margin:.05in 0}ul{list-style:none;padding:0;margin:0;font-size:13.5px;line-height:1.45}li span{display:inline-block;width:1.2em;font-weight:700}.qr{width:2.1in;height:2.1in;flex:none}.row{display:flex;gap:.3in;align-items:center;margin-top:.2in;border-top:2px solid #111;padding-top:.15in}@media print{.noprint{display:none}}@media (max-width:560px){.cols{grid-template-columns:1fr}.row{flex-direction:column;align-items:flex-start}}</style></head><body>
+<p class="noprint small"><a href="/us/${esc(c.st.toLowerCase())}/${esc(c.slug)}#transparency">← back to ${esc(c.name)}</a> · print with your browser (Ctrl+P or Share → Print)</p>
+<div class="k">County Commons · ${esc(c.name)}, ${esc(stateName)}</div>
+<h1>What ${esc(c.name)} puts online about its money and its work</h1>
+<p><b>${met.length} of ${T.ITEMS.length}</b> public-information boxes met${part.length ? `, ${part.length} partly` : ''}${no.length ? `, ${no.length} not yet` : ''}${unchecked ? `, ${unchecked} not checked yet` : ''}.${checked ? ` Checked ${esc(checked)}.` : ''} A perfect score means every dollar traced to its receipt, and every meeting and vote on the record.</p>
+<div class="cols">
+<div><h2>Online now</h2><ul>${li(met, '✓')}${li(part, '◐')}</ul>${part.length ? '<p class="small">◐ = partly</p>' : ''}</div>
+<div><h2>Not online yet</h2><ul>${li(no, '✗') || '<li>Nothing found missing.</li>'}</ul></div>
+</div>
+<div class="row"><div class="qr">${qrSvg}</div><div><p style="font-size:21px;margin:0"><b>Scan to see the sources</b></p><p>Every box links to where we looked. Each box not met yet has a petition asking ${esc(c.name)} to post it. Sign the ones you care about.</p><p class="small" style="word-break:break-all">${esc(link)}</p></div></div>
+<p class="small" style="margin-top:.15in">These are facts with links, not a grade of anyone’s work. Most boxes turn green by posting documents the county already keeps. If we missed something that’s posted, tell us on the site and we’ll fix it. County Commons is an independent, nonpartisan public-records project.</p>
+</body></html>`;
+}
+
+module.exports = { officialsLetter, requestPage, takeFurther, forPetition, officialsGuide, meterFlyer };

@@ -149,6 +149,16 @@ app.use((req, res, next) => {
       traffic.note('__network__', req);
       return res.send(nv.page({ title: `How to turn ${c.name}’s transparency boxes green · County Commons`, description: `For ${c.name} officials and staff: each transparency box not yet met, what County Commons found, and the simplest way to meet it.`, canonical: `https://countycommons.us/us/${c.st.toLowerCase()}/${c.slug}/officials`, body: require('./views/requests').officialsGuide(c, nv.stateName(c.st)) }));
     }
+    // A one-page flyer of the county's meter, with one QR code to hand out.
+    const usFly = p.match(/^\/us\/([a-z]{2})\/([a-z0-9-]+)\/flyer\/?$/);
+    if (usFly && req.method === 'GET') {
+      const nv = require('./views/national');
+      const c = nv.countyRec(usFly[1], usFly[2]);
+      if (!c) return res.status(404).send(gatePage('No county at that address.', '/us'));
+      const link = `https://countycommons.us/us/${c.st.toLowerCase()}/${c.slug}`;
+      return require('qrcode').toString(link + '?via=flyer#transparency', { type: 'svg', margin: 1, errorCorrectionLevel: 'M' })
+        .then(qr => res.send(require('./views/requests').meterFlyer(c, nv.stateName(c.st), qr, link)), next);
+    }
     // The information petitions, and a chooser for anyone without a county page open.
     const usAskPick = p.match(/^\/us\/ask(?:\/([a-z0-9-]{2,60}))?\/?$/);
     if (usAskPick && req.method === 'GET') {
