@@ -55,6 +55,7 @@ function resolveHost(rawHost) {
   }
   // Local dev: <sub>.localhost previews that tenant (browsers resolve
   // *.localhost to this machine; it never reaches the public server).
+  if (host === 'apex.localhost') return { action: 'redirect', to: reg.tenants[reg.default].host }; // preview the network front door
   if (host.endsWith('.localhost')) {
     const sub = host.slice(0, -'.localhost'.length);
     const key = Object.keys(reg.tenants).find(k => reg.tenants[k].sub === sub);

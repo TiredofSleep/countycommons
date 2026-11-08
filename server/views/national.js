@@ -64,6 +64,24 @@ ${honestBand(canonical)}
 </div></body></html>`;
 }
 
+// "On this page": a jump list built from the page's own sections, so it never
+// goes stale. Sections without an id get one from their heading.
+function jumpNav(body, tour) {
+  const seen = new Set(), titles = new Set(); const links = []; let sub = false;
+  const slug = (t) => t.toLowerCase().replace(/&[a-z]+;|’/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40);
+  const out = body.replace(/<section( id="([a-z0-9-]+)")?([^>]*)>(\s*)<h2([^>]*)>([^<]+)/g, (m, idAttr, id, rest, ws, h2a, title) => {
+    const t = title.trim().replace(/\s+—.*$/, ''); if (!t) return m;
+    let k = id || slug(t); if (!k || seen.has(k)) return m; seen.add(k);
+    const short = t.replace(/\s+(from|in|about)\s+[A-Z][^,]*?(County|Parish|Borough|city|City|Area)$/, '').replace(/^Questions people ask$/, 'Questions').replace(/^How .+ compares$/, 'How it compares');
+    if (k === 'what-works') sub = true; else if (sub && k === 'questions') sub = false;
+    if (!(sub && k !== 'what-works') && !/^ww-/.test(k) && !titles.has(short)) { titles.add(short); links.push([k, short]); }
+    return `<section id="${k}"${rest}>${ws}<h2${h2a}>${title}`;
+  });
+  if (links.length < 5) return out;
+  const nav = `<nav aria-label="On this page" class="cc-jump" style="margin:14px 0 4px;padding:10px 12px;border:1px solid var(--rule);background:var(--card)"><b style="font-size:13px;font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em">On this page</b>${tour ? ` <a href="${tour}" style="font-size:13px;margin-left:8px">▶ New here? Tour this page</a>` : ''}<div style="display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:6px;font-size:14px">${links.map(([k, t]) => `<a href="#${k}">${t}</a>`).join('')}</div></nav>`;
+  return out.replace('</header>', '</header>\n' + nav);
+}
+
 function countyPage(st, slug) {
   const N = nat();
   const c = (N.byState[st] || []).find(x => x.slug === slug);
@@ -140,8 +158,9 @@ ${RK.neighbors(c, N)}
 
   return page({
     title: `${place}: county spending, property tax, audit, jobs, schools, health, ARPA and voting · County Commons`,
+    body: jumpNav(body, `/us/tour?st=${st.toLowerCase()}&amp;county=${encodeURIComponent(slug)}`),
     description: (() => { const sm = [require('../lib/state-portals').summary(c), require('../lib/national-local').summary(c)].filter(Boolean).join(', '); return `${place}${c.pop2024 ? ` (${num(c.pop2024)} people)` : ''}: ${sm ? sm + ' — plus ' : ''}schools, health, water, the jail, petitions and how to vote, from official public records with sources.`; })(),
-    canonical, body,
+    canonical,
     jsonld: [{ '@context': 'https://schema.org', '@type': 'AdministrativeArea', name: place, identifier: c.geoid,
       containedInPlace: { '@type': 'State', name: S.name }, url: canonical,
       geo: c.lat ? { '@type': 'GeoCoordinates', latitude: c.lat, longitude: c.lon } : undefined }, require('../lib/national-local').faqLd(QA)].filter(Boolean)
@@ -310,7 +329,7 @@ function usPage() {
 
 function sitemapUrls() {
   const N = nat();
-  const out = ['https://countycommons.us/us', 'https://countycommons.us/us/what-works', 'https://countycommons.us/us/transparency', 'https://countycommons.us/us/copy', 'https://countycommons.us/us/license'];
+  const out = ['https://countycommons.us/us', 'https://countycommons.us/us/what-works', 'https://countycommons.us/us/transparency', 'https://countycommons.us/us/tour', 'https://countycommons.us/us/copy', 'https://countycommons.us/us/license'];
   for (const st of Object.keys(N.byState)) {
     out.push(`https://countycommons.us/us/${st.toLowerCase()}`);
     for (const c of N.byState[st]) out.push(`https://countycommons.us/us/${st.toLowerCase()}/${c.slug}`, `https://countycommons.us/us/${st.toLowerCase()}/${c.slug}/compare`);

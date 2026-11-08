@@ -159,6 +159,16 @@ app.use((req, res, next) => {
       return require('qrcode').toString(link + '?via=flyer#transparency', { type: 'svg', margin: 1, errorCorrectionLevel: 'M' })
         .then(qr => res.send(require('./views/requests').meterFlyer(c, nv.stateName(c.st), qr, link)), next);
     }
+    // The tour: a real county's page, stop by stop (Clark by default).
+    if (/^\/us\/tour\/?$/.test(p) && req.method === 'GET') {
+      const nv = require('./views/national');
+      const st = String(req.query.st || 'ar').slice(0, 2).toLowerCase(), typed = String(req.query.county || 'clark').slice(0, 60);
+      const to = nv.matchCounty(st, typed); const m = to && to.match(/^\/us\/([a-z]{2})\/([a-z0-9-]+)$/);
+      const c = m ? nv.countyRec(m[1], m[2]) : nv.countyRec(st, typed.toLowerCase());
+      traffic.note('__network__', req);
+      if (!c) return res.status(404).send(gatePage('We couldn’t find that county. Check the spelling, like “Pulaski”.', '/us/tour'));
+      return res.send(require('./views/ustour').tourPage(c, nv.stateName(c.st)));
+    }
     // The information petitions, and a chooser for anyone without a county page open.
     const usAskPick = p.match(/^\/us\/ask(?:\/([a-z0-9-]{2,60}))?\/?$/);
     if (usAskPick && req.method === 'GET') {
@@ -429,15 +439,19 @@ function gatePage(msg, next, q) {
   { '@type': 'DataCatalog', name: 'County Commons budget data', url: 'https://countycommons.us/', publisher: { '@id': 'https://countycommons.us/#org' }, dataset: directory.featured().map(t => ({ '@type': 'Dataset', name: `${t.name} budget`, url: `https://${t.host}/budget` })) }
 ] }).replace(/</g, '\\u003c')}</script>
 <link rel="stylesheet" href="/style.css?v=5"><link rel="icon" href="/favicon.svg"></head><body><div class="wrap">
-<header class="page" style="max-width:720px;margin:7vh auto 0">
-  <div class="eyebrow">County Commons</div>
-  <h1>Select your county or city</h1>
-  <p class="src" style="max-width:60ch">Public budget transparency, county by county — every dollar traced to its source document, the arithmetic checked in the open. Pick a place to begin. <b>County Commons is an independent community project — not a government website.</b></p>
+<header class="page" style="max-width:760px;margin:4vh auto 0">
+  <div class="eyebrow">County Commons · free, independent, every number cited</div>
+  <h1>Follow your county’s money, and ask for what’s missing</h1>
+  <p class="src" style="max-width:62ch">Budgets traced line by line to the page they came from, a 30-point check of what each county puts online, and petitions and records requests to get the rest. <b>County Commons is an independent community project — not a government website.</b></p>
   ${msg ? `<p class="src" style="color:var(--dead)">${esc(msg)}</p>` : ''}
+  ${msg || q ? '' : require('./views/hero').heroFilm()}
   ${finder}
-  <p style="margin:18px 0 4px"><a href="/tour" style="display:inline-block;font-family:var(--mono);font-size:14px;font-weight:600;padding:9px 16px;border:1.5px solid var(--ink);background:var(--ink);color:var(--paper);text-decoration:none">▶ New here? Take the 2-minute tour</a></p>
-  <h2 style="margin:26px 0 4px;font-size:19px">Full County Commons sites <span class="sub">— ${directory.featured().length} places with their budget traced line by line</span></h2>
+  <p style="margin:18px 0 4px"><a href="/us/tour" style="display:inline-block;font-family:var(--mono);font-size:14px;font-weight:600;padding:9px 16px;border:1.5px solid var(--ink);background:var(--ink);color:var(--paper);text-decoration:none">▶ Take the tour — see how it works</a></p>
+  <h2 style="margin:26px 0 4px;font-size:21px">What you can do here</h2>
+  ${require('./views/hero').doCards()}
+  <details style="margin:24px 0 0"><summary style="cursor:pointer;font-weight:600;font-size:16px">Full County Commons sites <span class="sub">— ${directory.featured().length} places with their budget traced line by line</span></summary>
   ${list || '<p class="src">No sites are published yet.</p>'}
+  </details>
   <details style="margin:22px 0 0;border-top:1px solid var(--rule);padding-top:12px">
     <summary style="cursor:pointer;font-size:13.5px;color:var(--accent)">Have a code? (hosts, or quick access)</summary>
     <form method="POST" action="/gate" style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap;max-width:360px">
