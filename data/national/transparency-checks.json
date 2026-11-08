@@ -1,0 +1,1839 @@
+{
+ "how": "Facts checked by hand or by agents on each county's own website and on state sites. Each item: v (yes, partly, no), a plain note, and the link that proves it. Built by pipeline/transparency.js from checks folders; these win over anything derived in server/lib/transparency.js.",
+ "states": {
+  "TX": {
+   "v": "no",
+   "note": "Texas’s state government doesn’t collect county budgets or spending reports in one place; each county posts its own. The Comptroller links to them.",
+   "url": "https://comptroller.texas.gov/transparency/local/counties.php"
+  },
+  "KY": {
+   "v": "yes",
+   "note": "The Kentucky Auditor of Public Accounts posts every fiscal court’s audit, which includes its final budget and what it spent.",
+   "url": "https://www.auditor.ky.gov/Auditreports/Pages/LocalGovernmentAuditsReleased.aspx"
+  }
+ },
+ "counties": {
+  "12011": {
+   "county": "Broward County",
+   "st": "FL",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "FY2027 adopted operating budget is on the county site.",
+     "url": "https://www.browardcdn.org/api/public/content/77e1f864a1054f84a376b0c3eb3ddffa?v=54d09bde"
+    },
+    "current": {
+     "v": "yes",
+     "note": "Covers Oct 2026 – Sep 2027, the year now under way.",
+     "url": "https://www.browardcdn.org/api/public/content/77e1f864a1054f84a376b0c3eb3ddffa?v=54d09bde"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "Each department has its own section with its budget.",
+     "url": "https://www.browardcdn.org/api/public/content/77e1f864a1054f84a376b0c3eb3ddffa?v=54d09bde",
+     "page": 27
+    },
+    "line_items": {
+     "v": "yes",
+     "note": "Each department shows personnel services, operating expenses and capital outlay.",
+     "url": "https://www.browardcdn.org/api/public/content/77e1f864a1054f84a376b0c3eb3ddffa?v=54d09bde",
+     "page": 45
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The budget is a web page with real text.",
+     "url": "https://www.browardcdn.org/api/public/content/77e1f864a1054f84a376b0c3eb3ddffa?v=54d09bde"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The budget file downloads with a plain request (HTTP 200).",
+     "url": "https://www.browardcdn.org/api/public/content/77e1f864a1054f84a376b0c3eb3ddffa?v=54d09bde"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The FY2024 Annual Comprehensive Financial Report is on broward.org.",
+     "url": "https://www.broward.org/Accounting/Documents/BrowardCountyACFR2024Financial.pdf"
+    }
+   }
+  },
+  "12057": {
+   "county": "Hillsborough County",
+   "st": "FL",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The FY2027 Adopted Budget Summary is on the county site, with earlier adopted budget books.",
+     "url": "https://hcfl.gov/government/budget/budget-information/fy27-budget"
+    },
+    "current": {
+     "v": "yes",
+     "note": "An adopted summary for Oct 2026 – Sep 2027 is posted; it is one page, and the department detail is in the Recommended Budget.",
+     "url": "https://hcfl.gov/government/budget/budget-information/fy27-budget"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "The FY2027 Recommended Budget book has a page for each department.",
+     "url": "https://hcfl.gov/assets/blt8657f8452edd3acb/file",
+     "page": 245
+    },
+    "line_items": {
+     "v": "yes",
+     "note": "Department pages show personnel, operating, capital and other lines.",
+     "url": "https://hcfl.gov/assets/blt8657f8452edd3acb/file",
+     "page": 245
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The budget files have a text layer.",
+     "url": "https://assets.contentstack.io/v3/assets/blteea73b27b731f985/blt6334d61c0c8b7d1d/6ada6deacf1bfa4f27029a50/Adopted_Budget_Summary_FY27_WEB.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The adopted summary downloads with a plain request (HTTP 200).",
+     "url": "https://assets.contentstack.io/v3/assets/blteea73b27b731f985/blt6334d61c0c8b7d1d/6ada6deacf1bfa4f27029a50/Adopted_Budget_Summary_FY27_WEB.pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The FY2025 Annual Comprehensive Financial Report is posted by the county Clerk of Court and Comptroller.",
+     "url": "https://hillsclerk.com/records-and-reports/financial-reports-county"
+    }
+   }
+  },
+  "12086": {
+   "county": "Miami-Dade County",
+   "st": "FL",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The FY2025-26 adopted budget is on the county site.",
+     "url": "https://www.miamidade.gov/global/management/budget/home.page"
+    },
+    "current": {
+     "v": "partly",
+     "note": "Only the proposed FY2026-27 budget is posted on the county budget page; the newest adopted book listed is FY2025-26.",
+     "url": "https://www.miamidade.gov/global/management/budget/2026-27/proposed/home.page"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "Appendix B lists each department with its funding and positions.",
+     "url": "https://www.miamidade.gov/resources/budget/adopted/fy2025-26/appendix-b.pdf",
+     "page": 1
+    },
+    "line_items": {
+     "v": "yes",
+     "note": "Department pages in Volume 2 show salary, fringe benefits, contractual, operating and capital lines (seen in the FY2026-27 proposed volume).",
+     "url": "https://www.miamidade.gov/global/management/budget/2026-27/proposed/volume-2.page"
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The budget files have a text layer.",
+     "url": "https://www.miamidade.gov/resources/budget/adopted/fy2025-26/appendix-b.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The adopted budget file downloads with a plain request (HTTP 200).",
+     "url": "https://www.miamidade.gov/resources/budget/adopted/fy2025-26/appendix-b.pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The FY2025 Annual Comprehensive Financial Report is on the county Clerk site.",
+     "url": "https://www.miamidadeclerk.gov/resources-clerk/library/finance/cafr2025-complete.pdf"
+    }
+   }
+  },
+  "12095": {
+   "county": "Orange County",
+   "st": "FL",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The FY2026-27 budget book is on the county site.",
+     "url": "https://www.ocfl.net/Portals/0/resource%20library/open%20government/Orange%20County%20Budget%20Book%202026-27.pdf"
+    },
+    "current": {
+     "v": "yes",
+     "note": "The book for Oct 2026 – Sep 2027 now shows adopted changes: the county total is $9,018,780,511, up from the proposed $8,862,035,180.",
+     "url": "https://www.ocfl.net/Portals/0/resource%20library/open%20government/Orange%20County%20Budget%20Book%202026-27.pdf"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "The book has a section for each department and office.",
+     "url": "https://www.ocfl.net/Portals/0/resource%20library/open%20government/Orange%20County%20Budget%20Book%202026-27.pdf",
+     "page": 174
+    },
+    "line_items": {
+     "v": "yes",
+     "note": "Department pages show personal services, operating, capital outlay and other lines.",
+     "url": "https://www.ocfl.net/Portals/0/resource%20library/open%20government/Orange%20County%20Budget%20Book%202026-27.pdf",
+     "page": 174
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The PDF has a text layer.",
+     "url": "https://www.ocfl.net/Portals/0/resource%20library/open%20government/Orange%20County%20Budget%20Book%202026-27.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The budget file downloads with a plain request (HTTP 200).",
+     "url": "https://www.ocfl.net/Portals/0/resource%20library/open%20government/Orange%20County%20Budget%20Book%202026-27.pdf"
+    }
+   }
+  },
+  "13121": {
+   "county": "Fulton County",
+   "st": "GA",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The 2026 adopted budget book is on the county site.",
+     "url": "https://www.fultoncountyga.gov/-/media/Inside-Fulton-County-Documents/FY26-Adopted-Budget-Book---V5.pdf"
+    },
+    "current": {
+     "v": "yes",
+     "note": "Covers Jan – Dec 2026, adopted in January 2026.",
+     "url": "https://www.fultoncountyga.gov/-/media/Inside-Fulton-County-Documents/FY26-Adopted-Budget-Book---V5.pdf"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "The general fund table lists each department.",
+     "url": "https://www.fultoncountyga.gov/-/media/Inside-Fulton-County-Documents/FY26-Adopted-Budget-Book---V5.pdf",
+     "page": 78
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The PDF has a text layer.",
+     "url": "https://www.fultoncountyga.gov/-/media/Inside-Fulton-County-Documents/FY26-Adopted-Budget-Book---V5.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The budget file downloads with a plain request (HTTP 200).",
+     "url": "https://www.fultoncountyga.gov/-/media/Inside-Fulton-County-Documents/FY26-Adopted-Budget-Book---V5.pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The 2024 Annual Comprehensive Financial Report is on the county site.",
+     "url": "https://www.fultoncountyga.gov/-/media/Departments/Finance/ACFR-or-CAFR/Fulton-County-Georgia-2024-ACFR.pdf"
+    }
+   }
+  },
+  "17031": {
+   "county": "Cook County",
+   "st": "IL",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The FY2026 adopted Annual Appropriation Bill (Volumes 1 and 2) is posted on the county budget site.",
+     "url": "https://opendocs.cookcountyil.gov/budget/archive/2026_Annual_Appropriations_I.pdf"
+    },
+    "current": {
+     "v": "yes",
+     "note": "The adopted bill covers Dec 2025 to Nov 2026, the year now under way.",
+     "url": "https://opendocs.cookcountyil.gov/budget/archive/2026_Annual_Appropriations_I.pdf"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "Volume 2 gives a budget for each office and department.",
+     "url": "https://opendocs.cookcountyil.gov/budget/archive/2026_Annual_Appropriations_II.pdf"
+    },
+    "line_items": {
+     "v": "yes",
+     "note": "Volume 2 lists account lines in each department, such as salaries, benefits, contractual services and supplies.",
+     "url": "https://opendocs.cookcountyil.gov/budget/archive/2026_Annual_Appropriations_II.pdf"
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "Both volumes have a text layer.",
+     "url": "https://opendocs.cookcountyil.gov/budget/archive/2026_Annual_Appropriations_I.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The Volume 1 PDF downloads with a plain request (HTTP 200).",
+     "url": "https://opendocs.cookcountyil.gov/budget/archive/2026_Annual_Appropriations_I.pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The Annual Comprehensive Financial Report for the year ended Nov 2024 is on the county website.",
+     "url": "https://www.cookcountyil.gov/sites/g/files/ywwepo161/files/documents/2025-07/Annual%20Comprehensive%20Financial%20Report%202024.pdf"
+    }
+   }
+  },
+  "26163": {
+   "county": "Wayne County",
+   "st": "MI",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The enrolled appropriations ordinance for the year ending Sept 2026 is on the county budget page.",
+     "url": "https://www.waynecountymi.gov/Government/Departments/Management-Budget/Budget"
+    },
+    "current": {
+     "v": "no",
+     "note": "The newest adopted budget on the county budget page is for the year ending Sept 30, 2026. The year that began Oct 1, 2026 was not posted when checked.",
+     "url": "https://www.waynecountymi.gov/Government/Departments/Management-Budget/Budget"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "The ordinance lists the General Fund by county department and office.",
+     "url": "https://www.waynecountymi.gov/files/assets/mainsite/v/1/management-amp-budget/documents/fye-26-appropriation-ordinance.pdf",
+     "page": 1
+    },
+    "line_items": {
+     "v": "yes",
+     "note": "Each department shows personnel, fringe benefits, supplies and contractual services lines.",
+     "url": "https://www.waynecountymi.gov/files/assets/mainsite/v/1/management-amp-budget/documents/fye-26-appropriation-ordinance.pdf",
+     "page": 1
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The ordinance PDF has a text layer.",
+     "url": "https://www.waynecountymi.gov/files/assets/mainsite/v/1/management-amp-budget/documents/fye-26-appropriation-ordinance.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The ordinance PDF downloads with a plain request (HTTP 200).",
+     "url": "https://www.waynecountymi.gov/files/assets/mainsite/v/1/management-amp-budget/documents/fye-26-appropriation-ordinance.pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The Annual Comprehensive Financial Report for the year ending Sept 2024 is on the county financial reporting page.",
+     "url": "https://www.waynecountymi.gov/files/assets/mainsite/v/1/management-amp-budget/documents/financial-reporting/acfr/fiscal-year-2023-2024-acfr.pdf"
+    }
+   }
+  },
+  "27053": {
+   "county": "Hennepin County",
+   "st": "MN",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The 2026 adopted operating budget is on the county website.",
+     "url": "https://www.hennepincounty.gov/-/media/Hennepin-Headless/Hennepin-Gov/government/about/budget-financial-management/annual-budgets/2026-operating-budget.pdf"
+    },
+    "current": {
+     "v": "yes",
+     "note": "The adopted budget covers calendar year 2026, the year now under way.",
+     "url": "https://www.hennepincounty.gov/-/media/Hennepin-Headless/Hennepin-Gov/government/about/budget-financial-management/annual-budgets/2026-operating-budget.pdf"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "Each line of business lists its departments, and departments have their own budget pages.",
+     "url": "https://www.hennepincounty.gov/-/media/Hennepin-Headless/Hennepin-Gov/government/about/budget-financial-management/annual-budgets/2026-operating-budget.pdf"
+    },
+    "line_items": {
+     "v": "yes",
+     "note": "Department pages split spending into personnel, commodities, services and capital outlay.",
+     "url": "https://www.hennepincounty.gov/-/media/Hennepin-Headless/Hennepin-Gov/government/about/budget-financial-management/annual-budgets/2026-operating-budget.pdf"
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The budget PDF has a text layer.",
+     "url": "https://www.hennepincounty.gov/-/media/Hennepin-Headless/Hennepin-Gov/government/about/budget-financial-management/annual-budgets/2026-operating-budget.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The budget PDF downloads with a plain request (HTTP 200).",
+     "url": "https://www.hennepincounty.gov/-/media/Hennepin-Headless/Hennepin-Gov/government/about/budget-financial-management/annual-budgets/2026-operating-budget.pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The 2025 Annual Comprehensive Financial Report is on the county website.",
+     "url": "https://www.hennepincounty.gov/-/media/Hennepin-Headless/Hennepin-Gov/government/about/budget-financial-management/reporting-and-accountability/annual-comprehensive-financial-report-2025.pdf"
+    }
+   }
+  },
+  "32003": {
+   "county": "Clark County",
+   "st": "NV",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The FY2027 Final Budget is on the county site.",
+     "url": "https://www.clarkcountynv.gov/adobe/assets/urn:aaid:aem:f2043431-a3b3-4121-a721-439c7b4e10b3/original/as/Full-Document.pdf"
+    },
+    "current": {
+     "v": "yes",
+     "note": "Covers July 2026 – June 2027, the year now under way.",
+     "url": "https://www.clarkcountynv.gov/adobe/assets/urn:aaid:aem:f2043431-a3b3-4121-a721-439c7b4e10b3/original/as/Full-Document.pdf"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "Department pages show each office, such as Fire and Sheriff.",
+     "url": "https://www.clarkcountynv.gov/adobe/assets/urn:aaid:aem:f2043431-a3b3-4121-a721-439c7b4e10b3/original/as/Full-Document.pdf",
+     "page": 30
+    },
+    "line_items": {
+     "v": "partly",
+     "note": "Fund tables show salaries, benefits, services and supplies, and capital for each fund.",
+     "url": "https://www.clarkcountynv.gov/adobe/assets/urn:aaid:aem:f2043431-a3b3-4121-a721-439c7b4e10b3/original/as/Full-Document.pdf",
+     "page": 16
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The PDF has a text layer.",
+     "url": "https://www.clarkcountynv.gov/adobe/assets/urn:aaid:aem:f2043431-a3b3-4121-a721-439c7b4e10b3/original/as/Full-Document.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The PDF downloads with a plain request (HTTP 200).",
+     "url": "https://www.clarkcountynv.gov/adobe/assets/urn:aaid:aem:f2043431-a3b3-4121-a721-439c7b4e10b3/original/as/Full-Document.pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The FY2025 Annual Comprehensive Financial Report is on the county site.",
+     "url": "https://www.clarkcountynv.gov/adobe/assets/urn:aaid:aem:a48a8782-46ef-40bb-9742-bd197d734421/original/as/Fiscal-Year-2025-(Full-Report).pdf"
+    }
+   }
+  },
+  "36059": {
+   "county": "Nassau County",
+   "st": "NY",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The 2026 approved budget schedules are on the county website.",
+     "url": "https://www.nassaucountyny.gov/DocumentCenter/View/51452"
+    },
+    "current": {
+     "v": "yes",
+     "note": "The approved budget covers calendar year 2026, the year now under way.",
+     "url": "https://www.nassaucountyny.gov/DocumentCenter/View/51452"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "The schedules list every department and fund.",
+     "url": "https://www.nassaucountyny.gov/DocumentCenter/View/51452"
+    },
+    "line_items": {
+     "v": "yes",
+     "note": "Each department shows salaries, fringe benefits, contractual services and other account lines.",
+     "url": "https://www.nassaucountyny.gov/DocumentCenter/View/51452"
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The budget PDF has a text layer.",
+     "url": "https://www.nassaucountyny.gov/DocumentCenter/View/51452"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The budget PDF downloads with a plain request (HTTP 200).",
+     "url": "https://www.nassaucountyny.gov/DocumentCenter/View/51452"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The 2024 Annual Comprehensive Financial Report is on the county website.",
+     "url": "https://www.nassaucountyny.gov/DocumentCenter/View/50165/Nassau-County-NY-2024-ACFR"
+    }
+   }
+  },
+  "36103": {
+   "county": "Suffolk County",
+   "st": "NY",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The 2026 adopted operating budget, Volume 1, is on the county website.",
+     "url": "https://suffolkcountyny.gov/Portals/0/formsdocs/countyexecutive/Budgets/2026%20Adopted%20Operating%20Budget%20Volume%201%20(Certified).pdf"
+    },
+    "current": {
+     "v": "yes",
+     "note": "The adopted budget covers calendar year 2026, the year now under way.",
+     "url": "https://suffolkcountyny.gov/Portals/0/formsdocs/countyexecutive/Budgets/2026%20Adopted%20Operating%20Budget%20Volume%201%20(Certified).pdf"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "The budget has a section for each department.",
+     "url": "https://suffolkcountyny.gov/Portals/0/formsdocs/countyexecutive/Budgets/2026%20Adopted%20Operating%20Budget%20Volume%201%20(Certified).pdf"
+    },
+    "line_items": {
+     "v": "yes",
+     "note": "Department sections show account lines, such as temporary salaries, supplies and contractual expenses.",
+     "url": "https://suffolkcountyny.gov/Portals/0/formsdocs/countyexecutive/Budgets/2026%20Adopted%20Operating%20Budget%20Volume%201%20(Certified).pdf"
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The budget PDF has a text layer.",
+     "url": "https://suffolkcountyny.gov/Portals/0/formsdocs/countyexecutive/Budgets/2026%20Adopted%20Operating%20Budget%20Volume%201%20(Certified).pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The budget PDF downloads with a plain request (HTTP 200).",
+     "url": "https://suffolkcountyny.gov/Portals/0/formsdocs/countyexecutive/Budgets/2026%20Adopted%20Operating%20Budget%20Volume%201%20(Certified).pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The 2024 Annual Comprehensive Financial Report is on the county website.",
+     "url": "https://suffolkcountyny.gov/Portals/2/documents/2024-ACFR-FINAL-7-31-2025.pdf"
+    }
+   }
+  },
+  "37119": {
+   "county": "Mecklenburg County",
+   "st": "NC",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The FY2027 adopted budget is on the county site.",
+     "url": "https://mecknc.widen.net/content/lu77sgblro/original/Adopted-Budget-2027.pdf"
+    },
+    "current": {
+     "v": "yes",
+     "note": "Covers Jul 2026 – Jun 2027, the year now under way.",
+     "url": "https://mecknc.widen.net/content/lu77sgblro/original/Adopted-Budget-2027.pdf"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "The book lists each agency and has a page for each.",
+     "url": "https://mecknc.widen.net/content/lu77sgblro/original/Adopted-Budget-2027.pdf",
+     "page": 78
+    },
+    "line_items": {
+     "v": "yes",
+     "note": "Agency pages show personnel, contractual services, commodities, other charges and capital outlay.",
+     "url": "https://mecknc.widen.net/content/lu77sgblro/original/Adopted-Budget-2027.pdf",
+     "page": 163
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The PDF has a text layer.",
+     "url": "https://mecknc.widen.net/content/lu77sgblro/original/Adopted-Budget-2027.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The budget file downloads with a plain request (HTTP 200).",
+     "url": "https://mecknc.widen.net/content/lu77sgblro/original/Adopted-Budget-2027.pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The county says its FY2025 Annual Comprehensive Financial Report (year ended June 30, 2025) is available from its Financial Services site.",
+     "url": "https://news.mecknc.gov/mecklenburg-county-earns-51st-annual-financial-reporting-certificate"
+    }
+   }
+  },
+  "37183": {
+   "county": "Wake County",
+   "st": "NC",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The FY2027 adopted budget is on the county site.",
+     "url": "https://s3.us-west-1.amazonaws.com/wakegov.com.if-us-west-1/s3fs-public/documents/2026-08/FY27%20Wake%20County%20Adopted%20Budget_8.25.26_post%20manual%20edits%20-%20Web.pdf"
+    },
+    "current": {
+     "v": "yes",
+     "note": "Covers Jul 2026 – Jun 2027, the year now under way.",
+     "url": "https://s3.us-west-1.amazonaws.com/wakegov.com.if-us-west-1/s3fs-public/documents/2026-08/FY27%20Wake%20County%20Adopted%20Budget_8.25.26_post%20manual%20edits%20-%20Web.pdf"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "The book has a summary for each department.",
+     "url": "https://s3.us-west-1.amazonaws.com/wakegov.com.if-us-west-1/s3fs-public/documents/2026-08/FY27%20Wake%20County%20Adopted%20Budget_8.25.26_post%20manual%20edits%20-%20Web.pdf",
+     "page": 174
+    },
+    "line_items": {
+     "v": "yes",
+     "note": "Department summaries show salary and benefits, contractual services, capital and other lines.",
+     "url": "https://s3.us-west-1.amazonaws.com/wakegov.com.if-us-west-1/s3fs-public/documents/2026-08/FY27%20Wake%20County%20Adopted%20Budget_8.25.26_post%20manual%20edits%20-%20Web.pdf",
+     "page": 174
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The PDF has a text layer.",
+     "url": "https://s3.us-west-1.amazonaws.com/wakegov.com.if-us-west-1/s3fs-public/documents/2026-08/FY27%20Wake%20County%20Adopted%20Budget_8.25.26_post%20manual%20edits%20-%20Web.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The budget file downloads with a plain request (HTTP 200).",
+     "url": "https://s3.us-west-1.amazonaws.com/wakegov.com.if-us-west-1/s3fs-public/documents/2026-08/FY27%20Wake%20County%20Adopted%20Budget_8.25.26_post%20manual%20edits%20-%20Web.pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The FY2025 Annual Comprehensive Financial Report is on the county site.",
+     "url": "https://s3.us-west-1.amazonaws.com/wakegov.com.if-us-west-1/s3fs-public/documents/2026-01/Wake%20County%20FY25%20Annual%20Comprehensive%20Annual%20Financial%20Report.pdf"
+    }
+   }
+  },
+  "39035": {
+   "county": "Cuyahoga County",
+   "st": "OH",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The 2026-2027 biennial budget is posted, including the Council resolution that adopted it.",
+     "url": "https://cuyahogacms.blob.core.windows.net/home/docs/default-source/council/biennial-budget/2026-2027/final-approved-budget.pdf?sfvrsn=73cbf64e_1"
+    },
+    "current": {
+     "v": "yes",
+     "note": "Council adopted the 2026-2027 budget in December 2025, and the adopted resolution is posted. The all-funds book we read is the recommended version.",
+     "url": "https://cuyahogacms.blob.core.windows.net/home/docs/default-source/council/biennial-budget/2026-2027/final-approved-budget.pdf?sfvrsn=73cbf64e_1"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "The budget detail lists each agency and office.",
+     "url": "https://cuyahogacms.blob.core.windows.net/home/docs/default-source/council/biennial-budget/2026-2027/execrecommendedbiennialbudgetbook.pdf?sfvrsn=3c2ec4bb_3",
+     "page": 30
+    },
+    "line_items": {
+     "v": "partly",
+     "note": "The detail splits each agency into personnel and other expenditures.",
+     "url": "https://cuyahogacms.blob.core.windows.net/home/docs/default-source/council/biennial-budget/2026-2027/execrecommendedbiennialbudgetbook.pdf?sfvrsn=3c2ec4bb_3",
+     "page": 30
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The budget PDF has a text layer.",
+     "url": "https://cuyahogacms.blob.core.windows.net/home/docs/default-source/council/biennial-budget/2026-2027/execrecommendedbiennialbudgetbook.pdf?sfvrsn=3c2ec4bb_3"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The budget PDFs download with a plain request (HTTP 200).",
+     "url": "https://cuyahogacms.blob.core.windows.net/home/docs/default-source/council/biennial-budget/2026-2027/final-approved-budget.pdf?sfvrsn=73cbf64e_1"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The 2025 Annual Comprehensive Financial Report is on the county fiscal officer page.",
+     "url": "https://cuyahogacounty.gov/fiscal-officer/departments/general-accounting/financial-audit-reports"
+    }
+   }
+  },
+  "39049": {
+   "county": "Franklin County",
+   "st": "OH",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The 2026 approved budget is on the county website.",
+     "url": "https://www.franklincountyohio.gov/County-Government/About-Our-Community/Budget-and-Reporting"
+    },
+    "current": {
+     "v": "yes",
+     "note": "The approved budget covers calendar year 2026, adopted Dec 2025.",
+     "url": "https://www.franklincountyohio.gov/files/assets/public/v/1/budget/documents/current-budget/2026-approved-budget-summary-tables.pdf"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "The approved budget tables list spending for each agency.",
+     "url": "https://www.franklincountyohio.gov/files/assets/public/v/1/budget/documents/current-budget/2026-approved-budget-summary-tables.pdf",
+     "page": 4
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The budget PDF has a text layer.",
+     "url": "https://www.franklincountyohio.gov/files/assets/public/v/1/budget/documents/current-budget/2026-approved-budget-summary-tables.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The budget PDF downloads with a plain request (HTTP 200).",
+     "url": "https://www.franklincountyohio.gov/files/assets/public/v/1/budget/documents/current-budget/2026-approved-budget-summary-tables.pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The 2025 Annual Comprehensive Financial Report is on the County Auditor website.",
+     "url": "https://auditor.franklincountyohio.gov/files/assets/auditor/v/1/documents/fiscal/financial-reporting/2025-acfr.pdf"
+    }
+   }
+  },
+  "42003": {
+   "county": "Allegheny County",
+   "st": "PA",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The 2026 operating budget and line-item detail are on the county budget page.",
+     "url": "https://www.alleghenycounty.us/Government/Departments-and-Offices/Department-Directory/Budget-and-Finance/County-Budgets"
+    },
+    "current": {
+     "v": "yes",
+     "note": "The adopted 2026 budget covers calendar year 2026, the year now under way.",
+     "url": "https://www.alleghenycounty.us/Government/Departments-and-Offices/Department-Directory/Budget-and-Finance/County-Budgets"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "The line-item detail gives a total for each department.",
+     "url": "https://www.alleghenycounty.us/files/assets/county/v/1/government/budget-amp-finance/budgets-%E2%80%93-line-item-detail/2026-line-item-budget-final.pdf"
+    },
+    "line_items": {
+     "v": "yes",
+     "note": "Each department lists account lines, such as salaries, fringe costs and supplies.",
+     "url": "https://www.alleghenycounty.us/files/assets/county/v/1/government/budget-amp-finance/budgets-%E2%80%93-line-item-detail/2026-line-item-budget-final.pdf"
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The line-item PDF has a text layer.",
+     "url": "https://www.alleghenycounty.us/files/assets/county/v/1/government/budget-amp-finance/budgets-%E2%80%93-line-item-detail/2026-line-item-budget-final.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "On Nov 8, 2026 the budget page and the line-item PDF both answered a plain request (HTTP 200). The county site blocked a plain request on an earlier try.",
+     "url": "https://www.alleghenycounty.us/files/assets/county/v/1/government/budget-amp-finance/budgets-%E2%80%93-line-item-detail/2026-line-item-budget-final.pdf"
+    }
+   }
+  },
+  "42101": {
+   "county": "Philadelphia County",
+   "st": "PA",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The FY2027 operating budget as adopted by Council is on the city website. The city and county are one government.",
+     "url": "https://www.phila.gov/media/20260715095721/fy2027-budget-in-brief-approvedR.pdf"
+    },
+    "current": {
+     "v": "yes",
+     "note": "The adopted FY2027 budget covers Jul 2026 to Jun 2027, the year now under way.",
+     "url": "https://www.phila.gov/media/20260715095721/fy2027-budget-in-brief-approvedR.pdf"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "The appropriation ordinance lists each department and office.",
+     "url": "https://www.phila.gov/media/20260715095721/fy2027-budget-in-brief-approvedR.pdf",
+     "page": 90
+    },
+    "line_items": {
+     "v": "yes",
+     "note": "Each department shows personal services, purchase of services, supplies and other classes.",
+     "url": "https://www.phila.gov/media/20260715095721/fy2027-budget-in-brief-approvedR.pdf",
+     "page": 96
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The budget PDF has a text layer.",
+     "url": "https://www.phila.gov/media/20260715095721/fy2027-budget-in-brief-approvedR.pdf"
+    },
+    "open_to_tools": {
+     "v": "no",
+     "note": "The city site answers automated requests with a bot check (HTTP 403).",
+     "url": "https://www.phila.gov/media/20260715095721/fy2027-budget-in-brief-approvedR.pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The FY2025 Annual Financial Report (year ended June 2025) is on the city website.",
+     "url": "https://www.phila.gov/media/20251029115456/finance-annual-financial-report-fy-2025.pdf"
+    }
+   }
+  },
+  "48027": {
+   "county": "Bell County",
+   "st": "TX",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The FY2026-27 approved budget is on the county website.",
+     "url": "https://cms3.revize.com/revize/bellcountytx/departments/auditor/docs/Bell%20County%20Approved%20Budget%20FY2026-27.pdf"
+    },
+    "current": {
+     "v": "yes",
+     "note": "The approved book covers Oct 2026 – Sep 2027, the year now under way.",
+     "url": "https://cms3.revize.com/revize/bellcountytx/departments/auditor/docs/Bell%20County%20Approved%20Budget%20FY2026-27.pdf"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "The General Fund lists each department and office.",
+     "url": "https://cms3.revize.com/revize/bellcountytx/departments/auditor/docs/Bell%20County%20Approved%20Budget%20FY2026-27.pdf",
+     "page": 21
+    },
+    "line_items": {
+     "v": "yes",
+     "note": "Department pages show lines such as salaries, benefits and capital outlay.",
+     "url": "https://cms3.revize.com/revize/bellcountytx/departments/auditor/docs/Bell%20County%20Approved%20Budget%20FY2026-27.pdf",
+     "page": 29
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The PDF has a real text layer.",
+     "url": "https://cms3.revize.com/revize/bellcountytx/departments/auditor/docs/Bell%20County%20Approved%20Budget%20FY2026-27.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "A plain automated request downloads the budget file (HTTP 200).",
+     "url": "https://cms3.revize.com/revize/bellcountytx/departments/auditor/docs/Bell%20County%20Approved%20Budget%20FY2026-27.pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The 2025 Annual Comprehensive Financial Report is on the county Auditor's page.",
+     "url": "https://www.bellcountytx.com/departments/auditor/comprehensive_annual_financial_report.php"
+    }
+   }
+  },
+  "48029": {
+   "county": "Bexar County",
+   "st": "TX",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The FY2025-26 adopted budget documents are on bexar.org, and the FY2026-27 proposed book is too.",
+     "url": "https://www.bexar.org/DocumentCenter/View/51564/County-Managers-Message-and-Table-of-Contents-FY-2025-26-PDF"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "The book has a page of budget figures for each General Fund department.",
+     "url": "https://www.bexar.org/DocumentCenter/View/56634/FY-2026-27-Proposed-Budget-Book",
+     "page": 23
+    },
+    "line_items": {
+     "v": "yes",
+     "note": "Each department page splits its budget into personnel, travel, operations and supplies.",
+     "url": "https://www.bexar.org/DocumentCenter/View/56634/FY-2026-27-Proposed-Budget-Book",
+     "page": 23
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The PDF has a text layer.",
+     "url": "https://www.bexar.org/DocumentCenter/View/56634/FY-2026-27-Proposed-Budget-Book"
+    },
+    "open_to_tools": {
+     "v": "partly",
+     "note": "The budget book downloaded with a plain request (HTTP 200), but another bexar.org page answered the same kind of request with a bot check (HTTP 429).",
+     "url": "https://www.bexar.org/DocumentCenter/View/56634/FY-2026-27-Proposed-Budget-Book"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The county's Annual Financial Reports page lists a 2025 Annual Comprehensive Financial Report.",
+     "url": "https://www.bexar.org/439/Annual-Financial-Reports"
+    }
+   }
+  },
+  "48039": {
+   "county": "Brazoria County",
+   "st": "TX",
+   "checked": "2026-11-08",
+   "items": {
+    "open_to_tools": {
+     "v": "no",
+     "note": "The county's site answers automated requests with a bot check (HTTP 403).",
+     "url": "https://www.brazoriacountytx.gov/"
+    }
+   }
+  },
+  "48061": {
+   "county": "Cameron County",
+   "st": "TX",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The FY2026-27 approved budget with line item detail is on the county website.",
+     "url": "https://www.cameroncountytx.gov/wp-content/uploads/2026/09/FY-2026-2027-Budget-Line-Item-Detail.pdf"
+    },
+    "current": {
+     "v": "yes",
+     "note": "The book covers Oct 2026 – Sep 2027, the year now under way.",
+     "url": "https://www.cameroncountytx.gov/wp-content/uploads/2026/09/FY-2026-2027-Budget-Line-Item-Detail.pdf"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "Each department has its own budget page.",
+     "url": "https://www.cameroncountytx.gov/wp-content/uploads/2026/09/FY-2026-2027-Budget-Line-Item-Detail.pdf",
+     "page": 38
+    },
+    "line_items": {
+     "v": "yes",
+     "note": "Department pages list account lines such as salaries, supplies and capital.",
+     "url": "https://www.cameroncountytx.gov/wp-content/uploads/2026/09/FY-2026-2027-Budget-Line-Item-Detail.pdf",
+     "page": 38
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The PDF has a real text layer.",
+     "url": "https://www.cameroncountytx.gov/wp-content/uploads/2026/09/FY-2026-2027-Budget-Line-Item-Detail.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "A plain automated request downloads the budget file (HTTP 200).",
+     "url": "https://www.cameroncountytx.gov/wp-content/uploads/2026/09/FY-2026-2027-Budget-Line-Item-Detail.pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The same file includes financial statements for the year ended Sept. 30, 2025.",
+     "url": "https://www.cameroncountytx.gov/wp-content/uploads/2026/09/FY-2026-2027-Budget-Line-Item-Detail.pdf",
+     "page": 448
+    }
+   }
+  },
+  "48085": {
+   "county": "Collin County",
+   "st": "TX",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The FY2027 adopted budget (numbers-only version) is on the county site.",
+     "url": "https://www.collincountytx.gov/docs/default-source/budget-and-finance/documents/fy-2027-adopted-numbers-only.pdf"
+    },
+    "current": {
+     "v": "yes",
+     "note": "It covers Oct 2026 to Sep 2027. The county says the full final book will follow by December 11, 2026.",
+     "url": "https://www.collincountytx.gov/docs/default-source/budget-and-finance/documents/fy-2027-adopted-numbers-only.pdf"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "The adopted document lists the budget for each department by fund.",
+     "url": "https://www.collincountytx.gov/docs/default-source/budget-and-finance/documents/fy-2027-adopted-numbers-only.pdf",
+     "page": 59
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The PDF has a text layer.",
+     "url": "https://www.collincountytx.gov/docs/default-source/budget-and-finance/documents/fy-2027-adopted-numbers-only.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The document downloads with a plain automated request (HTTP 200).",
+     "url": "https://www.collincountytx.gov/docs/default-source/budget-and-finance/documents/fy-2027-adopted-numbers-only.pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The FY2025 Annual Comprehensive Financial Report is on the County Auditor's page.",
+     "url": "https://www.collincountytx.gov/docs/default-source/county-auditor/annual-fiscal-reports/fy-2025-annual-comprehensive-financial-report.pdf?sfvrsn=e6b7001f_3"
+    }
+   }
+  },
+  "48113": {
+   "county": "Dallas County",
+   "st": "TX",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The FY2027 adopted budget is on the county budget page, as a Budget Snapshot PDF and an adopted budget book on the county's OpenGov site.",
+     "url": "https://www.dallascounty.org/departments/budget/fy2027_budget.php"
+    },
+    "current": {
+     "v": "yes",
+     "note": "The FY2027 budget for Oct 2026 to Sep 2027 was adopted August 11, 2026 and is posted.",
+     "url": "https://www.dallascounty.org/Assets/uploads/docs/budget/fy2027/FY2027-Budget-Snapshot.pdf"
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The Budget Snapshot PDF has a text layer.",
+     "url": "https://www.dallascounty.org/Assets/uploads/docs/budget/fy2027/FY2027-Budget-Snapshot.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The document downloads with a plain automated request (HTTP 200).",
+     "url": "https://www.dallascounty.org/Assets/uploads/docs/budget/fy2027/FY2027-Budget-Snapshot.pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The FY2025 Annual Comprehensive Financial Report is on the County Auditor's page.",
+     "url": "https://www.dallascounty.org/Assets/uploads/docs/auditor/annual-finacial-report/FY2025ACFR.pdf"
+    }
+   }
+  },
+  "48121": {
+   "county": "Denton County",
+   "st": "TX",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The 2026-2027 adopted budget is free to read on the county site.",
+     "url": "https://www.dentoncounty.gov/Archive.aspx?ADID=2856"
+    },
+    "current": {
+     "v": "yes",
+     "note": "It covers Oct 2026 to Sep 2027 and was adopted September 22, 2026.",
+     "url": "https://www.dentoncounty.gov/Archive.aspx?ADID=2856"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "The book lists the budget for each department and cost center.",
+     "url": "https://www.dentoncounty.gov/Archive.aspx?ADID=2856",
+     "page": 66
+    },
+    "line_items": {
+     "v": "partly",
+     "note": "Each cost center splits its budget into personnel, maintenance and operations, and capital.",
+     "url": "https://www.dentoncounty.gov/Archive.aspx?ADID=2856",
+     "page": 97
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The PDF has a text layer.",
+     "url": "https://www.dentoncounty.gov/Archive.aspx?ADID=2856"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The document downloads with a plain automated request (HTTP 200).",
+     "url": "https://www.dentoncounty.gov/Archive.aspx?ADID=2856"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The Annual Comprehensive Financial Report for the year ended September 30, 2024 is on the County Auditor's archive. I did not find a 2025 report.",
+     "url": "https://www.dentoncounty.gov/ArchiveCenter/ViewFile/Item/2335"
+    }
+   }
+  },
+  "48141": {
+   "county": "El Paso County",
+   "st": "TX",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The FY2027 adopted budget book is free to read on the county website.",
+     "url": "https://www.epcounty.com/DocumentCenter/View/11332"
+    },
+    "current": {
+     "v": "yes",
+     "note": "The book covers Oct 2026 – Sep 2027, the year now under way.",
+     "url": "https://www.epcounty.com/DocumentCenter/View/11332"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "The General Fund lists each court and office on its own line, with about 200 departments and divisions.",
+     "url": "https://www.epcounty.com/DocumentCenter/View/11332",
+     "page": 24
+    },
+    "line_items": {
+     "v": "yes",
+     "note": "Department pages show account lines such as salaries, benefits, supplies and capital.",
+     "url": "https://www.epcounty.com/DocumentCenter/View/11332",
+     "page": 31
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The PDF has a real text layer.",
+     "url": "https://www.epcounty.com/DocumentCenter/View/11332"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "A plain automated request downloads the budget file (HTTP 200).",
+     "url": "https://www.epcounty.com/DocumentCenter/View/11332"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The Annual Comprehensive Financial Report for the year ended Sept. 30, 2025 is on the county website.",
+     "url": "https://www.epcounty.com/DocumentCenter/View/10857/Annual-Comprehensive-Financial-Report-Fiscal-Year-2025-PDF"
+    }
+   }
+  },
+  "48157": {
+   "county": "Fort Bend County",
+   "st": "TX",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The FY2027 adopted budget book is free to read on the county transparency site.",
+     "url": "https://transparencydocs.fortbendcountytx.gov/Traditional_Finances/Budgets/2027/FY2027_Adopted_Budget_Book-Final.pdf"
+    },
+    "current": {
+     "v": "yes",
+     "note": "It covers Oct 2026 to Sep 2027 and was adopted September 10, 2026.",
+     "url": "https://transparencydocs.fortbendcountytx.gov/Traditional_Finances/Budgets/2027/FY2027_Adopted_Budget_Book-Final.pdf"
+    },
+    "by_office": {
+     "v": "partly",
+     "note": "The General Fund is broken out by department. Other funds are shown as one unit each.",
+     "url": "https://transparencydocs.fortbendcountytx.gov/Traditional_Finances/Budgets/2027/FY2027_Adopted_Budget_Book-Final.pdf",
+     "page": 20
+    },
+    "line_items": {
+     "v": "partly",
+     "note": "The General Fund pages split each department into salaries and personnel, operating and training, and technology.",
+     "url": "https://transparencydocs.fortbendcountytx.gov/Traditional_Finances/Budgets/2027/FY2027_Adopted_Budget_Book-Final.pdf",
+     "page": 29
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The PDF has a text layer.",
+     "url": "https://transparencydocs.fortbendcountytx.gov/Traditional_Finances/Budgets/2027/FY2027_Adopted_Budget_Book-Final.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The document downloads with a plain automated request (HTTP 200).",
+     "url": "https://transparencydocs.fortbendcountytx.gov/Traditional_Finances/Budgets/2027/FY2027_Adopted_Budget_Book-Final.pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The FY2025 Annual Comprehensive Financial Report is on the county transparency site.",
+     "url": "https://transparencydocs.fortbendcountytx.gov/Traditional_Finances/2025/FY2025_ACFR.pdf"
+    }
+   }
+  },
+  "48167": {
+   "county": "Galveston County",
+   "st": "TX",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The county Auditor's Adopted Budgets page lists an FY2027 Adopted Budget (seen in search results).",
+     "url": "https://www.galvestoncountytx.gov/home/showpublisheddocument/32799"
+    },
+    "current": {
+     "v": "yes",
+     "note": "The listed FY2027 Adopted Budget covers Oct 2026 – Sep 2027 (seen in search results).",
+     "url": "https://www.galvestoncountytx.gov/home/showpublisheddocument/32799"
+    },
+    "open_to_tools": {
+     "v": "no",
+     "note": "The county's site answers automated requests with a bot check (HTTP 403).",
+     "url": "https://www.galvestoncountytx.gov/home/showpublisheddocument/32799"
+    }
+   }
+  },
+  "48201": {
+   "county": "Harris County",
+   "st": "TX",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The FY2027 adopted budget, Volume I, is free to read on the county budget site.",
+     "url": "https://budget.harriscountytx.gov/doc/Budget/budgetbook/FY2027/FY27_Adopted_Budget_Volume_I_v1_09172026.pdf"
+    },
+    "current": {
+     "v": "yes",
+     "note": "It covers Oct 2026 to Sep 2027 and was adopted September 17, 2026.",
+     "url": "https://budget.harriscountytx.gov/doc/Budget/budgetbook/FY2027/FY27_Adopted_Budget_Volume_I_v1_09172026.pdf"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "Appendix A lists the budget for each General Fund department.",
+     "url": "https://budget.harriscountytx.gov/doc/Budget/budgetbook/FY2027/FY27_Adopted_Budget_Volume_I_v1_09172026.pdf",
+     "page": 115
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The PDF has a text layer.",
+     "url": "https://budget.harriscountytx.gov/doc/Budget/budgetbook/FY2027/FY27_Adopted_Budget_Volume_I_v1_09172026.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The document downloads with a plain automated request (HTTP 200).",
+     "url": "https://budget.harriscountytx.gov/doc/Budget/budgetbook/FY2027/FY27_Adopted_Budget_Volume_I_v1_09172026.pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The Annual Comprehensive Financial Report for the year ended September 30, 2025 is on the County Auditor's site.",
+     "url": "https://auditor.harriscountytx.gov/portals/auditor/documents/ACFRs/HC%20Final%209-30-25.pdf"
+    }
+   }
+  },
+  "48215": {
+   "county": "Hidalgo County",
+   "st": "TX",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The 2026 adopted budget book is free to read on the county site.",
+     "url": "https://www.hidalgocounty.us/DocumentCenter/View/72453"
+    },
+    "current": {
+     "v": "yes",
+     "note": "Hidalgo uses the calendar year. The 2026 adopted budget for the year now under way is posted; a 2027 proposed book is also posted.",
+     "url": "https://www.hidalgocounty.us/DocumentCenter/View/72453"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "The book has a budget summary page for each department, in the General Fund and other funds.",
+     "url": "https://www.hidalgocounty.us/DocumentCenter/View/72453",
+     "page": 101
+    },
+    "line_items": {
+     "v": "partly",
+     "note": "Each department summary shows salaries and wages, fringe benefits and operating expenses.",
+     "url": "https://www.hidalgocounty.us/DocumentCenter/View/72453",
+     "page": 101
+    },
+    "searchable": {
+     "v": "partly",
+     "note": "The book has a text layer, but the department budget tables are images.",
+     "url": "https://www.hidalgocounty.us/DocumentCenter/View/72453"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The document downloads with a plain automated request (HTTP 200).",
+     "url": "https://www.hidalgocounty.us/DocumentCenter/View/72453"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The county's Annual Financial Report page lists a 2024 report (year ended December 31, 2024). I did not find a 2025 report.",
+     "url": "https://www.hidalgocounty.us/1288/Annual-Financial-Report"
+    }
+   }
+  },
+  "48303": {
+   "county": "Lubbock County",
+   "st": "TX",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The county posted its adopted FY2027 working budget, a full computer report of every account.",
+     "url": "https://www.lubbockcounty.gov/egov/apps/document/center.egov?view=item&id=8472"
+    },
+    "current": {
+     "v": "yes",
+     "note": "The report is marked adopted 09/14/26 and covers Oct 2026 – Sep 2027.",
+     "url": "https://www.lubbockcounty.gov/egov/apps/document/center.egov?view=item&id=8472"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "Each fund shows a total for each department and office.",
+     "url": "https://www.lubbockcounty.gov/egov/apps/document/center.egov?view=item&id=8472",
+     "page": 6
+    },
+    "line_items": {
+     "v": "yes",
+     "note": "Each department shows salaries, benefits, supplies, capital and other account lines.",
+     "url": "https://www.lubbockcounty.gov/egov/apps/document/center.egov?view=item&id=8472",
+     "page": 6
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The PDF has a real text layer.",
+     "url": "https://www.lubbockcounty.gov/egov/apps/document/center.egov?view=item&id=8472"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "A plain automated request downloads the budget file (HTTP 200).",
+     "url": "https://www.lubbockcounty.gov/egov/apps/document/center.egov?view=item&id=8472"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The FY2025 Annual Comprehensive Financial Report (year ended Sept. 30, 2025) is on the county Auditor's page.",
+     "url": "https://www.lubbockcounty.gov/egov/apps/document/center.egov?view=item&id=7984"
+    }
+   }
+  },
+  "48339": {
+   "county": "Montgomery County",
+   "st": "TX",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "Adopted budget books are posted on the county site (FY2025 is labeled Adopted); the FY2027 book is labeled Proposed.",
+     "url": "https://cms1files.revize.com/montgomerycountytx/Fiscal%20Year%202025%20Adopted%20Budget.pdf"
+    },
+    "current": {
+     "v": "partly",
+     "note": "The FY2027 book is labeled Proposed, though it is dated Sept. 8, 2026; no book labeled Adopted for FY2027 was seen.",
+     "url": "https://www.mctx.org/Budget/FY2027%20Proposed%20Budget.pdf"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "The General Fund and Road and Bridge Fund show a budget for each department.",
+     "url": "https://www.mctx.org/Budget/FY2027%20Proposed%20Budget.pdf",
+     "page": 13
+    },
+    "line_items": {
+     "v": "yes",
+     "note": "Each department shows salary, benefits, operations and capital columns, with account lines in the detail pages.",
+     "url": "https://www.mctx.org/Budget/FY2027%20Proposed%20Budget.pdf",
+     "page": 13
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The PDF has a real text layer.",
+     "url": "https://www.mctx.org/Budget/FY2027%20Proposed%20Budget.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "A plain automated request downloads the budget file (HTTP 200).",
+     "url": "https://www.mctx.org/Budget/FY2027%20Proposed%20Budget.pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The county Auditor's page lists the 2025 ACFR (year ended Sept. 30, 2025).",
+     "url": "https://www.mctx.org/Auditor/Annual%20Financial%20Report%202025%20-%20County.pdf"
+    }
+   }
+  },
+  "48355": {
+   "county": "Nueces County",
+   "st": "TX",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The county Auditor's Budgets page lists the adopted FY2025-26 county budget (seen in search results).",
+     "url": "https://www.nuecesco.com/county-services/county-auditor/budgets/-folder-243"
+    },
+    "open_to_tools": {
+     "v": "no",
+     "note": "The county's site answers automated requests with a bot check (HTTP 403).",
+     "url": "https://www.nuecesco.com/"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The Annual Comprehensive Financial Report for the year ended Sept. 30, 2025 is on the county website (seen in search results).",
+     "url": "https://www.nuecesco.com/home/showpublisheddocument/33609/639185807470900000"
+    }
+   }
+  },
+  "48439": {
+   "county": "Tarrant County",
+   "st": "TX",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The FY2027 approved budget recap is free to read on the county site.",
+     "url": "https://www.tarrantcountytx.gov/content/dam/main/budget-risk-mgmt/Documents/fy27/FY27_Hierarchy_Electronic.pdf"
+    },
+    "current": {
+     "v": "yes",
+     "note": "It covers Oct 2026 to Sep 2027 and is dated September 9, 2026.",
+     "url": "https://www.tarrantcountytx.gov/content/dam/main/budget-risk-mgmt/Documents/fy27/FY27_Hierarchy_Electronic.pdf"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "The Center Recap lists the budget for each cost center, such as the separate Sheriff centers.",
+     "url": "https://www.tarrantcountytx.gov/content/dam/main/budget-risk-mgmt/Documents/fy27/FY27_Hierarchy_Electronic.pdf",
+     "page": 7
+    },
+    "line_items": {
+     "v": "yes",
+     "note": "The Account Recap lists salaries, pay types, insurance and other account lines with amounts.",
+     "url": "https://www.tarrantcountytx.gov/content/dam/main/budget-risk-mgmt/Documents/fy27/FY27_Hierarchy_Electronic.pdf",
+     "page": 13
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The PDF has a text layer.",
+     "url": "https://www.tarrantcountytx.gov/content/dam/main/budget-risk-mgmt/Documents/fy27/FY27_Hierarchy_Electronic.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The document downloads with a plain automated request (HTTP 200).",
+     "url": "https://www.tarrantcountytx.gov/content/dam/main/budget-risk-mgmt/Documents/fy27/FY27_Hierarchy_Electronic.pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The FY2025 Annual Comprehensive Financial Report is on the County Auditor's page.",
+     "url": "https://www.tarrantcountytx.gov/content/dam/main/auditor/FinancialAccountingReports/Annual%20Financial%20Reports/annual-comprehensive-financial-report/Tarrant_County_FY25_ACFR.pdf"
+    }
+   }
+  },
+  "48453": {
+   "county": "Travis County",
+   "st": "TX",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The FY2027 adopted budget is free to read on the county site.",
+     "url": "https://www.traviscountytx.gov/images/planning_budget/Docs/2027/FY_2027_Adopted_Budget.pdf"
+    },
+    "current": {
+     "v": "yes",
+     "note": "It covers Oct 2026 to Sep 2027.",
+     "url": "https://www.traviscountytx.gov/images/planning_budget/Docs/2027/FY_2027_Adopted_Budget.pdf"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "Each department and cost center has its own line item detail.",
+     "url": "https://www.traviscountytx.gov/images/planning_budget/Docs/2027/FY_2027_Adopted_Budget.pdf",
+     "page": 60
+    },
+    "line_items": {
+     "v": "yes",
+     "note": "The book has a Line Item Detail section with salaries, benefits, supplies and other account lines for each department.",
+     "url": "https://www.traviscountytx.gov/images/planning_budget/Docs/2027/FY_2027_Adopted_Budget.pdf",
+     "page": 60
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The PDF has a text layer.",
+     "url": "https://www.traviscountytx.gov/images/planning_budget/Docs/2027/FY_2027_Adopted_Budget.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The document downloads with a plain automated request (HTTP 200).",
+     "url": "https://www.traviscountytx.gov/images/planning_budget/Docs/2027/FY_2027_Adopted_Budget.pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The FY2025 Annual Comprehensive Financial Report is on the county transparency site.",
+     "url": "https://tctransparency.traviscountytx.gov/Reports/FinancialDocuments/fy2025-acfr.pdf"
+    }
+   }
+  },
+  "48491": {
+   "county": "Williamson County",
+   "st": "TX",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The county Budget Office page links the FY2025-26 adopted budget (seen in search results).",
+     "url": "https://www.wilcotx.gov/180/Budget-Office"
+    },
+    "open_to_tools": {
+     "v": "no",
+     "note": "The county's site answers automated requests with a bot check (HTTP 403).",
+     "url": "https://www.wilcotx.gov/DocumentCenter/View/20781/FY27-Budget-Presentation"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The county's Annual Comprehensive Financial Report for fiscal 2024 is posted on its document server; a fiscal 2025 summary report is also posted.",
+     "url": "https://public.destinyhosted.com/wilcodocs/2025/COM/20250415_1897/36591%5FWilliamson%5FCounty%5F2024%5FACFR%5F%2D%5FFinal%2Epdf"
+    }
+   }
+  },
+  "49035": {
+   "county": "Salt Lake County",
+   "st": "UT",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The 2026 Adopted Budget is on the county site; the Council adopted it Dec 9, 2025.",
+     "url": "https://www.saltlakecounty.gov/globalassets/1-site-files/mayor-finance/budget/budget-documents/2026/official/3---2026-budget---adopted-12-9-2025.pdf"
+    },
+    "current": {
+     "v": "yes",
+     "note": "Covers January – December 2026, the year now under way.",
+     "url": "https://www.saltlakecounty.gov/globalassets/1-site-files/mayor-finance/budget/budget-documents/2026/official/3---2026-budget---adopted-12-9-2025.pdf"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "The budget lists each fund and organization.",
+     "url": "https://www.saltlakecounty.gov/globalassets/1-site-files/mayor-finance/budget/budget-documents/2026/official/3---2026-budget---adopted-12-9-2025.pdf",
+     "page": 15
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The PDF has a text layer.",
+     "url": "https://www.saltlakecounty.gov/globalassets/1-site-files/mayor-finance/budget/budget-documents/2026/official/3---2026-budget---adopted-12-9-2025.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The PDF downloads with a plain request (HTTP 200).",
+     "url": "https://www.saltlakecounty.gov/globalassets/1-site-files/mayor-finance/budget/budget-documents/2026/official/3---2026-budget---adopted-12-9-2025.pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The 2024 Annual Comprehensive Financial Report is on the county site.",
+     "url": "https://prod.saltlakecounty.gov/globalassets/1-site-files/mayor-finance/annualfinreports/2024acfr.pdf"
+    }
+   }
+  },
+  "51059": {
+   "county": "Fairfax County",
+   "st": "VA",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The FY2027 adopted budget plan is on the county site.",
+     "url": "https://www.fairfaxcounty.gov/budget/sites/budget/files/Assets/documents/fy2027/adopted/Overview.pdf"
+    },
+    "current": {
+     "v": "yes",
+     "note": "Covers Jul 2026 – Jun 2027, the year now under way.",
+     "url": "https://www.fairfaxcounty.gov/budget/sites/budget/files/Assets/documents/fy2027/adopted/Overview.pdf"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "General fund spending is listed agency by agency.",
+     "url": "https://www.fairfaxcounty.gov/budget/sites/budget/files/Assets/documents/fy2027/adopted/Overview.pdf",
+     "page": 171
+    },
+    "line_items": {
+     "v": "yes",
+     "note": "A table shows each general fund agency's personnel, fringe benefits, operating and capital equipment costs.",
+     "url": "https://www.fairfaxcounty.gov/budget/sites/budget/files/Assets/documents/fy2027/adopted/Overview.pdf",
+     "page": 343
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The PDF has a text layer.",
+     "url": "https://www.fairfaxcounty.gov/budget/sites/budget/files/Assets/documents/fy2027/adopted/Overview.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The budget file downloads with a plain request (HTTP 200).",
+     "url": "https://www.fairfaxcounty.gov/budget/sites/budget/files/Assets/documents/fy2027/adopted/Overview.pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The FY2025 Annual Comprehensive Financial Report is on the county site.",
+     "url": "https://www.fairfaxcounty.gov/finance/sites/finance/files/Assets/Documents/PDF/financial-reports/fy2025-annual-comprehensive-financial-report.pdf"
+    }
+   }
+  },
+  "53033": {
+   "county": "King County",
+   "st": "WA",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "Ordinance 20023, the 2026-2027 biennial budget, is on the county Council site.",
+     "url": "https://aqua.kingcounty.gov/Council/Clerk/OldOrdsMotions/Ordinance%2020023.pdf"
+    },
+    "current": {
+     "v": "yes",
+     "note": "Covers January 2026 – December 2027, which includes now.",
+     "url": "https://aqua.kingcounty.gov/Council/Clerk/OldOrdsMotions/Ordinance%2020023.pdf"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "The ordinance sets the budget for each department and office.",
+     "url": "https://aqua.kingcounty.gov/Council/Clerk/OldOrdsMotions/Ordinance%2020023.pdf",
+     "page": 8
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The PDF has a text layer.",
+     "url": "https://aqua.kingcounty.gov/Council/Clerk/OldOrdsMotions/Ordinance%2020023.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The PDF downloads with a plain request (HTTP 200).",
+     "url": "https://aqua.kingcounty.gov/Council/Clerk/OldOrdsMotions/Ordinance%2020023.pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The 2025 Annual Comprehensive Financial Report is on the county finance page.",
+     "url": "https://kingcounty.gov/en/dept/executive-services/about-king-county/business-operations/finance-business-operations/financial-management/acfr"
+    }
+   }
+  },
+  "04013": {
+   "county": "Maricopa County",
+   "st": "AZ",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The FY2027 adopted budget summary and the full budget book are on the county site.",
+     "url": "https://www.maricopa.gov/ArchiveCenter/ViewFile/Item/6537"
+    },
+    "current": {
+     "v": "yes",
+     "note": "Covers July 2026 – June 2027, the year now under way.",
+     "url": "https://www.maricopa.gov/ArchiveCenter/ViewFile/Item/6537"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "The budget lists each department by fund.",
+     "url": "https://www.maricopa.gov/ArchiveCenter/ViewFile/Item/6537",
+     "page": 7
+    },
+    "line_items": {
+     "v": "yes",
+     "note": "The detail tables split each department into personal services, supplies and services, and capital groups.",
+     "url": "https://www.maricopa.gov/ArchiveCenter/ViewFile/Item/6537",
+     "page": 96
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The PDF has a text layer.",
+     "url": "https://www.maricopa.gov/ArchiveCenter/ViewFile/Item/6537"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The PDF downloads with a plain request (HTTP 200).",
+     "url": "https://www.maricopa.gov/ArchiveCenter/ViewFile/Item/6537"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The FY2025 Annual Comprehensive Financial Report is on the Arizona Auditor General site.",
+     "url": "https://www.azauditor.gov/sites/default/files/2025-12/Maricopa%20County%20Annual%20Comprehensive%20Financial%20Report%20June%2030%2C%202025.pdf"
+    }
+   }
+  },
+  "06001": {
+   "county": "Alameda County",
+   "st": "CA",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The FY2026-27 Final Budget is on the county budget site; the Board adopted it June 25, 2026.",
+     "url": "https://budget.alamedacountyca.gov/Content/pdf/FY26-27/Departmental%20Budget%20Unit%20Details%20-%20FY%202026-27%20Final.pdf"
+    },
+    "current": {
+     "v": "yes",
+     "note": "Covers July 2026 – June 2027, the year now under way.",
+     "url": "https://budget.alamedacountyca.gov/Content/pdf/FY26-27/Departmental%20Budget%20Unit%20Details%20-%20FY%202026-27%20Final.pdf"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "Each department has a budget unit page.",
+     "url": "https://budget.alamedacountyca.gov/Content/pdf/FY26-27/Departmental%20Budget%20Unit%20Details%20-%20FY%202026-27%20Final.pdf",
+     "page": 1
+    },
+    "line_items": {
+     "v": "yes",
+     "note": "Department pages show salaries and employee benefits and other spending lines.",
+     "url": "https://budget.alamedacountyca.gov/Content/pdf/FY26-27/Departmental%20Budget%20Unit%20Details%20-%20FY%202026-27%20Final.pdf",
+     "page": 1
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The PDF has a text layer.",
+     "url": "https://budget.alamedacountyca.gov/Content/pdf/FY26-27/Departmental%20Budget%20Unit%20Details%20-%20FY%202026-27%20Final.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The PDF downloads with a plain request (HTTP 200).",
+     "url": "https://budget.alamedacountyca.gov/Content/pdf/FY26-27/Departmental%20Budget%20Unit%20Details%20-%20FY%202026-27%20Final.pdf"
+    }
+   }
+  },
+  "06013": {
+   "county": "Contra Costa County",
+   "st": "CA",
+   "checked": "2026-11-08",
+   "items": {
+    "by_office": {
+     "v": "yes",
+     "note": "Each department has its own budget pages.",
+     "url": "https://contra-costa.legistar1.com/contra-costa/attachments/f0909da1-6ea1-459c-8d6c-45803cc081c9.pdf",
+     "page": 33
+    },
+    "line_items": {
+     "v": "yes",
+     "note": "Department pages show expenditures by type: salaries and benefits, services and supplies, other charges, fixed assets.",
+     "url": "https://contra-costa.legistar1.com/contra-costa/attachments/f0909da1-6ea1-459c-8d6c-45803cc081c9.pdf",
+     "page": 33
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The PDF has a text layer.",
+     "url": "https://contra-costa.legistar1.com/contra-costa/attachments/f0909da1-6ea1-459c-8d6c-45803cc081c9.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The PDF downloads with a plain request (HTTP 200).",
+     "url": "https://contra-costa.legistar1.com/contra-costa/attachments/f0909da1-6ea1-459c-8d6c-45803cc081c9.pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The 2025 Annual Comprehensive Financial Report is on the county site.",
+     "url": "https://www.contracosta.ca.gov/DocumentCenter/View/89606/ACFR-2025-PDF"
+    }
+   }
+  },
+  "06037": {
+   "county": "Los Angeles County",
+   "st": "CA",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The adopted FY2026-27 budget resolution is on the county site.",
+     "url": "https://file.lacounty.gov/SDSInter/lac/1212965_2026-27AdoptedBudgetResolution.pdf"
+    },
+    "current": {
+     "v": "yes",
+     "note": "Covers July 2026 – June 2027, the year now under way.",
+     "url": "https://file.lacounty.gov/SDSInter/lac/1212965_2026-27AdoptedBudgetResolution.pdf"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "Each county department has its own budget unit in the resolution.",
+     "url": "https://file.lacounty.gov/SDSInter/lac/1212965_2026-27AdoptedBudgetResolution.pdf",
+     "page": 40
+    },
+    "line_items": {
+     "v": "yes",
+     "note": "Each budget unit shows salaries and benefits, services and supplies, other charges and capital assets.",
+     "url": "https://file.lacounty.gov/SDSInter/lac/1212965_2026-27AdoptedBudgetResolution.pdf",
+     "page": 40
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The PDF has a text layer.",
+     "url": "https://file.lacounty.gov/SDSInter/lac/1212965_2026-27AdoptedBudgetResolution.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The PDF downloads with a plain request (HTTP 200).",
+     "url": "https://file.lacounty.gov/SDSInter/lac/1212965_2026-27AdoptedBudgetResolution.pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The county Auditor-Controller lists its Annual Comprehensive Financial Report for FY2024-25.",
+     "url": "https://auditor.lacounty.gov/annual-comprehensive-financial-report/"
+    }
+   }
+  },
+  "06059": {
+   "county": "Orange County",
+   "st": "CA",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The FY2026-27 Final Budget schedules are on the county site; the Board adopted it in June 2026.",
+     "url": "https://bos.ocgov.com/finance/2027FN/scheds.pdf"
+    },
+    "current": {
+     "v": "yes",
+     "note": "Covers July 2026 – June 2027, the year now under way.",
+     "url": "https://bos.ocgov.com/finance/2027FN/scheds.pdf"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "The budget schedules list each agency and department.",
+     "url": "https://bos.ocgov.com/finance/2027FN/scheds.pdf"
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The PDF has a text layer.",
+     "url": "https://bos.ocgov.com/finance/2027FN/scheds.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The PDF downloads with a plain request (HTTP 200).",
+     "url": "https://bos.ocgov.com/finance/2027FN/scheds.pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The FY2024-25 Annual Comprehensive Financial Report is on the Auditor-Controller site.",
+     "url": "https://ocauditor.gov/wp-content/uploads/2025/12/FY-24-25-ACFR.pdf"
+    }
+   }
+  },
+  "06065": {
+   "county": "Riverside County",
+   "st": "CA",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "The FY2026/27 Adopted Budget, Volume I, is on the county site.",
+     "url": "https://rivco.gov/sites/g/files/aldnop116/files/2026-08/FY26-27%20Riverside%20County%20Adopted%20Budget%20V1%20Final.pdf"
+    },
+    "current": {
+     "v": "yes",
+     "note": "Covers July 2026 – June 2027; the Board adopted it June 23, 2026.",
+     "url": "https://rivco.gov/sites/g/files/aldnop116/files/2026-08/FY26-27%20Riverside%20County%20Adopted%20Budget%20V1%20Final.pdf"
+    },
+    "by_office": {
+     "v": "yes",
+     "note": "Each county department has its own budget pages.",
+     "url": "https://rivco.gov/sites/g/files/aldnop116/files/2026-08/FY26-27%20Riverside%20County%20Adopted%20Budget%20V1%20Final.pdf",
+     "page": 77
+    },
+    "line_items": {
+     "v": "yes",
+     "note": "Department pages show salaries and benefits, services and other charges, and capital.",
+     "url": "https://rivco.gov/sites/g/files/aldnop116/files/2026-08/FY26-27%20Riverside%20County%20Adopted%20Budget%20V1%20Final.pdf",
+     "page": 43
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The PDF has a text layer.",
+     "url": "https://rivco.gov/sites/g/files/aldnop116/files/2026-08/FY26-27%20Riverside%20County%20Adopted%20Budget%20V1%20Final.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The PDF downloads with a plain request (HTTP 200).",
+     "url": "https://rivco.gov/sites/g/files/aldnop116/files/2026-08/FY26-27%20Riverside%20County%20Adopted%20Budget%20V1%20Final.pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The FY2024-25 Annual Comprehensive Financial Report went to the Board in January 2026 and is on the Board site.",
+     "url": "https://media.rivcocob.org/proceeds/2026/p2026_01_13_files/02.05001.pdf"
+    }
+   }
+  },
+  "06067": {
+   "county": "Sacramento County",
+   "st": "CA",
+   "checked": "2026-11-08",
+   "items": {
+    "by_office": {
+     "v": "yes",
+     "note": "The attachment lists every budget unit by fund.",
+     "url": "https://www.saccounty.gov/content/dam/bdm/docs/current-budget/2026-27/rev-recomm-budget/Att_2-AppropriationsbyFundandBudgetUnit.pdf",
+     "page": 2
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The PDF has a text layer.",
+     "url": "https://www.saccounty.gov/content/dam/bdm/docs/current-budget/2026-27/rev-recomm-budget/Att_2-AppropriationsbyFundandBudgetUnit.pdf"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The PDF downloads with a plain request (HTTP 200).",
+     "url": "https://www.saccounty.gov/content/dam/bdm/docs/current-budget/2026-27/rev-recomm-budget/Att_2-AppropriationsbyFundandBudgetUnit.pdf"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The ACFR for the year ended June 30, 2025 is on the county finance site.",
+     "url": "https://finance.saccounty.gov/AuditorController/Documents/ACFR%20FYE%206.30.25%20FINAL.pdf"
+    }
+   }
+  },
+  "06073": {
+   "county": "San Diego County",
+   "st": "CA",
+   "checked": "2026-11-08",
+   "items": {
+    "by_office": {
+     "v": "yes",
+     "note": "The letter lists the budget for each department inside each group.",
+     "url": "https://sdcounty.legistar.com/View.ashx?M=F&ID=15585541&GUID=445C5732-D815-4D44-8DC6-DD911FAF6FAC",
+     "page": 33
+    },
+    "line_items": {
+     "v": "partly",
+     "note": "Spending by type (salaries and benefits, services and supplies) is shown countywide and by group.",
+     "url": "https://sdcounty.legistar.com/View.ashx?M=F&ID=15585541&GUID=445C5732-D815-4D44-8DC6-DD911FAF6FAC",
+     "page": 13
+    },
+    "searchable": {
+     "v": "yes",
+     "note": "The PDF has a text layer.",
+     "url": "https://sdcounty.legistar.com/View.ashx?M=F&ID=15585541&GUID=445C5732-D815-4D44-8DC6-DD911FAF6FAC"
+    },
+    "open_to_tools": {
+     "v": "yes",
+     "note": "The document downloads with a plain request (HTTP 200).",
+     "url": "https://sdcounty.legistar.com/View.ashx?M=F&ID=15585541&GUID=445C5732-D815-4D44-8DC6-DD911FAF6FAC"
+    },
+    "actual": {
+     "v": "yes",
+     "note": "The FY2024-25 Annual Comprehensive Financial Report is on the county Auditor and Controller site.",
+     "url": "https://www.sandiegocounty.gov/content/dam/sdc/auditor/annual_report25/ACFR2025lot.pdf"
+    }
+   }
+  },
+  "06085": {
+   "county": "Santa Clara County",
+   "st": "CA",
+   "checked": "2026-11-08",
+   "items": {
+    "posted": {
+     "v": "yes",
+     "note": "Adopted budgets from earlier years, such as FY 2023-24, are on the county files site.",
+     "url": "https://files.santaclaracounty.gov/2023-10/fy-23-24-adopted-budget.pdf"
+    },
+    "open_to_tools": {
+     "v": "no",
+     "note": "The county budget files answer automated requests with a bot check (HTTP 403).",
+     "url": "https://www.santaclaracounty.gov/government/budget-and-finance"
+    }
+   }
+  }
+ }
+}

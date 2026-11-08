@@ -94,6 +94,7 @@ ${petitionsBlock(S.name, `/us/${st.toLowerCase()}/${slug}`, c.name, c.geoid, c.s
 ${require('../lib/state-portals').countyBlock(c)}
 ${require('../lib/county-trails').block(c)}
 ${require('../lib/state-finance').block(c)}
+${require('../lib/transparency').block(c)}
 ${require('../lib/national-local').finance(c)}
 ${require('../lib/national-local').audit(c)}
 ${require('../lib/national-local').proptax(c)}
