@@ -445,7 +445,7 @@ ${chooser(camp.id)}</section>
 <section><p class="src" style="max-width:none"><a href="/us/ask">Every information petition →</a></p></section>` : `
 <header class="page"><div class="eyebrow">County Commons · ask your county</div>
 <h1>Ask your county to publish it</h1>
-<div class="src" style="font-size:15px">Every county page has a transparency meter. Each box a county doesn’t meet yet is a petition here: sign it for your county, and at the goal it’s delivered to your county’s governing body, with the answer posted. When the county publishes it, the box turns green.</div></header>
+<div class="src" style="font-size:15px">Every county page has a transparency meter. Each box a county doesn’t meet yet is a petition here: sign it for your county, and at the goal it’s delivered to your county’s governing body, with the answer posted. When the county publishes it, the box turns green. After you sign, you can print a letter to your county’s elected officials and, in Arkansas and Texas, one precise public records request for the records themselves, filed once per county with its answer posted for everyone.</div></header>
 <section>${asks.map(c => `<div class="issue" style="display:block"><a href="/us/ask/${esc(c.id)}" style="color:inherit;text-decoration:none"><b>${esc(gen(c.title))}</b></a><p class="src" style="margin:4px 0 0">Covers: ${esc(items(c))} · <a href="/us/ask/${esc(c.id)}">Find your county’s petition →</a></p></div>`).join('')}
 <p class="src" style="max-width:none">Every petition is started by ${esc(C.started_by)}, and asks for what the best governments already publish. <a href="/us/transparency">The standard, and who meets each bar →</a> · <a href="/us/petitions">Every other petition →</a></p></section>`;
   return page({ title: camp ? `Ask your county: ${gen(camp.title)} · County Commons` : 'Ask your county to publish it: information petitions for every county · County Commons',
@@ -508,6 +508,7 @@ ${fromName ? `<form method="post" action="${esc(action || '/us/petitions/' + p.i
   <p class="src" style="margin:0">Your name, town and email are never shown on this site, sold or shared. The public sees only how many signed and from which counties.</p>
 </form>` : countyChooser(p, f)}`}
 </section>
+${require('./requests').forPetition(p)}
 <section id="share">
 <h2>Share it</h2>
 <div style="display:flex;gap:8px;flex-wrap:wrap"><a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(link + '?via=fb')}" rel="noopener" style="${btn};background:var(--ink);color:var(--paper)">Share on Facebook</a><a href="sms:?&body=${encodeURIComponent('Sign: ' + p.title + ' ' + link + '?via=text')}" style="${btn}">Text it</a><a href="mailto:?subject=${encodeURIComponent('Sign: ' + p.title)}&body=${encodeURIComponent(link + '?via=email')}" style="${btn}">Email it</a></div>

@@ -1,0 +1,54 @@
+{
+  "_about": "Public records law facts used to print records requests and escalation steps. A state is turned on only after each fact here is checked against the statute or the state's own official guide; states not listed get the letter to elected officials only. Verified 2026-11-08.",
+  "states": {
+    "AR": {
+      "law": "Arkansas Freedom of Information Act",
+      "cite": "Ark. Code Ann. § 25-19-101 et seq.",
+      "who": "any citizen of the State of Arkansas",
+      "residency_line": "I am a citizen of the State of Arkansas.",
+      "how": "A request may be made in person, by telephone, mail, fax or email (§ 25-19-105(a)(2)(B)). A written request is best, because it leaves a record.",
+      "deadline": "Records must generally be made available right away. If a record is in active use or storage, the custodian must say so in writing and set a date and hour within three working days (§ 25-19-105(e)).",
+      "deadline_days": 3,
+      "fees": "Copies can cost no more than the actual cost of reproduction, not staff time; the custodian must itemize charges, may ask for payment in advance only over $25, and may waive fees for noncommercial, public-interest requests (§ 25-19-105(d)(3)).",
+      "addressed_to": "Custodian of Records",
+      "send_note": "Deliver it to the office named above by mail, email or in person, and keep a copy with the date you sent it.",
+      "lines": [
+        "Please provide the records by email in electronic form, such as a spreadsheet or PDF, if they are readily available or readily convertible in that form (§ 25-19-105(d)(2)(B)).",
+        "If any records are in active use or storage, please certify that in writing and set a date and hour within three working days when they will be available (§ 25-19-105(e)).",
+        "If any records are exempt, please identify the exemption and release the rest (§ 25-19-105(a)(3)(B), (f)). If no records exist, please say so (§ 25-19-105(a)(3)(A)). If your office is not the custodian of some of these records, please tell me who is (§ 25-19-105(a)(3)(C)).",
+        "I ask that copy fees be waived, because the records are requested for noncommercial purposes in the public interest (§ 25-19-105(d)(3)(A)(iv)). If there is a fee, please send an itemized estimate first (§ 25-19-105(d)(3)(B))."
+      ],
+      "escalate": [
+        { "step": "No answer, or no written date, after three working days", "do": "Send a short follow-up letter that cites § 25-19-105(e) and asks for the records or a written date and hour. Keep copies of both letters." },
+        { "step": "Records refused", "do": "Any citizen denied records may appeal right away to the circuit court for the county (§ 25-19-107(a)). The court must set a hearing within seven days of a written application (§ 25-19-107(b)), and a citizen who wins after filing suit can be awarded attorney’s fees (§ 25-19-107(d))." },
+        { "step": "A custodian who negligently violates the act", "do": "Negligently violating the act is a Class C misdemeanor (§ 25-19-104). That is a matter for the county’s prosecuting attorney." }
+      ],
+      "source": { "label": "Arkansas Attorney General, Freedom of Information Handbook, 22nd Edition (2026)", "url": "https://media.ark.org/ag/APA-045-2026-FOIA-Handbook-22nd-Edition.pdf" }
+    },
+    "TX": {
+      "law": "Texas Public Information Act",
+      "cite": "Tex. Gov’t Code ch. 552",
+      "who": "anyone",
+      "residency_line": "",
+      "how": "The request should be in writing. If the county has named one mailing address and one email address for requests on its website and its Public Information Act sign, it only has to answer requests sent to those addresses (§ 552.234).",
+      "deadline": "Information must be produced promptly. If it can’t be produced within 10 business days, the officer must say so in writing and set a date and hour (§ 552.221(d)). To withhold anything, the county must ask the Attorney General for a ruling and tell you within 10 business days (§ 552.301); if it doesn’t, the information is presumed public (§ 552.302).",
+      "deadline_days": 10,
+      "fees": "If charges will be more than $40, the county must send an itemized estimate, and you must answer it in writing within 10 business days or the request is treated as withdrawn (§ 552.2615).",
+      "addressed_to": "Officer for Public Information",
+      "send_note": "Send it to the mailing or email address the county lists for Public Information Act requests, usually on its website’s Public Information Act page (§ 552.234). Keep a copy with the date you sent it.",
+      "lines": [
+        "If the information exists in electronic form, please provide it by email in that form, such as a spreadsheet or PDF.",
+        "If you cannot produce the information within 10 business days, please certify that in writing and set a date and hour when it will be available (§ 552.221(d)).",
+        "If you wish to withhold any of it, please ask the Attorney General for a decision and notify me within 10 business days of receiving this request, as § 552.301 requires.",
+        "If charges will be more than $40, please send me an itemized estimate first (§ 552.2615)."
+      ],
+      "escalate": [
+        { "step": "No answer within 10 business days", "do": "If the county neither produced the information, set a date in writing, nor asked the Attorney General for a ruling, the information is presumed public and must be released unless there is a compelling reason (§ 552.302). Send a follow-up letter that says so." },
+        { "step": "Records refused or ignored", "do": "File a written, signed complaint with the district or county attorney of the county, naming the government, the date and what happened (§ 552.3215(e)). They must decide within 31 days whether to act; if they decline or don’t act, you can take it to the Attorney General (§ 552.3215)." },
+        { "step": "Charged too much", "do": "Complain in writing to the Attorney General about the overcharge (§ 552.269)." },
+        { "step": "Still refused", "do": "A requester can sue for a writ of mandamus in district court in the county where the government’s main offices are (§ 552.321)." }
+      ],
+      "source": { "label": "Texas Government Code, Chapter 552 (Public Information Act)", "url": "https://statutes.capitol.texas.gov/Docs/GV/htm/GV.552.htm" }
+    }
+  }
+}

@@ -196,6 +196,7 @@ ${sourcesLine(p)}
 ${p.reasons.length ? `<h3>What signers added</h3>${p.reasons.slice(-6).reverse().map(r => `<p class="src" style="max-width:none;border-left:2px solid var(--rule);padding-left:10px">“${esc(r)}”</p>`).join('')}` : ''}
 </section>
 ${o.signed || o.mine ? shareBlock(data, p, goal) : ''}
+${require('./requests').forPetition(p, { abs: true })}
 <section id="sign">
 ${o.mine ? `<p><b>✓ You’ve signed this petition.</b> ${o.signed ? 'Thank you — now pass it on.' : ''}</p>` : `
 <h2>Sign</h2>

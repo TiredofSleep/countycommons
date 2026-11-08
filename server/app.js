@@ -157,13 +157,44 @@ app.use((req, res, next) => {
     // "Ask for it": a petition asking this county to publish what its
     // transparency meter found missing. The county's copy is created by the
     // first real signature (POST), never by a page view.
-    const usAsk = p.match(/^\/us\/([a-z]{2})\/([a-z0-9-]+)\/ask\/([a-z0-9-]{2,60})(\/sign)?\/?$/);
+    const usAsk = p.match(/^\/us\/([a-z]{2})\/([a-z0-9-]+)\/ask\/([a-z0-9-]{2,60})(\/sign|\/letter|\/request(?:\/filed|\/support)?)?\/?$/);
     if (usAsk) {
       const nv = require('./views/national'); const A = require('./lib/asks');
       const c = nv.countyRec(usAsk[1], usAsk[2]); const camp = A.byId(usAsk[3]);
       if (!c || !camp || !A.deliverable(c)) return res.status(404).send(gatePage('No petition at that address.', '/us'));
       const countyPath = `/us/${c.st.toLowerCase()}/${c.slug}`, here = `${countyPath}/ask/${camp.id}`, S = nv.stateName(c.st);
       const asShown = (pet) => Object.assign({}, pet, { tenant: 'us:' + c.geoid }); // shown on the national page whatever site it lives on
+      // Take it further: the letter to elected officials, and the one records request.
+      const RQ = require('./lib/requests'), RV = require('./views/requests');
+      const ctx = { stateName: S, base: here + '/request', letterUrl: here + '/letter', requestUrl: RQ.recordFor(camp.id, c.st) ? here + '/request' : null, petitionUrl: 'https://countycommons.us' + here, msg: String(req.query.m || '').slice(0, 12) };
+      const ctitle = camp.title.replace(/\{county\}/g, c.name);
+      if (usAsk[4] === '/letter' && req.method === 'GET') {
+        traffic.note('__network__', req);
+        return res.send(nv.page({ title: `Letter to ${c.name} officials: ${ctitle} · County Commons`, description: `A printable letter to ${c.name}'s elected officials asking the county to publish this information.`, canonical: 'https://countycommons.us' + here + '/letter', body: RV.officialsLetter(c, camp, ctx) }));
+      }
+      if (usAsk[4] && usAsk[4].startsWith('/request')) {
+        if (!RQ.recordFor(camp.id, c.st)) return res.status(404).send(gatePage('No records request for this petition in this state yet.', here));
+        if (usAsk[4] === '/request' && req.method === 'GET') {
+          traffic.note('__network__', req);
+          return res.send(nv.page({ title: `Public records request to ${c.name}: ${ctitle} · County Commons`, description: `A precise public records request to ${c.name}, filed once, with its public status and next steps.`, canonical: 'https://countycommons.us' + here + '/request', body: RV.requestPage(c, camp, ctx) }));
+        }
+        if (req.method === 'POST') return writeLimit(req, res, () => express.urlencoded({ extended: false })(req, res, () => {
+          const b = req.body || {}; const go = (m) => res.redirect(here + '/request?m=' + m + '#report');
+          if (b.website) return go('');
+          const participant = ensureParticipant(req, res);
+          if (usAsk[4] === '/request/support') { if (!RQ.status(c.geoid, camp.id)) return go(''); RQ.addSupport(c.geoid, camp.id, participant); return go('supported'); }
+          const name = String(b.name || '').trim(), town = String(b.town || '').trim();
+          if (!spam.plainName(name)) return go(name ? 'junk' : 'name');
+          if (!spam.plainName(town)) return go(town ? 'junk' : 'town');
+          const email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(b.email || '').trim()) ? String(b.email).trim() : '';
+          require('./identity').register(participant, { name, city: town, email });
+          const r = RQ.markFiled(c.geoid, camp.id, c.st, participant, String(b.filed_on || ''));
+          if (r.error) return go(r.error);
+          if (r.already) { RQ.addSupport(c.geoid, camp.id, participant); return go('already'); }
+          return go('filed');
+        }));
+        return res.status(405).send('Method not allowed');
+      }
       if (!usAsk[4] && req.method === 'GET') {
         traffic.note('__network__', req);
         const have = A.existing(c, camp.id);
@@ -172,7 +203,7 @@ app.use((req, res, next) => {
         if (!pet) return res.status(404).send(gatePage('No petition at that address.', '/us'));
         return res.send(nv.usPetitionPage(asShown(pet), { from: countyPath, mine: !!have && req.query.signed === '1', signed: req.query.signed === '1', error: String(req.query.error || '').slice(0, 20), action: here + '/sign', link: 'https://countycommons.us' + here }));
       }
-      if (usAsk[4] && req.method === 'POST') return writeLimit(req, res, () => express.urlencoded({ extended: false })(req, res, () => {
+      if (usAsk[4] === '/sign' && req.method === 'POST') return writeLimit(req, res, () => express.urlencoded({ extended: false })(req, res, () => {
         const b = req.body || {};
         const back = (q) => res.redirect(here + '?x=1' + q + '#sign');
         if (b.website) return back('');
