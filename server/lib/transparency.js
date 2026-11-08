@@ -13,16 +13,34 @@ const { esc } = require('./corpus');
 const { read } = require('./national-local');
 const ROOT = path.join(__dirname, '..', '..');
 
+// A perfect score is the goal the meter measures toward: every dollar traced
+// to its receipt, and every action of the government on the record.
+const LEVELS = [
+  ['plan', 'The plan', 'the budget'],
+  ['open', 'Open format', 'can people and tools use it'],
+  ['results', 'What happened', 'what really came in and went out'],
+  ['dollars', 'Every dollar', 'down to the receipt'],
+  ['activity', 'Every action', 'meetings and votes on the record'],
+];
 const ITEMS = [
-  ['posted', 'Posted', 'An adopted budget is free to read online.'],
-  ['current', 'Current', 'The budget for the fiscal year now under way is posted.'],
-  ['by_office', 'By office', 'Spending is shown department by department.'],
-  ['line_items', 'Line items', 'Inside each office, it shows what the money buys, like salaries, supplies and contracts.'],
-  ['adds_up', 'Adds up', 'The parts add to the total the county prints. County Commons checks this itself.'],
-  ['searchable', 'Searchable', 'The budget is text or a spreadsheet, not a scanned picture.'],
-  ['open_to_tools', 'Open to tools', 'It downloads without a bot check, so apps and research tools can read it.'],
-  ['actual', 'Actual spending', 'What the county really spent is public too, not just the plan.'],
-  ['audit', 'Audit', 'An independent audit or state review is public.'],
+  ['posted', 'Posted', 'An adopted budget is free to read online.', 'plan'],
+  ['current', 'Current', 'The budget for the fiscal year now under way is posted.', 'plan'],
+  ['by_office', 'By office', 'Spending is shown department by department.', 'plan'],
+  ['line_items', 'Line items', 'Inside each office, it shows what the money buys, like salaries, supplies and contracts.', 'plan'],
+  ['adds_up', 'Adds up', 'The parts add to the total the county prints. County Commons checks this itself.', 'plan'],
+  ['searchable', 'Searchable', 'The budget is text or a spreadsheet, not a scanned picture.', 'open'],
+  ['open_to_tools', 'Open to tools', 'It downloads without a bot check, so apps and research tools can read it.', 'open'],
+  ['open_data', 'Open data', 'Budget or spending numbers come as a spreadsheet or data feed anyone can download.', 'open'],
+  ['actual', 'Actual spending', 'What the county really spent is public too, not just the plan.', 'results'],
+  ['revenue', 'Where money comes from', 'Each tax, fee and grant the county takes in is shown.', 'results'],
+  ['audit', 'Audit', 'An independent audit or state review is public.', 'results'],
+  ['payments', 'Every payment', 'Each check or payment is listed: who was paid, how much, when, and for what.', 'dollars'],
+  ['contracts', 'Contracts', 'Contracts and bids are posted, with the company and the amount.', 'dollars'],
+  ['pay', 'Pay by job', 'What each county job pays is public.', 'dollars'],
+  ['receipts', 'Receipts', 'The invoice or receipt behind each payment can be seen.', 'dollars'],
+  ['meetings', 'Meetings', 'Agendas and minutes of the governing body’s meetings are posted.', 'activity'],
+  ['votes', 'Votes', 'How each elected official voted is recorded and posted.', 'activity'],
+  ['video', 'Video', 'Meetings are streamed or recorded, and the recordings are posted.', 'activity'],
 ];
 
 const MON = { jan: 0, feb: 1, mar: 2, apr: 3, may: 4, jun: 5, jul: 6, aug: 7, sep: 8, oct: 9, nov: 10, dec: 11 };
@@ -156,21 +174,24 @@ function block(c) {
   const { items, checked, state } = get(c);
   const n = { yes: 0, partly: 0, no: 0 }; for (const k of Object.keys(items)) if (n[items[k].v] !== undefined) n[items[k].v]++;
   const done = n.yes + n.partly + n.no, open = ITEMS.length - done;
-  const seg = ITEMS.map(([k]) => { const m = items[k] && MARK[items[k].v]; return `<span title="${esc(k)}" style="flex:1;height:12px;${m ? `background:${m[2]};opacity:${items[k].v === 'partly' ? 0.55 : items[k].v === 'no' ? 0.25 : 1}` : 'border:1px dashed var(--rule)'}"></span>`; }).join('');
+  const cell = (k, label) => { const m = items[k] && MARK[items[k].v]; return `<span title="${esc(label)}" style="flex:1;height:12px;${m ? `background:${m[2]};opacity:${items[k].v === 'partly' ? 0.55 : items[k].v === 'no' ? 0.25 : 1}` : 'border:1px dashed var(--rule)'}"></span>`; };
+  const seg = LEVELS.map(([lv, name]) => `<span style="display:flex;gap:2px;flex:${ITEMS.filter(i => i[3] === lv).length}" title="${esc(name)}">${ITEMS.filter(i => i[3] === lv).map(([k, label]) => cell(k, label)).join('')}</span>`).join('');
   const link = (o) => o.url ? ` <a href="${esc(o.page ? encOnce(o.url).split('#')[0] + '#page=' + o.page : o.url)}" rel="noopener" class="soft" style="font-size:12px">source</a>` : '';
-  const rows = ITEMS.map(([k, label, what]) => {
+  const row = ([k, label, what]) => {
     const o = items[k], m = o && MARK[o.v];
     return `<tr><td style="white-space:nowrap;vertical-align:top"><span aria-hidden="true" style="display:inline-block;width:1.4em;color:${m ? m[2] : 'var(--ink-soft)'}">${m ? m[0] : '–'}</span><b>${esc(label)}</b></td><td style="vertical-align:top">${m ? `<b style="color:${m[2]}">${m[1]}.</b> ${esc(o.note || '')}${link(o)}` : `<span class="soft">Not checked yet.</span>`}<br><span class="soft" style="font-size:12.5px">${esc(what)}</span></td></tr>`;
-  }).join('');
+  };
+  const rows = LEVELS.map(([lv, name, sub], i) => `<tr><td colspan="2" style="padding-top:${i ? 12 : 4}px"><b>${i + 1}. ${esc(name)}</b> <span class="soft" style="font-size:12.5px">— ${esc(sub)}</span></td></tr>${ITEMS.filter(x => x[3] === lv).map(row).join('')}`).join('');
   const summary = done
     ? `${n.yes} of ${done} checked item${done === 1 ? '' : 's'} met${n.partly ? `, ${n.partly} partly` : ''}${n.no ? `, ${n.no} not met` : ''}.${open ? ` ${open} not checked yet.` : ''}`
     : `Not checked yet for ${c.name}.`;
   const sm = state && MARK[state.v];
   return `
 <section id="transparency">
-<h2>Transparency meter <span class="sub">— what ${esc(c.name)} puts online about its money</span></h2>
-<p><b>${esc(summary)}</b></p>
-<div role="img" aria-label="${esc(summary)}" style="display:flex;gap:3px;max-width:420px;margin:6px 0 12px">${seg}</div>
+<h2>Transparency meter <span class="sub">— what ${esc(c.name)} puts online about its money and its work</span></h2>
+<p><b>${esc(summary)}</b> <span class="soft">A perfect score is all ${ITEMS.length}: every dollar traced to its receipt, and every meeting and vote on the record.</span></p>
+<div role="img" aria-label="${esc(summary)}" style="display:flex;gap:8px;max-width:520px;margin:6px 0 2px">${seg}</div>
+<div aria-hidden="true" class="soft" style="display:flex;gap:8px;max-width:520px;font-size:11px;margin-bottom:12px">${LEVELS.map(([lv, name]) => `<span style="flex:${ITEMS.filter(i => i[3] === lv).length};overflow:hidden;white-space:nowrap;text-overflow:ellipsis">${esc(name)}</span>`).join('')}</div>
 <details><summary>See each item</summary>
 <div style="overflow-x:auto;max-width:100%"><table class="plain"><tbody>${rows}</tbody></table></div>
 </details>
@@ -179,4 +200,4 @@ ${state ? `<p style="margin-top:10px"><b>The state’s part:</b> ${sm ? `<span s
 </section>`;
 }
 
-module.exports = { get, block, ITEMS, inProgress };
+module.exports = { get, block, ITEMS, LEVELS, inProgress };
