@@ -64,6 +64,10 @@ const CATS = [
 // mislead ("Trial Court Administrator" is a court, not the county executive;
 // "Health Insurance" is an employee benefit, not public health).
 const EARLY = [
+  ['health', /\bhealth \(other than hospitals\)/i],
+  ['treasurer', /\bfinancial administration\b/i],
+  ['planning', /\bcounty planner\b/i],
+  ['generaladmin', /\bcentral mail\b/i],
   ['emergency', /\b(public safety access point|psap)\b/i],
   ['courts', /\b(trial court|magistrate court|magistrate fund|district and magistrate|clerk'?s? commissioner|commissioners? fees?|court commissioner|port dist court)\b/i],
   ['benefits', /\bhealth insurance\b/i],

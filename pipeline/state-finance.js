@@ -381,6 +381,35 @@ const STATES = {
       [/\/ culture and recreation$/i, 'parks'], [/\/ conservation$/i, 'environment'], [/^community development \/ economic opportunity$/i, 'welfare'], [/^community development \//i, 'planning'],
       [/\/ highways and streets$/i, 'roads'], [/\/ sanitation$/i, 'solidwaste']
     ]
+  },
+  // DLS Local Government Finances, Table II: each county's "Total Operations" by function.
+  MD: {
+    agency: 'Maryland Department of Legislative Services',
+    fyLabel: (fy) => `fiscal ${fy} (Jul ${fy - 1} – Jun ${fy})`,
+    title: (fy) => `Local Government Finances, fiscal ${fy}`,
+    what: 'Maryland’s Department of Legislative Services publishes every county’s spending each year in the same categories, so the numbers line up from county to county.',
+    scope: 'county government, including transfers to school and other boards',
+    spentOn: 'county government operations, building projects and utilities, including money the county gives the school board, community college, library and health boards',
+    note: '“Transfers to boards” is the county’s money for the school board, community college, library and health board; those boards’ own spending is not shown here. Baltimore City is both a city and a county. Each page number opens that county’s page of the report.',
+    mapOn: 'both',
+    map: [
+      [/^transfers to boards/i, 'schools'], [/^general government/i, 'generaladmin'], [/\/ police$/i, 'sheriff'], [/\/ sewer, solid waste and water$/i, 'utilities'],
+      [/\/ fire$/i, 'fire'], [/\/ transportation$/i, 'roads'], [/^debt service/i, 'debt'], [/^miscellaneous/i, 'generaladmin'], [/^community development/i, 'planning'],
+      [/^social services/i, 'welfare'], [/^parks/i, 'parks'], [/\/ other public safety$/i, 'justice'], [/\/ corrections$/i, 'jail'], [/^economic development/i, 'planning'],
+      [/^health/i, 'health'], [/^natural resources/i, 'environment'], [/^intergovernmental/i, 'generaladmin'], [/\/ other public works$/i, null], [/^education/i, 'schools']
+    ]
+  },
+  // Department of Audit Local Government Dashboard: each county's spending by department.
+  WY: {
+    agency: 'Wyoming Department of Audit',
+    fyLabel: (fy) => `fiscal ${fy} (Jul ${fy - 1} – Jun ${fy})`,
+    title: (fy) => `Local Government Dashboard, fiscal ${fy}`,
+    what: 'Every Wyoming county reports its spending to the state Department of Audit, office by office. The state lists offices only; County Commons grouped them into areas by each office’s name.',
+    scope: 'all county funds, not separate boards',
+    spentOn: 'all its funds (the library, fair, airport and hospital boards are not included)',
+    note: 'Counties report these numbers themselves, and not all are audited. Building projects can make one year much bigger than the next. The “source” link opens the Department of Audit’s reports page, which links the dashboard spreadsheet.',
+    download: false, classify: true, groupByCat: true,
+    map: []
   }
 };
 
@@ -418,7 +447,7 @@ for (const [g, r] of Object.entries(D.counties)) {
   const fy = r.fy && Number(r.fy) !== Number(D.fy) ? Number(r.fy) : undefined; // a county that hasn't filed the latest year
   const title = S.titleFor ? S.titleFor(r) || undefined : undefined;
   const fy_label = S.countyLabel ? S.countyLabel(fy || Number(D.fy), r) : undefined;
-  out.counties[g] = { st, fy, fy_label, title, download: fy && r.download_url && S.download !== false ? r.download_url : undefined, total: sum, url: /^https:\/\//.test(r.url || '') ? r.url : D.source_page, lines, other: other && Object.keys(other).length ? other : undefined };
+  out.counties[g] = { st, fy, fy_label, title, download: fy && r.download_url && S.download !== false ? r.download_url : undefined, total: sum, url: /^https:\/\//.test(r.url || '') ? (lines.some(l => l.page) ? r.url.replace(/#.*$/, '') : r.url) : D.source_page, lines, other: other && Object.keys(other).length ? other : undefined };
   n++;
 }
 out.built = new Date().toISOString().slice(0, 10);
