@@ -140,6 +140,15 @@ app.use((req, res, next) => {
         res.send(nv.feedbackPage({ sent: safePath(b.page) || '/us' }));
       }));
     }
+    // For county officials and staff: how to turn each transparency box green.
+    const usOff = p.match(/^\/us\/([a-z]{2})\/([a-z0-9-]+)\/officials\/?$/);
+    if (usOff && req.method === 'GET') {
+      const nv = require('./views/national');
+      const c = nv.countyRec(usOff[1], usOff[2]);
+      if (!c) return res.status(404).send(gatePage('No county at that address.', '/us'));
+      traffic.note('__network__', req);
+      return res.send(nv.page({ title: `How to turn ${c.name}’s transparency boxes green · County Commons`, description: `For ${c.name} officials and staff: each transparency box not yet met, what County Commons found, and the simplest way to meet it.`, canonical: `https://countycommons.us/us/${c.st.toLowerCase()}/${c.slug}/officials`, body: require('./views/requests').officialsGuide(c, nv.stateName(c.st)) }));
+    }
     // The information petitions, and a chooser for anyone without a county page open.
     const usAskPick = p.match(/^\/us\/ask(?:\/([a-z0-9-]{2,60}))?\/?$/);
     if (usAskPick && req.method === 'GET') {
@@ -187,6 +196,7 @@ app.use((req, res, next) => {
           if (!spam.plainName(name)) return go(name ? 'junk' : 'name');
           if (!spam.plainName(town)) return go(town ? 'junk' : 'town');
           const email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(b.email || '').trim()) ? String(b.email).trim() : '';
+          if (!email) return go('email'); // we have to be able to ask the filer what came back
           require('./identity').register(participant, { name, city: town, email });
           const r = RQ.markFiled(c.geoid, camp.id, c.st, participant, String(b.filed_on || ''));
           if (r.error) return go(r.error);

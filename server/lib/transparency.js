@@ -62,6 +62,48 @@ const ITEMS = [
   ['realtime', 'Daily or real time', 'Payments are posted within a day or in real time, not months later.', 'speed', NYC],
 ];
 
+// How a county turns each box green — most with documents it already has.
+const HOW = {
+  proposed: 'Post the proposed budget on the county website when it goes to the governing body, with the hearing date.',
+  posted: 'Post the adopted budget on the county website each year.',
+  current: 'Post this year’s adopted budget as soon as it’s adopted.',
+  by_office: 'Post the full budget document the county already prints, with a section for each office.',
+  line_items: 'Include each office’s line items (salaries, supplies, contracts) in the posted budget.',
+  summary: 'Post a one- or two-page summary: the total, where the money comes from, the biggest areas, and what changed.',
+  history: 'Leave past budgets and annual reports online, and add each new one.',
+  searchable: 'Post the original PDF from the county’s software instead of a scan.',
+  open_to_tools: 'Make sure budget files download without a sign-in or bot check.',
+  open_data: 'Export the budget and the check register to a spreadsheet (Excel or CSV) and post it beside the PDF.',
+  free_reuse: 'Let anyone view and download without a sign-in or fee.',
+  in_year: 'Post the monthly report the governing body already receives.',
+  actual: 'Post the annual financial report each year.',
+  revenue: 'Show revenue by source (each tax, fee and grant) in the budget or annual report.',
+  audit: 'Post each audit or state review when it’s released, or link to it.',
+  debt: 'Post the debt schedule from the budget or annual report.',
+  pensions: 'Post the retirement-plan note from the annual report or audit.',
+  payments: 'Export the monthly check or warrant register from the accounting system and post it each month.',
+  cards: 'Post card statements or a transaction export each quarter.',
+  contracts: 'Post signed contracts, or a list of contracts with links, as they’re approved.',
+  pay: 'Post the salary ordinance or pay schedule.',
+  incentives: 'Post tax abatement and incentive agreements, and a yearly list of them.',
+  receipts: 'Attach the invoice to each posted payment, with personal details removed.',
+  meetings: 'Post agendas before meetings and minutes after, on the website.',
+  votes: 'Record each member’s vote in the minutes.',
+  video: 'Record meetings (a phone on a tripod works) and post the recordings.',
+  records_log: 'Use a records-request portal, or post a monthly log of requests and answers.',
+  disclosures: 'Scan and post elected officials’ financial disclosure filings each year.',
+  realtime: 'Post payments from the accounting system automatically each day.',
+};
+
+// The ask that matters most right now, by budget season.
+function timely(c, items) {
+  if (items.proposed && items.proposed.v === 'yes') return null;
+  const m = new Date().getMonth(), y = new Date().getFullYear();
+  if (c.st === 'AR' && m >= 9) return `Arkansas counties budget by calendar year, so ${c.name}’s ${y + 1} budget is set before January 1. Now is when the proposed budget matters.`;
+  if (c.st === 'TX' && m >= 6 && m <= 8) return `Most Texas counties start their fiscal year October 1, so next year’s budget is set in August or September. Now is when the proposed budget matters.`;
+  return null;
+}
+
 const MON = { jan: 0, feb: 1, mar: 2, apr: 3, may: 4, jun: 5, jul: 6, aug: 7, sep: 8, oct: 9, nov: 10, dec: 11 };
 // Is the fiscal year described by this label under way today? null = can't tell.
 function inProgress(label, fy) {
@@ -202,7 +244,7 @@ function block(c) {
   const row = ([k, label, what, , best]) => {
     const o = items[k], m = o && MARK[o.v];
     const ask = canAsk && (!o || o.v !== 'yes') ? A.askFor(k) : null;
-    return `<tr><td style="white-space:nowrap;vertical-align:top"><span aria-hidden="true" style="display:inline-block;width:1.4em;color:${m ? m[2] : 'var(--ink-soft)'}">${m ? m[0] : '–'}</span><b>${esc(label)}</b></td><td style="vertical-align:top">${m ? `<b style="color:${m[2]}">${m[1]}.</b> ${esc(o.note || '')}${link(o)}` : `<span class="soft">Not checked yet.</span>`}<br><span class="soft" style="font-size:12.5px">The bar: ${esc(what)}${best ? ` Who meets it: <a href="${esc(best.url)}" rel="noopener">${esc(best.text)}</a>.` : ''}</span>${ask ? (() => { const s = require('./requests').status(c.geoid, ask.id); return s ? `<br><span style="font-size:12.5px">${s.answered_at ? '✓ Records request answered ' + esc(s.answered_at) : s.overdue ? 'Records request filed ' + esc(s.filed_at) + ', no answer recorded by ' + esc(s.due) : 'Records request filed ' + esc(s.filed_at) + ', due about ' + esc(s.due)} · <a href="/us/${esc(c.st.toLowerCase())}/${esc(c.slug)}/ask/${esc(ask.id)}/request">status</a></span>` : ''; })() : ''}${ask ? `<br><a href="/us/${esc(c.st.toLowerCase())}/${esc(c.slug)}/ask/${esc(ask.id)}" style="font-size:13px;font-weight:600">Ask ${esc(c.name)} to post this — sign the petition →</a>` : ''}</td></tr>`;
+    return `<tr><td style="white-space:nowrap;vertical-align:top"><span aria-hidden="true" style="display:inline-block;width:1.4em;color:${m ? m[2] : 'var(--ink-soft)'}">${m ? m[0] : '–'}</span><b>${esc(label)}</b></td><td style="vertical-align:top">${m ? `<b style="color:${m[2]}">${m[1]}.</b> ${esc(o.note || '')}${link(o)}` : `<span class="soft">Not checked yet.</span>`}<br><span class="soft" style="font-size:12.5px">The bar: ${esc(what)}${best ? ` Who meets it: <a href="${esc(best.url)}" rel="noopener">${esc(best.text)}</a>.` : ''}</span>${ask ? (() => { const s = require('./requests').status(c.geoid, ask.id); return s ? `<br><span style="font-size:12.5px">${s.answered_at ? '✓ Records request answered ' + esc(s.answered_at) : s.overdue ? 'Records request filed ' + esc(s.filed_at) + ', no answer reported here yet' : 'Records request filed ' + esc(s.filed_at) + ', due about ' + esc(s.due)} · <a href="/us/${esc(c.st.toLowerCase())}/${esc(c.slug)}/ask/${esc(ask.id)}/request">status</a></span>` : ''; })() : ''}${ask ? `<br><a href="/us/${esc(c.st.toLowerCase())}/${esc(c.slug)}/ask/${esc(ask.id)}" style="font-size:13px;font-weight:600">Ask ${esc(c.name)} to post this — sign the petition →</a>` : ''}${!o || o.v !== 'yes' ? ` <a href="/us/feedback?kind=correction&from=${encodeURIComponent('/us/' + c.st.toLowerCase() + '/' + c.slug)}" class="soft" style="font-size:12px">Posted now? Show us</a>` : ''}</td></tr>`;
   };
   const rows = LEVELS.map(([lv, name, sub], i) => `<tr><td colspan="2" style="padding-top:${i ? 12 : 4}px"><b>${i + 1}. ${esc(name)}</b> <span class="soft" style="font-size:12.5px">— ${esc(sub)}</span></td></tr>${ITEMS.filter(x => x[3] === lv).map(row).join('')}`).join('');
   const summary = done
@@ -215,6 +257,8 @@ function block(c) {
 <p><b>${esc(summary)}</b> <span class="soft">A perfect score is all ${ITEMS.length}: every dollar traced to its receipt, and every meeting and vote on the record.</span></p>
 <div role="img" aria-label="${esc(summary)}" style="display:flex;gap:8px;max-width:520px;margin:6px 0 2px">${seg}</div>
 <div aria-hidden="true" class="soft" style="display:flex;gap:8px;max-width:520px;font-size:11px;margin-bottom:12px">${LEVELS.map(([lv, name]) => `<span style="flex:${ITEMS.filter(i => i[3] === lv).length};overflow:hidden;white-space:nowrap;text-overflow:ellipsis">${esc(name)}</span>`).join('')}</div>
+${(() => { const t = timely(c, items); const camp = t && require('./asks').askFor('proposed'); return t && camp && require('./asks').deliverable(c) ? `<div class="issue" style="display:block;border-left:3px solid var(--accent)"><b>Most timely right now:</b> ${esc(t)} <a href="/us/${esc(c.st.toLowerCase())}/${esc(c.slug)}/ask/${esc(camp.id)}">Ask ${esc(c.name)} to post it before the vote →</a></div>` : ''; })()}
+<p class="src" style="max-width:none">Work for ${esc(c.name)}? Most boxes turn green by posting documents the county already has. <a href="/us/${esc(c.st.toLowerCase())}/${esc(c.slug)}/officials">How to turn each box green →</a></p>
 <details><summary>See each item</summary>
 <div style="overflow-x:auto;max-width:100%"><table class="plain"><tbody>${rows}</tbody></table></div>
 </details>
@@ -223,4 +267,4 @@ ${state ? `<p style="margin-top:10px"><b>The state’s part:</b> ${sm ? `<span s
 </section>`;
 }
 
-module.exports = { get, block, ITEMS, LEVELS, inProgress };
+module.exports = { get, block, ITEMS, LEVELS, HOW, inProgress };

@@ -59,10 +59,10 @@ function statusBox(st, s, L, ctx) {
   if (!s) return `<div class="issue" style="display:block;border-left:3px solid var(--partial)"><b>Not filed yet.</b> <span class="src">One resident files this request; everyone else adds their support below, so the county gets one clear request, not hundreds of copies.</span></div>`;
   const parts = [`<b>Filed ${esc(nice(s.filed_at))}</b> by a resident.`];
   if (s.answered_at) parts.push(`<b style="color:var(--sourced)">Answered ${esc(nice(s.answered_at))}.</b> ${esc(s.answer || '')}${s.answer_url ? ` <a href="${esc(s.answer_url)}" rel="noopener">See the records →</a>` : ''}`);
-  else if (s.overdue) parts.push(`<b style="color:var(--dead)">No answer recorded by ${esc(nice(s.due))}</b>, ${L.deadline_days} ${st === 'AR' ? 'working' : 'business'} days after filing. The next steps are below.`);
+  else if (s.overdue) parts.push(`<b>No answer has been reported here yet.</b> The legal deadline was about ${esc(nice(s.due))}. The county answers the person who filed, so this doesn’t mean the county didn’t answer. If you filed it, tell us what came back with the box below; if nothing came, the next steps are below.`);
   else if (s.due) parts.push(`An answer, or a written date, is due by about <b>${esc(nice(s.due))}</b> (${L.deadline_days} ${st === 'AR' ? 'working' : 'business'} days, not counting weekends; holidays can add days).`);
   parts.push(`${s.supporters.toLocaleString('en-US')} other resident${s.supporters === 1 ? ' supports' : 's support'} it.`);
-  return `<div class="issue" style="display:block;border-left:3px solid ${s.answered_at ? 'var(--sourced)' : s.overdue ? 'var(--dead)' : 'var(--accent)'}">${parts.join(' ')}</div>`;
+  return `<div class="issue" style="display:block;border-left:3px solid ${s.answered_at ? 'var(--sourced)' : s.overdue ? 'var(--partial)' : 'var(--accent)'}">${parts.join(' ')}</div>`;
 }
 
 function requestPage(c, camp, ctx) {
@@ -70,7 +70,7 @@ function requestPage(c, camp, ctx) {
   const f = 'font-size:16px;padding:8px;width:100%;box-sizing:border-box';
   const btn = 'justify-self:start;font-family:var(--mono);font-size:16px;font-weight:600;padding:12px 22px;background:var(--ink);color:var(--paper);border:0';
   const office = rec.office && rec.office[c.st];
-  const msg = { filed: 'Thank you. The request is now shown as filed, and others will add their support instead of filing copies.', supported: 'Thank you — your support is counted.', date: 'Please give the date you sent it (within the last 60 days).', name: 'Please add your name.', town: 'Please add your town.', junk: 'That didn’t look like a real name.', already: 'Someone already filed this one — your support was added instead.' }[ctx.msg] || '';
+  const msg = { filed: 'Thank you. The request is now shown as filed, and others will add their support instead of filing copies.', supported: 'Thank you — your support is counted.', date: 'Please give the date you sent it (within the last 60 days).', email: 'Please add your email, so we can ask what the county sent back. It’s never shown.', name: 'Please add your name.', town: 'Please add your town.', junk: 'That didn’t look like a real name.', already: 'Someone already filed this one — your support was added instead.' }[ctx.msg] || '';
   return `
 <header class="page"><div class="eyebrow">County Commons · take it further</div>
 <h1>Public records request to ${esc(c.name)}</h1>
@@ -84,6 +84,7 @@ ${statusBox(c.st, s, L, ctx)}
 <h2>The request</h2>
 <p class="src" style="max-width:none">Use your browser’s Print command; only the letter prints. ${esc(L.send_note)}</p>
 ${PRINT_CSS}
+${s ? '<details><summary><b>Print your own copy</b> — usually not needed</summary><p class="src" style="max-width:none">The county already has this request, so a second copy usually adds work without adding anything; add your support above instead. Print your own if the first request went unanswered past the deadline, or if you want the records sent to you too.</p>' : ''}
 <div class="letter">
 <p>Date: <span class="blank"></span></p>
 <p>${esc(L.addressed_to)}${office ? `<br>Office of the ${esc(office)}` : ''}<br>${esc(c.name)}, ${esc(ctx.stateName)}</p>
@@ -95,6 +96,7 @@ ${L.residency_line ? `<p>${esc(L.residency_line)}</p>` : ''}
 <p>Thank you.</p>
 <p>Signature: <span class="blank"></span><br>Printed name: <span class="blank"></span><br>Mailing address: <span class="blank"></span><br>Email or phone: <span class="blank"></span></p>
 </div>
+${s ? '</details>' : ''}
 </section>
 <section id="report">
 ${s ? `${s.answered_at ? '' : `<h2>Support this request</h2><form method="post" action="${esc(ctx.base)}/support"><input type="hidden" name="x" value="1"><div style="position:absolute;left:-9999px" aria-hidden="true"><input name="website" tabindex="-1" autocomplete="off"></div><button type="submit" style="${btn}">Add my support</button></form><p class="src">Counted, not sent again. Your name is never shown.</p>`}` : `
@@ -103,7 +105,7 @@ ${s ? `${s.answered_at ? '' : `<h2>Support this request</h2><form method="post" 
   <label><b>The date you sent it</b><input name="filed_on" type="date" required style="${f}"></label>
   <label><b>Your name</b> <span class="soft">(never shown)</span><input name="name" required maxlength="60" autocomplete="name" style="${f}"></label>
   <label><b>Your town</b><input name="town" required maxlength="60" autocomplete="address-level2" style="${f}"></label>
-  <label>Email <span class="soft">(optional — so we can ask what the county sent back)</span><input name="email" type="email" maxlength="120" style="${f}"></label>
+  <label><b>Your email</b> <span class="soft">(never shown — so we can ask what the county sent back; the answer comes to you, not to us)</span><input name="email" type="email" required maxlength="120" style="${f}"></label>
   <div style="position:absolute;left:-9999px" aria-hidden="true"><input name="website" tabindex="-1" autocomplete="off"></div>
   <button type="submit" style="${btn}">I sent it</button>
 </form>`}
@@ -128,7 +130,7 @@ function takeFurther(c, camp, { abs } = {}) {
 <section id="further">
 <h2>Take it further</h2>
 <div class="issue" style="display:block"><b><a href="${esc(base)}/letter">Print your letter to ${esc(c.name)}’s elected officials →</a></b><p class="src" style="margin:4px 0 0">Addressed, with what County Commons found and the standard. Sign it and mail it or hand it in.</p></div>
-${rec ? `<div class="issue" style="display:block"><b><a href="${esc(base)}/request">${s ? 'See the public records request and add your support →' : 'Print the public records request →'}</a></b><p class="src" style="margin:4px 0 0">${s ? `Filed ${esc(nice(s.filed_at))}${s.answered_at ? ` · answered ${esc(nice(s.answered_at))}` : s.overdue ? ' · no answer recorded by the deadline' : ` · due about ${esc(nice(s.due))}`} · ${s.supporters} supporting.` : `One precise request under ${esc(R.law(c.st).law)}, filed once for ${esc(c.name)}. Be the one to send it.`}</p></div>` : ''}
+${rec ? `<div class="issue" style="display:block"><b><a href="${esc(base)}/request">${s ? 'See the public records request and add your support →' : 'Print the public records request →'}</a></b><p class="src" style="margin:4px 0 0">${s ? `Filed ${esc(nice(s.filed_at))}${s.answered_at ? ` · answered ${esc(nice(s.answered_at))}` : s.overdue ? ' · no answer reported here yet' : ` · due about ${esc(nice(s.due))}`} · ${s.supporters} supporting.` : `One precise request under ${esc(R.law(c.st).law)}, filed once for ${esc(c.name)}. Be the one to send it.`}</p></div>` : ''}
 </section>`;
 }
 
@@ -143,4 +145,25 @@ function forPetition(p, opts = {}) {
   return c ? takeFurther(c, camp, opts) : '';
 }
 
-module.exports = { officialsLetter, requestPage, takeFurther, forPetition };
+// For county officials and staff: each box not yet green, what we found,
+// and the simplest way to meet it — most with documents already on hand.
+function officialsGuide(c, stateName) {
+  const { items } = T.get(c);
+  const MARK = { yes: '✓ Yes', partly: '◐ Partly', no: '✗ No' };
+  const open = T.ITEMS.filter(([k]) => !items[k] || items[k].v !== 'yes');
+  const done = T.ITEMS.length - open.length;
+  const fb = `/us/feedback?kind=correction&from=${encodeURIComponent('/us/' + c.st.toLowerCase() + '/' + c.slug)}`;
+  const reqs = Object.keys(R.RECORDS).map(id => ({ id, s: R.status(c.geoid, id), camp: A.byId(id) })).filter(x => x.s && x.camp);
+  return `
+<header class="page"><div class="eyebrow">County Commons · for ${esc(c.name)} officials and staff</div>
+<h1>How to turn ${esc(c.name)}’s boxes green</h1>
+<div class="src" style="font-size:15px">${done} of ${T.ITEMS.length} transparency boxes are green for ${esc(c.name)}, ${esc(stateName)}. Most of the rest turn green by posting documents the county already keeps. When something is posted, tell us and we’ll check it and update the box. Nothing here is a grade of anyone’s work; it’s a list of what’s public.</div></header>
+<section>
+<p><a href="${esc(fb)}" style="font-weight:600">Tell us something is posted →</a> <span class="soft">(a link to the page or file is all we need)</span></p>
+<div style="overflow-x:auto;max-width:100%"><table class="plain"><thead><tr><th>Box</th><th>What we found</th><th>The simplest way to meet it</th></tr></thead><tbody>${open.map(([k, label, bar]) => { const o = items[k]; return `<tr><td style="vertical-align:top"><b>${esc(label)}</b></td><td style="vertical-align:top">${o ? `${MARK[o.v]}. ${esc(o.note || '')}${o.url ? ` <a href="${esc(o.url)}" rel="noopener" class="soft" style="font-size:12px">source</a>` : ''}` : '<span class="soft">Not checked yet.</span>'}</td><td style="vertical-align:top">${esc(T.HOW[k] || bar)}</td></tr>`; }).join('')}</tbody></table></div>
+</section>
+${reqs.length ? `<section><h2>Public records requests residents have reported</h2><ul>${reqs.map(x => `<li>${esc(x.camp.title.replace(/{county}/g, c.name))}: filed ${esc(nice(x.s.filed_at))}${x.s.answered_at ? `, answered ${esc(nice(x.s.answered_at))}` : ''}. <a href="/us/${esc(c.st.toLowerCase())}/${esc(c.slug)}/ask/${esc(x.id)}/request">The request →</a></li>`).join('')}</ul><p class="src" style="max-width:none">Posting these records online answers everyone at once, and turns the box green.</p></section>` : ''}
+<section><p class="src" style="max-width:none"><a href="/us/transparency">The standard, and a government that meets each bar →</a> · <a href="/us/${esc(c.st.toLowerCase())}/${esc(c.slug)}#transparency">${esc(c.name)}’s page →</a></p></section>`;
+}
+
+module.exports = { officialsLetter, requestPage, takeFurther, forPetition, officialsGuide };
