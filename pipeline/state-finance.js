@@ -410,6 +410,27 @@ const STATES = {
     note: 'Counties report these numbers themselves, and not all are audited. Building projects can make one year much bigger than the next. The “source” link opens the Department of Audit’s reports page, which links the dashboard spreadsheet.',
     download: false, classify: true, groupByCat: true,
     map: []
+  },
+  // Comptroller Local Government Warehouse: each county's Annual Financial Report, expenditures.
+  IL: {
+    agency: 'Illinois Comptroller',
+    fyLabel: (fy) => `fiscal ${fy}`,
+    title: (fy) => `Annual Financial Report (Local Government Warehouse), fiscal ${fy}`,
+    titleFor: (r) => r.name ? `${r.name} Annual Financial Report, expenditures` : null,
+    what: 'Every Illinois county files an Annual Financial Report with the state Comptroller in the same categories, so the numbers line up from county to county.',
+    scope: 'governmental funds and county-run businesses',
+    spentOn: 'its governmental funds and services it runs as businesses, like a county hospital (money held for others and separate boards are not counted)',
+    note: 'Counties report these numbers themselves, some on a cash basis. The Comptroller’s report prints a total for each kind of fund but no grand total, so this adds the general, special revenue, building project, debt and business funds; internal service, fiduciary (money held for others) and separate component units are left out. Depreciation is an accounting cost, not cash spent. The “source” link opens this county’s report on the Comptroller’s site.',
+    mapOn: 'both',
+    map: [
+      [/\/ hospital operations$/i, 'hospital'], [/^judiciary and legal/i, 'courts'], [/\/ financial administration$/i, 'treasurer'], [/^capital outlay/i, 'capital'],
+      [/^corrections/i, 'jail'], [/\/ police$/i, 'sheriff'], [/\/ streets and highways$|\/ other transportation/i, 'roads'], [/\/ health \(other than hospitals\)$/i, 'health'],
+      [/\/ central administration$|\/ other general government$/i, 'generaladmin'], [/^debt \//i, 'debt'], [/\/ other public safety$/i, 'justice'],
+      [/\/ welfare$|\/ other social services$/i, 'welfare'], [/\/ general administrative buildings$/i, 'buildings'], [/^depreciation/i, null],
+      [/^public utility company \//i, 'utilities'], [/\/ sewage$/i, 'utilities'], [/\/ other environment$/i, 'environment'], [/^other expenditures/i, null],
+      [/^housing/i, 'planning'], [/\/ parks$|\/ other culture/i, 'parks'], [/\/ airports$/i, 'utilities'], [/building inspection/i, 'planning'],
+      [/\/ solid waste/i, 'solidwaste'], [/\/ parking/i, 'planning'], [/\/ fire$/i, 'fire'], [/\/ cemeteries$/i, 'other']
+    ]
   }
 };
 
