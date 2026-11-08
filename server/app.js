@@ -140,6 +140,55 @@ app.use((req, res, next) => {
         res.send(nv.feedbackPage({ sent: safePath(b.page) || '/us' }));
       }));
     }
+    // The information petitions, and a chooser for anyone without a county page open.
+    const usAskPick = p.match(/^\/us\/ask(?:\/([a-z0-9-]{2,60}))?\/?$/);
+    if (usAskPick && req.method === 'GET') {
+      const nv = require('./views/national');
+      if (usAskPick[1] && req.query.st && req.query.county) {
+        const to = nv.matchCounty(String(req.query.st).slice(0, 2), String(req.query.county).slice(0, 60));
+        if (to) return res.redirect(to + '/ask/' + usAskPick[1]);
+        traffic.note('__network__', req);
+        const html = nv.askPage(usAskPick[1], { error: true }); if (html) return res.send(html);
+      }
+      traffic.note('__network__', req);
+      const html = nv.askPage(usAskPick[1] || null);
+      return html ? res.send(html) : res.status(404).send(gatePage('No petition at that address.', '/us'));
+    }
+    // "Ask for it": a petition asking this county to publish what its
+    // transparency meter found missing. The county's copy is created by the
+    // first real signature (POST), never by a page view.
+    const usAsk = p.match(/^\/us\/([a-z]{2})\/([a-z0-9-]+)\/ask\/([a-z0-9-]{2,60})(\/sign)?\/?$/);
+    if (usAsk) {
+      const nv = require('./views/national'); const A = require('./lib/asks');
+      const c = nv.countyRec(usAsk[1], usAsk[2]); const camp = A.byId(usAsk[3]);
+      if (!c || !camp || !A.deliverable(c)) return res.status(404).send(gatePage('No petition at that address.', '/us'));
+      const countyPath = `/us/${c.st.toLowerCase()}/${c.slug}`, here = `${countyPath}/ask/${camp.id}`, S = nv.stateName(c.st);
+      const asShown = (pet) => Object.assign({}, pet, { tenant: 'us:' + c.geoid }); // shown on the national page whatever site it lives on
+      if (!usAsk[4] && req.method === 'GET') {
+        traffic.note('__network__', req);
+        const have = A.existing(c, camp.id);
+        if (have && req.query.signed !== '1') return res.redirect(/^us:/.test(String(have.tenant)) ? A.urlOf(have) + '?from=' + encodeURIComponent(countyPath) : A.urlOf(have));
+        const pet = have ? priorities.getPublic(have.id) : Object.assign({ support: 0 }, A.draft(c, camp, S));
+        if (!pet) return res.status(404).send(gatePage('No petition at that address.', '/us'));
+        return res.send(nv.usPetitionPage(asShown(pet), { from: countyPath, mine: !!have && req.query.signed === '1', signed: req.query.signed === '1', error: String(req.query.error || '').slice(0, 20), action: here + '/sign', link: 'https://countycommons.us' + here }));
+      }
+      if (usAsk[4] && req.method === 'POST') return writeLimit(req, res, () => express.urlencoded({ extended: false })(req, res, () => {
+        const b = req.body || {};
+        const back = (q) => res.redirect(here + '?x=1' + q + '#sign');
+        if (b.website) return back('');
+        const name = String(b.name || '').trim(), town = String(b.town || '').trim();
+        if (!spam.plainName(name)) return back('&error=' + (name ? 'junk' : 'name'));
+        if (!spam.plainName(town)) return back('&error=' + (town ? 'junk' : 'town'));
+        const pet = A.ensure(c, camp, S);
+        if (!pet) return back('&error=junk');
+        const email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(b.email || '').trim()) ? String(b.email).trim() : '';
+        const participant = ensureParticipant(req, res);
+        require('./identity').register(participant, { name, city: town, email });
+        priorities.support(participant, pet.id, '', { town, deliver: b.deliver === '1', site: countyPath });
+        res.redirect(here + '?signed=1#share');
+      }));
+      return res.status(405).send('Method not allowed');
+    }
     // How a county compares: beside counties its size, its neighbors, its state
     // or the nation — grants, Census categories and every budget line.
     const usCmp = p.match(/^\/us\/([a-z]{2})\/([a-z0-9-]+)\/compare\/?$/);

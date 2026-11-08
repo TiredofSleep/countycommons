@@ -198,9 +198,11 @@ function block(c) {
   const cell = (k, label) => { const m = items[k] && MARK[items[k].v]; return `<span title="${esc(label)}" style="flex:1;height:12px;${m ? `background:${m[2]};opacity:${items[k].v === 'partly' ? 0.55 : items[k].v === 'no' ? 0.25 : 1}` : 'border:1px dashed var(--rule)'}"></span>`; };
   const seg = LEVELS.map(([lv, name]) => `<span style="display:flex;gap:2px;flex:${ITEMS.filter(i => i[3] === lv).length}" title="${esc(name)}">${ITEMS.filter(i => i[3] === lv).map(([k, label]) => cell(k, label)).join('')}</span>`).join('');
   const link = (o) => o.url ? ` <a href="${esc(o.page ? encOnce(o.url).split('#')[0] + '#page=' + o.page : o.url)}" rel="noopener" class="soft" style="font-size:12px">source</a>` : '';
+  const A = require('./asks'); const canAsk = A.deliverable(c);
   const row = ([k, label, what, , best]) => {
     const o = items[k], m = o && MARK[o.v];
-    return `<tr><td style="white-space:nowrap;vertical-align:top"><span aria-hidden="true" style="display:inline-block;width:1.4em;color:${m ? m[2] : 'var(--ink-soft)'}">${m ? m[0] : '–'}</span><b>${esc(label)}</b></td><td style="vertical-align:top">${m ? `<b style="color:${m[2]}">${m[1]}.</b> ${esc(o.note || '')}${link(o)}` : `<span class="soft">Not checked yet.</span>`}<br><span class="soft" style="font-size:12.5px">The bar: ${esc(what)}${best ? ` Who meets it: <a href="${esc(best.url)}" rel="noopener">${esc(best.text)}</a>.` : ''}</span></td></tr>`;
+    const ask = canAsk && (!o || o.v !== 'yes') ? A.askFor(k) : null;
+    return `<tr><td style="white-space:nowrap;vertical-align:top"><span aria-hidden="true" style="display:inline-block;width:1.4em;color:${m ? m[2] : 'var(--ink-soft)'}">${m ? m[0] : '–'}</span><b>${esc(label)}</b></td><td style="vertical-align:top">${m ? `<b style="color:${m[2]}">${m[1]}.</b> ${esc(o.note || '')}${link(o)}` : `<span class="soft">Not checked yet.</span>`}<br><span class="soft" style="font-size:12.5px">The bar: ${esc(what)}${best ? ` Who meets it: <a href="${esc(best.url)}" rel="noopener">${esc(best.text)}</a>.` : ''}</span>${ask ? `<br><a href="/us/${esc(c.st.toLowerCase())}/${esc(c.slug)}/ask/${esc(ask.id)}" style="font-size:13px;font-weight:600">Ask ${esc(c.name)} to post this — sign the petition →</a>` : ''}</td></tr>`;
   };
   const rows = LEVELS.map(([lv, name, sub], i) => `<tr><td colspan="2" style="padding-top:${i ? 12 : 4}px"><b>${i + 1}. ${esc(name)}</b> <span class="soft" style="font-size:12.5px">— ${esc(sub)}</span></td></tr>${ITEMS.filter(x => x[3] === lv).map(row).join('')}`).join('');
   const summary = done

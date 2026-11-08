@@ -12,6 +12,10 @@
           "url": "https://www.uspirg.org/resources/following-the-money/",
           "label": "U.S. PIRG, Following the Money (state and local spending transparency)"
         }
+      ],
+      "meter": [
+        "payments",
+        "realtime"
       ]
     },
     {
@@ -68,7 +72,11 @@
       "level": "county",
       "title": "Post meeting agendas a week ahead, and video or minutes of every meeting, online",
       "why": "Decisions about {county}'s money are made in public meetings, but working people can't always be there. We ask that every agenda be posted online at least a week before the meeting, with its supporting documents, and that video or full minutes of every meeting be posted afterward. If you can't attend, you should still be able to see what was decided and why.",
-      "src": []
+      "src": [],
+      "meter": [
+        "meetings",
+        "video"
+      ]
     },
     {
       "id": "state-open-checkbook",
@@ -373,6 +381,271 @@
           "label": "GSA SmartPay statistics"
         }
       ]
+    },
+    {
+      "id": "budget-online",
+      "meter": [
+        "posted",
+        "current",
+        "by_office",
+        "line_items"
+      ],
+      "title": "Post the full county budget online every year, office by office and line by line",
+      "why": "{county}’s budget decides how its tax money is spent. We ask {county} to post its adopted budget online every year as searchable text, showing each office and what its money buys — salaries, supplies, contracts — so anyone can read it without filing a request.",
+      "src": [
+        {
+          "url": "https://internationalbudget.org/open-budget-survey",
+          "label": "International Budget Partnership, Open Budget Survey"
+        },
+        {
+          "url": "https://countycommons.us/us/transparency",
+          "label": "County Commons transparency meter: the standard"
+        }
+      ],
+      "level": "county"
+    },
+    {
+      "id": "proposed-budget-first",
+      "meter": [
+        "proposed"
+      ],
+      "title": "Post the proposed budget online at least two weeks before the vote",
+      "why": "People can only weigh in on a budget they can see. The Open Budget Survey counts publishing the proposed budget before lawmakers vote as a basic part of budget openness. We ask {county} to post its proposed budget online at least two weeks before the vote, with the date and place of the public hearing.",
+      "src": [
+        {
+          "url": "https://internationalbudget.org/open-budget-survey",
+          "label": "International Budget Partnership, Open Budget Survey"
+        },
+        {
+          "url": "https://countycommons.us/us/transparency",
+          "label": "County Commons transparency meter: the standard"
+        }
+      ],
+      "level": "county"
+    },
+    {
+      "id": "citizens-budget",
+      "meter": [
+        "summary"
+      ],
+      "title": "Publish a short, plain-language guide to the county budget each year",
+      "why": "A budget book can run hundreds of pages. The Open Budget Survey counts a “citizens budget” — a short version in everyday words — as one of eight key budget documents. We ask {county} to publish one each year: where the money comes from, where it goes, and what changed.",
+      "src": [
+        {
+          "url": "https://internationalbudget.org/open-budget-survey",
+          "label": "International Budget Partnership, Open Budget Survey"
+        },
+        {
+          "url": "https://countycommons.us/us/transparency",
+          "label": "County Commons transparency meter: the standard"
+        }
+      ],
+      "level": "county"
+    },
+    {
+      "id": "annual-report-online",
+      "meter": [
+        "history",
+        "actual",
+        "revenue",
+        "audit",
+        "debt",
+        "pensions"
+      ],
+      "title": "Post the annual financial report and audit online, and keep five years up",
+      "why": "A budget is the plan; the annual financial report and audit show what really happened — every source of money, what was spent, what the county owes and what it has promised retirees. We ask {county} to post its annual financial report and audit online each year and keep at least five years posted. The Texas Comptroller’s Transparency Stars program asks for five years of trends.",
+      "src": [
+        {
+          "url": "https://comptroller.texas.gov/transparency/local/stars/",
+          "label": "Texas Comptroller, Transparency Stars"
+        },
+        {
+          "url": "https://countycommons.us/us/transparency",
+          "label": "County Commons transparency meter: the standard"
+        }
+      ],
+      "level": "county"
+    },
+    {
+      "id": "monthly-budget-reports",
+      "meter": [
+        "in_year"
+      ],
+      "title": "Post a monthly report of spending so far compared with the budget",
+      "why": "Most county governing bodies already see a monthly report of what has been spent against the budget. The Open Budget Survey counts reports during the year as a key budget document. We ask {county} to post that report online every month, so residents can see the same numbers.",
+      "src": [
+        {
+          "url": "https://internationalbudget.org/open-budget-survey",
+          "label": "International Budget Partnership, Open Budget Survey"
+        },
+        {
+          "url": "https://countycommons.us/us/transparency",
+          "label": "County Commons transparency meter: the standard"
+        }
+      ],
+      "level": "county"
+    },
+    {
+      "id": "open-budget-data",
+      "meter": [
+        "searchable",
+        "open_to_tools",
+        "open_data",
+        "free_reuse"
+      ],
+      "title": "Post budget and spending numbers as spreadsheets anyone can download",
+      "why": "A scanned page can be read but not searched, added up or compared. Checkbook NYC offers New York City’s budget, spending, contracts and payroll as downloadable data. We ask {county} to post its budget and spending numbers as spreadsheets or a data feed, free to download with no sign-in.",
+      "src": [
+        {
+          "url": "https://www.checkbooknyc.com",
+          "label": "Checkbook NYC, New York City Comptroller"
+        },
+        {
+          "url": "https://countycommons.us/us/transparency",
+          "label": "County Commons transparency meter: the standard"
+        }
+      ],
+      "level": "county"
+    },
+    {
+      "id": "card-spending",
+      "meter": [
+        "cards"
+      ],
+      "title": "Post county credit-card and purchasing-card spending, item by item, every quarter",
+      "why": "County credit and purchasing cards are handy, and they’re public money. England’s councils must post their purchasing-card transactions at least every three months under their Transparency Code. We ask {county} to post every card purchase — date, merchant, amount and office — every quarter.",
+      "src": [
+        {
+          "url": "https://www.gov.uk/government/publications/local-government-transparency-code-2015/local-government-transparency-code-2015",
+          "label": "Local Government Transparency Code 2015 (England)"
+        },
+        {
+          "url": "https://countycommons.us/us/transparency",
+          "label": "County Commons transparency meter: the standard"
+        }
+      ],
+      "level": "county"
+    },
+    {
+      "id": "post-contracts",
+      "meter": [
+        "contracts"
+      ],
+      "title": "Post every county contract online, with the company, the amount and the contract itself",
+      "why": "Contracts are where much of the county’s money goes. England’s councils must post every contract and tender over £5,000. We ask {county} to post every contract award online — the company, the amount, what it buys — and the signed contract itself.",
+      "src": [
+        {
+          "url": "https://www.gov.uk/government/publications/local-government-transparency-code-2015/local-government-transparency-code-2015",
+          "label": "Local Government Transparency Code 2015 (England)"
+        },
+        {
+          "url": "https://countycommons.us/us/transparency",
+          "label": "County Commons transparency meter: the standard"
+        }
+      ],
+      "level": "county"
+    },
+    {
+      "id": "pay-by-job",
+      "meter": [
+        "pay"
+      ],
+      "title": "Post what every county job pays",
+      "why": "Pay is the biggest part of most county budgets. We ask {county} to post the pay or pay range for every job title each year, so residents can see what the county pays for the work it does.",
+      "src": [
+        {
+          "url": "https://www.checkbooknyc.com",
+          "label": "Checkbook NYC, New York City Comptroller"
+        },
+        {
+          "url": "https://countycommons.us/us/transparency",
+          "label": "County Commons transparency meter: the standard"
+        }
+      ],
+      "level": "county"
+    },
+    {
+      "id": "tax-deals",
+      "meter": [
+        "incentives"
+      ],
+      "title": "Post every tax break and economic development deal: who got it, how much, and what they promised",
+      "why": "When a county gives a tax break or an incentive, it gives up money it would otherwise collect. The Texas Comptroller’s Transparency Stars program asks local governments to post their economic development deals. We ask {county} to post every tax abatement and incentive agreement — the company, the value, and the jobs or investment promised — and whether the promises were kept.",
+      "src": [
+        {
+          "url": "https://comptroller.texas.gov/transparency/local/stars/",
+          "label": "Texas Comptroller, Transparency Stars"
+        },
+        {
+          "url": "https://countycommons.us/us/transparency",
+          "label": "County Commons transparency meter: the standard"
+        }
+      ],
+      "level": "county"
+    },
+    {
+      "id": "receipts-online",
+      "meter": [
+        "receipts"
+      ],
+      "title": "Post the invoice behind every county payment",
+      "why": "A payment list says who was paid. The invoice says what for. County Commons hasn’t found any government that posts the invoice behind every payment yet. We ask {county} to be among the first: post the invoice or receipt with each payment, with personal details removed.",
+      "src": [
+        {
+          "url": "https://countycommons.us/us/transparency",
+          "label": "County Commons transparency meter: the standard"
+        }
+      ],
+      "level": "county"
+    },
+    {
+      "id": "record-every-vote",
+      "meter": [
+        "votes"
+      ],
+      "title": "Record and post how each member votes on every motion",
+      "why": "“The motion carried” doesn’t tell residents how their own representative voted. We ask {county}’s governing body to record each member’s vote on every motion in its minutes and post them online.",
+      "src": [
+        {
+          "url": "https://countycommons.us/us/transparency",
+          "label": "County Commons transparency meter: the standard"
+        }
+      ],
+      "level": "county"
+    },
+    {
+      "id": "records-request-log",
+      "meter": [
+        "records_log"
+      ],
+      "title": "Post a public log of records requests and how each was answered",
+      "why": "Records requests show what residents want to know, and a public log lets others find what was already released. Garland County, Arkansas posts every request and its status on a public portal. We ask {county} to post a log of every public records request — the date, what was asked, and how and when it was answered — with requesters’ personal details removed.",
+      "src": [
+        {
+          "url": "https://garlandcountyar.nextrequest.com/requests",
+          "label": "Garland County, Arkansas public records portal"
+        },
+        {
+          "url": "https://countycommons.us/us/transparency",
+          "label": "County Commons transparency meter: the standard"
+        }
+      ],
+      "level": "county"
+    },
+    {
+      "id": "officials-filings-online",
+      "meter": [
+        "disclosures"
+      ],
+      "title": "Post every elected county official’s required financial disclosure filing online",
+      "why": "Elected officials already file financial disclosure forms by law; many sit on paper in an office. We ask {county} to post every elected county official’s required filing online each year, for every office alike, so anyone can read them without a trip to the courthouse.",
+      "src": [
+        {
+          "url": "https://countycommons.us/us/transparency",
+          "label": "County Commons transparency meter: the standard"
+        }
+      ],
+      "level": "county"
     }
   ]
 }
