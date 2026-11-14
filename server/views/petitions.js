@@ -80,9 +80,17 @@ function sourcesOf(p) {
   const c = (CAMP.d.campaigns || []).find(x => x.id === p.campaign);
   return (c && c.src) || [];
 }
+// Governments that already do what a petition asks (campaign `best`), each from an official source.
+function bestOf(p) {
+  if (!p.campaign) return [];
+  sourcesOf({ campaign: p.campaign }); // refreshes the campaigns cache
+  const c = ((CAMP.d && CAMP.d.campaigns) || []).find(x => x.id === p.campaign);
+  return (c && c.best) || [];
+}
 function sourcesLine(p) {
-  const s = sourcesOf(p);
-  return s.length ? `<p class="src" style="max-width:none">Sources for the facts above: ${s.map(x => `<a href="${esc(x.url)}" rel="noopener">${esc(x.label || x.url)}</a>`).join(' · ')}</p>` : '';
+  const s = sourcesOf(p), b = bestOf(p);
+  return (s.length ? `<p class="src" style="max-width:none">Sources for the facts above: ${s.map(x => `<a href="${esc(x.url)}" rel="noopener">${esc(x.label || x.url)}</a>`).join(' · ')}</p>` : '')
+    + (b.length ? `<div class="issue" style="display:block;border-left:3px solid var(--sourced)"><b>Who already does it</b><ul style="margin:6px 0 0">${b.map(x => `<li><b>${esc(x.name)}:</b> ${esc(x.rule)} <a href="${esc(x.url)}" rel="noopener" class="soft" style="font-size:12.5px">${esc(x.label || 'source')}</a></li>`).join('')}</ul></div>` : '');
 }
 
 const signers = (n) => `${n.toLocaleString('en-US')} ${n === 1 ? 'signature' : 'signatures'}`;

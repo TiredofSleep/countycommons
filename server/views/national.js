@@ -458,7 +458,7 @@ function askPage(campId, { error } = {}) {
 <header class="page"><div class="eyebrow">County Commons · ask your county</div>
 <h1>${esc(gen(camp.title))}</h1>
 <div class="src" style="font-size:15px">A petition to your county’s governing body, started by ${esc(C.started_by)}. Each county has its own copy, counted and delivered to its own officials.</div></header>
-<section><h2>Why it matters</h2><p>${esc(gen(camp.why))}</p>${require('./petitions').sourcesLine({ src: camp.src })}
+<section><h2>Why it matters</h2><p>${esc(gen(camp.why))}</p>${require('./petitions').sourcesLine({ src: camp.src, campaign: camp.id })}
 ${camp.meter ? `<p class="src" style="max-width:none">Transparency meter items this covers: ${esc(items(camp))}. <a href="/us/transparency">What earns each box →</a></p>` : ''}</section>
 <section id="sign"><h2>Find your county’s petition</h2>
 ${error ? `<p class="src" style="color:var(--dead)">We couldn’t find that county in that state. Check the spelling, like “Pulaski County”.</p>` : ''}
