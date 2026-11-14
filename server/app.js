@@ -159,6 +159,8 @@ app.use((req, res, next) => {
       return require('qrcode').toString(link + '?via=flyer#transparency', { type: 'svg', margin: 1, errorCorrectionLevel: 'M' })
         .then(qr => res.send(require('./views/requests').meterFlyer(c, nv.stateName(c.st), qr, link)), next);
     }
+    // Common ground: the asks people of every party can sign, counted nationally.
+    if (/^\/us\/common-ground\/?$/.test(p) && req.method === 'GET') { traffic.note('__network__', req); return res.send(require('./lib/common').page(require('./views/national'))); }
     // The tour: a real county's page, stop by stop (Clark by default).
     if (/^\/us\/tour\/?$/.test(p) && req.method === 'GET') {
       const nv = require('./views/national');
@@ -447,6 +449,7 @@ function gatePage(msg, next, q) {
   ${msg || q ? '' : require('./views/hero').heroFilm()}
   ${finder}
   <p style="margin:18px 0 4px"><a href="/us/tour" style="display:inline-block;font-family:var(--mono);font-size:14px;font-weight:600;padding:9px 16px;border:1.5px solid var(--ink);background:var(--ink);color:var(--paper);text-decoration:none">▶ Take the tour — see how it works</a></p>
+  ${require('./views/hero').commonStrip()}
   <h2 style="margin:26px 0 4px;font-size:21px">What you can do here</h2>
   ${require('./views/hero').doCards()}
   <details style="margin:24px 0 0"><summary style="cursor:pointer;font-weight:600;font-size:16px">Full County Commons sites <span class="sub">— ${directory.featured().length} places with their budget traced line by line</span></summary>
@@ -654,7 +657,8 @@ app.get('/', (req, res) => {
     registeredFields: participant ? require('./identity').fieldsOf(participant) : [],
     justRegistered: req.query.registered === '1',
     announceChecked: !!(participant && open.length && require('./signatures').mySignature(participant, open[0].id)),
-    petitions: require('./priorities').listByLevel({ tenant: req.tenantKey, state: data.county.state, level: 'county' }).slice(0, 3)
+    petitions: require('./priorities').listByLevel({ tenant: req.tenantKey, state: data.county.state, level: 'county' }).slice(0, 3),
+    common: require('./lib/common').blockForSite(req.tenantKey)
   }));
 });
 const places = require('./lib/places');

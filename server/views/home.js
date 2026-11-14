@@ -103,6 +103,7 @@ function homePage(data, opts = {}) {
   </div>
 </header>
 ${petitionStrip(data, opts.petitions || [])}
+${opts.common || ''}
 
 <section style="margin-top:8px">
 <h2 style="margin-top:0">See it in two minutes <span class="sub">— what this site lets you do</span></h2>

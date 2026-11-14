@@ -26,13 +26,13 @@ function officialsTo(c) {
 // What the meter found, as letter lines.
 function findings(c, camp) {
   const it = T.get(c).items;
-  return camp.meter.map(k => { const def = T.ITEMS.find(x => x[0] === k); if (!def) return ''; const o = it[k];
+  return (camp.meter || []).map(k => { const def = T.ITEMS.find(x => x[0] === k); if (!def) return ''; const o = it[k];
     return `<li><b>${esc(def[1])}:</b> ${o ? `${{ yes: 'Yes', partly: 'Partly', no: 'No' }[o.v]}. ${esc(o.note || '')}` : 'Not checked yet.'}</li>`; }).join('');
 }
 
 function officialsLetter(c, camp, ctx) {
   const d = A.draft(c, camp, ctx.stateName);
-  const best = T.ITEMS.find(x => x[0] === camp.meter[0]);
+  const best = camp.meter ? T.ITEMS.find(x => x[0] === camp.meter[0]) : null;
   return `
 <header class="page"><div class="eyebrow">County Commons · take it further</div>
 <h1>Your letter to ${esc(c.name)}’s elected officials</h1>
@@ -44,8 +44,8 @@ function officialsLetter(c, camp, ctx) {
 <p><b>Re: ${esc(d.title)}</b></p>
 <p>I live in <span class="blank"></span>, in ${esc(c.name)}, and I ask you to ${esc(lc1(d.title.replace(/\.$/, '')))}.</p>
 <p>${esc(d.why)}</p>
-<p>The County Commons transparency meter found this about ${esc(c.name)}:</p>
-<ul>${findings(c, camp)}</ul>
+${camp.meter ? `<p>The County Commons transparency meter found this about ${esc(c.name)}:</p>
+<ul>${findings(c, camp)}</ul>` : ''}
 ${best ? `<p>The standard: ${esc(best[2])}${best[4] ? ` Who already does it: ${esc(best[4].text)}.` : ''}</p>` : ''}
 <p>Please put this on an agenda, adopt a policy that makes it routine, and let me know your answer. The petition is at ${esc(ctx.petitionUrl)}.</p>
 <p>Sincerely,</p>

@@ -22,7 +22,7 @@ function campaigns() {
   return CAMP.d;
 }
 const askFor = (item) => campaigns().campaigns.find(c => c.level === 'county' && !c.hold && (c.meter || []).includes(item)) || null;
-const byId = (id) => campaigns().campaigns.find(c => c.id === id && c.level === 'county' && !c.hold && c.meter) || null;
+const byId = (id) => campaigns().campaigns.find(c => c.id === id && c.level === 'county' && !c.hold && (c.meter || c.common)) || null;
 
 // Does this county have a county government to deliver a petition to?
 function deliverable(c) {
@@ -57,4 +57,4 @@ function ensure(c, camp, stateName) {
   return r.posted ? P.get(d.id) : (P.get(d.id) || null);
 }
 
-module.exports = { askFor, byId, existing, ensure, draft, urlOf, addressee, deliverable, tenantOf };
+module.exports = { campaigns, askFor, byId, existing, ensure, draft, urlOf, addressee, deliverable, tenantOf };

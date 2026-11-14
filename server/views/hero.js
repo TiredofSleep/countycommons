@@ -134,3 +134,16 @@ ${card('/us/petitions', 'Petitions', 'Started by residents, delivered to officia
 }
 
 module.exports = { heroFilm, doCards };
+
+// Common ground, on the front door: the asks people of every party can sign.
+function commonStrip() {
+  let total = 0, names = [];
+  try { const P = require('../priorities'); const T = require('../lib/common').THEMES; names = T.map(t => t.name); for (const t of T) total += P.campaignRollup(t.camp).total; } catch (e) { /* none */ }
+  return `<div style="border:2px solid var(--ink);background:var(--card);padding:14px 16px;margin:24px 0 0">
+  <div class="eyebrow" style="margin:0 0 4px">Common ground</div>
+  <h2 style="margin:0 0 6px;font-size:22px;line-height:1.2">What we can agree on, county by county</h2>
+  <p style="margin:0 0 8px;font-size:15.5px">${names.map(n => `<b>${esc(n)}</b>`).join(' · ')}. Four petitions people of every party can sign, each counted in your own county and delivered to your own officials. ${total ? `<b>${total.toLocaleString('en-US')}</b> signatures so far.` : ''}</p>
+  <a href="/us/common-ground" style="display:inline-block;font-family:var(--mono);font-size:15px;font-weight:600;padding:10px 18px;background:var(--ink);color:var(--paper);text-decoration:none">Add your voice →</a>
+</div>`;
+}
+module.exports.commonStrip = commonStrip;

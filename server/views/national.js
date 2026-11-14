@@ -108,6 +108,7 @@ function countyPage(st, slug) {
 
 ${c.site ? `<section><div class="issue" style="display:block;border-left:3px solid var(--accent)"><b>${esc(c.name)} has a full County Commons site.</b> <span class="src">The budget line by line, your tax bill explained, audits, local offices and elections: <a href="https://${esc(c.site)}/">${esc(c.site)} →</a></span></div></section>` : ''}
 ${RK.keyFacts(c, N)}
+${require('../lib/common').block(c)}
 ${petitionsBlock(S.name, `/us/${st.toLowerCase()}/${slug}`, c.name, c.geoid, c.site)}
 ${require('../lib/state-portals').countyBlock(c)}
 ${require('../lib/county-trails').block(c)}
@@ -329,7 +330,7 @@ function usPage() {
 
 function sitemapUrls() {
   const N = nat();
-  const out = ['https://countycommons.us/us', 'https://countycommons.us/us/what-works', 'https://countycommons.us/us/transparency', 'https://countycommons.us/us/tour', 'https://countycommons.us/us/copy', 'https://countycommons.us/us/license'];
+  const out = ['https://countycommons.us/us', 'https://countycommons.us/us/what-works', 'https://countycommons.us/us/transparency', 'https://countycommons.us/us/tour', 'https://countycommons.us/us/common-ground', 'https://countycommons.us/us/copy', 'https://countycommons.us/us/license'];
   for (const st of Object.keys(N.byState)) {
     out.push(`https://countycommons.us/us/${st.toLowerCase()}`);
     for (const c of N.byState[st]) out.push(`https://countycommons.us/us/${st.toLowerCase()}/${c.slug}`, `https://countycommons.us/us/${st.toLowerCase()}/${c.slug}/compare`);
@@ -377,6 +378,7 @@ ${(() => { const rows = B.requestRows(); return rows.length ? `<div style="overf
 
 // "/us/ar/clark" -> { name: "Clark County, Arkansas", url: "/us/ar/clark" }
 function countyByGeoid(geoid) { const N = nat(); if (!N._byGeo) { N._byGeo = {}; for (const c of N.counties) N._byGeo[c.geoid] = c; } const c = N._byGeo[geoid]; return c ? { name: c.name, state: (N.states[c.st] || {}).name || c.st, path: `/us/${c.st.toLowerCase()}/${c.slug}`, site: c.site || null } : null; }
+function countyBySite(host) { return nat().counties.find(x => x.site === host) || null; }
 function countyRec(st, slug) { const N = nat(); return (N.byState[String(st).toUpperCase()] || []).find(x => x.slug === slug) || null; }
 function stateName(st) { const N = nat(); return (N.states[String(st).toUpperCase()] || {}).name || st; }
 function countyName(st, slug) { const N = nat(); const c = (N.byState[String(st).toUpperCase()] || []).find(x => x.slug === slug); return c ? `${c.name}, ${(N.states[c.st] || {}).name || c.st}` : null; }
@@ -440,7 +442,7 @@ function matchCounty(st, typed) {
 function askPage(campId, { error } = {}) {
   const A = require('../lib/asks'); const T = require('../lib/transparency');
   const C = campaignsFile(); const N = nat();
-  const asks = C.campaigns.filter(c => c.level === 'county' && !c.hold && c.meter);
+  const asks = C.campaigns.filter(c => c.level === 'county' && !c.hold && (c.meter || c.common));
   const camp = campId ? asks.find(c => c.id === campId) : null;
   if (campId && !camp) return null;
   const gen = (t) => String(t).replace(/\{county\}’s/g, 'your county’s').replace(/\{county\}/g, 'your county');
@@ -451,13 +453,13 @@ function askPage(campId, { error } = {}) {
   <label><b>Your county</b><input name="county" required maxlength="60" placeholder="e.g. Pulaski County" style="${f}"></label>
   <button type="submit" style="justify-self:start;font-family:var(--mono);font-size:16px;font-weight:600;padding:12px 22px;background:var(--ink);color:var(--paper);border:0">Go to my county’s petition</button>
 </form>`;
-  const items = (c) => c.meter.map(k => (T.ITEMS.find(x => x[0] === k) || [])[1]).filter(Boolean).join(', ');
+  const items = (c) => (c.meter || []).map(k => (T.ITEMS.find(x => x[0] === k) || [])[1]).filter(Boolean).join(', ');
   const body = camp ? `
 <header class="page"><div class="eyebrow">County Commons · ask your county</div>
 <h1>${esc(gen(camp.title))}</h1>
 <div class="src" style="font-size:15px">A petition to your county’s governing body, started by ${esc(C.started_by)}. Each county has its own copy, counted and delivered to its own officials.</div></header>
 <section><h2>Why it matters</h2><p>${esc(gen(camp.why))}</p>${require('./petitions').sourcesLine({ src: camp.src })}
-<p class="src" style="max-width:none">Transparency meter items this covers: ${esc(items(camp))}. <a href="/us/transparency">What earns each box →</a></p></section>
+${camp.meter ? `<p class="src" style="max-width:none">Transparency meter items this covers: ${esc(items(camp))}. <a href="/us/transparency">What earns each box →</a></p>` : ''}</section>
 <section id="sign"><h2>Find your county’s petition</h2>
 ${error ? `<p class="src" style="color:var(--dead)">We couldn’t find that county in that state. Check the spelling, like “Pulaski County”.</p>` : ''}
 ${chooser(camp.id)}</section>
@@ -465,7 +467,7 @@ ${chooser(camp.id)}</section>
 <header class="page"><div class="eyebrow">County Commons · ask your county</div>
 <h1>Ask your county to publish it</h1>
 <div class="src" style="font-size:15px">Every county page has a transparency meter. Each box a county doesn’t meet yet is a petition here: sign it for your county, and at the goal it’s delivered to your county’s governing body, with the answer posted. When the county publishes it, the box turns green. After you sign, you can print a letter to your county’s elected officials and, in ${(() => { const n = require('../lib/requests').states().map(stateName).sort(); return n.length > 1 ? n.slice(0, -1).join(', ') + ' and ' + n[n.length - 1] : n[0] || 'some states'; })()}, one precise public records request for the records themselves, filed once per county with its answer posted for everyone.</div></header>
-<section>${asks.map(c => `<div class="issue" style="display:block"><a href="/us/ask/${esc(c.id)}" style="color:inherit;text-decoration:none"><b>${esc(gen(c.title))}</b></a><p class="src" style="margin:4px 0 0">Covers: ${esc(items(c))} · <a href="/us/ask/${esc(c.id)}">Find your county’s petition →</a></p></div>`).join('')}
+<section>${asks.map(c => `<div class="issue" style="display:block"><a href="/us/ask/${esc(c.id)}" style="color:inherit;text-decoration:none"><b>${esc(gen(c.title))}</b></a><p class="src" style="margin:4px 0 0">${c.meter ? `Covers: ${esc(items(c))} · ` : ""}<a href="/us/ask/${esc(c.id)}">Find your county’s petition →</a></p></div>`).join('')}
 <p class="src" style="max-width:none">Every petition is started by ${esc(C.started_by)}, and asks for what the best governments already publish. <a href="/us/transparency">The standard, and who meets each bar →</a> · <a href="/us/petitions">Every other petition →</a></p></section>`;
   return page({ title: camp ? `Ask your county: ${gen(camp.title)} · County Commons` : 'Ask your county to publish it: information petitions for every county · County Commons',
     description: camp ? gen(camp.why).slice(0, 200) : 'Petitions asking every U.S. county to publish its budget, payments, contracts, votes, records requests and more, each tied to the County Commons transparency meter.',
@@ -475,7 +477,7 @@ ${chooser(camp.id)}</section>
 // On an information ask: what the transparency meter found in this county.
 function meterFound(p) {
   if (!p.campaign || p.level !== 'county' || !/^us:/.test(String(p.tenant))) return '';
-  const camp = require('../lib/asks').byId(p.campaign); if (!camp) return '';
+  const camp = require('../lib/asks').byId(p.campaign); if (!camp || !camp.meter) return '';
   const N = nat(); const c = N.counties.find(x => x.geoid === String(p.tenant).slice(3)); if (!c) return '';
   const T = require('../lib/transparency'); const it = T.get(c).items;
   const MARK = { yes: ['✓', 'Yes', 'var(--sourced)'], partly: ['◐', 'Partly', 'var(--partial)'], no: ['✗', 'No', 'var(--dead)'] };
@@ -624,7 +626,7 @@ function petitionSitemapUrls() {
   const out = ['https://countycommons.us/us/petitions'];
 
   for (const c of campaignsFile().campaigns) if (!c.hold && (!c.meter || P.campaignRollup(c.id).copies.length)) out.push(`https://countycommons.us/us/petitions/shared/${c.id}`);
-  out.push('https://countycommons.us/us/ask'); for (const c of campaignsFile().campaigns) if (!c.hold && c.meter && c.level === 'county') out.push(`https://countycommons.us/us/ask/${c.id}`);
+  out.push('https://countycommons.us/us/ask'); for (const c of campaignsFile().campaigns) if (!c.hold && (c.meter || c.common) && c.level === 'county') out.push(`https://countycommons.us/us/ask/${c.id}`);
   for (const p of P.allPublic()) if (petitionUrl(p).startsWith('/us/')) out.push('https://countycommons.us' + petitionUrl(p));
   return out;
 }
@@ -640,4 +642,4 @@ function docPage(file, slug, description) {
   return page({ title: title + ' · County Commons', description, canonical: 'https://countycommons.us/us/' + slug, body: '<div style="max-width:72ch">' + html + '</div>' });
 }
 
-module.exports = { askPage, countyRec, stateName, transparencyPage, page, stateList, countyCount, docPage, petitionsDirectory, sharedRollupPage, petitionSitemapUrls, petitionUrl, matchCounty, countyByGeoid, petitionsBlock, usPetitionPage, countyName, feedbackPage, buildingPage, countyPage, statePage, usPage, whatWorksPage, sitemapUrls };
+module.exports = { askPage, countyBySite, countyRec, stateName, transparencyPage, page, stateList, countyCount, docPage, petitionsDirectory, sharedRollupPage, petitionSitemapUrls, petitionUrl, matchCounty, countyByGeoid, petitionsBlock, usPetitionPage, countyName, feedbackPage, buildingPage, countyPage, statePage, usPage, whatWorksPage, sitemapUrls };

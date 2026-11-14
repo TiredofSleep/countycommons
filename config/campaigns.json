@@ -16,7 +16,8 @@
       "meter": [
         "payments",
         "realtime"
-      ]
+      ],
+      "common": "transparency"
     },
     {
       "id": "pass-through-money",
@@ -646,6 +647,53 @@
         }
       ],
       "level": "county"
+    },
+    {
+      "id": "data-center-conditions",
+      "level": "county",
+      "common": "data-centers",
+      "title": "Before any data center is approved in {county}: a public hearing, its water and power use posted, any tax deal posted, and a binding limit on water use",
+      "why": "Data centers are being proposed in counties across the country, and they use a lot of electricity: the U.S. Department of Energy reports they used about 4.4% of all U.S. electricity in 2023 and may use 6.7% to 12% by 2028. Whether {county} wants one is for residents and their elected officials to decide. Either way, people should know before the vote how much water and power a project will use, what tax breaks it would get, and what limits it agrees to, and have a public hearing to say so.",
+      "src": [
+        {
+          "url": "https://www.energy.gov/articles/doe-releases-new-report-evaluating-increase-electricity-demand-data-centers",
+          "label": "U.S. Department of Energy, report on electricity demand from data centers (Dec. 20, 2024)"
+        }
+      ]
+    },
+    {
+      "id": "clean-water-online",
+      "level": "county",
+      "common": "water",
+      "title": "Post the test results and violations of every water system in {county} online, with the plan to fix each one",
+      "why": "Every community water system already tests its water, reports to the state, and must send customers a yearly water quality report. But results are spread across systems and state databases most people never see. One county page that links each system’s latest report and any violation, with what is being done to fix it, lets every household check its water in a minute.",
+      "src": [
+        {
+          "url": "https://www.epa.gov/ccr",
+          "label": "U.S. EPA, Consumer Confidence Reports (annual water quality reports)"
+        },
+        {
+          "url": "https://www.epa.gov/enviro/sdwis-search",
+          "label": "U.S. EPA, Safe Drinking Water Information System"
+        }
+      ]
+    },
+    {
+      "id": "grants-online",
+      "level": "county",
+      "common": "grants",
+      "title": "Post every grant {county} applies for, wins and spends, with the project and what it got done",
+      "why": "Grants pay for roads, water lines, emergency services and much more, and they bring money home without raising local taxes. USAspending.gov lists federal awards by place, but not what each project achieved, and grants a county applied for and didn’t win aren’t listed anywhere. A public list of every application, award and result shows what the county is going after, and what the money built.",
+      "src": [
+        {
+          "url": "https://www.usaspending.gov/search",
+          "label": "USAspending.gov, federal awards by place"
+        },
+        {
+          "url": "https://www.grants.gov/search-grants",
+          "label": "Grants.gov, open federal grants"
+        }
+      ]
     }
   ]
 }
