@@ -159,6 +159,16 @@ app.use((req, res, next) => {
       return require('qrcode').toString(link + '?via=flyer#transparency', { type: 'svg', margin: 1, errorCorrectionLevel: 'M' })
         .then(qr => res.send(require('./views/requests').meterFlyer(c, nv.stateName(c.st), qr, link)), next);
     }
+    // A county's common ground asks as a 1080×1350 social media post.
+    const usPost = p.match(/^\/us\/([a-z]{2})\/([a-z0-9-]+)\/post\/?$/);
+    if (usPost && req.method === 'GET') {
+      const nv = require('./views/national');
+      const c = nv.countyRec(usPost[1], usPost[2]);
+      if (!c) return res.status(404).send(gatePage('No county at that address.', '/us'));
+      const link = `https://countycommons.us/us/${c.st.toLowerCase()}/${c.slug}`;
+      return require('qrcode').toString(link + '?via=post#common-ground', { type: 'svg', margin: 1, errorCorrectionLevel: 'M', color: { dark: '#1E2A32', light: '#FAFBF7' } })
+        .then(qr => res.send(require('./lib/common').postPage(c, nv.stateName(c.st), qr, link)), next);
+    }
     // Common ground: the asks people of every party can sign, counted nationally.
     if (/^\/us\/common-ground\/?$/.test(p) && req.method === 'GET') { traffic.note('__network__', req); return res.send(require('./lib/common').page(require('./views/national'))); }
     // The tour: a real county's page, stop by stop (Clark by default).

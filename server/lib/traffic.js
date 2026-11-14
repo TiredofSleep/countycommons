@@ -40,7 +40,7 @@ function today() { return new Date().toISOString().slice(0, 10); }
 // A shared link can say where it was posted with ?via=<word> (e.g. a Facebook
 // post as ?via=fb). Only these words count; anything else is ignored. It names
 // the place a link was posted, never the person who clicked it.
-const VIA = { fb: 'Facebook post', facebook: 'Facebook post', text: 'Text message', sms: 'Text message', email: 'Email', flyer: 'Flyer or poster', qr: 'QR code', nextdoor: 'Nextdoor post', x: 'X/Twitter post', reddit: 'Reddit post', news: 'News story' };
+const VIA = { post: 'Social media image', fb: 'Facebook post', facebook: 'Facebook post', text: 'Text message', sms: 'Text message', email: 'Email', flyer: 'Flyer or poster', qr: 'QR code', nextdoor: 'Nextdoor post', x: 'X/Twitter post', reddit: 'Reddit post', news: 'News story' };
 function viaSource(url) {
   const m = String(url || '').match(/[?&]via=([a-z]+)/i);
   return m ? VIA[m[1].toLowerCase()] || null : null;

@@ -82,4 +82,44 @@ function blockForSite(tenantKey) {
   } catch (e) { return ''; }
 }
 
-module.exports = { THEMES, block, blockForSite, page, fact };
+
+// A social media post (1080×1350, the feed's 4:5 shape) of a county's common
+// ground asks, with its own facts and one QR code. Rendered as a page so any
+// county works; pipeline/post-image.js turns it into a PNG with headless Edge.
+function postPage(c, stateName, qrSvg, link) {
+  const A = require('./asks');
+  const short = {
+    water: 'Post every water system’s test results and violations online, with the plan to fix each one.',
+    transparency: 'Post every county payment online, every month: who was paid, how much, and for what.',
+    grants: 'Post every grant the county applies for, wins and spends, and what it got done.',
+    'data-centers': 'Before any data center is approved: a public hearing, its water and power use posted, any tax deal posted, and a binding limit on water use.'
+  };
+  const rows = camps().map(t => `<div class="row"><div class="k">${esc(t.name)}</div><div class="a">${esc(short[t.key])}</div>${fact(t.key, c) ? `<div class="f">${fact(t.key, c)}</div>` : ''}</div>`).join('');
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Common ground post — ${esc(c.name)}</title><meta name="robots" content="noindex">
+<style>
+*{box-sizing:border-box}html,body{margin:0;background:#F2F5EE}
+.post{width:1080px;height:1350px;background:#F2F5EE;color:#1E2A32;font-family:'Segoe UI',system-ui,-apple-system,Roboto,sans-serif;display:flex;flex-direction:column;border:14px solid #1E2A32}
+.top{background:#1E2A32;color:#F2F5EE;padding:40px 56px 36px}
+.eb{font-family:Consolas,ui-monospace,monospace;font-size:24px;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+h1{font-size:76px;line-height:1.02;margin:14px 0 12px;font-weight:700;letter-spacing:-.01em}
+.sub{font-size:28px;line-height:1.3;opacity:.92;margin:0}
+.rows{padding:14px 56px 0;flex:1;overflow:hidden}
+.row{padding:15px 0 14px;border-bottom:2px solid #C9D6C4}.row:last-child{border-bottom:0}
+.k{font-family:Consolas,ui-monospace,monospace;font-size:21px;letter-spacing:.1em;text-transform:uppercase;color:#23557A;font-weight:700}
+.a{font-size:31px;line-height:1.25;font-weight:600;margin:6px 0 6px}
+.f{font-size:21px;line-height:1.3;color:#4A5B64}
+.foot{display:flex;gap:30px;align-items:center;background:#FAFBF7;border-top:4px solid #1E2A32;padding:24px 56px;flex:none}
+.qr{width:200px;height:200px;flex:none}.qr svg{width:100%;height:100%}
+.cta{font-size:38px;font-weight:700;line-height:1.1}.url{font-family:Consolas,ui-monospace,monospace;font-size:24px;margin:10px 0 8px;color:#23557A;font-weight:700}
+.fine{font-size:17px;line-height:1.35;color:#4A5B64}
+@media screen and (max-width:1100px){body{zoom:.5}}
+</style></head><body><div class="post">
+<div class="top"><div class="eb">${esc(c.name)}, ${esc(stateName)} · Common ground</div>
+<h1>What we can agree on</h1>
+<p class="sub">Four petitions to ${esc(A.addressee(c).replace(/^the /, 'the '))}. Counted here, delivered at the goal, the answer posted.</p></div>
+<div class="rows">${rows}</div>
+<div class="foot"><div class="qr">${qrSvg}</div><div><div class="cta">Add your voice. It takes a minute.</div><div class="url">${esc(link.replace(/^https:\/\//, ''))}</div><div class="fine">Petitions started by Brayden Sanders, founder of County Commons, an independent, nonpartisan public-records project. Not a government website. Names are never shown.</div></div></div>
+</div></body></html>`;
+}
+
+module.exports = { THEMES, block, blockForSite, page, postPage, fact };
