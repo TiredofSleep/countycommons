@@ -35,7 +35,7 @@ function block(c) {
     const p = A.existing(c, t.camp);
     const title = t.c.title.replace(/\{county\}/g, c.name);
     const n = p ? require('../priorities').getPublic(p.id).support : 0; const count = n ? `${num(n)} signed here` : 'Be the first to sign here';
-    return `<div class="issue" style="display:block"><div class="eyebrow" style="margin:0 0 2px">${esc(t.name)}</div><a href="${base}/ask/${esc(t.camp)}" style="color:inherit;text-decoration:none"><b>${esc(title)}</b></a>${fact(t.key, c) ? `<p class="src" style="margin:4px 0 0;max-width:none">${fact(t.key, c)}</p>` : ''}<p style="margin:6px 0 0"><a href="${base}/ask/${esc(t.camp)}" style="font-weight:600">Sign →</a> <span class="soft" style="font-size:13px">${count}</span></p></div>`;
+    return `<div class="issue" style="display:block"><div class="eyebrow" style="margin:0 0 2px">${esc(t.name)}</div><a href="${base}/ask/${esc(t.camp)}" style="color:inherit;text-decoration:none"><b>${esc(title)}</b></a>${fact(t.key, c) ? `<p class="src" style="margin:4px 0 0;max-width:none">${fact(t.key, c)}</p>` : ''}${(t.c.best || []).length ? `<p class="src" style="margin:4px 0 0;max-width:none">Already done in ${esc(t.c.best.slice(0, 3).map(b => b.name).join('; '))}${t.c.best.length > 3 ? ' and more' : ''}.</p>` : ''}<p style="margin:6px 0 0"><a href="${base}/ask/${esc(t.camp)}" style="font-weight:600">Sign →</a> <span class="soft" style="font-size:13px">${count}</span></p></div>`;
   }).join('');
   return `
 <section id="common-ground">
@@ -56,7 +56,7 @@ function page(nv) {
     const r = P.campaignRollup(t.camp); all += r.total; for (const x of r.copies) if (x.support > 0) places.add(x.tenant);
     const signed = r.copies.filter(x => x.support > 0).length;
     return `<section class="cg"><div class="eyebrow">${esc(t.name)}</div><h2 style="font-size:clamp(20px,3.6vw,25px);line-height:1.2;margin:4px 0 6px">${esc(gen(t.c.title))}</h2>
-<p>${esc(gen(t.c.why))}</p>${require('../views/petitions').sourcesLine({ src: t.c.src })}
+<p>${esc(gen(t.c.why))}</p>${require('../views/petitions').sourcesLine({ src: t.c.src, campaign: t.camp })}
 <p><b>${num(r.total)}</b> signature${r.total === 1 ? '' : 's'} in <b>${num(signed)}</b> count${signed === 1 ? 'y' : 'ies'} so far.${signed ? ` <a href="/us/petitions/shared/${esc(t.camp)}">By county →</a>` : ''}</p>
 <form method="get" action="/us/ask/${esc(t.camp)}" style="display:flex;gap:8px;flex-wrap:wrap;align-items:end">
 <label style="display:grid;gap:3px"><b style="font-size:14px">Sign for your county</b><select name="st" required style="${f}"><option value="">State…</option>${N.map(s => `<option value="${esc(s.st)}">${esc(s.name)}</option>`).join('')}</select></label>

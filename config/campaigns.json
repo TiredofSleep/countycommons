@@ -17,7 +17,27 @@
         "payments",
         "realtime"
       ],
-      "common": "transparency"
+      "common": "transparency",
+      "best": [
+        {
+          "name": "Cook County, Illinois",
+          "rule": "Cook County posts every payment to its vendors and other payees since December 1, 2016 as open data that you can download, with the check number, date, payee, amount and invoice numbers, and it publishes the data monthly.",
+          "url": "https://datacatalog.cookcountyil.gov/d/4h27-5s9x",
+          "label": "Cook County Open Data, Check Register"
+        },
+        {
+          "name": "DuPage County, Illinois",
+          "rule": "The DuPage County Auditor posts a vendor expenditure report every month that lists each payment to vendors by name and date, with the accounting unit and account it was charged to, in a searchable format.",
+          "url": "https://www.dupagecounty.gov/elected_officials/auditor/financial_reports.php",
+          "label": "DuPage County Auditor, Vendor Expenditure Report"
+        },
+        {
+          "name": "Oregon (state)",
+          "rule": "Oregon law makes each county governing body publish, every month, a list of the last month's payments over $500, with who was paid, what for and how much, and it may be posted online.",
+          "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors294.html",
+          "label": "Oregon Revised Statutes 294.250"
+        }
+      ]
     },
     {
       "id": "pass-through-money",
@@ -709,6 +729,32 @@
           "url": "https://www.energy.gov/articles/doe-releases-new-report-evaluating-increase-electricity-demand-data-centers",
           "label": "U.S. Department of Energy, report on electricity demand from data centers (Dec. 20, 2024)"
         }
+      ],
+      "best": [
+        {
+          "name": "Loudoun County, Virginia",
+          "rule": "Since March 18, 2025, a data center in Loudoun's Industrial Park, General Industry and Mineral Resources-Heavy Industry zones needs a special exception from the Board of Supervisors, so it can no longer be built by right.",
+          "url": "https://www.loudoun.gov/6221/Phase-1-Project-Plan-for-Data-Center-Sta",
+          "label": "Loudoun County, ZOAM-2024-0001 (Data Center Standards and Locations, Phase 1)"
+        },
+        {
+          "name": "Tucson, Arizona",
+          "rule": "Since September 4, 2026, a large data center in Tucson can only be built through a rezoning or planned-area change that the Mayor and Council decide at a public hearing, and it must show it has enough water and power and disclose its energy mix; a separate 2025 ordinance makes any user expected to take 10,000 CCF (about 7.48 million gallons) of water a month or more get its water conservation plan approved by the Mayor and Council.",
+          "url": "https://www.tucsonaz.gov/Departments/Planning-Development-Services/Planning-Initiatives/Data-Centers-Unified-Development-Code-Amendment",
+          "label": "City of Tucson, large-scale data center code amendment (adopted August 5, 2026)"
+        },
+        {
+          "name": "Utah (state)",
+          "rule": "Since July 1, 2026, a new Utah data center over 10,000 square feet that plans to use 75 acre-feet of water or more a year must report its expected water use before it is built and its real use every year, and the state posts those reports online by September 1.",
+          "url": "https://waterrights.utah.gov/data-centers/",
+          "label": "Utah Division of Water Rights, HB 76 (2026) Data Center Water Transparency"
+        },
+        {
+          "name": "Idaho (state)",
+          "rule": "Since July 1, 2026, a new Idaho data center may not use water for cooling as a consumptive use unless a city, water district, or water and sewer district system supplies it.",
+          "url": "https://legislature.idaho.gov/sessioninfo/2026/legislation/H0895/",
+          "label": "Idaho Legislature, H0895 (2026), Idaho Code 42-252"
+        }
       ]
     },
     {
@@ -726,6 +772,26 @@
           "url": "https://www.epa.gov/enviro/sdwis-search",
           "label": "U.S. EPA, Safe Drinking Water Information System"
         }
+      ],
+      "best": [
+        {
+          "name": "Oregon (state)",
+          "rule": "Oregon's drinking water office runs a live public site that lists every public water system with its test results, violations, public notices and enforcement orders, and you can filter the enforcement list by county.",
+          "url": "https://yourwater.oregon.gov/compliance.php",
+          "label": "Oregon Health Authority, Drinking Water Data Online"
+        },
+        {
+          "name": "New York (state)",
+          "rule": "New York's health department posts a yearly violation report for each county that names every water system with a violation, the contaminant, the months covered and whether it was fixed; Albany County's 2024 report lists 36 systems.",
+          "url": "https://healthweb-back.health.ny.gov/environmental/water/drinking/violations/2024/map_violations_2024.htm",
+          "label": "NY State Dept. of Health, 2024 Violation Summary by county"
+        },
+        {
+          "name": "California (state)",
+          "rule": "California's SAFER dashboard lists every failing water system, which you can filter by county, along with how much state help or funding it has received since 2017; 406 systems serving 645,279 people were on the failing list in the 2026 needs assessment.",
+          "url": "https://www.waterboards.ca.gov/drinking_water/certlic/drinkingwater/saferdashboard.html",
+          "label": "California State Water Resources Control Board, SAFER Dashboard"
+        }
       ]
     },
     {
@@ -742,6 +808,26 @@
         {
           "url": "https://www.grants.gov/search-grants",
           "label": "Grants.gov, open federal grants"
+        }
+      ],
+      "best": [
+        {
+          "name": "Orange County, California",
+          "rule": "County policy says the Board of Supervisors must approve every grant application before it goes out, so a grants report at Board meetings lists each application and award, naming the department, the grant, the funder and the dollar amount.",
+          "url": "https://ocagendaext.oc.gov/ExtDocViewer/60630581-2140-437e-ad9e-74f46e3e1c97",
+          "label": "County of Orange, Report on Grant Applications/Awards (April 28, 2026)"
+        },
+        {
+          "name": "San Diego, California",
+          "rule": "San Diego posts a yearly citywide grants report that lists every grant the city applied for and won; in fiscal year 2026 it sent 99 applications worth $418,165,400 and won 45 awards worth $175,472,086.",
+          "url": "https://www.sandiego.gov/sites/default/files/2026-10/fy26-citywide-annual-grants-report.pdf",
+          "label": "City of San Diego, FY26 Citywide Grants Report"
+        },
+        {
+          "name": "Washington County, Oregon",
+          "rule": "Washington County posts an ARPA projects dashboard and yearly reports for its $117 million in federal recovery money, which show its projects, spending and outcomes.",
+          "url": "https://www.washingtoncountyor.gov/arpa",
+          "label": "Washington County, ARPA (SLFRF) page and dashboard"
         }
       ]
     }
