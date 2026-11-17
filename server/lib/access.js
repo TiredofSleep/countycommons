@@ -9,16 +9,14 @@
 // encoding { tenant, role }, recomputed and verified on every request so it
 // can't be forged. Admin attempts are rate-limited with a hard lockout.
 //
-// Backward compatible: if config/pins.json is absent but config/site-password
-// exists, that password is treated as the default county's view PIN, so the
-// existing 1525 gate keeps working during migration.
+// Since 2026-11-17 there is no sign-in: no PIN is accepted anywhere. The
+// registry is still read for the cookie-signing secret only.
 
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 
 const PINS_PATH = path.join(__dirname, '..', '..', 'config', 'pins.json');
-const LEGACY_PW = path.join(__dirname, '..', '..', 'config', 'site-password');
 const TENANTS_PATH = path.join(__dirname, '..', '..', 'config', 'tenants.json');
 
 function defaultTenant() {
@@ -38,11 +36,6 @@ function registry() {
     }
     return _cache;
   } catch (e) {
-    // Legacy fallback: single view PIN from site-password.
-    try {
-      const pw = fs.readFileSync(LEGACY_PW, 'utf8').trim();
-      if (pw) return { secret: 'legacy:' + pw, pins: { [pw]: { tenant: defaultTenant(), role: 'view' } } };
-    } catch (e2) { /* no gate configured */ }
     return null;
   }
 }
@@ -54,13 +47,8 @@ function secret() {
   return (r && r.secret) || 'county-commons-unset-secret';
 }
 
-// Look up a PIN → { tenant, role, name } or null.
-function lookupPin(pin) {
-  const r = registry();
-  if (!r) return null;
-  const hit = r.pins[String(pin || '').trim()];
-  return hit || null;
-}
+// No PIN is accepted anywhere (no sign-in).
+function lookupPin() { return null; }
 
 // The signed access token for a (tenant, role, name). Deterministic; verified
 // by recomputation. Not reversible to the PIN. The name (non-secret; it gets

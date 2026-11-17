@@ -2,10 +2,8 @@
 // requests, no user data collected. Routes /issues, /results, /ask are
 // reserved for later milestones.
 //
-// Soft-launch gate: if a site password is configured (SITE_PASSWORD env var,
-// or config/site-password file — gitignored), every page requires it once per
-// browser. No password configured = site is open. The gate is a doorman for a
-// quiet launch, not a vault; the site holds only public records.
+// No sign-in and no password: every page is public to read. Changes are made by
+// the operator on the server (pipeline/*.js), never through a login.
 
 const express = require('express');
 const path = require('path');
@@ -44,7 +42,7 @@ traffic.start();
 
 // Caddy queries this before it mints an on-demand TLS certificate for a host,
 // so the box only gets certs for counties we actually serve. Ungated on
-// purpose (registered before the site-password gate): it must answer Caddy.
+// purpose (registered first): it must answer Caddy.
 app.get('/tls-check', (req, res) =>
   tenant.isKnownHost(req.query.domain || '') ? res.status(200).send('ok') : res.status(404).send('no'));
 
@@ -312,14 +310,14 @@ app.use((req, res, next) => {
   next();
 });
 
-// ---- access: PIN router (view + admin), per county ----
+// ---- access: the signed view cookie (no sign-in; reading is public) ----
 const access = require('./lib/access');
 const { registry: tenantRegistry } = tenant;
 function hostFor(tenantKey) {
   try { return tenantRegistry().tenants[tenantKey].host; } catch (e) { return null; }
 }
 
-// The access cookie is scoped to the PARENT domain, so one PIN opens the whole
+// The access cookie is scoped to the PARENT domain, so one visit opens the whole
 // network: a resident who's been let in anywhere can walk every county's public
 // pages (the "navigate other counties and the whole site" rule). Omit Domain in
 // local dev, where there's no dotted base to share across. The per-sitting
@@ -446,7 +444,7 @@ function findBlock(q) {
   return box + found + grid;
 }
 
-function gatePage(msg, next, q, signin) {
+function gatePage(msg, next, q) {
   const dest = safeDest(next);
   const groups = directory.byState();
   const finder = findBlock(q || '');
@@ -483,16 +481,6 @@ function gatePage(msg, next, q, signin) {
   <details style="margin:24px 0 0"><summary style="cursor:pointer;font-weight:600;font-size:16px">Full County Commons sites <span class="sub">— ${directory.featured().length} places with their budget traced line by line</span></summary>
   ${list || '<p class="src">No sites are published yet.</p>'}
   </details>
-  ${signin ? `<details open style="margin:22px 0 0;border-top:1px solid var(--rule);padding-top:12px">
-    <summary style="cursor:pointer;font-size:13.5px;color:var(--accent)">Host sign-in</summary>
-    <form method="POST" action="/gate" style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap;max-width:360px">
-      <input type="password" name="pin" aria-label="Host code" autocomplete="off" placeholder="host code"
-        style="font-family:var(--mono);font-size:15px;padding:8px 10px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink);flex:1;min-width:140px">
-      <input type="hidden" name="next" value="${esc(dest)}">
-      <button type="submit" style="font-family:var(--mono);font-size:13px;padding:8px 14px;background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);cursor:pointer">Enter</button>
-    </form>
-    <p class="src" style="margin-top:8px">For county hosts: your host code opens your county’s admin. Reading the site never needs a code.</p>
-  </details>` : ''}
 </header></div></body></html>`;
 }
 
@@ -511,37 +499,10 @@ app.get('/enter', (req, res) => {
   return res.redirect(`https://${t.host}/`);
 });
 
-app.get('/gate', (req, res) => res.send(gatePage(null, req.query.next || '/', '', true)));
-app.post('/gate', writeLimit, express.urlencoded({ extended: false }), (req, res) => {
-  const ip = req.ip || 'unknown';
-  const lock = access.lockState(ip);
-  if (lock.locked) {
-    const mins = Math.ceil((lock.until - Date.now()) / 60000);
-    return res.status(429).send(gatePage(`Too many attempts. Try again in about ${mins} minute${mins === 1 ? '' : 's'}.`, safeDest(req.body && req.body.next), '', true));
-  }
-  const given = (req.body && req.body.pin) || '';
-  const dest = safeDest(req.body && req.body.next);
-  const hit = access.lookupPin(given);
-  if (!hit) {
-    access.noteFailure(ip);
-    return res.status(401).send(gatePage('That code did not match.', dest, '', true));
-  }
-  access.noteSuccess(ip);
-  res.setHeader('Set-Cookie',
-    `cc_access=${access.cookieValue(hit.tenant, hit.role, hit.name || '')}; Path=/; Max-Age=${60 * 60 * 24 * 30}; HttpOnly; SameSite=Lax${accessCookieDomain(req)}`);
-  // The PIN decides the county. If we're not on that county's host, send them
-  // there; otherwise open the site (admins land on the admin dashboard).
-  const landing = hit.role === 'owner' ? '/owner' : (hit.role === 'admin' ? '/admin' : dest);
-  // The owner is county-agnostic; view/admin get taken to their county's host.
-  if (hit.role !== 'owner') {
-    const wantHost = hostFor(hit.tenant);
-    const hereHost = tenant.resolveHost(req.headers.host);
-    if (wantHost && hereHost.action === 'serve' && hereHost.key !== hit.tenant) {
-      return res.redirect(`https://${wantHost}${landing}`);
-    }
-  }
-  res.redirect(landing);
-});
+// No sign-in anywhere: County Commons is public to read, and the operator
+// makes changes on the server (pipeline/petition.js and friends).
+app.get('/gate', (req, res) => res.redirect(302, '/'));
+app.post('/gate', (req, res) => res.redirect(303, '/'));
 
 // The gate. Open when no PINs are configured. Otherwise ANY valid access cookie
 // lets you through, on ANY county — one PIN is a key to the whole network, so a
@@ -617,7 +578,7 @@ ${ready.length ? `<section>
   <ul>${ready.map(([href, label, sub]) => `<li><a href="${href}">${label}</a> — ${sub}</li>`).join('')}</ul>
 </section>` : ''}
 <section>
-  <p>See the counties and cities that <b>are</b> live — from big-city budgets to a 64-person county — on <a href="/gate">the county selector</a> or the <a href="/counties">full directory</a>.</p>
+  <p>See the counties and cities that <b>are</b> live — from big-city budgets to a 64-person county — on <a href="https://countycommons.us/">the county selector</a> or the <a href="/counties">full directory</a>.</p>
   <p class="src">Want ${esc(county.name)} built out, or want to host it? Reach the project at ${county.contact_email ? `<a href="mailto:${esc(county.contact_email)}">${esc(county.contact_email)}</a>` : 'the contact on any live county page'}.</p>
 </section>`;
   return layout({ title: `${county.name} — ${budgetDoc ? 'budget captured' : 'coming soon'}`, current: null, body, county, description: `${county.name} on County Commons — ${budgetDoc ? 'budget document captured, parsing pending' : 'a starter site, not yet ingested'}.` });
@@ -640,15 +601,12 @@ app.use((req, res, next) => {
 // a host's edit rights is enforced HERE — an admin code edits only its own
 // county. The owner may act as admin anywhere.
 function requireAdmin(req, res, next) {
-  if (req.access && (req.access.role === 'owner' ||
-      (req.access.role === 'admin' && req.access.tenant === req.tenantKey))) return next();
-  res.status(403).send(gatePage('That area needs a host code for this county.', '/admin', '', true));
+  res.status(404).send(gatePage('There’s no sign-in on County Commons. Everything here is public to read.', '/'));
 }
 
 // Owner guard: for /owner routes, require the owner credential.
 function requireOwner(req, res, next) {
-  if (req.access && req.access.role === 'owner') return next();
-  res.status(403).send(gatePage('That area needs the owner code.', '/owner', '', true));
+  res.status(404).send(gatePage('There’s no sign-in on County Commons. Everything here is public to read.', '/'));
 }
 
 // Downgrade any pre-existing persistent participant cookie to session scope:
@@ -1686,4 +1644,4 @@ function notFound(data, msg) {
 }
 
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`County Commons listening on http://localhost:${PORT}${access.gateConfigured() ? ' (PIN-gated)' : ' (open)'}`));
+app.listen(PORT, () => console.log(`County Commons listening on http://localhost:${PORT}`));

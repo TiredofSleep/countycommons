@@ -109,7 +109,7 @@ function tourBlock(county) {
         <a href="/priorities" style="font-family:var(--mono);font-size:15px;font-weight:600;padding:13px 20px;background:var(--ink);color:var(--paper);border:2px solid var(--ink);text-decoration:none">Post a priority →</a>
         <a href="/issues" style="font-family:var(--mono);font-size:15px;font-weight:600;padding:13px 20px;background:var(--card);color:var(--ink);border:2px solid var(--ink);text-decoration:none">Answer a question →</a>
       </div>
-      <p class="src" style="margin:12px 0 0">Or jump straight to <a href="/gate">any county or city</a>.</p>`)
+      <p class="src" style="margin:12px 0 0">Or jump straight to <a href="https://countycommons.us/">any county or city</a>.</p>`)
   ].join('');
 
   return `
