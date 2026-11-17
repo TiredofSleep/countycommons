@@ -20,14 +20,25 @@ const chain = require('./lib/chain');
 const STORE = path.join(__dirname, '..', 'data', 'priorities.json');
 const KINDS = new Set(['prioritize', 'reconsider']);
 
+// Writers take a fresh copy (load) and save it whole. Readers share one parsed
+// copy (view), re-read only when the file changes. The file is several MB, and
+// parsing it on every lookup let a crawler flood stall the whole server.
 function load() {
   try { return JSON.parse(fs.readFileSync(STORE, 'utf8')); }
   catch (e) { return { priorities: {} }; }
+}
+let VIEW = { key: '', d: null };
+function view() {
+  let key = '';
+  try { const st = fs.statSync(STORE); key = st.mtimeMs + ':' + st.size; } catch (e) { return { priorities: {} }; }
+  if (key !== VIEW.key || !VIEW.d) VIEW = { key, d: load() };
+  return VIEW.d; // read-only: never change it in place
 }
 function save(s) {
   const tmp = STORE + '.tmp';
   fs.writeFileSync(tmp, JSON.stringify(s, null, 2));
   fs.renameSync(tmp, STORE);
+  VIEW = { key: '', d: null };
 }
 
 // Propose a priority. Returns { id } or { error, flags? }. Priorities publish
@@ -153,7 +164,7 @@ function undoOutcome(id) {
   return { ok: true };
 }
 
-function get(id) { return load().priorities[id] || null; }
+function get(id) { return view().priorities[id] || null; }
 function setStatus(id, status) { const s = load(); if (s.priorities[id]) { s.priorities[id].status = status; save(s); } }
 function remove(id) { const s = load(); if (s.priorities[id]) { delete s.priorities[id]; save(s); } }
 function mySupport(participant, id) { const p = get(id); return !!(p && p.supporters && p.supporters[participant]); }
@@ -164,7 +175,7 @@ function mySupport(participant, id) { const p = get(id); return !!(p && p.suppor
 function supportedBy(participant, tenant) {
   const set = new Set();
   if (!participant) return set;
-  for (const p of Object.values(load().priorities)) {
+  for (const p of Object.values(view().priorities)) {
     if (p.status === 'open' && p.supporters && p.supporters[participant]) set.add(p.id);
   }
   return set;
@@ -208,7 +219,7 @@ function enrich(p) {
 // statewide or nationwide push gathers voices from every host at once.
 function listByLevel({ tenant, state, level }) {
   level = level || 'county';
-  return Object.values(load().priorities)
+  return Object.values(view().priorities)
     .filter(p => p.status === 'open' && real(p))
     .filter(p => {
       const lv = levelOf(p);
@@ -223,7 +234,7 @@ function listByLevel({ tenant, state, level }) {
 
 // The ranked community voice for a county (county-level only, back-compat).
 function listFor(tenant) {
-  return Object.values(load().priorities)
+  return Object.values(view().priorities)
     .filter(p => p.status === 'open' && real(p) && p.tenant === tenant && levelOf(p) === 'county')
     .map(enrich)
     .sort((a, b) => b.support - a.support || String(b.created_at).localeCompare(String(a.created_at)));
@@ -231,7 +242,7 @@ function listFor(tenant) {
 
 // Every open priority across the network — the owner's backstop view.
 function listAll() {
-  return Object.values(load().priorities)
+  return Object.values(view().priorities)
     .filter(p => p.status === 'open')
     .map(p => ({ id: p.id, tenant: p.tenant, kind: p.kind, title: p.title, why: p.why, created_at: p.created_at, support: Object.keys(p.supporters || {}).length, phase: phaseOf(p), timeline: p.timeline || [] }))
     .sort((a, b) => String(b.created_at).localeCompare(String(a.created_at)));
@@ -241,7 +252,7 @@ function listAll() {
 // how many counties and states they span. Each copy still counts toward its own
 // county's goal; this only shows that the same ask is rising elsewhere.
 function campaignRollup(campaign) {
-  const copies = Object.values(load().priorities).filter(p => p.campaign === campaign && p.status === 'open' && real(p));
+  const copies = Object.values(view().priorities).filter(p => p.campaign === campaign && p.status === 'open' && real(p));
   const by = {}; let total = 0;
   for (const p of copies) {
     for (const s of Object.values(p.supporters || {})) {
@@ -252,7 +263,7 @@ function campaignRollup(campaign) {
   return { campaign, copies: copies.map(enrich), total, bySite: Object.entries(by).sort((a, b) => b[1] - a[1]), sitesSigning: Object.keys(by).filter(k => k !== 'elsewhere').length };
 }
 function findCampaignCopy(campaign, { tenant, level, state }) {
-  return Object.values(load().priorities).find(p => p.campaign === campaign && levelOf(p) === level &&
+  return Object.values(view().priorities).find(p => p.campaign === campaign && levelOf(p) === level &&
     (level === 'national' || (level === 'state' ? p.state === state : p.tenant === tenant))) || null;
 }
 
@@ -283,7 +294,7 @@ function bulkPropose(items) {
 function tagCampaign(id, campaign) { const s = load(); if (!s.priorities[id]) return false; s.priorities[id].campaign = campaign; save(s); return true; }
 
 // Every open, public petition (for search, the national directory and sitemaps).
-function allPublic() { return Object.values(load().priorities).filter(p => p.status === 'open' && real(p)).map(enrich); }
+function allPublic() { return Object.values(view().priorities).filter(p => p.status === 'open' && real(p)).map(enrich); }
 
 // Keyword search over titles and reasons: every word must appear. Shared asks
 // collapse to one result per campaign (with its copy count and total signatures);
