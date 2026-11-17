@@ -6,7 +6,7 @@ const { layout } = require('./layout');
 // The network directory — the map of the whole platform, across every state it
 // serves. Once a resident is inside (any county's PIN is a key to all of them),
 // this is how they walk to any other county. Live counties have an ingested
-// budget; Arkansas also has gated starter sites, ready for a local host.
+// budget; Arkansas also has starter sites, ready for a local host.
 
 const ROOT = path.join(__dirname, '..', '..');
 let LIST = { counties: [] };
@@ -88,7 +88,7 @@ function countiesPage(data, reg) {
 <header class="page">
   <div class="eyebrow">County Commons · the network</div>
   <h1>Every county, one platform</h1>
-  <div class="src">County Commons is opening county by county — now live in ${esc(statesPhrase)}. You're already inside: a PIN for any one county is a key to all of them, so you can walk any county's budget, questions, and calendar from here. Same rules everywhere: every number cited to its source, no verdicts, direct participation alongside the republic.</div>
+  <div class="src">County Commons is opening county by county — now live in ${esc(statesPhrase)}. Every site is open to read, no sign-in needed: walk any county’s budget, questions and calendar from here. Same rules everywhere: every number cited to its source, no verdicts, direct participation alongside the republic.</div>
 </header>
 
 <section>
@@ -98,8 +98,8 @@ ${arCompare ? `<p class="src" style="margin-top:10px">Compare the Arkansas count
 </section>
 
 <section>
-<h2>The rest of Arkansas <span class="sub">— gated starter sites, ready for a local host</span></h2>
-<p class="src">Each county below already has its own site behind its own PIN — a place for its budget to be ingested and its questions to open. A <b>starter site</b> is standing and waiting for someone local to run it; that's exactly what this project is for. Want yours? <a href="/participate">Bring your county on</a>.</p>
+<h2>The rest of Arkansas <span class="sub">— starter sites, ready for a local host</span></h2>
+<p class="src">Each county below already has its own site, open to everyone — a place for its budget to be ingested and its questions to open. A <b>starter site</b> is standing and waiting for someone local to run it; that's exactly what this project is for. Want yours? <a href="/participate">Bring your county on</a>.</p>
 <table class="plain">
 <thead><tr><th>County</th><th>Seat</th><th class="num">Residents (2020)</th></tr></thead>
 <tbody>${rest.map(restRow).join('')}</tbody>
@@ -109,7 +109,7 @@ ${arCompare ? `<p class="src" style="margin-top:10px">Compare the Arkansas count
 
   return layout({
     title: `Every county — ${county.platform_name}`, current: '/counties', body, county,
-    description: `The County Commons network, across ${esc(statesPhrase)}: live counties and gated starter sites — walk any of them from here.`
+    description: `The County Commons network, across ${esc(statesPhrase)}: live counties and starter sites — walk any of them from here.`
   });
 }
 

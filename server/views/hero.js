@@ -111,6 +111,7 @@ function heroFilm() {
 </style>`;
   return `${css}
 <input type="checkbox" id="cc-pause" class="cc-pause" aria-label="Pause the short film">
+<p class="src" style="margin:20px 0 0;max-width:none">How it works in 40 seconds, using one example county’s real numbers:</p>
 <div class="cc-film" aria-label="How County Commons works, in six steps">
 <div class="cc-stage">
 ${scenes.map(([h, vis], i) => `<div class="cc-scene" style="animation-delay:${i * SCENE}s"><div class="eyebrow" style="margin:0 0 4px">${i + 1} of ${N}</div><h3>${h}</h3><div aria-hidden="true">${vis}</div></div>`).join('\n')}
@@ -119,17 +120,14 @@ ${scenes.map(([h, vis], i) => `<div class="cc-scene" style="animation-delay:${i 
 </div>`;
 }
 
-// What you can do here — one line each, linking to the real pages.
-function doCards(featuredCount) {
-  const card = (href, h, p) => `<a href="${href}" class="cc-card"><b>${h}</b><span>${p}</span></a>`;
-  return `<style>.cc-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:10px 0 0}.cc-card{display:block;border:1.5px solid var(--ink);background:var(--card);color:var(--ink);text-decoration:none;padding:12px 14px}.cc-card:hover,.cc-card:focus-visible{background:var(--paper)}.cc-card b{display:block;font-size:16.5px;margin-bottom:4px}.cc-card span{font-size:14px;color:var(--ink-soft);line-height:1.4}</style>
-<div class="cc-cards">
-${card('https://clarkar.countycommons.us/budget', 'Follow the money', 'Every budget line, biggest first, each one linked to the page it came from. See Clark County’s.')}
-${card('/us/transparency', 'Check what your county posts', '30 facts, from the budget to every payment and every vote. Who meets each bar.')}
-${card('/us/ask', 'Ask for what’s missing', 'Sign a petition for your county, or print one precise public records request.')}
-${card('/us/ar/clark/compare', 'Compare with your neighbors', 'Each budget line beside counties of the same size, your state and the nation.')}
-${card('/us/ar/clark', 'Votes, water and jails', 'Every county page: elections, drinking water, the jail, the budget and open questions.')}
-${card('/us/petitions', 'Petitions', 'Started by residents, delivered to officials at a goal, with the answer posted.')}
+// Three ways in: research, make a change, help build. Network-wide links only.
+function doCards() {
+  const door = (href, h, p, links) => `<div class="cc-door"><a href="${href}" class="cc-dh">${h} →</a><p>${p}</p><p class="cc-dl">${links.map(([u, t]) => `<a href="${u}">${t}</a>`).join(' · ')}</p></div>`;
+  return `<style>.cc-doors{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin:14px 0 0}.cc-door{border:2px solid var(--ink);background:var(--card);padding:14px 16px}.cc-dh{display:block;font-size:20px;font-weight:700;color:var(--ink);text-decoration:none;margin-bottom:4px}.cc-door p{margin:0 0 6px;font-size:14.5px;line-height:1.4;color:var(--ink-soft)}.cc-door .cc-dl{font-size:14px;margin:0}</style>
+<div class="cc-doors" role="navigation" aria-label="Three ways in">
+${door('/us/research', 'Look things up', 'Budgets, audits, water, the jail and more for any county, every number linked to its source.', [['/us/tour', 'Tour'], ['/us/transparency', 'The standard'], ['/us/research#compare', 'Compare']])}
+${door('/us/act', 'Make a change', 'Sign a petition to your own county’s officials, or ask it to publish what’s missing.', [['/us/common-ground', 'Common ground'], ['/us/ask', 'Ask your county'], ['/us/petitions', 'Petitions']])}
+${door('/us/build', 'Help build it', 'Correct a fact, send a document, suggest an idea, or bring a full site to your county.', [['/us/feedback?kind=correction&amp;from=/', 'Correct'], ['/us/feedback?kind=document&amp;from=/', 'Send a document'], ['/us/building', 'What’s new']])}
 </div>`;
 }
 

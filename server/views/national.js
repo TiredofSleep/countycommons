@@ -36,7 +36,7 @@ function honestBand(canonical) {
   let last = null; try { last = require('../lib/building').lastUpdated(); } catch (e) { /* no history */ }
   return `<aside aria-label="Help keep this honest" style="border:1.5px dashed var(--ink);padding:14px 16px;margin:18px 0 0">
   <div style="font-family:var(--mono);font-weight:600;font-size:15px">Help keep this honest</div>
-  <p class="src" style="margin:4px 0 10px;max-width:62ch">See something wrong, out of date, or missing on this page? Tell us — a person reads every note, and fixes are logged in public. ${NET.net().flagship_name ? `County Commons is built out furthest for ${esc(NET.net().flagship_name)}, but it’s for every county` : 'County Commons is for every county'}, and we build more for any county on request.</p>
+  <p class="src" style="margin:4px 0 10px;max-width:62ch">See something wrong, out of date, or missing on this page? Tell us — a person reads every note, and fixes are logged in public. County Commons is for every county, and we build more for any county on request.</p>
   <div style="display:flex;gap:8px;flex-wrap:wrap"><a href="${fb('correction')}" style="${btn}">Correct something</a><a href="${fb('add')}" style="${btn}">Add information</a><a href="${fb('document')}" style="${btn}">Send a document</a><a href="${fb('request')}" style="${btn}">Request more for this county</a><a href="/us/building" style="${btn};border-style:dashed">What's new${last ? ` · updated ${esc(last)}` : ''}</a></div>
 </aside>`;
 }
@@ -57,7 +57,7 @@ ${jsonld ? ld(jsonld) : ''}
 <link rel="stylesheet" href="/style.css?v=6"><link rel="icon" href="/favicon.svg">
 </head>
 <body><div class="wrap">
-<nav class="site" aria-label="Site"><a href="/">County Commons</a><a href="/us">Every county in the U.S.</a></nav>
+<nav class="site" aria-label="Site"><a href="/">County Commons</a><a href="/us">Every county</a><a href="/us/research">Research</a><a href="/us/act">Make a change</a><a href="/us/build">Help build</a></nav>
 ${body}
 ${honestBand(canonical)}
 <footer><b>County Commons is an independent, citizen-built civic project. It is not a government website</b> and has no affiliation with any government body. It computes and cites public records and never takes sides. A gap means "not gathered yet," never "hidden." ${NET.net().contact ? `Spot an error? ${esc(NET.net().contact)}.` : ''} Free to copy: <a href="/us/license">data under CC BY 4.0, code under MIT</a> · <a href="/us/copy">copy this for your county</a>.</footer>
@@ -330,7 +330,7 @@ function usPage() {
 
 function sitemapUrls() {
   const N = nat();
-  const out = ['https://countycommons.us/us', 'https://countycommons.us/us/what-works', 'https://countycommons.us/us/transparency', 'https://countycommons.us/us/tour', 'https://countycommons.us/us/common-ground', 'https://countycommons.us/us/copy', 'https://countycommons.us/us/license'];
+  const out = ['https://countycommons.us/us', 'https://countycommons.us/us/what-works', 'https://countycommons.us/us/transparency', 'https://countycommons.us/us/tour', 'https://countycommons.us/us/common-ground', 'https://countycommons.us/us/research', 'https://countycommons.us/us/act', 'https://countycommons.us/us/build', 'https://countycommons.us/us/copy', 'https://countycommons.us/us/license'];
   for (const st of Object.keys(N.byState)) {
     out.push(`https://countycommons.us/us/${st.toLowerCase()}`);
     for (const c of N.byState[st]) out.push(`https://countycommons.us/us/${st.toLowerCase()}/${c.slug}`, `https://countycommons.us/us/${st.toLowerCase()}/${c.slug}/compare`);
@@ -340,7 +340,7 @@ function sitemapUrls() {
 
 // The national pages' own drop-box and "still building" page (same private
 // store and public fix log as the county sites).
-const KINDS = { correction: 'Correct something', add: 'Add information', document: 'Send a document', request: 'Request a full site for a county', problem: 'Something’s broken' };
+const KINDS = { correction: 'Correct something', add: 'Add information', document: 'Send a document', request: 'Request a full site for a county', problem: 'Something’s broken', idea: 'Suggest an idea' };
 function feedbackPage({ from, kind, sent, error }) {
   kind = KINDS[kind] ? kind : 'correction';
   const f = 'font-family:var(--mono);font-size:14px;padding:8px 10px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink);width:100%;box-sizing:border-box';

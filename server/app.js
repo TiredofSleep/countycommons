@@ -133,7 +133,7 @@ app.use((req, res, next) => {
         const id = new Date().toISOString().slice(0, 19).replace(/[T:]/g, '-') + '-' + crypto.randomBytes(3).toString('hex');
         fs.writeFileSync(path.join(FEEDBACK_DIR, id + '.json'), JSON.stringify({
           id, ts: new Date().toISOString(), site: 'us', page: String(b.page || '').trim().slice(0, 300),
-          kind: ['correction', 'add', 'document', 'request', 'problem'].includes(b.kind) ? b.kind : 'other', message,
+          kind: ['correction', 'add', 'document', 'request', 'problem', 'idea'].includes(b.kind) ? b.kind : 'other', message,
           source: String(b.source || '').trim().slice(0, 500), contact: String(b.contact || '').trim().slice(0, 200),
           credit: b.credit === '1' ? (String(b.credit_name || '').trim().slice(0, 80) || null) : null, screenshot: null
         }, null, 2));
@@ -168,6 +168,17 @@ app.use((req, res, next) => {
       const link = `https://countycommons.us/us/${c.st.toLowerCase()}/${c.slug}`;
       return require('qrcode').toString(link + '?via=post#common-ground', { type: 'svg', margin: 1, errorCorrectionLevel: 'M', color: { dark: '#1E2A32', light: '#FAFBF7' } })
         .then(qr => res.send(require('./lib/common').postPage(c, nv.stateName(c.st), qr, link)), next);
+    }
+    // The three ways in: research, make a change, help build.
+    const usPath = p.match(/^\/us\/(research|act|build)\/?$/);
+    if (usPath && req.method === 'GET') { traffic.note('__network__', req); return res.send(require('./views/paths')[usPath[1]](require('./views/national'))); }
+    // A typed county name → that county's page (or one of its tools).
+    if (/^\/us\/go\/?$/.test(p) && req.method === 'GET') {
+      const nv = require('./views/national');
+      const to = nv.matchCounty(String(req.query.st || '').slice(0, 2), String(req.query.county || '').slice(0, 60));
+      const tail = { compare: '/compare', flyer: '/flyer', post: '/post', officials: '/officials' }[String(req.query.to || '')] || '';
+      if (to) return res.redirect(to + tail);
+      return res.status(404).send(gatePage('We couldn’t find that county. Check the spelling, like “Pulaski”.', '/us'));
     }
     // Common ground: the asks people of every party can sign, counted nationally.
     if (/^\/us\/common-ground\/?$/.test(p) && req.method === 'GET') { traffic.note('__network__', req); return res.send(require('./lib/common').page(require('./views/national'))); }
@@ -287,7 +298,15 @@ app.use((req, res, next) => {
       res.set('Content-Security-Policy', "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; frame-ancestors 'none'");
       return res.send(gatePage(null, '/', String(req.query.q || '').slice(0, 80).trim()));
     }
-    return res.redirect(301, `https://${r.to}${req.originalUrl}`);
+    // Any other address at the front door: the network-wide page if there is
+    // one, the founding documents where they live, else the front door itself.
+    // (This used to send everything to the first county's site, which made the
+    // whole network look like one county.)
+    const NAT = { '/petitions': '/us/petitions', '/tour': '/us/tour', '/guide': '/us/tour', '/transparency': '/us/transparency', '/common-ground': '/us/common-ground', '/feedback': '/us/feedback', '/building': '/us/building', '/ask': '/us/ask', '/what-works': '/us/what-works', '/counties': '/us', '/compare': '/us/research', '/coverage': '/us/research', '/participate': '/us/build', '/research': '/us/research', '/act': '/us/act', '/build': '/us/build', '/help-build': '/us/build', '/copy': '/us/copy', '/license': '/us/license' };
+    const bare = p.replace(/\/+$/, '') || '/';
+    if (NAT[bare]) return res.redirect(301, NAT[bare]);
+    if (/^\/(never|security|methodology|stance|story|field|receipts|food|sovereignty|growops|engine|almanac|feed|frontier|kindred|justice|surveillance)\/?$/.test(p)) return res.redirect(301, `https://${r.to}${req.originalUrl}`);
+    return res.redirect(302, '/');
   }
   req.tenantKey = r.key;
   next();
@@ -398,7 +417,7 @@ function safeDest(next) {
 
 // The front door: a plain "select your county or city" page. Pick a place and
 // you're in — no PIN needed to read (the site is public). Hosts enter a code to
-// edit their own county. A quick access code (1525) also opens the whole network.
+// edit their own county.
 const directory = require('./lib/directory');
 // The finder on the opening page: a search box over every county and town in the
 // country, the results, and every state as a link. Works with no JavaScript.
@@ -427,7 +446,7 @@ function findBlock(q) {
   return box + found + grid;
 }
 
-function gatePage(msg, next, q) {
+function gatePage(msg, next, q, signin) {
   const dest = safeDest(next);
   const groups = directory.byState();
   const finder = findBlock(q || '');
@@ -456,25 +475,24 @@ function gatePage(msg, next, q) {
   <h1>Follow your county’s money, and ask for what’s missing</h1>
   <p class="src" style="max-width:62ch">Budgets traced line by line to the page they came from, a 30-point check of what each county puts online, and petitions and records requests to get the rest. <b>County Commons is an independent community project — not a government website.</b></p>
   ${msg ? `<p class="src" style="color:var(--dead)">${esc(msg)}</p>` : ''}
+  ${msg ? '' : require('./views/hero').doCards()}
   ${msg || q ? '' : require('./views/hero').heroFilm()}
   ${finder}
   <p style="margin:18px 0 4px"><a href="/us/tour" style="display:inline-block;font-family:var(--mono);font-size:14px;font-weight:600;padding:9px 16px;border:1.5px solid var(--ink);background:var(--ink);color:var(--paper);text-decoration:none">▶ Take the tour — see how it works</a></p>
   ${require('./views/hero').commonStrip()}
-  <h2 style="margin:26px 0 4px;font-size:21px">What you can do here</h2>
-  ${require('./views/hero').doCards()}
   <details style="margin:24px 0 0"><summary style="cursor:pointer;font-weight:600;font-size:16px">Full County Commons sites <span class="sub">— ${directory.featured().length} places with their budget traced line by line</span></summary>
   ${list || '<p class="src">No sites are published yet.</p>'}
   </details>
-  <details style="margin:22px 0 0;border-top:1px solid var(--rule);padding-top:12px">
-    <summary style="cursor:pointer;font-size:13.5px;color:var(--accent)">Have a code? (hosts, or quick access)</summary>
+  ${signin ? `<details open style="margin:22px 0 0;border-top:1px solid var(--rule);padding-top:12px">
+    <summary style="cursor:pointer;font-size:13.5px;color:var(--accent)">Host sign-in</summary>
     <form method="POST" action="/gate" style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap;max-width:360px">
-      <input type="password" name="pin" aria-label="Access code" autocomplete="off" placeholder="access code"
+      <input type="password" name="pin" aria-label="Host code" autocomplete="off" placeholder="host code"
         style="font-family:var(--mono);font-size:15px;padding:8px 10px;border:1.5px solid var(--ink);background:var(--card);color:var(--ink);flex:1;min-width:140px">
       <input type="hidden" name="next" value="${esc(dest)}">
       <button type="submit" style="font-family:var(--mono);font-size:13px;padding:8px 14px;background:var(--ink);color:var(--paper);border:1.5px solid var(--ink);cursor:pointer">Enter</button>
     </form>
-    <p class="src" style="margin-top:8px">A host code opens your county's admin. Quick access code: <b>1525</b>.</p>
-  </details>
+    <p class="src" style="margin-top:8px">For county hosts: your host code opens your county’s admin. Reading the site never needs a code.</p>
+  </details>` : ''}
 </header></div></body></html>`;
 }
 
@@ -493,20 +511,20 @@ app.get('/enter', (req, res) => {
   return res.redirect(`https://${t.host}/`);
 });
 
-app.get('/gate', (req, res) => res.send(gatePage(null, req.query.next || '/')));
+app.get('/gate', (req, res) => res.send(gatePage(null, req.query.next || '/', '', true)));
 app.post('/gate', writeLimit, express.urlencoded({ extended: false }), (req, res) => {
   const ip = req.ip || 'unknown';
   const lock = access.lockState(ip);
   if (lock.locked) {
     const mins = Math.ceil((lock.until - Date.now()) / 60000);
-    return res.status(429).send(gatePage(`Too many attempts. Try again in about ${mins} minute${mins === 1 ? '' : 's'}.`, safeDest(req.body && req.body.next)));
+    return res.status(429).send(gatePage(`Too many attempts. Try again in about ${mins} minute${mins === 1 ? '' : 's'}.`, safeDest(req.body && req.body.next), '', true));
   }
   const given = (req.body && req.body.pin) || '';
   const dest = safeDest(req.body && req.body.next);
   const hit = access.lookupPin(given);
   if (!hit) {
     access.noteFailure(ip);
-    return res.status(401).send(gatePage('That PIN did not match.', dest));
+    return res.status(401).send(gatePage('That code did not match.', dest, '', true));
   }
   access.noteSuccess(ip);
   res.setHeader('Set-Cookie',
@@ -624,13 +642,13 @@ app.use((req, res, next) => {
 function requireAdmin(req, res, next) {
   if (req.access && (req.access.role === 'owner' ||
       (req.access.role === 'admin' && req.access.tenant === req.tenantKey))) return next();
-  res.status(403).send(gatePage('That area needs a host code for this county.', '/admin'));
+  res.status(403).send(gatePage('That area needs a host code for this county.', '/admin', '', true));
 }
 
 // Owner guard: for /owner routes, require the owner credential.
 function requireOwner(req, res, next) {
   if (req.access && req.access.role === 'owner') return next();
-  res.status(403).send(gatePage('That area needs the owner code.', '/owner'));
+  res.status(403).send(gatePage('That area needs the owner code.', '/owner', '', true));
 }
 
 // Downgrade any pre-existing persistent participant cookie to session scope:
