@@ -45,11 +45,11 @@ function block(c, opts) {
   }).join('');
   const f = 'font-size:16px;padding:8px;width:100%;box-sizing:border-box';
   const err = { name: 'Please add your name — like signing a paper petition.', town: 'Please add your town.', junk: 'That didn’t look like a real signature.' }[o.cg] || '';
-  const link = `https://countycommons.us${base}#common-ground`;
+  const link = `https://countycommons.us${base}/common-ground`;
   const btn = 'font-family:var(--mono);font-size:14px;font-weight:600;padding:8px 14px;border:1.5px solid var(--ink);color:var(--ink);text-decoration:none';
   const form = o.cg === 'signed'
     ? `<div class="issue" style="display:block;border-left:3px solid var(--sourced)"><b>✓ Thank you. You signed all four for ${esc(c.name)}.</b> <span class="src">Each is counted here and delivered at its goal. The fastest way to reach it: send this to a few neighbors.</span>
-<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px"><a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(link.replace('#', '?via=fb#'))}" rel="noopener" style="${btn};background:var(--ink);color:var(--paper)">Share on Facebook</a><a href="sms:?&body=${encodeURIComponent('Four things most of us in ' + c.name + ' can agree on. Takes a minute: ' + link.replace('#', '?via=text#'))}" style="${btn}">Text it</a><a href="${abs}${base}/post" style="${btn}">Get the image to post</a></div></div>`
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px"><a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(link + '?via=fb')}" rel="noopener" style="${btn};background:var(--ink);color:var(--paper)">Share on Facebook</a><a href="sms:?&body=${encodeURIComponent('Four things most of us in ' + c.name + ' can agree on. Takes a minute: ' + link + '?via=text')}" style="${btn}">Text it</a><a href="${abs}${base}/post" style="${btn}">Get the image to post</a><a href="${abs}${base}/paperwork" style="${btn}">Take it further: paperwork to print</a></div></div>`
     : `<form method="post" action="${abs}${base}/common-ground/sign" style="display:grid;gap:8px;max-width:520px;border:2px solid var(--ink);background:var(--card);padding:14px 16px">
   <b style="font-size:18px">Sign all four for ${esc(c.name)}</b>
   ${err ? `<p class="src" style="color:var(--dead);margin:0">${esc(err)}</p>` : ''}
@@ -66,6 +66,7 @@ function block(c, opts) {
 <h2>Common ground <span class="sub">— asks people of every party can sign</span></h2>
 <p class="src" style="max-width:none">Four petitions to ${esc(A.addressee(c))}: clean water, every dollar in the open, grants shown start to finish, and the facts before any data center vote. Each is counted in ${esc(c.name)} and delivered at its goal, with the answer posted. <a href="${abs}/us/common-ground">Across the country →</a></p>
 ${form}
+<p style="margin:8px 0 12px"><a href="${abs}${base}/paperwork" style="font-weight:600">Make it official: draft ordinances, letters and an agenda request to print →</a></p>
 ${rows}
 </section>`;
 }
@@ -146,8 +147,18 @@ h1{font-size:76px;line-height:1.02;margin:14px 0 12px;font-weight:700;letter-spa
 <h1>What we can agree on</h1>
 <p class="sub">Four petitions to ${esc(A.addressee(c).replace(/^the /, 'the '))}. Counted here, delivered at the goal, the answer posted.</p></div>
 <div class="rows">${rows}</div>
-<div class="foot"><div class="qr">${qrSvg}</div><div><div class="cta">Add your voice. It takes a minute.</div><div class="url">${esc(link.replace(/^https:\/\//, ''))}</div><div class="fine">Petitions started by Brayden Sanders, founder of County Commons, an independent, nonpartisan public-records project. Not a government website. Names are never shown.</div></div></div>
+<div class="foot"><div class="qr">${qrSvg}</div><div><div class="cta">Sign all four. It takes a minute.</div><div class="url">${esc(link.replace(/^https:\/\//, ''))}</div><div class="fine">Petitions started by Brayden Sanders, founder of County Commons, an independent, nonpartisan public-records project. Not a government website. Names are never shown.</div></div></div>
 </div></body></html>`;
 }
 
-module.exports = { THEMES, block, blockForSite, page, postPage, fact };
+// The county's own sign-all page: the headline, the one form, the four asks.
+function countyPage(c, nv, opts) {
+  const body = `<header class="page"><div class="eyebrow">${esc(c.name)}, ${esc(nv.stateName(c.st))} · common ground</div>
+<h1>Four things most of us in ${esc(c.name)} can agree on</h1>
+<div class="src" style="font-size:15.5px">Clean water, every dollar in the open, grants shown start to finish, and the facts before any data center vote. One form signs all four. Started by ${esc(require('./asks').campaigns().started_by)}.</div></header>
+<div id="sign"></div>${block(c, opts).replace(/<h2>Common ground[\s\S]*?<\/p>\n/, '')}
+<section><p class="src" style="max-width:none"><a href="/us/${esc(c.st.toLowerCase())}/${esc(c.slug)}">Everything about ${esc(c.name)} →</a></p></section>`;
+  return nv.page({ title: `Sign all four: common ground in ${c.name}, ${nv.stateName(c.st)} · County Commons`, description: `Four petitions to ${c.name}'s officials that people of every party can sign: clean water, every payment online, grants shown start to finish, and the facts before any data center vote. One form signs all four.`, canonical: `https://countycommons.us/us/${c.st.toLowerCase()}/${c.slug}/common-ground`, body });
+}
+
+module.exports = { THEMES, block, blockForSite, page, postPage, countyPage, fact };

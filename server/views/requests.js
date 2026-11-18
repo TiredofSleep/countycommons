@@ -125,13 +125,16 @@ ${s ? `${s.answered_at ? '' : `<h2>Support this request</h2><form method="post" 
 // The box under an information petition: the two things a signer can print.
 function takeFurther(c, camp, { abs } = {}) {
   if (!c || !camp) return '';
-  const base = `${abs ? 'https://countycommons.us' : ''}/us/${c.st.toLowerCase()}/${c.slug}/ask/${camp.id}`;
+  const county = `${abs ? 'https://countycommons.us' : ''}/us/${c.st.toLowerCase()}/${c.slug}`;
+  const base = `${county}/ask/${camp.id}`;
   const rec = R.recordFor(camp.id, c.st); const s = rec ? R.status(c.geoid, camp.id) : null;
   return `
 <section id="further">
 <h2>Take it further</h2>
 <div class="issue" style="display:block"><b><a href="${esc(base)}/letter">Print your letter to ${esc(c.name)}’s elected officials →</a></b><p class="src" style="margin:4px 0 0">Addressed, with what County Commons found and the standard. Sign it and mail it or hand it in.</p></div>
 ${rec ? `<div class="issue" style="display:block"><b><a href="${esc(base)}/request">${s ? 'See the public records request and add your support →' : 'Print the public records request →'}</a></b><p class="src" style="margin:4px 0 0">${s ? `Filed ${esc(nice(s.filed_at))}${s.answered_at ? ` · answered ${esc(nice(s.answered_at))}` : s.overdue ? ' · no answer reported here yet' : ` · due about ${esc(nice(s.due))}`} · ${s.supporters} supporting.` : `One precise request under ${esc(R.law(c.st).law)}, filed once for ${esc(c.name)}. Be the one to send it.`}</p></div>` : ''}
+${camp.ordinance ? `<div class="issue" style="display:block"><b><a href="${esc(county)}/paperwork/ordinance/${esc(camp.id)}">Print a draft ordinance and ask a member to sponsor it →</a></b><p class="src" style="margin:4px 0 0">A starting point for the county attorney to review, with a cover letter.</p></div>` : ''}
+<p class="src" style="max-width:none"><a href="${esc(county)}/paperwork">All the paperwork for ${esc(c.name)} →</a></p>
 </section>`;
 }
 
@@ -192,4 +195,4 @@ function meterFlyer(c, stateName, qrSvg, link) {
 </body></html>`;
 }
 
-module.exports = { officialsLetter, requestPage, takeFurther, forPetition, officialsGuide, meterFlyer };
+module.exports = { officialsLetter, requestPage, takeFurther, forPetition, officialsGuide, meterFlyer, officialsTo, PRINT_CSS };

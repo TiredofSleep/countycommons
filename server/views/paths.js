@@ -51,11 +51,13 @@ function act(nv) {
 <p><a href="/us/common-ground" style="${btn}">Common ground: four asks people of every party can sign →</a></p>
 <p class="src" style="max-width:none">Clean water, every dollar in the open, grants shown start to finish, and the facts before any data center vote.</p></section>
 <section><h2>More ways to act</h2>${list([
+    item('/us/act#paperwork', 'Make it official: paperwork to print', 'Draft ordinances with a letter asking a member of your county’s governing body to sponsor them, a request for time on the meeting agenda, letters to your officials and public records requests. Pick your county below.'),
     item('/us/ask', 'Ask your county to publish what’s missing', 'Each transparency box a county doesn’t meet is a petition asking it to post the record.'),
     item('/us/petitions', 'Every petition', 'Search petitions to counties, states and Congress.'),
     item('/us/ask', 'File one public records request for everyone', `After you sign an information petition in ${esc(states)}, you can print one precise records request, citing the state’s law. It’s filed once per county, everyone else adds support, and the answer is posted.`),
     item('/us/act#share', 'Share it in your county', 'Every county has a printable one-page flyer and a ready-made social media image with a QR code.')
   ])}</section>
+<section id="paperwork"><h2>Paperwork for your county</h2>${picker(nv, '/us/go', 'Open your county’s paperwork', 'paperwork')}</section>
 <section id="share"><h2>Get your county’s flyer or social media image</h2>
 ${picker(nv, '/us/go', 'Flyer (print)', 'flyer')}
 ${picker(nv, '/us/go', 'Social media image', 'post')}</section>`;

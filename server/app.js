@@ -158,13 +158,32 @@ app.use((req, res, next) => {
       return require('qrcode').toString(link + '?via=flyer#transparency', { type: 'svg', margin: 1, errorCorrectionLevel: 'M' })
         .then(qr => res.send(require('./views/requests').meterFlyer(c, nv.stateName(c.st), qr, link)), next);
     }
+    // Make it official: a county's paperwork (draft ordinances, agenda request, links to letters and records requests).
+    const usPW = p.match(/^\/us\/([a-z]{2})\/([a-z0-9-]+)\/paperwork(?:\/(agenda)|\/ordinance\/([a-z0-9-]{2,60}))?\/?$/);
+    if (usPW && req.method === 'GET') {
+      const nv = require('./views/national'), PW = require('./views/paperwork');
+      const c = nv.countyRec(usPW[1], usPW[2]);
+      if (!c || !require('./lib/asks').deliverable(c)) return res.status(404).send(gatePage('No county at that address.', '/us'));
+      traffic.note('__network__', req); traffic.step('paperwork', req);
+      const html = usPW[3] ? PW.agenda(c, nv) : usPW[4] ? PW.ordinance(c, nv, usPW[4]) : PW.hub(c, nv);
+      return html ? res.send(html) : res.status(404).send(gatePage('No draft at that address.', `/us/${c.st.toLowerCase()}/${c.slug}/paperwork`));
+    }
+    // A county's sign-all-four page: where the social posts and flyers point.
+    const usCGp = p.match(/^\/us\/([a-z]{2})\/([a-z0-9-]+)\/common-ground\/?$/);
+    if (usCGp && req.method === 'GET') {
+      const nv = require('./views/national');
+      const c = nv.countyRec(usCGp[1], usCGp[2]);
+      if (!c || !require('./lib/asks').deliverable(c)) return res.status(404).send(gatePage('No county at that address.', '/us'));
+      traffic.note('__network__', req); traffic.step('common_ground', req);
+      return res.send(require('./lib/common').countyPage(c, nv, { cg: String(req.query.cg || '').slice(0, 10) }));
+    }
     // Sign all four common ground asks for a county with one form.
     const usCG = p.match(/^\/us\/([a-z]{2})\/([a-z0-9-]+)\/common-ground\/sign\/?$/);
     if (usCG && req.method === 'POST') return writeLimit(req, res, () => express.urlencoded({ extended: false })(req, res, () => {
       const nv = require('./views/national'), A = require('./lib/asks'), CG = require('./lib/common');
       const c = nv.countyRec(usCG[1], usCG[2]);
       if (!c || !A.deliverable(c)) return res.status(404).send(gatePage('No county at that address.', '/us'));
-      const countyPath = `/us/${c.st.toLowerCase()}/${c.slug}`, back = (q) => res.redirect(countyPath + '?cg=' + q + '#common-ground');
+      const countyPath = `/us/${c.st.toLowerCase()}/${c.slug}`, back = (q) => res.redirect(countyPath + '/common-ground?cg=' + q + '#sign');
       const b = req.body || {};
       if (b.website) return back('signed');
       const name = String(b.name || '').trim(), town = String(b.town || '').trim();
@@ -187,8 +206,8 @@ app.use((req, res, next) => {
       const nv = require('./views/national');
       const c = nv.countyRec(usPost[1], usPost[2]);
       if (!c) return res.status(404).send(gatePage('No county at that address.', '/us'));
-      const link = `https://countycommons.us/us/${c.st.toLowerCase()}/${c.slug}`;
-      return require('qrcode').toString(link + '?via=post#common-ground', { type: 'svg', margin: 1, errorCorrectionLevel: 'M', color: { dark: '#1E2A32', light: '#FAFBF7' } })
+      const link = `https://countycommons.us/us/${c.st.toLowerCase()}/${c.slug}/common-ground`;
+      return require('qrcode').toString(link + '?via=post', { type: 'svg', margin: 1, errorCorrectionLevel: 'M', color: { dark: '#1E2A32', light: '#FAFBF7' } })
         .then(qr => res.send(require('./lib/common').postPage(c, nv.stateName(c.st), qr, link)), next);
     }
     // The three ways in: research, make a change, help build.
@@ -198,7 +217,7 @@ app.use((req, res, next) => {
     if (/^\/us\/go\/?$/.test(p) && req.method === 'GET') {
       const nv = require('./views/national');
       const to = nv.matchCounty(String(req.query.st || '').slice(0, 2), String(req.query.county || '').slice(0, 60));
-      const tail = { compare: '/compare', flyer: '/flyer', post: '/post', officials: '/officials', cg: '#common-ground' }[String(req.query.to || '')] || '';
+      const tail = { compare: '/compare', flyer: '/flyer', post: '/post', officials: '/officials', cg: '/common-ground', paperwork: '/paperwork' }[String(req.query.to || '')] || '';
       if (to) return res.redirect(to + tail);
       return res.status(404).send(gatePage('We couldn’t find that county. Check the spelling, like “Pulaski”.', '/us'));
     }
