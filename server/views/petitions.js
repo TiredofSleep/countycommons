@@ -194,20 +194,10 @@ function petitionPage(data, p, opts) {
   <h1 style="margin-bottom:6px">${esc(p.title)}</h1>
   <div class="src" style="font-size:15px">A petition to <b>${esc(to)}</b>, started by ${p.by ? esc(p.by) : 'a resident'} on ${esc(String(p.created_at).slice(0, 10))}.</div>
 </header>
-<section>
-${PV.progressBar(p.support, goal, null)}
-<p class="src" style="margin:4px 0 0">${p.support >= goal ? 'The goal is reached — this petition is ready to be printed and delivered.' : `At ${goal.toLocaleString('en-US')} signatures it’s printed, with the count by ${lvl.kind === 'national' || lvl.kind === 'state' ? 'county' : 'town'}, and ${lvl.kind === 'national' || lvl.kind === 'state' ? `delivered to the offices of ${esc(to)}` : `handed to ${esc(to)} at a public meeting`}.`}</p>
-${sharedStrip(p)}
-<h2 style="margin-top:16px">Why it matters</h2>
-<p style="white-space:pre-line">${esc(p.why)}</p>
-${sourcesLine(p)}
-${p.reasons.length ? `<h3>What signers added</h3>${p.reasons.slice(-6).reverse().map(r => `<p class="src" style="max-width:none;border-left:2px solid var(--rule);padding-left:10px">“${esc(r)}”</p>`).join('')}` : ''}
-</section>
-${o.signed || o.mine ? shareBlock(data, p, goal) : ''}
-${require('./requests').forPetition(p, { abs: true })}
 <section id="sign">
+${require('../lib/milestone').block(p.support, goal, p.support >= goal ? '' : `At the goal it’s printed, with the count by ${lvl.kind === 'national' || lvl.kind === 'state' ? 'county' : 'town'}, and ${lvl.kind === 'national' || lvl.kind === 'state' ? `delivered to the offices of ${esc(to)}` : `handed to ${esc(to)} at a public meeting`}.`)}
 ${o.mine ? `<p><b>✓ You’ve signed this petition.</b> ${o.signed ? 'Thank you — now pass it on.' : ''}</p>` : `
-<h2>Sign</h2>
+<h2 style="text-transform:none;letter-spacing:0">Sign</h2>
 ${err ? `<p class="src" style="color:var(--dead)">${esc(err)}</p>` : ''}
 <form method="post" action="/petitions/${esc(p.id)}/sign" style="display:grid;gap:8px;max-width:520px">
   <label><b>Your name</b><br><input name="name" required maxlength="60" autocomplete="name" style="width:100%;font-size:16px;padding:8px"></label>
@@ -221,6 +211,15 @@ ${err ? `<p class="src" style="color:var(--dead)">${esc(err)}</p>` : ''}
   <p class="src" style="margin:0">Your name, town and email are never shown on this site, sold or shared. The public sees only how many signed and from which towns. One signature per person.</p>
 </form>`}
 </section>
+${o.signed || o.mine ? shareBlock(data, p, goal) : ''}
+<section>
+${sharedStrip(p)}
+<h2 style="margin-top:16px">Why it matters</h2>
+<p style="white-space:pre-line">${esc(p.why)}</p>
+${sourcesLine(p)}
+${p.reasons.length ? `<h3>What signers added</h3>${p.reasons.slice(-6).reverse().map(r => `<p class="src" style="max-width:none;border-left:2px solid var(--rule);padding-left:10px">“${esc(r)}”</p>`).join('')}` : ''}
+</section>
+${require('./requests').forPetition(p, { abs: true })}
 ${!(o.signed || o.mine) ? shareBlock(data, p, goal) : ''}
 <section>
 <h2>Who has signed <span class="sub">— by town</span></h2>

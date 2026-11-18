@@ -93,7 +93,7 @@ app.use((req, res, next) => {
       const countyPath = (s) => { const m = /^\/us\/([a-z]{2})\/([a-z0-9-]+)$/.exec(String(s || '')); return m && nv.countyName(m[1], m[2]) ? m[0] : ''; };
       const here = '/us/petitions/' + pet.id;
       if (!usPet[2] && req.method === 'GET') {
-        traffic.note('__network__', req);
+        traffic.note('__network__', req); traffic.step('petition', req);
         const participant = participantOf(req);
         const own = participant && (priorities.get(pet.id).supporters || {})[participant];
         return res.send(nv.usPetitionPage(pet, { from: countyPath(req.query.from), mine: !!(own && own.signed), signed: req.query.signed === '1', error: String(req.query.error || '').slice(0, 20) }));
@@ -112,6 +112,7 @@ app.use((req, res, next) => {
         const participant = ensureParticipant(req, res);
         require('./identity').register(participant, { name, city: town, email });
         priorities.support(participant, pet.id, '', { town, deliver: b.deliver === '1', site: from });
+        traffic.step('signed', req);
         res.redirect(here + '?from=' + encodeURIComponent(from) + '&signed=1#share');
       }));
       return res.status(405).send('Method not allowed');
@@ -157,6 +158,29 @@ app.use((req, res, next) => {
       return require('qrcode').toString(link + '?via=flyer#transparency', { type: 'svg', margin: 1, errorCorrectionLevel: 'M' })
         .then(qr => res.send(require('./views/requests').meterFlyer(c, nv.stateName(c.st), qr, link)), next);
     }
+    // Sign all four common ground asks for a county with one form.
+    const usCG = p.match(/^\/us\/([a-z]{2})\/([a-z0-9-]+)\/common-ground\/sign\/?$/);
+    if (usCG && req.method === 'POST') return writeLimit(req, res, () => express.urlencoded({ extended: false })(req, res, () => {
+      const nv = require('./views/national'), A = require('./lib/asks'), CG = require('./lib/common');
+      const c = nv.countyRec(usCG[1], usCG[2]);
+      if (!c || !A.deliverable(c)) return res.status(404).send(gatePage('No county at that address.', '/us'));
+      const countyPath = `/us/${c.st.toLowerCase()}/${c.slug}`, back = (q) => res.redirect(countyPath + '?cg=' + q + '#common-ground');
+      const b = req.body || {};
+      if (b.website) return back('signed');
+      const name = String(b.name || '').trim(), town = String(b.town || '').trim();
+      if (!spam.plainName(name)) return back(name ? 'junk' : 'name');
+      if (!spam.plainName(town)) return back(town ? 'junk' : 'town');
+      const email = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(b.email || '').trim()) ? String(b.email).trim() : '';
+      const participant = ensureParticipant(req, res);
+      require('./identity').register(participant, { name, city: town, email });
+      for (const t of CG.THEMES) {
+        const camp = A.byId(t.camp); if (!camp) continue;
+        const pet = A.ensure(c, camp, nv.stateName(c.st));
+        if (pet) priorities.support(participant, pet.id, '', { town, deliver: b.deliver === '1', site: countyPath });
+      }
+      traffic.step('signed_all', req);
+      back('signed');
+    }));
     // A county's common ground asks as a 1080×1350 social media post.
     const usPost = p.match(/^\/us\/([a-z]{2})\/([a-z0-9-]+)\/post\/?$/);
     if (usPost && req.method === 'GET') {
@@ -169,17 +193,17 @@ app.use((req, res, next) => {
     }
     // The three ways in: research, make a change, help build.
     const usPath = p.match(/^\/us\/(research|act|build)\/?$/);
-    if (usPath && req.method === 'GET') { traffic.note('__network__', req); return res.send(require('./views/paths')[usPath[1]](require('./views/national'))); }
+    if (usPath && req.method === 'GET') { traffic.note('__network__', req); traffic.step(usPath[1], req); return res.send(require('./views/paths')[usPath[1]](require('./views/national'))); }
     // A typed county name → that county's page (or one of its tools).
     if (/^\/us\/go\/?$/.test(p) && req.method === 'GET') {
       const nv = require('./views/national');
       const to = nv.matchCounty(String(req.query.st || '').slice(0, 2), String(req.query.county || '').slice(0, 60));
-      const tail = { compare: '/compare', flyer: '/flyer', post: '/post', officials: '/officials' }[String(req.query.to || '')] || '';
+      const tail = { compare: '/compare', flyer: '/flyer', post: '/post', officials: '/officials', cg: '#common-ground' }[String(req.query.to || '')] || '';
       if (to) return res.redirect(to + tail);
       return res.status(404).send(gatePage('We couldn’t find that county. Check the spelling, like “Pulaski”.', '/us'));
     }
     // Common ground: the asks people of every party can sign, counted nationally.
-    if (/^\/us\/common-ground\/?$/.test(p) && req.method === 'GET') { traffic.note('__network__', req); return res.send(require('./lib/common').page(require('./views/national'))); }
+    if (/^\/us\/common-ground\/?$/.test(p) && req.method === 'GET') { traffic.note('__network__', req); traffic.step('common_ground', req); return res.send(require('./lib/common').page(require('./views/national'))); }
     // The tour: a real county's page, stop by stop (Clark by default).
     if (/^\/us\/tour\/?$/.test(p) && req.method === 'GET') {
       const nv = require('./views/national');
@@ -252,6 +276,7 @@ app.use((req, res, next) => {
         if (have && req.query.signed !== '1') return res.redirect(/^us:/.test(String(have.tenant)) ? A.urlOf(have) + '?from=' + encodeURIComponent(countyPath) : A.urlOf(have));
         const pet = have ? priorities.getPublic(have.id) : Object.assign({ support: 0 }, A.draft(c, camp, S));
         if (!pet) return res.status(404).send(gatePage('No petition at that address.', '/us'));
+        traffic.step('petition', req);
         return res.send(nv.usPetitionPage(asShown(pet), { from: countyPath, mine: !!have && req.query.signed === '1', signed: req.query.signed === '1', error: String(req.query.error || '').slice(0, 20), action: here + '/sign', link: 'https://countycommons.us' + here }));
       }
       if (usAsk[4] === '/sign' && req.method === 'POST') return writeLimit(req, res, () => express.urlencoded({ extended: false })(req, res, () => {
@@ -267,6 +292,7 @@ app.use((req, res, next) => {
         const participant = ensureParticipant(req, res);
         require('./identity').register(participant, { name, city: town, email });
         priorities.support(participant, pet.id, '', { town, deliver: b.deliver === '1', site: countyPath });
+        traffic.step('signed', req);
         res.redirect(here + '?signed=1#share');
       }));
       return res.status(405).send('Method not allowed');
@@ -288,11 +314,13 @@ app.use((req, res, next) => {
     if (us) {
       const nv = require('./views/national');
       traffic.note('__network__', req);
-      const html = !us[1] && us[2] === 'what-works' ? nv.whatWorksPage() : !us[1] && us[2] === 'transparency' ? nv.transparencyPage() : !us[1] && us[2] ? null : !us[1] ? nv.usPage() : !us[2] ? nv.statePage(us[1].toUpperCase()) : nv.countyPage(us[1].toUpperCase(), us[2]);
+      const html = !us[1] && us[2] === 'what-works' ? nv.whatWorksPage() : !us[1] && us[2] === 'transparency' ? nv.transparencyPage() : !us[1] && us[2] ? null : !us[1] ? nv.usPage() : !us[2] ? nv.statePage(us[1].toUpperCase()) : nv.countyPage(us[1].toUpperCase(), us[2], { cg: String(req.query.cg || '').slice(0, 10) });
+      if (us[1] && us[2]) traffic.step('county', req);
       return html ? res.send(html) : res.status(404).send(gatePage('No county at that address.', '/'));
     }
     if (p === '/') {
       traffic.note('__network__', req); // count the landing + where it came from
+      if (!req.query.q) traffic.step('home', req);
       res.set('Content-Security-Policy', "default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; frame-ancestors 'none'");
       return res.send(gatePage(null, '/', String(req.query.q || '').slice(0, 80).trim()));
     }
@@ -439,7 +467,7 @@ function findBlock(q) {
       ? `<section aria-live="polite" style="margin:10px 0 0"><p class="src" style="margin:0">${results.length === 40 ? 'The first 40 matches' : results.length + ' match' + (results.length === 1 ? '' : 'es')} for “${esc(q)}”.${results.length > 8 ? ' Add your state to narrow it, like “' + esc(q) + ', ' + esc(results.find(r => r.kind === 'county').stateName) + '”.' : ''}</p><ul style="padding-left:18px;margin:6px 0">${results.map(row).join('')}</ul></section>`
       : `<section aria-live="polite" style="margin:10px 0 0"><p style="margin:0">No county or town matched “${esc(q)}”. Try just the county’s name, or pick your state below.</p></section>`;
   }
-  const grid = `<details style="margin:12px 0 0"${q ? '' : ' open'}><summary style="cursor:pointer;font-weight:600">Or pick your state</summary>
+  const grid = `<details style="margin:12px 0 0"><summary style="cursor:pointer;font-weight:600">Or pick your state</summary>
     <ul style="columns:4 140px;padding-left:18px;margin:8px 0 0">${states.map(s => `<li><a href="/us/${esc(s.st.toLowerCase())}">${esc(s.name)}</a> <span class="soft" style="font-size:12px">${s.n}</span></li>`).join('')}</ul></details>`;
   return box + found + grid;
 }
@@ -473,9 +501,9 @@ function gatePage(msg, next, q) {
   <h1>Follow your county’s money, and ask for what’s missing</h1>
   <p class="src" style="max-width:62ch">Budgets traced line by line to the page they came from, a 30-point check of what each county puts online, and petitions and records requests to get the rest. <b>County Commons is an independent community project — not a government website.</b></p>
   ${msg ? `<p class="src" style="color:var(--dead)">${esc(msg)}</p>` : ''}
+  ${finder}
   ${msg ? '' : require('./views/hero').doCards()}
   ${msg || q ? '' : require('./views/hero').heroFilm()}
-  ${finder}
   <p style="margin:18px 0 4px"><a href="/us/tour" style="display:inline-block;font-family:var(--mono);font-size:14px;font-weight:600;padding:9px 16px;border:1.5px solid var(--ink);background:var(--ink);color:var(--paper);text-decoration:none">▶ Take the tour — see how it works</a></p>
   ${require('./views/hero').commonStrip()}
   <details style="margin:24px 0 0"><summary style="cursor:pointer;font-weight:600;font-size:16px">Full County Commons sites <span class="sub">— ${directory.featured().length} places with their budget traced line by line</span></summary>
@@ -1241,6 +1269,7 @@ app.get('/petitions/:id', (req, res, next) => {
   const participant = participantOf(req);
   const own = participant && (priorities.get(p.id).supporters || {})[participant];
   const mine = !!(own && own.signed);
+  traffic.step('petition', req);
   res.send(PT.petitionPage(load(req.tenantKey), p, { places: places.placesFor(req.tenantKey), mine, signed: req.query.signed === '1', error: (req.query.error || '').slice(0, 20) || null }));
 });
 
@@ -1258,6 +1287,7 @@ app.post('/petitions/:id/sign', writeLimit, express.urlencoded({ extended: false
   const participant = ensureParticipant(req, res);
   require('./identity').register(participant, { name, city: town, email });
   priorities.support(participant, id, why, { town, deliver: b.deliver === '1', site: req.tenantKey });
+  traffic.step('signed', req);
   res.redirect(here + '?signed=1#share');
 });
 

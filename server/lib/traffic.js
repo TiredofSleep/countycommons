@@ -134,6 +134,21 @@ function note(tenantKey, req) {
   dirty = true;
 }
 
+// Funnel steps (front door → a way in → a petition → signed), counted per day
+// as plain totals — never per person. Self-declared bots are skipped; phones are
+// also counted on their own, since the browser-label scrapers are desktop-only.
+function step(name, req) {
+  if (!store) load();
+  const ua = req && req.headers && req.headers['user-agent'];
+  if (isBot(ua)) return;
+  const d = today();
+  const day = store.days[d] || (store.days[d] = { total: 0, byCounty: {}, bySource: {}, bots: 0 });
+  day.steps = day.steps || {};
+  const x = day.steps[name] || (day.steps[name] = { all: 0, phone: 0 });
+  x.all++; if (/phone/.test(agentFamily(ua))) x.phone++;
+  dirty = true;
+}
+
 function flush() {
   if (!store || !dirty) return;
   try {
@@ -169,4 +184,4 @@ function start() {
   process.on('exit', flush);
 }
 
-module.exports = { start, note, flush, summary, agentFamily };
+module.exports = { start, note, step, flush, summary, agentFamily };

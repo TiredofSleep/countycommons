@@ -82,7 +82,7 @@ function jumpNav(body, tour) {
   return out.replace('</header>', '</header>\n' + nav);
 }
 
-function countyPage(st, slug) {
+function countyPage(st, slug, opts) {
   const N = nat();
   const c = (N.byState[st] || []).find(x => x.slug === slug);
   if (!c) return null;
@@ -108,7 +108,7 @@ function countyPage(st, slug) {
 
 ${c.site ? `<section><div class="issue" style="display:block;border-left:3px solid var(--accent)"><b>${esc(c.name)} has a full County Commons site.</b> <span class="src">The budget line by line, your tax bill explained, audits, local offices and elections: <a href="https://${esc(c.site)}/">${esc(c.site)} →</a></span></div></section>` : ''}
 ${RK.keyFacts(c, N)}
-${require('../lib/common').block(c)}
+${require('../lib/common').block(c, opts)}
 ${petitionsBlock(S.name, `/us/${st.toLowerCase()}/${slug}`, c.name, c.geoid, c.site)}
 ${require('../lib/state-portals').countyBlock(c)}
 ${require('../lib/county-trails').block(c)}
@@ -505,18 +505,11 @@ function usPetitionPage(p, { from, mine, signed, error, action, link: linkOver }
 <header class="page"><div class="eyebrow">County Commons · ${isCounty && home ? esc(home.name + ', ' + home.state) + ' petition' : p.level === 'national' ? 'national petition' : esc(p.state) + ' petition'}</div>
 <h1>${esc(p.title)}</h1>
 <div class="src" style="font-size:15px">A petition to <b>${esc(to)}</b>, started by ${esc(p.by || 'a resident')}.</div></header>
-<section>
-<p><b>${p.support.toLocaleString('en-US')}</b> of <b>${goal.toLocaleString('en-US')}</b> signatures · ${pct}%</p>
-<div style="background:var(--rule);height:11px;border-radius:3px;overflow:hidden"><div style="width:${pct}%;height:100%;background:var(--accent)"></div></div>
-<p class="src">At ${goal.toLocaleString('en-US')} signatures it’s printed, with the count by ${isCounty ? 'town' : 'county'}, and ${isCounty ? `sent by mail and email to ${esc(to)}` : `delivered to the offices of ${esc(to)}`} — and their answer is posted here.</p>
-${places.length ? `<p class="src" style="max-width:none">Signed from: ${places.map(([k, n]) => `${esc(k)} <b>${n}</b>`).join(' · ')}</p>` : ''}
-<h2>Why it matters</h2><p style="white-space:pre-line">${esc(p.why)}</p>
-${meterFound(p)}
-${require('./petitions').sourcesLine(p)}
-</section>
 <section id="sign">
+${require('../lib/milestone').block(p.support, goal, `At the goal it’s printed, with the count by ${isCounty ? 'town' : 'county'}, and ${isCounty ? `sent by mail and email to ${esc(to)}` : `delivered to the offices of ${esc(to)}`}, and their answer is posted here.`)}
+${places.length ? `<p class="src" style="max-width:none">Signed from: ${places.map(([k, n]) => `${esc(k)} <b>${n}</b>`).join(' · ')}</p>` : ''}
 ${mine ? `<p><b>✓ You’ve signed this petition.</b> ${signed ? 'Thank you — now pass it on.' : ''}</p>` : `
-<h2>Sign${fromName ? ` from ${esc(fromName)}` : ''}</h2>
+<h2 style="text-transform:none;letter-spacing:0">Sign${fromName ? ` from ${esc(fromName)}` : ''}</h2>
 ${err ? `<p class="src" style="color:var(--dead)">${esc(err)}</p>` : ''}
 ${fromName ? `<form method="post" action="${esc(action || '/us/petitions/' + p.id + '/sign')}" style="display:grid;gap:8px;max-width:520px">
   <input type="hidden" name="from" value="${esc(from)}">
@@ -528,6 +521,11 @@ ${fromName ? `<form method="post" action="${esc(action || '/us/petitions/' + p.i
   <button type="submit" style="justify-self:start;font-family:var(--mono);font-size:16px;font-weight:600;padding:12px 22px;background:var(--ink);color:var(--paper);border:0">Sign the petition</button>
   <p class="src" style="margin:0">Your name, town and email are never shown on this site, sold or shared. The public sees only how many signed and from which counties.</p>
 </form>` : countyChooser(p, f)}`}
+</section>
+<section>
+<h2>Why it matters</h2><p style="white-space:pre-line">${esc(p.why)}</p>
+${meterFound(p)}
+${require('./petitions').sourcesLine(p)}
 </section>
 ${require('./requests').forPetition(p)}
 <section id="share">
